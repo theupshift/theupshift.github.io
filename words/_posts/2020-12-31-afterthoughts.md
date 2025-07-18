@@ -52,3 +52,7 @@ They aren't. Everyone is trying their best, and those ahead of you are just ridi
 
 Cheers to a new year! 
 And all the afterthoughts it's going to bring 😃
+
+<div class="kudos-box" data-post="{{ page.url | afterthoughts }}">
+  <button id="kudos-btn-{{ page.url | slugify }}">💗 Kudos (<span id="kudos-count-{{ page.url | slugify }}">...</span>)</button>
+</div>
