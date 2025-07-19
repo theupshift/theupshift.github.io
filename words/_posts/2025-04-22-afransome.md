@@ -16,9 +16,9 @@ I will be cheering from the sidelines as I turn to new academic paths.
 <!-- Images side by side -->
 <div style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;">
 
-  <img src="https://github.com/username/repo/raw/main/images/IMG_6352.JPEG" alt="Picture 1" style="width: 48%; height: auto;" />
+  <img src="https://raw.githubusercontent.com/upmusings/upshift/master/images/IMG_6352.JPEG" alt="Picture 1" style="width: 48%; height: auto;" />
 
-  <img src="https://github.com/username/repo/raw/main/images/IMG_6349.JPEG" alt="Picture 2" style="width: 48%; height: auto;" />
+  <img src="https://raw.githubusercontent.com/upmusings/upshift/master/images/IMG_6349.JPEG" alt="Picture 2" style="width: 48%; height: auto;" />
 
 </div>
 
