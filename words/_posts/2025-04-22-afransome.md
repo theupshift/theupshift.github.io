@@ -11,4 +11,4 @@ Next, AFRAN will be in Tanzania, my very own home country.
 
 I will be cheering from the sidelines as I turn to new academic paths.
 
-P.S. Dr. Gawad offers excellent open-source nephrology resources, including a free AKI course. Explore them [here](https://nephrotube.blogspot.com/p/nephrotube-nephrology-books.html).
+**P.S.**  Dr. Gawad offers excellent open-source nephrology resources, including a free AKI course. Explore them [here](https://nephrotube.blogspot.com/p/nephrotube-nephrology-books.html).
