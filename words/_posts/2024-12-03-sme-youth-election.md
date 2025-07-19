@@ -13,6 +13,6 @@ In the sticky heat of Kariakoo, Dar es Salaam, the barbershop hums not just with
 It lands heavier than it sounds. Because everyone in the room knows: the question isn't just about her. It's about where this whole thing is going.
 
 
-<small>Teamed up with some folks from a policy blog for a piece. The first draft wasn’t paywalled, the final version is. If you're interested in reading, [here’s the link](files
-/youth, so-me and elections.pdf).</small>
+<small>Teamed up with some folks from a policy blog for a piece. The first draft wasn’t paywalled, the final version is. If you're interested in reading, [here’s the link](/files/youth,%20so-me%20and%20elections.pdf
+).</small>
 
