@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Africa's Youth, Social Media and Elections"
-date: 2024-08-19
+date: 2024-12-03
 categories: [politics, youth, social media, Africa]
 author: Silas Gamba
 ---
