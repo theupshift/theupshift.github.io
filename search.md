@@ -16,12 +16,19 @@ permalink: /search/
     all: unset;
   }
 
+  /* Container styles */
+  #search-input, 
+  #results-container {
+    display: block;
+    margin: 0.5rem auto 1rem;  /* centers both */
+    width: 90%;
+    max-width: 600px;          /* same max width */
+  }
+
   #results-container {
     display: flex;
     flex-direction: column;
-    gap: .2;
-    margin: 1rem auto;
-    max-width: 700px;
+    gap: 0;
     padding: 0;
   }
 
@@ -47,17 +54,6 @@ permalink: /search/
 
   #results-container li:hover {
     background-color: #eaeaea;
-  }
-
-  #search-input {
-    display: block;
-    margin: 0.5rem auto 1rem;
-    padding: 0.5rem 0.8rem;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    width: 90%;
-    max-width: 600px;
-    font-size: 0.95rem;
   }
 </style>
 
