@@ -42,31 +42,35 @@
 
 
 
- <style>
+  <style>
         /* Basic Styles for Nav */
         nav {
             display: flex;
             align-items: center; /* Vertically center everything */
             justify-content: flex-start; /* Keep everything aligned to the left */
             padding: 10px 20px;
+            white-space: nowrap; /* Prevent wrapping */
+            overflow: hidden; /* Hide overflow */
+            width: 100%; /* Ensure it takes the full width of the screen */
+            box-sizing: border-box; /* Include padding in width calculations */
         }
 
         /* Round Logo */
         nav .logo .logo-img {
-            width: 50px; /* adjust size as necessary */
-            height: 50px;
+            width: 40px; /* Adjust size for a smaller logo */
+            height: 40px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 20px; /* Space between logo and next link */
+            margin-right: 15px; /* Space between logo and next link */
         }
 
         /* "The Upshift" Link in Italics */
         nav .upshift-link em {
             font-style: italic;
-            font-size: 1.2em;
+            font-size: 1em;
             color: inherit;
             text-decoration: none;
-            margin-right: 20px;
+            margin-right: 15px;
         }
 
         /* Blog Link */
@@ -74,14 +78,14 @@
             font-size: 1em;
             text-decoration: none;
             color: inherit;
-            margin-right: 20px; /* Adjust space between links */
+            margin-right: 15px; /* Adjust space between links */
         }
 
         /* Search Icon */
         nav .search-icon img {
-            width: 24px;
-            height: 24px;
-            margin-right: 20px; /* Space before the subscribe button */
+            width: 20px;
+            height: 20px;
+            margin-right: 15px; /* Space before the subscribe button */
         }
 
         /* Subscribe Button */
@@ -99,18 +103,18 @@
             background-color: darkred; /* Darker red on hover */
         }
 
-        /* Ensure elements remain inline */
+        /* Ensure elements stay inline without wrapping */
         nav a {
             display: inline-flex;
             align-items: center;
         }
 
-        /* Remove wrapping or stacking even on small screens */
+        /* Prevent scrolling */
         body {
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
-
     </style>
 </head>
 <body{% if page.id_attribute %} id="{{ page.id_attribute }}"{% endif %}>
@@ -135,7 +139,6 @@
         <!-- Subscribe Button (Red) -->
         <a href="/subscribe" class="subscribe-button">Subscribe</a>
     </nav>
-
 
 
 	
