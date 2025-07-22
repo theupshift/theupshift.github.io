@@ -23,22 +23,29 @@ permalink: /search/
     margin: 0.5rem auto 1rem;
     width: 90%;
     max-width: 600px;
+    border-radius: 6px; /* match input rounded corners */
+  }
+
+  #search-input {
+    border: 1px solid #ccc;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.95rem;
   }
 
   #results-container {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem; /* doubled from 0.1rem */
+    gap: 0.2rem; /* doubled spacing */
     padding: 0;
   }
 
   #results-container li {
     background-color: #ffffff; /* white background */
-    border: 1.5px solid #add8e6; /* light blue border */
+    border: 1.5px solid #ccc; /* match search box border */
     border-radius: 6px;
     padding: 0.5rem 0.8rem;
     margin: 0;
-    box-shadow: none; /* remove shadow for cleaner look */
+    box-shadow: none;
     font-size: 0.95rem;
     line-height: 1.3;
   }
@@ -54,7 +61,7 @@ permalink: /search/
   }
 
   #results-container li:hover {
-    background-color: #f0f8ff; /* subtle light blue on hover */
+    background-color: #f9f9f9; /* subtle light gray on hover */
   }
 </style>
 
