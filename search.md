@@ -11,30 +11,32 @@ permalink: /search/
 <ul id="results-container"></ul>
 
 <style>
-  /* Reset default styling */
   #results-container,
   #results-container * {
     all: unset;
   }
 
-  /* Compact search results container */
   #results-container {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* Tighter space between items */
+    gap: 0;
     margin: 1rem auto;
     max-width: 700px;
     padding: 0;
   }
 
-  /* Compact and clean list item box */
   #results-container li {
     background-color: #f5f5f5;
-    border-radius: 8px;
-    padding: 0.7rem 1rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 0.5rem 0.8rem;
+    margin: 0 0 0.1rem 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     font-size: 0.95rem;
     line-height: 1.3;
+  }
+
+  #results-container li:last-child {
+    margin-bottom: 0;
   }
 
   #results-container li a {
@@ -47,7 +49,6 @@ permalink: /search/
     background-color: #eaeaea;
   }
 
-  /* Tighter input box */
   #search-input {
     display: block;
     margin: 0.5rem auto 1rem;
@@ -72,4 +73,3 @@ permalink: /search/
     fuzzy: false,
   });
 </script>
-``
