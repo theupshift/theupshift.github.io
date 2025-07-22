@@ -39,27 +39,27 @@
 	{% seo %}
 </head>
 <body{% if page.id_attribute %} id="{{ page.id_attribute }}"{% endif %}>
-<style>
+
+
+
+	<style>
   .nav-wrapper {
     border-bottom: 1px solid #ccc;
     font-family: inherit;
-    overflow-x: auto; /* ensure no wrap, horizontal scroll if needed */
   }
 
   .nav-header {
-    max-width: 720px; /* match your .constrained width */
+    max-width: 720px; /* Match your .constrained width */
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5em 1em;
     white-space: nowrap;
-    overflow: hidden;
+    overflow-x: auto;
   }
 
-  .nav-left,
-  .nav-center,
-  .nav-right {
+  .nav-left, .nav-center, .nav-right {
     display: flex;
     align-items: center;
   }
@@ -69,21 +69,19 @@
     height: 32px;
     border-radius: 50%;
     margin-right: 1em;
-    flex-shrink: 0;
   }
 
   .nav-left a,
   .nav-right a {
-    margin-right: 1em;
     text-decoration: none;
     color: inherit;
+    margin-right: 1em;
     flex-shrink: 0;
   }
 
   .nav-center {
-    justify-content: center;
     flex-grow: 1;
-    text-align: center;
+    justify-content: center;
   }
 
   .nav-center span {
