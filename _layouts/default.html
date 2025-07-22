@@ -47,7 +47,7 @@
         nav {
             display: flex;
             align-items: center; /* Vertically center everything */
-            justify-content: space-between; /* Space elements evenly */
+            justify-content: flex-start; /* Keep everything aligned to the left */
             padding: 10px 20px;
         }
 
@@ -57,6 +57,7 @@
             height: 50px;
             border-radius: 50%;
             object-fit: cover;
+            margin-right: 20px; /* Space between logo and next link */
         }
 
         /* "The Upshift" Link in Italics */
@@ -98,22 +99,18 @@
             background-color: darkred; /* Darker red on hover */
         }
 
-        /* Responsive Design for Mobile */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column; /* Stack items vertically on small screens */
-                text-align: center;
-            }
-
-            nav a {
-                margin: 5px 0;
-            }
-
-            nav .subscribe-button {
-                width: 100%; /* Make subscribe button take full width */
-                text-align: center;
-            }
+        /* Ensure elements remain inline */
+        nav a {
+            display: inline-flex;
+            align-items: center;
         }
+
+        /* Remove wrapping or stacking even on small screens */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
     </style>
 </head>
 <body{% if page.id_attribute %} id="{{ page.id_attribute }}"{% endif %}>
