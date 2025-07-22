@@ -42,98 +42,102 @@
 
 
 
-<style>
-  .nav-wrapper {
-    border-bottom: 1px solid #ccc;
-    font-family: inherit;
-  }
+ <style>
+        /* Basic Styles for Nav */
+        nav {
+            display: flex;
+            align-items: center; /* Vertically center everything */
+            justify-content: space-between; /* Space elements evenly */
+            padding: 10px 20px;
+        }
 
-  .nav-header {
-    width: 100%; /* Make sure the header spans the full width of the page */
-    max-width: 100%; /* Ensure it doesn't exceed container width */
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5em 1em;
-    white-space: nowrap;
-    overflow-x: auto;
-  }
+        /* Round Logo */
+        nav .logo .logo-img {
+            width: 50px; /* adjust size as necessary */
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
 
-  /* Ensures the header is constrained like the main content */
-  .constrained-nav {
-    max-width: 720px; /* Match your .constrained container width */
-    margin: 0 auto;
-    width: 100%;
-  }
+        /* "The Upshift" Link in Italics */
+        nav .upshift-link em {
+            font-style: italic;
+            font-size: 1.2em;
+            color: inherit;
+            text-decoration: none;
+            margin-right: 20px;
+        }
 
-  .nav-left,
-  .nav-center,
-  .nav-right {
-    display: flex;
-    align-items: center;
-  }
+        /* Blog Link */
+        nav .blog-link {
+            font-size: 1em;
+            text-decoration: none;
+            color: inherit;
+            margin-right: 20px; /* Adjust space between links */
+        }
 
-  .nav-left img.logo {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin-right: 1em;
-    flex-shrink: 0;
-  }
+        /* Search Icon */
+        nav .search-icon img {
+            width: 24px;
+            height: 24px;
+            margin-right: 20px; /* Space before the subscribe button */
+        }
 
-  .nav-left a,
-  .nav-right a {
-    text-decoration: none;
-    color: inherit;
-    margin: 0 0.5em;
-    flex-shrink: 0;
-  }
+        /* Subscribe Button */
+        nav .subscribe-button {
+            display: inline-block;
+            background-color: red;  /* Red background */
+            color: white;  /* White text */
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+        nav .subscribe-button:hover {
+            background-color: darkred; /* Darker red on hover */
+        }
 
-  .nav-center {
-    flex-grow: 1;
-    justify-content: center;
-    text-align: center;
-  }
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column; /* Stack items vertically on small screens */
+                text-align: center;
+            }
 
-  .nav-center span {
-    font-style: italic;
-  }
+            nav a {
+                margin: 5px 0;
+            }
 
-  .subscribe-btn {
-    background-color: #e63946;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 0.3em 0.9em;
-    font-size: 0.9em;
-    cursor: pointer;
-    margin-left: 1em;
-    flex-shrink: 0;
-  }
-</style>
-
-<div class="nav-wrapper">
-  <nav class="nav-header">
-    <div class="constrained-nav">
-      <div class="nav-left">
-        <img src="/assets/images/logo.png" alt="Logo" class="logo" />
-        <a href="/about.html">About</a>
-      </div>
-      <div class="nav-center">
-        <span>&nbsp;·&nbsp; The Upshift &nbsp;·&nbsp;</span>
-      </div>
-      <div class="nav-right">
-        <a href="/">Blog</a>
-        <button class="subscribe-btn">Subscribe</button>
-      </div>
-    </div>
-  </nav>
-</div>
-
-
-
-
+            nav .subscribe-button {
+                width: 100%; /* Make subscribe button take full width */
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body{% if page.id_attribute %} id="{{ page.id_attribute }}"{% endif %}>
+    
+    <nav class="constrained">
+        <!-- Round Logo -->
+        <a href="/" class="logo">
+            <img src="/path/to/your/logo.png" alt="Logo" class="logo-img">
+        </a>
+        
+        <!-- "The Upshift" Link (italicized) -->
+        <a href="/words/index.html" class="upshift-link"><em>The Upshift</em></a>
+        
+        <!-- Blog Link -->
+        <a href="/" class="blog-link">Blog</a>
+        
+        <!-- Search Icon (as a link) -->
+        <a href="/search" class="search-icon">
+            <img src="/path/to/search-icon.png" alt="Search">
+        </a>
+        
+        <!-- Subscribe Button (Red) -->
+        <a href="/subscribe" class="subscribe-button">Subscribe</a>
+    </nav>
 
 
 
