@@ -40,7 +40,7 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-	  <style>
+<style>
         nav.constrained {
             display: flex;
             justify-content: space-between;
@@ -64,13 +64,16 @@
         }
 
         .nav-left a {
-            font-size: 16px; /* Smaller icon size */
+            font-size: 14px; /* Smaller icon size */
             color: #fff; /* Set icon color to white */
             background-color: #007bff; /* Set background color for the button */
             border-radius: 50%; /* Make the button round */
-            padding: 6px; /* Smaller padding for a smaller button */
+            padding: 5px; /* Smaller padding for a smaller button */
             display: inline-block; /* Make sure the link behaves like a button */
             text-align: center; /* Center the icon inside the button */
+            line-height: 18px; /* Vertically center the icon */
+            width: 24px; /* Set a fixed width for the round button */
+            height: 24px; /* Set a fixed height for the round button */
         }
 
         .nav-left a i {
@@ -85,10 +88,16 @@
         .subscribe-btn {
             background-color: #007bff;
             color: white;
-            padding: 8px 15px;
+            padding: 5px 10px; /* Smaller padding */
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 14px; /* Smaller text size */
+            height: 24px; /* Set the height to match the search icon */
+            line-height: 24px; /* Vertically center the text */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .subscribe-btn:hover {
