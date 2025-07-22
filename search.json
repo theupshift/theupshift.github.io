@@ -4,7 +4,7 @@ layout: none
 [
 {% for post in site.posts %}
   {
-    "title": "{% if post.title %}{{ post.title | escape }}{% else %}{{ post.content | strip_html | strip_newlines | truncatewords: 20, '' | escape }}{% endif %}",
+    "title": "{% if post.title %}{{ post.title | escape }}{% else %}{{ post.content | strip_html | strip_newlines | truncatewords: 20, "" | escape }}{% endif %}",
     "url": "{{ post.url | relative_url }}",
     "date": "{{ post.date | date: '%Y-%m-%d' }}",
     "content": {{ post.content | strip_html | strip_newlines | jsonify }}
