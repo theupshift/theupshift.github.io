@@ -4,7 +4,7 @@ title: Search
 permalink: /search/
 ---
 
-<h1>Search</h1>
+<h3>Search</h3>
 
 <input type="text" id="search-input" placeholder="Type to search..." />
 <ul id="results-container"></ul>
@@ -17,7 +17,7 @@ permalink: /search/
     json: '/search.json',
     searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
     noResultsText: 'No results found',
-    limit: 10,
+    limit: 7,
     fuzzy: false,
   });
 </script>
