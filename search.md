@@ -19,7 +19,7 @@ permalink: /search/
   #results-container {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: .2;
     margin: 1rem auto;
     max-width: 700px;
     padding: 0;
