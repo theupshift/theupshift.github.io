@@ -39,9 +39,65 @@
 	{% seo %}
 </head>
 <body{% if page.id_attribute %} id="{{ page.id_attribute }}"{% endif %}>
-	<nav class="constrained">
-		The <a href="/">Blog</a><em> &nbsp; : &nbsp; about'</em> <a href=/words/index.html>The Upshift</a>
-	</nav>
+	<nav class="constrained" style="
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0;
+">
+
+  <!-- Left: Logo -->
+  <div style="flex-shrink: 0;">
+    <a href="/" style="display: inline-block;">
+      <img src="/assets/images/logo.png" alt="Logo" style="
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      ">
+    </a>
+  </div>
+
+  <!-- Center: Navigation -->
+  <div style="
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+  ">
+    <a href="/about/" style="text-decoration: none; color: #333;">About</a>
+    <a href="/" style="text-decoration: none; color: #333;">Blog</a>
+    <a href="/words/index.html" style="text-decoration: none; color: #333;">The Upshift</a>
+    <button style="
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #333;
+    " aria-label="Search">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+
+  <!-- Right: Subscribe Button -->
+  <div style="flex-shrink: 0;">
+    <a href="/subscribe/" style="
+      background-color: #007BFF;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+      white-space: nowrap;
+      display: inline-block;
+    ">Subscribe</a>
+  </div>
+</nav>
+
 	
 	<main class="constrained">	
 		{{ content }}
