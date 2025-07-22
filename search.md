@@ -16,28 +16,29 @@ permalink: /search/
     all: unset;
   }
 
-  /* Container styles */
+  /* Align search input and results container */
   #search-input, 
   #results-container {
     display: block;
-    margin: 0.5rem auto 1rem;  /* centers both */
+    margin: 0.5rem auto 1rem;
     width: 90%;
-    max-width: 600px;          /* same max width */
+    max-width: 600px;
   }
 
   #results-container {
     display: flex;
     flex-direction: column;
-    gap: .4;
+    gap: 0.2rem; /* doubled from 0.1rem */
     padding: 0;
   }
 
   #results-container li {
-    background-color: #f5f5f5;
+    background-color: #ffffff; /* white background */
+    border: 1.5px solid #add8e6; /* light blue border */
     border-radius: 6px;
     padding: 0.5rem 0.8rem;
-    margin: 0 0 0.1rem 0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    margin: 0;
+    box-shadow: none; /* remove shadow for cleaner look */
     font-size: 0.95rem;
     line-height: 1.3;
   }
@@ -53,7 +54,7 @@ permalink: /search/
   }
 
   #results-container li:hover {
-    background-color: #eaeaea;
+    background-color: #f0f8ff; /* subtle light blue on hover */
   }
 </style>
 
