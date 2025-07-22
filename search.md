@@ -11,30 +11,30 @@ permalink: /search/
 <ul id="results-container"></ul>
 
 <style>
-  /* Reset styles */
+  /* Reset default styling */
   #results-container,
   #results-container * {
     all: unset;
   }
 
-  /* Styling the container */
+  /* Compact search results container */
   #results-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin: 2rem auto;
+    gap: 0.5rem; /* Tighter space between items */
+    margin: 1rem auto;
     max-width: 700px;
     padding: 0;
   }
 
-  /* Styling each search result as a clean rounded box */
+  /* Compact and clean list item box */
   #results-container li {
     background-color: #f5f5f5;
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    font-size: 1rem;
-    line-height: 1.4;
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    font-size: 0.95rem;
+    line-height: 1.3;
   }
 
   #results-container li a {
@@ -47,16 +47,16 @@ permalink: /search/
     background-color: #eaeaea;
   }
 
-  /* Search input clean style */
+  /* Tighter input box */
   #search-input {
     display: block;
-    margin: 1rem auto;
-    padding: 0.6rem 1rem;
-    border-radius: 8px;
+    margin: 0.5rem auto 1rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
     border: 1px solid #ccc;
     width: 90%;
     max-width: 600px;
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 </style>
 
@@ -72,3 +72,4 @@ permalink: /search/
     fuzzy: false,
   });
 </script>
+``
