@@ -28,7 +28,7 @@ permalink: /search/
   #results-container {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: .4;
     padding: 0;
   }
 
