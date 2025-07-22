@@ -54,22 +54,34 @@ id_attribute: words
     text-align: center;
   }
 
-  .pagination-btn .pagination-btn a {
-  text-decoration: none !important;
-    padding: 6px 14px; /* Smaller button */
-    font-size: 14px;   /* Smaller text */
-    border: 1px solid #ddd; /* Border only */
-    color: #333;
+ .pagination-btn {
+    padding: 10px 20px; /* More padding for button feel */
+    font-size: 14px;     /* Button text size */
+    border: none;       /* Remove default border */
+    color: white;       /* Text color */
     text-decoration: none; /* Remove underline */
     display: inline-block;
-    border-radius: 20px; /* Rounded corners */
-    background-color: transparent; /* No background */
+    border-radius: 5px; /* Slightly rounded corners */
+    background-color: #007bff; /* Button background color */
+    cursor: pointer;   /* Make it clickable */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition effects */
+  }
+
+  /* Hover effect */
+  .pagination-btn:hover {
+    background-color: #0056b3; /* Darker shade when hovered */
+    transform: scale(1.05); /* Slightly enlarge the button */
+  }
+
+  /* Active state */
+  .pagination-btn:active {
+    background-color: #004085; /* Even darker shade when clicked */
   }
 
   /* Responsive design */
   @media (max-width: 600px) {
     .pagination-btn {
-      padding: 4px 10px;  /* Smaller padding on mobile */
+      padding: 6px 14px;  /* Smaller padding on mobile */
       font-size: 12px;    /* Adjust font size on mobile */
     }
   }
