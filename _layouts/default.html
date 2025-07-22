@@ -39,49 +39,66 @@
 	{% seo %}
 </head>
 <body{% if page.id_attribute %} id="{{ page.id_attribute }}"{% endif %}>
-	<nav style="
+<nav style="
   all: unset;
   width: 100vw;
   box-sizing: border-box;
-  border-bottom: 4px solid #000;
+  border-bottom: 1.5px solid rgba(0,0,0,0.3);
   background: transparent;
   font-family: inherit;
   font-size: 0.85rem;
   user-select: none;
   padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 ">
 
+  <!-- Left: Logo -->
+  <a href="/" style="
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    flex-shrink: 0;
+  ">
+    <img src="/assets/images/logo.png" alt="Logo" style="
+      display: block;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+    ">
+  </a>
+
+  <!-- Center content -->
   <div style="
-    max-width: 1000px; /* max width of nav content */
-    margin: 0 auto; /* center horizontally */
     display: flex;
+    gap: 1.5rem;
     align-items: center;
-    gap: 2rem;
-    flex-wrap: nowrap;
     justify-content: center;
+    flex-grow: 1;
+    min-width: 0;
   ">
 
-    <a href="/" style="
-      all: unset;
-      display: inline-block;
-      cursor: pointer;
+    <!-- Plain text: The Upshift -->
+    <span style="
+      white-space: nowrap;
       flex-shrink: 0;
-    ">
-      <img src="/images/aretha.png" alt="Logo" style="
-        display: block;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        object-fit: cover;
-      ">
-    </a>
+    ">The Upshift</span>
 
-    <a href="/about/" style="
+    <!-- Links -->
+    <a href="/about" style="
       all: unset;
       color: inherit;
       cursor: pointer;
       white-space: nowrap;
       text-decoration: none;
+      flex-shrink: 0;
     ">About</a>
 
     <a href="/" style="
@@ -90,41 +107,33 @@
       cursor: pointer;
       white-space: nowrap;
       text-decoration: none;
+      flex-shrink: 0;
     ">Blog</a>
 
-    <a href="/search" aria-label="Search" style="
-      all: unset;
-      color: inherit;
-      cursor: pointer;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-    ">
-      <i class="fas fa-search" aria-hidden="true"></i>
-    </a>
-
-    <a href="/subscribe/" style="
-      all: unset;
-      background-color: #D93025;
-      color: #fff;
-      padding: 0.35rem 1rem;
-      border-radius: 20px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      cursor: pointer;
-      white-space: nowrap;
-      box-shadow: 0 2px 5px rgba(217, 48, 37, 0.6);
-      text-align: center;
-      display: inline-block;
-      transition: background-color 0.25s ease;
-    " onmouseover="this.style.backgroundColor='#a1231b'" onmouseout="this.style.backgroundColor='#D93025'">
-      Subscribe
-    </a>
-
   </div>
+
+  <!-- Right: Subscribe -->
+  <a href="/subscribe/" style="
+    all: unset;
+    background-color: #D93025;
+    color: #fff;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(217, 48, 37, 0.6);
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.25s ease;
+  " onmouseover="this.style.backgroundColor='#a1231b'" onmouseout="this.style.backgroundColor='#D93025'">
+    Subscribe
+  </a>
+
 </nav>
+
 
 
 
