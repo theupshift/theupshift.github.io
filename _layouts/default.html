@@ -39,47 +39,58 @@
 	{% seo %}
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    nav.constrained {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
 
-    .nav-left, .nav-center, .nav-right {
-      display: flex;
-      align-items: center;
-    }
+	  <style>
+        nav.constrained {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
 
-    .nav-center {
-      flex-grow: 1;
-      justify-content: center;
-    }
+        .nav-left, .nav-center, .nav-right {
+            display: flex;
+            align-items: center;
+        }
 
-    /* Remove underline from all <a> tags */
-    nav a {
-  text-decoration: none !important;
-}
+        .nav-center {
+            flex-grow: 1;
+            justify-content: center;
+        }
 
-    .nav-left a {
-      font-size: 20px; /* Set the icon size */
-      color: #333; /* Ensure the icon is visible with a dark color */
-    }
+        /* Remove underline from all <a> tags */
+        a {
+            text-decoration: none;
+        }
 
-    .subscribe-btn {
-      background-color: #007bff;
-      color: white;
-      padding: 8px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+        .nav-left a {
+            font-size: 20px; /* Set the icon size */
+            color: #fff; /* Set icon color to white */
+            background-color: #007bff; /* Set background color for the button */
+            border-radius: 50%; /* Make the button round */
+            padding: 10px; /* Add padding to create a circular button */
+            display: inline-block; /* Make sure the link behaves like a button */
+            text-align: center; /* Center the icon inside the button */
+        }
 
-    .subscribe-btn:hover {
-      background-color: #0056b3;
-    }
-  </style>
+        .nav-left a:hover {
+            background-color: #0056b3; /* Change the background on hover */
+            color: #fff; /* Keep the icon color white on hover */
+        }
+
+        .subscribe-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 	
 </head>
 <body{% if page.id_attribute %} id="{{ page.id_attribute }}"{% endif %}>
