@@ -50,18 +50,18 @@ id_attribute: words
 {% endif %}
 
 <style>
- .pagination {
+  .pagination {
     text-align: center;
   }
 
   .pagination-btn {
-    padding: 10px 20px; /* More padding for button feel */
-    font-size: 14px;     /* Button text size */
-    border: 2px solid #007bff; /* Add border with color */
-    color: #007bff;      /* Text color same as the border */
+    padding: 6px 12px;  /* Smaller padding for smaller buttons */
+    font-size: 12px;     /* Smaller text size */
+    border: 1px solid #b35352; /* Thinner border with new color */
+    color: #b35352;      /* Text color same as the border */
     text-decoration: none; /* Remove underline */
     display: inline-block;
-    border-radius: 5px;  /* Slightly rounded corners */
+    border-radius: 20px; /* More rounded corners */
     background-color: transparent; /* Transparent background */
     cursor: pointer;    /* Make it clickable */
     transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease; /* Smooth transition effects */
@@ -69,23 +69,23 @@ id_attribute: words
 
   /* Hover effect */
   .pagination-btn:hover {
-    background-color: #007bff; /* Button background turns blue on hover */
+    background-color: #b35352; /* Button background turns red on hover */
     color: white;             /* Text color turns white */
-    border-color: #0056b3;    /* Border becomes darker */
-    transform: scale(1.05);   /* Slightly enlarge the button */
+    border-color: #8c2d2d;    /* Border becomes darker */
+    transform: scale(1.1);    /* Slightly enlarge the button */
   }
 
   /* Active state */
   .pagination-btn:active {
-    background-color: #0056b3; /* Even darker background when clicked */
-    border-color: #004085;     /* Border becomes darker */
+    background-color: #8c2d2d; /* Even darker background when clicked */
+    border-color: #5f1c1c;     /* Border becomes even darker */
   }
 
   /* Responsive design */
   @media (max-width: 600px) {
     .pagination-btn {
-      padding: 6px 14px;  /* Smaller padding on mobile */
-      font-size: 12px;    /* Adjust font size on mobile */
+      padding: 4px 10px;  /* Smaller padding on mobile */
+      font-size: 10px;    /* Adjust font size on mobile */
     }
   }
 </style>
