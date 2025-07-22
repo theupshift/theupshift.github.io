@@ -45,13 +45,12 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.5rem 0;
+  font-size: 0.85rem; /* smaller font */
   gap: 0.75rem;
   width: 100%;
   box-sizing: border-box;
-  background-color: #000;
-  color: #fff;
+  /* font-family inherited from theme, so no override */
 ">
 
   <!-- Logo -->
@@ -63,22 +62,79 @@
   ">
     <img src="/assets/images/logo.png" alt="Logo" style="
       display: block;
-      width: 32px;
+      width: 32px;  /* smaller */
       height: 32px;
       border-radius: 50%;
       object-fit: cover;
-      filter: brightness(0) invert(1); /* invert logo colors for black bg, if suitable */
     ">
   </a>
 
   <!-- Nav links container -->
   <div style="
-    al
+    all: unset;
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 1;
+    min-width: 0;
+    align-items: center;
+  ">
+    <a href="/about/" style="
+      all: unset;
+      color: inherit;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 1;
+      min-width: 0;
+      text-decoration: none;
+    ">About</a>
 
+    <a href="/" style="
+      all: unset;
+      color: inherit;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 1;
+      min-width: 0;
+      text-decoration: none;
+    ">Blog</a>
 
+    <a href="/search" aria-label="Search" style="
+      all: unset;
+      color: inherit;
+      cursor: pointer;
+      font-size: 1rem; /* keep icon slightly bigger */
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    ">
+      <i class="fas fa-search" aria-hidden="true"></i>
+    </a>
+  </div>
 
+  <!-- Subscribe button -->
+  <a href="/subscribe/" style="
+    all: unset;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.35rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.4);
+    user-select: none;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.25s ease;
+  " onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">
+    Subscribe
+  </a>
 
-
+</nav>
 
 	
 	<main class="constrained">	
