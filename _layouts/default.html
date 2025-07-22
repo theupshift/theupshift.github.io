@@ -53,9 +53,17 @@
             align-items: center;
         }
 
+        .nav-left {
+            justify-content: flex-start; /* Align to the left */
+        }
+
         .nav-center {
             flex-grow: 1;
             justify-content: center;
+        }
+
+        .nav-right {
+            justify-content: flex-end; /* Align to the right */
         }
 
         /* Remove underline from all <a> tags */
@@ -64,20 +72,20 @@
         }
 
         .nav-left a {
-            font-size: 14px; /* Smaller icon size */
+            font-size: 12px; /* Smaller icon size */
             color: #fff; /* Set icon color to white */
             background-color: #007bff; /* Set background color for the button */
             border-radius: 50%; /* Make the button round */
-            padding: 5px; /* Smaller padding for a smaller button */
+            padding: 4px; /* Smaller padding for a smaller button */
             display: inline-block; /* Make sure the link behaves like a button */
             text-align: center; /* Center the icon inside the button */
-            line-height: 18px; /* Vertically center the icon */
-            width: 24px; /* Set a fixed width for the round button */
-            height: 24px; /* Set a fixed height for the round button */
+            line-height: 16px; /* Vertically center the icon */
+            width: 20px; /* Set a fixed width for the round button */
+            height: 20px; /* Set a fixed height for the round button */
         }
 
         .nav-left a i {
-            font-size: 14px; /* Make the icon a little smaller */
+            font-size: 12px; /* Make the icon a little smaller */
         }
 
         .nav-left a:hover {
@@ -88,13 +96,13 @@
         .subscribe-btn {
             background-color: #007bff;
             color: white;
-            padding: 5px 10px; /* Smaller padding */
+            padding: 4px 8px; /* Smaller padding */
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 14px; /* Smaller text size */
-            height: 24px; /* Set the height to match the search icon */
-            line-height: 24px; /* Vertically center the text */
+            font-size: 12px; /* Smaller text size */
+            height: 20px; /* Set the height to match the search icon */
+            line-height: 20px; /* Vertically center the text */
             display: inline-flex;
             align-items: center;
             justify-content: center;
