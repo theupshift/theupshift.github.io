@@ -11,6 +11,14 @@ image: https://t3.ftcdn.net/jpg/13/00/57/98/360_F_1300579839_bR3hsgzkWZPuN5ar57P
 og_image: https://t3.ftcdn.net/jpg/13/00/57/98/360_F_1300579839_bR3hsgzkWZPuN5ar57P3In6qY8iZUzku.jpg
 twitter_image: https://t3.ftcdn.net/jpg/13/00/57/98/360_F_1300579839_bR3hsgzkWZPuN5ar57P3In6qY8iZUzku.jpg
 ---
+<style>
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+</style>
 
 Every night your body cycles through several stages of sleep, switching between deep sleep and dreaming phases known as REM. Each cycle lasts about ninety minutes and repeats throughout the night to keep your body and mind functioning well.
 
