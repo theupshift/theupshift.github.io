@@ -26,7 +26,7 @@ Every night your body cycles through several stages of sleep, switching between 
 <img src="https://axbo.zendesk.com/hc/de/article_attachments/203058769/aXbo_Hypnogramm_EN_big_picture_Zendesk_sized.png"
      alt="Sleep Cycle Hypnogram"
      style="border: 1px solid #007BFF; border-radius: 12px; padding: 4px; max-width: 100%;">
-<h3 style="text-align:center;"><em>Groggy for a reason</em></h3>
+<p style="text-align:center;"><em>Groggy for a reason</em></p>
 
 Waking up during the wrong part of this cycle especially during deep sleep can leave you feeling groggy or dizzy. Scientists say it feels similar to having a little buzz from alcohol, even though you have not had a drop. But when you wake up naturally, your body times it to happen during a lighter sleep phase so you feel refreshed and ready for the day.
 
