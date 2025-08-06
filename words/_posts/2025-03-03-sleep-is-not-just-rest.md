@@ -24,9 +24,9 @@ Every night your body cycles through several stages of sleep, switching between 
 
 ![Sleep Cycle Hypnogram](https://axbo.zendesk.com/hc/de/article_attachments/203058769/aXbo_Hypnogramm_EN_big_picture_Zendesk_sized.png)
 
-Waking up during the wrong part of this cycle—especially during deep sleep—can leave you feeling groggy or dizzy. Scientists say it feels similar to having a little buzz from alcohol, even though you have not had a drop. But when you wake up naturally, your body times it to happen during a lighter sleep phase so you feel refreshed and ready for the day.
+Waking up during the wrong part of this cycle especially during deep sleep can leave you feeling groggy or dizzy. Scientists say it feels similar to having a little buzz from alcohol, even though you have not had a drop. But when you wake up naturally, your body times it to happen during a lighter sleep phase so you feel refreshed and ready for the day.
 
-This happens because your body moves differently depending on the sleep stage. In deep sleep and REM, you barely move at all. But right before and after REM—the almost awake moments—your body shows more movement. Some smart devices can detect this movement and wake you gently during these lighter phases, helping you avoid that groggy feeling.
+This happens because your body moves differently depending on the sleep stage. In deep sleep and REM, you barely move at all. But right before and after REM, the almost awake moments—your body shows more movement. Some smart devices can detect this movement and wake you gently during these lighter phases, helping you avoid that groggy feeling.
 
 Sleep is not just about resting. It is an active process that is vital for your health. While you sleep, your body repairs damaged cells and balances hormones. Your brain also activates the glymphatic system, a sort of cleaning crew that flushes out toxins mostly during deep sleep.
 
