@@ -32,14 +32,14 @@ Waking up during the wrong part of this cycle especially during deep sleep can l
 
 This happens because your body moves differently depending on the sleep stage. In deep sleep and REM, you barely move at all. But right before and after REM, the almost awake moments—your body shows more movement. Some smart devices can detect this movement and wake you gently during these lighter phases, helping you avoid that groggy feeling.
 
-Sleep is not just about resting. It is an active process that is vital for your health. While you sleep, your body repairs damaged cells and balances hormones. Your brain also activates the glymphatic system, a sort of cleaning crew that flushes out toxins mostly during deep sleep.[^2]
+**Sleep is not just about resting.** 
+
+It is an active process that is vital for your health. While you sleep, your body repairs damaged cells and balances hormones. Your brain also activates the glymphatic system, a sort of cleaning crew that flushes out toxins mostly during deep sleep.[^2]
 
 
 ![](https://onlinelibrary.wiley.com/cms/asset/b1cff2fb-ff5a-464f-9e89-6e974f53c992/brx270011-toc-0001-m.jpg?trick=1750029566391)
 
 Deep sleep, which happens mostly in the first half of the night, is when tissue repair, immune system strengthening, and physical recovery take place. Later in the night comes REM sleep, a stage marked by spikes in brain activity and rapid eye movements. During REM, your brain processes emotions, forms memories, and supports learning by reinforcing neural connections, especially in the hippocampus.
-
-Your night is made up of different sleep stages. Light sleep slows down your brain and cools your body. Deep sleep is when physical repair happens. REM sleep helps process emotions and memories, strengthening your brain’s connections.
 
 When your sleep is interrupted or poor quality, these processes do not work properly. This can lead to toxin buildup, hormonal imbalances, memory issues, and mood problems. Over time, it raises the risk for serious health problems like heart disease, diabetes, and depression.
 
