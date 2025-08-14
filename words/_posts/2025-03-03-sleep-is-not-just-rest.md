@@ -21,6 +21,7 @@ img {
 </style>
 
 As a medic, I’ve always known that sleep is important, but only recently did I realize how essential it is for our overall health. 
+
 Every night, we go through several sleep stages, including deep sleep and REM (Rapid Eye Movement). These cycles last about 90 minutes and repeat throughout the night. The quality of these cycles directly affects how we feel the next day and how well our body repairs itself.[^1]
 
 
