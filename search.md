@@ -74,4 +74,6 @@ permalink: /search/
     fuzzy: false,
   });
 </script>
-<h3 style="text-align: center;">Tags</h3>
+<p align="center">
+  Answers are easy, but perspective transforms.
+</p>
