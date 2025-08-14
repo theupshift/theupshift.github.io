@@ -1,7 +1,8 @@
 ---
 layout: default
 title: "{{ page.tag | capitalize }}"
-permalink: /tags/{{ page.tag }}/
+permalink: /tags/{{ page.tag | slugify }}/
+
 ---
 
 <h2>Posts Tagged: {{ page.tag | capitalize }}</h2>
