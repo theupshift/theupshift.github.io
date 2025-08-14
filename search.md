@@ -74,6 +74,5 @@ permalink: /search/
     fuzzy: false,
   });
 </script>
-<small><p align="center">
-  Answers are easy, but perspective transforms.
-</p></small>
+<p style="text-align: center;"><small>Answers are easy, but perspective transforms.</small></p>
+
