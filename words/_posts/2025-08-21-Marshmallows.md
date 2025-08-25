@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Marshmallows, Delayed Gratification, and Attention Deployment"
-date: 2025-08-29
+date: 2025-08-21
 categories: [inspiration, growth]
 tags: [life, challenges, growth, mindset]
 description: "Though the marshmallow test showed delayed gratification to be crucial for success, in practice it’s attention deployment—how we manage our focus—that makes it work."
