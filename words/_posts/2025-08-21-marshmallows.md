@@ -11,9 +11,6 @@ og_image: https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2017/06/06161
 twitter_image: https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2017/06/061617_BB_marshmallow-test_main.jpg
 ---
 
-<br>
-<div style="text-align: center;"><i>“The single most important correlate of delayed gratification with youngsters was attention deployment.” </i></div>
-
 You’ve probably heard of the classic ["delay of gratification" experiment](https://en.wikipedia.org/wiki/Stanford_marshmallow_experiment) — where kids had to choose between one marshmallow right away or two if they waited a little longer. The kids who managed to wait were later shown to do better in life. But here’s the thing most people miss.
 
 The kids who managed to wait didn’t just sit there and tough it out. In fact, most kids who stared right at the marshmallow ended up eating it pretty quickly. The ones who held out distracted themselves — some hid under the table, some sang songs, some fiddled with their shoes. Basically, they looked anywhere but at the marshmallow.
