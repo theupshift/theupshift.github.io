@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Marshmallows, Delayed Gratification, and Attention Deployment"
+title: "Marshmallows, Delayed Gratification, and Attention."
 date: 2025-08-21
 categories: [inspiration, growth]
 tags: [life, challenges, growth, mindset]
