@@ -14,4 +14,8 @@ og_title: "Unmeasured"
 og_description: "Not everything in healthcare should be held to a yardstick. And not everything should be efficient. When a health provider sits with a patient who has just been told they are HIV-positive, the moment is not about speed, scale, or efficiency. What matters is the human work of listening, building trust, and walking with them through fear and uncertainty. That kind of connection cannot be measured, and even if we tried to capture it in numbers, the figures would never reflect its true significance."
 ---
 
-Not everything in healthcare should be held to a yardstick. And not everything should be efficient. When a health provider sits with a patient who has just been told they are HIV-positive, the moment is not about speed, scale, or efficiency. What matters is the human work of listening, building trust, and walking with them through fear and uncertainty. That kind of connection cannot be measured, and even if we tried to capture it in numbers, the figures would never reflect its true significance.
+Not everything in healthcare should be held to a yardstick. 
+
+And not everything should be efficient. When a health provider sits with a patient who has just been told they are HIV-positive, the moment is not about speed, scale, or efficiency. What matters is the human work of listening, building trust, and walking with them through fear and uncertainty. That kind of connection cannot be measured, and even if we tried to capture it in numbers, the figures would never reflect its true significance.
+
+🔺 Soon, knowing what not to measure may become one of the most important questions in healthcare.
