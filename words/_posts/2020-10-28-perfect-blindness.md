@@ -72,7 +72,7 @@ Other stuffs:
         display: inline-block;
         white-space: nowrap;
         padding-left: 0;
-    ">Still the One — one of the songs that moves me</div>
+    ">Still the One — Teddy Swims</div>
   </div>
 
   <!-- Track Position -->
