@@ -2,7 +2,7 @@
 
 description: It often takes a third party to bring our great gifts to the larger world.
 image: https://raw.githubusercontent.com/upmusings/upshift/master/images/aretha.png
-date: 2019-10-11 21:51:47 +0300
+date: 2019-05-22 21:51:47 +0300
 ---
 
 <center><em>"A gift that cannot move,<br> loses its gift properties." <br>— Lewis Hyde, The Gift</em></center>
