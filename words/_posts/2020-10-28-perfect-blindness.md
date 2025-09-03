@@ -88,7 +88,8 @@ Other stuffs:
   ">
 </div>
 
-<audio id="bg-audio" src="/assets/audio/still-the-one.mp3"></audio>
+<audio id="bg-audio" src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/assets/audio/teddy-swims_teddy-swims-you-re-still-the-one-shania-twain-cover.mp3"></audio>
+
 
 <style>
   @media (max-width: 480px) {
