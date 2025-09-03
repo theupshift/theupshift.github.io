@@ -68,10 +68,10 @@ Other stuffs:
       mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   ">
-    <div id="song-title" style="
+    <div id="song-title-inner" style="
         display: inline-block;
         white-space: nowrap;
-        padding-left: 0;
+        transform: translateX(0);
     ">Still the One — Teddy Swims</div>
   </div>
 
@@ -91,25 +91,26 @@ Other stuffs:
 <audio id="bg-audio" src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/assets/audio/teddy-swims_teddy-swims-you-re-still-the-one-shania-twain-cover.mp3"></audio>
 
 <style>
-  @media (max-width: 480px) {
-    #audio-player {
-      font-size: 0.8em;
-      padding: 0.15em 0.3em;
-    }
-    #audio-player #seek-bar {
-      width: 4em;
-    }
-    #audio-player #play-btn {
-      width: 1.5em;
-      height: 1.5em;
-    }
+@media (max-width: 480px) {
+  #audio-player {
+    font-size: 0.8em;
+    padding: 0.15em 0.3em;
   }
+  #audio-player #seek-bar {
+    width: 4em;
+  }
+  #audio-player #play-btn {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
 
-  /* Ensure scroll animation only affects song title inside player */
-  #audio-player #song-title.scrolling {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
+/* Scroll animation class */
+#audio-player .scrolling {
+  animation-name: scroll-title;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
 </style>
 
 <script>
@@ -119,7 +120,7 @@ const triangle = document.getElementById("triangle");
 const seekBar = document.getElementById("seek-bar");
 const currentTimeElem = document.getElementById("current-time");
 const durationElem = document.getElementById("duration");
-const songTitle = document.getElementById("song-title");
+const songTitleInner = document.getElementById("song-title-inner");
 
 let isPlaying = false;
 let styleEl = null;
@@ -135,8 +136,8 @@ audio.addEventListener('loadedmetadata', () => {
 });
 
 function startScrolling() {
-  const containerWidth = songTitle.parentElement.offsetWidth;
-  const textWidth = songTitle.scrollWidth;
+  const containerWidth = songTitleInner.parentElement.offsetWidth;
+  const textWidth = songTitleInner.scrollWidth;
 
   if (textWidth <= containerWidth) return;
 
@@ -146,21 +147,24 @@ function startScrolling() {
 
   styleEl = document.createElement('style');
   styleEl.innerHTML = `
-    @keyframes player-scroll {
+    @keyframes scroll-title {
       0% { transform: translateX(0); }
-      100% { transform: translateX(-${textWidth}px); }
+      100% { transform: translateX(-${textWidth - containerWidth}px); }
     }
-    #audio-player #song-title.scrolling {
-      animation: player-scroll ${duration}s linear infinite;
+    #audio-player .scrolling {
+      animation-duration: ${duration}s;
     }
   `;
   document.head.appendChild(styleEl);
 
-  songTitle.classList.add('scrolling');
+  setTimeout(() => {
+    songTitleInner.classList.add('scrolling');
+  }, 50);
 }
 
 function stopScrolling() {
-  songTitle.classList.remove('scrolling');
+  songTitleInner.classList.remove('scrolling');
+  songTitleInner.style.transform = 'translateX(0)';
 }
 
 playBtn.addEventListener("click", () => {
