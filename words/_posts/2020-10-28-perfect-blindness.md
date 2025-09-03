@@ -17,7 +17,7 @@ The new book is Hysterical. Sad. Poignant & Worth the wait!
 Other stuffs:
 1. This 👉🏾 [tweet](https://twitter.com/idrissultan/status/1321699238980603904?s=21) by Idris
 2. You can workout and eat healthy, but if you don't deal with the stuff going on in your head and heart you will still be unhealthy.
-3. This is really *"Still the One"* — one of the songs that moves me.
+3. This is really [*"Still the One"*](https://www.youtube.com/watch?v=KNZH-emehxA) — one of the songs that moves me. T.Swims rendition is so good!
 
 <!-- Inline Audio Player -->
 <div id="audio-player" style="
