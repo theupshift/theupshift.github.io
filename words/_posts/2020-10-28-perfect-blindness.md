@@ -19,10 +19,11 @@ Other stuffs:
 2. You can workout and eat healthy, but if you don't deal with the stuff going on in your head and heart you will still be unhealthy.
 3. This is really *"Still the One"* — one of the songs that moves me.  
 
+3. This is really *"Still the One"* — one of the songs that moves me.
+
 <!-- Inline Audio Player -->
 <div id="audio-player" style="
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
     background-color: red;
     color: white;
@@ -32,41 +33,46 @@ Other stuffs:
     overflow: hidden;
     min-width: 100%;
     max-width: 100%;
+    position: relative;
 ">
 
-  <!-- Play/Pause Button -->
+  <!-- Play/Pause Circle Button -->
   <button id="play-btn" style="
       width: 2em;
       height: 2em;
+      border-radius: 50%;
       border: none;
-      background: none;
-      color: white;
+      background-color: white;
+      color: red;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
       margin-right: 0.5em;
-      font-size: 1em;
       position: relative;
   ">
     <div id="triangle" style="
         width: 0;
         height: 0;
-        border-left: 1em solid white;
+        border-left: 0.8em solid red;
         border-top: 0.5em solid transparent;
         border-bottom: 0.5em solid transparent;
     "></div>
   </button>
 
-  <!-- Song Title -->
+  <!-- Song Title with fade effect -->
   <div style="
       flex: 1;
       overflow: hidden;
+      position: relative;
       white-space: nowrap;
+      mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   ">
     <div id="song-title" style="
         display: inline-block;
+        white-space: nowrap;
         padding-left: 0;
         animation: none;
     ">Still the One — one of the songs that moves me</div>
@@ -88,12 +94,6 @@ Other stuffs:
 <audio id="bg-audio" src="/assets/audio/still-the-one.mp3"></audio>
 
 <style>
-  @keyframes scroll-title {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
-
-  /* Responsive adjustments */
   @media (max-width: 480px) {
     #audio-player {
       font-size: 0.8em;
@@ -133,30 +133,49 @@ Other stuffs:
   playBtn.addEventListener("click", () => {
     if (!isPlaying) {
       audio.play();
-      // Change triangle into pause icon
+
+      // Change triangle to pause bars
+      triangle.innerHTML = '<div style="background:red; width:0.2em; height:100%; margin-right:0.1em"></div><div style="background:red; width:0.2em; height:100%"></div>';
       triangle.style.width = '0.6em';
       triangle.style.height = '1em';
       triangle.style.border = 'none';
+      triangle.style.borderLeft = 'none';
+      triangle.style.borderTop = 'none';
+      triangle.style.borderBottom = 'none';
       triangle.style.background = 'none';
-      triangle.style.position = 'relative';
-      triangle.innerHTML = '<div style="background:white; width:0.2em; height:100%; margin-right:0.1em"></div><div style="background:white; width:0.2em; height:100%"></div>';
       triangle.style.display = 'flex';
       triangle.style.justifyContent = 'space-between';
       triangle.style.padding = '0';
-      // Start scrolling song title
-      songTitle.style.paddingLeft = '100%';
-      songTitle.style.animation = 'scroll-title 10s linear infinite';
+
+      // Adaptive scrolling for song title
+      const containerWidth = songTitle.parentElement.offsetWidth;
+      const textWidth = songTitle.scrollWidth;
+      if (textWidth > containerWidth) {
+        const duration = (textWidth / containerWidth) * 10; // base 10s for container width
+        songTitle.style.paddingLeft = containerWidth + 'px';
+        songTitle.style.animation = `scroll-title ${duration}s linear infinite`;
+        // Create dynamic keyframes
+        const styleSheet = document.styleSheets[0];
+        const ruleName = 'scroll-title';
+        try { styleSheet.deleteRule(0); } catch(e){}
+        styleSheet.insertRule(`
+          @keyframes ${ruleName} {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-${textWidth}px); }
+          }
+        `, styleSheet.cssRules.length);
+      }
+
     } else {
       audio.pause();
       // Revert back to triangle
       triangle.style.width = '0';
       triangle.style.height = '0';
-      triangle.style.borderLeft = '1em solid white';
+      triangle.style.borderLeft = '0.8em solid red';
       triangle.style.borderTop = '0.5em solid transparent';
       triangle.style.borderBottom = '0.5em solid transparent';
-      triangle.style.background = 'none';
       triangle.innerHTML = '';
-      // Stop scrolling song title
+      // Stop scrolling
       songTitle.style.animation = 'none';
       songTitle.style.paddingLeft = '0';
     }
