@@ -104,8 +104,8 @@ title:
     class="background-image" 
   />
   <p class="quote-text">
-    Designs who engage in ‘the design of dissent’ do exist, but design’s default position is to grease the wheels of capitalism with style and taste.<br><br>
-    – Jeffrey Keedy
+    The love that you withhold is the pain that you carry.<br><br>
+    – Ralph Waldo Emerson
   </p>
   <div class="artist-overlay">
     Featured artist: <a href="https://www.instagram.com/januszjurek.info/" target="_blank" rel="noopener noreferrer">Janusz Jurek</a>
