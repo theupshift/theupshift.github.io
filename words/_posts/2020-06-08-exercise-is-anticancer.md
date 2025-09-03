@@ -2,7 +2,7 @@
 title: Exercises protects against Cancer
 description: Blood serum collected from men who did a single bout of high-intensity exercise dramatically reduced the survival of cancer cells.
 image: https://raw.githubusercontent.com/upmusings/upshift/master/images/exercise.png
-date: 2020-01-08 23:35:47 +0300
+date: 2020-06-08 23:35:47 +0300
 ---
 
 So in one of my latest e-surfing I ended up on this one journal page..  an article by *Kurgan et al*[^1] with some medical kind of way fancy title.
