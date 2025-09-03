@@ -19,6 +19,8 @@ Other stuffs:
 2. You can workout and eat healthy, but if you don't deal with the stuff going on in your head and heart you will still be unhealthy.
 3. This is really *"Still the One"* — one of the songs that moves me.
 
+3. This is really *"Still the One"* — one of the songs that moves me.
+
 <!-- Inline Audio Player -->
 <div id="audio-player" style="
     display: flex;
@@ -72,7 +74,6 @@ Other stuffs:
         display: inline-block;
         white-space: nowrap;
         padding-left: 0;
-        animation: none;
     ">Still the One — one of the songs that moves me</div>
   </div>
 
@@ -89,121 +90,8 @@ Other stuffs:
   ">
 </div>
 
-<audio id="bg-audio" src="/assets/audio/still-the-one.mp3"></audio>
+<audio
 
-<style>
-  /* Player-specific keyframes inside a unique selector */
-  #audio-player #song-title.scroll-animation {
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-
-  /* Responsive adjustments only inside the player */
-  @media (max-width: 480px) {
-    #audio-player {
-      font-size: 0.8em;
-      padding: 0.15em 0.3em;
-    }
-    #audio-player #seek-bar {
-      width: 4em;
-    }
-    #audio-player #play-btn {
-      width: 1.5em;
-      height: 1.5em;
-    }
-  }
-</style>
-
-<script>
-  const audio = document.getElementById("bg-audio");
-  const playBtn = document.getElementById("play-btn");
-  const triangle = document.getElementById("triangle");
-  const seekBar = document.getElementById("seek-bar");
-  const currentTimeElem = document.getElementById("current-time");
-  const durationElem = document.getElementById("duration");
-  const songTitle = document.getElementById("song-title");
-  const playerContainer = document.getElementById("audio-player");
-
-  let isPlaying = false;
-  let scrollStyleSheet = null;
-
-  function formatTime(sec) {
-    const minutes = Math.floor(sec / 60);
-    const seconds = Math.floor(sec % 60);
-    return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
-  }
-
-  audio.addEventListener('loadedmetadata', () => {
-    durationElem.textContent = formatTime(audio.duration);
-  });
-
-  playBtn.addEventListener("click", () => {
-    if (!isPlaying) {
-      audio.play();
-
-      // Change triangle to pause bars
-      triangle.innerHTML = '<div style="background:red; width:0.2em; height:100%; margin-right:0.1em"></div><div style="background:red; width:0.2em; height:100%"></div>';
-      triangle.style.width = '0.6em';
-      triangle.style.height = '1em';
-      triangle.style.border = 'none';
-      triangle.style.display = 'flex';
-      triangle.style.justifyContent = 'space-between';
-      triangle.style.padding = '0';
-
-      // Adaptive scrolling only inside player
-      const containerWidth = songTitle.parentElement.offsetWidth;
-      const textWidth = songTitle.scrollWidth;
-      if (textWidth > containerWidth) {
-        const duration = (textWidth / containerWidth) * 10; // base 10s for container width
-        songTitle.style.paddingLeft = containerWidth + 'px';
-        songTitle.classList.add('scroll-animation');
-
-        // Remove old dynamic style
-        if (scrollStyleSheet) {
-          document.head.removeChild(scrollStyleSheet);
-        }
-        // Create a style element for keyframes
-        scrollStyleSheet = document.createElement('style');
-        scrollStyleSheet.innerHTML = `
-          @keyframes player-scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-${textWidth}px); }
-          }
-          #audio-player #song-title.scroll-animation {
-            animation: player-scroll ${duration}s linear infinite;
-          }
-        `;
-        document.head.appendChild(scrollStyleSheet);
-      }
-
-    } else {
-      audio.pause();
-      // Revert triangle to play
-      triangle.style.width = '0';
-      triangle.style.height = '0';
-      triangle.style.borderLeft = '0.8em solid red';
-      triangle.style.borderTop = '0.5em solid transparent';
-      triangle.style.borderBottom = '0.5em solid transparent';
-      triangle.innerHTML = '';
-      // Stop scrolling
-      songTitle.style.animation = 'none';
-      songTitle.style.paddingLeft = '0';
-      songTitle.classList.remove('scroll-animation');
-    }
-    isPlaying = !isPlaying;
-  });
-
-  audio.addEventListener('timeupdate', () => {
-    const progress = (audio.currentTime / audio.duration) * 100;
-    seekBar.value = progress;
-    currentTimeElem.textContent = formatTime(audio.currentTime);
-  });
-
-  seekBar.addEventListener('input', () => {
-    const seekTo = (seekBar.value / 100) * audio.duration;
-    audio.currentTime = seekTo;
-  });
-</script>
 
 
 
