@@ -17,8 +17,6 @@ The new book is Hysterical. Sad. Poignant & Worth the wait!
 Other stuffs:
 1. This 👉🏾 [tweet](https://twitter.com/idrissultan/status/1321699238980603904?s=21) by Idris
 2. You can workout and eat healthy, but if you don't deal with the stuff going on in your head and heart you will still be unhealthy.
-3. This is really *"Still the One"* — one of the songs that moves me.  
-
 3. This is really *"Still the One"* — one of the songs that moves me.
 
 <!-- Inline Audio Player -->
@@ -61,14 +59,14 @@ Other stuffs:
     "></div>
   </button>
 
-  <!-- Song Title with fade effect -->
+  <!-- Song Title Container -->
   <div style="
       flex: 1;
       overflow: hidden;
       position: relative;
       white-space: nowrap;
-      mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
       -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   ">
     <div id="song-title" style="
         display: inline-block;
@@ -94,15 +92,22 @@ Other stuffs:
 <audio id="bg-audio" src="/assets/audio/still-the-one.mp3"></audio>
 
 <style>
+  /* Player-specific keyframes inside a unique selector */
+  #audio-player #song-title.scroll-animation {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  /* Responsive adjustments only inside the player */
   @media (max-width: 480px) {
     #audio-player {
       font-size: 0.8em;
       padding: 0.15em 0.3em;
     }
-    #seek-bar {
+    #audio-player #seek-bar {
       width: 4em;
     }
-    #play-btn {
+    #audio-player #play-btn {
       width: 1.5em;
       height: 1.5em;
     }
@@ -117,8 +122,10 @@ Other stuffs:
   const currentTimeElem = document.getElementById("current-time");
   const durationElem = document.getElementById("duration");
   const songTitle = document.getElementById("song-title");
+  const playerContainer = document.getElementById("audio-player");
 
   let isPlaying = false;
+  let scrollStyleSheet = null;
 
   function formatTime(sec) {
     const minutes = Math.floor(sec / 60);
@@ -139,36 +146,39 @@ Other stuffs:
       triangle.style.width = '0.6em';
       triangle.style.height = '1em';
       triangle.style.border = 'none';
-      triangle.style.borderLeft = 'none';
-      triangle.style.borderTop = 'none';
-      triangle.style.borderBottom = 'none';
-      triangle.style.background = 'none';
       triangle.style.display = 'flex';
       triangle.style.justifyContent = 'space-between';
       triangle.style.padding = '0';
 
-      // Adaptive scrolling for song title
+      // Adaptive scrolling only inside player
       const containerWidth = songTitle.parentElement.offsetWidth;
       const textWidth = songTitle.scrollWidth;
       if (textWidth > containerWidth) {
         const duration = (textWidth / containerWidth) * 10; // base 10s for container width
         songTitle.style.paddingLeft = containerWidth + 'px';
-        songTitle.style.animation = `scroll-title ${duration}s linear infinite`;
-        // Create dynamic keyframes
-        const styleSheet = document.styleSheets[0];
-        const ruleName = 'scroll-title';
-        try { styleSheet.deleteRule(0); } catch(e){}
-        styleSheet.insertRule(`
-          @keyframes ${ruleName} {
+        songTitle.classList.add('scroll-animation');
+
+        // Remove old dynamic style
+        if (scrollStyleSheet) {
+          document.head.removeChild(scrollStyleSheet);
+        }
+        // Create a style element for keyframes
+        scrollStyleSheet = document.createElement('style');
+        scrollStyleSheet.innerHTML = `
+          @keyframes player-scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-${textWidth}px); }
           }
-        `, styleSheet.cssRules.length);
+          #audio-player #song-title.scroll-animation {
+            animation: player-scroll ${duration}s linear infinite;
+          }
+        `;
+        document.head.appendChild(scrollStyleSheet);
       }
 
     } else {
       audio.pause();
-      // Revert back to triangle
+      // Revert triangle to play
       triangle.style.width = '0';
       triangle.style.height = '0';
       triangle.style.borderLeft = '0.8em solid red';
@@ -178,6 +188,7 @@ Other stuffs:
       // Stop scrolling
       songTitle.style.animation = 'none';
       songTitle.style.paddingLeft = '0';
+      songTitle.classList.remove('scroll-animation');
     }
     isPlaying = !isPlaying;
   });
