@@ -19,8 +19,6 @@ Other stuffs:
 2. You can workout and eat healthy, but if you don't deal with the stuff going on in your head and heart you will still be unhealthy.
 3. This is really *"Still the One"* — one of the songs that moves me.
 
-3. This is really *"Still the One"* — one of the songs that moves me.
-
 <!-- Inline Audio Player -->
 <div id="audio-player" style="
     display: flex;
@@ -90,8 +88,117 @@ Other stuffs:
   ">
 </div>
 
-<audio
+<audio id="bg-audio" src="/assets/audio/still-the-one.mp3"></audio>
 
+<style>
+  @media (max-width: 480px) {
+    #audio-player {
+      font-size: 0.8em;
+      padding: 0.15em 0.3em;
+    }
+    #audio-player #seek-bar {
+      width: 4em;
+    }
+    #audio-player #play-btn {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+</style>
+
+<script>
+  const audio = document.getElementById("bg-audio");
+  const playBtn = document.getElementById("play-btn");
+  const triangle = document.getElementById("triangle");
+  const seekBar = document.getElementById("seek-bar");
+  const currentTimeElem = document.getElementById("current-time");
+  const durationElem = document.getElementById("duration");
+  const songTitle = document.getElementById("song-title");
+
+  let isPlaying = false;
+
+  function formatTime(sec) {
+    const minutes = Math.floor(sec / 60);
+    const seconds = Math.floor(sec % 60);
+    return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+  }
+
+  audio.addEventListener('loadedmetadata', () => {
+    durationElem.textContent = formatTime(audio.duration);
+  });
+
+  function startScrolling() {
+    const containerWidth = songTitle.parentElement.offsetWidth;
+    const textWidth = songTitle.scrollWidth;
+
+    if (textWidth <= containerWidth) return; // No scroll needed
+
+    const duration = (textWidth / containerWidth) * 10; // 10s base for container width
+
+    // Remove previous animation if exists
+    songTitle.style.animation = 'none';
+
+    // Inject keyframes for this title
+    const styleEl = document.createElement('style');
+    styleEl.innerHTML = `
+      @keyframes player-scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-${textWidth}px); }
+      }
+    `;
+    document.head.appendChild(styleEl);
+
+    // Apply animation
+    songTitle.style.paddingLeft = containerWidth + 'px';
+    songTitle.style.animation = `player-scroll ${duration}s linear infinite`;
+  }
+
+  function stopScrolling() {
+    songTitle.style.animation = 'none';
+    songTitle.style.paddingLeft = '0';
+  }
+
+  playBtn.addEventListener("click", () => {
+    if (!isPlaying) {
+      audio.play();
+
+      // Triangle -> pause bars
+      triangle.innerHTML = '<div style="background:red; width:0.2em; height:100%; margin-right:0.1em"></div><div style="background:red; width:0.2em; height:100%"></div>';
+      triangle.style.width = '0.6em';
+      triangle.style.height = '1em';
+      triangle.style.border = 'none';
+      triangle.style.display = 'flex';
+      triangle.style.justifyContent = 'space-between';
+      triangle.style.padding = '0';
+
+      startScrolling();
+    } else {
+      audio.pause();
+
+      // Pause -> triangle
+      triangle.style.width = '0';
+      triangle.style.height = '0';
+      triangle.style.borderLeft = '0.8em solid red';
+      triangle.style.borderTop = '0.5em solid transparent';
+      triangle.style.borderBottom = '0.5em solid transparent';
+      triangle.innerHTML = '';
+
+      stopScrolling();
+    }
+    isPlaying = !isPlaying;
+  });
+
+  audio.addEventListener('timeupdate', () => {
+    const progress = (audio.currentTime / audio.duration) * 100;
+    seekBar.value = progress;
+    currentTimeElem.textContent = formatTime(audio.currentTime);
+  });
+
+  seekBar.addEventListener('input', () => {
+    const seekTo = (seekBar.value / 100) * audio.duration;
+    audio.currentTime = seekTo;
+  });
+</script>
 
 
 
