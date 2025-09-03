@@ -19,15 +19,21 @@ Other stuffs:
 2. You can workout and eat healthy, but if you don't deal with the stuff going on in your head and heart you will still be unhealthy.
 3. This is really *"Still the One"* — one of the songs that moves me.  
 
+3. This is really *"Still the One"* — one of the songs that moves me.
+
 <!-- Inline Audio Player -->
 <div id="audio-player" style="
-    display: inline-flex;
+    display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     background-color: red;
     color: white;
     border-radius: 1em;
     padding: 0.2em 0.5em;
     font-size: 1em;
+    overflow: hidden;
+    min-width: 100%;
+    max-width: 100%;
 ">
 
   <!-- Play/Pause Button -->
@@ -41,11 +47,11 @@ Other stuffs:
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
       margin-right: 0.5em;
-      position: relative;
       font-size: 1em;
+      position: relative;
   ">
-    <!-- Triangle Play Shape -->
     <div id="triangle" style="
         width: 0;
         height: 0;
@@ -55,22 +61,55 @@ Other stuffs:
     "></div>
   </button>
 
-  <!-- Song Title -->
-  <span id="song-title" style="margin-right:0.5em;">Still the One</span>
+  <!-- Song Title with scrolling effect -->
+  <div style="
+      flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+  ">
+    <div id="song-title" style="
+        display: inline-block;
+        padding-left: 100%;
+        animation: scroll-title 10s linear infinite;
+    ">Still the One — one of the songs that moves me</div>
+  </div>
 
   <!-- Track Position -->
-  <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+  <span id="current-time" style="flex-shrink:0; margin-left:0.5em;">0:00</span> / 
+  <span id="duration" style="flex-shrink:0; margin-left:0.2em;">0:00</span>
 
   <!-- Scrubbable Seek Bar -->
   <input id="seek-bar" type="range" value="0" min="0" max="100" style="
       margin-left:0.5em;
       cursor:pointer;
+      flex-shrink:1;
+      width: 6em;
   ">
 </div>
 
 <audio id="bg-audio" src="/assets/audio/still-the-one.mp3"></audio>
 
-**P.S.** How long will you put off what you are capable of doing just to continue what you are comfortable doing?
+<style>
+  @keyframes scroll-title {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    #audio-player {
+      font-size: 0.8em;
+      padding: 0.15em 0.3em;
+    }
+    #seek-bar {
+      width: 4em;
+    }
+    #play-btn {
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+</style>
 
 <script>
   const audio = document.getElementById("bg-audio");
@@ -82,23 +121,20 @@ Other stuffs:
 
   let isPlaying = false;
 
-  // Format seconds to mm:ss
   function formatTime(sec) {
     const minutes = Math.floor(sec / 60);
     const seconds = Math.floor(sec % 60);
     return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
   }
 
-  // Set total duration when metadata loaded
   audio.addEventListener('loadedmetadata', () => {
     durationElem.textContent = formatTime(audio.duration);
   });
 
-  // Play/Pause click
   playBtn.addEventListener("click", () => {
     if (!isPlaying) {
       audio.play();
-      // Change triangle into pause icon (two bars)
+      // Change triangle into pause icon
       triangle.style.width = '0.6em';
       triangle.style.height = '1em';
       triangle.style.border = 'none';
@@ -122,16 +158,18 @@ Other stuffs:
     isPlaying = !isPlaying;
   });
 
-  // Update seek bar and current time
   audio.addEventListener('timeupdate', () => {
     const progress = (audio.currentTime / audio.duration) * 100;
     seekBar.value = progress;
     currentTimeElem.textContent = formatTime(audio.currentTime);
   });
 
-  // Scrub to new position
   seekBar.addEventListener('input', () => {
     const seekTo = (seekBar.value / 100) * audio.duration;
     audio.currentTime = seekTo;
   });
 </script>
+
+
+**P.S.** How long will you put off what you are capable of doing just to continue what you are comfortable doing?
+
