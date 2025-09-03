@@ -19,17 +19,23 @@ Other stuffs:
 2. You can workout and eat healthy, but if you don't deal with the stuff going on in your head and heart you will still be unhealthy.
 3. This is really *"Still the One"* — one of the songs that moves me.  
 
-<!-- Inline Play Button -->
+<!-- Inline Round Play Button -->
 <button id="play-btn" style="
     border: none;
-    background: none;
-    color: red;
+    background-color: red;
+    color: white;
     font-size: 1em;
     cursor: pointer;
-    display: inline;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
     padding: 0;
+    margin-left: 0.3em;
 ">
-  <i class="fas fa-play"></i> 🎵
+  <i class="fas fa-play"></i>
 </button>
 
 <audio id="bg-audio" src="/assets/audio/still-the-one.mp3"></audio>
@@ -44,10 +50,10 @@ Other stuffs:
   playBtn.addEventListener("click", () => {
     if (!isPlaying) {
       audio.play();
-      playBtn.innerHTML = '<i class="fas fa-pause"></i> 🎵';
+      playBtn.innerHTML = '<i class="fas fa-pause"></i>';
     } else {
       audio.pause();
-      playBtn.innerHTML = '<i class="fas fa-play"></i> 🎵';
+      playBtn.innerHTML = '<i class="fas fa-play"></i>';
     }
     isPlaying = !isPlaying;
   });
