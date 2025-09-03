@@ -1,6 +1,6 @@
 ---
 title: “The View-Source Web”
-date: 2019-05-24 14:57:31 +0200
+date: 2019-05-30 14:57:31 +0200
 link: https://inessential.com/2018/04/15/the_view_source_web
 ---
 
