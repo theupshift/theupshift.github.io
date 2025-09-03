@@ -1,4 +1,3 @@
----
 description: In a perfect world, everyone is blind... and other rumblings about October.
 image: https://raw.githubusercontent.com/upmusings/upshift/master/images/restyo.png
 date: 2020-10-29 15:42:47 +0300
@@ -59,14 +58,14 @@ Other stuffs:
     "></div>
   </button>
 
-  <!-- Song Title Container -->
+  <!-- Song Title Container with fade -->
   <div style="
       flex: 1;
       overflow: hidden;
       position: relative;
       white-space: nowrap;
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
       mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   ">
     <div id="song-title" style="
         display: inline-block;
@@ -90,7 +89,6 @@ Other stuffs:
 
 <audio id="bg-audio" src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/assets/audio/teddy-swims_teddy-swims-you-re-still-the-one-shania-twain-cover.mp3"></audio>
 
-
 <style>
   @media (max-width: 480px) {
     #audio-player {
@@ -105,103 +103,105 @@ Other stuffs:
       height: 1.5em;
     }
   }
+
+  /* Ensure scroll animation only affects song title inside player */
+  #audio-player #song-title.scrolling {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
 </style>
 
 <script>
-  const audio = document.getElementById("bg-audio");
-  const playBtn = document.getElementById("play-btn");
-  const triangle = document.getElementById("triangle");
-  const seekBar = document.getElementById("seek-bar");
-  const currentTimeElem = document.getElementById("current-time");
-  const durationElem = document.getElementById("duration");
-  const songTitle = document.getElementById("song-title");
+const audio = document.getElementById("bg-audio");
+const playBtn = document.getElementById("play-btn");
+const triangle = document.getElementById("triangle");
+const seekBar = document.getElementById("seek-bar");
+const currentTimeElem = document.getElementById("current-time");
+const durationElem = document.getElementById("duration");
+const songTitle = document.getElementById("song-title");
 
-  let isPlaying = false;
+let isPlaying = false;
+let styleEl = null;
 
-  function formatTime(sec) {
-    const minutes = Math.floor(sec / 60);
-    const seconds = Math.floor(sec % 60);
-    return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
-  }
+function formatTime(sec) {
+  const minutes = Math.floor(sec / 60);
+  const seconds = Math.floor(sec % 60);
+  return minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
+}
 
-  audio.addEventListener('loadedmetadata', () => {
-    durationElem.textContent = formatTime(audio.duration);
-  });
+audio.addEventListener('loadedmetadata', () => {
+  durationElem.textContent = formatTime(audio.duration);
+});
 
-  function startScrolling() {
-    const containerWidth = songTitle.parentElement.offsetWidth;
-    const textWidth = songTitle.scrollWidth;
+function startScrolling() {
+  const containerWidth = songTitle.parentElement.offsetWidth;
+  const textWidth = songTitle.scrollWidth;
 
-    if (textWidth <= containerWidth) return; // No scroll needed
+  if (textWidth <= containerWidth) return;
 
-    const duration = (textWidth / containerWidth) * 10; // 10s base for container width
+  const duration = (textWidth / containerWidth) * 10; // base 10s
 
-    // Remove previous animation if exists
-    songTitle.style.animation = 'none';
+  if (styleEl) styleEl.remove();
 
-    // Inject keyframes for this title
-    const styleEl = document.createElement('style');
-    styleEl.innerHTML = `
-      @keyframes player-scroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-${textWidth}px); }
-      }
-    `;
-    document.head.appendChild(styleEl);
-
-    // Apply animation
-    songTitle.style.paddingLeft = containerWidth + 'px';
-    songTitle.style.animation = `player-scroll ${duration}s linear infinite`;
-  }
-
-  function stopScrolling() {
-    songTitle.style.animation = 'none';
-    songTitle.style.paddingLeft = '0';
-  }
-
-  playBtn.addEventListener("click", () => {
-    if (!isPlaying) {
-      audio.play();
-
-      // Triangle -> pause bars
-      triangle.innerHTML = '<div style="background:red; width:0.2em; height:100%; margin-right:0.1em"></div><div style="background:red; width:0.2em; height:100%"></div>';
-      triangle.style.width = '0.6em';
-      triangle.style.height = '1em';
-      triangle.style.border = 'none';
-      triangle.style.display = 'flex';
-      triangle.style.justifyContent = 'space-between';
-      triangle.style.padding = '0';
-
-      startScrolling();
-    } else {
-      audio.pause();
-
-      // Pause -> triangle
-      triangle.style.width = '0';
-      triangle.style.height = '0';
-      triangle.style.borderLeft = '0.8em solid red';
-      triangle.style.borderTop = '0.5em solid transparent';
-      triangle.style.borderBottom = '0.5em solid transparent';
-      triangle.innerHTML = '';
-
-      stopScrolling();
+  styleEl = document.createElement('style');
+  styleEl.innerHTML = `
+    @keyframes player-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-${textWidth}px); }
     }
-    isPlaying = !isPlaying;
-  });
+    #audio-player #song-title.scrolling {
+      animation: player-scroll ${duration}s linear infinite;
+    }
+  `;
+  document.head.appendChild(styleEl);
 
-  audio.addEventListener('timeupdate', () => {
-    const progress = (audio.currentTime / audio.duration) * 100;
-    seekBar.value = progress;
-    currentTimeElem.textContent = formatTime(audio.currentTime);
-  });
+  songTitle.classList.add('scrolling');
+}
 
-  seekBar.addEventListener('input', () => {
-    const seekTo = (seekBar.value / 100) * audio.duration;
-    audio.currentTime = seekTo;
-  });
+function stopScrolling() {
+  songTitle.classList.remove('scrolling');
+}
+
+playBtn.addEventListener("click", () => {
+  if (!isPlaying) {
+    audio.play();
+
+    // Triangle -> pause bars
+    triangle.innerHTML = '<div style="background:red; width:0.2em; height:100%; margin-right:0.1em"></div><div style="background:red; width:0.2em; height:100%"></div>';
+    triangle.style.width = '0.6em';
+    triangle.style.height = '1em';
+    triangle.style.border = 'none';
+    triangle.style.display = 'flex';
+    triangle.style.justifyContent = 'space-between';
+    triangle.style.padding = '0';
+
+    startScrolling();
+  } else {
+    audio.pause();
+
+    // Pause -> triangle
+    triangle.style.width = '0';
+    triangle.style.height = '0';
+    triangle.style.borderLeft = '0.8em solid red';
+    triangle.style.borderTop = '0.5em solid transparent';
+    triangle.style.borderBottom = '0.5em solid transparent';
+    triangle.innerHTML = '';
+
+    stopScrolling();
+  }
+  isPlaying = !isPlaying;
+});
+
+audio.addEventListener('timeupdate', () => {
+  const progress = (audio.currentTime / audio.duration) * 100;
+  seekBar.value = progress;
+  currentTimeElem.textContent = formatTime(audio.currentTime);
+});
+
+seekBar.addEventListener('input', () => {
+  const seekTo = (seekBar.value / 100) * audio.duration;
+  audio.currentTime = seekTo;
+});
 </script>
 
-
-
 **P.S.** How long will you put off what you are capable of doing just to continue what you are comfortable doing?
-
