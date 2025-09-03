@@ -1,13 +1,13 @@
 ---
 title: 
 description: It is a denial of the divinity within us to doubt our potential and our possibilities.
-image: https://raw.githubusercontent.com/upmusings/upshift/master/images/gairomall2.png
+image: https://raw.githubusercontent.com/upmusings/upshift/master/images/gairomall2.jpg
 date: 2020-05-28 14:30:47 +0300
 categories: Quotes
 layout: no-title-post
 
 ---
-<div style="text-align: center"><img src="https://raw.githubusercontent.com/upmusings/upshift/master/images/gairomall2.png" alt="table1" width="100%"/></div>
+<div style="text-align: center"><img src="https://raw.githubusercontent.com/upmusings/upshift/master/images/gairomall2.jpg" alt="table1" width="100%"/></div>
 
 <center><span style="color:gray; font-family:Georgia; font-size:0.6em;"><em> We know what we are, but not what we may be.<br>— William Shakespeare</em></span>
 </center>
