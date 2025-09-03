@@ -5,6 +5,7 @@ date: 2020-10-29 15:42:47 +0300
 ---
 
 <center>One aphorism I've been pondering lately:</center>
+<br>
 <center><b>... In a perfect world, everyone is blind.</b>
 <br>Perfect. Blindness? Really, Everyone?</center>
 
