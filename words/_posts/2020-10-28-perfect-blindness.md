@@ -19,8 +19,6 @@ Other stuffs:
 2. You can workout and eat healthy, but if you don't deal with the stuff going on in your head and heart you will still be unhealthy.
 3. This is really *"Still the One"* — one of the songs that moves me.  
 
-3. This is really *"Still the One"* — one of the songs that moves me.
-
 <!-- Inline Audio Player -->
 <div id="audio-player" style="
     display: flex;
@@ -61,7 +59,7 @@ Other stuffs:
     "></div>
   </button>
 
-  <!-- Song Title with scrolling effect -->
+  <!-- Song Title -->
   <div style="
       flex: 1;
       overflow: hidden;
@@ -69,8 +67,8 @@ Other stuffs:
   ">
     <div id="song-title" style="
         display: inline-block;
-        padding-left: 100%;
-        animation: scroll-title 10s linear infinite;
+        padding-left: 0;
+        animation: none;
     ">Still the One — one of the songs that moves me</div>
   </div>
 
@@ -118,6 +116,7 @@ Other stuffs:
   const seekBar = document.getElementById("seek-bar");
   const currentTimeElem = document.getElementById("current-time");
   const durationElem = document.getElementById("duration");
+  const songTitle = document.getElementById("song-title");
 
   let isPlaying = false;
 
@@ -144,6 +143,9 @@ Other stuffs:
       triangle.style.display = 'flex';
       triangle.style.justifyContent = 'space-between';
       triangle.style.padding = '0';
+      // Start scrolling song title
+      songTitle.style.paddingLeft = '100%';
+      songTitle.style.animation = 'scroll-title 10s linear infinite';
     } else {
       audio.pause();
       // Revert back to triangle
@@ -154,6 +156,9 @@ Other stuffs:
       triangle.style.borderBottom = '0.5em solid transparent';
       triangle.style.background = 'none';
       triangle.innerHTML = '';
+      // Stop scrolling song title
+      songTitle.style.animation = 'none';
+      songTitle.style.paddingLeft = '0';
     }
     isPlaying = !isPlaying;
   });
@@ -169,6 +174,7 @@ Other stuffs:
     audio.currentTime = seekTo;
   });
 </script>
+
 
 
 **P.S.** How long will you put off what you are capable of doing just to continue what you are comfortable doing?
