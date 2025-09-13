@@ -38,7 +38,8 @@ Plant-forward diets already have clear clinical benefits: lower cardiovascular r
 
 Of course, this gets complicated in places like where I am. Livestock there isn’t just food—it’s culture, wealth, and survival. These people have managed grazing lands for generations. Suggesting they rely less on livestock isn’t simple. Yet maybe there’s a path forward: blending traditional wisdom with modern tools like diversifying crops, integrating agroforestry, and gently shifting diets where it makes sense.  
 
-<div style="border-left: 4px solid #2196F3; padding-left: 1em; margin: 1em 0; color: #333;">
+<!-- Clinician action list (plain list, not a quote) -->
+<div style="margin: 1em 0; color: #333;">
 <strong>Where clinicians fit in:</strong>
 <ul>
   <li>Frame diet as part of both personal health and planetary health.</li>
