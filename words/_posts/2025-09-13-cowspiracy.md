@@ -5,10 +5,10 @@ title: The System We Eat From
 categories: [inspiration, growth]
 tags: [food, environment, health, sustainability]
 description: "Food isn’t just about calories or nutrients. It’s about water, forests, culture, and the world we leave behind. Plant-forward diets benefit both personal and planetary health."
-featured_image: https://images.squarespace-cdn.com/content/v1/544dc5a1e4b07e8995e3effa/1416516085396-O8DWGJU97DV9E3NVZPQ5/image-asset.png
-image: https://images.squarespace-cdn.com/content/v1/544dc5a1e4b07e8995e3effa/1416516085396-O8DWGJU97DV9E3NVZPQ5/image-asset.png
-og_image: https://images.squarespace-cdn.com/content/v1/544dc5a1e4b07e8995e3effa/1416516085396-O8DWGJU97DV9E3NVZPQ5/image-asset.png
-twitter_image: https://images.squarespace-cdn.com/content/v1/544dc5a1e4b07e8995e3effa/1416516085396-O8DWGJU97DV9E3NVZPQ5/image-asset.png
+featured_image: https://scrapsfromtheloft.com/wp-content/uploads/2019/04/cowspiracy_cow-e1611838379301.jpeg
+image: https://scrapsfromtheloft.com/wp-content/uploads/2019/04/cowspiracy_cow-e1611838379301.jpeg
+og_image: https://scrapsfromtheloft.com/wp-content/uploads/2019/04/cowspiracy_cow-e1611838379301.jpeg
+twitter_image: https://scrapsfromtheloft.com/wp-content/uploads/2019/04/cowspiracy_cow-e1611838379301.jpeg
 ---
 
 As doctors, we tend to frame diet in the language of individual risk: weight, blood pressure, cholesterol. The usual script goes; warn against soda, recommend oats, prescribe DASH or Mediterranean diets. It’s all measurable, and we like things we can measure.
