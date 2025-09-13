@@ -29,8 +29,8 @@ I’ll admit, I watched *Cowspiracy* on my phone expecting little more than a di
 Though the film leans a bit toward over-provocation, the numbers are stark: food production contributes roughly a quarter of global greenhouse gas emissions.  
 
 <div style="display: flex; justify-content: space-between; gap: 1em; margin-bottom: 1em;">
-  <img src="https://github.com/theupshift/theupshift.github.io/blob/master/images/Environmental-impacts-of-agriculture.png" style="width:49%;" alt="Environmental impacts of agriculture">
-  <img src="https://github.com/theupshift/theupshift.github.io/blob/master/images/ghg-per-kg-poore.png" style="width:49%;" alt="GHG per kg of food">
+  <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/Environmental-impacts-of-agriculture.png" style="width:49%;" alt="Environmental impacts of agriculture">
+  <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/ghg-per-kg-poore.png" style="width:49%;" alt="GHG per kg of food">
 </div>
 
 Plant-forward diets already have clear clinical benefits: lower cardiovascular risk, better glycemic control, reduced cancer incidence. But their impact doesn’t end at the clinic door. They also reduce methane emissions, conserve water, and protect soil. In other words, they make people healthier **and** the systems they live in more sustainable.  
