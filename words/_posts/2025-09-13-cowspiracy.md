@@ -19,7 +19,7 @@ I’ll admit, I watched *Cowspiracy* on my phone expecting little more than a di
 
 <!-- Featured image with clickable red play overlay -->
 <div style="position: relative; display: inline-block; text-align: center; margin: 1em 0; max-width: 100%;">
-  <a href="https://www.youtube.com/watch?v=8t4XM_2TQl8" target="_blank">
+  <a href="https://www.youtube.com/watch?v=nV04zyfLyN4" target="_blank">
     <img src="https://scrapsfromtheloft.com/wp-content/uploads/2019/04/cowspiracy_cow-e1611838379301.jpeg" 
          alt="Cowspiracy" style="width:100%; height:auto; display:block;">
     <!-- Red circle play button overlay -->
