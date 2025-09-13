@@ -17,10 +17,36 @@ But what if we widened the lens? What if food wasn’t just about health markers
 
 I’ll admit, I watched *Cowspiracy* on my phone expecting little more than a distraction. Instead, it reframed something I thought I knew. Food isn’t just calories and nutrients. It’s land use, carbon, water, and culture. It’s health—not just for the individual, but for the environment that individual depends on.
 
-<!-- Image before the quote -->
-<div style="text-align:center; margin: 1em 0;">
-  <img src="https://images.squarespace-cdn.com/content/v1/544dc5a1e4b07e8995e3effa/1416516085396-O8DWGJU97DV9E3NVZPQ5/image-asset.png" alt="Livestock carbon emissions" style="max-width:100%; height:auto;">
+<!-- Featured image with clickable red play button -->
+<div style="position: relative; display: inline-block; text-align: center; margin: 1em 0;">
+  <a href="https://www.youtube.com/watch?v=8t4XM_2TQl8" target="_blank">
+    <img src="https://scrapsfromtheloft.com/wp-content/uploads/2019/04/cowspiracy_cow-e1611838379301.jpeg" 
+         alt="Cowspiracy" style="max-width:100%; height:auto; display:block;">
+    <!-- Red circle play button -->
+    <div style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      background-color: rgba(255,0,0,0.8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    ">
+      <div style="
+        width: 0;
+        height: 0;
+        border-left: 25px solid white;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+      "></div>
+    </div>
+  </a>
 </div>
+
 
 <div style="border-left: 4px solid #4CAF50; padding-left: 1em; margin: 1em 0; color: #555;">
 “Livestock and their byproducts account for at least 32,000 million tons of carbon dioxide per year, or 51% of all worldwide greenhouse gas emissions.” - <strong>Cowspiracy</strong>
