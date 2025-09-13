@@ -12,15 +12,16 @@ twitter_image: https://images.squarespace-cdn.com/content/v1/544dc5a1e4b07e8995e
 ---
 <br>
 
-<div style="text-align: center; font-style: italic; font-size: 1.1em; margin-bottom: 1em;">
-"Food isn’t just calories and nutrients. It’s land use, carbon, water, and culture."
-</div>
-
 As doctors, we often frame diet in terms of individual risk: weight, blood pressure, cholesterol. The usual script goes: warn against soda, recommend oats, prescribe DASH or Mediterranean diets. It’s all measurable—and we like things we can measure.  
 
 But what if we widened the lens? What if food wasn’t just about health markers, but also about water, forests, and the world we leave behind?  
 
 I’ll admit, I watched *Cowspiracy* on my phone expecting little more than a distraction. Instead, it reframed something I thought I knew. Food isn’t just calories and nutrients. It’s land use, carbon, water, and culture. It’s health—not just for the individual, but for the environment that individual depends on.  
+
+<!-- New image added before the quote -->
+<div style="text-align:center; margin: 1em 0;">
+  <img src="https://images.squarespace-cdn.com/content/v1/544dc5a1e4b07e8995e3effa/1416516085396-O8DWGJU97DV9E3NVZPQ5/image-asset.png" alt="Livestock carbon emissions" style="max-width:100%; height:auto;">
+</div>
 
 <div style="border-left: 4px solid #4CAF50; padding-left: 1em; margin: 1em 0; color: #555;">
 <strong>“Livestock and their byproducts account for at least 32,000 million tons of carbon dioxide per year, or 51% of all worldwide greenhouse gas emissions.”</strong> – Cowspiracy
