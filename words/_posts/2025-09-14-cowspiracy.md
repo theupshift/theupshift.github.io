@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2025-09-12
+date: 2025-09-14
 title: The System We Eat From
 categories: [inspiration, growth]
 tags: [food, environment, health, sustainability]
@@ -28,7 +28,8 @@ I’ll admit, I watched *Cowspiracy* on my phone expecting little more than a di
 
 Though the film leans bit more on over-provocation, the numbers are stark. Food production contributes roughly a quarter of global greenhouse gas emissions.  
 
-Plant-forward diets already have clear clinical benefits: lower cardiovascular risk, better glycemic control, reduced cancer incidence. But their impact doesn’t end at the clinic door. They also reduce methane emissions, conserve water, and protect soil. In other words, they make people healthier and the systems they live in more sustainable.<sup>[1](https://ourworldindata.org/environmental-impacts-of-food)</sup>
+Plant-forward diets already have clear clinical benefits: lower cardiovascular risk, better glycemic control, reduced cancer incidence. But their impact doesn’t end at the clinic door. They also reduce methane emissions, conserve water, and protect soil. In other words, they make people healthier and the systems they live in more sustainable.<sup style="color:red;"><a href="https://ourworldindata.org/environmental-impacts-of-food" target="_blank">1</a></sup>
+
 <!-- Single GitHub image -->
 <div style="text-align:center; margin: 1em 0;">
   <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/ghg-per-kg-poore.png" style="max-width:100%; height:auto;" alt="Environmental impacts of agriculture">
