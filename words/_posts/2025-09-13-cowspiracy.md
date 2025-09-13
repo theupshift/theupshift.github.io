@@ -25,7 +25,7 @@ I’ll admit, I watched *Cowspiracy* on my phone expecting little more than a di
 <div style="border-left: 4px solid #4CAF50; padding-left: 1em; margin: 1em 0; color: #555;">
 “Livestock and their byproducts account for at least 32,000 million tons of carbon dioxide per year, or 51% of all worldwide greenhouse gas emissions.” - <strong>Cowspiracy</strong>
 </div>
-
+<br>
 Though the film leans bit more on over-provocation, the numbers are stark. Food production contributes roughly a quarter of global greenhouse gas emissions.  
 
 Plant-forward diets already have clear clinical benefits: lower cardiovascular risk, better glycemic control, reduced cancer incidence. But their impact doesn’t end at the clinic door. They also reduce methane emissions, conserve water, and protect soil. In other words, they make people healthier and the systems they live in more sustainable.<sup style="color:red;"><a href="https://ourworldindata.org/environmental-impacts-of-food" target="_blank">1</a></sup>
