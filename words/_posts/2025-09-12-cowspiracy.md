@@ -27,10 +27,12 @@ I’ll admit, I watched *Cowspiracy* on my phone expecting little more than a di
 </div>
 
 Though the film leans bit more on over-provocation, the numbers are stark. Food production contributes roughly a quarter of global greenhouse gas emissions.  
-<div style="display: flex; justify-content: space-between; gap: 1em; margin-bottom: 1em;">
-  <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/Environmental-impacts-of-agriculture.png" style="width:49%;" alt="Environmental impacts of agriculture">
-  <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/ghg-per-kg-poore.png" style="width:49%;" alt="GHG per kg of food">
+
+<!-- Single GitHub image -->
+<div style="text-align:center; margin: 1em 0;">
+  <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/ghg-per-kg-poore.png" style="max-width:100%; height:auto;" alt="Environmental impacts of agriculture">
 </div>
+
 Plant-forward diets already have clear clinical benefits: lower cardiovascular risk, better glycemic control, reduced cancer incidence. But their impact doesn’t end at the clinic door. They also reduce methane emissions, conserve water, and protect soil. In other words, they make people healthier and the systems they live in more sustainable.
 
 Of course, this gets complicated in places like where I am. Livestock there isn’t just food here, it’s culture, wealth, and survival. These people have managed grazing lands for generations. Suggesting they rely less on livestock isn’t simple, Yet maybe there’s a path forward: blending traditional wisdom with modern tools like diversifying crops, integrating agroforestry, and maybe gently shifting diets where it makes sense.
