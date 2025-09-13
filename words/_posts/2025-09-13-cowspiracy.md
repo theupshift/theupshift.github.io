@@ -20,7 +20,7 @@ I’ll admit, I watched *Cowspiracy* on my phone expecting little more than a di
 <!-- Featured image with clickable red play overlay -->
 <div style="position: relative; display: inline-block; width: 100%; max-width: 800px; margin: 1em auto;">
   <a href="https://www.youtube.com/watch?v=nV04zyfLyN4" target="_blank" style="display: block;">
-    <img src="https://scrapsfromtheloft.com/wp-content/uploads/2019/04/cowspiracy_cow-e1611838379301.jpeg" 
+    <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/cowspiracy_cow-e1611838379301.jpeg" 
          alt="Cowspiracy" style="width:100%; height:auto; display:block;">
     <!-- Red circle play button overlay -->
     <div style="
