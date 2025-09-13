@@ -17,39 +17,41 @@ But what if we widened the lens? What if food wasn’t just about health markers
 
 I’ll admit, I watched *Cowspiracy* on my phone expecting little more than a distraction. Instead, it reframed something I thought I knew. Food isn’t just calories and nutrients. It’s land use, carbon, water, and culture. It’s health—not just for the individual, but for the environment that individual depends on.
 
-<!-- Featured image with clickable red play overlay -->
+<!-- Featured image with smaller Apple-style clickable play overlay -->
 <div style="position: relative; display: inline-block; width: 100%; max-width: 800px; margin: 1em auto;">
   <a href="https://www.youtube.com/watch?v=nV04zyfLyN4" target="_blank" style="display: block;">
     <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/cowspiracy_cow-e1611838379301.jpeg" 
-         alt="Cowspiracy" style="width:100%; height:auto; display:block;">
-    <!-- Red circle play button overlay -->
+         alt="Cowspiracy" style="width:100%; height:auto; display:block; border-radius: 12px;">
+
+    <!-- Smaller translucent red play button -->
     <div style="
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 80px;
-      height: 80px;
-      background-color: rgba(255,0,0,0.8);
+      width: 60px;
+      height: 60px;
+      background-color: rgba(255, 0, 0, 0.75);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-    ">
-      <!-- White triangle play icon -->
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    " onmouseover="this.style.transform='translate(-50%, -50%) scale(1.1)'; this.style.backgroundColor='rgba(255,0,0,0.85)';" onmouseout="this.style.transform='translate(-50%, -50%) scale(1)'; this.style.backgroundColor='rgba(255,0,0,0.75)';">
+      
+      <!-- Proportional white triangle play icon -->
       <div style="
         width: 0;
         height: 0;
-        border-left: 25px solid white;
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
+        border-left: 20px solid white;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
       "></div>
     </div>
   </a>
 </div>
-
-
 
 <div style="border-left: 4px solid #4CAF50; padding-left: 1em; margin: 1em 0; color: #555;">
 “Livestock and their byproducts account for at least 32,000 million tons of carbon dioxide per year, or 51% of all worldwide greenhouse gas emissions.” - <strong>Cowspiracy</strong>
