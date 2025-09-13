@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2025-09-12
-title: Cowspiracy & The System We Eat From
+title: The System We Eat From
 categories: [inspiration, growth]
 tags: [food, environment, health, sustainability]
 description: "Food isn’t just about calories or nutrients. It’s about water, forests, culture, and the world we leave behind. Plant-forward diets benefit both personal and planetary health."
