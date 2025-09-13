@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2025-09-14
+date: 2025-09-13
 title: The System We Eat From
 categories: [inspiration, growth]
 tags: [food, environment, health, sustainability]
