@@ -18,8 +18,8 @@ But what if we widened the lens? What if food wasn’t just about health markers
 I’ll admit, I watched *Cowspiracy* on my phone expecting little more than a distraction. Instead, it reframed something I thought I knew. Food isn’t just calories and nutrients. It’s land use, carbon, water, and culture. It’s health—not just for the individual, but for the environment that individual depends on.
 
 <!-- Featured image with clickable red play overlay -->
-<div style="position: relative; display: inline-block; text-align: center; margin: 1em 0; max-width: 100%;">
-  <a href="https://www.youtube.com/watch?v=nV04zyfLyN4" target="_blank">
+<div style="position: relative; display: inline-block; width: 100%; max-width: 800px; margin: 1em auto;">
+  <a href="https://www.youtube.com/watch?v=nV04zyfLyN4" target="_blank" style="display: block;">
     <img src="https://scrapsfromtheloft.com/wp-content/uploads/2019/04/cowspiracy_cow-e1611838379301.jpeg" 
          alt="Cowspiracy" style="width:100%; height:auto; display:block;">
     <!-- Red circle play button overlay -->
@@ -48,6 +48,7 @@ I’ll admit, I watched *Cowspiracy* on my phone expecting little more than a di
     </div>
   </a>
 </div>
+
 
 
 <div style="border-left: 4px solid #4CAF50; padding-left: 1em; margin: 1em 0; color: #555;">
