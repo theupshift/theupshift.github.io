@@ -34,7 +34,7 @@ Plant-forward diets already have clear clinical benefits: lower cardiovascular r
 <div style="text-align:center; margin: 1em 0;">
   <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/ghg-per-kg-poore.jpg" style="max-width:100%; height:auto;" alt="Environmental impacts of agriculture">
 </div>
-<!--more-->
+<!-- more -->
 Of course, this gets complicated in places like where I am. Livestock there isn’t just food here, it’s culture, wealth, and survival. These people have managed grazing lands for generations. Suggesting they rely less on livestock isn’t simple, Yet maybe there’s a path forward: blending traditional wisdom with modern tools like diversifying crops, integrating agroforestry, and maybe gently shifting diets where it makes sense.
 
 So where does that leave clinicians? I’m not suggesting vegan pamphlets in every waiting room. But I do think we can:
