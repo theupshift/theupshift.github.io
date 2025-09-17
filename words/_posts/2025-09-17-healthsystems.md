@@ -3,14 +3,22 @@ layout: default
 title: Health Resource Allocation Game
 ---
 
-<h1 style="text-align:center; font-size:2em; margin-bottom:1em;">🩺 Health Resource Allocation Game — Tanzania RHMT/RRH</h1>
-
 <div id="health-game">
+
+  <div class="card intro">
+    <p>
+      🌍 You are the <strong>health manager</strong> of a rural community in Tanzania.  
+      Each 💵 <strong>Funding Round</strong>, you get new budget to hire staff, buy medicine, and prepare for incoming patients.  
+      Treat patients, handle events, and balance resources.  
+      <br><br>
+      🎯 <strong>Victory:</strong> By the end of 3 funding rounds, achieve ⭐ <b>Score ≥ 20</b> and ⚖️ <b>Equity ≥ 2</b>.
+    </p>
+  </div>
 
   <!-- Dashboard -->
   <div class="card">
     <h2>📊 Dashboard</h2>
-    <p>💰 Budget: <span id="budget">80</span></p>
+    <p>💰 Budget: <span id="budget">100</span></p>
     <div class="progress"><div id="budget-bar" class="progress-fill green"></div></div>
 
     <p>⭐ Score: <span id="score">0</span></p>
@@ -43,11 +51,14 @@ title: Health Resource Allocation Game
     <button class="action-btn" onclick="drawEvent()">⚡ Trigger Event</button>
   </div>
 
-  <!-- Rounds -->
+  <!-- Funding Rounds -->
   <div class="card">
-    <h3>📅 Round: <span id="round">1</span>/3</h3>
-    <button class="next-btn" onclick="nextRound()">➡️ Next Round</button>
+    <h3>💵 Funding Round: <span id="round">1</span>/3</h3>
+    <button class="next-btn" onclick="nextRound()">➡️ Next Funding Round</button>
   </div>
+
+  <!-- Results -->
+  <div id="results" class="card hidden"></div>
 
 </div>
 
@@ -75,7 +86,6 @@ title: Health Resource Allocation Game
   flex-wrap: wrap;
   gap: 0.8em;
 }
-
 #health-game button {
   border: none;
   border-radius: 8px;
@@ -85,14 +95,12 @@ title: Health Resource Allocation Game
   transition: 0.2s ease-in-out;
 }
 #health-game button:hover { transform: scale(1.1); }
-
 #health-game .action-btn {
   background: #007bff;
   color: white;
   font-weight: bold;
 }
 #health-game .action-btn:hover { background: #0056b3; }
-
 #health-game .next-btn {
   background: #28a745;
   color: white;
@@ -100,7 +108,6 @@ title: Health Resource Allocation Game
   padding: 0.6em 1em;
 }
 #health-game .next-btn:hover { background: #1e7e34; }
-
 #health-game .patient-card, 
 #health-game .event-card {
   border: 2px solid #aaa;
@@ -142,7 +149,10 @@ title: Health Resource Allocation Game
 #health-game .green { background: #28a745; }
 #health-game .blue { background: #007bff; }
 
-/* Responsive for phones */
+/* Hidden */
+#health-game .hidden { display: none; }
+
+/* Responsive */
 @media (max-width: 600px) {
   #health-game .flex { flex-direction: column; }
   #health-game .patient-card, #health-game .event-card {
@@ -153,25 +163,26 @@ title: Health Resource Allocation Game
 
 <!-- Script -->
 <script>
-let resources = { budget: 80, doctor: 1, nurse: 2, chw: 2, medicine: 3, transport: 1 };
+let resources = { budget: 100, doctor: 1, nurse: 2, chw: 2, medicine: 3, transport: 1 };
 let score = 0;
 let equity = 0;
 let round = 1;
 const maxRounds = 3;
 let currentPatients = [];
 
+// Easier patients
 const patients = [
-  { name:"👶 Child with Malaria", severity:"severe", requires:{nurse:2, medicine:2}, points:6, remote:true },
-  { name:"🤰 Pregnant Woman with Complication", severity:"severe", requires:{doctor:1, nurse:1, medicine:2, transport:1}, points:10, remote:false },
-  { name:"👨 Adult with Hypertension", severity:"moderate", requires:{nurse:1, medicine:2}, points:4, remote:false },
-  { name:"🍚 Malnourished Child", severity:"moderate", requires:{chw:1, medicine:2}, points:5, remote:true }
+  { name:"👶 Child with Malaria", requires:{nurse:1, medicine:1}, points:8, remote:true },
+  { name:"🤰 Pregnant Woman", requires:{doctor:1, medicine:1}, points:10, remote:false },
+  { name:"👨 Adult with Hypertension", requires:{nurse:1}, points:6, remote:false },
+  { name:"🍚 Malnourished Child", requires:{chw:1}, points:7, remote:true }
 ];
 
+// Light events
 const events = [
-  { event:"🦟 Malaria Outbreak", effect:{extra_patients:2} },
-  { event:"💉 Vaccine Shortage", effect:{block_program:"vaccination"} },
-  { event:"🌊 Flood / Road Block", effect:{extra_transport_needed:1} },
-  { event:"✊ Staff Strike", effect:{lose_doctor:1, lose_nurse:1} }
+  { event:"🦟 Malaria Outbreak", effect:{extra_patients:1} },
+  { event:"💉 Small Stock Delay", effect:{lose_medicine:1} },
+  { event:"🌦️ Rainy Season", effect:{} }
 ];
 
 function updateUI(){
@@ -188,12 +199,12 @@ function updateUI(){
   // Progress bars
   document.getElementById("budget-bar").style.width = Math.min(resources.budget,100) + "%";
   document.getElementById("budget-bar").innerText = resources.budget;
-  document.getElementById("score-bar").style.width = Math.min(score*5,100) + "%"; // scale score to 100
+  document.getElementById("score-bar").style.width = Math.min(score*5,100) + "%"; 
   document.getElementById("score-bar").innerText = score;
 }
 
 function addResource(type){
-  const cost = 15;
+  const cost = 10; // cheap
   if(resources.budget >= cost){
     resources[type]++;
     resources.budget -= cost;
@@ -217,7 +228,7 @@ function renderPatients(){
   currentPatients.forEach((p,i)=>{
     const card = document.createElement("div");
     card.className = "patient-card " + (p.remote ? "remote":"local");
-    card.innerHTML = `<strong>${p.name}</strong><br>Severity: ${p.severity}<br>⭐ ${p.points} points <br>
+    card.innerHTML = `<strong>${p.name}</strong><br>⭐ ${p.points} points <br>
       <button onclick='treatPatient(${i})'>✅ Treat</button>`;
     list.appendChild(card);
   });
@@ -234,14 +245,13 @@ function treatPatient(index){
   if(canTreat){
     for(let key in patient.requires) resources[key] -= patient.requires[key];
     score += patient.points;
-    if(patient.remote) equity += 1;
-    alert("🎉 Patient successfully treated!");
+    if(patient.remote) equity += 2; // boost equity
     currentPatients.splice(index,1);
     renderPatients();
+    updateUI();
   } else {
-    alert("❌ Not enough resources to treat this patient.");
+    alert("❌ Not enough resources.");
   }
-  updateUI();
 }
 
 function drawEvent(){
@@ -252,24 +262,31 @@ function drawEvent(){
   card.innerHTML = `<strong>${evt.event}</strong>`;
   list.prepend(card);
 
-  if(evt.effect.lose_doctor) resources.doctor = Math.max(0,resources.doctor-evt.effect.lose_doctor);
-  if(evt.effect.lose_nurse) resources.nurse = Math.max(0,resources.nurse-evt.effect.lose_nurse);
+  if(evt.effect.lose_medicine) resources.medicine = Math.max(0,resources.medicine-evt.effect.lose_medicine);
+  if(evt.effect.extra_patients) drawPatients();
   updateUI();
 }
 
 function nextRound(){
   if(round < maxRounds){
     round++;
-    resources.budget += 15;
+    resources.budget += 20; // new funding
     drawPatients();
     updateUI();
   } else {
-    if(score >= 20 && equity >= 2){
-      alert(`🏆 You Win!\n⭐ Score: ${score}\n⚖️ Equity: ${equity}\n👏 Great job balancing resources!`);
-    } else {
-      alert(`❌ Game Over\n⭐ Score: ${score}\n⚖️ Equity: ${equity}\n💡 Try again to reach 20+ score and 2+ equity.`);
-    }
+    endGame();
   }
+}
+
+function endGame(){
+  document.getElementById("results").classList.remove("hidden");
+  let msg = "";
+  if(score >= 20 && equity >= 2){
+    msg = `🏆 <strong>You Win!</strong><br>⭐ Score: ${score}<br>⚖️ Equity: ${equity}<br>💵 Funding Rounds Completed: ${round}`;
+  } else {
+    msg = `❌ <strong>Game Over</strong><br>⭐ Score: ${score}<br>⚖️ Equity: ${equity}<br>💵 Funding Rounds Completed: ${round}<br><br>💡 Try again to reach ⭐20+ and ⚖️2+!`;
+  }
+  document.getElementById("results").innerHTML = msg;
 }
 
 updateUI();
