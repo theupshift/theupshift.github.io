@@ -3,10 +3,12 @@ layout: default
 title: Health Resource Allocation Game
 ---
 
-<div id="game" style="max-width:900px;margin:auto;">
+<h1 style="text-align:center; font-size:2em; margin-bottom:1em;">🩺 Health Resource Allocation Game — Tanzania RHMT/RRH</h1>
 
-  <!-- Player Dashboard -->
-  <div id="player-board" class="card">
+<div id="health-game">
+
+  <!-- Dashboard -->
+  <div class="card">
     <h2>📊 Dashboard</h2>
     <p>💰 Budget: <span id="budget">80</span></p>
     <div class="progress"><div id="budget-bar" class="progress-fill green"></div></div>
@@ -14,11 +16,11 @@ title: Health Resource Allocation Game
     <p>⭐ Score: <span id="score">0</span></p>
     <div class="progress"><div id="score-bar" class="progress-fill blue"></div></div>
 
-    <p>⚖️ Equity Score (Remote Patients Treated): <span id="equity">0</span></p>
+    <p>⚖️ Equity (Remote Patients Treated): <span id="equity">0</span></p>
   </div>
 
-  <!-- Player Resources -->
-  <div id="resources" class="card">
+  <!-- Resources -->
+  <div class="card">
     <h2>🏥 Resources</h2>
     <p>👨‍⚕️ Doctors: <span id="doctors">1</span> <button onclick="addResource('doctor')">➕👨‍⚕️</button></p>
     <p>👩‍⚕️ Nurses: <span id="nurses">2</span> <button onclick="addResource('nurse')">➕👩‍⚕️</button></p>
@@ -28,82 +30,125 @@ title: Health Resource Allocation Game
   </div>
 
   <!-- Patients -->
-  <div id="patients-section" class="card">
+  <div class="card">
     <h2>🧍 Incoming Patients</h2>
     <div id="patients-list" class="flex"></div>
     <button class="action-btn" onclick="drawPatients()">🎲 Draw Patients</button>
   </div>
 
   <!-- Events -->
-  <div id="events-section" class="card">
+  <div class="card">
     <h2>⚡ Events</h2>
     <div id="events-list" class="flex"></div>
     <button class="action-btn" onclick="drawEvent()">⚡ Trigger Event</button>
   </div>
 
   <!-- Rounds -->
-  <div id="round-section" class="card">
+  <div class="card">
     <h3>📅 Round: <span id="round">1</span>/3</h3>
     <button class="next-btn" onclick="nextRound()">➡️ Next Round</button>
   </div>
 
 </div>
 
-<!-- Styles -->
+<!-- Scoped Styles -->
 <style>
-body { font-family: "Segoe UI", Arial, sans-serif; background:#f0f8ff; color:#333; }
-h1,h2,h3 { font-family: "Segoe UI Emoji", "Segoe UI", sans-serif; }
-.card {
-  border:2px solid #ccc; border-radius:12px;
-  padding:1em; margin-bottom:1.5em;
-  background:white; box-shadow:0 4px 8px rgba(0,0,0,0.1);
+#health-game {
+  max-width: 900px;
+  margin: auto;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #333;
 }
-.flex { display:flex; flex-wrap:wrap; gap:0.8em; }
+#health-game h2, #health-game h3 {
+  font-family: "Segoe UI Emoji", "Segoe UI", sans-serif;
+}
+#health-game .card {
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+#health-game .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+}
 
-button {
-  border:none; border-radius:8px; padding:0.4em 0.7em;
-  cursor:pointer; font-size:1em; transition:0.2s ease-in-out;
+#health-game button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.4em 0.7em;
+  cursor: pointer;
+  font-size: 1em;
+  transition: 0.2s ease-in-out;
 }
-button:hover { transform:scale(1.1); }
+#health-game button:hover { transform: scale(1.1); }
 
-.action-btn {
-  background:#007bff; color:white; font-weight:bold;
+#health-game .action-btn {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
 }
-.action-btn:hover { background:#0056b3; }
+#health-game .action-btn:hover { background: #0056b3; }
 
-.next-btn {
-  background:#28a745; color:white; font-weight:bold;
-  padding:0.6em 1em;
+#health-game .next-btn {
+  background: #28a745;
+  color: white;
+  font-weight: bold;
+  padding: 0.6em 1em;
 }
-.next-btn:hover { background:#1e7e34; }
+#health-game .next-btn:hover { background: #1e7e34; }
 
-.patient-card, .event-card {
-  border:2px solid #aaa; border-radius:10px;
-  padding:0.7em; width:220px; font-size:0.9em;
-  box-shadow:0 3px 6px rgba(0,0,0,0.1);
+#health-game .patient-card, 
+#health-game .event-card {
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  padding: 0.7em;
+  width: 100%;
+  max-width: 220px;
+  font-size: 0.9em;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
-.patient-card.remote { background:#cce5ff; } /* Blue = remote */
-.patient-card.local { background:#e2f0d9; }  /* Green = local */
-.event-card { background:#fff3cd; }          /* Yellow = event */
-.patient-card button {
-  margin-top:0.5em; width:100%; border-radius:6px;
-  background:#17a2b8; color:white; font-weight:bold;
+#health-game .patient-card.remote { background: #cce5ff; } /* Blue = remote */
+#health-game .patient-card.local { background: #e2f0d9; }  /* Green = local */
+#health-game .event-card { background: #fff3cd; }          /* Yellow = event */
+#health-game .patient-card button {
+  margin-top: 0.5em;
+  width: 100%;
+  border-radius: 6px;
+  background: #17a2b8;
+  color: white;
+  font-weight: bold;
 }
-.patient-card button:hover { background:#117a8b; }
+#health-game .patient-card button:hover { background: #117a8b; }
 
 /* Progress Bars */
-.progress {
-  background:#ddd; border-radius:8px;
-  height:20px; width:100%; margin-bottom:1em;
-  overflow:hidden;
+#health-game .progress {
+  background: #ddd;
+  border-radius: 8px;
+  height: 20px;
+  width: 100%;
+  margin-bottom: 1em;
+  overflow: hidden;
 }
-.progress-fill {
-  height:100%; width:0%; line-height:20px;
-  color:white; text-align:center; font-size:0.8em;
-  transition:width 0.4s ease-in-out;
+#health-game .progress-fill {
+  height: 100%; width: 0%;
+  color: white; text-align: center;
+  font-size: 0.8em; line-height: 20px;
+  transition: width 0.4s ease-in-out;
 }
-.green { background:#28a745; }
-.blue { background:#007bff; }
+#health-game .green { background: #28a745; }
+#health-game .blue { background: #007bff; }
+
+/* Responsive for phones */
+@media (max-width: 600px) {
+  #health-game .flex { flex-direction: column; }
+  #health-game .patient-card, #health-game .event-card {
+    max-width: 100%;
+  }
+}
 </style>
 
 <!-- Script -->
@@ -148,7 +193,7 @@ function updateUI(){
 }
 
 function addResource(type){
-  const cost = 15; // harder economy
+  const cost = 15;
   if(resources.budget >= cost){
     resources[type]++;
     resources.budget -= cost;
@@ -219,7 +264,6 @@ function nextRound(){
     drawPatients();
     updateUI();
   } else {
-    // End of game: Victory condition
     if(score >= 20 && equity >= 2){
       alert(`🏆 You Win!\n⭐ Score: ${score}\n⚖️ Equity: ${equity}\n👏 Great job balancing resources!`);
     } else {
