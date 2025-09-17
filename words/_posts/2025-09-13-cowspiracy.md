@@ -76,4 +76,178 @@ So where does that leave clinicians? I’m not suggesting vegan pamphlets in eve
   <li>Encourage plant-based eating where it aligns with local food systems and goals.</li>
   <li>And of course, reflect on our own food choices.</li>
 </ul>
+
+<!-- COMMENTS: place in _layouts/post.html -->
+<h3>Comments</h3>
+
+<form id="commentForm">
+  <input type="text" id="nameInput" placeholder="Your name" required><br>
+  <textarea id="commentInput" placeholder="Your comment" required></textarea><br>
+  <button type="submit">Post Comment</button>
+</form>
+<p id="statusMsg"></p>
+
+<div id="commentsList">Loading comments...</div>
+
+<script>
+  const SCRIPT_URL = "YOUR_WEB_APP_URL"; // <-- REPLACE
+  const postId = "{{ page.url }}";        // uses Jekyll page.url as unique id
+  const commentsList = document.getElementById("commentsList");
+  const statusMsg = document.getElementById("statusMsg");
+
+  // --- local token store helpers ---
+  function _loadTokenStore() {
+    try {
+      return JSON.parse(localStorage.getItem('comment_tokens') || '{}');
+    } catch (e) { return {}; }
+  }
+  function _saveTokenStore(store) {
+    localStorage.setItem('comment_tokens', JSON.stringify(store));
+  }
+  function saveToken(commentId, token) {
+    const s = _loadTokenStore();
+    s[commentId] = token;
+    _saveTokenStore(s);
+  }
+  function getToken(commentId) {
+    return _loadTokenStore()[commentId];
+  }
+
+  // --- small XSS-escape helper ---
+  function escapeHtml(str) {
+    if (!str && str !== 0) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  async function loadComments() {
+    try {
+      const res = await fetch(`${SCRIPT_URL}?post_id=${encodeURIComponent(postId)}&t=${Date.now()}`);
+      const comments = await res.json();
+
+      if (!Array.isArray(comments) || comments.length === 0) {
+        commentsList.innerHTML = "<p>No comments yet. Be the first!</p>";
+        return;
+      }
+
+      commentsList.innerHTML = comments.map(c => {
+        const token = getToken(c.comment_id);
+        const canEdit = !!token;
+        return `
+          <div class="comment" data-id="${c.comment_id}">
+            <p>
+              <strong>${escapeHtml(c.name)}</strong>
+              <small> (${new Date(c.timestamp).toLocaleString()})</small><br>
+              ${escapeHtml(c.comment)}
+            </p>
+            ${canEdit ? `<button class="editBtn" data-id="${c.comment_id}">Edit</button>
+                         <button class="delBtn" data-id="${c.comment_id}">Delete</button>` : ''}
+          </div>
+        `;
+      }).join("");
+
+      // attach handlers
+      document.querySelectorAll('.editBtn').forEach(b => b.addEventListener('click', () => {
+        editComment(b.dataset.id);
+      }));
+      document.querySelectorAll('.delBtn').forEach(b => b.addEventListener('click', () => {
+        deleteComment(b.dataset.id);
+      }));
+
+    } catch (err) {
+      commentsList.textContent = "Could not load comments.";
+      console.error(err);
+    }
+  }
+
+  // Submit new comment
+  document.getElementById('commentForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('nameInput').value.trim();
+    const comment = document.getElementById('commentInput').value.trim();
+    if (!name || !comment) return;
+
+    try {
+      const res = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ action: 'new', post_id: postId, name, comment })
+      });
+      const j = await res.json();
+      if (j.result === 'success') {
+        // store the returned edit token locally so user can edit/delete later
+        saveToken(j.comment_id, j.edit_token);
+        statusMsg.textContent = 'Comment posted!';
+        e.target.reset();
+        loadComments();
+      } else {
+        statusMsg.textContent = 'Error: ' + (j.error || 'unknown');
+      }
+    } catch (err) {
+      statusMsg.textContent = 'Error posting — check console (possible CORS).';
+      console.error(err);
+    }
+  });
+
+  // Edit handler (prompt-based simple UI)
+  async function editComment(commentId) {
+    const token = getToken(commentId);
+    if (!token) return alert("You don't have permission to edit this comment from this browser.");
+    // Get current comment text from DOM
+    const node = document.querySelector(`.comment[data-id="${commentId}"] p`);
+    const current = node ? node.innerText.split('\n').slice(1).join('\n').trim() : '';
+    const newText = prompt("Edit your comment:", current);
+    if (newText == null) return; // cancel
+
+    try {
+      const res = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ action: 'edit', comment_id: commentId, edit_token: token, name: "Edited", comment: newText })
+      });
+      const j = await res.json();
+      if (j.result === 'updated') {
+        loadComments();
+      } else {
+        alert('Edit failed: ' + (j.error || 'unknown'));
+      }
+    } catch (err) {
+      alert('Error editing — check console (possible CORS).');
+      console.error(err);
+    }
+  }
+
+  // Delete handler (soft-delete)
+  async function deleteComment(commentId) {
+    if (!confirm("Delete this comment?")) return;
+    const token = getToken(commentId);
+    if (!token) return alert("You don't have permission to delete this comment from this browser.");
+
+    try {
+      const res = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ action: 'delete', comment_id: commentId, edit_token: token })
+      });
+      const j = await res.json();
+      if (j.result === 'deleted') {
+        loadComments();
+      } else {
+        alert('Delete failed: ' + (j.error || 'unknown'));
+      }
+    } catch (err) {
+      alert('Error deleting — check console (possible CORS).');
+      console.error(err);
+    }
+  }
+
+  // first load + auto-refresh every 15s
+  loadComments();
+  setInterval(loadComments, 15000);
+</script>
+
 </div>
