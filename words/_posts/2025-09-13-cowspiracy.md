@@ -74,7 +74,7 @@ So where does that leave clinicians? I’m not suggesting vegan pamphlets in eve
 <ul>
   <li>Frame diet as part of both personal health and planetary health.</li>
   <li>Encourage plant-based eating where it aligns with local food systems and goals.</li>
-  <li>And of course, reflect on our own food choices.</li>
+  <li>And of course, reflect on our own food choices..</li>
 </ul>
 
 <h3>Comments</h3>
@@ -88,7 +88,7 @@ So where does that leave clinicians? I’m not suggesting vegan pamphlets in eve
 <div id="commentsList">Loading comments...</div>
 
 <script>
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxTaS4TtsE2cpQuWdBpAhpbzBUgMBBh3sFwsxD7lVZhoGBurSF-TQgK1MXU2-eUNGnG/exec"; // replace with your Apps Script URL
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxkcuGWon_SVJsYVuo9h8_ZpEnHeJpl0DoqNzDFbjLdeE6ZgWW3COaZtRoNAFhHBy2t/exec"; // replace with your Apps Script URL
 const postId = "{{ page.url }}";
 const commentsList = document.getElementById("commentsList");
 
