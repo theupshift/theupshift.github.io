@@ -74,67 +74,54 @@ So where does that leave clinicians? I’m not suggesting vegan pamphlets in eve
 <ul>
   <li>Frame diet as part of both personal health and planetary health.</li>
   <li>Encourage plant-based eating where it aligns with local food systems and goals.</li>
-  <li>And of course, reflect on our own food choices.</li>
+  <li>And of course, reflect on our own food choices..</li>
 </ul>
 
-<!-- COMMENTS: place in _layouts/post.html -->
-<h3>Comments</h3>
+<!-- COMMENTS INCLUDE -->
+<div id="commentsSection">
+  <h3>Comments</h3>
 
-<form id="commentForm">
-  <input type="text" id="nameInput" placeholder="Your name" required><br>
-  <textarea id="commentInput" placeholder="Your comment" required></textarea><br>
-  <button type="submit">Post Comment</button>
-</form>
-<p id="statusMsg"></p>
+  <form id="commentForm">
+    <input type="text" id="nameInput" placeholder="Your name" required><br>
+    <textarea id="commentInput" placeholder="Your comment" required></textarea><br>
+    <button type="submit">Post Comment</button>
+  </form>
+  <p id="statusMsg"></p>
 
-<div id="commentsList">Loading comments...</div>
+  <div id="commentsList">Loading comments...</div>
+</div>
 
 <script>
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzjptldhKRoURM01vfzPQz7YkzGJXsp86N6f7bAKFCtNfOET4chmE8DvR95-1hOZCP0/exec"; // <-- REPLACE
-  const postId = "{{ page.url }}";        // uses Jekyll page.url as unique id
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwRSqpsrr2DSA5s2YEvifSxZeLht6-0Z6PppBvYIMtI1P90y49Gb68XTBmpmVfQ5QpH/exec"; // <-- replace with your Apps Script URL
+  const postId = "{{ page.url }}";        // unique per-post id
   const commentsList = document.getElementById("commentsList");
   const statusMsg = document.getElementById("statusMsg");
 
-  // --- local token store helpers ---
+  // --- local token helpers ---
   function _loadTokenStore() {
-    try {
-      return JSON.parse(localStorage.getItem('comment_tokens') || '{}');
-    } catch (e) { return {}; }
+    try { return JSON.parse(localStorage.getItem('comment_tokens') || '{}'); } 
+    catch(e){ return {}; }
   }
-  function _saveTokenStore(store) {
-    localStorage.setItem('comment_tokens', JSON.stringify(store));
-  }
-  function saveToken(commentId, token) {
-    const s = _loadTokenStore();
-    s[commentId] = token;
-    _saveTokenStore(s);
-  }
-  function getToken(commentId) {
-    return _loadTokenStore()[commentId];
+  function _saveTokenStore(store) { localStorage.setItem('comment_tokens', JSON.stringify(store)); }
+  function saveToken(commentId, token) { const s=_loadTokenStore(); s[commentId]=token; _saveTokenStore(s); }
+  function getToken(commentId) { return _loadTokenStore()[commentId]; }
+
+  function escapeHtml(str){
+    if(!str && str!==0) return '';
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+                     .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
   }
 
-  // --- small XSS-escape helper ---
-  function escapeHtml(str) {
-    if (!str && str !== 0) return '';
-    return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
-
-  async function loadComments() {
+  async function loadComments(){
     try {
       const res = await fetch(`${SCRIPT_URL}?post_id=${encodeURIComponent(postId)}&t=${Date.now()}`);
       const comments = await res.json();
-
-      if (!Array.isArray(comments) || comments.length === 0) {
+      if(!Array.isArray(comments) || comments.length===0){
         commentsList.innerHTML = "<p>No comments yet. Be the first!</p>";
         return;
       }
 
-      commentsList.innerHTML = comments.map(c => {
+      commentsList.innerHTML = comments.map(c=>{
         const token = getToken(c.comment_id);
         const canEdit = !!token;
         return `
@@ -151,35 +138,30 @@ So where does that leave clinicians? I’m not suggesting vegan pamphlets in eve
       }).join("");
 
       // attach handlers
-      document.querySelectorAll('.editBtn').forEach(b => b.addEventListener('click', () => {
-        editComment(b.dataset.id);
-      }));
-      document.querySelectorAll('.delBtn').forEach(b => b.addEventListener('click', () => {
-        deleteComment(b.dataset.id);
-      }));
+      document.querySelectorAll('.editBtn').forEach(b=>b.addEventListener('click',()=>editComment(b.dataset.id)));
+      document.querySelectorAll('.delBtn').forEach(b=>b.addEventListener('click',()=>deleteComment(b.dataset.id)));
 
-    } catch (err) {
+    } catch(err){
       commentsList.textContent = "Could not load comments.";
       console.error(err);
     }
   }
 
-  // Submit new comment
-  document.getElementById('commentForm').addEventListener('submit', async (e) => {
+  // --- Submit new comment ---
+  document.getElementById('commentForm').addEventListener('submit', async (e)=>{
     e.preventDefault();
     const name = document.getElementById('nameInput').value.trim();
     const comment = document.getElementById('commentInput').value.trim();
-    if (!name || !comment) return;
+    if(!name || !comment) return;
 
     try {
-      const res = await fetch(SCRIPT_URL, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ action: 'new', post_id: postId, name, comment })
+      const res = await fetch(SCRIPT_URL,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({action:'new', post_id:postId, name, comment})
       });
       const j = await res.json();
-      if (j.result === 'success') {
-        // store the returned edit token locally so user can edit/delete later
+      if(j.result==='success'){
         saveToken(j.comment_id, j.edit_token);
         statusMsg.textContent = 'Comment posted!';
         e.target.reset();
@@ -187,67 +169,59 @@ So where does that leave clinicians? I’m not suggesting vegan pamphlets in eve
       } else {
         statusMsg.textContent = 'Error: ' + (j.error || 'unknown');
       }
-    } catch (err) {
-      statusMsg.textContent = 'Error posting — check console (possible CORS).';
+    } catch(err){
+      statusMsg.textContent = 'Error posting — check console.';
       console.error(err);
     }
   });
 
-  // Edit handler (prompt-based simple UI)
-  async function editComment(commentId) {
+  // --- Edit comment ---
+  async function editComment(commentId){
     const token = getToken(commentId);
-    if (!token) return alert("You don't have permission to edit this comment from this browser.");
-    // Get current comment text from DOM
+    if(!token) return alert("You can't edit this comment from this browser.");
     const node = document.querySelector(`.comment[data-id="${commentId}"] p`);
     const current = node ? node.innerText.split('\n').slice(1).join('\n').trim() : '';
     const newText = prompt("Edit your comment:", current);
-    if (newText == null) return; // cancel
+    if(newText==null) return;
 
-    try {
-      const res = await fetch(SCRIPT_URL, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ action: 'edit', comment_id: commentId, edit_token: token, name: "Edited", comment: newText })
+    try{
+      const res = await fetch(SCRIPT_URL,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({action:'edit', comment_id:commentId, edit_token:token, name:"Edited", comment:newText})
       });
       const j = await res.json();
-      if (j.result === 'updated') {
-        loadComments();
-      } else {
-        alert('Edit failed: ' + (j.error || 'unknown'));
-      }
-    } catch (err) {
-      alert('Error editing — check console (possible CORS).');
+      if(j.result==='updated') loadComments();
+      else alert('Edit failed: ' + (j.error || 'unknown'));
+    } catch(err){
+      alert('Error editing — check console.');
       console.error(err);
     }
   }
 
-  // Delete handler (soft-delete)
-  async function deleteComment(commentId) {
-    if (!confirm("Delete this comment?")) return;
+  // --- Delete comment ---
+  async function deleteComment(commentId){
+    if(!confirm("Delete this comment?")) return;
     const token = getToken(commentId);
-    if (!token) return alert("You don't have permission to delete this comment from this browser.");
+    if(!token) return alert("You can't delete this comment from this browser.");
 
-    try {
-      const res = await fetch(SCRIPT_URL, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ action: 'delete', comment_id: commentId, edit_token: token })
+    try{
+      const res = await fetch(SCRIPT_URL,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({action:'delete', comment_id:commentId, edit_token:token})
       });
       const j = await res.json();
-      if (j.result === 'deleted') {
-        loadComments();
-      } else {
-        alert('Delete failed: ' + (j.error || 'unknown'));
-      }
-    } catch (err) {
-      alert('Error deleting — check console (possible CORS).');
+      if(j.result==='deleted') loadComments();
+      else alert('Delete failed: ' + (j.error || 'unknown'));
+    } catch(err){
+      alert('Error deleting — check console.');
       console.error(err);
     }
   }
 
-  // first load + auto-refresh every 15s
+  // Initial load + auto-refresh
   loadComments();
-  setInterval(loadComments, 15000);
-</script>
+  setInterval(loadComments,15000);
 
-</div>
+</script>
