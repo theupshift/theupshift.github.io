@@ -1,6 +1,5 @@
 ---
 layout: post
-date: 2025-09-17
 title: Health Resource Allocation Game
 categories: [education, health, simulation]
 tags: [game, health systems, Tanzania, learning, board game]
