@@ -3,6 +3,8 @@ layout: default
 title: Health Resource Allocation Game
 ---
 
+<h1 style="text-align:center; font-size:2em; margin:0.5em 0;">🩺 Health Manager Simulation — Rural Tanzania</h1>
+
 <div id="health-game">
 
   <!-- Small Intro -->
@@ -61,16 +63,17 @@ title: Health Resource Allocation Game
 <!-- Styles -->
 <style>
 #health-game { max-width: 900px; margin: auto; font-family: "Segoe UI", Arial, sans-serif; color: #333; }
-#health-game h2, #health-game h3 { font-family: "Segoe UI Emoji", "Segoe UI", sans-serif; }
+#health-game h2, #health-game h3 { font-family: "Segoe UI Emoji", "Segoe UI", sans-serif; text-align: center; font-size: 0.9em; }
 .intro-small { font-size: 0.75em; line-height: 1.1em; text-align: center; margin-bottom: 1em; }
 #health-game .card { border: 2px solid #ccc; border-radius: 12px; padding: 1em; margin-bottom: 1.5em; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 #health-game .flex { display: flex; flex-wrap: wrap; gap: 0.8em; }
 #health-game .center { justify-content: center; }
 #health-game button { border: none; border-radius: 8px; padding: 0.4em 0.7em; cursor: pointer; font-size: 1em; transition: 0.2s ease-in-out; }
 #health-game button:hover { transform: scale(1.1); }
-#health-game .action-btn { background: #007bff; color: white; font-weight: bold; }
+#health-game .action-btn, #health-game .next-btn { display: block; margin: 0.5em auto; text-align: center; }
+#health-game .action-btn { background: #007bff; color: white; font-weight: bold; font-size: 0.9em; }
 #health-game .action-btn:hover { background: #0056b3; }
-#health-game .next-btn { background: #28a745; color: white; font-weight: bold; padding: 0.6em 1em; }
+#health-game .next-btn { background: #28a745; color: white; font-weight: bold; font-size: 0.9em; padding: 0.6em 1em; }
 #health-game .next-btn:hover { background: #1e7e34; }
 #health-game .patient-card { border: 2px solid #aaa; border-radius: 10px; padding: 0.7em; width: 100%; max-width: 220px; font-size: 0.9em; box-shadow: 0 3px 6px rgba(0,0,0,0.1); }
 #health-game .patient-card.remote { background: #cce5ff; }
@@ -127,7 +130,13 @@ function updateUI(){
 
 function addResource(type){
   const cost = 12;
-  if(resources.budget >= cost){ resources[type]++; resources.budget -= cost; updateUI(); }
+  if(resources.budget >= cost){ 
+    resources[type]++; 
+    resources.budget -= cost; 
+    updateUI(); 
+  } else {
+    alert("⚠️ Not enough budget to add this resource!");
+  }
 }
 
 function drawPatients(){
@@ -156,13 +165,17 @@ function renderPatients(){
 function treatPatient(index){
   const patient = currentPatients[index];
   let canTreat = true;
-  for(let key in patient.requires) if(resources[key] < patient.requires[key]) canTreat=false;
+  for(let key in patient.requires) {
+    if(resources[key] < patient.requires[key]) canTreat=false;
+  }
   if(canTreat){
     for(let key in patient.requires) resources[key]-=patient.requires[key];
     score+=patient.points;
     if(patient.remote) equity+=2;
     currentPatients.splice(index,1);
     renderPatients(); updateUI();
+  } else {
+    alert("⚠️ Not enough resources to treat this patient!");
   }
 }
 
