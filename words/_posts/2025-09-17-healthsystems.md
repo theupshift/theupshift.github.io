@@ -3,17 +3,18 @@ layout: default
 title: Health Resource Allocation Game
 ---
 
-<h1 style="text-align:center; font-size:2em; margin:0.5em 0;">🩺 Health Manager Simulation — Rural Tanzania</h1>
+<div id="health-game">
 
-<!-- Intro Card -->
-<div class="card" style="background:#fff3cd; border-color:#ffeeba; text-align:center; font-size:0.8em;">
-  <p>
-    Got bored, made a card game. Yup vibecoding is a thing. So, 🌍 you are the health manager 👨‍⚕️ of a rural community in Tanzania 🇹🇿. Each 💵 Funding Round, you receive a limited budget to allocate staff, medicine, and transport. Patients will arrive with health needs — treat them wisely!
-  </p>
-  <p>
-    🎯 Victory Condition: By the end of 2 funding rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2. (It's still pretty raw. Will improve on the rules, instruction, and overall architecture later once I finish the health system module 😜)
-  </p>
-</div>
+  <!-- Small Intro -->
+  <div class="intro-small">
+    <p>
+      Got bored, made a card game. Yup vibecoding is a thing. <br>
+      So,  you are the health manager 😎 of a rural community in 🌍 Tanzania. Each 💵 Funding Round, you receive a limited budget to allocate staff, medicine, and transport. Patients will arrive with health needs — treat them wisely!
+    </p>
+    <p>
+      🎯 Victory Condition: By the end of 2 funding rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2. 
+    </p>
+  </div>
 
 <div id="health-game">
 
@@ -213,3 +214,12 @@ function endGame(){
 
 updateUI();
 </script>
+
+ <div id="health-game">
+
+  <!-- Small Intro -->
+  <div class="intro-small">
+    <p>
+       ( i know, its still pretty raw. will improve on the rules, instructutions and overall  architecture later on once i finish the health system module. maybe and methods too 😜)
+    </p>
+  </div>
