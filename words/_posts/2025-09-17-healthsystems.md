@@ -8,12 +8,11 @@ title: Health Resource Allocation Game
   <!-- Small Intro -->
   <div class="intro-small">
     <p>
-      Got bored, made a card game. Yup vibecoding is a thing.
+      Got bored, made a card game. Yup vibecoding is a thing. <br>
       So, 🌍 you are the health manager of a rural community in Tanzania. Each 💵 Funding Round, you receive a limited budget to allocate staff, medicine, and transport. Patients will arrive with health needs — treat them wisely!
     </p>
     <p>
       🎯 Victory Condition: By the end of 2 funding rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2. 
-      (its still pretty raw. will improve on the rules, instructuion and overall  architecture later on once i finish the health system module 😜)
     </p>
   </div>
 
@@ -208,3 +207,5 @@ function endGame(){
 
 updateUI();
 </script>
+
+     ( i know, its still pretty raw. will improve on the rules, instructutions and overall  architecture later on once i finish the health system module. maybe and methods too 😜)
