@@ -3,8 +3,6 @@ layout: default
 title: Health Resource Allocation Game
 ---
 
-<h1 style="text-align:center; font-size:2em; margin:0.5em 0;">🩺 Health Manager Simulation — Rural Tanzania</h1>
-
 <div id="health-game">
 
   <!-- Small Intro -->
