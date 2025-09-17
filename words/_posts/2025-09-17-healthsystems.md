@@ -102,6 +102,26 @@ title: Health Resource Allocation Game
 #health-game .blue { background: #007bff; }
 #health-game .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em; text-align: center; }
 #health-game .hidden { display: none; }
+
+                    /* Make the Next Funding Round button match Draw Patients styling but green */
+.next-btn {
+  background: #28a745; /* green */
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 0.6em 1em;
+  border-radius: 8px;
+  display: block;
+  margin: 0.5em auto;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.next-btn:hover {
+  background: #1e7e34; /* darker green on hover */
+}
+
 @media (max-width: 600px) { #health-game .grid { grid-template-columns: repeat(2, 1fr); } #health-game .flex { flex-direction: column; align-items: center; } }
 </style>
 
