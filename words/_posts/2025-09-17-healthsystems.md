@@ -1,14 +1,16 @@
 ---
 layout: post
+date: 2025-09-17
 title: Health Resource Allocation Game
 categories: [education, health, simulation]
 tags: [game, health systems, Tanzania, learning, board game]
 description: "A simple interactive card game to simulate health resource allocation in rural communities."
-featured_image: https://s3.amazonaws.com/production.scholastica/public/attachments/54701328-1026-4e09-ad51-2fa8d6a51335/large/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.png
-image: https://s3.amazonaws.com/production.scholastica/public/attachments/54701328-1026-4e09-ad51-2fa8d6a51335/large/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.png
-og_image: https://s3.amazonaws.com/production.scholastica/public/attachments/54701328-1026-4e09-ad51-2fa8d6a51335/large/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.png
-twitter_image: https://s3.amazonaws.com/production.scholastica/public/attachments/54701328-1026-4e09-ad51-2fa8d6a51335/large/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.png
+featured_image: "https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.jpg"
+image: "https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.jpg"
+og_image: "https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.jpg"
+twitter_image: "https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.jpg"
 ---
+
 
 
 <!-- Intro Card -->
