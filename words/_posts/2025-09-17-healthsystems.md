@@ -3,18 +3,15 @@ layout: default
 title: Health Resource Allocation Game
 ---
 
-
 <div id="health-game">
 
-  <!-- Intro full width -->
-  <div class="intro">
+  <!-- Small Intro -->
+  <div class="intro-small">
     <p>
-      🌍 <strong>You are the health manager</strong> of a rural community in Tanzania.  
-      Each 💵 <strong>Funding Round</strong>, you receive a limited budget to allocate staff, medicine, and transport.  
-      Patients will arrive with health needs — treat them wisely!  
+      🌍 You are the health manager of a rural community in Tanzania. Each 💵 Funding Round, you receive a limited budget to allocate staff, medicine, and transport. Patients will arrive with health needs — treat them wisely!
     </p>
-    <p class="victory">
-      🎯 <strong>Victory Condition:</strong> By the end of 2 funding rounds, achieve ⭐ <b>Score ≥ 20</b> and ⚖️ <b>Equity ≥ 2</b>.
+    <p>
+      🎯 Victory Condition: By the end of 2 funding rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2.
     </p>
   </div>
 
@@ -65,9 +62,7 @@ title: Health Resource Allocation Game
 <style>
 #health-game { max-width: 900px; margin: auto; font-family: "Segoe UI", Arial, sans-serif; color: #333; }
 #health-game h2, #health-game h3 { font-family: "Segoe UI Emoji", "Segoe UI", sans-serif; }
-#health-game .intro { background: #f8f9fa; border-radius: 12px; padding: 1.2em; margin-bottom: 1.5em; text-align: center; font-size: 1.1em; line-height: 1.5em; }
-#health-game .intro p { margin: 0.5em 0; }
-#health-game .intro .victory { font-size: 1em; color: #007bff; }
+.intro-small { font-size: 0.75em; line-height: 1.1em; text-align: center; margin-bottom: 1em; }
 #health-game .card { border: 2px solid #ccc; border-radius: 12px; padding: 1em; margin-bottom: 1.5em; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 #health-game .flex { display: flex; flex-wrap: wrap; gap: 0.8em; }
 #health-game .center { justify-content: center; }
@@ -88,7 +83,7 @@ title: Health Resource Allocation Game
 #health-game .blue { background: #007bff; }
 #health-game .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em; text-align: center; }
 #health-game .hidden { display: none; }
-@media (max-width: 600px) { #health-game .grid { grid-template-columns: repeat(2, 1fr); } #health-game .flex { flex-direction: column; align-items: center; } #health-game .intro { font-size: 1em; } }
+@media (max-width: 600px) { #health-game .grid { grid-template-columns: repeat(2, 1fr); } #health-game .flex { flex-direction: column; align-items: center; } }
 </style>
 
 <!-- Script -->
@@ -97,7 +92,8 @@ let resources = { budget: 100, doctor: 1, nurse: 2, chw: 2, medicine: 3, transpo
 let score = 0, equity = 0, round = 1;
 const maxRounds = 2;
 let currentPatients = [];
-let eventTriggered = false; // only one event
+let eventTriggered = false;
+
 const patients = [
   { name:"👶 Child with Malaria", requires:{nurse:1, medicine:2}, points:8, remote:true },
   { name:"🤰 Pregnant Woman", requires:{doctor:1, medicine:1, beds:1}, points:10, remote:false },
@@ -105,6 +101,7 @@ const patients = [
   { name:"🍚 Malnourished Child", requires:{chw:2}, points:7, remote:true },
   { name:"🧓 Elder with Diabetes", requires:{doctor:1}, points:9, remote:false }
 ];
+
 const events = [
   { event:"🦟 Malaria Outbreak → +1 extra patient", effect:{extra_patients:1} },
   { event:"💉 Stock Delay → Lose 1 medicine", effect:{lose_medicine:1} },
@@ -131,11 +128,10 @@ function updateUI(){
 function addResource(type){
   const cost = 12;
   if(resources.budget >= cost){ resources[type]++; resources.budget -= cost; updateUI(); }
-  else alert("⚠️ Not enough budget!");
 }
 
 function drawPatients(){
-  if(currentPatients.length >= 4) { alert("⚠️ Max 4 patients at once!"); return; }
+  if(currentPatients.length >= 4) return; // silently enforce max 4 patients
   const newPatients = [];
   for(let i=0;i<2;i++){
     if(currentPatients.length + newPatients.length >= 4) break;
@@ -167,7 +163,7 @@ function treatPatient(index){
     if(patient.remote) equity+=2;
     currentPatients.splice(index,1);
     renderPatients(); updateUI();
-  } else alert("❌ Not enough resources.");
+  }
 }
 
 function maybeTriggerEvent(){
@@ -179,7 +175,7 @@ function maybeTriggerEvent(){
     if(evt.effect.extra_patients) drawPatients();
     if(evt.effect.lose_transport) resources.transport = Math.max(0, resources.transport-1);
     eventTriggered = true;
-  } else alert("🍀 Lucky! No event this round.");
+  }
 }
 
 function nextRound(){
