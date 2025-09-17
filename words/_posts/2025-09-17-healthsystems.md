@@ -3,18 +3,38 @@ layout: default
 title: Health Resource Allocation Game
 ---
 
-<div id="health-game">
+<!-- Intro Card -->
+<div class="card intro-card">
+  <p>
+    Got bored, made a card game. Yup vibecoding is a thing.<br>
+    So, you are the health manager 😎 of a rural community in 🌍 Tanzania. Each 💵 Funding Round, you receive a limited budget to allocate staff, medicine, and transport. Patients will arrive with health needs — treat them wisely!
+  </p>
+  <p>
+    🎯 Victory Condition: By the end of 2 funding rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2.
+  </p>
+</div>
 
-  <!-- Small Intro -->
-  <div class="intro-small">
-    <p>
-      Got bored, made a card game. Yup vibecoding is a thing. <br>
-      So,  you are the health manager 😎 of a rural community in 🌍 Tanzania. Each 💵 Funding Round, you receive a limited budget to allocate staff, medicine, and transport. Patients will arrive with health needs — treat them wisely!
-    </p>
-    <p>
-      🎯 Victory Condition: By the end of 2 funding rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2. 
-    </p>
-  </div>
+<!-- CSS -->
+<style>
+.intro-card { 
+  background:#fff3cd; 
+  border-color:#ffeeba; 
+  text-align:center; 
+  font-size:0.8em;
+  color: #333; /* default text color */
+  padding: 1em;
+  border-radius: 12px;
+}
+
+/* Dark/Night mode */
+@media (prefers-color-scheme: dark) {
+  .intro-card { 
+    color: white; 
+    background: #444; /* optional darker background in night mode */
+    border-color: #666;
+  }
+}
+</style>
 
 <div id="health-game">
 
@@ -215,10 +235,7 @@ function endGame(){
 updateUI();
 </script>
 
- <div id="health-game">
-
-  <!-- Small Intro -->
-  <div class="intro-small">
+<div class="card intro-card">
     <p>
        ( i know, its still pretty raw. will improve on the rules, instructutions and overall  architecture later on once i finish the health system module. maybe and methods too 😜)
     </p>
