@@ -3,18 +3,19 @@ layout: default
 title: Health Resource Allocation Game
 ---
 
-<div id="health-game">
+<h1 style="text-align:center; font-size:2em; margin:0.5em 0;">🩺 Health Manager Simulation — Rural Tanzania</h1>
 
-  <!-- Small Intro -->
-  <div class="intro-small">
-    <p>
-      Got bored, made a card game. Yup vibecoding is a thing. <br>
-      So,  you are the health manager 😎 of a rural community in 🌍 Tanzania. Each 💵 Funding Round, you receive a limited budget to allocate staff, medicine, and transport. Patients will arrive with health needs — treat them wisely!
-    </p>
-    <p>
-      🎯 Victory Condition: By the end of 2 funding rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2. 
-    </p>
-  </div>
+<!-- Intro Card -->
+<div class="card" style="background:#fff3cd; border-color:#ffeeba; text-align:center; font-size:0.8em;">
+  <p>
+    Got bored, made a card game. Yup vibecoding is a thing. So, 🌍 you are the health manager 👨‍⚕️ of a rural community in Tanzania 🇹🇿. Each 💵 Funding Round, you receive a limited budget to allocate staff, medicine, and transport. Patients will arrive with health needs — treat them wisely!
+  </p>
+  <p>
+    🎯 Victory Condition: By the end of 2 funding rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2. (It's still pretty raw. Will improve on the rules, instruction, and overall architecture later once I finish the health system module 😜)
+  </p>
+</div>
+
+<div id="health-game">
 
   <!-- Dashboard -->
   <div class="card">
@@ -139,7 +140,7 @@ function addResource(type){
 }
 
 function drawPatients(){
-  if(currentPatients.length >= 4) return; // silently enforce max 4 patients
+  if(currentPatients.length >= 4) return; // max 4 patients
   const newPatients = [];
   for(let i=0;i<2;i++){
     if(currentPatients.length + newPatients.length >= 4) break;
@@ -179,8 +180,8 @@ function treatPatient(index){
 }
 
 function maybeTriggerEvent(){
-  if(eventTriggered || round !== 1) return;
-  if(Math.random()<0.5){
+  if(eventTriggered || round !== 2) return;
+  if(Math.random() < 0.5){
     const evt = events[Math.floor(Math.random()*events.length)];
     alert(`⚡ Event: ${evt.event}`);
     if(evt.effect.lose_medicine) resources.medicine = Math.max(0, resources.medicine-1);
@@ -191,10 +192,15 @@ function maybeTriggerEvent(){
 }
 
 function nextRound(){
-  if(round<maxRounds){
-    round++; resources.budget+=25;
-    maybeTriggerEvent(); drawPatients(); updateUI();
-  } else endGame();
+  if(round < maxRounds){
+    round++; 
+    resources.budget += 25;
+    maybeTriggerEvent(); // event alert happens here
+    drawPatients(); 
+    updateUI();
+  } else {
+    endGame();
+  }
 }
 
 function endGame(){
@@ -207,13 +213,3 @@ function endGame(){
 
 updateUI();
 </script>
-
- <div id="health-game">
-
-  <!-- Small Intro -->
-  <div class="intro-small">
-    <p>
-       ( i know, its still pretty raw. will improve on the rules, instructutions and overall  architecture later on once i finish the health system module. maybe and methods too 😜)
-    </p>
-  </div>
- 
