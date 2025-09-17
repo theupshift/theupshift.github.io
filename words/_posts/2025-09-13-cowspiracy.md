@@ -90,7 +90,7 @@ So where does that leave clinicians? I’m not suggesting vegan pamphlets in eve
 <div id="commentsList">Loading comments...</div>
 
 <script>
-  const SCRIPT_URL = "YOUR_WEB_APP_URL"; // <-- REPLACE
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzjptldhKRoURM01vfzPQz7YkzGJXsp86N6f7bAKFCtNfOET4chmE8DvR95-1hOZCP0/exec"; // <-- REPLACE
   const postId = "{{ page.url }}";        // uses Jekyll page.url as unique id
   const commentsList = document.getElementById("commentsList");
   const statusMsg = document.getElementById("statusMsg");
