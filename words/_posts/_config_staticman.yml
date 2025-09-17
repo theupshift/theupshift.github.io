@@ -1,0 +1,5 @@
+comments:
+  endpoint: https://api.staticman.net/v2/entry/github/theupshift/theupshift.github.io/master/comments
+  allowedFields: [name, email, message]
+  branch: master
+  moderation: false   # Instant comments, no PR review
