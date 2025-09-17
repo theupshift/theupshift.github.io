@@ -77,53 +77,74 @@ So where does that leave clinicians? I’m not suggesting vegan pamphlets in eve
   <li>And of course, reflect on our own food choices..</li>
 </ul>
 
-<h3>Comments</h3>
+<!-- Comment Section Start -->
+<div class="comments-section">
 
-<form id="commentForm">
-  <input type="text" id="nameInput" placeholder="Your name" required><br>
-  <textarea id="commentInput" placeholder="Your comment" required></textarea><br>
-  <button type="submit">Post Comment</button>
-</form>
+  <h3>Comments</h3>
 
-<div id="commentsList">Loading comments...</div>
+  <form id="commentForm" method="POST" action="https://api.staticman.net/v2/entry/github/theupshift/theupshift.github.io/master/comments">
+    <input type="hidden" name="options[slug]" value="{{ page.slug }}">
 
-<script>
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzKOG_J5moafr0Tu2E4GqC6ZlGAMrSkJtZVuasujn10sc07z6X5W0s4b908qv4ehtWX/exec"; // replace with your Apps Script URL
-const postId = "{{ page.url }}";
-const commentsList = document.getElementById("commentsList");
+    <p><input type="text" name="fields[name]" placeholder="Your name" required></p>
+    <p><input type="email" name="fields[email]" placeholder="Your email (not public)" required></p>
+    <p><textarea name="fields[message]" placeholder="Your comment" required></textarea></p>
+    <p><button type="submit">Post Comment</button></p>
+  </form>
 
-async function loadComments(){
-  try {
-    const res = await fetch(`${SCRIPT_URL}?post_id=${encodeURIComponent(postId)}`);
-    const comments = await res.json();
-    if(!comments.length) commentsList.innerHTML = "<p>No comments yet.</p>";
-    else commentsList.innerHTML = comments.map(c=>
-      `<p><strong>${c.name}</strong><br>${c.comment}</p>`
-    ).join("");
-  } catch(err){
-    commentsList.textContent = "Failed to load comments.";
-    console.error(err);
-  }
+  <div id="commentsList">
+    {% assign post_comments = site.data.comments[page.slug] %}
+    {% if post_comments %}
+      <h4>{{ post_comments | size }} Comments</h4>
+      <ul class="comments-list">
+        {% for comment in post_comments %}
+          <li>
+            <strong>{{ comment.name }}</strong> said:<br>
+            {{ comment.message }}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No comments yet.</p>
+    {% endif %}
+  </div>
+
+</div>
+
+<style>
+.comments-section {
+  border-top: 2px solid #ddd;
+  margin-top: 2em;
+  padding-top: 1em;
 }
 
-document.getElementById("commentForm").addEventListener("submit", async (e)=>{
-  e.preventDefault();
-  const name = document.getElementById("nameInput").value.trim();
-  const comment = document.getElementById("commentInput").value.trim();
-  if(!name || !comment) return;
-  try {
-    await fetch(SCRIPT_URL, {
-      method:"POST",
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({post_id:postId,name,comment})
-    });
-    document.getElementById("commentForm").reset();
-    loadComments();
-  } catch(err){
-    alert("Failed to post comment.");
-    console.error(err);
-  }
-});
+.comments-section h3 { margin-bottom: 0.5em; }
 
-loadComments();
-</script>
+.comments-section form input,
+.comments-section form textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.comments-section form button {
+  background-color: #007ACC;
+  color: white;
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comments-section form button:hover { background-color: #005A99; }
+
+.comments-list { list-style: none; padding-left: 0; }
+
+.comments-list li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #eee;
+}
+</style>
+<!-- Comment Section End -->
+
