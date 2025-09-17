@@ -13,28 +13,23 @@ title: Health Resource Allocation Game
     🎯 Victory Condition: By the end of 2 funding rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2.
   </p>
 </div>
-
 <!-- CSS -->
 <style>
 .intro-card { 
-  background:#fff3cd; 
-  border-color:#ffeeba; 
   text-align:center; 
   font-size:0.8em;
   color: #333; /* default text color */
   padding: 1em;
-  border-radius: 12px;
 }
 
 /* Dark/Night mode */
 @media (prefers-color-scheme: dark) {
   .intro-card { 
-    color: white; 
-    background: #444; /* optional darker background in night mode */
-    border-color: #666;
+    color: white; /* only change text color in night mode */
   }
 }
 </style>
+
 
 <div id="health-game">
 
