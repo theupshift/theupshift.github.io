@@ -6,8 +6,8 @@ title: Health Resource Allocation Game
 <!-- Intro Card -->
 <div class="card intro-card">
   <p>
-    Got bored, made a card game. Yup vibecoding is a thing.<br>
-    So, you are the health manager 😎 of a rural community in 🌍 Tanzania. Each 💵 Funding Round, you receive a limited budget to allocate staff, medicine, and transport. Patients will arrive with health needs — treat them wisely!
+    Got bored, made a card game. Yup vibecoding is a thing.</p>
+    <p>So, you are the health manager 😎 of a rural community in 🌍 Tanzania. Each 💵 Funding Round, you receive a limited budget to allocate staff, medicine, and transport. Patients will arrive with health needs — treat them wisely!
   </p>
   <p>
     🎯 Victory Condition: By the end of 2 funding rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2.
