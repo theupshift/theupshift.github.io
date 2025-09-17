@@ -86,11 +86,11 @@ title: Health Resource Allocation Game
 #health-game .center { justify-content: center; }
 #health-game button { border: none; border-radius: 8px; padding: 0.4em 0.7em; cursor: pointer; font-size: 1em; transition: 0.2s ease-in-out; }
 #health-game button:hover { transform: scale(1.1); }
-#health-game .action-btn, #health-game .next-btn { display: block; margin: 0.5em auto; text-align: center; }
+#health-game .action-btn, #health-game .-btn { display: block; margin: 0.5em auto; text-align: center; }
 #health-game .action-btn { background: #007bff; color: white; font-weight: bold; font-size: 0.9em; }
 #health-game .action-btn:hover { background: #0056b3; }
-#health-game .next-btn { background: #28a745; color: white; font-weight: bold; font-size: 0.9em; padding: 0.6em 1em; }
-#health-game .next-btn:hover { background: #1e7e34; }
+#health-game .-btn { background: #28a745; color: white; font-weight: bold; font-size: 0.9em; padding: 0.6em 1em; }
+#health-game .-btn:hover { background: #1e7e34; }
 #health-game .patient-card { border: 2px solid #aaa; border-radius: 10px; padding: 0.7em; width: 100%; max-width: 220px; font-size: 0.9em; box-shadow: 0 3px 6px rgba(0,0,0,0.1); }
 #health-game .patient-card.remote { background: #cce5ff; }
 #health-game .patient-card.local { background: #e2f0d9; }
@@ -214,8 +214,16 @@ function nextRound(){
     maybeTriggerEvent(); // event alert happens here
     drawPatients(); 
     updateUI();
+
+    // If this is now the final round, change button text to "Show Results"
+    if(round === maxRounds){
+      const btn = document.querySelector(".next-btn");
+      btn.innerText = "📊 Show Results";
+    }
   } else {
+    // If user clicks again in final round, show results
     endGame();
+    document.querySelector(".next-btn").style.display = "none"; // hide after showing results
   }
 }
 
