@@ -208,24 +208,28 @@ function maybeTriggerEvent(){
 }
 
 function nextRound(){
+  const btn = document.querySelector(".next-btn"); // keep reference to button
   if(round < maxRounds){
     round++; 
     resources.budget += 25;
-    maybeTriggerEvent(); // event alert happens here
+    maybeTriggerEvent(); // show event alert if triggered
     drawPatients(); 
     updateUI();
 
     // If this is now the final round, change button text to "Show Results"
     if(round === maxRounds){
-      const btn = document.querySelector(".next-btn");
       btn.innerText = "📊 Show Results";
+      // styling stays the same (green button)
+      btn.style.background = "#28a745";
+      btn.style.color = "white";
     }
   } else {
-    // If user clicks again in final round, show results
+    // User clicks "Show Results"
     endGame();
-    document.querySelector(".next-btn").style.display = "none"; // hide after showing results
+    btn.style.display = "none"; // hide after showing results
   }
 }
+
 
 function endGame(){
   document.getElementById("results").classList.remove("hidden");
