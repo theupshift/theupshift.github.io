@@ -68,7 +68,7 @@ title: Health Resource Allocation Game
   <!-- Funding Rounds -->
   <div class="card">
     <h3>💵 Funding Round: <span id="round">1</span>/2</h3>
-    <button class="next-btn" onclick="nextRound()">➡️ Next Funding Round</button>
+    <button class="next-btn" onclick="nextRound()">➡️ Next Funding</button>
   </div>
 
   <!-- Results -->
