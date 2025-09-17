@@ -208,4 +208,12 @@ function endGame(){
 updateUI();
 </script>
 
-     ( i know, its still pretty raw. will improve on the rules, instructutions and overall  architecture later on once i finish the health system module. maybe and methods too 😜)
+ <div id="health-game">
+
+  <!-- Small Intro -->
+  <div class="intro-small">
+    <p>
+       ( i know, its still pretty raw. will improve on the rules, instructutions and overall  architecture later on once i finish the health system module. maybe and methods too 😜)
+    </p>
+  </div>
+ 
