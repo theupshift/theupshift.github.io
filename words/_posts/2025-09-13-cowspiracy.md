@@ -88,7 +88,7 @@ So where does that leave clinicians? I’m not suggesting vegan pamphlets in eve
 <div id="commentsList">Loading comments...</div>
 
 <script>
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxkcuGWon_SVJsYVuo9h8_ZpEnHeJpl0DoqNzDFbjLdeE6ZgWW3COaZtRoNAFhHBy2t/exec"; // replace with your Apps Script URL
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzKOG_J5moafr0Tu2E4GqC6ZlGAMrSkJtZVuasujn10sc07z6X5W0s4b908qv4ehtWX/exec"; // replace with your Apps Script URL
 const postId = "{{ page.url }}";
 const commentsList = document.getElementById("commentsList");
 
@@ -125,6 +125,5 @@ document.getElementById("commentForm").addEventListener("submit", async (e)=>{
   }
 });
 
-// Load comments on page load
 loadComments();
 </script>
