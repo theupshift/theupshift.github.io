@@ -13,14 +13,15 @@ twitter_image: "https://raw.githubusercontent.com/theupshift/theupshift.github.i
 
 More than a decade ago, the RESPECT study in Tanzania tested an intriguing idea: give women small cash payments if they tested negative for curable sexually transmitted infections. With just 100 participants, the intervention showed that money, direct, guaranteed, and immediate, could help women make safer choices in the short term.
 
-A follow-up trial in Dar es Salaam, RESPECT II, sought to scale up the approach: 2,206 participants, followed over 36 months. But the design made a crucial pivot. Instead of a guaranteed cash reward, women were entered into a lottery with a chance to win 100,000 shillings (~$50 USD), conditional on negative test results for syphilis and trichomonas. The primary outcome was combined HIV/HSV-2 incidence after 36 months. The hope was that the thrill of risk and reward would be cheaper and more motivating.
+A follow-up trial in Dar es Salaam, RESPECT II, sought to scale up the approach: 2,206 participants, followed over 36 months. But the design made a crucial pivot [^1]. Instead of a guaranteed cash reward, women were entered into a lottery with a chance to win 100,000 shillings (~$50 USD), conditional on negative test results for syphilis and trichomonas. The primary outcome was combined HIV/HSV-2 incidence after 36 months. The hope was that the thrill of risk and reward would be cheaper and more motivating.
 
 It was not. After three years, HIV and HSV-2 incidence were no different between the lottery and standard care groups (adjusted RD: –0.001, 95% CI –0.05 to 0.05), meaning the lottery had virtually no effect on reducing infections. Nearly half of participants were lost to follow-up, and COVID-19 further disrupted the study. The lottery changed nothing.
 
 This was not bad luck; it was flawed logic. Lotteries are cheap but uncertain. For women whose lives are already defined by poverty, gender inequality, and unstable work, the promise of a one-in-many chance is no substitute for guaranteed support. By trying to design a more “efficient” incentive, the study undercut the very principle that made the original RESPECT results plausible: immediate, reliable, tangible benefit.
 
-The lesson is clear. HIV prevention is not about scratch cards. It is about condoms, affordable PrEP, comprehensive health services, and fundamentally, real economic opportunities for women. Lotteries may make headlines, but they do not change structural vulnerability.
+The lesson is clear. HIV prevention is not about scratch cards. It is about condoms, affordable PrEP, comprehensive health services, and fundamentally, real economic opportunities for women. Lotteries may make headlines, but they do not change structural vulnerability.[^2]
 
-If we are serious about prevention, we must invest in what works: the proven, the durable, and the just.[^1]
+If we are serious about prevention, we must invest in what works: the proven, the durable, and the just.
 
 [^1]: Balampama, M., de Walque, D., Dow, W.H. & Hémono, R., 2025. *Effects of a Lottery Incentive on STI/HIV Incidence Among Female Sex Workers in Tanzania: Outcomes of Rewarding STI Prevention and Control in Tanzania (RESPECT-2)*. AIDS and Behavior. [Open Access](https://doi.org/10.1007/s10461-025-04822-8)
+[^2]: Rhodes, T., Wagner, K., Strathdee, S.A., Shannon, K., Davidson, P. & Bourgois, P., 2011. *Structural Violence and Structural Vulnerability Within the Risk Environment: Theoretical and Methodological Perspectives for a Social Epidemiology of HIV Risk Among Injection Drug Users and Sex Workers*. In: *Rethinking Social Epidemiology*, pp.205–230. [Springer](https://doi.org/10.1007/978-1-4614-0070-9_11)
