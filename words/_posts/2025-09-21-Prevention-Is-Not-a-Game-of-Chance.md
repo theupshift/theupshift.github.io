@@ -22,7 +22,7 @@ This was not bad luck; it was flawed logic. Lotteries are cheap but uncertain. F
 The lesson is clear. HIV prevention is not about scratch cards. It is about condoms, affordable PrEP, comprehensive health services, and fundamentally, real economic opportunities for women. Lotteries may make headlines, but they do not change **structural vulnerability**.[^3]
 
 If we are serious about prevention, we must invest in what works: the proven, the durable, and the just.
-
+---
 [^1]: Packel, L.J., de Walque, D., Feeney, K.C., Balampama, M.P., Cooper, J.E., Kalolella, A., Wechsberg, W.M. & Dow, W.H., 2018. *A randomized trial of cash incentives for sexual behavior change among female sex workers in Dar es Salaam (RESPECT-1)*. Social Science & Medicine, [Open Access](https://doi.org/10.1016/j.socscimed.2018.03.019)
 [^2]: Balampama, M., de Walque, D., Dow, W.H. & Hémono, R., 2025. *Effects of a Lottery Incentive on STI/HIV Incidence Among Female Sex Workers in Tanzania: Outcomes of Rewarding STI Prevention and Control in Tanzania (RESPECT-2)*. AIDS and Behavior. [Open Access](https://doi.org/10.1007/s10461-025-04822-8)
 [^3]: Rhodes, T., Wagner, K., Strathdee, S.A., Shannon, K., Davidson, P. & Bourgois, P., 2011. *Structural Violence and Structural Vulnerability Within the Risk Environment: Theoretical and Methodological Perspectives for a Social Epidemiology of HIV Risk Among Injection Drug Users and Sex Workers*. In: *Rethinking Social Epidemiology*, pp.205–230. [Springer](https://doi.org/10.1007/978-1-4614-0070-9_11)
