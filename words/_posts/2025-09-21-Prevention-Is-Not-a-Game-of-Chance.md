@@ -19,7 +19,7 @@ It was not. After three years, HIV and HSV-2 incidence were no different between
 
 This was not bad luck; it was flawed logic. Lotteries are cheap but uncertain. For women whose lives are already defined by poverty, gender inequality, and unstable work, the promise of a one-in-many chance is no substitute for guaranteed support. By trying to design a more “efficient” incentive, the study undercut the very principle that made the original RESPECT results plausible: immediate, reliable, tangible benefit.
 
-The lesson is clear. HIV prevention is not about scratch cards. It is about condoms, affordable PrEP, comprehensive health services, and fundamentally, real economic opportunities for women. Lotteries may make headlines, but they do not change structural vulnerability.[^2]
+The lesson is clear. HIV prevention is not about scratch cards. It is about condoms, affordable PrEP, comprehensive health services, and fundamentally, real economic opportunities for women. Lotteries may make headlines, but they do not change **structural vulnerability**.[^2]
 
 If we are serious about prevention, we must invest in what works: the proven, the durable, and the just.
 
