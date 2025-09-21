@@ -23,4 +23,4 @@ The lesson is clear. HIV prevention is not about scratch cards. It is about cond
 
 If we are serious about prevention, we must invest in what works: the proven, the durable, and the just.[^1]
 
-[^1]: [Study link](https://doi.org/10.1007/s10461-025-04822-8)
+[^1]: Balampama, M., de Walque, D., Dow, W.H. & Hémono, R., 2025. *Effects of a Lottery Incentive on STI/HIV Incidence Among Female Sex Workers in Tanzania: Outcomes of Rewarding STI Prevention and Control in Tanzania (RESPECT-2)*. AIDS and Behavior. [Open Access](https://doi.org/10.1007/s10461-025-04822-8)
