@@ -22,7 +22,7 @@ A follow-up trial in Dar es Salaam, RESPECT II[^2], sought to scale up the appro
 After three years, HIV and HSV-2 incidence were no different between the lottery and standard care groups (adjusted RD: –0.001, 95% CI –0.05 to 0.05), meaning the lottery had virtually no effect on reducing infections. Nearly half of participants were lost to follow-up, and COVID-19 further disrupted the study. The lottery changed nothing.
 
 <br>
-<p><em>This was not chance or poor method; it was flawed logic.</em></p>
+<p><em>This was not merely chance; it was flawed logic.</em></p>
 <br>
 Lotteries are cheap but uncertain. For women whose lives are already defined by poverty, gender inequality, and unstable work, the promise of a one-in-many chance is no substitute for guaranteed support. By trying to design a more “efficient” incentive, the study undercut the very principle that made the original RESPECT results plausible: immediate, reliable, tangible benefit.
 
