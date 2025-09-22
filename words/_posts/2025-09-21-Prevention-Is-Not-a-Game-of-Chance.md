@@ -30,7 +30,6 @@ After three years, the results were clear: infection rates were no different bet
 <br>
 **The Allure of the Lottery & Betting Against Structural Vulnerability**
 
-<br>
 Lotteries are cheap but uncertain. Offering a lottery ticket for health to someone in poverty is like offering a chance to win a lifeboat to someone drowning instead of throwing them a guaranteed float. It's a bet on their survival, not an investment in it. 
 
 For women whose lives are already defined by poverty, gender inequality, and unstable work, the promise of a one-in-many chance is no substitute for guaranteed support. A guaranteed $10 can mean a week's groceries for her children; a 1% chance at $50 is, more often than not, a reminder of luck that never seems to be on her side. By trying to design a more “efficient” incentive, the study undercut the very principle that made the original RESPECT results plausible: immediate, reliable, tangible benefit.
