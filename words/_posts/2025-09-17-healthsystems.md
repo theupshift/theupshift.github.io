@@ -39,7 +39,7 @@ You’re the Health Manager 😎 of a rural Tanzanian community. Each 💵 Fundi
       <div>🏡 CHWs: <span id="chws">2</span><br><button onclick="addResource('chw')">➕</button></div>
       <div>💊 Medicine: <span id="medicine">3</span><br><button onclick="addResource('medicine')">➕</button></div>
       <div>🚑 Transport: <span id="transport">1</span><br><button onclick="addResource('transport')">➕</button></div>
-      <div>🛏️ Clinic Beds: <span id="beds">1</span><br><button onclick="addResource('beds')">➕</button></div>
+      <div>🔬 Diagnostics: <span id="beds">1</span><br><button onclick="addResource('beds')">➕</button></div>
     </div>
   </div>
 
