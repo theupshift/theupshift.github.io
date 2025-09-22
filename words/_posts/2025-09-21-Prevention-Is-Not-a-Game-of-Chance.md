@@ -21,11 +21,11 @@ The hope was that the thrill of risk and reward would be cheaper and more motiva
 <p><em>Well, it didn't.</em></p>
 > The adjusted risk difference was –0.001 (95% CI –0.05 to 0.05). The lottery had virtually no effect.
 
-After three years, this statistic told the whole story: infection rates were no different between the lottery and standard care groups. The lottery had virtually no effect. Though nearly half of the participants were lost to follow-up, and COVID-19 disrupted the study, but the conclusion was inescapable.
+After three years, this statistic told the whole story: infection rates were no different between the lottery and standard care groups. Though nearly half of the participants were lost to follow-up, and COVID-19 disrupted the study, the conclusion was inescapable.
 
 <br>
 <p><em>This was not merely chance; it was flawed logic.</em></p>
-Lotteries are cheap but uncertain. For women whose lives are already defined by poverty, gender inequality, and unstable work, the promise of a one-in-many chance is no substitute for guaranteed support. By trying to design a more “efficient” incentive, the study undercut the very principle that made the original RESPECT results plausible: immediate, reliable, tangible benefit.
+Lotteries are cheap but uncertain. Offering a lottery ticket for health to someone in poverty is like offering a chance to win a lifeboat to someone drowning instead of throwing them a guaranteed float. It's a bet on their survival, not an investment in it. For women whose lives are already defined by poverty, gender inequality, and unstable work, the promise of a one-in-many chance is no substitute for guaranteed support. A guaranteed $10 can mean a week's groceries for her children; a 1% chance at $50 is, more often than not, a reminder of luck that never seems to be on her side. By trying to design a more “efficient” incentive, the study undercut the very principle that made the original RESPECT results plausible: immediate, reliable, tangible benefit.
 
 The lesson is clear. HIV prevention is not about scratch cards. It is about condoms, affordable PrEP, comprehensive health services, and fundamentally, real economic opportunities for women. Lotteries may make headlines, but they do not change **structural vulnerability**.[^3]
 
