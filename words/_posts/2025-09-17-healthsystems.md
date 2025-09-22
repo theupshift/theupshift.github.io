@@ -11,9 +11,9 @@ og_image: "https://s3.amazonaws.com/production.scholastica/public/attachments/54
 twitter_image: "https://s3.amazonaws.com/production.scholastica/public/attachments/54701328-1026-4e09-ad51-2fa8d6a51335/large/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.png"
 ---
 <p style="text-align: center;">Got bored, so I made a boardgame. Yup, vibecoding is real.
-
+<br>
 You’re the Health Manager 😎 of a rural Tanzanian community. Each 💵 Funding Round, allocate limited staff, medicine, and transport to treat arriving patients wisely.
-
+<br>
 🎯 Victory Condition: By the end of 2 rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2.</p>
 
 <div id="health-game">
