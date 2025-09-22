@@ -13,12 +13,14 @@ twitter_image: "https://raw.githubusercontent.com/theupshift/theupshift.github.i
 
 More than a decade ago, the RESPECT study[^1] in Tanzania tested an intriguing idea: give women small cash payments if they tested negative for curable sexually transmitted infections. With just 100 participants, the intervention showed that money, direct, guaranteed, and immediate, could help women make safer choices in the short term.
 
-A follow-up trial in Dar es Salaam, RESPECT II[^2], sought to scale up the approach: 2,206 participants, followed over 36 months. But the design made a crucial pivot. Instead of a guaranteed cash reward, women were entered into a lottery with a chance to win 100,000 shillings (~$50 USD), conditional on negative test results for syphilis and trichomonas. The primary outcome was combined HIV/HSV-2 incidence after 36 months. The hope was that the thrill of risk and reward would be cheaper and more motivating.
+### The Allure of the Lottery
+A follow-up trial in Dar es Salaam, RESPECT II[^2], sought to scale up the approach: 2,206 participants, followed over 36 months. But the design made a crucial pivot. Instead of a guaranteed cash reward, women were entered into a lottery with a chance to win 100,000 shillings (~$50 USD), conditional on negative test results for syphilis and trichomonas. The primary outcome was combined HIV/HSV-2 incidence after 36 months. 
 
-
+The hope was that the thrill of risk and reward would be cheaper and more motivating.
 <br>
 <p><em>Well, it didn't.</em></p>
-After three years, HIV and HSV-2 incidence were no different between the lottery and standard care groups (adjusted RD: –0.001, 95% CI –0.05 to 0.05), meaning the lottery had virtually no effect on reducing infections. Nearly half of participants were lost to follow-up, and COVID-19 further disrupted the study. The lottery changed nothing.
+> The adjusted risk difference was –0.001 (95% CI –0.05 to 0.05). The lottery had virtually no effect.
+After three years, this statistic told the whole story: infection rates were no different between the lottery and standard care groups. The lottery had virtually no effect. Though nearly half of the participants were lost to follow-up, and COVID-19 disrupted the study, but the conclusion was inescapable.
 
 <br>
 <p><em>This was not merely chance; it was flawed logic.</em></p>
