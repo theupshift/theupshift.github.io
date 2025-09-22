@@ -27,7 +27,7 @@ After three years, the results were clear: infection rates were no different bet
 
 
 <br>
-**The flawed premise that a thrill could outweigh a need for security.**
+**The flawed premise of thrill over security.**
 
 Lotteries are cheap but uncertain. Offering a lottery ticket for health to someone in poverty is like offering a chance to win a lifeboat to someone drowning instead of throwing them a guaranteed float. It's a bet on their survival, not an investment in it. 
 
