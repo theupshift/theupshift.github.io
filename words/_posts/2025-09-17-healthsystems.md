@@ -245,6 +245,6 @@ updateUI();
 
 <div class="card intro-card">
     <p>
-       ( i know, its still pretty raw. will improve on the rules, instructutions and overall  architecture later on once i finish the health system module. maybe and methods too 😜)
+       ( Still raw—rules, instructions, and game architecture will improve later on… maybe methods too 😜)
     </p>
   </div>
