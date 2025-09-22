@@ -10,7 +10,7 @@ image: "https://s3.amazonaws.com/production.scholastica/public/attachments/54701
 og_image: "https://s3.amazonaws.com/production.scholastica/public/attachments/54701328-1026-4e09-ad51-2fa8d6a51335/large/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.png"
 twitter_image: "https://s3.amazonaws.com/production.scholastica/public/attachments/54701328-1026-4e09-ad51-2fa8d6a51335/large/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.png"
 ---
-Got bored, so I made a card game. Yup, vibecoding is real.
+Got bored, so I made a boardgame. Yup, vibecoding is real.
 
 You’re the Health Manager 😎 of a rural Tanzanian community. Each 💵 Funding Round, allocate limited staff, medicine, and transport to treat arriving patients wisely.
 
