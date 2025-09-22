@@ -27,7 +27,7 @@ You’re the Health Manager 😎 of a rural Tanzanian community. Each 💵 Fundi
     <p>⭐ Score: <span id="score">0</span></p>
     <div class="progress"><div id="score-bar" class="progress-fill blue"></div></div>
 
-    <p>⚖️ Equity (Remote Patients Treated): <span id="equity">0</span></p>
+    <p>⚖️ Equity (Based Patients Treated Gender, Age etc.): <span id="equity">0</span></p>
   </div>
 
   <!-- Resources -->
