@@ -12,9 +12,8 @@ twitter_image: "https://s3.amazonaws.com/production.scholastica/public/attachmen
 ---
 <p style="text-align: center;">Got bored, so I made a boardgame. Yup, vibecoding is real.
 <br>
-You’re the Health Manager 😎 of a rural Tanzanian community. Each 💵 Funding Round, allocate limited staff, medicine, and transport to treat arriving patients wisely.
 <br>
-🎯 Victory Condition: By the end of 2 rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2.</p>
+You’re the Health Manager 😎 of a rural Tanzanian community. Each 💵 Funding Round, allocate limited staff, medicine, and transport to treat arriving patients wisely. Victory Condition: By the end of 2 rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2.</p>
 
 <div id="health-game">
 
