@@ -23,7 +23,7 @@ The hope was that the thrill of risk and reward would be cheaper and more motiva
 <p><em>Well, it didn't.</em></p>
 > The adjusted risk difference was –0.001 (95% CI –0.05 to 0.05). The lottery had virtually no effect.
 
-After three years, this statistic told the whole story: infection rates were no different between the lottery and standard care groups. Though nearly half of the participants were lost to follow-up, and COVID-19 disrupted the study, the conclusion was inescapable. This was not merely chance; it was flawed logic.
+After three years, the results were clear: infection rates were no different between the lottery and standard care groups. Although nearly half of the participants were lost to follow-up, due in part to COVID-19, the conclusion was inescapable. This was not merely chance; it was flawed logic.
 
 
 
