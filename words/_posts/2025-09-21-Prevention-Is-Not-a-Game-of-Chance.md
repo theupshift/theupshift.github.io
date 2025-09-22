@@ -12,7 +12,8 @@ twitter_image: "https://raw.githubusercontent.com/theupshift/theupshift.github.i
 ---
 
 More than a decade ago, a small study in Tanzania, the RESPECT study[^1] tested an intriguing idea: give women small cash payments if they tested negative for curable sexually transmitted infections. With just 100 participants, the intervention showed that money, direct, guaranteed, and immediate, could help women make safer choices in the short term.
-<br>
+
+
 <br>
 **The Allure of the Lottery**
 
