@@ -14,9 +14,6 @@ twitter_image: "https://raw.githubusercontent.com/theupshift/theupshift.github.i
 More than a decade ago, a small study in Tanzania, the RESPECT study[^1] tested an intriguing idea: give women small cash payments if they tested negative for curable sexually transmitted infections. With just 100 participants, the intervention showed that money, direct, guaranteed, and immediate, could help women make safer choices in the short term.
 
 
-<br>
-**The Allure of the Lottery**
-
 A follow-up trial, RESPECT II[^2], sought to scale up the approach: 2,206 participants, followed over 36 months. But the design made a crucial pivot. Instead of a guaranteed cash reward, women were entered into a lottery with a chance to win 100,000 shillings (~$50 USD), conditional on negative test results for syphilis and trichomonas. The primary outcome was combined HIV/HSV-2 incidence after 36 months. 
 
 The hope was that the thrill of risk and reward would be cheaper and more motivating.
@@ -26,10 +23,12 @@ The hope was that the thrill of risk and reward would be cheaper and more motiva
 
 After three years, this statistic told the whole story: infection rates were no different between the lottery and standard care groups. Though nearly half of the participants were lost to follow-up, and COVID-19 disrupted the study, the conclusion was inescapable.
 
-<br>
-> This was not merely chance; it was flawed logic.
 
-Lotteries are cheap but uncertain. Offering a lottery ticket for health to someone in poverty is like offering a chance to win a lifeboat to someone drowning instead of throwing them a guaranteed float. It's a bet on their survival, not an investment in it. 
+
+<br>
+**The Allure of the Lottery**
+<br>
+> This was not merely chance; it was flawed logic. Lotteries are cheap but uncertain. Offering a lottery ticket for health to someone in poverty is like offering a chance to win a lifeboat to someone drowning instead of throwing them a guaranteed float. It's a bet on their survival, not an investment in it. 
 
 For women whose lives are already defined by poverty, gender inequality, and unstable work, the promise of a one-in-many chance is no substitute for guaranteed support. A guaranteed $10 can mean a week's groceries for her children; a 1% chance at $50 is, more often than not, a reminder of luck that never seems to be on her side. By trying to design a more “efficient” incentive, the study undercut the very principle that made the original RESPECT results plausible: immediate, reliable, tangible benefit.
 
