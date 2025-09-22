@@ -10,36 +10,11 @@ image: "https://s3.amazonaws.com/production.scholastica/public/attachments/54701
 og_image: "https://s3.amazonaws.com/production.scholastica/public/attachments/54701328-1026-4e09-ad51-2fa8d6a51335/large/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.png"
 twitter_image: "https://s3.amazonaws.com/production.scholastica/public/attachments/54701328-1026-4e09-ad51-2fa8d6a51335/large/figure_1._good_health_nepal_bajrabarahi_integrated_health_clinic__makwanpur_nepal.png"
 ---
+Got bored, so I made a card game. Yup, vibecoding is real.
 
+You’re the Health Manager 😎 of a rural Tanzanian community. Each 💵 Funding Round, allocate limited staff, medicine, and transport to treat arriving patients wisely.
 
-
-<!-- Intro Card -->
-<div class="card intro-card">
-  <p>
-    Got bored, made a card game. Yup vibecoding is a thing.</p>
-    <p>So, you are the health manager 😎 of a rural community in 🌍 Tanzania. Each 💵 Funding Round, you receive a limited budget to allocate staff, medicine, and transport. Patients will arrive with health needs — treat them wisely!
-  </p>
-  <p>
-    🎯 Victory Condition: By the end of 2 funding rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2.
-  </p>
-</div>
-<!-- CSS -->
-<style>
-.intro-card { 
-  text-align:center; 
-  font-size:0.8em;
-  color: #333; /* default text color */
-  padding: 1em;
-}
-
-/* Dark/Night mode */
-@media (prefers-color-scheme: dark) {
-  .intro-card { 
-    color: white; /* only change text color in night mode */
-  }
-}
-</style>
-
+🎯 Victory Condition: By the end of 2 rounds, achieve ⭐ Score ≥ 20 and ⚖️ Equity ≥ 2.
 
 <div id="health-game">
 
