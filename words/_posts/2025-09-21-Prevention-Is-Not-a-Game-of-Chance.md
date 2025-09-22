@@ -29,6 +29,7 @@ After three years, the results were clear: infection rates were no different bet
 
 <br>
 **The Allure of the Lottery**
+
 <br>
 Lotteries are cheap but uncertain. Offering a lottery ticket for health to someone in poverty is like offering a chance to win a lifeboat to someone drowning instead of throwing them a guaranteed float. It's a bet on their survival, not an investment in it. 
 
