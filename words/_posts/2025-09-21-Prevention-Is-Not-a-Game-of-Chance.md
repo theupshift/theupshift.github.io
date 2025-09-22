@@ -23,12 +23,11 @@ The hope was that the thrill of risk and reward would be cheaper and more motiva
 <p><em>Well, it didn't.</em></p>
 > The adjusted risk difference was –0.001 (95% CI –0.05 to 0.05). The lottery had virtually no effect.
 
-After three years, the results were clear: infection rates were no different between the lottery and standard care groups. Although nearly half of the participants were lost to follow-up, due in part to COVID-19, the conclusion was inescapable. This was not merely chance; it was flawed logic.
-
+After three years, the results were clear: infection rates were no different between the lottery and standard care groups. Although nearly half of the participants were lost to follow-up, due in part to COVID-19, the conclusion was inescapable. 
 
 
 <br>
-**The Allure of the Lottery & Betting Against Structural Vulnerability**
+**The flawed premise that a thrill could outweigh a need for security.**
 
 Lotteries are cheap but uncertain. Offering a lottery ticket for health to someone in poverty is like offering a chance to win a lifeboat to someone drowning instead of throwing them a guaranteed float. It's a bet on their survival, not an investment in it. 
 
