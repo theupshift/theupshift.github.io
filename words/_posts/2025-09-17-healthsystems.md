@@ -13,7 +13,7 @@ twitter_image: "https://s3.amazonaws.com/production.scholastica/public/attachmen
 <p style="text-align: center;">Got bored, so I made a boardgame. Yup, vibecoding is real 😎.
 <br>
 <br>
-You’re the Health Manager of a rural community. For each 💵 Funding Round, allocate limited staff, medicine, and transport to treat arriving patients wisely. Victory: After 2 rounds, achieve ⭐ Score ≥ 20 & ⚖️ Equity ≥ 2.</p>
+You’re the Health Manager of a rural community. For each 💵 Funding Round, allocate limited staff, medicine, and transport to treat arriving patients wisely. Victory: After 2 rounds,⭐ Score ≥ 20 & ⚖️ Equity ≥ 2.</p>
 
 <div id="health-game">
 
