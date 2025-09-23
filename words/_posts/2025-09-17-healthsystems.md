@@ -244,6 +244,6 @@ updateUI();
 
 <div class="card intro-card">
     <p style="text-align: center;">
-       ( still pretty raw; rules, guide & architecture will improve later on 😜)
+       ( still pretty raw; rules & architecture will improve later on 😜)
     </p>
   </div>
