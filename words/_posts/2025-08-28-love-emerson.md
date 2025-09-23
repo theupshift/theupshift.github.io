@@ -63,13 +63,13 @@ title:
   .play-button {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 20px;  /* Move the button to the left */
     background-color: #fff;
     border-radius: 50%;
-    padding: 20px;
+    padding: 15px;  /* Smaller padding */
     cursor: pointer;
-    font-size: 24px;
-    color: #ff0000; /* Red play icon */
+    font-size: 20px;  /* Smaller font size */
+    color: #ff0000;  /* Red play icon */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +88,7 @@ title:
   }
 
   .play-button i {
-    font-size: 20px;
+    font-size: 18px;  /* Smaller icon size */
   }
 
   /* Tablet */
