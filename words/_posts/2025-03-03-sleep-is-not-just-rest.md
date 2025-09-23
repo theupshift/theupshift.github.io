@@ -22,7 +22,7 @@ img {
 
 As a medic, I’ve always known that sleep is important, but it’s only recently that I truly appreciated its crucial role in maintaining our health.
 
-Every night, we go through several sleep stages, including deep sleep and REM (Rapid Eye Movement). These cycles last about 90 minutes and repeat throughout the night. The quality of these cycles directly affects how we feel the next day and how well our body repairs itself.[^1]
+Every night, we go through several sleep stages, including deep sleep and REM (Rapid Eye Movement). These cycles last about 90 minutes and repeat throughout the night. The quality of these cycles directly affects how we feel the next day and how well our body repairs itself.<span style="color: red;">[^1]</span>
 
 <br>
 <img src="https://axbo.zendesk.com/hc/de/article_attachments/203058769/aXbo_Hypnogramm_EN_big_picture_Zendesk_sized.png"
@@ -34,7 +34,7 @@ Waking up during the wrong part of this cycle especially during deep sleep can l
 
 Why does this happen?  Its because the body moves differently depending on the sleep stage. In deep sleep and REM, you barely move at all. But right before and after REM, during those "almost awake" moments, your body is more active. 
 
-Sleep is also an active period during which the body repairs damaged cells and balances hormones. The brain activates the glymphatic system, a sort of cleaning crew that flushes out toxins mostly during deep sleep.[^2]*
+Sleep is also an active period during which the body repairs damaged cells and balances hormones. The brain activates the glymphatic system, a sort of cleaning crew that flushes out toxins mostly during deep sleep.<span style="color: red;">[^2]</span>
 <br>
 <br>
 ![](https://onlinelibrary.wiley.com/cms/asset/b1cff2fb-ff5a-464f-9e89-6e974f53c992/brx270011-toc-0001-m.jpg?trick=1750029566391)
