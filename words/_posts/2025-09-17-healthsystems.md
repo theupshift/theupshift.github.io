@@ -26,7 +26,7 @@ You’re the health manager of a rural community. For each 💵 funding round, a
     <p>⭐ Score: <span id="score">0</span></p>
     <div class="progress"><div id="score-bar" class="progress-fill blue"></div></div>
 
-    <p>⚖️ Equity (Based Patients Treated Gender, Age etc.): <span id="equity">0</span></p>
+    <p>⚖️ Equity (Patients' Gender, Age, etc.): <span id="equity">0</span></p>
   </div>
 
   <!-- Resources -->
