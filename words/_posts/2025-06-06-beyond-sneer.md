@@ -9,8 +9,8 @@ image: https://www.clker.com/cliparts/9/6/1/3/12456414551920158301johnny_automat
 og_image: https://www.clker.com/cliparts/9/6/1/3/12456414551920158301johnny_automatic_sneer.svg.med.png
 twitter_image: https://www.clker.com/cliparts/9/6/1/3/12456414551920158301johnny_automatic_sneer.svg.med.png
 ---
-<br>
-<div style="text-align: center;"><i>"The poorest way to face life is with a sneer."</i></div>
+
+<p style="text-align: center;"><i>"The poorest way to face life is with a sneer."</i></p>
 
 [**Hemingway**](https://www.goodreads.com/book/show/10799.A_Farewell_to_Arms) once said, "Courage is grace under pressure." 
 A sneer is the opposite of grace; it is fear disguised as disdain, a defense mechanism that masks vulnerability with contempt. 
