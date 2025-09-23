@@ -12,6 +12,7 @@ twitter_image: https://www.clker.com/cliparts/9/6/1/3/12456414551920158301johnny
 <br>
 <div style="text-align: center;"><i>"The poorest way to face life is with a sneer."</i></div>
 
-As [**Hemingway**](https://www.goodreads.com/book/show/10799.A_Farewell_to_Arms) said, "Courage is grace under pressure." A sneer is the opposite of grace. It’s fear masked as disdain. Thriving comes from embracing challenges. 
+[**Hemingway**](https://www.goodreads.com/book/show/10799.A_Farewell_to_Arms) once said, "Courage is grace under pressure." 
+A sneer is the opposite of grace; it is fear disguised as disdain, a defense mechanism that masks vulnerability with contempt. 
 
-Like a tree, rooted in the earth, reaching, bending with the wind, and shedding leaves to make room for new ones.
+Thriving comes from embracing differences. Like a tree, rooted firmly in the earth, reaching upward, bending gracefully with the wind, and shedding old leaves to make room for new growth.
