@@ -65,7 +65,7 @@ You’re the health manager of a rural community. For each 💵 funding round, a
 #health-game { max-width: 900px; margin: auto; font-family: "Segoe UI", Arial, sans-serif; color: #333; }
 #health-game h2, #health-game h3 { font-family: "Segoe UI Emoji", "Segoe UI", sans-serif; text-align: center; font-size: 0.9em; }
 .intro-small { font-size: 0.75em; line-height: 1.1em; text-align: center; margin-bottom: 1em; }
-#health-game .card { border: 2px solid #ccc; border-radius: 12px; padding: 1em; margin-bottom: 1.5em; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+#health-game .card { border: 2px solid #ccc; border-radius: 12px; padding: 0.5em; margin-bottom: 1.0em; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 #health-game .flex { display: flex; flex-wrap: wrap; gap: 0.8em; }
 #health-game .center { justify-content: center; }
 #health-game button { border: none; border-radius: 8px; padding: 0.4em 0.7em; cursor: pointer; font-size: 1em; transition: 0.2s ease-in-out; }
