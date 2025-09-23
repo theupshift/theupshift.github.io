@@ -20,11 +20,11 @@ img {
 }
 </style>
 
-As a medic, I’ve always known that sleep is important, but only recently did I realize how essential it is for our overall health. 
+As a medic, I’ve always known that sleep is important, but it’s only recently that I truly appreciated its crucial role in maintaining our health.
 
 Every night, we go through several sleep stages, including deep sleep and REM (Rapid Eye Movement). These cycles last about 90 minutes and repeat throughout the night. The quality of these cycles directly affects how we feel the next day and how well our body repairs itself.[^1]
 
-
+<br>
 <img src="https://axbo.zendesk.com/hc/de/article_attachments/203058769/aXbo_Hypnogramm_EN_big_picture_Zendesk_sized.png"
      alt="Sleep Cycle Hypnogram"
      style="border: 1px solid #007BFF; border-radius: 12px; padding: 4px; max-width: 100%;">
@@ -34,14 +34,11 @@ Waking up during the wrong part of this cycle especially during deep sleep can l
 
 Why does this happen? Your body moves differently depending on the sleep stage. In deep sleep and REM, you barely move at all. But right before and after REM, during those "almost awake" moments, your body is more active. 
 
-**Sleep is not just about resting.** 
-
-*It is an active process that is vital for your health. While you sleep, your body repairs damaged cells and balances hormones. Your brain also activates the glymphatic system, a sort of cleaning crew that flushes out toxins mostly during deep sleep.[^2]*
-
-
+Sleep is not just about resting. It is an active process that is vital for your health. While you sleep, your body repairs damaged cells and balances hormones. Your brain also activates the glymphatic system, a sort of cleaning crew that flushes out toxins mostly during deep sleep.[^2]*
+<br>
 ![](https://onlinelibrary.wiley.com/cms/asset/b1cff2fb-ff5a-464f-9e89-6e974f53c992/brx270011-toc-0001-m.jpg?trick=1750029566391)
-
-Deep sleep, which happens mostly in the first half of the night, is when tissue repair, immune system strengthening, and physical recovery take place. Later in the night comes REM sleep, a stage marked by spikes in brain activity and rapid eye movements. During REM, your brain processes emotions, forms memories, and supports learning by reinforcing neural connections, especially in the hippocampus.
+<br>
+> Deep sleep, which happens mostly in the first half of the night, is when tissue repair, immune system strengthening, and physical recovery take place. Later in the night comes REM sleep, a stage marked by spikes in brain activity and rapid eye movements. During REM, your brain processes emotions, forms memories, and supports learning by reinforcing neural connections, especially in the hippocampus.
 
 When your sleep is interrupted or poor quality, these processes do not work properly. This can lead to toxin buildup, hormonal imbalances, memory issues, and mood problems and with  time, raises the risk for  health problems like heart disease, diabetes, and depression.
 
