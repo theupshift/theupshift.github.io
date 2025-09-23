@@ -1,4 +1,3 @@
----
 layout: default
 title: 
 ---
@@ -60,6 +59,38 @@ title:
     font-weight: normal;
   }
 
+  /* Play Button Style */
+  .play-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #ff0000; /* Red play icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .play-button.playing {
+    background-color: #ff0000; /* Red circle when playing */
+    color: #fff; /* White icon when playing */
+  }
+
+  .play-button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+
+  .play-button i {
+    font-size: 20px;
+  }
+
   /* Tablet */
   @media (max-width: 768px) {
     .quote-text {
@@ -73,6 +104,11 @@ title:
 
     .artist-overlay {
       font-size: 0.9rem;
+      bottom: 15px;
+      left: 15px;
+    }
+
+    .play-button {
       bottom: 15px;
       left: 15px;
     }
@@ -94,6 +130,11 @@ title:
       bottom: 10px;
       left: 10px;
     }
+
+    .play-button {
+      bottom: 10px;
+      left: 10px;
+    }
   }
 </style>
 
@@ -110,4 +151,35 @@ title:
   <div class="artist-overlay">
     Featured artist: <a href="https://www.instagram.com/januszjurek.info/" target="_blank" rel="noopener noreferrer">Janusz Jurek</a>
   </div>
+
+  <!-- Play Button -->
+  <div class="play-button" id="playButton">
+    <i class="fas fa-play"></i>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="backgroundAudio" preload="auto">
+    <source src="your-audio-file.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 </div>
+
+<!-- Include Font Awesome for Play Button Icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<script>
+  const playButton = document.getElementById("playButton");
+  const audio = document.getElementById("backgroundAudio");
+
+  playButton.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      playButton.innerHTML = '<i class="fas fa-pause"></i>'; // Change to pause icon
+      playButton.classList.add('playing'); // Add 'playing' class for red circle
+    } else {
+      audio.pause();
+      playButton.innerHTML = '<i class="fas fa-play"></i>'; // Change to play icon
+      playButton.classList.remove('playing'); // Remove 'playing' class for default circle
+    }
+  });
+</script>
