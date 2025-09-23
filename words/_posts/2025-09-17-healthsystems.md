@@ -214,7 +214,7 @@ function maybeTriggerEvent(){
 function nextRound(){
   if(round < maxRounds){
     round++; 
-    resources.budget += 25;
+    resources.budget += 75;
     maybeTriggerEvent(); // event alert happens here
     drawPatients(); 
     updateUI();
