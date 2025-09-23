@@ -32,9 +32,10 @@ Every night, we go through several sleep stages, including deep sleep and REM (R
 
 Waking up during the wrong part of this cycle especially during deep sleep can leave you feeling groggy or dizzy. Scientists say it feels similar to having a little buzz from alcohol, even though you have not had a drop. But when you wake up naturally, your body times it to happen during a lighter sleep phase so you feel refreshed and ready for the day.
 
-Why does this happen? Your body moves differently depending on the sleep stage. In deep sleep and REM, you barely move at all. But right before and after REM, during those "almost awake" moments, your body is more active. 
+Why does this happen?  Its because the body moves differently depending on the sleep stage. In deep sleep and REM, you barely move at all. But right before and after REM, during those "almost awake" moments, your body is more active. 
 
-Sleep is not just about resting. It is an active process that is vital for your health. While you sleep, your body repairs damaged cells and balances hormones. Your brain also activates the glymphatic system, a sort of cleaning crew that flushes out toxins mostly during deep sleep.[^2]*
+Sleep is also an active period during which the body repairs damaged cells and balances hormones. The brain activates the glymphatic system, a sort of cleaning crew that flushes out toxins mostly during deep sleep.[^2]*
+<br>
 <br>
 ![](https://onlinelibrary.wiley.com/cms/asset/b1cff2fb-ff5a-464f-9e89-6e974f53c992/brx270011-toc-0001-m.jpg?trick=1750029566391)
 <br>
