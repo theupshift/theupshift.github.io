@@ -1,5 +1,6 @@
+---
 layout: default
-title: 
+title:
 ---
 
 <style>
@@ -29,12 +30,10 @@ title:
     padding: 15px 20px;
     margin: 0;
     font-family: Georgia, serif;
-    text-align: center; /* Center the text */
+    text-align: center;
     letter-spacing: 0.2px;
-
-    background-color: rgba(255, 255, 255, 0.6); /* lighter, more transparent */
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 4px;
-
     text-shadow: none;
     -webkit-font-smoothing: antialiased;
   }
@@ -47,9 +46,7 @@ title:
     font-style: italic;
     font-size: 1rem;
     color: #000000;
-    padding: 0;
     margin: 0;
-
     text-shadow: 0 1px 3px rgba(255, 255, 255, 0.85);
   }
 
@@ -59,17 +56,16 @@ title:
     font-weight: normal;
   }
 
-  /* Play Button Style */
   .play-button {
     position: absolute;
     bottom: 20px;
-    left: 20px;  /* Move the button to the left */
+    right: 20px; /* Now on the right side */
     background-color: #fff;
     border-radius: 50%;
-    padding: 15px;  /* Smaller padding */
+    padding: 15px;
     cursor: pointer;
-    font-size: 20px;  /* Smaller font size */
-    color: #ff0000;  /* Red play icon */
+    font-size: 20px;
+    color: #ff0000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,17 +74,17 @@ title:
   }
 
   .play-button.playing {
-    background-color: #ff0000; /* Red circle when playing */
+    background-color: #ff0000; /* Red when playing */
     color: #fff; /* White icon when playing */
   }
 
   .play-button:hover {
     background-color: rgba(255, 255, 255, 0.8);
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1);
   }
 
   .play-button i {
-    font-size: 18px;  /* Smaller icon size */
+    font-size: 18px;
   }
 
   /* Tablet */
@@ -99,7 +95,6 @@ title:
       line-height: 16px;
       top: 15px;
       right: 15px;
-      text-align: center;
     }
 
     .artist-overlay {
@@ -110,7 +105,7 @@ title:
 
     .play-button {
       bottom: 15px;
-      left: 15px;
+      right: 15px;
     }
   }
 
@@ -122,7 +117,6 @@ title:
       line-height: 16px;
       top: 10px;
       right: 10px;
-      text-align: center;
     }
 
     .artist-overlay {
@@ -133,7 +127,7 @@ title:
 
     .play-button {
       bottom: 10px;
-      left: 10px;
+      right: 10px;
     }
   }
 </style>
@@ -144,29 +138,33 @@ title:
     alt="Artwork by Janusz Jurek" 
     class="background-image" 
   />
+
   <p class="quote-text">
     The love that you withhold is the pain that you carry.<br><br>
     – Ralph Waldo Emerson
   </p>
+
   <div class="artist-overlay">
-    Featured artist: <a href="https://www.instagram.com/januszjurek.info/" target="_blank" rel="noopener noreferrer">Janusz Jurek</a>
+    Featured artist: 
+    <a href="https://www.instagram.com/januszjurek.info/" target="_blank" rel="noopener noreferrer">
+      Janusz Jurek
+    </a>
   </div>
 
-  <!-- Play Button -->
+  <!-- 🔊 Play Button -->
   <div class="play-button" id="playButton">
     <i class="fas fa-play"></i>
   </div>
 
-  <!-- Audio Element -->
+  <!-- 🎵 Audio Source -->
   <audio id="backgroundAudio" preload="auto">
-    <source src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/assets/audio/www.villadalgarve.co.za%20-%20Bon%20Iver%20-%208%20(circle)%20-%20Official%20Video%20(320%20KBps).mp3
-" type="audio/mp3">
+    <source src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/assets/audio/www.villadalgarve.co.za%20-%20Bon%20Iver%20-%208%20(circle)%20-%20Official%20Video%20(320%20KBps).mp3" type="audio/mp3">
     Your browser does not support the audio element.
   </audio>
 </div>
 
-<!-- Include Font Awesome for Play Button Icon -->
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <script>
   const playButton = document.getElementById("playButton");
@@ -175,12 +173,12 @@ title:
   playButton.addEventListener("click", () => {
     if (audio.paused) {
       audio.play();
-      playButton.innerHTML = '<i class="fas fa-pause"></i>'; // Change to pause icon
-      playButton.classList.add('playing'); // Add 'playing' class for red circle
+      playButton.innerHTML = '<i class="fas fa-pause"></i>';
+      playButton.classList.add("playing");
     } else {
       audio.pause();
-      playButton.innerHTML = '<i class="fas fa-play"></i>'; // Change to play icon
-      playButton.classList.remove('playing'); // Remove 'playing' class for default circle
+      playButton.innerHTML = '<i class="fas fa-play"></i>';
+      playButton.classList.remove("playing");
     }
   });
 </script>
