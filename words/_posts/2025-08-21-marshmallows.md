@@ -17,6 +17,6 @@ These kids didn’t just sit there and tough it out though. In fact, most kids w
 
 Walter Mischel, the psychologist behind the study, later said:
 
-> “The single most important correlate of delay time with youngsters was attention deployment, where the children focused their attention during the delay period: Those who attended to the rewards, thus activating the hot system more, tended to delay for a shorter time than those who focused their attention elsewhere, thus activating the cool system by distracting themselves from the hot spots.”
+> “The single most important correlate of delay time with youngsters was attention deployment, where the children focused their attention during the delay period: Those who attended to the rewards, thus activating the hot system more, tended to delay for a shorter time than those who focused their attention elsewhere...”
 
 This subtle insight is key for delaying gratification. Whether it’s saving money, a habit, or a long-term goal; constantly fixating on the reward makes then process harder. Instead, focusing on something else (attention redeployment) creates mental distance from the reward, making it easier to wait and stay committed.
