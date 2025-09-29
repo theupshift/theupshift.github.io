@@ -1,3 +1,4 @@
+---
 layout: post
 date: 2025-09-29
 title: Playgrounds Won’t Fix This
@@ -20,7 +21,7 @@ A new UNICEF report, *Feeding Profit: How food environments are failing children
 <br>
 <div style="text-align:center; margin: 1em 0;">
   <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obj1.jpg" 
-       style="max-width:100%; height:auto; border-radius: 12px; border: 2px solid #007BFF;" 
+       style="max-width:100%; height:auto; border-radius: 12px; border: 2px solid #003366;" 
        alt="Food environment graphic">
 </div>  
 
@@ -30,7 +31,7 @@ The report is timely. In Eastern and Southern Africa, obesity among children age
 <br>
 <div style="text-align:center; margin: 1em 0;">
   <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/trends%201.jpg" 
-       style="max-width:100%; height:auto; border-radius: 12px; border: 2px solid #007BFF;" 
+       style="max-width:100%; height:auto; border-radius: 12px; border: 2px solid #003366;" 
        alt="Trends in child obesity and underweight">
 </div>  
 
