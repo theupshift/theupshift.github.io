@@ -19,14 +19,14 @@ A new UNICEF report, *Feeding Profit: How food environments are failing children
 > These misleading narratives misdirect attention and resources towards individual lifestyle factors – such as individual nutrition choices or physical activity – while obscuring the far more powerful force: food environments. The worldwide deterioration in children’s and adolescents’ diets, along with the rise in overweight and obesity, is driven primarily by profound changes in the food environments in which children, adolescents and families eat, live, learn and play."  
 
 <br>
-<div style="text-align:center; margin: 1em 0;">
+<div style="text-align:center; margin: 1em 0.5;">
   <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obj1.jpg" style="max-width:100%; height:auto; border-radius: 12px;" alt="Food environment graphic">
 </div>  
 
 <br>
 The report is timely. In Eastern and Southern Africa, obesity among children aged 5 to 9 is already surpassing underweight. Even local studies in Tanzania highlight this shift. In Dar es Salaam, nearly a quarter of preschoolers have elevated blood pressure, especially those overweight.<sup><a href="#ref6">6</a></sup> In Kilimanjaro, 15 percent of primary school children are overweight or obese, especially in urban and private schools.<sup><a href="#ref7">7</a></sup> These patterns are not failures of kid willpower but predictable outcomes of environments that shape what children eat. Much work remains to make this right as parents, public health practitioners, and leaders.  
 <br>
-<div style="text-align:center; margin: 1em 0;">
+<div style="text-align:center; margin: 1em 0.5;">
   <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/trends%201.jpg" style="max-width:100%; height:auto; border-radius: 12px;" alt="Trends in child obesity and underweight">
 </div>  
 
