@@ -18,6 +18,7 @@ A new UNICEF report, *Feeding Profit: How food environments are failing children
 
 > These misleading narratives misdirect attention and resources towards individual lifestyle factors – such as individual nutrition choices or physical activity – while obscuring the far more powerful force: food environments. The worldwide deterioration in children’s and adolescents’ diets, along with the rise in overweight and obesity, is driven primarily by profound changes in the food environments in which children, adolescents and families eat, live, learn and play."  
 
+<br>
 <div style="text-align:center; margin: 1em 0;">
   <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obj1.jpg" style="max-width:100%; height:auto; border-radius: 12px;" alt="Food environment graphic">
 </div>  
