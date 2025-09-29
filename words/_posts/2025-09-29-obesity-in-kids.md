@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2025-09-30
+date: 2025-09-29
 title: Playgrounds Won’t Fix This
 categories: [health, society]
 tags: [food, environment, children, obesity]
