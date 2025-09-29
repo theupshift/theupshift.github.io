@@ -28,7 +28,6 @@ The report is timely. In Eastern and Southern Africa, obesity among children age
 
 ---
 
-### References
 1. Van Tulleken, Chris. *Ultra-Processed People*. Cornerstone Press, London, 2023, pp. 122–150.  
 2. Reilly, John J., et al. “Physical Activity to Prevent Obesity in Young Children: Cluster randomised controlled trial.” *British Medical Journal*, vol. 333, no. 7577, 6 October 2006, art. 1041.  
 3. Luke, Amy, and Richard S. Cooper. “Physical Activity Does Not Influence Obesity Risk: Time to clarify the public health message.” *International Journal of Epidemiology*, vol. 42, no. 6, December 2013, pp. 1831–1836.  
