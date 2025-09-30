@@ -36,7 +36,7 @@ The report is timely. In Eastern and Southern Africa, obesity among children age
        style="max-width:100%; height:auto; border-radius: 12px; border: 1px solid #003366;" 
        alt="Trends in child obesity and underweight">
 </div>  
-
+<!-- more -->
 ---
 
 1. Van Tulleken, Chris. *Ultra-Processed People*. Cornerstone Press, London, 2023, pp. 122–150.  
