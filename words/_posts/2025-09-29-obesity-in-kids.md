@@ -5,9 +5,11 @@ title: Playgrounds Won’t Fix This
 categories: [health, society]
 tags: [food, environment, children, obesity]
 description: "Children don’t fail at food. The systems around them do. Obesity and poor diets are not about willpower or bad choices—they are the predictable outcomes of environments designed for profit, convenience, and habit."
-image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg           # main image for the post
-og_image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg        # image for WhatsApp/Open Graph
-twitter_image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg   # image for 
+featured_image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg
+image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg
+og_image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg
+twitter_image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg
+twitter_card: summary
 ---
 
 A new UNICEF report, **Feeding Profit: How food environments are failing children (September 2025)**, lays out critical truths:  
