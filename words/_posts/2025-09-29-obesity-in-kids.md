@@ -9,7 +9,6 @@ featured_image: https://raw.githubusercontent.com/theupshift/theupshift.github.i
 image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg
 og_image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg
 twitter_image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg
-twitter_card: summary
 ---
 
 A new UNICEF report, **Feeding Profit: How food environments are failing children (September 2025)**, lays out critical truths:  
