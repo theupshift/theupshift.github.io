@@ -31,6 +31,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="{{ site.description }}">
 	<meta name="author" content="">
+
+	<!-- Open Graph / WhatsApp -->
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:image" content="{{ page.og_image | default: page.image }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:image" content="{{ page.twitter_image | default: page.image }}">
+	
 	{% feed_meta %}
 	<link href="https://micro.blog/8thmagic" rel="me">
 	<link rel="stylesheet" href="/assets/css/fonts.css">
@@ -114,6 +128,8 @@
             background-color: #9e3f3f; /* Darker shade on hover */
         }
     </style>
+
+
 	
 </head>
 <body{% if page.id_attribute %} id="{{ page.id_attribute }}"{% endif %}>
