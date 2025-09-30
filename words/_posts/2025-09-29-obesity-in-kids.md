@@ -10,7 +10,22 @@ image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/
 og_image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg
 twitter_image: https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg
 twitter_card: summary
+
+social_meta: |
+  <!-- Open Graph / WhatsApp -->
+  <meta property="og:title" content="Playgrounds Won’t Fix This">
+  <meta property="og:description" content="Children don’t fail at food. The systems around them do. Obesity and poor diets are not about willpower or bad choices—they are the predictable outcomes of environments designed for profit, convenience, and habit.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Playgrounds Won’t Fix This">
+  <meta name="twitter:description" content="Children don’t fail at food. The systems around them do. Obesity and poor diets are not about willpower or bad choices—they are the predictable outcomes of environments designed for profit, convenience, and habit.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obby.jpg">
 ---
+
 
 A new UNICEF report, **Feeding Profit: How food environments are failing children (September 2025)**, lays out critical truths:  
 
