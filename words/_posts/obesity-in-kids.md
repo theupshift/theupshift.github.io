@@ -28,8 +28,7 @@ A new UNICEF report, *Feeding Profit: How food environments are failing children
 <br>
 The report is timely. In Eastern and Southern Africa, obesity among children aged 5 to 9 is already surpassing underweight. Even local studies in Tanzania highlight this shift. In Dar es Salaam, nearly a quarter of preschoolers have elevated blood pressure, especially those overweight.<sup style="color:red;"><a href="#ref6">6</a></sup> In Kilimanjaro, 15 percent of primary school children are overweight or obese, especially in urban and private schools.<sup style="color:red;"><a href="#ref7">7</a></sup> 
 
-<br>
-These patterns are not failures of kid willpower but predictable outcomes of environments that shape what children eat. Much work remains to make this right as parents, public health practitioners, and leaders.  
+<br> These patterns are not failures of kid willpower but predictable outcomes of environments that shape what children eat. Much work remains to make this right as parents, public health practitioners, and leaders.  
 
 
 <div style="text-align:center; margin: 1em 0;">
