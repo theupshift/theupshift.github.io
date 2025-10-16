@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Heartbreak and Revolutionary Consciousness"
+title: "Heartbreak for a Change"
 date: 2025-10-16
 categories: [inspiration, growth]
 tags: [revolution, grief, transformation]
