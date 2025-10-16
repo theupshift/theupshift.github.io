@@ -11,14 +11,55 @@ og_image: https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.png
 twitter_image: https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.png
 ---
 
-<div style="display: flex; align-items: center; margin-bottom: 20px;">
-  <img src="https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.png" alt="Gargi Bhattacharyya" style="max-width: 150px; margin-right: 20px;">
+<style>
+  .quote-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: nowrap;
+  }
+
+  .quote-container img {
+    max-width: 150px;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  .quote-container blockquote {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  .quote-container p {
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  @media (max-width: 600px) {
+    .quote-container {
+      flex-wrap: wrap;
+    }
+
+    .quote-container img {
+      max-width: 100px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .quote-container blockquote {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<div class="quote-container">
+  <img src="https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.png" alt="Gargi Bhattacharyya">
   <div>
-    <br>
     <blockquote>
       "Heartbreak is the heart of all revolutionary consciousness. How can it not be? Who can imagine another world unless they have already been broken apart by the world we are in?"
     </blockquote>
-      <p style="text-align: center; margin-top: 5px;">— Gargi Bhattacharyya</p>
+    <p>— Gargi Bhattacharyya</p>
   </div>
 </div>
 
