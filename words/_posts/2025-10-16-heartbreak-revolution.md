@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "We, the Heartbroken; & Change"
+title: "We, the Heartbroken and Change"
 date: 2025-10-16
 categories: [inspiration, growth]
 tags: [revolution, grief, transformation]
@@ -65,4 +65,4 @@ twitter_image: https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.
   </div>
 </div>
 
-Gargi Bhattacharyya sees our grief for a broken world as the tool we use to weave a new one. The heartbreak we feel in response to a broken world often becomes the very tool for constructing a new, more just and compassionate reality. It's only when we experience the pain of injustice that we are moved to challenge the status quo and imagine something radically different.
+Bhattacharyya sees our grief for a broken world as the tool we use to weave a new one. The heartbreak we feel in response to a broken world often becomes the very tool for constructing a new, more just and compassionate reality. It's only when we experience the pain of injustice that we are moved to challenge the status quo and imagine something radically different.
