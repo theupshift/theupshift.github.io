@@ -33,7 +33,7 @@ twitter_image: https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.
   }
 
   .quote-container p {
-    text-align: right;
+    text-align: center; /* centered author */
     margin-top: 5px;
     font-style: italic;
     font-size: 0.9rem;
