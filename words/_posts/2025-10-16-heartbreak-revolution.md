@@ -16,12 +16,11 @@ twitter_image: https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    flex-wrap: nowrap;
+    gap: 15px; /* smaller gap */
   }
 
   .quote-container img {
     max-width: 150px;
-    margin-right: 20px;
     flex-shrink: 0;
   }
 
@@ -29,26 +28,28 @@ twitter_image: https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.
     margin: 0;
     font-size: 1.1rem;
     line-height: 1.4;
+    flex: 1 1 auto; /* allow quote to shrink/grow */
+    word-break: break-word; /* prevent overflow */
   }
 
   .quote-container p {
-    text-align: center;
+    text-align: right;
     margin-top: 5px;
+    font-style: italic;
+    font-size: 0.9rem;
   }
 
   @media (max-width: 600px) {
-    .quote-container {
-      flex-wrap: wrap;
-    }
-
     .quote-container img {
-      max-width: 100px;
-      margin-right: 10px;
-      margin-bottom: 10px;
+      max-width: 90px; /* smaller image */
     }
 
     .quote-container blockquote {
-      font-size: 0.9rem;
+      font-size: 0.85rem; /* smaller text */
+    }
+
+    .quote-container {
+      gap: 10px; /* less space */
     }
   }
 </style>
