@@ -17,7 +17,7 @@ twitter_image: https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.
     <blockquote>
       "Heartbreak is the heart of all revolutionary consciousness. How can it not be? Who can imagine another world unless they have already been broken apart by the world we are in?"
     </blockquote>
-    <p>— Gargi Bhattacharyya</p>
+      <p style="text-align: right; margin-top: 5px;">— Gargi Bhattacharyya</p>
     <p>Gargi Bhattacharyya sees our grief for a broken world as the tool we use to weave a new one.</p>
   </div>
 </div>
