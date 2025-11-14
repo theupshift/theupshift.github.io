@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Question Worth Asking"
-date: 2025-09-01
+date: 2025-11-14
 categories: [reflection, personal-growth]
 tags: [self-inquiry, accountability, patterns, change]
 description: "A short reflection on the uncomfortable but liberating question of how we may be participating in the very conditions we say we don’t want."
