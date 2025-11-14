@@ -4,7 +4,7 @@ title: "A Question Worth Asking"
 date: 2025-11-14
 categories: [reflection, personal-growth]
 tags: [self-inquiry, accountability, patterns, change]
-description: "A short reflection on the uncomfortable but liberating question of how we may be participating in the very conditions we say we don’t want."
+description: "Here’s a question that’s uncomfortable in all the right ways: How might I be complicit in creating the conditions I say I don’t want?” Most people avoid it. Which is exactly why it works.."
 featured_image: https://img.freepik.com/free-photo/ancient-greek-deity-philosopher-statue_23-2151008442.jpg
 image: https://img.freepik.com/free-photo/ancient-greek-deity-philosopher-statue_23-2151008442.jpg
 og_image: https://img.freepik.com/free-photo/ancient-greek-deity-philosopher-statue_23-2151008442.jpg
