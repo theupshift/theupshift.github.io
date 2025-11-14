@@ -20,7 +20,7 @@ Here’s a question that’s uncomfortable in all the right ways:
 
 Most people avoid it. Which is exactly why it works.
 
-We all have patterns we complain about—stress, messy relationships, stalled projects, the same frustrations replaying in a loop. But patterns don’t survive without our participation.
+We all have patterns we complain about; stress, messy relationships, stalled projects, the same frustrations replaying in a loop. But patterns don’t survive without our participation.
 
 Sometimes we fuel them by staying quiet.  
 Sometimes by procrastinating.  
