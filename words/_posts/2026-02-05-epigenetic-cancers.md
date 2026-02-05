@@ -10,6 +10,9 @@ image: https://theupshift.github.io/images/epigenetics.jpg
 og_image: https://theupshift.github.io/images/epigenetics.jpg
 twitter_image: https://theupshift.github.io/images/epigenetics.jpg
 ---
-TIL: Not all cancers come from DNA mutations. 
+**TIL: Not all cancers come from DNA mutations.** 
+
 Some arise when the epigenome goes rogue—methylation, histones & enhancers misfire, silencing differentiation genes or activating oncogenes. 
-Sometimes it’s not the DNA that’s broken — it’s the instructions for reading it.
+Sometimes it’s not the DNA that’s broken — *it’s the instructions for reading it.*
+
+-> Watch: [Epigenetics in Cancer Genesis — Dr. Manel Esteller (ECC 2015)](https://ecancer.org/en/video/4111-epigenetics-in-cancer-genesis)
