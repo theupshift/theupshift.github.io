@@ -1,6 +1,5 @@
 ---
 layout: post
-title: "happiness"
 date: 2026-07-16 09:24:08 +0300
 categories: [psychiatry]
 tags: [happiness, gratitude]
