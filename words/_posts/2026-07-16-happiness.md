@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "happiness"
-date: 2026-08-16 09:24:08 +0300
+date: 2026-07-16 09:24:08 +0300
 categories: [psychiatry]
 tags: [happiness, gratitude]
 description: "Don't overlook the value of not having what you don't want..."
