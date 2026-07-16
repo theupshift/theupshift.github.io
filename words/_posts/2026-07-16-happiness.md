@@ -13,4 +13,19 @@ twitter_image: https://www.wildernessdestinations.com/media/wufn5jdc/tip0501.jpg
 Don't overlook the value of not having what you don't want.<br>
 And we often do. Einhorn says it all.
 
- <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://youtu.be/W97UobO0UWs?si=XxqBO6BI8AUS2YQS' frameborder='0' allowfullscreen></iframe></div><br>
+<a href="https://www.youtube.com/watch?v=W97UobO0UWs"
+   target="_blank"
+   rel="noopener noreferrer">
+  <img
+    src="https://img.youtube.com/vi/W97UobO0UWs/hqdefault.jpg"
+    alt="Watch Hillel Einhorn on happiness on YouTube"
+    style="width:100%; max-width:800px; height:auto;">
+</a>
+
+<p>
+  <a href="https://www.youtube.com/watch?v=W97UobO0UWs"
+     target="_blank"
+     rel="noopener noreferrer">
+    Watch the video on YouTube
+  </a>
+</p>
