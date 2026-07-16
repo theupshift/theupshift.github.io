@@ -1,5 +1,14 @@
 ---
+layout: post
+title: "happiness"
 date: 2026-08-16 09:24:08 +0300
+categories: [psychiatry]
+tags: [happiness, gratitude]
+description: "Don't overlook the value of not having what you don't want..."
+featured_image: https://www.wildernessdestinations.com/media/wufn5jdc/tip0501.jpg
+image: https://www.wildernessdestinations.com/media/wufn5jdc/tip0501.jpg
+og_image: https://www.wildernessdestinations.com/media/wufn5jdc/tip0501.jpg
+twitter_image: https://www.wildernessdestinations.com/media/wufn5jdc/tip0501.jpg
 ---
 
 Don't overlook the value of not having what you don't want.<br>
