@@ -21,11 +21,3 @@ And we often do. Einhorn says it all.
     alt="Watch Hillel Einhorn on happiness on YouTube"
     style="width:100%; max-width:800px; height:auto;">
 </a>
-
-<p>
-  <a href="https://www.youtube.com/watch?v=W97UobO0UWs"
-     target="_blank"
-     rel="noopener noreferrer">
-    Watch the video on YouTube
-  </a>
-</p>
