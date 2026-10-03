@@ -4,9 +4,24 @@ id_attribute: about
 ---
 
 <section class="section-intro">
-<header>
-<h1>About</h1>
-</header>
+<header><h1>About</h1></header>
 
-<p>The Upshift is a space for writing, research, and ideas.</p>
+<p>This is Upshift, a curation blog. On it, are ramblings on tech, society, healthcare, and other randoms. With help from a few friends, this site is kept alive.</p>
+
+<p>Also, currently I attend patients as a GP. My interests include care & interventions for cardio-metabolic diseases, within the context of climate change, #medtech, health systems, and a bit of arts.</p>
+
+<p><img src="https://raw.githubusercontent.com/upmusings/upshift/master/images/about-work.png" alt="work" width="100%"></p>
+
+<p><strong>&lt; Upshift/&gt;</strong>. <em>verb</em><br>
+<small>from middle english: \upshiften; \upschyften; (“to raise”); equivalent to up + shift. Also ~ to shift to a higher level, such as of frequency, growth rate, economic level, etc.</small></p>
+
+<p>Here are some of the recent things I took part in that haven't broken yet:</p>
+
+<ul>
+<li>MUSSD: A debate session aimed to raise awareness on AI among med students, now turned a healthtech society: <a href="https://www.instagram.com/muhas_sohti">MUHAS-SOHTI</a></li>
+<li><a href="https://nileagi.com/">NileAGI</a>: Data, AI, ML — et cetera</li>
+<li><a href="https://www.instagram.com/stylistra.co/">Stylistra.Co</a>: Simple, cheap thrift. — My kinda joint!</li>
+</ul>
+
+<p>Got ideas? Shoot me an <a href="mailto:silasgamba@gmail.com">email</a> or via <a href="https://twitter.com/silas_kg">Twitter</a>.</p>
 </section>
