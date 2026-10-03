@@ -15,8 +15,8 @@
 }
 
 * , * :before, * :after {
-    box-sizing: border-box;
-    font-kerning: normal;
+    box-sizing: border-box; /* Padding and border will be inside of the box */
+    font-kerning: normal; /* Font kerning information stored in the font must be applied */
 }
 
 ::selection {
@@ -25,7 +25,7 @@
 }
 
 html {
-	height: 100%;
+	height: 100%; /* For a sticky footer */
 	font-size: 1.1em;
 	background-color: rgb(var(--color-background));
 }
@@ -37,20 +37,18 @@ html {
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	min-height: 100vh;
+	display: flex; /* For a sticky footer */
+	flex-direction: column; /* For a sticky footer */
+	height: 100%; /* For a sticky footer */
 	align-items: center;
 	margin: 0 1.5rem;
 	font-family: var(--font-serif);
 	line-height: 1.4;
-	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased; /* Make the text look a little less chunky */
 	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
-	font-feature-settings: 'onum' 1;
+	text-rendering: optimizeLegibility; /* Enables kerning and optional ligatures */
+	font-feature-settings: 'onum' 1; /* Use oldstyle figures */
 	color: rgb(var(--color-text));
-	background-color: rgb(var(--color-background));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,16 +63,19 @@ a {
 	background-position: 0 91%;
 	background-repeat: repeat-x;
 	background-size: 1px 1px;
-	text-shadow: -1px -1px rgb(var(--color-background)), -1px 1px rgb(var(--color-background)), 1px -1px rgb(var(--color-background)), 1px 1px rgb(var(--color-background));
+	text-shadow: -1px -1px rgb(var(--color-background)), -1px 1px rgb(var(--color-background)), 1px -1px rgb(var(--color-background)), 1px 1px rgb(var(--color-background)); /* Skip descenders when underlining */
 	color: inherit;
 }
 
-a:hover {
+	a:hover {
 	color: rgb(var(--color-accent));
 	background-image: linear-gradient(to bottom, rgba(var(--color-accent), .3) 50%, rgba(var(--color-accent), .3) 50%);
 }
 
-/* Navigation */
+
+/* Navigation
+   ========== */
+   
 nav {
 	padding: 100px 0 48px 0;
 	font-size: 15.5px;
@@ -98,9 +99,12 @@ nav .current {
 	font-weight: bold;
 }
 
-/* Content */
+
+/* Content
+   ======= */
+
 main {
-	flex: 1 0 auto;
+	flex: 1 0 auto; /* For a sticky footer */
 	padding: 40px 0 48px 0;
 	-webkit-hyphens: auto;
 	-moz-hyphens: auto;
@@ -115,7 +119,6 @@ h1 {
 h2, h3 {
 	font-size: 1.2em;
 }
-
 h4, h5, h6 {
 	font-size: 1.0em;
 }
@@ -130,7 +133,7 @@ hr {
 }
 
 hr:after {
-	content: "⁂";
+	content: "⁂"; /* Asterism */
 }
 
 blockquote {
@@ -171,7 +174,10 @@ time span {
 	color: rgb(var(--color-accent));
 }
 
-/* Words */
+
+/* Words
+   ======= */
+   
 #words h1 {
 	margin: 0;
 	font-size: 1.35em;
@@ -190,10 +196,12 @@ time span {
 	border: none;
 }
 
-/* Footer */
+
+/* Footer
+   ====== */
 footer {
 	padding: 48px 0;
-	flex-shrink: 0;
+	flex-shrink: 0; /* For a sticky footer */
 	font-size: 15px;
 	text-align: center;
 	border-top: 1px solid rgba(var(--color-text), .1);
@@ -204,141 +212,13 @@ footer a, footer a:hover {
 }
 
 #search-input {
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 20px;
-	font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
 }
 
 #results-container li {
-	margin: 10px 0;
-	font-size: 16px;
-}
-
-/* Consistency and responsive refinements; original palette, type, and spacing retained. */
-article > header {
-	text-align: center;
-}
-
-article > header h1 {
-	text-align: center;
-	margin-inline: auto;
-}
-
-article > header time {
-	display: block;
-	margin: 0.5rem auto 0;
-	text-align: center;
-}
-
-nav.constrained {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 1rem;
-	padding: 15px 1px;
-	width: 100%;
-}
-
-.nav-left, .nav-right {
-	display: flex;
-	align-items: center;
-}
-
-.nav-left {
-	justify-content: flex-start;
-	margin-right: auto;
-}
-
-.nav-center {
-	display: flex;
-	flex-grow: 1;
-	justify-content: center;
-	align-items: baseline;
-	text-align: center;
-}
-
-.nav-right {
-	justify-content: flex-end;
-	margin-left: auto;
-}
-
-.nav-left a {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 24px;
-	height: 24px;
-	border-radius: 50%;
-	padding: 4px;
-	color: #fff;
-	background-color: rgb(var(--color-accent));
-	background-image: none;
-	text-shadow: none;
-	font-size: 12px;
-	line-height: 1;
-}
-
-.nav-left a:hover {
-	color: #fff;
-	background-color: #9e3f3f;
-}
-
-.subscribe-btn {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 24px;
-	padding: 4px 8px;
-	border: 0;
-	border-radius: 5px;
-	color: #fff;
-	background: rgb(var(--color-accent));
-	font-family: inherit;
-	font-size: 12px;
-	line-height: 1.2;
-	text-shadow: none;
-}
-
-.subscribe-btn:hover {
-	color: #fff;
-	background: #9e3f3f;
-}
-
-footer.constrained {
-	white-space: normal !important;
-}
-
-@media (max-width: 600px) {
-	body {
-		margin-inline: 1rem;
-	}
-
-	nav.constrained {
-		gap: 0.5rem;
-	}
-
-	.nav-center {
-		font-size: 0.92em;
-	}
-
-	.subscribe-btn {
-		padding-inline: 6px;
-		font-size: 11px;
-	}
-
-	main {
-		padding-top: 32px;
-		padding-bottom: 40px;
-	}
-
-	footer {
-		padding: 32px 0;
-	}
-}
-
-@media (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
+  margin: 10px 0;
+  font-size: 16px;
 }
