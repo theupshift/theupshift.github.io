@@ -42,14 +42,10 @@
         <a class="site-name" href="/">The Upshift</a>
     </div>
 
-    <div class="nav-tools">
-        <a href="/search" aria-label="Search"><i class="fas fa-search"></i></a>
-        <a href="https://selcompay.me/61208375?description=Coffee%20for%20Silas" target="_blank" rel="noopener">Buy Me ☕</a>
-    </div>
-
     <div class="profile-nav" aria-label="Sections">
         <a href="/" class="{% if page.url == '/' %}current{% endif %}">Posts</a>
         <a href="/about/" class="{% if page.url == '/about/' %}current{% endif %}">About</a>
+        <a href="/search" class="{% if page.url == '/search' %}current{% endif %}" aria-label="Search"><i class="fas fa-search"></i></a>
     </div>
 </nav>
 
