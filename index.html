@@ -28,12 +28,23 @@ id_attribute: words
 
 		<time datetime="{{ post.date }}"><a href="{{ post.url }}">{{ post.date | date_to_string }} <span>∞</span></a></time>
 	</header>
-		{{ post.excerpt }}
+		<div class="post-excerpt" data-post-url="{{ post.url }}">
+			{{ post.excerpt }}
+		</div>
 		{% if post.content contains '<!-- more -->' %}
 		<a href="{{ post.url }}"></a>
 		{% endif %}
 </section>
 {% endfor %}
+<script>
+  document.querySelectorAll('.post-excerpt[data-post-url]').forEach(function (excerpt) {
+    var postUrl = excerpt.dataset.postUrl;
+    excerpt.querySelectorAll('sup a[href^="#fn"]').forEach(function (link) {
+      link.href = postUrl + link.getAttribute('href');
+    });
+  });
+</script>
+
 <!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
 <nav class="pagination" aria-label="Post navigation">
