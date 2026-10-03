@@ -47,9 +47,14 @@
         <a href="/about/" class="{% if page.url == '/about/' %}current{% endif %}">About</a>
         <button type="button" class="search-toggle" aria-expanded="false" aria-controls="site-search" aria-label="Search"><i class="fas fa-search"></i></button>
     </div>
+    <div id="site-search" class="site-search" hidden>
+    <input id="site-search-input" type="search" placeholder="Search posts…" autocomplete="off" aria-label="Search posts">
+    <div id="site-search-results" aria-live="polite"></div>
+</div>
+
 </nav>
 
-<div id="site-search" class="site-search" hidden>\n\t<input id="site-search-input" type="search" placeholder="Search posts…" autocomplete="off" aria-label="Search posts">\n\t<div id="site-search-results" aria-live="polite"></div>\n</div>\n\n<main class="constrained">
+<main class="constrained">
 	{{ content }}
 </main>
 
@@ -70,5 +75,78 @@
   </a>
 </footer>
 
-<script>\n(function () {\n  const toggle = document.querySelector(".search-toggle");\n  const search = document.getElementById("site-search");\n  const input = document.getElementById("site-search-input");\n  const results = document.getElementById("site-search-results");\n  if (!toggle || !search || !input || !results) return;\n\n  let posts = [];\n  let loaded = false;\n\n  function render(query) {\n    const q = query.trim().toLowerCase();\n    if (!q) { results.innerHTML = ""; return; }\n    const matches = posts.filter(function (post) {\n      return (post.title + " " + post.content).toLowerCase().indexOf(q) !== -1;\n    }).slice(0, 10);\n    results.innerHTML = matches.length\n      ? matches.map(function (post) { return '<a class="search-result" href="' + post.url + '"><span class="search-result-title">' + post.title + '</span><time>' + post.date + '</time></a>'; }).join("")\n      : '<p class="search-empty">No posts found.</p>';\n  }\n\n  toggle.addEventListener("click", function () {\n    const open = !search.hidden;\n    search.hidden = open;\n    toggle.setAttribute("aria-expanded", String(!open));\n    if (!open) {\n      input.focus();\n      if (!loaded) {\n        fetch("/search.json").then(function (r) { return r.json(); }).then(function (data) { posts = data; loaded = true; render(input.value); });\n      }\n    } else {\n      input.value = ""; results.innerHTML = "";\n    }\n  });\n\n  input.addEventListener("input", function () { render(input.value); });\n  document.addEventListener("keydown", function (event) {\n    if (event.key === "Escape" && !search.hidden) {\n      search.hidden = true; toggle.setAttribute("aria-expanded", "false"); toggle.focus();\n    }\n  });\n}());\n</script>\n\n</body>
+<script>
+(function () {
+  const toggle = document.querySelector(".search-toggle");
+  const search = document.getElementById("site-search");
+  const input = document.getElementById("site-search-input");
+  const results = document.getElementById("site-search-results");
+  if (!toggle || !search || !input || !results) return;
+
+  let posts = [];
+
+  function render(query) {
+    const q = query.trim().toLowerCase();
+    if (!q) {
+      results.innerHTML = "";
+      return;
+    }
+
+    const matches = posts.filter(function (post) {
+      return (post.title + " " + post.content).toLowerCase().indexOf(q) !== -1;
+    }).slice(0, 10);
+
+    results.innerHTML = matches.length
+      ? matches.map(function (post) {
+          return '<a class="search-result" href="' + post.url + '"><span class="search-result-title">' +
+            post.title + '</span><time>' + post.date + '</time></a>';
+        }).join("")
+      : '<p class="search-empty">No posts found.</p>';
+  }
+
+  toggle.addEventListener("click", function () {
+    const opening = search.hidden;
+    search.hidden = !opening;
+    toggle.setAttribute("aria-expanded", String(opening));
+
+    if (opening) {
+      input.focus();
+
+      if (!posts.length) {
+        fetch("/search.json")
+          .then(function (response) {
+            if (!response.ok) throw new Error("Search index unavailable");
+            return response.json();
+          })
+          .then(function (data) {
+            posts = data;
+            render(input.value);
+          })
+          .catch(function () {
+            results.innerHTML = '<p class="search-empty">Search is temporarily unavailable.</p>';
+          });
+      }
+    } else {
+      input.value = "";
+      results.innerHTML = "";
+    }
+  });
+
+  input.addEventListener("input", function () {
+    render(input.value);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !search.hidden) {
+      search.hidden = true;
+      input.value = "";
+      results.innerHTML = "";
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.focus();
+    }
+  });
+}());
+</script>
+
+</body>
 </html>
