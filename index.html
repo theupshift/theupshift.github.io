@@ -39,8 +39,12 @@ id_attribute: words
 <script>
   document.querySelectorAll('.post-excerpt[data-post-url]').forEach(function (excerpt) {
     var postUrl = excerpt.dataset.postUrl;
-    excerpt.querySelectorAll('sup a[href^="#fn"]').forEach(function (link) {
-      link.href = postUrl + link.getAttribute('href');
+    excerpt.querySelectorAll('a[href*="#ref"], a[href^="#fn"]').forEach(function (link) {
+      var href = link.getAttribute('href');
+      var hashIndex = href.indexOf('#');
+      if (hashIndex !== -1) {
+        link.href = postUrl + href.substring(hashIndex);
+      }
     });
   });
 </script>
