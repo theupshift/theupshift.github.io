@@ -3,89 +3,44 @@ title: Words
 id_attribute: words
 ---
 
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158309270-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-158309270-1');
-</script>
-
 {% for post in paginator.posts limit:5 %}
 <section>
 	<header>
-		
-		<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101245280);</script>
-<script async src="//static.getclicky.com/js"></script>
-
-		{% seo %}
-	
 		{% if post.title != '' %}
 		<h1><a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>{% if post.link %}<span class="external-link-arrow">→</span>{% endif %}</h1>
 		{% endif %}
-
 		<time datetime="{{ post.date }}"><a href="{{ post.url }}">{{ post.date | date_to_string }} <span>∞</span></a></time>
 	</header>
-		{{ post.excerpt }}
-		{% if post.content contains '<!-- more -->' %}
-		<a href="{{ post.url }}"></a>
-		{% endif %}
+	{{ post.excerpt }}
+	{% if post.content contains '<!-- more -->' %}
+	<a href="{{ post.url }}"></a>
+	{% endif %}
 </section>
 {% endfor %}
-<!-- Pagination links -->
+
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
-  <br>
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-btn">&laquo; Newer Posts</a>
-  {% endif %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-btn">Older Posts &raquo;</a>
-  {% endif %}
+	{% if paginator.previous_page %}
+	<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-btn">&laquo; Newer Posts</a>
+	{% endif %}
+	{% if paginator.next_page %}
+	<a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-btn">Older Posts &raquo;</a>
+	{% endif %}
 </div>
 {% endif %}
 
 <style>
-  .pagination {
-    text-align: center;
-  }
-
-  .pagination-btn {
-    padding: 6px 12px;  /* Smaller padding for smaller buttons */
-    font-size: 12px;     /* Smaller text size */
-    border: 1px solid #b35352; /* Thinner border with new color */
-    color: #b35352;      /* Text color same as the border */
-    text-decoration: none; /* Remove underline */
-    display: inline-block;
-    border-radius: 20px; /* More rounded corners */
-    background-color: transparent; /* Transparent background */
-    cursor: pointer;    /* Make it clickable */
-    transition: transform 0.2s ease, border-color 0.3s ease; /* Smooth transition effects */
-    margin: 0 10px; /* Add margin between buttons */
-  }
-
-  /* Hover effect (only border and size change) */
-  .pagination-btn:hover {
-    border-color: #8c2d2d; /* Border becomes darker */
-    transform: scale(1.1);  /* Slightly enlarge the button */
-  }
-
-  /* Active state */
-  .pagination-btn:active {
-    border-color: #5f1c1c; /* Border becomes even darker when clicked */
-    transform: scale(1);    /* Reset to original size when clicked */
-  }
-
-  /* Responsive design */
-  @media (max-width: 600px) {
-    .pagination-btn {
-      padding: 4px 10px;  /* Smaller padding on mobile */
-      font-size: 10px;    /* Adjust font size on mobile */
-      margin: 0 7px;      /* Adjust margin on mobile for smaller buttons */
-    }
-  }
+.pagination { text-align: center; padding-top: 24px; }
+.pagination-btn {
+	padding: 7px 13px;
+	font-size: 12px;
+	border: 1px solid rgb(var(--color-accent));
+	color: rgb(var(--color-accent));
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 2px;
+	background: transparent;
+	margin: 0 8px;
+}
+.pagination-btn:hover { color: rgb(var(--color-accent)); }
 </style>
