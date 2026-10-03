@@ -3,74 +3,44 @@ title: Words
 id_attribute: words
 ---
 
-
-{% for post in paginator.posts limit:5 %}
-<section>
-	<header>
-		
-		{% if post.title != '' %}
-		<h1><a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>{% if post.link %}<span class="external-link-arrow">→</span>{% endif %}</h1>
-		{% endif %}
-
-		<time datetime="{{ post.date }}"><a href="{{ post.url }}">{{ post.date | date_to_string }} <span>∞</span></a></time>
-	</header>
-		{{ post.excerpt }}
-		{% if post.content contains '<!-- more -->' %}
-		<a href="{{ post.url }}"></a>
-		{% endif %}
+<section class="words-intro" aria-labelledby="words-title">
+  <p class="section-kicker">The Upshift</p>
+  <h1 id="words-title">Words</h1>
+  <p class="words-intro__line">Essays, notes, and things worth thinking about.</p>
 </section>
+
+<div class="post-list">
+{% for post in paginator.posts limit:5 %}
+<article class="post-entry{% if forloop.first %} post-entry--featured{% endif %}">
+  <header class="post-entry__header">
+    {% if post.title != '' %}
+    <h2>
+      <a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
+        {{ post.title }}
+      </a>{% if post.link %}<span class="external-link-arrow" aria-hidden="true">→</span>{% endif %}
+    </h2>
+    {% endif %}
+    <time datetime="{{ post.date }}"><a href="{{ post.url }}">{{ post.date | date_to_string }} <span>∞</span></a></time>
+  </header>
+
+  <div class="post-entry__excerpt">
+    {{ post.excerpt }}
+  </div>
+
+  {% if post.content contains '<!-- more -->' %}
+  <p class="post-entry__continue"><a href="{{ post.url }}">Continue reading →</a></p>
+  {% endif %}
+</article>
 {% endfor %}
-<!-- Pagination links -->
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  <br>
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-btn">&laquo; Newer Posts</a>
-  {% endif %}
-
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-btn">Older Posts &raquo;</a>
-  {% endif %}
 </div>
+
+{% if paginator.total_pages > 1 %}
+<nav class="pagination" aria-label="Post navigation">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">← Newer</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older →</a>
+  {% endif %}
+</nav>
 {% endif %}
-
-<style>
-  .pagination {
-    text-align: center;
-  }
-
-  .pagination-btn {
-    padding: 6px 12px;  /* Smaller padding for smaller buttons */
-    font-size: 12px;     /* Smaller text size */
-    border: 1px solid #b35352; /* Thinner border with new color */
-    color: #b35352;      /* Text color same as the border */
-    text-decoration: none; /* Remove underline */
-    display: inline-block;
-    border-radius: 20px; /* More rounded corners */
-    background-color: transparent; /* Transparent background */
-    cursor: pointer;    /* Make it clickable */
-    transition: transform 0.2s ease, border-color 0.3s ease; /* Smooth transition effects */
-    margin: 0 10px; /* Add margin between buttons */
-  }
-
-  /* Hover effect (only border and size change) */
-  .pagination-btn:hover {
-    border-color: #8c2d2d; /* Border becomes darker */
-    transform: scale(1.1);  /* Slightly enlarge the button */
-  }
-
-  /* Active state */
-  .pagination-btn:active {
-    border-color: #5f1c1c; /* Border becomes even darker when clicked */
-    transform: scale(1);    /* Reset to original size when clicked */
-  }
-
-  /* Responsive design */
-  @media (max-width: 600px) {
-    .pagination-btn {
-      padding: 4px 10px;  /* Smaller padding on mobile */
-      font-size: 10px;    /* Adjust font size on mobile */
-      margin: 0 7px;      /* Adjust margin on mobile for smaller buttons */
-    }
-  }
-</style>
