@@ -42,79 +42,69 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <style>
-        nav.constrained {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 1px;
-            width: 100%; /* Ensure the navbar spans the full width */
-        }
+  nav.constrained {
+    display: block;
+    padding: 64px 0 0;
+    width: 100%;
+    text-align: center;
+  }
 
-        .nav-left {
-            display: flex;
-            justify-content: flex-start; /* Align to the left */
-            margin-right: auto; /* Push content to the left */
-        }
+  .site-identity {
+    text-align: center;
+  }
 
-        .nav-center {
-            flex-grow: 1;
-            justify-content: center;
-        }
+  .site-name {
+    font-family: var(--font-small-caps);
+    font-size: 1.35em;
+    background-image: none;
+  }
 
-        .nav-right {
-            display: flex;
-            justify-content: flex-end; /* Align to the right */
-            margin-left: auto; /* Push content to the right */
-        }
+  .profile-nav {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 28px;
+    white-space: nowrap;
+  }
 
-        /* Remove underline from all <a> tags */
-        a {
-            text-decoration: none;
-        }
+  .profile-nav a {
+    padding-bottom: 12px;
+    font-family: var(--font-small-caps);
+    font-size: 13px;
+    background-image: none;
+    color: rgba(var(--color-text), .55);
+  }
 
-        .nav-left a {
-            font-size: 12px; /* Smaller icon size */
-            color: #fff; /* Set icon color to white */
-            background-color: #b35352; /* Set background color for the button */
-            border-radius: 50%; /* Make the button round */
-            padding: 4px; /* Smaller padding for a smaller button */
-            display: inline-block; /* Make sure the link behaves like a button */
-            text-align: center; /* Center the icon inside the button */
-            line-height: 16px; /* Vertically center the icon */
-            width: 20px; /* Set a fixed width for the round button */
-            height: 20px; /* Set a fixed height for the round button */
-        }
+  .profile-nav a:hover,
+  .profile-nav a.current {
+    color: rgb(var(--color-text));
+  }
 
-        .nav-left a i {
-            font-size: 12px; /* Make the icon a little smaller */
-        }
+  .profile-nav a.current {
+    position: relative;
+    font-weight: bold;
+  }
 
-        .nav-left a:hover {
-            background-color: #9e3f3f; /* Darker shade on hover */
-            color: #fff; /* Keep the icon color white on hover */
-        }
+  .profile-nav a.current:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: rgb(var(--color-accent));
+  }
 
-        
-    .subscribe-btn {
-        background-color: #b35352; /* Set the background color */
-        color: white;
-        padding: 4px 8px; /* Smaller padding */
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 12px; /* Smaller text size */
-        height: 20px; /* Set the height to match the search icon */
-        line-height: 20px; /* Vertically center the text */
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-family: inherit; /* Ensure font matches the theme */
+  @media (max-width: 600px) {
+    nav.constrained {
+      padding-top: 40px;
     }
 
-        .subscribe-btn:hover {
-            background-color: #9e3f3f; /* Darker shade on hover */
-        }
-    </style>
+    .profile-nav {
+      gap: 22px;
+    }
+  }
+</style>
 
 
 	
@@ -123,20 +113,17 @@
 
 
 
-   <nav class="constrained">
-    <div class="nav-left">
-        <a href="/search"><i class="fas fa-search"></i></a> <!-- Search icon -->
+  <nav class="constrained site-nav" aria-label="Primary navigation">
+    <div class="site-identity">
+      <a class="site-name" href="/">The Upshift</a>
     </div>
-    <div class="nav-center">
-        The <a href="/words/index.html">Upshift</a><em> &nbsp; : &nbsp; </em> <a href="/">Blog</a>
+
+    <div class="profile-nav" aria-label="Sections">
+      <a href="/" class="{% if page.url == '/' or paginator %}current{% endif %}">Posts</a>
+      <a href="/words/index.html" class="{% if page.url == '/words/index.html' %}current{% endif %}">About</a>
+      <a href="/search/" class="{% if page.url == '/search/' %}current{% endif %}" aria-label="Search"><i class="fas fa-search"></i></a>
     </div>
-    <div class="nav-right">
- <a href="https://selcompay.me/61208375?description=Coffee%20for%20Silas" target="_blank">    <button class="subscribe-btn">
-      Buy Me ☕
-    </button>
-  </a>
-</div>
-</nav>
+  </nav>
 
 
 
