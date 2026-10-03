@@ -9,7 +9,6 @@ id_attribute: words
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
   gtag('config', 'UA-158309270-1');
 </script>
@@ -37,55 +36,68 @@ id_attribute: words
 {% endfor %}
 <!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
-  <br>
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-btn">&laquo; Newer Posts</a>
+<nav class="pagination" aria-label="Post navigation">
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-btn pagination-older">← Older posts</a>
   {% endif %}
 
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-btn">Older Posts &raquo;</a>
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-btn pagination-newer">Newer posts →</a>
   {% endif %}
-</div>
+</nav>
 {% endif %}
 
 <style>
   .pagination {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(25, 18, 19, 0.1);
+    text-align: left;
   }
 
   .pagination-btn {
-    padding: 6px 12px;  /* Smaller padding for smaller buttons */
-    font-size: 12px;     /* Smaller text size */
-    border: 1px solid #b35352; /* Thinner border with new color */
-    color: #b35352;      /* Text color same as the border */
-    text-decoration: none; /* Remove underline */
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    font-family: var(--font-small-caps);
+    font-size: 13px;
+    line-height: 1.4;
+    text-decoration: none;
     display: inline-block;
-    border-radius: 20px; /* More rounded corners */
-    background-color: transparent; /* Transparent background */
-    cursor: pointer;    /* Make it clickable */
-    transition: transform 0.2s ease, border-color 0.3s ease; /* Smooth transition effects */
-    margin: 0 10px; /* Add margin between buttons */
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-shadow: none;
   }
 
-  /* Hover effect (only border and size change) */
   .pagination-btn:hover {
-    border-color: #8c2d2d; /* Border becomes darker */
-    transform: scale(1.1);  /* Slightly enlarge the button */
+    color: #b35352;
+    background-image: none;
   }
 
-  /* Active state */
   .pagination-btn:active {
-    border-color: #5f1c1c; /* Border becomes even darker when clicked */
-    transform: scale(1);    /* Reset to original size when clicked */
+    color: #8c2d2d;
   }
 
-  /* Responsive design */
+  .pagination-newer {
+    margin-left: auto;
+    text-align: right;
+  }
+
   @media (max-width: 600px) {
+    .pagination {
+      margin-top: 36px;
+      padding-top: 20px;
+      gap: 16px;
+    }
+
     .pagination-btn {
-      padding: 4px 10px;  /* Smaller padding on mobile */
-      font-size: 10px;    /* Adjust font size on mobile */
-      margin: 0 7px;      /* Adjust margin on mobile for smaller buttons */
+      font-size: 12px;
     }
   }
 </style>
