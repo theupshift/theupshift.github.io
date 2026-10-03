@@ -44,9 +44,14 @@
 
     <div class="profile-nav" aria-label="Sections">
         <a href="/" class="{% if page.url == '/' %}current{% endif %}">Posts</a>
-        <a href="/words/index.html" class="{% if page.url == '/words/index.html' %}current{% endif %}">About</a>
-        <a href="/search" class="{% if page.url == '/search' %}current{% endif %}" aria-label="Search"><i class="fas fa-search"></i></a>
+        <a href="/about/" class="{% if page.url == '/about/' %}current{% endif %}">About</a>
+        <button type="button" class="search-toggle" aria-expanded="false" aria-controls="site-search" aria-label="Search"><i class="fas fa-search"></i></button>
     </div>
+    <div id="site-search" class="site-search" hidden>
+    <input id="site-search-input" type="search" placeholder="Search posts…" autocomplete="off" aria-label="Search posts">
+    <div id="site-search-results" aria-live="polite"></div>
+</div>
+
 </nav>
 
 <main class="constrained">
@@ -69,6 +74,79 @@
     <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="Share on LinkedIn" width="18" height="18" style="vertical-align: middle;">
   </a>
 </footer>
+
+<script>
+(function () {
+  const toggle = document.querySelector(".search-toggle");
+  const search = document.getElementById("site-search");
+  const input = document.getElementById("site-search-input");
+  const results = document.getElementById("site-search-results");
+  if (!toggle || !search || !input || !results) return;
+
+  let posts = [];
+
+  function render(query) {
+    const q = query.trim().toLowerCase();
+    if (!q) {
+      results.innerHTML = "";
+      return;
+    }
+
+    const matches = posts.filter(function (post) {
+      return (post.title + " " + post.content).toLowerCase().indexOf(q) !== -1;
+    }).slice(0, 10);
+
+    results.innerHTML = matches.length
+      ? matches.map(function (post) {
+          return '<a class="search-result" href="' + post.url + '"><span class="search-result-title">' +
+            post.title + '</span><time>' + post.date + '</time></a>';
+        }).join("")
+      : '<p class="search-empty">No posts found.</p>';
+  }
+
+  toggle.addEventListener("click", function () {
+    const opening = search.hidden;
+    search.hidden = !opening;
+    toggle.setAttribute("aria-expanded", String(opening));
+
+    if (opening) {
+      input.focus();
+
+      if (!posts.length) {
+        fetch("/search.json")
+          .then(function (response) {
+            if (!response.ok) throw new Error("Search index unavailable");
+            return response.json();
+          })
+          .then(function (data) {
+            posts = data;
+            render(input.value);
+          })
+          .catch(function () {
+            results.innerHTML = '<p class="search-empty">Search is temporarily unavailable.</p>';
+          });
+      }
+    } else {
+      input.value = "";
+      results.innerHTML = "";
+    }
+  });
+
+  input.addEventListener("input", function () {
+    render(input.value);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !search.hidden) {
+      search.hidden = true;
+      input.value = "";
+      results.innerHTML = "";
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.focus();
+    }
+  });
+}());
+</script>
 
 </body>
 </html>
