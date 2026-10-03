@@ -48,6 +48,12 @@ id_attribute: words
 {% endif %}
 
 <style>
+  /* Keep footnotes out of the homepage excerpts; they remain visible on individual post pages. */
+  .footnotes,
+  .footnotes-sep {
+    display: none;
+  }
+
   .pagination {
     display: flex;
     justify-content: space-between;
