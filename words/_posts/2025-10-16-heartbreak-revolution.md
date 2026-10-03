@@ -5,10 +5,10 @@ date: 2025-10-16
 categories: [inspiration, growth]
 tags: [revolution, grief, transformation]
 description: "Gargi Bhattacharyya sees our grief for a broken world as the tool we use to weave a new one."
-featured_image: https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.png
-image: https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.png
-og_image: https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.png
-twitter_image: https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.png
+featured_image: https://images.squarespace-cdn.com/content/v1/5eaed3ac688f666d9d4785aa/69b79e58-37d6-49b3-8095-7af638de00d8/We%2C+the+Heartbroken+-+Gargi+Bhattacharyya+RGB+300.png
+image: https://images.squarespace-cdn.com/content/v1/5eaed3ac688f666d9d4785aa/69b79e58-37d6-49b3-8095-7af638de00d8/We%2C+the+Heartbroken+-+Gargi+Bhattacharyya+RGB+300.png
+og_image: https://images.squarespace-cdn.com/content/v1/5eaed3ac688f666d9d4785aa/69b79e58-37d6-49b3-8095-7af638de00d8/We%2C+the+Heartbroken+-+Gargi+Bhattacharyya+RGB+300.png
+twitter_image: https://images.squarespace-cdn.com/content/v1/5eaed3ac688f666d9d4785aa/69b79e58-37d6-49b3-8095-7af638de00d8/We%2C+the+Heartbroken+-+Gargi+Bhattacharyya+RGB+300.png
 ---
 
 <style>
@@ -56,7 +56,7 @@ twitter_image: https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.
 </style>
 
 <div class="quote-container">
-  <img src="https://aworkinglibrary.com/img/bhattacharyya-we-the-heartbroken.png" alt="Gargi Bhattacharyya">
+  <img src="https://images.squarespace-cdn.com/content/v1/5eaed3ac688f666d9d4785aa/69b79e58-37d6-49b3-8095-7af638de00d8/We%2C+the+Heartbroken+-+Gargi+Bhattacharyya+RGB+300.png" alt="Gargi Bhattacharyya">
   <div>
     <blockquote>
       "Heartbreak is the heart of all revolutionary consciousness. How can it not be? Who can imagine another world unless they have already been broken apart by the world we are in?"
