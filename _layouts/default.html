@@ -123,19 +123,23 @@
 
 
 
-   <nav class="constrained">
-    <div class="nav-left">
-        <a href="/search"><i class="fas fa-search"></i></a> <!-- Search icon -->
+   <nav class="constrained site-nav" aria-label="Primary navigation">
+    <div class="site-identity">
+        <a class="site-name" href="/">The Upshift</a>
+        <span class="site-handle">@theupshift</span>
+        <p class="site-description">Writing · Research · Ideas</p>
     </div>
-    <div class="nav-center">
-        The <a href="/words/index.html">Upshift</a><em> &nbsp; : &nbsp; </em> <a href="/">Blog</a>
+
+    <div class="nav-tools">
+        <a href="/search" aria-label="Search"><i class="fas fa-search"></i></a>
+        <a href="https://selcompay.me/61208375?description=Coffee%20for%20Silas" target="_blank" rel="noopener">Buy Me ☕</a>
     </div>
-    <div class="nav-right">
- <a href="https://selcompay.me/61208375?description=Coffee%20for%20Silas" target="_blank">    <button class="subscribe-btn">
-      Buy Me ☕
-    </button>
-  </a>
-</div>
+
+    <div class="profile-nav" aria-label="Sections">
+        <a href="/" class="{% if page.url == '/' %}current{% endif %}">Posts</a>
+        <a href="/about/" class="{% if page.url == '/about/' %}current{% endif %}">About</a>
+        <a href="/peer-reviewed/" class="{% if page.url == '/peer-reviewed/' %}current{% endif %}">Peer-reviewed</a>
+    </div>
 </nav>
 
 
