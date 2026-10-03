@@ -18,95 +18,102 @@ You’re the health manager of a rural community. For each 💵 funding round, a
 <div id="health-game">
 
   <!-- Dashboard -->
-  <div class="card">
-    <h2>📊 Dashboard</h2>
-    <p>💰 Budget: <span id="budget">100</span></p>
-    <div class="progress"><div id="budget-bar" class="progress-fill green"></div></div>
-
-    <p>⭐ Score: <span id="score">0</span></p>
-    <div class="progress"><div id="score-bar" class="progress-fill blue"></div></div>
-
-    <p>⚖️ Equity (Patients' Gender, Age, etc.): <span id="equity">0</span></p>
+  <div class="card dashboard-card">
+    <div class="dashboard-header">
+      <div>
+        <h2>📊 Dashboard</h2>
+        <span class="dashboard-subtitle">Your health system at a glance</span>
+      </div>
+      <span class="round-badge">ROUND <span id="round">1</span>/2</span>
+    </div>
+    <div class="stats-grid">
+      <div class="stat"><span class="stat-label">💰 Budget</span><strong id="budget">100</strong><div class="progress"><div id="budget-bar" class="progress-fill green"></div></div></div>
+      <div class="stat"><span class="stat-label">⭐ Score</span><strong id="score">0</strong><div class="progress"><div id="score-bar" class="progress-fill blue"></div></div></div>
+      <div class="stat"><span class="stat-label">⚖️ Equity</span><strong id="equity">0</strong><span class="stat-note">Access across patients</span></div>
+    </div>
   </div>
 
   <!-- Resources -->
   <div class="card">
-    <h2>🏥 Resources</h2>
-    <div class="grid">
-      <div>👨‍⚕️ Doctors: <span id="doctors">1</span><br><button onclick="addResource('doctor')">➕</button></div>
-      <div>👩‍⚕️ Nurses: <span id="nurses">2</span><br><button onclick="addResource('nurse')">➕</button></div>
-      <div>🏡 CHWs: <span id="chws">2</span><br><button onclick="addResource('chw')">➕</button></div>
-      <div>💊 Medicine: <span id="medicine">3</span><br><button onclick="addResource('medicine')">➕</button></div>
-      <div>🚑 Transport: <span id="transport">1</span><br><button onclick="addResource('transport')">➕</button></div>
-      <div>🔬 Diagnostics: <span id="beds">1</span><br><button onclick="addResource('beds')">➕</button></div>
+    <div class="section-heading"><h2>🏥 Resources</h2><span>12 per additional unit</span></div>
+    <div class="grid resource-grid">
+      <div class="resource-item"><span class="resource-icon">👨‍⚕️</span><span class="resource-name">Doctors</span><strong id="doctors">1</strong><button onclick="addResource('doctor')" aria-label="Add doctor">+</button></div>
+      <div class="resource-item"><span class="resource-icon">👩‍⚕️</span><span class="resource-name">Nurses</span><strong id="nurses">2</strong><button onclick="addResource('nurse')" aria-label="Add nurse">+</button></div>
+      <div class="resource-item"><span class="resource-icon">🏡</span><span class="resource-name">CHWs</span><strong id="chws">2</strong><button onclick="addResource('chw')" aria-label="Add community health worker">+</button></div>
+      <div class="resource-item"><span class="resource-icon">💊</span><span class="resource-name">Medicine</span><strong id="medicine">3</strong><button onclick="addResource('medicine')" aria-label="Add medicine">+</button></div>
+      <div class="resource-item"><span class="resource-icon">🚑</span><span class="resource-name">Transport</span><strong id="transport">1</strong><button onclick="addResource('transport')" aria-label="Add transport">+</button></div>
+      <div class="resource-item"><span class="resource-icon">🔬</span><span class="resource-name">Diagnostics</span><strong id="beds">1</strong><button onclick="addResource('beds')" aria-label="Add diagnostics">+</button></div>
     </div>
   </div>
 
   <!-- Patients -->
-  <div class="card">
-    <h2>🧍 Incoming Patients</h2>
+  <div class="card patients-card">
+    <div class="section-heading"><h2>🧍 Incoming Patients</h2><span>Choose who to treat</span></div>
     <div id="patients-list" class="flex center"></div>
     <button class="action-btn" onclick="drawPatients()">🎲 Draw Patients</button>
   </div>
 
   <!-- Funding Rounds -->
-  <div class="card">
-    <h3>💵 Funding Round: <span id="round">1</span>/2</h3>
+  <div class="card round-card">
+    <h3>💵 Funding Round</h3>
     <button class="next-btn" onclick="nextRound()">➡️ Next Funding</button>
   </div>
 
   <!-- Results -->
-  <div id="results" class="card hidden"></div>
+  <div id="results" class="card results-card hidden"></div>
 
 </div>
 
 <!-- Styles -->
 <style>
-#health-game { max-width: 900px; margin: auto; font-family: "Segoe UI", Arial, sans-serif; color: #333; }
-#health-game h2, #health-game h3 { font-family: "Segoe UI Emoji", "Segoe UI", sans-serif; text-align: center; font-size: 0.9em; }
-.intro-small { font-size: 0.75em; line-height: 1.1em; text-align: center; margin-bottom: 1em; }
-#health-game .card { border: 2px solid #ccc; border-radius: 12px; padding: 0.5em; margin-bottom: 1.0em; background: white; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-#health-game .flex { display: flex; flex-wrap: wrap; gap: 0.8em; }
+#health-game { max-width: 900px; margin: 1.5em auto; font-family: inherit; color: #191213; }
+#health-game h2, #health-game h3 { margin: 0; font-family: inherit; text-align: left; font-size: 1rem; letter-spacing: 0.02em; }
+#health-game .card { border: 1px solid rgba(25,18,19,.14); border-radius: 10px; padding: 1.1em; margin-bottom: 1em; background: #fff; box-shadow: 0 2px 8px rgba(25,18,19,.05); }
+#health-game .dashboard-card { padding: 1em 1.1em; }
+#health-game .dashboard-header, #health-game .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1em; margin-bottom: .9em; }
+#health-game .dashboard-subtitle, #health-game .section-heading > span { color: rgba(25,18,19,.58); font-size: .78em; }
+#health-game .round-badge { color: #b35352; font-size: .72em; letter-spacing: .08em; white-space: nowrap; }
+#health-game .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: .7em; }
+#health-game .stat { padding: .75em .8em; border: 1px solid rgba(25,18,19,.09); border-radius: 8px; background: #faf9f8; }
+#health-game .stat-label { display: block; font-size: .75em; color: rgba(25,18,19,.62); margin-bottom: .15em; }
+#health-game .stat strong { display: block; font-size: 1.35em; font-weight: 600; }
+#health-game .stat-note { display: block; margin-top: .5em; font-size: .72em; color: rgba(25,18,19,.5); }
+#health-game .progress { background: #e9e6e4; border-radius: 999px; height: 5px; width: 100%; margin-top: .45em; overflow: hidden; }
+#health-game .progress-fill { height: 100%; width: 0%; transition: width .35s ease; }
+#health-game .green { background: #6f8d63; }
+#health-game .blue { background: #b35352; }
+#health-game .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: .7em; }
+#health-game .resource-item { position: relative; display: grid; grid-template-columns: auto 1fr auto; grid-template-rows: auto auto; align-items: center; column-gap: .55em; row-gap: .15em; padding: .75em; border: 1px solid rgba(25,18,19,.1); border-radius: 8px; background: #fff; }
+#health-game .resource-icon { grid-row: 1 / 3; font-size: 1.45em; }
+#health-game .resource-name { font-size: .78em; color: rgba(25,18,19,.65); }
+#health-game .resource-item strong { font-size: 1.05em; }
+#health-game .resource-item button { grid-column: 3; grid-row: 2; width: 25px; height: 25px; padding: 0; border: 1px solid #b35352; border-radius: 50%; background: transparent; color: #b35352; font-size: 1em; line-height: 1; }
+#health-game .resource-item button:hover { background: #b35352; color: #fff; transform: none; }
+#health-game .flex { display: flex; flex-wrap: wrap; gap: .8em; }
 #health-game .center { justify-content: center; }
-#health-game button { border: none; border-radius: 8px; padding: 0.4em 0.7em; cursor: pointer; font-size: 1em; transition: 0.2s ease-in-out; }
-#health-game button:hover { transform: scale(1.1); }
-#health-game .action-btn, #health-game .-btn { display: block; margin: 0.5em auto; text-align: center; }
-#health-game .action-btn { background: #007bff; color: white; font-weight: bold; font-size: 0.9em; }
-#health-game .action-btn:hover { background: #0056b3; }
-#health-game .-btn { background: #28a745; color: white; font-weight: bold; font-size: 0.9em; padding: 0.6em 1em; }
-#health-game .-btn:hover { background: #1e7e34; }
-#health-game .patient-card { border: 2px solid #aaa; border-radius: 10px; padding: 0.7em; width: 100%; max-width: 220px; font-size: 0.9em; box-shadow: 0 3px 6px rgba(0,0,0,0.1); }
-#health-game .patient-card.remote { background: #cce5ff; }
-#health-game .patient-card.local { background: #e2f0d9; }
-#health-game .patient-card button { margin-top: 0.5em; width: 100%; border-radius: 6px; background: #17a2b8; color: white; font-weight: bold; }
-#health-game .patient-card button:hover { background: #117a8b; }
-#health-game .progress { background: #ddd; border-radius: 8px; height: 20px; width: 100%; margin-bottom: 1em; overflow: hidden; }
-#health-game .progress-fill { height: 100%; width: 0%; color: white; text-align: center; font-size: 0.8em; line-height: 20px; transition: width 0.4s ease-in-out; }
-#health-game .green { background: #28a745; }
-#health-game .blue { background: #007bff; }
-#health-game .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em; text-align: center; }
+#health-game button { border: none; border-radius: 7px; padding: .45em .75em; cursor: pointer; font-size: .9em; transition: background .2s ease, color .2s ease, transform .2s ease; }
+#health-game .action-btn { display: block; margin: .9em auto .1em; background: #b35352; color: #fff; font-weight: 600; }
+#health-game .action-btn:hover { background: #8c2d2d; transform: none; }
+#health-game .patient-card { border: 1px solid rgba(25,18,19,.13); border-radius: 9px; padding: .9em; width: 100%; max-width: 220px; font-size: .86em; box-shadow: 0 2px 6px rgba(25,18,19,.04); }
+#health-game .patient-card.remote { background: #f4f7fa; border-color: #cbd7e0; }
+#health-game .patient-card.local { background: #f7f7f3; border-color: #d8ddd0; }
+#health-game .patient-card strong { display: block; margin-bottom: .35em; }
+#health-game .patient-card button { margin-top: .7em; width: 100%; background: #191213; color: #fff; font-weight: 600; }
+#health-game .patient-card button:hover { background: #b35352; transform: none; }
+#health-game .round-card { text-align: center; padding: 1em; }
+#health-game .round-card h3 { text-align: center; margin-bottom: .55em; }
+#health-game .next-btn { background: #b35352; color: #fff; font-weight: 600; padding: .6em 1em; border-radius: 7px; margin: .2em auto 0; display: block; }
+#health-game .next-btn:hover { background: #8c2d2d; transform: none; }
+#health-game .results-card { border-color: rgba(179,83,82,.35); background: #fbf8f7; text-align: center; }
 #health-game .hidden { display: none; }
-
-                    /* Make the Next Funding Round button match Draw Patients styling but green */
-.next-btn {
-  background: #28a745; /* green */
-  color: white;
-  font-weight: bold;
-  font-size: 0.9em;
-  padding: 0.6em 1em;
-  border-radius: 8px;
-  display: block;
-  margin: 0.5em auto;
-  text-align: center;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
+@media (max-width: 600px) {
+  #health-game { margin-top: 1em; }
+  #health-game .stats-grid { grid-template-columns: 1fr; }
+  #health-game .grid { grid-template-columns: repeat(2,1fr); }
+  #health-game .dashboard-header, #health-game .section-heading { align-items: flex-start; }
+  #health-game .section-heading { flex-direction: column; gap: .2em; }
+  #health-game .patient-card { max-width: none; }
 }
-
-.next-btn:hover {
-  background: #1e7e34; /* darker green on hover */
-}
-
-@media (max-width: 600px) { #health-game .grid { grid-template-columns: repeat(2, 1fr); } #health-game .flex { flex-direction: column; align-items: center; } }
 </style>
 
 <!-- Script -->
