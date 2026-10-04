@@ -52,7 +52,14 @@
     <div class="nav-right">
       <a class="nav-text-link" href="/readings.html">Readings</a>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" title="Switch theme">◐</button>
-      <a class="subscribe-btn" href="https://selcompay.me/61208375?description=Coffee%20for%20Silas" target="_blank" rel="noopener noreferrer">Buy me ☕</a>
+      <div class="site-menu" id="site-menu">
+        <button class="site-menu-toggle" id="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu-panel">Menu</button>
+        <div class="site-menu-panel" id="site-menu-panel">
+          <a href="/page2/">About</a>
+          <a href="/readings.html">Notes</a>
+          <a href="/archive.html">Works</a>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -95,6 +102,31 @@
         button.textContent = dark ? '☼' : '◐';
         if (metaTheme) metaTheme.setAttribute('content', dark ? '#191213' : '#ffffff');
       }
+      var menu = document.getElementById('site-menu');
+      var menuToggle = document.getElementById('site-menu-toggle');
+      var lastScrollY = window.scrollY;
+
+      function closeMenu() {
+        if (!menu.classList.contains('is-open')) return;
+        menu.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+
+      menuToggle.addEventListener('click', function () {
+        var open = menu.classList.toggle('is-open');
+        menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', function (event) {
+        if (!menu.contains(event.target)) closeMenu();
+      });
+
+      window.addEventListener('scroll', function () {
+        var currentY = window.scrollY;
+        if (currentY > lastScrollY + 4) closeMenu();
+        lastScrollY = currentY;
+      }, { passive: true });
+
       button.addEventListener('click', function () {
         var next = currentTheme() === 'dark' ? 'light' : 'dark';
         root.setAttribute('data-theme', next);
