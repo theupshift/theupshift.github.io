@@ -1063,3 +1063,110 @@ article > header > h1 {
     padding: 0 15px 22px 61px;
   }
 }
+
+/* Work showcase — visual tile arrangement */
+.work-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding: 42px 0 56px;
+}
+.work-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 255px;
+  padding: 28px;
+  border: 1px solid var(--color-rule);
+  color: inherit;
+  background: rgb(var(--color-background));
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform .22s cubic-bezier(.2,.7,.2,1), border-color .22s ease, box-shadow .22s ease;
+}
+.work-tile:hover {
+  transform: translateY(-6px);
+  border-color: rgba(var(--color-text), .30);
+  box-shadow: 0 14px 32px rgba(25,18,19,.10);
+  background-image: none;
+}
+.work-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 28px;
+  border: 1px solid var(--color-rule);
+  border-radius: 50%;
+  color: rgb(var(--color-accent));
+  font-size: 23px;
+  line-height: 1;
+  transition: transform .25s cubic-bezier(.2,.8,.2,1), background .22s ease, color .22s ease;
+}
+.work-tile:hover .work-icon {
+  transform: translateY(-4px) rotate(-7deg) scale(1.08);
+  color: #fff;
+  background: rgb(var(--color-accent));
+}
+.work-tile-label {
+  margin-bottom: 8px;
+  color: rgb(var(--color-muted));
+  font-family: var(--font-small-caps);
+  font-size: 11px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.work-tile h2 {
+  margin: 0 0 10px;
+  font-family: var(--font-small-caps);
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+.work-tile p {
+  max-width: 480px;
+  margin: 0;
+  color: rgb(var(--color-muted));
+  line-height: 1.6;
+}
+.work-tile-link {
+  margin-top: auto;
+  padding-top: 24px;
+  color: rgb(var(--color-text));
+  font-family: var(--font-small-caps);
+  font-size: 12px;
+}
+.work-tile-wide {
+  grid-column: 1 / -1;
+  min-height: 210px;
+}
+.work-publications,
+.work-detail {
+  padding: 44px 0;
+  border-top: 1px solid var(--color-rule);
+}
+.work-publications h2,
+.work-detail h2 {
+  margin: 0 0 22px;
+  font-family: var(--font-small-caps);
+  font-size: 1.55rem;
+}
+.work-publications .publication-card {
+  max-width: 760px;
+}
+@media (max-width: 600px) {
+  .work-showcase {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 30px 0 42px;
+  }
+  .work-tile,
+  .work-tile-wide {
+    grid-column: auto;
+    min-height: 225px;
+    padding: 22px;
+  }
+  .work-icon {
+    margin-bottom: 22px;
+  }
+}
