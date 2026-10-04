@@ -38,14 +38,26 @@ permalink: /work/
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
-      <p class="publication-meta">PLOS Digital Health · 2025</p>
-      <h3>Integrating rare diseases into Africa's digital health strategies</h3>
-      <p>Silas Frank Gamba · Martha Magili</p>
-      <p>A paper on how digital health strategies can better account for rare diseases across African health systems.</p>
-      <div class="work-links">
-        <a href="https://doi.org/10.1371/journal.pdig.0001073" target="_blank" rel="noopener noreferrer">Read the paper ↗</a>
-        <a href="https://orcid.org/0009-0003-2450-4174" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
-      </div>
+      <article class="work-publication-item">
+        <p class="publication-meta">European Congress of Radiology · 2026 · Conference poster</p>
+        <h3>AI-Assisted Radiological Imaging for Climate-Exacerbated Respiratory Diseases: A Systematic Review</h3>
+        <p>Hannah Sackeyfio · Mercy Monden · Reem Hassanin · Silas Frank Gamba</p>
+        <p>DOI: <a href="https://doi.org/10.26044/ECR2026/C-28953" target="_blank" rel="noopener noreferrer">10.26044/ECR2026/C-28953</a></p>
+      </article>
+
+      <article class="work-publication-item">
+        <p class="publication-meta">Global Cardiology Science and Practice · 2026-04-30 · Journal article</p>
+        <h3>Cardiopulmonary bypass complications and their predictors in open-heart surgery at a tertiary cardiac care facility in Tanzania</h3>
+        <p>Alfred Luvakule · Silas Frank Gamba · Edwin Lugazia</p>
+        <p>DOI: <a href="https://doi.org/10.21542/gcsp.2026.11" target="_blank" rel="noopener noreferrer">10.21542/gcsp.2026.11</a></p>
+      </article>
+
+      <article class="work-publication-item">
+        <p class="publication-meta">PLOS Digital Health · 2025-11-06 · Journal article</p>
+        <h3>Integrating rare diseases into Africa's digital health strategies</h3>
+        <p>Silas Frank Gamba · Catherine G Bielick · Martha Magili</p>
+        <p>DOI: <a href="https://doi.org/10.1371/journal.pdig.0001073" target="_blank" rel="noopener noreferrer">10.1371/journal.pdig.0001073</a></p>
+      </article>
     </div>
   </article>
 
