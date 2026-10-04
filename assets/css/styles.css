@@ -1680,3 +1680,23 @@ article > header > h1 {
 .work-tile--book .book-slide-copy {
   padding-top: 8px;
 }
+
+
+.book-notes-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 14px;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 999px;
+  color: #fff !important;
+  background: rgba(255,255,255,.08);
+  text-decoration: none !important;
+  font-size: .78rem;
+  line-height: 1;
+  transition: background .2s ease, border-color .2s ease;
+}
+.book-notes-button:hover {
+  background: rgba(255,255,255,.16);
+  border-color: rgba(255,255,255,.65);
+}
