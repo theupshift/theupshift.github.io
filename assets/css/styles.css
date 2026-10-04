@@ -1358,6 +1358,46 @@ article > header > h1 {
   }
 }
 
+
+/* Nile AGI — ambient video card background. */
+.work-tile--video {
+  background: transparent;
+}
+.work-tile--video .work-tile-video {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  filter: saturate(.9) contrast(.96);
+}
+.work-tile--video .work-tile-trigger {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-background), .90),
+    rgba(var(--color-background), .68)
+  );
+  transition: background .3s ease;
+}
+.work-tile--video:hover .work-tile-trigger,
+.work-tile--video.is-expanded .work-tile-trigger {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-background), .78),
+    rgba(var(--color-background), .54)
+  );
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-tile--video .work-tile-video {
+    display: none;
+  }
+  .work-tile--video .work-tile-trigger {
+    background: rgb(var(--color-background));
+  }
+}
+
 /* Focused card mode — selecting one card hides the others until it is closed. */
 .work-showcase:has(.work-tile.is-expanded) .work-tile:not(.is-expanded) {
   display: none;
