@@ -1357,6 +1357,18 @@ article > header > h1 {
   }
 }
 
+/* Focused card mode — selecting one card hides the others until it is closed. */
+.work-showcase:has(.work-tile.is-expanded) .work-tile:not(.is-expanded) {
+  display: none;
+}
+.work-showcase:has(.work-tile.is-expanded) {
+  grid-template-columns: 1fr;
+}
+.work-showcase:has(.work-tile.is-expanded) .work-tile.is-expanded {
+  grid-column: 1;
+  min-height: 0;
+}
+
 /* Click-to-expand Work tiles: keep the overview compact and reveal details in place. */
 .work-tile {
   display: block;
