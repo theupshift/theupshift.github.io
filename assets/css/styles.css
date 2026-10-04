@@ -829,6 +829,7 @@ article > header > h1 {
 .work-intro {
   max-width: 720px;
   padding: 0 0 46px;
+  margin-top: -26px;
   border-bottom: 1px solid var(--color-rule);
 }
 .work-kicker,
