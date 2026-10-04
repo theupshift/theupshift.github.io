@@ -1656,16 +1656,18 @@ article > header > h1 {
 }
 
 
-/* Afya Kongwe stays light for a clean, welcoming card. */
-.work-tile--afyakongwe .work-tile-trigger {
-  background: rgba(var(--color-background), .92);
-}
-.work-tile--afyakongwe .work-tile-details {
-  background: rgba(var(--color-background), .92);
+/* Afya Kongwe uses one uniform light surface. */
+.work-tile--afyakongwe {
+  background: rgb(var(--color-background));
   color: rgb(var(--color-text));
 }
-
-
+.work-tile--afyakongwe .work-tile-trigger,
+.work-tile--afyakongwe .work-tile-details,
+.work-tile--afyakongwe:hover .work-tile-trigger,
+.work-tile--afyakongwe.is-expanded .work-tile-trigger {
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-text));
+}
 /* Center the Readings carousel content vertically. */
 .work-tile--book .book-carousel-viewport {
   display: flex;
