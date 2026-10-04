@@ -501,6 +501,15 @@ footer.constrained.site-footer {
 }
 .site-footer a:hover { color: rgb(var(--color-accent)); }
 .site-footer .footer-share { white-space: nowrap; }
+.site-footer .linkedin-icon {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: -3px;
+  fill: currentColor;
+  background: none;
+  text-shadow: none;
+}
 
 @media (max-width: 600px) {
   html { font-size: 16px; }
