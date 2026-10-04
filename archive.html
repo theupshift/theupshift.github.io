@@ -1,18 +1,27 @@
 ---
 layout: default
 title: Archive
+description: Browse essays and notes from The Upshift by publication date.
+permalink: /archive/
 ---
 
-<h2>Archive</h2>
-{% assign postsByYearMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y %b'"  %}
-{% for yearMonth in postsByYearMonth %}
-  <h3>{{ yearMonth.name }}</h3>
-    <ul>
-      {% for post in yearMonth.items %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+<header class="page-intro">
+  <h1 style="text-align:left">The archive</h1>
+  <p>Essays, notes, and ideas, gathered in one place and arranged by year.</p>
+  <p class="archive-shortcuts"><a href="/categories/">Browse by topic →</a><a href="/search/">Search the writing →</a></p>
+</header>
+
+{% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year in postsByYear %}
+  <section aria-labelledby="archive-year-{{ year.name }}">
+    <h2 class="archive-year" id="archive-year-{{ year.name }}">{{ year.name }}</h2>
+    <ul class="archive-list">
+      {% for post in year.items %}
+        <li>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d" }}</time>
+          <a href="{{ post.url }}">{% if post.title != "" %}{{ post.title }}{% else %}Untitled note{% endif %}</a>
+        </li>
       {% endfor %}
-      {% if post.title %}
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-{% endif %}
     </ul>
+  </section>
 {% endfor %}
