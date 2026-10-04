@@ -684,3 +684,12 @@ footer.constrained.site-footer {
   border-color: rgb(var(--color-accent));
 }
 #results-container li a:hover { color: rgb(var(--color-accent)); }
+
+
+/* Center post titles while keeping article body text comfortably left-aligned. */
+#words section > header,
+#words section > header h1,
+article > header,
+article > header h1 {
+  text-align: center;
+}
