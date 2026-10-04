@@ -1721,3 +1721,28 @@ article > header > h1 {
 .work-tile--afyakongwe.is-expanded .work-tile-trigger {
   background: transparent;
 }
+
+
+.book-slide-copy .book-notes-button {
+  margin-left: auto;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.book-slide-copy .book-notes-button::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 4px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .2s ease;
+}
+.book-slide-copy .book-notes-button:hover::after,
+.book-slide-copy .book-notes-button:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
