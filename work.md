@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Explorations
-description: Explorations across research, tools, writing, health, and ideas by Silas Gamba.
+title: Index
+description: An index of research, tools, writing, health projects, and experiments by Silas Gamba.
 permalink: /work/
 ---
 
 <header class="work-intro">
-  <p class="work-kicker">Explorations</p>
+  <p class="work-kicker">Index</p>
   <h1>Things I've built,<br>studied, and made.</h1>
   <p class="work-lede">Tools, research, writing, and experiments across health, technology, learning, and ideas.</p>
 </header>
 
-<section class="work-showcase" aria-label="Explorations">
+<section class="work-showcase" aria-label="Index">
   <article class="work-tile" data-work-card>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">⌁</span>
