@@ -61,7 +61,7 @@ permalink: /work/
     </div>
   </article>
 
-  <article class="work-tile work-tile--book" data-work-card>
+  <article class="work-tile work-tile--book" data-work-card style="background-image: url('https://miro.medium.com/v2/resize:fit:640/format:webp/1*B80VNidZ0rKW77cPUjkpsw.jpeg'); background-size: cover; background-position: center;">
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">▱</span>
       <span class="work-tile-label">Book</span>
