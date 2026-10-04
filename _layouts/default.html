@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#f9f7f2">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="Silas Gamba">
   <title>{% if page.url != '/' %}{% if page.title != '' %}{{ page.title }} · {% else %}{{ page.date | date_to_string }} · {% endif %}{% endif %}{{ site.title }}</title>
@@ -93,7 +93,7 @@
         button.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
         button.setAttribute('title', dark ? 'Switch to light theme' : 'Switch to dark theme');
         button.textContent = dark ? '☼' : '◐';
-        if (metaTheme) metaTheme.setAttribute('content', dark ? '#1b1b1a' : '#ffffff');
+        if (metaTheme) metaTheme.setAttribute('content', dark ? '#191213' : '#ffffff');
       }
       button.addEventListener('click', function () {
         var next = currentTheme() === 'dark' ? 'light' : 'dark';
