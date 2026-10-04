@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <meta name="color-scheme" content="light dark">\n  <meta name="theme-color" content="#f9f7f2">
   <meta name="description" content="{{ site.description }}">
   <meta name="author" content="Silas Gamba">
   <title>{% if page.url != '/' %}{% if page.title != '' %}{{ page.title }} · {% else %}{{ page.date | date_to_string }} · {% endif %}{% endif %}{{ site.title }}</title>
@@ -53,5 +53,36 @@
       <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </span>
   </footer>
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var button = document.getElementById('theme-toggle');
+      var metaTheme = document.querySelector('meta[name="theme-color"]');
+      var storedTheme = null;
+      try { storedTheme = localStorage.getItem('upshift-theme'); } catch (error) {}
+      if (storedTheme === 'light' || storedTheme === 'dark') root.setAttribute('data-theme', storedTheme);
+
+      function currentTheme() {
+        var explicit = root.getAttribute('data-theme');
+        if (explicit) return explicit;
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      function updateButton() {
+        var dark = currentTheme() === 'dark';
+        button.setAttribute('aria-pressed', dark ? 'true' : 'false');
+        button.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+        button.setAttribute('title', dark ? 'Switch to light theme' : 'Switch to dark theme');
+        button.textContent = dark ? '☼' : '◐';
+        if (metaTheme) metaTheme.setAttribute('content', dark ? '#1b1b1a' : '#f9f7f2');
+      }
+      button.addEventListener('click', function () {
+        var next = currentTheme() === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('upshift-theme', next); } catch (error) {}
+        updateButton();
+      });
+      updateButton();
+    }());
+  </script>
 </body>
 </html>
