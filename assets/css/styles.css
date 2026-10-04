@@ -686,14 +686,22 @@ footer.constrained.site-footer {
 #results-container li a:hover { color: rgb(var(--color-accent)); }
 
 
-/* Center post titles while keeping article body text comfortably left-aligned. */
-#words section > header,
-#words section > header h1,
-article > header,
-article > header h1 {
-  text-align: center;
+/* Explicit title alignment: keep post headings centered regardless of earlier theme rules. */
+#words section.post-entry > header {
+  text-align: center !important;
+}
+#words section.post-entry > header > h1 {
+  width: 100%;
+  text-align: center !important;
+}
+article > header {
+  text-align: center !important;
+}
+article > header > h1 {
+  width: 100%;
+  text-align: center !important;
 }
 
 .page-intro h1 {
-  text-align: center;
+  text-align: center !important;
 }
