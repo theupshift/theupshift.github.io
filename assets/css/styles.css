@@ -475,9 +475,9 @@ article .footnotes {
 article .footnotes p { margin-bottom: .8em; }
 
 .pagination {
-  margin-top: 28px;
-  padding-top: 20px;
-  border-top: 1px solid var(--color-rule);
+  margin-top: 36px;
+  padding-top: 12px;
+  border-top: 0;
 }
 .pagination-btn {
   padding: 8px 0;
