@@ -615,16 +615,16 @@ footer.constrained.site-footer {
 /* Phase 3 — accessible, user-controlled colour theme */
 :root[data-theme="light"] {
   color-scheme: light;
-  --color-text: 32, 31, 29;
-  --color-background: 249, 247, 242;
+  --color-text: 25, 18, 19;
+  --color-background: 255, 255, 255;
   --color-muted: 105, 101, 94;
   --color-rule: rgba(var(--color-text), .14);
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --color-text: 238, 235, 229;
-  --color-background: 27, 27, 26;
-  --color-muted: 174, 169, 160;
+  --color-text: 255, 255, 255;
+  --color-background: 25, 18, 19;
+  --color-muted: 210, 202, 202;
   --color-rule: rgba(var(--color-text), .16);
 }
 .theme-toggle {
