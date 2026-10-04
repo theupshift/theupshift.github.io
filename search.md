@@ -5,7 +5,7 @@ permalink: /search/
 ---
 
 <header class="page-intro">
-  <h1 style="text-align:left">Search the writing</h1>
+  <h1>Search the writing</h1>
   <p>Find an essay, note, or idea from The Upshift archive.</p>
 </header>
 
