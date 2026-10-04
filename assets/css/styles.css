@@ -1622,3 +1622,18 @@ article > header > h1 {
     rgba(var(--color-background), .74) 100%
   );
 }
+
+
+/* Full-card readability layer for image-backed Index cards. */
+.work-tile--book .work-tile-trigger,
+.work-tile--afyakongwe .work-tile-trigger {
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
+  box-sizing: border-box;
+  background: rgba(var(--color-background), .90);
+}
+.work-tile--book.is-expanded .work-tile-trigger,
+.work-tile--afyakongwe.is-expanded .work-tile-trigger {
+  background: rgba(var(--color-background), .90);
+}
