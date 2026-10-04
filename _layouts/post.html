@@ -2,18 +2,31 @@
 layout: default
 ---
 <article>
-	<header>	
-		<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101245280);</script>
-<script async src="//static.getclicky.com/js"></script>
+  <header>
+    <script src="https://platform-api.sharethis.com/js/sharethis.js#property=5d9f07bfb896dc001299fc33&product=inline-reaction-buttons" async="async"></script>
+    {% unless page.title == '' %}
+      <h1>{% if page.link %}<a href="{{ page.link }}">{% endif %}{{ page.title }}{% if page.link %}</a><span class="external-link-arrow" aria-hidden="true">→</span>{% endif %}</h1>
+    {% endunless %}
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+  </header>
 
-		<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5d9f07bfb896dc001299fc33&product=inline-reaction-buttons" async="async"></script>
-		{% unless page.title == '' %}
-		<h1>{% if page.link %}<a href="{{ page.link }}">{% endif %}{{ page.title }}{% if page.link %}</a><span class="external-link-arrow">→</span>{% endif %}</h1>
-		{% endunless %}
-		<time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
-		
-	</header>
-	
-	{{ content }}
+  {{ content }}
 </article>
 
+<nav class="article-pagination" aria-label="More articles">
+  {% if page.next %}
+    <a class="previous" href="{{ page.next.url | relative_url }}">
+      <span class="direction">← Next newer essay</span>
+      <span class="article-title">{{ page.next.title | default: "Untitled note" | escape }}</span>
+    </a>
+  {% else %}
+    <span class="empty" aria-hidden="true"></span>
+  {% endif %}
+  {% if page.previous %}
+    <a class="next" href="{{ page.previous.url | relative_url }}">
+      <span class="direction">Older essay →</span>
+      <span class="article-title">{{ page.previous.title | default: "Untitled note" | escape }}</span>
+    </a>
+  {% endif %}
+</nav>
+<p class="article-archive-link"><a href="{{ '/archive/' | relative_url }}">Browse the full archive →</a></p>
