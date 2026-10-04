@@ -227,5 +227,3 @@ document.querySelectorAll("[data-book-carousel]").forEach(function (carousel) {
   carousel.querySelector("[data-book-next]").addEventListener("click", function () { showBook(index + 1); });
 });
 </script>
-
-</script>
