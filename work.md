@@ -78,7 +78,7 @@ permalink: /work/
             <div class="book-slide-copy">
               <p class="publication-meta">My Friends · Fredrik Backman</p>
               <p>Four teenagers form an enduring bond that later changes an aspiring artist’s life through a mysterious painting.</p>
-               <a href="/notes/">Read more ↗</a>
+              
             </div>
           </article>
           <article class="book-slide">
@@ -86,7 +86,7 @@ permalink: /work/
             <div class="book-slide-copy">
               <p class="publication-meta">Atmosphere · Taylor Jenkins Reid</p>
               <p>An ambitious young woman joins NASA’s space shuttle programme and discovers an unexpected passion and love.</p>
-               <a href="/notes/">Read more ↗</a>
+              
             </div>
           </article>
           <article class="book-slide">
@@ -94,7 +94,7 @@ permalink: /work/
             <div class="book-slide-copy">
               <p class="publication-meta">The Correspondent · Virginia Evans</p>
               <p>A woman’s letters become a way to reckon with memory, relationships, and a painful chapter of her past.</p>
-               <a href="/notes/">Read more ↗</a>
+              
             </div>
           </article>
           <article class="book-slide">
@@ -102,7 +102,7 @@ permalink: /work/
             <div class="book-slide-copy">
               <p class="publication-meta">The Names · Florence Knapp</p>
               <p>One mother’s decision about her son’s name opens three possible lives and three very different futures.</p>
-               <a href="/notes/">Read more ↗</a>
+              
             </div>
           </article>
         </div>
