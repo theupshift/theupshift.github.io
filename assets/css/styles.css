@@ -1700,3 +1700,12 @@ article > header > h1 {
   background: rgba(255,255,255,.16);
   border-color: rgba(255,255,255,.65);
 }
+
+
+/* Keep Afya Kongwe's light treatment uniform across the whole card. */
+.work-tile--afyakongwe .work-tile-trigger,
+.work-tile--afyakongwe .work-tile-details,
+.work-tile--afyakongwe:hover .work-tile-trigger,
+.work-tile--afyakongwe.is-expanded .work-tile-trigger {
+  background: rgba(var(--color-background), .92);
+}
