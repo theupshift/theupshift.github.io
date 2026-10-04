@@ -1,55 +1,101 @@
 ---
 layout: default
 title: Work
-description: Projects, publications, tools, and other work by Silas Gamba.
+description: Selected projects, publications, tools, and things made by Silas Gamba.
 permalink: /work/
 ---
 
 <header class="work-intro">
   <p class="work-kicker">Selected work</p>
   <h1>Things I've built,<br>studied, and made.</h1>
-  <p class="work-lede">A small collection of projects that sit between health, technology, research, and ideas.</p>
+  <p class="work-lede">A living collection of tools, research, writing, and experiments across health, technology, learning, and ideas.</p>
 </header>
 
-<section class="work-section" aria-labelledby="tools">
-  <p class="work-label">01 — Tools</p>
-  <h2 id="tools">Nile AGI</h2>
-  <p>Tools for practical, local-first AI — built with the realities of African computing in mind.</p>
-  <ul class="work-list">
-    <li><a href="https://github.com/nile-agi">Nile AGI</a><span>AI tools and experiments</span></li>
-    <li><a href="https://github.com/nile-agi/delta">Delta</a><span>Offline AI on your own device</span></li>
-    <li><a href="https://github.com/nile-agi/LMc">LMc</a><span>Edge-first AI inference</span></li>
-  </ul>
-</section>
+<section class="work-grid" aria-label="Selected work">
 
-<section class="work-section" aria-labelledby="publications">
-  <p class="work-label">02 — Research</p>
-  <h2 id="publications">Publications</h2>
-  <p>Research and writing shaped by questions about health systems, technology, learning, and the places where they meet.</p>
-  <p><a class="work-arrow" href="/archive/">Explore the writing →</a></p>
-</section>
+  <details class="work-card work-card-feature" open>
+    <summary>
+      <span class="work-card-number">01</span>
+      <span class="work-card-type">Tools</span>
+      <span class="work-card-title">Nile AGI</span>
+      <span class="work-card-prompt">Explore +</span>
+    </summary>
+    <div class="work-card-body">
+      <p>AI tools built around a simple question: what can useful intelligence look like when it has to work locally, cheaply, and on ordinary devices?</p>
+      <div class="work-links">
+        <a href="https://github.com/nile-agi">Nile AGI ↗</a>
+        <a href="https://github.com/nile-agi/delta">Delta ↗</a>
+        <a href="https://github.com/nile-agi/LMc">LMc ↗</a>
+        <a href="https://github.com/nile-agi/nileagi-sub">Swahili Understanding Benchmark ↗</a>
+      </div>
+    </div>
+  </details>
 
-<section class="work-section work-feature" aria-labelledby="book">
-  <p class="work-label">03 — Book</p>
-  <h2 id="book">A short book</h2>
-  <p>A compact book-length project — an attempt to take one idea seriously enough to give it room.</p>
-  <p class="work-note">Book details coming soon.</p>
-</section>
+  <details class="work-card">
+    <summary>
+      <span class="work-card-number">02</span>
+      <span class="work-card-type">Research</span>
+      <span class="work-card-title">Publications</span>
+      <span class="work-card-prompt">Open +</span>
+    </summary>
+    <div class="work-card-body">
+      <article class="publication-card">
+        <p class="publication-meta">PLOS Digital Health · 2025</p>
+        <h3>Integrating rare diseases into Africa's digital health strategies</h3>
+        <p>Silas Frank Gamba · Martha Magili</p>
+        <p class="publication-note">A paper on how digital health strategies can better account for rare diseases across African health systems.</p>
+        <div class="work-links">
+          <a href="https://doi.org/10.1371/journal.pdig.0001073">Read the paper ↗</a>
+          <a href="https://orcid.org/0009-0003-2450-4174">ORCID record ↗</a>
+        </div>
+      </article>
+      <p class="work-note">The publication list above reflects the publication I could verify from the current public ORCID-linked record. More can be added as the ORCID record is updated.</p>
+    </div>
+  </details>
 
-<section class="work-section" aria-labelledby="afyakongwe">
-  <p class="work-label">04 — Health</p>
-  <h2 id="afyakongwe">AfyaKongwe</h2>
-  <p>A health-focused project translating useful ideas into something people can encounter outside the usual academic spaces.</p>
-  <p class="work-note">Instagram showcase coming soon.</p>
-</section>
+  <details class="work-card">
+    <summary>
+      <span class="work-card-number">03</span>
+      <span class="work-card-type">Book</span>
+      <span class="work-card-title">A short book</span>
+      <span class="work-card-prompt">Open +</span>
+    </summary>
+    <div class="work-card-body">
+      <p>A short book-length project. Small enough to read in one sitting; substantial enough to stay with you afterwards.</p>
+      <p class="work-note">Details and reading link coming soon.</p>
+    </div>
+  </details>
 
-<section class="work-section" aria-labelledby="game">
-  <p class="work-label">05 — Learning</p>
-  <h2 id="game">Health Resource Allocation Game</h2>
-  <p>A simple simulation game about the difficult choices involved in allocating limited health resources in rural communities.</p>
-  <p><a class="work-arrow" href="/words/education/health/simulation/2025/09/17/healthsystems/">See the game →</a></p>
+  <details class="work-card">
+    <summary>
+      <span class="work-card-number">04</span>
+      <span class="work-card-type">Health</span>
+      <span class="work-card-title">AfyaKongwe</span>
+      <span class="work-card-prompt">Open +</span>
+    </summary>
+    <div class="work-card-body">
+      <p>A health-focused project for sharing useful ideas beyond conventional academic spaces.</p>
+      <p class="work-note">Instagram link will be added here once the official account is confirmed.</p>
+    </div>
+  </details>
+
+  <details class="work-card">
+    <summary>
+      <span class="work-card-number">05</span>
+      <span class="work-card-type">Learning</span>
+      <span class="work-card-title">Health Resource Allocation Game</span>
+      <span class="work-card-prompt">Play +</span>
+    </summary>
+    <div class="work-card-body">
+      <p>A simple simulation game about the difficult choices involved in allocating limited health resources in rural communities.</p>
+      <div class="work-links">
+        <a href="/words/education/health/simulation/2025/09/17/healthsystems/">See the game →</a>
+      </div>
+    </div>
+  </details>
+
 </section>
 
 <section class="work-end">
-  <p>If you're interested in one of these projects, <a href="/words/">start here.</a></p>
+  <p>Five things, for now. The list can grow without becoming a catalogue.</p>
 </section>
