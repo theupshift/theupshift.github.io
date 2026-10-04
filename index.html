@@ -14,7 +14,7 @@ id_attribute: words
 </script>
 
 {% for post in paginator.posts limit:5 %}
-<section>
+<section class="post-entry{% if forloop.first %} post-entry-featured{% endif %}">
 	<header>
 		
 		<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101245280);</script>
