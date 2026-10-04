@@ -10,7 +10,10 @@ permalink: /work/
 </header>
 
 <section class="work-showcase" aria-label="Index">
-  <article class="work-tile" data-work-card>
+  <article class="work-tile work-tile--video" data-work-card>
+    <video class="work-tile-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+      <source src="https://delta.nileagi.com/delta-demo.mp4" type="video/mp4">
+    </video>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">⌁</span>
       <span class="work-tile-label">Tools</span>
