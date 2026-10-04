@@ -7,7 +7,7 @@ date: 2020-04-07 14:30:47 +0300
 ---
 
 <header class="page-intro">
-  <h1 style="text-align:left">Explore by topic</h1>
+  <h1>Explore by topic</h1>
   <p>Follow a thread through the writing, from medicine and public health to systems, ideas, and everyday observations.</p>
   <p class="archive-shortcuts"><a href="/archive/">Browse all writing →</a><a href="/search/">Search the writing →</a></p>
 </header>
