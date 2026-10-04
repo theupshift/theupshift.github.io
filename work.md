@@ -107,13 +107,9 @@ permalink: /work/
           </article>
         </div>
         <div class="book-carousel-controls" aria-label="Book carousel controls">
-          <button type="button" class="book-carousel-button" data-book-prev aria-label="Previous book">←</button>
-          <span class="book-carousel-count" data-book-count>1 / 4</span>
-          <button type="button" class="book-carousel-button" data-book-next aria-label="Next book">→</button>
+          <button type="button" class="book-carousel-button" data-book-prev aria-label="Previous book">←</button><button type="button" class="book-carousel-button" data-book-next aria-label="Next book">→</button>
         </div>
-      </div>
-      <p class="book-carousel-source">Selected from the <a href="https://www.goodreads.com/choiceawards/readers-favorite-fiction-books-2025" target="_blank" rel="noopener noreferrer">Goodreads Readers’ Favorite Fiction 2025</a> list.</p>
-    </div>
+      </div></div>
   </article>
 
   <article class="work-tile" data-work-card>
@@ -221,7 +217,6 @@ document.querySelectorAll("[data-book-carousel]").forEach(function (carousel) {
   function showBook(nextIndex) {
     index = (nextIndex + slides.length) % slides.length;
     slides.forEach(function (slide, i) { slide.classList.toggle("is-active", i === index); });
-    count.textContent = (index + 1) + " / " + slides.length;
   }
   carousel.querySelector("[data-book-prev]").addEventListener("click", function () { showBook(index - 1); });
   carousel.querySelector("[data-book-next]").addEventListener("click", function () { showBook(index + 1); });
