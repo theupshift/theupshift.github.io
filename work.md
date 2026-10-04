@@ -213,7 +213,7 @@ permalink: /work/
   }
 }());
 
-<script>
+
 document.querySelectorAll("[data-book-carousel]").forEach(function (carousel) {
   const slides = Array.from(carousel.querySelectorAll(".book-slide"));
   const count = carousel.querySelector("[data-book-count]");
