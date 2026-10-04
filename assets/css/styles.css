@@ -305,7 +305,7 @@ nav.constrained.site-nav {
   gap: 16px;
   width: 100%;
   max-width: var(--reading-width);
-  padding: 28px 0 22px;
+  padding: 100px 0 48px;
   margin: 0 auto;
   text-align: left;
   border-bottom: 1px solid var(--color-rule);
@@ -382,12 +382,12 @@ nav.constrained.site-nav {
 
 main.constrained {
   flex: 1 0 auto;
-  padding: 34px 0 64px;
+  padding: 40px 0 48px;
   min-width: 0;
 }
 
 #words section {
-  padding: 28px 0;
+  padding: 20px 0;
   border-bottom: 1px solid var(--color-rule);
 }
 #words section:first-child { padding-top: 0; }
@@ -395,7 +395,7 @@ main.constrained {
 #words section header { text-align: left; }
 #words h1 {
   margin: 0 0 8px;
-  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  font-size: 1.35em;
   line-height: 1.22;
   letter-spacing: -.025em;
   text-align: left;
@@ -420,17 +420,17 @@ main.constrained {
 }
 #words .post-excerpt > :first-child { margin-top: 0; }
 #words .post-excerpt > :last-child { margin-bottom: 0; }
-#words section:first-child h1 { font-size: clamp(1.7rem, 4vw, 2.15rem); }
+#words section:first-child h1 { font-size: 1.35em; }
 #words section:first-child .post-excerpt { font-size: 1.04rem; }
 
 article > header {
   max-width: 100%;
-  margin: 0 auto 30px;
+  margin: 0 auto 0;
   text-align: left;
 }
 article > header h1 {
   margin: 0 0 12px;
-  font-size: clamp(2rem, 6vw, 2.8rem);
+  font-size: 1.55em;
   line-height: 1.12;
   letter-spacing: -.035em;
   text-align: left;
