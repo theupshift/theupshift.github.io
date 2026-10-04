@@ -1558,3 +1558,20 @@ article > header > h1 {
 @media (prefers-reduced-motion: reduce) {
   .work-tile, .work-tile-details { animation: none; transition: none; }
 }
+
+
+/* Compact publication typography in the Index card. */
+.work-publication-item .publication-meta {
+  font-size: .72rem;
+}
+.work-publication-item h3 {
+  font-size: .92rem;
+  line-height: 1.35;
+}
+.work-publication-item p:not(.publication-meta) {
+  font-size: .78rem;
+  line-height: 1.5;
+}
+.work-publication-item p:last-child {
+  font-size: .72rem;
+}
