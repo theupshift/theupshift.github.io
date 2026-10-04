@@ -83,3 +83,36 @@ permalink: /work/
 <section class="work-end">
   <p>More work will appear here as it becomes ready to share.</p>
 </section>
+
+<script>
+(function () {
+  var tiles = document.querySelectorAll('.work-tile');
+  if (!tiles.length) return;
+
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!reduced && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    tiles.forEach(function (tile) { observer.observe(tile); });
+  } else {
+    tiles.forEach(function (tile) { tile.classList.add('is-visible'); });
+  }
+
+  if (reduced) return;
+
+  tiles.forEach(function (tile) {
+    tile.addEventListener('pointermove', function (event) {
+      var rect = tile.getBoundingClientRect();
+      tile.style.setProperty('--mouse-x', ((event.clientX - rect.left) / rect.width * 100) + '%');
+      tile.style.setProperty('--mouse-y', ((event.clientY - rect.top) / rect.height * 100) + '%');
+    });
+  });
+}());
+</script>
