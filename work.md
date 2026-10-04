@@ -112,7 +112,7 @@ permalink: /work/
       </div></div>
   </article>
 
-  <article class="work-tile work-tile--afyakongwe" data-work-card>
+  <article class="work-tile work-tile--afyakongwe" data-work-card style="background-image: url('https://images.pexels.com/photos/30678595/pexels-photo-30678595.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; background-position: center;">
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">+</span>
       <span class="work-tile-label">Health</span>
