@@ -7,7 +7,7 @@ permalink: /work/
 
 <header class="work-intro">
   <p class="work-kicker">Index</p>
-  <p class="work-lede">Tools, research, writing, and experiments across health, technology, learning, and ideas.</p>
+  <p class="work-lede">Tools, research, writing, and experiments across health, technology, learning, and ideas—things I’ve built, studied, watched, discussed, used, and made.</p>
 </header>
 
 <section class="work-showcase" aria-label="Index">
