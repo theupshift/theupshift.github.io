@@ -760,7 +760,7 @@ article > header > h1 {
   visibility: hidden;
   transform: scaleX(.94);
   transform-origin: right center;
-  transition: opacity .18s ease, transform .22s cubic-bezier(.2,.8,.2,1), box-shadow .22s ease, visibility .18s ease;
+  transition: opacity .18s ease, transform .20s cubic-bezier(.22,.8,.22,1), box-shadow .20s ease, visibility .18s ease;
 }
 .site-menu.is-open .site-menu-panel {
   opacity: 1;
