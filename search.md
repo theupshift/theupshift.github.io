@@ -23,7 +23,7 @@ permalink: /search/
     resultsContainer: document.getElementById('results-container'),
     json: '/search.json',
     searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-    noResultsText: 'No matching essays found. Try another search.',
+    noResultsText: '<li class="search-empty">No matching essays found. Try another search.</li>',
     limit: 10,
     fuzzy: false
   });
