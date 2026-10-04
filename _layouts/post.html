@@ -15,5 +15,5 @@ layout: default
 	</header>
 	
 	{{ content }}
-</article>
+</article>\n\n<nav class="article-navigation" aria-label="Article navigation">\n  <div class="article-previous">\n    {% if page.previous %}<a href="{{ page.previous.url }}"><span class="article-nav-label">← Previous essay</span>{{ page.previous.title | default: "Earlier post" }}</a>{% endif %}\n  </div>\n  <div class="article-next">\n    {% if page.next %}<a href="{{ page.next.url }}"><span class="article-nav-label">Next essay →</span>{{ page.next.title | default: "Later post" }}</a>{% endif %}\n  </div>\n</nav>\n\n<p class="archive-shortcuts"><a href="/archive.html">Browse the archive →</a><a href="/categories/">Explore topics →</a></p>
 
