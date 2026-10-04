@@ -766,7 +766,7 @@ article > header > h1 {
   opacity: 1;
   visibility: visible;
   transform: scaleX(1);
-  box-shadow: 0 7px 20px rgba(25,18,19,.14);
+  box-shadow: 0 5px 16px rgba(25,18,19,.10);
 }
 .site-menu-panel a {
   display: inline-flex;
