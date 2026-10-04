@@ -6,7 +6,6 @@ permalink: /work/
 ---
 
 <header class="work-intro">
-  <p class="work-kicker">Index</p>
   <p class="work-lede">Things I’ve enjoyed, used, or built while learning.</p>
 </header>
 
