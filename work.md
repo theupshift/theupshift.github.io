@@ -7,7 +7,6 @@ permalink: /work/
 
 <header class="work-intro">
   <p class="work-kicker">Index</p>
-  <h1>Things I've built,<br>studied, and made.</h1>
   <p class="work-lede">Tools, research, writing, and experiments across health, technology, learning, and ideas.</p>
 </header>
 
