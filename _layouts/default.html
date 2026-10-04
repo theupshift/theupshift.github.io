@@ -23,9 +23,9 @@
   <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101245280);</script>
   <script async src="https://static.getclicky.com/js"></script>
 </head>
-<body id="top"{% if page.id_attribute %} id="{{ page.id_attribute }}"{% endif %}>
+<body{% if page.id_attribute %} id="{{ page.id_attribute }}"{% endif %}>
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <nav class="constrained site-nav" aria-label="Main navigation">
+  <nav id="top" class="constrained site-nav" aria-label="Main navigation">
     <div class="nav-left">
       <a href="/search/" aria-label="Search the site" title="Search">⌕</a>
     </div>
