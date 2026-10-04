@@ -382,7 +382,7 @@ nav.constrained.site-nav {
 
 main.constrained {
   flex: 1 0 auto;
-  padding: 40px 0 0px;
+  padding: 40px 0 0;
   min-width: 0;
 }
 
@@ -524,7 +524,7 @@ footer.constrained.site-footer {
   .site-nav .nav-right { gap: 8px; }
   .site-nav .nav-right .nav-text-link { display: none; }
   .site-nav .subscribe-btn { padding: 7px 9px; font-size: 12px; }
-  main.constrained { padding: 28px 0 44px; }
+  main.constrained { padding: 28px 0 0; }
   #words section { padding: 24px 0; }
   article > header { margin-bottom: 24px; }
   .site-footer .footer-share { display: inline-block; margin-top: 8px; }
