@@ -230,7 +230,7 @@ footer a, footer a:hover {
 :root {
   --color-accent: 179, 83, 82;
   --color-text: 32, 31, 29;
-  --color-background: 249, 247, 242;
+  --color-background: 253, 252, 249;
   --color-muted: 105, 101, 94;
   --color-rule: rgba(var(--color-text), .14);
   --reading-width: 680px;
