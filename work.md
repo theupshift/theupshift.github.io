@@ -61,7 +61,7 @@ permalink: /work/
     </div>
   </article>
 
-  <article class="work-tile" data-work-card>
+  <article class="work-tile work-tile--book" data-work-card>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">▱</span>
       <span class="work-tile-label">Book</span>
@@ -71,7 +71,48 @@ permalink: /work/
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
-      <p>A book-length project is in progress. Details and a reading link will appear here when it is ready to share.</p>
+      <div class="book-carousel" data-book-carousel>
+        <div class="book-carousel-viewport">
+          <article class="book-slide is-active">
+            <img src="https://books.google.com/books/content?id=UEM5EQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Book cover of My Friends by Fredrik Backman" loading="lazy">
+            <div class="book-slide-copy">
+              <p class="publication-meta">My Friends · Fredrik Backman</p>
+              <p>Four teenagers form an enduring bond that later changes an aspiring artist’s life through a mysterious painting.</p>
+              <a href="https://www.goodreads.com/book/show/246100244-my-friends" target="_blank" rel="noopener noreferrer">Goodreads ↗</a>
+            </div>
+          </article>
+          <article class="book-slide">
+            <img src="https://books.google.com/books/content?id=BfgeEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Book cover of Atmosphere by Taylor Jenkins Reid" loading="lazy">
+            <div class="book-slide-copy">
+              <p class="publication-meta">Atmosphere · Taylor Jenkins Reid</p>
+              <p>An ambitious young woman joins NASA’s space shuttle programme and discovers an unexpected passion and love.</p>
+              <a href="https://www.goodreads.com/book/show/220818107.Atmosphere" target="_blank" rel="noopener noreferrer">Goodreads ↗</a>
+            </div>
+          </article>
+          <article class="book-slide">
+            <img src="https://books.google.com/books/content?id=rUoYEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Book cover of The Correspondent by Virginia Evans" loading="lazy">
+            <div class="book-slide-copy">
+              <p class="publication-meta">The Correspondent · Virginia Evans</p>
+              <p>A woman’s letters become a way to reckon with memory, relationships, and a painful chapter of her past.</p>
+              <a href="https://www.goodreads.com/book/show/237868416-the-correspondent" target="_blank" rel="noopener noreferrer">Goodreads ↗</a>
+            </div>
+          </article>
+          <article class="book-slide">
+            <img src="https://books.google.com/books/content?id=dSJP0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Book cover of The Names by Florence Knapp" loading="lazy">
+            <div class="book-slide-copy">
+              <p class="publication-meta">The Names · Florence Knapp</p>
+              <p>One mother’s decision about her son’s name opens three possible lives and three very different futures.</p>
+              <a href="https://www.goodreads.com/book/show/220763602-the-names" target="_blank" rel="noopener noreferrer">Goodreads ↗</a>
+            </div>
+          </article>
+        </div>
+        <div class="book-carousel-controls" aria-label="Book carousel controls">
+          <button type="button" class="book-carousel-button" data-book-prev aria-label="Previous book">←</button>
+          <span class="book-carousel-count" data-book-count>1 / 4</span>
+          <button type="button" class="book-carousel-button" data-book-next aria-label="Next book">→</button>
+        </div>
+      </div>
+      <p class="book-carousel-source">Selected from the <a href="https://www.goodreads.com/choiceawards/readers-favorite-fiction-books-2025" target="_blank" rel="noopener noreferrer">Goodreads Readers’ Favorite Fiction 2025</a> list.</p>
     </div>
   </article>
 
@@ -171,4 +212,20 @@ permalink: /work/
     cards.forEach(function (card) { card.classList.add('is-visible'); });
   }
 }());
+
+<script>
+document.querySelectorAll("[data-book-carousel]").forEach(function (carousel) {
+  const slides = Array.from(carousel.querySelectorAll(".book-slide"));
+  const count = carousel.querySelector("[data-book-count]");
+  let index = 0;
+  function showBook(nextIndex) {
+    index = (nextIndex + slides.length) % slides.length;
+    slides.forEach(function (slide, i) { slide.classList.toggle("is-active", i === index); });
+    count.textContent = (index + 1) + " / " + slides.length;
+  }
+  carousel.querySelector("[data-book-prev]").addEventListener("click", function () { showBook(index - 1); });
+  carousel.querySelector("[data-book-next]").addEventListener("click", function () { showBook(index + 1); });
+});
+</script>
+
 </script>
