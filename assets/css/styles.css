@@ -1709,3 +1709,15 @@ article > header > h1 {
 .work-tile--afyakongwe.is-expanded .work-tile-trigger {
   background: rgba(var(--color-background), .92);
 }
+
+
+/* One uniform full-card light surface for Afya Kongwe. */
+.work-tile--afyakongwe {
+  background: rgb(var(--color-background));
+}
+.work-tile--afyakongwe .work-tile-trigger,
+.work-tile--afyakongwe .work-tile-details,
+.work-tile--afyakongwe:hover .work-tile-trigger,
+.work-tile--afyakongwe.is-expanded .work-tile-trigger {
+  background: transparent;
+}
