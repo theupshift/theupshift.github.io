@@ -11,6 +11,21 @@
   {% feed_meta %}
   <link href="https://micro.blog/8thmagic" rel="me">
   <link rel="stylesheet" href="/assets/css/fonts.css">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('upshift-theme');
+        if (stored === 'light' || stored === 'dark') {
+          document.documentElement.setAttribute('data-theme', stored);
+          return;
+        }
+      } catch (error) {}
+      var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var hour = new Date().getHours();
+      var timeDark = hour < 6 || hour >= 18;
+      document.documentElement.setAttribute('data-theme', (systemDark || timeDark) ? 'dark' : 'light');
+    }());
+  </script>
   <link rel="stylesheet" href="/assets/css/styles.css?v=20261004-compact-nav">
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
   {% seo %}
@@ -65,14 +80,12 @@
       var root = document.documentElement;
       var button = document.getElementById('theme-toggle');
       var metaTheme = document.querySelector('meta[name="theme-color"]');
-      var storedTheme = null;
-      try { storedTheme = localStorage.getItem('upshift-theme'); } catch (error) {}
-      if (storedTheme === 'light' || storedTheme === 'dark') root.setAttribute('data-theme', storedTheme);
-
       function currentTheme() {
         var explicit = root.getAttribute('data-theme');
         if (explicit) return explicit;
-        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var hour = new Date().getHours();
+        return (systemDark || hour < 6 || hour >= 18) ? 'dark' : 'light';
       }
       function updateButton() {
         var dark = currentTheme() === 'dark';
