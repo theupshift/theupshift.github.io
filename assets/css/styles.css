@@ -1664,3 +1664,19 @@ article > header > h1 {
   background: rgba(var(--color-background), .92);
   color: rgb(var(--color-text));
 }
+
+
+/* Center the Readings carousel content vertically. */
+.work-tile--book .book-carousel-viewport {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 210px;
+}
+.work-tile--book .book-slide {
+  width: min(100%, 520px);
+  align-items: center;
+}
+.work-tile--book .book-slide-copy {
+  padding-top: 8px;
+}
