@@ -789,11 +789,15 @@ article > header > h1 {
 @media (max-width: 600px) {
   .site-menu-panel {
     right: 0;
+    width: calc(100vw - 40px);
     max-width: calc(100vw - 40px);
-    overflow-x: auto;
+    min-height: 34px;
+    overflow: hidden;
+    justify-content: flex-end;
   }
   .site-menu-panel a {
-    padding-left: 10px;
-    padding-right: 10px;
+    flex: 0 0 auto;
+    min-height: 34px;
+    padding: 7px 10px;
   }
 }
