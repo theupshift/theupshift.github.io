@@ -1623,3 +1623,34 @@ article > header > h1 {
   );
 }
 
+
+
+/* Dark Readings carousel panel for stronger contrast. */
+.work-tile--book .work-tile-details {
+  background: rgba(20, 20, 20, .92);
+  color: #fff;
+}
+.work-tile--book .book-slide-copy,
+.work-tile--book .book-slide-copy p,
+.work-tile--book .publication-meta,
+.work-tile--book .book-carousel-count,
+.work-tile--book .book-carousel-source {
+  color: #fff;
+}
+.work-tile--book .book-slide-copy a,
+.work-tile--book .book-carousel-source a {
+  color: #fff;
+  text-decoration-color: rgba(255,255,255,.45);
+}
+.work-tile--book .book-carousel-controls {
+  border-top-color: rgba(255,255,255,.22);
+}
+.work-tile--book .book-carousel-button {
+  color: #fff;
+  border-color: rgba(255,255,255,.35);
+}
+.work-tile--book .book-carousel-button:hover {
+  color: #fff;
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.5);
+}
