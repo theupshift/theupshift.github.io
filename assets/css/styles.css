@@ -1575,3 +1575,26 @@ article > header > h1 {
 .work-publication-item p:last-child {
   font-size: .72rem;
 }
+
+
+/* Let the Readings card image show through the card content. */
+.work-tile--book {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.work-tile--book .work-tile-trigger {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-background), .88),
+    rgba(var(--color-background), .64)
+  );
+}
+.work-tile--book:hover .work-tile-trigger,
+.work-tile--book.is-expanded .work-tile-trigger {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-background), .78),
+    rgba(var(--color-background), .52)
+  );
+}
