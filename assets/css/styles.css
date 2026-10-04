@@ -693,3 +693,7 @@ article > header,
 article > header h1 {
   text-align: center;
 }
+
+.page-intro h1 {
+  text-align: center;
+}
