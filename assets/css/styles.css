@@ -475,8 +475,8 @@ article .footnotes {
 article .footnotes p { margin-bottom: .8em; }
 
 .pagination {
-  margin-top: 20px;
-  padding: 20px 0;
+  margin-top: 40px;
+  padding: 8px 0;
   border-top: 1px solid var(--color-rule);
 }
 .pagination-btn {
