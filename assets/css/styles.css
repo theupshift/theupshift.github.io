@@ -305,7 +305,7 @@ nav.constrained.site-nav {
   gap: 16px;
   width: 100%;
   max-width: var(--reading-width);
-  padding: 100px 0 48px;
+  padding: 24px 0 18px;
   margin: 0 auto;
   text-align: left;
   border-bottom: 1px solid var(--color-rule);
@@ -508,7 +508,7 @@ footer.constrained.site-footer {
   nav.constrained.site-nav {
     grid-template-columns: auto 1fr auto;
     gap: 10px;
-    padding: 20px 0 16px;
+    padding: 16px 0 12px;
   }
   .site-nav .nav-center { font-size: 14px; }
   .site-nav .nav-left a { width: 32px; height: 32px; }
