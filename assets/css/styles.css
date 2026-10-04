@@ -1399,6 +1399,28 @@ article > header > h1 {
   }
 }
 
+
+/* Book card — compact editorial carousel. */
+.work-tile--book .work-tile-details { max-height: 320px; overflow-y: auto; }
+.book-carousel { width: 100%; }
+.book-carousel-viewport { position: relative; min-height: 190px; }
+.book-slide { display: none; grid-template-columns: 92px minmax(0, 1fr); gap: 18px; align-items: start; }
+.book-slide.is-active { display: grid; }
+.book-slide img { display: block; width: 92px; height: 138px; border-radius: 6px; object-fit: cover; box-shadow: 0 8px 18px rgba(25,18,19,.12); }
+.book-slide-copy { min-width: 0; }
+.book-slide-copy .publication-meta { margin: 0 0 8px; }
+.book-slide-copy p:not(.publication-meta) { margin: 0 0 12px; color: rgb(var(--color-muted)); line-height: 1.55; }
+.book-slide-copy a, .book-carousel-source a { color: rgb(var(--color-text)); text-decoration: underline; text-decoration-color: rgba(var(--color-text), .25); text-underline-offset: 3px; }
+.book-carousel-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--color-rule); }
+.book-carousel-button { display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid var(--color-rule); border-radius: 50%; color: rgb(var(--color-text)); background: transparent; cursor: pointer; font: inherit; }
+.book-carousel-button:hover { color: #fff; background: rgb(var(--color-accent)); border-color: rgb(var(--color-accent)); }
+.book-carousel-count { color: rgb(var(--color-muted)); font-family: var(--font-small-caps); font-size: 11px; }
+.book-carousel-source { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--color-rule); color: rgb(var(--color-muted)); font-size: .82rem; }
+@media (max-width: 600px) {
+  .book-slide { grid-template-columns: 78px minmax(0, 1fr); gap: 14px; }
+  .book-slide img { width: 78px; height: 118px; }
+}
+
 /* Focused card mode — selecting one card hides the others until it is closed. */
 .work-showcase:has(.work-tile.is-expanded) .work-tile:not(.is-expanded) {
   display: none;
