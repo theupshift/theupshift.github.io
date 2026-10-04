@@ -112,17 +112,18 @@ permalink: /work/
       </div></div>
   </article>
 
-  <article class="work-tile" data-work-card>
+  <article class="work-tile work-tile--afyakongwe" data-work-card>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">+</span>
       <span class="work-tile-label">Health</span>
       <span class="work-tile-heading">AfyaKongwe</span>
-      <span class="work-tile-summary">Health ideas made more accessible beyond conventional academic spaces.</span>
-      <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
+      <span class="work-tile-summary">Health education, ideas, and conversations shared beyond conventional academic spaces.</span>
+      <span class="work-tile-link">Instagram <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
-      <p>A health project focused on making useful health knowledge easier to discover and engage with.</p>
+      <p>A health-focused space for making useful knowledge easier to discover, understand, and engage with.</p>
+      <div class="work-links"><a href="https://www.instagram.com/afya.kongwe/" target="_blank" rel="noopener noreferrer">Visit AfyaKongwe on Instagram ↗</a></div>
     </div>
   </article>
 
