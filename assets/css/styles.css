@@ -391,7 +391,7 @@ main.constrained {
   border-bottom: 1px solid var(--color-rule);
 }
 #words section:first-child { padding-top: 0; }
-#words section:last-child { border-bottom: 0; }
+#words section:last-of-type { border-bottom: 0; }
 #words section header { text-align: left; }
 #words h1 {
   margin: 0 0 8px;
