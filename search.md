@@ -12,7 +12,6 @@ permalink: /search/
     <input type="search" id="search-input" placeholder="Try a topic or title…" autocomplete="off" aria-describedby="search-help" />
   </div>
 
-
   <ul id="results-container" aria-label="Search results" aria-live="polite"></ul>
 </section>
 
