@@ -1731,13 +1731,18 @@ article > header > h1 {
 }
 
 
-/* Search page — minimal editorial interface. */
+/* Search page — quiet editorial interface aligned with the writing column. */
 .search-page {
   min-height: 58vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding: 36px 0 64px;
+}
+
+.search-page > h1 {
+  margin: 0 0 22px;
+  font-size: 1.35rem;
+  line-height: 1.25;
+  font-weight: 400;
+  text-align: center;
 }
 
 .search-field {
@@ -1755,7 +1760,7 @@ article > header > h1 {
   color: rgb(var(--color-text));
   background: transparent;
   font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 3vw, 1.7rem);
+  font-size: clamp(1.15rem, 2.5vw, 1.4rem);
   line-height: 1.35;
   outline: none;
   box-shadow: none;
@@ -1770,15 +1775,6 @@ article > header > h1 {
 .search-field #search-input:focus {
   border-bottom-color: rgb(var(--color-accent));
   outline: none;
-}
-
-.search-note {
-  margin: 28px 0 0;
-  color: rgb(var(--color-muted));
-  font-family: var(--font-small-caps);
-  font-size: .82rem;
-  line-height: 1.6;
-  text-align: center;
 }
 
 #results-container {
@@ -1824,14 +1820,14 @@ article > header > h1 {
     padding: 24px 0 44px;
   }
 
-  .search-field #search-input {
-    padding-bottom: 12px;
-    font-size: 1.25rem;
+  .search-page > h1 {
+    margin-bottom: 18px;
+    font-size: 1.2rem;
   }
 
-  .search-note {
-    margin-top: 24px;
-    font-size: .76rem;
+  .search-field #search-input {
+    padding-bottom: 12px;
+    font-size: 1.2rem;
   }
 
   #results-container {
