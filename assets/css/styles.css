@@ -1775,7 +1775,7 @@ article > header > h1 {
 
 #results-container {
   width: 100%;
-  margin: 34px 0 0;
+  margin: 18px 0 0;
 }
 
 #results-container:empty {
@@ -1879,7 +1879,7 @@ article > header > h1 {
   }
 
   #results-container {
-    margin-top: 28px;
+    margin-top: 14px;
   }
 
   #results-container li {
