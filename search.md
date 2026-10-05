@@ -23,7 +23,7 @@ permalink: /search/
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
     json: '/search.json',
-    searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+    searchResultTemplate: '<li class="search-result"><a href="{url}"><span class="search-result-image" style="background-image: url(\'{image}\')"></span><span class="search-result-copy"><span class="search-result-title">{title}</span><span class="search-result-description">{description}</span></span></a></li>',
     noResultsText: '<li>No results found.</li>',
     limit: 10,
     fuzzy: false
