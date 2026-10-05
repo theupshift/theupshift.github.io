@@ -1783,22 +1783,30 @@ article > header > h1 {
 }
 
 #results-container li {
-  padding: 12px 0;
-  border: 0;
-  border-bottom: 1px solid var(--color-rule);
-  border-radius: 0;
+  min-height: 112px;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid var(--color-rule);
+  border-radius: 18px;
+  background: rgba(var(--color-background), .72);
+  box-shadow: 0 8px 24px rgba(var(--color-text), .05);
   font-size: .9rem;
+  overflow: hidden;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
 }
 
 #results-container li:first-child {
-  border-top: 1px solid var(--color-rule);
+  margin-top: 10px;
 }
 
 #results-container li a {
   display: grid;
-  grid-template-columns: 86px minmax(0, 1fr);
+  grid-template-columns: 104px minmax(0, 1fr);
   gap: 16px;
-  align-items: center;
+  align-items: stretch;
+  height: 100%;
+  min-height: 86px;
   background: none;
   text-shadow: none;
   text-decoration: none;
@@ -1806,12 +1814,14 @@ article > header > h1 {
 
 .search-result-image {
   display: block;
-  width: 86px;
-  height: 58px;
-  border: 1px solid var(--color-rule);
+  width: 104px;
+  height: 86px;
+  border: 0;
+  border-radius: 12px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: rgba(var(--color-text), .05);
 }
 
 .search-result-copy {
@@ -1829,15 +1839,17 @@ article > header > h1 {
   display: -webkit-box;
   overflow: hidden;
   color: rgb(var(--color-muted));
-  font-size: .8rem;
-  line-height: 1.45;
+  font-size: .78rem;
+  line-height: 1.42;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
 
 #results-container li:hover,
 #results-container li:focus-within {
-  border-color: var(--color-rule);
+  border-color: rgba(var(--color-accent), .42);
+  box-shadow: 0 12px 28px rgba(var(--color-text), .08);
+  transform: translateY(-1px);
 }
 
 #results-container li a:hover .search-result-title {
@@ -1870,14 +1882,22 @@ article > header > h1 {
     margin-top: 28px;
   }
 
+  #results-container li {
+    min-height: 96px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
   #results-container li a {
-    grid-template-columns: 72px minmax(0, 1fr);
+    grid-template-columns: 76px minmax(0, 1fr);
     gap: 12px;
+    min-height: 74px;
   }
 
   .search-result-image {
-    width: 72px;
-    height: 52px;
+    width: 76px;
+    height: 74px;
+    border-radius: 10px;
   }
 }
 
