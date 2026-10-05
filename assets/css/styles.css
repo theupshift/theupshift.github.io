@@ -1734,15 +1734,11 @@ article > header > h1 {
 /* Search page — quiet editorial interface aligned with the writing column. */
 .search-page {
   min-height: 58vh;
-  padding: 36px 0 64px;
+  padding: 8px 0 64px;
 }
 
 .search-page > h1 {
-  margin: 0 0 22px;
-  font-size: 1.35rem;
-  line-height: 1.25;
-  font-weight: 400;
-  text-align: center;
+  margin: 0;
 }
 
 .search-field {
@@ -1820,14 +1816,14 @@ article > header > h1 {
     padding: 24px 0 44px;
   }
 
-  .search-page > h1 {
-    margin-bottom: 18px;
-    font-size: 1.2rem;
-  }
-
   .search-field #search-input {
     padding-bottom: 12px;
     font-size: 1.2rem;
+  }
+
+  .search-note {
+    margin-top: 18px;
+    font-size: .76rem;
   }
 
   #results-container {
