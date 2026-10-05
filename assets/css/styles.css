@@ -308,7 +308,7 @@ nav.constrained.site-nav {
   gap: 16px;
   width: 100%;
   max-width: var(--reading-width);
-  padding: 48px 0;
+  padding: 42px 0;
   margin: 0 auto;
   text-align: left;
   background: transparent;
@@ -326,7 +326,7 @@ nav.constrained.site-nav::after {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 20px;
+  bottom: 27px;
   height: 1px;
   background: var(--color-rule);
   pointer-events: none;
@@ -568,7 +568,7 @@ footer.constrained.site-footer {
   nav.constrained.site-nav {
     grid-template-columns: auto 1fr auto;
     gap: 10px;
-    padding: 48px 0;
+    padding: 42px 0;
     border-radius: 0;
   }
   nav.constrained.site-nav.is-scrolled {
