@@ -2008,19 +2008,19 @@ article > header > h1 {
 .work-tile--book .work-tile-trigger,
 .work-tile--book:hover .work-tile-trigger,
 .work-tile--book.is-expanded .work-tile-trigger {
-  background: rgba(var(--color-background), .30);
-  -webkit-backdrop-filter: blur(2px) saturate(103%);
-  backdrop-filter: blur(2px) saturate(103%);
+  background: rgba(var(--color-background), .18);
+  -webkit-backdrop-filter: blur(1px) saturate(102%);
+  backdrop-filter: blur(1px) saturate(102%);
 }
 
 .work-tile--book::after {
-  background: rgba(var(--color-background), .06);
-  -webkit-backdrop-filter: blur(1px) saturate(95%);
-  backdrop-filter: blur(1px) saturate(95%);
+  background: rgba(var(--color-background), .03);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 /* Keep the expanded carousel readable without obscuring the photography. */
 .work-tile--book.is-expanded .work-tile-details {
-  background: rgba(var(--color-background), .78);
+  background: rgba(var(--color-background), .70);
 }
 
