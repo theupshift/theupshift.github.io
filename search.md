@@ -7,8 +7,6 @@ permalink: /search/
 <section class="search-page" aria-labelledby="search-page-title">
   <h1 id="search-page-title" class="visually-hidden">Search</h1>
 
-  <p id="search-help" class="search-note">Answers are easy, but perspective transforms.</p>
-
   <div class="search-field">
     <label class="visually-hidden" for="search-input">Search</label>
     <input type="search" id="search-input" placeholder="Try a topic or title…" autocomplete="off" aria-describedby="search-help" />
