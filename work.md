@@ -135,8 +135,8 @@ permalink: /work/
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
-      <p>A simulation game about difficult choices when allocating limited health resources in rural communities.</p>
-      <p>An interactive learning activity that simulates health resource allocation and the trade-offs faced by rural communities. <a href="/words/education/health/simulation/2025/09/17/healthsystems/">Explore the game and its guide →</a></p>
+      <p>There is never enough to go around. Someone gets more. Someone gets less. Every choice has a consequence.</p>
+      <p>This game puts you in the middle of those choices, where limited resources meet real needs in a rural community. What would you choose? <a href="/words/education/health/simulation/2025/09/17/healthsystems/">Play now →</a></p>
     </div>
   </article>
 </section>
