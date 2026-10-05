@@ -536,6 +536,10 @@ footer.constrained.site-footer {
   nav.constrained.site-nav {
     grid-template-columns: auto 1fr auto;
     gap: 10px;
+    padding: 48px 0;
+    border-radius: 0;
+  }
+  nav.constrained.site-nav.is-scrolled {
     padding: 12px 10px;
     border-radius: 16px;
   }
