@@ -314,8 +314,11 @@ nav.constrained.site-nav {
   padding: 24px 12px 18px;
   margin: 0 auto;
   text-align: left;
-  border-bottom: 1px solid var(--color-rule);
+  border: 1px solid rgba(255, 255, 255, .42);
+  border-radius: 18px;
   font-size: 15px;
+  box-shadow: 0 8px 30px rgba(25, 18, 19, .08);
+  transition: border-radius .25s ease, box-shadow .25s ease, background .25s ease;
 }
 
 .site-nav .nav-left,
@@ -523,7 +526,8 @@ footer.constrained.site-footer {
   nav.constrained.site-nav {
     grid-template-columns: auto 1fr auto;
     gap: 10px;
-    padding: 16px 10px 12px;
+    padding: 12px 10px;
+    border-radius: 16px;
   }
   .site-nav .nav-center { font-size: 14px; }
   .site-nav .nav-left a { width: 32px; height: 32px; }
