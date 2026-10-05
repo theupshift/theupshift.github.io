@@ -1883,11 +1883,9 @@ article > header > h1 {
 .work-tile--video .work-tile-trigger,
 .work-tile--book .work-tile-trigger,
 .work-tile--afyakongwe .work-tile-trigger {
-  background: linear-gradient(
-    90deg,
-    rgba(var(--color-background), .90),
-    rgba(var(--color-background), .68)
-  );
+  background: rgba(var(--color-background), .76);
+  -webkit-backdrop-filter: blur(12px) saturate(105%);
+  backdrop-filter: blur(12px) saturate(105%);
 }
 
 .work-tile--video:hover .work-tile-trigger,
@@ -1896,11 +1894,7 @@ article > header > h1 {
 .work-tile--book.is-expanded .work-tile-trigger,
 .work-tile--afyakongwe:hover .work-tile-trigger,
 .work-tile--afyakongwe.is-expanded .work-tile-trigger {
-  background: linear-gradient(
-    90deg,
-    rgba(var(--color-background), .78),
-    rgba(var(--color-background), .54)
-  );
+  background: rgba(var(--color-background), .64);
 }
 
 .work-tile--book .work-tile-details,
