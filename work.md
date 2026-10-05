@@ -34,7 +34,7 @@ permalink: /work/
       <span class="work-tile-label">Research</span>
       <span class="work-tile-heading">Publications</span>
       <span class="work-tile-summary">Research on health systems, chronic diseases, digital health, and technology.</span>
-      <span class="work-tile-link">Read <span aria-hidden="true">↗</span></span>
+      <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
@@ -67,7 +67,8 @@ permalink: /work/
       <span class="work-tile-label">Book</span>
       <span class="work-tile-heading">Readings</span>
       <span class="work-tile-summary">A record of what’s currently open, underlined, or simply on my mind.</span>
-            <span class="work-expand-mark" aria-hidden="true">+</span>
+      <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
+      <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
       <div class="book-carousel" data-book-carousel>
@@ -117,7 +118,7 @@ permalink: /work/
       <span class="work-tile-label">Health</span>
       <span class="work-tile-heading">Afya Kongwe</span>
       <span class="work-tile-summary">Compassionate home-based care for people living with chronic illness — bringing comfort, dignity, and quality health services closer to home in Tanzania.</span>
-      <span class="work-tile-link">↗</span>
+      <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
@@ -132,6 +133,7 @@ permalink: /work/
       <span class="work-tile-label">Learning</span>
       <span class="work-tile-heading">Health Commons</span>
       <span class="work-tile-summary">A simulation game about difficult choices when allocating limited health resources in rural communities.</span>
+      <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
