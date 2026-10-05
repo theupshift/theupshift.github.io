@@ -1886,6 +1886,8 @@ article > header > h1 {
   background: rgba(var(--color-background), .64);
   -webkit-backdrop-filter: blur(12px) saturate(105%);
   backdrop-filter: blur(12px) saturate(105%);
+  height: 100%;
+  min-height: 255px;
 }
 
 .work-tile--video .work-tile-trigger {
