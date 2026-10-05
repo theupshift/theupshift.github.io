@@ -1878,6 +1878,8 @@ article > header > h1 {
 
   .search-page:has(#results-container:not(:empty)) .search-note {
   width: 100%;
+  display: block;
+  box-sizing: border-box;
   display: none;
 }
 
