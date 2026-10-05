@@ -1907,6 +1907,8 @@ article > header > h1 {
 
 .work-tile--book .work-tile-details,
 .work-tile--afyakongwe .work-tile-details {
+  position: relative;
+  z-index: 1;
   background: rgba(var(--color-background), .92);
   color: rgb(var(--color-text));
 }
