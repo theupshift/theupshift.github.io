@@ -2046,6 +2046,16 @@ article > header > h1 {
 .article-navigation .article-next {
   text-align: right;
 }
+.article-navigation .article-previous,
+.article-navigation .article-next {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.article-navigation .article-previous a,
+.article-navigation .article-next a {
+  height: 100%;
+}
 .article-navigation .article-nav-label {
   color: rgb(var(--color-accent));
 }
