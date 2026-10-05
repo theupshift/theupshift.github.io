@@ -2004,23 +2004,32 @@ article > header > h1 {
   justify-content: center;
 }
 
-/* Refine Readings photography: clearer image, lighter overlay, readable text. */
+/* Apply the same transparent photographic treatment across background cards. */
+.work-tile--video .work-tile-trigger,
 .work-tile--book .work-tile-trigger,
+.work-tile--afyakongwe .work-tile-trigger,
+.work-tile--video:hover .work-tile-trigger,
 .work-tile--book:hover .work-tile-trigger,
-.work-tile--book.is-expanded .work-tile-trigger {
+.work-tile--afyakongwe:hover .work-tile-trigger,
+.work-tile--video.is-expanded .work-tile-trigger,
+.work-tile--book.is-expanded .work-tile-trigger,
+.work-tile--afyakongwe.is-expanded .work-tile-trigger {
   background: rgba(var(--color-background), .18);
   -webkit-backdrop-filter: blur(1px) saturate(102%);
   backdrop-filter: blur(1px) saturate(102%);
 }
 
-.work-tile--book::after {
+.work-tile--book::after,
+.work-tile--afyakongwe::after {
   background: rgba(var(--color-background), .03);
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
 
-/* Keep the expanded carousel readable without obscuring the photography. */
-.work-tile--book.is-expanded .work-tile-details {
+/* Keep expanded content readable without obscuring the photographic background. */
+.work-tile--video.is-expanded .work-tile-details,
+.work-tile--book.is-expanded .work-tile-details,
+.work-tile--afyakongwe.is-expanded .work-tile-details {
   background: rgba(var(--color-background), .70);
 }
 
