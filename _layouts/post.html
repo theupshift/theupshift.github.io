@@ -16,10 +16,10 @@ layout: default
 
 <nav class="article-navigation" aria-label="Article navigation">
   <div class="article-previous">
-    {% if page.previous %}<a href="{{ page.previous.url }}"><span class="article-nav-label">← Previous essay</span>{{ page.previous.title | default: "Earlier post" }}</a>{% endif %}
+    {% if page.previous %}<a href="{{ page.previous.url }}"><span class="article-nav-label">← Previous</span>{{ page.previous.title | default: "Earlier post" }}</a>{% endif %}
   </div>
   <div class="article-next">
-    {% if page.next %}<a href="{{ page.next.url }}"><span class="article-nav-label">Next essay →</span>{{ page.next.title | default: "Later post" }}</a>{% endif %}
+    {% if page.next %}<a href="{{ page.next.url }}"><span class="article-nav-label">Next →</span>{{ page.next.title | default: "Later post" }}</a>{% endif %}
   </div>
 </nav>
 
