@@ -321,6 +321,21 @@ nav.constrained.site-nav {
   transition: background .35s ease, border-color .35s ease, border-radius .35s cubic-bezier(.22,.8,.22,1), box-shadow .35s ease, -webkit-backdrop-filter .35s ease, backdrop-filter .35s ease;
 }
 
+nav.constrained.site-nav::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--color-rule);
+  pointer-events: none;
+}
+
+nav.constrained.site-nav.is-scrolled::after {
+  opacity: 0;
+}
+
 nav.constrained.site-nav.is-scrolled {
   width: 100%;
   max-width: var(--reading-width);
