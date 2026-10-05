@@ -1,3 +1,11 @@
+html, body {
+  background: rgb(var(--color-background));
+}
+
+html {
+  overscroll-behavior-y: none;
+}
+
 :root {
 	/*--color-accent: 196, 35, 42;*/
 	--color-accent: 179, 83, 82;
