@@ -39,21 +39,21 @@ permalink: /work/
     </button>
     <div class="work-tile-details" hidden>
       <article class="work-publication-item">
-        <p class="publication-meta">European Congress of Radiology · 2026 · Conference poster</p>
+        <p class="publication-meta">European Congress of Radiology</p>
         <h3>AI-Assisted Radiological Imaging for Climate-Exacerbated Respiratory Diseases: A Systematic Review</h3>
         <p>Hannah Sackeyfio · Mercy Monden · Reem Hassanin · Silas Frank Gamba</p>
         <p>DOI: <a href="https://doi.org/10.26044/ECR2026/C-28953" target="_blank" rel="noopener noreferrer">10.26044/ECR2026/C-28953</a></p>
       </article>
 
       <article class="work-publication-item">
-        <p class="publication-meta">Global Cardiology Science and Practice · 2026-04-30 · Journal article</p>
+        <p class="publication-meta">Global Cardiology Science and Practice</p>
         <h3>Cardiopulmonary bypass complications and their predictors in open-heart surgery at a tertiary cardiac care facility in Tanzania</h3>
         <p>Alfred Luvakule · Silas Frank Gamba · Edwin Lugazia</p>
         <p>DOI: <a href="https://doi.org/10.21542/gcsp.2026.11" target="_blank" rel="noopener noreferrer">10.21542/gcsp.2026.11</a></p>
       </article>
 
       <article class="work-publication-item">
-        <p class="publication-meta">PLOS Digital Health · 2025-11-06 · Journal article</p>
+        <p class="publication-meta">PLOS Digital Health</p>
         <h3>Integrating rare diseases into Africa's digital health strategies</h3>
         <p>Silas Frank Gamba · Catherine G Bielick · Martha Magili</p>
         <p>DOI: <a href="https://doi.org/10.1371/journal.pdig.0001073" target="_blank" rel="noopener noreferrer">10.1371/journal.pdig.0001073</a></p>
@@ -76,7 +76,7 @@ permalink: /work/
           <article class="book-slide is-active">
             <img src="https://books.google.com/books/content?id=UEM5EQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Book cover of My Friends by Fredrik Backman" loading="lazy">
             <div class="book-slide-copy">
-              <p class="publication-meta">My Friends · Fredrik Backman</p>
+              <p class="publication-meta">My Friends</p>
               <p>Four teenagers form an enduring bond that later changes an aspiring artist’s life through a mysterious painting.</p>
               
             </div>
@@ -84,7 +84,7 @@ permalink: /work/
           <article class="book-slide">
             <img src="https://books.google.com/books/content?id=BfgeEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Book cover of Atmosphere by Taylor Jenkins Reid" loading="lazy">
             <div class="book-slide-copy">
-              <p class="publication-meta">Atmosphere · Taylor Jenkins Reid</p>
+              <p class="publication-meta">Atmosphere</p>
               <p>An ambitious young woman joins NASA’s space shuttle programme and discovers an unexpected passion and love.</p>
               
             </div>
@@ -92,7 +92,7 @@ permalink: /work/
           <article class="book-slide">
             <img src="https://books.google.com/books/content?id=rUoYEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Book cover of The Correspondent by Virginia Evans" loading="lazy">
             <div class="book-slide-copy">
-              <p class="publication-meta">The Correspondent · Virginia Evans</p>
+              <p class="publication-meta">The Correspondent</p>
               <p>A woman’s letters become a way to reckon with memory, relationships, and a painful chapter of her past.</p>
               
             </div>
@@ -100,7 +100,7 @@ permalink: /work/
           <article class="book-slide">
             <img src="https://books.google.com/books/content?id=dSJP0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Book cover of The Names by Florence Knapp" loading="lazy">
             <div class="book-slide-copy">
-              <p class="publication-meta">The Names · Florence Knapp</p>
+              <p class="publication-meta">The Names</p>
               <p>One mother’s decision about her son’s name opens three possible lives and three very different futures.</p>
               
             </div>
