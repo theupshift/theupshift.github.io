@@ -34,7 +34,7 @@ permalink: /work/
       <span class="work-tile-label">Research</span>
       <span class="work-tile-heading">Publications</span>
       <span class="work-tile-summary">Research on health systems, chronic diseases, digital health, and technology.</span>
-      <span class="work-tile-link">ORCID <span aria-hidden="true">↗</span></span>
+      <span class="work-tile-link">View <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
@@ -58,6 +58,7 @@ permalink: /work/
         <p>Silas Frank Gamba · Catherine G Bielick · Martha Magili</p>
         <p>DOI: <a href="https://doi.org/10.1371/journal.pdig.0001073" target="_blank" rel="noopener noreferrer">10.1371/journal.pdig.0001073</a></p>
       </article>
+      <div class="work-links"><a href="https://orcid.org/" target="_blank" rel="noopener noreferrer">ORCID ↗</a></div>
     </div>
   </article>
 
