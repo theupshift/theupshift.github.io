@@ -34,7 +34,7 @@ permalink: /work/
       <span class="work-tile-label">Research</span>
       <span class="work-tile-heading">Publications</span>
       <span class="work-tile-summary">Research on health systems, chronic diseases, digital health, and technology.</span>
-      <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
+      <span class="work-tile-link">View <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
