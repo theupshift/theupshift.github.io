@@ -1946,3 +1946,17 @@ article > header > h1 {
     display: none;
   }
 }
+
+
+/* Keep the photographic card treatment continuous before expansion. */
+.work-tile--book::after,
+.work-tile--afyakongwe::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: rgba(var(--color-background), .24);
+  -webkit-backdrop-filter: blur(7px) saturate(92%);
+  backdrop-filter: blur(7px) saturate(92%);
+}
