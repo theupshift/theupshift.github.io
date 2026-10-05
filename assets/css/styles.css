@@ -2132,16 +2132,10 @@ article > header > h1 {
   color: rgb(var(--color-accent));
 }
 
-/* Search perspective quote — center it against the full page viewport. */
-.search-page .search-note {
-  display: block;
-  width: 100vw;
-  box-sizing: border-box;
-  margin: 0 0 12px calc(50% - 50vw);
-  text-align: center !important;
+/* Search field — bring it up on the page. */
+.search-page {
+  padding-top: 0;
 }
-
-
 
 /* Search results — tight 4px rhythm and consistent card geometry. */
 #results-container li.search-result {
