@@ -1883,7 +1883,13 @@ article > header > h1 {
 .work-tile--video .work-tile-trigger,
 .work-tile--book .work-tile-trigger,
 .work-tile--afyakongwe .work-tile-trigger {
-  background: rgba(var(--color-background), .76);
+  background: rgba(var(--color-background), .64);
+  -webkit-backdrop-filter: blur(12px) saturate(105%);
+  backdrop-filter: blur(12px) saturate(105%);
+}
+
+.work-tile--video .work-tile-trigger {
+  background: rgba(var(--color-background), .64);
   -webkit-backdrop-filter: blur(12px) saturate(105%);
   backdrop-filter: blur(12px) saturate(105%);
 }
