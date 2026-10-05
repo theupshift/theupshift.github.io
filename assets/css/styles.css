@@ -1970,3 +1970,37 @@ article > header > h1 {
   position: relative;
   z-index: 1;
 }
+
+
+/* Fix expanded Readings card layering and carousel visibility. */
+.work-tile--book.is-expanded .work-tile-trigger {
+  height: auto;
+  min-height: 255px;
+  z-index: 2;
+}
+
+.work-tile--book.is-expanded .work-tile-details {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.work-tile--book.is-expanded .book-carousel {
+  position: relative;
+  z-index: 4;
+  display: block;
+  width: 100%;
+}
+
+.work-tile--book.is-expanded .book-carousel-viewport {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 210px;
+  align-items: center;
+  justify-content: center;
+}
+
