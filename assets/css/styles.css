@@ -573,8 +573,8 @@ footer.constrained.site-footer {
     border-radius: 0;
   }
   nav.constrained.site-nav.is-scrolled {
-    top: 6px;
-    padding: 18px 0;
+    top: 4px;
+    padding: 12px 0;
     border-radius: 16px;
   }
 
