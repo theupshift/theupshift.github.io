@@ -2141,3 +2141,35 @@ article > header > h1 {
   text-align: center !important;
 }
 
+
+
+/* Search results — tight 4px rhythm and consistent card geometry. */
+#results-container li.search-result {
+  height: 112px;
+  min-height: 112px;
+  margin: 4px 0;
+  padding: 12px;
+}
+
+#results-container li.search-result .search-result-title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+#results-container li.search-result .search-result-description {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (max-width: 600px) {
+  #results-container li.search-result {
+    height: 96px;
+    min-height: 96px;
+    margin: 4px 0;
+    padding: 10px;
+  }
+}
