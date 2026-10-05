@@ -327,12 +327,25 @@ nav.constrained.site-nav.is-scrolled {
   margin-left: auto;
   margin-right: auto;
   padding: 48px 0;
+  background: transparent;
+  border: 0;
+  border-radius: 18px;
+  box-shadow: none;
+  isolation: isolate;
+}
+
+nav.constrained.site-nav.is-scrolled::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0 -24px;
+  border: 1px solid rgba(255, 255, 255, .34);
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.62);
   -webkit-backdrop-filter: blur(18px) saturate(120%);
   backdrop-filter: blur(18px) saturate(120%);
-  border: 1px solid rgba(255, 255, 255, .34);
-  border-radius: 18px;
   box-shadow: 0 6px 24px rgba(25, 18, 19, .05);
+  pointer-events: none;
 }
 
 .site-nav .nav-left,
@@ -544,11 +557,11 @@ footer.constrained.site-footer {
     border-radius: 0;
   }
   nav.constrained.site-nav.is-scrolled {
-    width: 100%;
-    max-width: var(--reading-width);
-    margin-left: auto;
-    margin-right: auto;
-    padding: 48px 0;
+    border-radius: 16px;
+  }
+
+  nav.constrained.site-nav.is-scrolled::before {
+    inset: 0 -12px;
     border-radius: 16px;
   }
   .site-nav .nav-center { font-size: 14px; }
