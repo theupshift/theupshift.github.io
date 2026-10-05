@@ -118,7 +118,7 @@ permalink: /work/
       <span class="work-tile-label">Health</span>
       <span class="work-tile-heading">Afya Kongwe</span>
       <span class="work-tile-summary">Compassionate home-based care for people living with chronic illness — bringing comfort, dignity, and quality health services closer to home in Tanzania.</span>
-      <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
+      <span class="work-tile-link">Visit <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
