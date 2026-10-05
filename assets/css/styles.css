@@ -337,6 +337,7 @@ nav.constrained.site-nav.is-scrolled::after {
 }
 
 nav.constrained.site-nav.is-scrolled {
+  top: 6px;
   width: 100%;
   max-width: var(--reading-width);
   margin-left: auto;
@@ -572,6 +573,7 @@ footer.constrained.site-footer {
     border-radius: 0;
   }
   nav.constrained.site-nav.is-scrolled {
+    top: 6px;
     padding: 18px 0;
     border-radius: 16px;
   }
