@@ -19,7 +19,7 @@ permalink: /work/
       <span class="work-tile-label">Tools</span>
       <span class="work-tile-heading">Nile AGI</span>
       <span class="work-tile-summary">Local-first AI tools and experiments built for useful intelligence on ordinary devices.</span>
-      <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
+      <span class="work-tile-link">ORCID <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
