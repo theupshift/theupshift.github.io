@@ -132,12 +132,11 @@ permalink: /work/
       <span class="work-tile-label">Learning</span>
       <span class="work-tile-heading">Health Resource Allocation Game</span>
       <span class="work-tile-summary">A simulation game about difficult choices when allocating limited health resources in rural communities.</span>
-      <span class="work-tile-link">Play <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
-      <p>An interactive learning activity that simulates health resource allocation and the trade-offs faced by rural communities.</p>
-      <div class="work-links"><a href="/words/education/health/simulation/2025/09/17/healthsystems/">Open the game and its guide →</a></div>
+      <p>A simulation game about difficult choices when allocating limited health resources in rural communities.</p>
+      <p>An interactive learning activity that simulates health resource allocation and the trade-offs faced by rural communities. <a href="/words/education/health/simulation/2025/09/17/healthsystems/">Explore the game and its guide →</a></p>
     </div>
   </article>
 </section>
