@@ -2038,6 +2038,13 @@ article > header > h1 {
 /* Article navigation — concise editorial labels with the site accent. */
 .article-navigation {
   font-size: .86rem;
+  text-align: left;
+}
+.article-navigation .article-previous {
+  text-align: left;
+}
+.article-navigation .article-next {
+  text-align: right;
 }
 .article-navigation .article-nav-label {
   color: rgb(var(--color-accent));
