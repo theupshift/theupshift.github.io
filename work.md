@@ -130,7 +130,7 @@ permalink: /work/
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">◇</span>
       <span class="work-tile-label">Learning</span>
-      <span class="work-tile-heading">Health Resource Allocation Game</span>
+      <span class="work-tile-heading">Health Commons</span>
       <span class="work-tile-summary">A simulation game about difficult choices when allocating limited health resources in rural communities.</span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
