@@ -2015,8 +2015,8 @@ article > header > h1 {
 .work-tile--book.is-expanded .work-tile-trigger,
 .work-tile--afyakongwe.is-expanded .work-tile-trigger {
   background: rgba(var(--color-background), .18);
-  -webkit-backdrop-filter: blur(1px) saturate(102%);
-  backdrop-filter: blur(1px) saturate(102%);
+  -webkit-backdrop-filter: blur(4px) saturate(102%);
+  backdrop-filter: blur(4px) saturate(102%);
 }
 
 .work-tile--book::after,
