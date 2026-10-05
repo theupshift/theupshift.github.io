@@ -1838,3 +1838,111 @@ article > header > h1 {
     margin-top: 28px;
   }
 }
+
+
+/* Index cards — Nile AGI visual baseline.
+   Keep the pointer-following ambient hue and apply the same restrained
+   interaction language consistently across every card. */
+.work-tile {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  border-radius: 14px;
+  background: rgb(var(--color-background));
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.work-tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle 190px at var(--mouse-x) var(--mouse-y),
+      rgba(var(--color-accent), .14),
+      rgba(var(--color-accent), .055) 38%,
+      transparent 72%
+    );
+  opacity: 0;
+  transition: opacity .28s ease;
+}
+
+.work-tile:hover::before,
+.work-tile.is-expanded::before {
+  opacity: 1;
+}
+
+.work-tile-trigger {
+  min-height: 255px;
+  padding: 28px;
+  background: transparent;
+}
+
+.work-tile--video .work-tile-trigger,
+.work-tile--book .work-tile-trigger,
+.work-tile--afyakongwe .work-tile-trigger {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-background), .90),
+    rgba(var(--color-background), .68)
+  );
+}
+
+.work-tile--video:hover .work-tile-trigger,
+.work-tile--video.is-expanded .work-tile-trigger,
+.work-tile--book:hover .work-tile-trigger,
+.work-tile--book.is-expanded .work-tile-trigger,
+.work-tile--afyakongwe:hover .work-tile-trigger,
+.work-tile--afyakongwe.is-expanded .work-tile-trigger {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--color-background), .78),
+    rgba(var(--color-background), .54)
+  );
+}
+
+.work-tile--book .work-tile-details,
+.work-tile--afyakongwe .work-tile-details {
+  background: rgba(var(--color-background), .92);
+  color: rgb(var(--color-text));
+}
+
+.work-tile--book .book-slide-copy,
+.work-tile--book .book-slide-copy p,
+.work-tile--book .publication-meta,
+.work-tile--book .book-carousel-count,
+.work-tile--book .book-carousel-source,
+.work-tile--book .book-slide-copy a,
+.work-tile--book .book-carousel-source a {
+  color: inherit;
+}
+
+.work-tile--book .book-carousel-controls {
+  border-top-color: var(--color-rule);
+}
+
+.work-tile--book .book-carousel-button {
+  color: rgb(var(--color-text));
+  border-color: var(--color-rule);
+}
+
+.work-tile--book .book-carousel-button:hover {
+  color: #fff;
+  background: rgb(var(--color-accent));
+  border-color: rgb(var(--color-accent));
+}
+
+@media (max-width: 600px) {
+  .work-tile-trigger {
+    min-height: 225px;
+    padding: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-tile::before {
+    display: none;
+  }
+}
