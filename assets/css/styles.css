@@ -326,7 +326,7 @@ nav.constrained.site-nav.is-scrolled {
   max-width: var(--reading-width);
   margin-left: auto;
   margin-right: auto;
-  padding: 48px 0;
+  padding: 24px 0;
   background: transparent;
   border: 0;
   border-radius: 18px;
@@ -557,6 +557,7 @@ footer.constrained.site-footer {
     border-radius: 0;
   }
   nav.constrained.site-nav.is-scrolled {
+    padding: 24px 0;
     border-radius: 16px;
   }
 
