@@ -23,8 +23,8 @@ permalink: /work/
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
-      <p>Tools and experiments exploring practical, accessible AI.</p>
-      <div class="work-links"><a href="https://github.com/nile-agi" target="_blank" rel="noopener noreferrer">Explore Nile AGI on GitHub ↗</a></div>
+      <p>AI should be useful before it is impressive.</p>
+      <p>Nile AGI explores local-first tools and experiments that keep useful intelligence close, practical, and accessible — on ordinary devices, without making the cloud the centre of everything.</p>
     </div>
   </article>
 
