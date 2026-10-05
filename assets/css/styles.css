@@ -1868,7 +1868,7 @@ article > header > h1 {
 @media (max-width: 600px) {
   .search-page {
     min-height: 62vh;
-    padding: 24px 0 44px;
+    padding: 0 0 44px;
   }
 
   .search-field #search-input {
