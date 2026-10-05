@@ -66,7 +66,7 @@ permalink: /work/
       <span class="work-icon" aria-hidden="true">▱</span>
       <span class="work-tile-label">Book</span>
       <span class="work-tile-heading">Readings</span>
-      <span class="work-tile-summary">Books currently open, underlined, or simply on my mind.</span>
+      <span class="work-tile-summary">A record of what’s currently open, underlined, or simply on my mind.</span>
             <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
