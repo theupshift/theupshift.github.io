@@ -5,12 +5,10 @@ id_attribute: clinical-rhythm
 ---
 
 <style>
-#clinical-rhythm .cr-wrap {
-  width: 100%;
-}
+#clinical-rhythm .cr-wrap { width: 100%; }
 
 #clinical-rhythm .cr-intro {
-  margin: 0 0 2.2rem;
+  margin: 0 0 1.8rem;
   text-align: center;
 }
 
@@ -45,9 +43,7 @@ id_attribute: clinical-rhythm
   font-size: .76rem;
 }
 
-#clinical-rhythm .cr-search {
-  margin: 0 0 .8rem;
-}
+#clinical-rhythm .cr-search { margin: 0 0 .8rem; }
 
 #clinical-rhythm .cr-search input {
   display: block;
@@ -70,7 +66,7 @@ id_attribute: clinical-rhythm
   display: flex;
   flex-wrap: wrap;
   gap: .4rem;
-  margin: 0 0 1.8rem;
+  margin: 0 0 1.5rem;
 }
 
 #clinical-rhythm .cr-filter {
@@ -93,51 +89,49 @@ id_attribute: clinical-rhythm
   background: transparent;
 }
 
-#clinical-rhythm .cr-topic-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .25rem 1rem;
-  margin: 0 0 2.2rem;
-  padding: .8rem 0;
-  border-top: 1px solid var(--color-rule);
-  border-bottom: 1px solid var(--color-rule);
-  font-family: var(--font-small-caps);
-  font-size: .78rem;
-}
-
-#clinical-rhythm .cr-topic-nav a {
-  background: none;
-  text-shadow: none;
+/* Compact accordion topics */
+#clinical-rhythm .cr-topics {
+  display: grid;
+  gap: .45rem;
 }
 
 #clinical-rhythm .cr-topic {
-  margin: 0 0 2.7rem;
+  margin: 0;
   scroll-margin-top: 1.5rem;
 }
 
-#clinical-rhythm .cr-topic-header {
+#clinical-rhythm .cr-topic-card {
+  width: 100%;
+  padding: .85rem 1rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 3px;
+  color: rgb(var(--color-text));
+  background: rgb(var(--color-background));
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-  margin: 0 0 .25rem;
+  align-items: center;
+  gap: .75rem;
+  box-sizing: border-box;
 }
 
-#clinical-rhythm .cr-topic-heading {
-  min-width: 0;
+#clinical-rhythm .cr-topic-card:hover,
+#clinical-rhythm .cr-topic.is-open .cr-topic-card {
+  border-color: rgb(var(--color-accent));
 }
 
 #clinical-rhythm .cr-topic-number {
-  margin-right: .45rem;
+  flex: 0 0 auto;
   color: rgb(var(--color-accent));
   font-family: var(--font-small-caps);
   font-size: .72rem;
 }
 
-#clinical-rhythm .cr-topic h2 {
-  display: inline;
-  margin: 0;
-  font-size: 1.15rem;
+#clinical-rhythm .cr-topic-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 1rem;
   line-height: 1.25;
 }
 
@@ -145,7 +139,31 @@ id_attribute: clinical-rhythm
   flex: 0 0 auto;
   color: rgb(var(--color-muted));
   font-family: var(--font-small-caps);
-  font-size: .72rem;
+  font-size: .7rem;
+  white-space: nowrap;
+}
+
+#clinical-rhythm .cr-topic-chevron {
+  flex: 0 0 auto;
+  color: rgb(var(--color-muted));
+  font-size: .9rem;
+  transition: transform .18s ease;
+}
+
+#clinical-rhythm .cr-topic.is-open .cr-topic-chevron {
+  transform: rotate(180deg);
+}
+
+#clinical-rhythm .cr-topic-body {
+  display: none;
+  padding: .9rem 1rem 1rem;
+  border: 1px solid var(--color-rule);
+  border-top: 0;
+  border-radius: 0 0 3px 3px;
+}
+
+#clinical-rhythm .cr-topic.is-open .cr-topic-body {
+  display: block;
 }
 
 #clinical-rhythm .cr-topic-blurb {
@@ -164,7 +182,7 @@ id_attribute: clinical-rhythm
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 1rem;
   align-items: baseline;
-  padding: .72rem 0;
+  padding: .7rem 0;
   border-bottom: 1px solid var(--color-rule);
   background: none;
   text-shadow: none;
@@ -193,22 +211,26 @@ id_attribute: clinical-rhythm
   font-size: .9rem;
 }
 
+#clinical-rhythm .cr-back {
+  display: block;
+  margin: .8rem 0 0;
+  color: rgb(var(--color-accent));
+  font-family: var(--font-small-caps);
+  font-size: .72rem;
+  text-align: center;
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
-  #clinical-rhythm .cr-title {
-    font-size: 1.55rem;
+  #clinical-rhythm .cr-title { font-size: 1.55rem; }
+  #clinical-rhythm .cr-lead { font-size: .9rem; }
+
+  #clinical-rhythm .cr-topic-card {
+    padding: .8rem .75rem;
   }
 
-  #clinical-rhythm .cr-lead {
-    font-size: .9rem;
-  }
-
-  #clinical-rhythm .cr-topic-header {
-    display: block;
-  }
-
-  #clinical-rhythm .cr-topic-count {
-    display: block;
-    margin-top: .2rem;
+  #clinical-rhythm .cr-topic-body {
+    padding: .8rem .75rem;
   }
 
   #clinical-rhythm .cr-resource {
@@ -222,7 +244,6 @@ id_attribute: clinical-rhythm
   }
 }
 </style>
-
 
 <div class="clinical-rhythm-page" id="clinical-rhythm"><div class="cr-wrap">
   <header class="cr-intro">
@@ -248,7 +269,6 @@ id_attribute: clinical-rhythm
     <button class="cr-filter" data-type="other" type="button">Other</button>
   </div>
 
-  <nav class="cr-topic-nav" id="cr-topic-nav" aria-label="Clinical Rhythm topics"></nav>
   <main id="cr-topics"><p class="cr-loading">Loading resources…</p></main>
 </div></div>
 
@@ -259,41 +279,18 @@ id_attribute: clinical-rhythm
   var base = 'https://clinicalrythm.github.io/';
   var activeType = 'all';
   var query = '';
+  var openTopic = null;
   var allFiles = [];
 
   var topics = {
-    '00. testbank': {
-      title: 'Test bank',
-      blurb: 'Practice questions and self-assessment material covering the whole semester.'
-    },
-    '01. principles': {
-      title: 'Principles',
-      blurb: 'Fever and its evaluation, antimicrobial stewardship and resistance, vaccination, prescribing in older adults, and haematological changes that accompany infection.'
-    },
-    '02. malaria': {
-      title: 'Malaria',
-      blurb: 'Diagnosis, treatment, antimalarial drug resistance in Tanzania, severe malaria and anaemia, and national and WHO guidelines.'
-    },
-    '03. tuberculosis': {
-      title: 'Tuberculosis',
-      blurb: 'Diagnosis, treatment, preventive treatment, TB with HIV and renal disease, extrapulmonary disease, and WHO guidance.'
-    },
-    '04. hiv': {
-      title: 'HIV',
-      blurb: 'Natural history, antiretroviral therapy and resistance, U=U, advanced HIV disease, cryptococcal meningitis, primary care, and guidelines.'
-    },
-    '05. pneumonia': {
-      title: 'Pneumonia',
-      blurb: 'Community-acquired pneumonia, hospital-acquired and ventilator-associated pneumonia, glucocorticoids, haemoptysis, and ATS/IDSA guidance.'
-    },
-    '06. cns infections': {
-      title: 'CNS infections',
-      blurb: 'Bacterial meningitis, encephalitis, cryptococcal meningoencephalitis, neurocysticercosis, meningococcal disease, imaging, and WHO guidance.'
-    },
-    '07. sti': {
-      title: 'STIs',
-      blurb: 'Syphilis, gonococcal infections, non-gonococcal urethritis, herpes simplex, bacterial vaginosis, doxycycline PEP, and national/CDC/WHO guidance.'
-    }
+    '00. testbank': { title: 'Test bank', blurb: 'Practice questions and self-assessment material covering the whole semester.' },
+    '01. principles': { title: 'Principles', blurb: 'Fever and its evaluation, antimicrobial stewardship and resistance, vaccination, prescribing in older adults, and haematological changes that accompany infection.' },
+    '02. malaria': { title: 'Malaria', blurb: 'Diagnosis, treatment, antimalarial drug resistance in Tanzania, severe malaria and anaemia, and national and WHO guidelines.' },
+    '03. tuberculosis': { title: 'Tuberculosis', blurb: 'Diagnosis, treatment, preventive treatment, TB with HIV and renal disease, extrapulmonary disease, and WHO guidance.' },
+    '04. hiv': { title: 'HIV', blurb: 'Natural history, antiretroviral therapy and resistance, U=U, advanced HIV disease, cryptococcal meningitis, primary care, and guidelines.' },
+    '05. pneumonia': { title: 'Pneumonia', blurb: 'Community-acquired pneumonia, hospital-acquired and ventilator-associated pneumonia, glucocorticoids, haemoptysis, and ATS/IDSA guidance.' },
+    '06. cns infections': { title: 'CNS infections', blurb: 'Bacterial meningitis, encephalitis, cryptococcal meningoencephalitis, neurocysticercosis, meningococcal disease, imaging, and WHO guidance.' },
+    '07. sti': { title: 'STIs', blurb: 'Syphilis, gonococcal infections, non-gonococcal urethritis, herpes simplex, bacterial vaginosis, doxycycline PEP, and national/CDC/WHO guidance.' }
   };
 
   function esc(s) {
@@ -304,10 +301,7 @@ id_attribute: clinical-rhythm
 
   function titleFromPath(path) {
     var name = path.split('/').pop().replace(/\.[^.]+$/, '');
-    return name
-      .replace(/[_-]+/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim()
+    return name.replace(/[_-]+/g, ' ').replace(/\s+/g, ' ').trim()
       .replace(/\b\w/g, function (c) { return c.toUpperCase(); });
   }
 
@@ -325,7 +319,6 @@ id_attribute: clinical-rhythm
   }
 
   function render() {
-    var nav = document.getElementById('cr-topic-nav');
     var main = document.getElementById('cr-topics');
     var meta = document.getElementById('cr-meta');
 
@@ -338,10 +331,6 @@ id_attribute: clinical-rhythm
     });
 
     var groups = {};
-    allFiles.forEach(function (f) {
-      var folder = f.path.split('/')[0];
-      if (!groups[folder]) groups[folder] = [];
-    });
     visible.forEach(function (f) {
       var folder = f.path.split('/')[0];
       if (!groups[folder]) groups[folder] = [];
@@ -352,38 +341,61 @@ id_attribute: clinical-rhythm
       return a.localeCompare(b, undefined, {numeric:true});
     });
 
-    nav.innerHTML = order.map(function(folder, i) {
-      var m = topics[folder] || {title: folder.replace(/^\d+\.\s*/, '')};
-      return '<a href="#cr-' + i + '">' + esc(m.title) + '</a>';
-    }).join('');
-
     var html = '';
-    var shown = 0;
-
     order.forEach(function(folder, i) {
       var files = groups[folder];
-      if (!files.length) return;
-      shown += files.length;
       var m = topics[folder] || {title: folder.replace(/^\d+\.\s*/, ''), blurb:''};
+      var isOpen = openTopic === folder;
 
-      html += '<section class="cr-topic" id="cr-' + i + '">';
-      html += '<div class="cr-topic-header"><div class="cr-topic-heading"><span class="cr-topic-number">' +
-        String(i + 1).padStart(2, '0') + '</span><h2>' + esc(m.title) +
-        '</h2></div><span class="cr-topic-count">' + files.length + ' resource' +
-        (files.length === 1 ? '' : 's') + '</span></div>';
-      if (m.blurb) html += '<p class="cr-topic-blurb">' + esc(m.blurb) + '</p>';
-      html += '<div class="cr-resource-list">';
-      files.sort(function(a,b){ return a.title.localeCompare(b.title); }).forEach(function(f) {
-        html += '<a class="cr-resource" href="' + pathUrl(f.path) + '" target="_blank" rel="noopener">';
-        html += '<span class="cr-resource-title">' + esc(f.title) + '</span>';
-        html += '<span class="cr-resource-type">' + esc(f.typeLabel) + '</span>';
-        html += '</a>';
-      });
-      html += '</div></section>';
+      html += '<section class="cr-topic' + (isOpen ? ' is-open' : '') + '" data-topic="' + esc(folder) + '">';
+      html += '<button class="cr-topic-card" type="button" aria-expanded="' + isOpen + '">';
+      html += '<span class="cr-topic-number">' + String(i + 1).padStart(2, '0') + '</span>';
+      html += '<span class="cr-topic-name">' + esc(m.title) + '</span>';
+      html += '<span class="cr-topic-count">' + files.length + ' resource' + (files.length === 1 ? '' : 's') + '</span>';
+      html += '<span class="cr-topic-chevron" aria-hidden="true">⌄</span>';
+      html += '</button>';
+
+      if (isOpen) {
+        html += '<div class="cr-topic-body">';
+        if (m.blurb) html += '<p class="cr-topic-blurb">' + esc(m.blurb) + '</p>';
+        html += '<div class="cr-resource-list">';
+        files.sort(function(a,b){ return a.title.localeCompare(b.title); }).forEach(function(f) {
+          html += '<a class="cr-resource" href="' + pathUrl(f.path) + '" target="_blank" rel="noopener">';
+          html += '<span class="cr-resource-title">' + esc(f.title) + '</span>';
+          html += '<span class="cr-resource-type">' + esc(f.typeLabel) + '</span>';
+          html += '</a>';
+        });
+        html += '</div>';
+        html += '<button class="cr-back" type="button">Collapse topic</button>';
+        html += '</div>';
+      }
+      html += '</section>';
     });
 
     main.innerHTML = html || '<p class="cr-empty">No resources match your search.</p>';
     meta.textContent = order.length + ' topics · ' + allFiles.length + ' resources · files remain hosted on Clinical Rhythm';
+
+    main.querySelectorAll('.cr-topic-card').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var section = btn.closest('.cr-topic');
+        var folder = section.getAttribute('data-topic');
+        openTopic = openTopic === folder ? null : folder;
+        render();
+        if (openTopic) {
+          setTimeout(function() {
+            section = document.querySelector('[data-topic="' + CSS.escape(folder) + '"]');
+            if (section) section.scrollIntoView({behavior:'smooth', block:'start'});
+          }, 0);
+        }
+      });
+    });
+
+    main.querySelectorAll('.cr-back').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        openTopic = null;
+        render();
+      });
+    });
   }
 
   fetch(api)
@@ -420,6 +432,7 @@ id_attribute: clinical-rhythm
 
   document.getElementById('cr-search').addEventListener('input', function(e) {
     query = e.target.value.toLowerCase().trim();
+    openTopic = null;
     render();
   });
 
@@ -430,6 +443,7 @@ id_attribute: clinical-rhythm
       });
       btn.classList.add('is-active');
       activeType = btn.dataset.type;
+      openTopic = null;
       render();
     });
   });
