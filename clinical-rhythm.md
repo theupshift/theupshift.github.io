@@ -80,7 +80,7 @@ var repo='clinicalrythm/clinicalrythm.github.io';
 var api='https://api.github.com/repos/'+repo+'/git/trees/main?recursive=1';
 var base='https://clinicalrythm.github.io/';
 var activeType='all',query='',openTopic=null,selectedSpecialty='Infectious Diseases',allFiles=[];
-var specialties=['Cardiology','Infectious Diseases','Nephrology','Gastroenterology','Respiratory Medicine','Neurology','Endocrinology','Haematology'];
+var specialties=[['Cardiology','Cardio'],['Infectious Diseases','ID'],['Nephrology','Nephro'],['Gastroenterology','Gastro'],['Respiratory Medicine','Resp'],['Neurology','Neuro'],['Endocrinology','Endo'],['Haematology','Haem']];
 
 var topics={
 '00. testbank':{title:'Test bank',blurb:'Practice questions and self-assessment material covering the whole semester.'},
@@ -100,7 +100,7 @@ function pathUrl(path){return base+path.split('/').map(encodeURIComponent).join(
 
 function renderNav(){
 document.getElementById('cr-specialty-nav').innerHTML=specialties.map(function(s){
-return '<button class="cr-specialty-tab'+(s===selectedSpecialty?' is-active':'')+'" type="button" data-specialty="'+esc(s)+'">'+esc(s)+'</button>'
+return '<button class="cr-specialty-tab'+(s[0]===selectedSpecialty?' is-active':'')+'" type="button" data-specialty="'+esc(s[0])+'">'+esc(s[1])+'</button>'
 }).join('');
 document.querySelectorAll('.cr-specialty-tab').forEach(function(b){b.addEventListener('click',function(){selectedSpecialty=b.dataset.specialty;openTopic=null;query='';document.getElementById('cr-search').value='';activeType='all';document.querySelectorAll('.cr-filter').forEach(function(x){x.classList.toggle('is-active',x.dataset.type==='all')});renderNav();render()})});
 }
