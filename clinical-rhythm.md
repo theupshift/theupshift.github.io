@@ -54,7 +54,7 @@ id_attribute: clinical-rhythm
 <div class="clinical-rhythm-page" id="clinical-rhythm"><div class="cr-wrap">
 <header class="cr-intro">
 <p class="cr-kicker">Clinical Rhythm</p>
-<h1 class="cr-title">Semester 2 resources</h1>
+
 <p class="cr-lead">Lecture slides, textbook chapters, guidelines, journal articles and practice questions, organised by specialty and topic. The files remain hosted on Clinical Rhythm.</p>
 <p class="cr-meta" id="cr-meta">Loading resource index…</p>
 </header>
