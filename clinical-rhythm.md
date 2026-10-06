@@ -11,7 +11,7 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-title{margin:0;font-size:1.75rem;line-height:1.15;letter-spacing:-.02em}
 #clinical-rhythm .cr-lead{max-width:560px;margin:.8rem auto 0;color:rgb(var(--color-muted));font-size:.94rem;line-height:1.6}
 #clinical-rhythm .cr-meta{margin:.7rem 0 0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.76rem}
-#clinical-rhythm .cr-specialty-nav{display:flex;gap:.4rem;overflow-x:auto;margin:0 0 1rem;padding:0 0 .2rem;scrollbar-width:none}
+#clinical-rhythm .cr-specialty-nav{display:flex;justify-content:center;gap:.4rem;overflow-x:auto;margin:0 0 1rem;padding:0 0 .2rem;scrollbar-width:none}
 #clinical-rhythm .cr-specialty-nav::-webkit-scrollbar{display:none}
 #clinical-rhythm .cr-specialty-tab{flex:0 0 auto;padding:.42rem .68rem;border:1px solid var(--color-rule);border-radius:999px;color:rgb(var(--color-text));background:transparent;font:inherit;font-family:var(--font-small-caps);font-size:.7rem;line-height:1;cursor:pointer;white-space:nowrap}
 #clinical-rhythm .cr-specialty-tab:hover,#clinical-rhythm .cr-specialty-tab.is-active{border-color:rgb(var(--color-accent));color:rgb(var(--color-accent))}
