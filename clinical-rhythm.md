@@ -51,11 +51,12 @@ id_attribute: clinical-rhythm
   height: 46px;
   padding: .65rem .8rem;
   border: 1px solid var(--color-rule);
-  border-radius: 2px;
+  border-radius: 3px;
   color: rgb(var(--color-text));
   background: rgb(var(--color-background));
   font: inherit;
   font-size: .9rem;
+  box-sizing: border-box;
 }
 
 #clinical-rhythm .cr-search input::placeholder {
@@ -86,13 +87,12 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-filter.is-active {
   border-color: rgb(var(--color-accent));
   color: rgb(var(--color-accent));
-  background: transparent;
 }
 
-/* Compact accordion topics */
+/* Visual, compact topic cards */
 #clinical-rhythm .cr-topics {
   display: grid;
-  gap: .45rem;
+  gap: .65rem;
 }
 
 #clinical-rhythm .cr-topic {
@@ -102,9 +102,10 @@ id_attribute: clinical-rhythm
 
 #clinical-rhythm .cr-topic-card {
   width: 100%;
+  min-height: 68px;
   padding: .85rem 1rem;
   border: 1px solid var(--color-rule);
-  border-radius: 3px;
+  border-radius: 6px;
   color: rgb(var(--color-text));
   background: rgb(var(--color-background));
   text-align: left;
@@ -112,20 +113,35 @@ id_attribute: clinical-rhythm
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: .75rem;
+  gap: .85rem;
   box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0,0,0,.025);
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
 }
 
-#clinical-rhythm .cr-topic-card:hover,
+#clinical-rhythm .cr-topic-card:hover {
+  border-color: rgb(var(--color-accent));
+  box-shadow: 0 4px 14px rgba(0,0,0,.06);
+  transform: translateY(-1px);
+}
+
 #clinical-rhythm .cr-topic.is-open .cr-topic-card {
   border-color: rgb(var(--color-accent));
+  border-radius: 6px 6px 0 0;
+  box-shadow: none;
 }
 
 #clinical-rhythm .cr-topic-number {
-  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
   color: rgb(var(--color-accent));
+  background: rgba(179,83,82,.08);
   font-family: var(--font-small-caps);
-  font-size: .72rem;
+  font-size: .7rem;
 }
 
 #clinical-rhythm .cr-topic-name {
@@ -133,6 +149,7 @@ id_attribute: clinical-rhythm
   min-width: 0;
   font-size: 1rem;
   line-height: 1.25;
+  font-weight: 600;
 }
 
 #clinical-rhythm .cr-topic-count {
@@ -144,22 +161,31 @@ id_attribute: clinical-rhythm
 }
 
 #clinical-rhythm .cr-topic-chevron {
-  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--color-rule);
+  border-radius: 50%;
   color: rgb(var(--color-muted));
-  font-size: .9rem;
-  transition: transform .18s ease;
+  font-size: .85rem;
+  transition: transform .18s ease, border-color .18s ease, color .18s ease;
 }
 
 #clinical-rhythm .cr-topic.is-open .cr-topic-chevron {
   transform: rotate(180deg);
+  border-color: rgb(var(--color-accent));
+  color: rgb(var(--color-accent));
 }
 
 #clinical-rhythm .cr-topic-body {
   display: none;
-  padding: .9rem 1rem 1rem;
-  border: 1px solid var(--color-rule);
+  padding: 1rem 1.05rem 1.05rem;
+  border: 1px solid rgb(var(--color-accent));
   border-top: 0;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 6px 6px;
+  background: rgba(179,83,82,.025);
 }
 
 #clinical-rhythm .cr-topic.is-open .cr-topic-body {
@@ -167,7 +193,7 @@ id_attribute: clinical-rhythm
 }
 
 #clinical-rhythm .cr-topic-blurb {
-  margin: 0 0 .8rem;
+  margin: 0 0 .9rem;
   color: rgb(var(--color-muted));
   font-size: .82rem;
   line-height: 1.5;
@@ -211,22 +237,19 @@ id_attribute: clinical-rhythm
   font-size: .9rem;
 }
 
-#clinical-rhythm .cr-back {
-  display: block;
-  margin: .8rem 0 0;
-  color: rgb(var(--color-accent));
-  font-family: var(--font-small-caps);
-  font-size: .72rem;
-  text-align: center;
-  cursor: pointer;
-}
-
 @media (max-width: 600px) {
   #clinical-rhythm .cr-title { font-size: 1.55rem; }
   #clinical-rhythm .cr-lead { font-size: .9rem; }
 
   #clinical-rhythm .cr-topic-card {
-    padding: .8rem .75rem;
+    min-height: 62px;
+    padding: .75rem;
+  }
+
+  #clinical-rhythm .cr-topic-number {
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
   }
 
   #clinical-rhythm .cr-topic-body {
@@ -366,7 +389,6 @@ id_attribute: clinical-rhythm
           html += '</a>';
         });
         html += '</div>';
-        html += '<button class="cr-back" type="button">Collapse topic</button>';
         html += '</div>';
       }
       html += '</section>';
@@ -387,13 +409,6 @@ id_attribute: clinical-rhythm
             if (section) section.scrollIntoView({behavior:'smooth', block:'start'});
           }, 0);
         }
-      });
-    });
-
-    main.querySelectorAll('.cr-back').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        openTopic = null;
-        render();
       });
     });
   }
