@@ -395,7 +395,8 @@ id_attribute: clinical-rhythm
           return x.type === 'blob' &&
             x.path.indexOf('/') !== -1 &&
             !/(^|\/)\.DS_Store$/.test(x.path) &&
-            !/(^|\/)(~\$)/.test(x.path);
+            !/(^|\/)(~\$)/.test(x.path) &&
+            !/^(_data|_includes|_layouts|\.devcontainer)(\/|$)/i.test(x.path);
         })
         .map(function(x) {
           var type = typeFor(x.path);
