@@ -5,213 +5,234 @@ id_attribute: clinical-rhythm
 ---
 
 <style>
-  .clinical-rhythm-page {
-    width: 100%;
+#clinical-rhythm .cr-wrap {
+  width: 100%;
+}
+
+#clinical-rhythm .cr-intro {
+  margin: 0 0 2.2rem;
+  text-align: center;
+}
+
+#clinical-rhythm .cr-kicker {
+  margin: 0 0 .45rem;
+  color: rgb(var(--color-accent));
+  font-family: var(--font-small-caps);
+  font-size: .78rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+#clinical-rhythm .cr-title {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+}
+
+#clinical-rhythm .cr-lead {
+  max-width: 560px;
+  margin: .8rem auto 0;
+  color: rgb(var(--color-muted));
+  font-size: .94rem;
+  line-height: 1.6;
+}
+
+#clinical-rhythm .cr-meta {
+  margin: .7rem 0 0;
+  color: rgb(var(--color-muted));
+  font-family: var(--font-small-caps);
+  font-size: .76rem;
+}
+
+#clinical-rhythm .cr-search {
+  margin: 0 0 .8rem;
+}
+
+#clinical-rhythm .cr-search input {
+  display: block;
+  width: 100%;
+  height: 46px;
+  padding: .65rem .8rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 2px;
+  color: rgb(var(--color-text));
+  background: rgb(var(--color-background));
+  font: inherit;
+  font-size: .9rem;
+}
+
+#clinical-rhythm .cr-search input::placeholder {
+  color: rgb(var(--color-muted));
+}
+
+#clinical-rhythm .cr-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: 0 0 1.8rem;
+}
+
+#clinical-rhythm .cr-filter {
+  padding: .38rem .65rem;
+  border: 1px solid var(--color-rule);
+  border-radius: 999px;
+  color: rgb(var(--color-text));
+  background: transparent;
+  font: inherit;
+  font-family: var(--font-small-caps);
+  font-size: .72rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#clinical-rhythm .cr-filter:hover,
+#clinical-rhythm .cr-filter.is-active {
+  border-color: rgb(var(--color-accent));
+  color: rgb(var(--color-accent));
+  background: transparent;
+}
+
+#clinical-rhythm .cr-topic-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem 1rem;
+  margin: 0 0 2.2rem;
+  padding: .8rem 0;
+  border-top: 1px solid var(--color-rule);
+  border-bottom: 1px solid var(--color-rule);
+  font-family: var(--font-small-caps);
+  font-size: .78rem;
+}
+
+#clinical-rhythm .cr-topic-nav a {
+  background: none;
+  text-shadow: none;
+}
+
+#clinical-rhythm .cr-topic {
+  margin: 0 0 2.7rem;
+  scroll-margin-top: 1.5rem;
+}
+
+#clinical-rhythm .cr-topic-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 .25rem;
+}
+
+#clinical-rhythm .cr-topic-heading {
+  min-width: 0;
+}
+
+#clinical-rhythm .cr-topic-number {
+  margin-right: .45rem;
+  color: rgb(var(--color-accent));
+  font-family: var(--font-small-caps);
+  font-size: .72rem;
+}
+
+#clinical-rhythm .cr-topic h2 {
+  display: inline;
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+#clinical-rhythm .cr-topic-count {
+  flex: 0 0 auto;
+  color: rgb(var(--color-muted));
+  font-family: var(--font-small-caps);
+  font-size: .72rem;
+}
+
+#clinical-rhythm .cr-topic-blurb {
+  margin: 0 0 .8rem;
+  color: rgb(var(--color-muted));
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+#clinical-rhythm .cr-resource-list {
+  border-top: 1px solid var(--color-rule);
+}
+
+#clinical-rhythm .cr-resource {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: .72rem 0;
+  border-bottom: 1px solid var(--color-rule);
+  background: none;
+  text-shadow: none;
+}
+
+#clinical-rhythm .cr-resource:hover {
+  color: rgb(var(--color-accent));
+}
+
+#clinical-rhythm .cr-resource-title {
+  min-width: 0;
+  line-height: 1.42;
+  overflow-wrap: anywhere;
+}
+
+#clinical-rhythm .cr-resource-type {
+  color: rgb(var(--color-muted));
+  font-family: var(--font-small-caps);
+  font-size: .68rem;
+  white-space: nowrap;
+}
+
+#clinical-rhythm .cr-empty,
+#clinical-rhythm .cr-loading {
+  color: rgb(var(--color-muted));
+  font-size: .9rem;
+}
+
+@media (max-width: 600px) {
+  #clinical-rhythm .cr-title {
+    font-size: 1.55rem;
   }
 
-  .clinical-rhythm-intro {
-    margin-bottom: 28px;
+  #clinical-rhythm .cr-lead {
+    font-size: .9rem;
   }
 
-  .clinical-rhythm-kicker {
-    margin: 0 0 8px;
-    font-family: var(--font-small-caps);
-    font-size: 12px;
-    letter-spacing: .08em;
-    text-transform: uppercase;
+  #clinical-rhythm .cr-topic-header {
+    display: block;
   }
 
-  .clinical-rhythm-title {
-    margin: 0;
-    font-size: clamp(30px, 5vw, 48px);
-    line-height: 1.05;
+  #clinical-rhythm .cr-topic-count {
+    display: block;
+    margin-top: .2rem;
   }
 
-  .clinical-rhythm-lead {
-    max-width: 720px;
-    margin: 14px 0 0;
-    font-size: 18px;
-    line-height: 1.55;
+  #clinical-rhythm .cr-resource {
+    grid-template-columns: 1fr;
+    gap: .2rem;
+    padding: .65rem 0;
   }
 
-  .clinical-rhythm-meta {
-    margin: 12px 0 0;
-    font-size: 13px;
-    opacity: .7;
+  #clinical-rhythm .cr-resource-type {
+    white-space: normal;
   }
-
-  .cr-search {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    margin: 28px 0 18px;
-  }
-
-  .cr-search input {
-    width: 100%;
-    min-height: 44px;
-    padding: 10px 14px;
-    border: 1px solid currentColor;
-    border-radius: 0;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    box-sizing: border-box;
-  }
-
-  .cr-search input:focus {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
-  }
-
-  .cr-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 34px;
-  }
-
-  .cr-filter {
-    border: 1px solid currentColor;
-    background: transparent;
-    color: inherit;
-    padding: 6px 11px;
-    border-radius: 999px;
-    font: inherit;
-    font-size: 12px;
-    cursor: pointer;
-  }
-
-  .cr-filter.is-active,
-  .cr-filter:hover {
-    background: currentColor;
-    color: Canvas;
-  }
-
-  .cr-topic-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px 16px;
-    margin: 24px 0 34px;
-    padding: 16px 0;
-    border-top: 1px solid currentColor;
-    border-bottom: 1px solid currentColor;
-  }
-
-  .cr-topic-nav a {
-    font-size: 13px;
-    text-decoration: none;
-  }
-
-  .cr-topic {
-    margin: 0 0 44px;
-    scroll-margin-top: 24px;
-  }
-
-  .cr-topic-header {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: baseline;
-    margin-bottom: 10px;
-  }
-
-  .cr-topic-number {
-    font-family: var(--font-small-caps);
-    font-size: 12px;
-    opacity: .65;
-    margin-right: 9px;
-  }
-
-  .cr-topic h2 {
-    display: inline;
-    margin: 0;
-    font-size: 25px;
-  }
-
-  .cr-topic-count {
-    font-size: 12px;
-    opacity: .6;
-    white-space: nowrap;
-  }
-
-  .cr-topic-blurb {
-    max-width: 760px;
-    margin: 0 0 16px;
-    line-height: 1.55;
-    font-size: 15px;
-  }
-
-  .cr-resource-list {
-    border-top: 1px solid currentColor;
-  }
-
-  .cr-resource {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 18px;
-    align-items: baseline;
-    padding: 13px 0;
-    border-bottom: 1px solid currentColor;
-    text-decoration: none;
-  }
-
-  .cr-resource:hover .cr-resource-title {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-
-  .cr-resource-title {
-    line-height: 1.4;
-  }
-
-  .cr-resource-type {
-    font-family: var(--font-small-caps);
-    font-size: 11px;
-    opacity: .6;
-    text-align: right;
-    white-space: nowrap;
-  }
-
-  .cr-empty {
-    margin: 30px 0;
-    opacity: .65;
-  }
-
-  .cr-loading {
-    padding: 25px 0;
-  }
-
-  @media (max-width: 600px) {
-    .cr-resource {
-      grid-template-columns: 1fr;
-      gap: 4px;
-    }
-
-    .cr-resource-type {
-      text-align: left;
-    }
-
-    .cr-topic-header {
-      display: block;
-    }
-
-    .cr-topic-count {
-      display: block;
-      margin-top: 4px;
-    }
-  }
+}
 </style>
 
-<div class="clinical-rhythm-page">
-  <header class="clinical-rhythm-intro">
-    <p class="clinical-rhythm-kicker">Clinical Rhythm</p>
-    <h1 class="clinical-rhythm-title">Semester 2 resources</h1>
-    <p class="clinical-rhythm-lead">
+
+<div class="clinical-rhythm-page" id="clinical-rhythm"><div class="cr-wrap">
+  <header class="cr-intro">
+    <p class="cr-kicker">Clinical Rhythm</p>
+    <h1 class="cr-title">Semester 2 resources</h1>
+    <p class="cr-lead">
       Lecture slides, textbook chapters, guidelines, journal articles and practice questions,
       organised by topic. The files remain hosted on Clinical Rhythm.
     </p>
-    <p class="clinical-rhythm-meta" id="cr-meta">Loading resource index…</p>
+    <p class="cr-meta" id="cr-meta">Loading resource index…</p>
   </header>
 
   <div class="cr-search">
@@ -229,7 +250,7 @@ id_attribute: clinical-rhythm
 
   <nav class="cr-topic-nav" id="cr-topic-nav" aria-label="Clinical Rhythm topics"></nav>
   <main id="cr-topics"><p class="cr-loading">Loading resources…</p></main>
-</div>
+</div></div>
 
 <script>
 (function () {
@@ -346,7 +367,7 @@ id_attribute: clinical-rhythm
       var m = topics[folder] || {title: folder.replace(/^\d+\.\s*/, ''), blurb:''};
 
       html += '<section class="cr-topic" id="cr-' + i + '">';
-      html += '<div class="cr-topic-header"><div><span class="cr-topic-number">' +
+      html += '<div class="cr-topic-header"><div class="cr-topic-heading"><span class="cr-topic-number">' +
         String(i + 1).padStart(2, '0') + '</span><h2>' + esc(m.title) +
         '</h2></div><span class="cr-topic-count">' + files.length + ' resource' +
         (files.length === 1 ? '' : 's') + '</span></div>';
