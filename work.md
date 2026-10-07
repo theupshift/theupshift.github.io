@@ -1,3 +1,4 @@
+```markdown
 ---
 layout: default
 title: Index
@@ -6,7 +7,7 @@ permalink: /work/
 ---
 
 <header class="work-intro">
-  <p class="work-lede">Things I’ve enjoyed, used, or built.</p>
+  <p class="work-lede">Things I’ve enjoyed, used, or built while learning.</p>
 </header>
 
 <section class="work-showcase" aria-label="Index">
@@ -71,46 +72,43 @@ permalink: /work/
       <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
+
     <div class="work-tile-details" hidden>
       <div class="book-carousel" data-book-carousel>
         <div class="book-carousel-viewport">
+
           <article class="book-slide is-active">
-            <img src="https://images.pangobooks.com/images/a120c736-8955-4916-a491-0e11297e8b2b?crop=1%3A1&quality=85&width=800" alt="Book cover of The Checklist Manifesto by Atul Gawande" loading="lazy">
+            <img src="https://m.media-amazon.com/images/I/71XzCQHVvIL.jpg" alt="Book cover of The Checklist Manifesto" loading="lazy">
             <div class="book-slide-copy">
-              <p class="publication-meta">Checklists — The Checklist Manifesto by Atul Gawande</p>
-              <p>The surgeons weren’t missing knowledge. They were skipping steps. A 19-item list nearly halved deaths.</p>
+              <p class="publication-meta">Checklists — The Checklist Manifesto</p>
+              <p>When expertise isn’t enough, a simple checklist can turn knowledge into reliable action.</p>
             </div>
           </article>
+
           <article class="book-slide">
-            <img src="https://cdn.kobo.com/book-images/7ab504fb-57d9-4673-8bca-079dbba8b58e/1200/1200/False/the-field-guide-to-understanding-human-error-3.jpg" alt="Book cover of The Field Guide to Understanding Human Error by Sidney Dekker" loading="lazy">
+            <img src="https://cdn.kobo.com/book-images/7ab504fb-57d9-4673-8bca-079dbba8b58e/1200/1200/False/the-field-guide-to-understanding-human-error-3.jpg" alt="Book cover of The Field Guide to Understanding Human Error" loading="lazy">
             <div class="book-slide-copy">
-              <p class="publication-meta">Blameless Post-Mortems — The Field Guide to Understanding ‘Human Error’ by Sidney Dekker</p>
-              <p>Human error is a symptom of problems in the system, not the cause of the failure. If you fire the operator and keep the system, you’ll get the same accident again with someone else.</p>
-              <p>Don’t ask who got it wrong. Ask why their actions made sense at the time.</p>
+              <p class="publication-meta">Blameless Post-Mortems — The Field Guide to Understanding ‘Human Error’</p>
+              <p>Look beyond the person who made the mistake. Understand the system that made the action seem reasonable.</p>
             </div>
           </article>
+
           <article class="book-slide">
-            <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/00/26/31/00263125-ef1b-e26f-77db-feb66e7faaf5/9780374707088.jpg/1200x1200wz.jpg" alt="Book cover of Fortune’s Formula by William Poundstone" loading="lazy">
+            <img src="https://images.thenile.io/r1000/9781292763255.jpg" alt="Book cover of The Pyramid Principle" loading="lazy">
             <div class="book-slide-copy">
-              <p class="publication-meta">Position Sizing — Fortune’s Formula by William Poundstone</p>
-              <p>Being right about the odds won’t save you if the bet is too big.</p>
-              <p>The Kelly criterion tells you the bet size that grows wealth fastest. Go past twice that and you lose money even with an edge. Professionals bet a fraction of Kelly, because their estimates of the edge are guesses.</p>
+              <p class="publication-meta">BLUF — The Pyramid Principle</p>
+              <p>Lead with the answer, then build the reasoning beneath it. Clear thinking starts with clear structure.</p>
             </div>
           </article>
-          <article class="book-slide">
-            <img src="https://images.thenile.io/r1000/9781292763255.jpg" alt="Book cover of The Pyramid Principle by Barbara Minto" loading="lazy">
-            <div class="book-slide-copy">
-              <p class="publication-meta">BLUF — The Pyramid Principle by Barbara Minto</p>
-              <p>Write in the order the reader needs things, not the order you worked them out.</p>
-              <p>Start with the conclusion first. If you can’t state your conclusion, you aren’t ready to write.</p>
-              <p>Then put the answer first, then the three or four reasons for it, then the evidence behind each reason.</p>
-            </div>
-          </article>
+
         </div>
+
         <div class="book-carousel-controls" aria-label="Book carousel controls">
-          <button type="button" class="book-carousel-button" data-book-prev aria-label="Previous book">←</button><button type="button" class="book-carousel-button" data-book-next aria-label="Next book">→</button>
+          <button type="button" class="book-carousel-button" data-book-prev aria-label="Previous book">←</button>
+          <button type="button" class="book-carousel-button" data-book-next aria-label="Next book">→</button>
         </div>
-      </div></div>
+      </div>
+    </div>
   </article>
 
   <article class="work-tile work-tile--afyakongwe" data-work-card style="background-image: url('https://images.pexels.com/photos/30678595/pexels-photo-30678595.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; background-position: center;">
@@ -155,6 +153,7 @@ permalink: /work/
     var trigger = card.querySelector('.work-tile-trigger');
     var details = card.querySelector('.work-tile-details');
     if (!trigger || !details) return;
+
     card.classList.remove('is-expanded');
     trigger.setAttribute('aria-expanded', 'false');
     details.hidden = true;
@@ -164,8 +163,10 @@ permalink: /work/
     cards.forEach(function (other) {
       if (other !== card) closeCard(other);
     });
+
     var trigger = card.querySelector('.work-tile-trigger');
     var details = card.querySelector('.work-tile-details');
+
     card.classList.add('is-expanded');
     trigger.setAttribute('aria-expanded', 'true');
     details.hidden = false;
@@ -173,16 +174,29 @@ permalink: /work/
 
   cards.forEach(function (card) {
     var trigger = card.querySelector('.work-tile-trigger');
+
     trigger.addEventListener('click', function () {
-      if (card.classList.contains('is-expanded')) closeCard(card);
-      else openCard(card);
+      if (card.classList.contains('is-expanded')) {
+        closeCard(card);
+      } else {
+        openCard(card);
+      }
     });
 
     card.addEventListener('pointermove', function (event) {
       if (reduced) return;
+
       var rect = card.getBoundingClientRect();
-      card.style.setProperty('--mouse-x', ((event.clientX - rect.left) / rect.width * 100) + '%');
-      card.style.setProperty('--mouse-y', ((event.clientY - rect.top) / rect.height * 100) + '%');
+
+      card.style.setProperty(
+        '--mouse-x',
+        ((event.clientX - rect.left) / rect.width * 100) + '%'
+      );
+
+      card.style.setProperty(
+        '--mouse-y',
+        ((event.clientY - rect.top) / rect.height * 100) + '%'
+      );
     });
   });
 
@@ -193,7 +207,9 @@ permalink: /work/
   });
 
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') cards.forEach(closeCard);
+    if (event.key === 'Escape') {
+      cards.forEach(closeCard);
+    }
   });
 
   if (!reduced && 'IntersectionObserver' in window) {
@@ -205,22 +221,42 @@ permalink: /work/
         }
       });
     }, { threshold: 0.12 });
-    cards.forEach(function (card) { observer.observe(card); });
+
+    cards.forEach(function (card) {
+      observer.observe(card);
+    });
   } else {
-    cards.forEach(function (card) { card.classList.add('is-visible'); });
+    cards.forEach(function (card) {
+      card.classList.add('is-visible');
+    });
   }
 }());
 
-
 document.querySelectorAll("[data-book-carousel]").forEach(function (carousel) {
   const slides = Array.from(carousel.querySelectorAll(".book-slide"));
-  const count = carousel.querySelector("[data-book-count]");
   let index = 0;
+
   function showBook(nextIndex) {
     index = (nextIndex + slides.length) % slides.length;
-    slides.forEach(function (slide, i) { slide.classList.toggle("is-active", i === index); });
+
+    slides.forEach(function (slide, i) {
+      slide.classList.toggle("is-active", i === index);
+    });
   }
-  carousel.querySelector("[data-book-prev]").addEventListener("click", function () { showBook(index - 1); });
-  carousel.querySelector("[data-book-next]").addEventListener("click", function () { showBook(index + 1); });
+
+  carousel.querySelector("[data-book-prev]").addEventListener(
+    "click",
+    function () {
+      showBook(index - 1);
+    }
+  );
+
+  carousel.querySelector("[data-book-next]").addEventListener(
+    "click",
+    function () {
+      showBook(index + 1);
+    }
+  );
 });
 </script>
+```
