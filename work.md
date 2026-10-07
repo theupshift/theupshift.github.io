@@ -75,35 +75,35 @@ permalink: /work/
       <div class="book-carousel" data-book-carousel>
         <div class="book-carousel-viewport">
           <article class="book-slide is-active">
-            <img src="https://books.google.com/books/content?id=UEM5EQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Book cover of My Friends by Fredrik Backman" loading="lazy">
+            <img src="https://images.pangobooks.com/images/a120c736-8955-4916-a491-0e11297e8b2b?crop=1%3A1&quality=85&width=800" alt="Book cover of The Checklist Manifesto by Atul Gawande" loading="lazy">
             <div class="book-slide-copy">
-              <p class="publication-meta">My Friends</p>
-              <p>Four teenagers form an enduring bond that later changes an aspiring artist’s life through a mysterious painting.</p>
-              
+              <p class="publication-meta">Checklists — The Checklist Manifesto by Atul Gawande</p>
+              <p>The surgeons weren’t missing knowledge. They were skipping steps. A 19-item list nearly halved deaths.</p>
             </div>
           </article>
           <article class="book-slide">
-            <img src="https://books.google.com/books/content?id=BfgeEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Book cover of Atmosphere by Taylor Jenkins Reid" loading="lazy">
+            <img src="https://cdn.kobo.com/book-images/7ab504fb-57d9-4673-8bca-079dbba8b58e/1200/1200/False/the-field-guide-to-understanding-human-error-3.jpg" alt="Book cover of The Field Guide to Understanding Human Error by Sidney Dekker" loading="lazy">
             <div class="book-slide-copy">
-              <p class="publication-meta">Atmosphere</p>
-              <p>An ambitious young woman joins NASA’s space shuttle programme and discovers an unexpected passion and love.</p>
-              
+              <p class="publication-meta">Blameless Post-Mortems — The Field Guide to Understanding ‘Human Error’ by Sidney Dekker</p>
+              <p>Human error is a symptom of problems in the system, not the cause of the failure. If you fire the operator and keep the system, you’ll get the same accident again with someone else.</p>
+              <p>Don’t ask who got it wrong. Ask why their actions made sense at the time.</p>
             </div>
           </article>
           <article class="book-slide">
-            <img src="https://books.google.com/books/content?id=rUoYEQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Book cover of The Correspondent by Virginia Evans" loading="lazy">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Publication211/v4/00/26/31/00263125-ef1b-e26f-77db-feb66e7faaf5/9780374707088.jpg/1200x1200wz.jpg" alt="Book cover of Fortune’s Formula by William Poundstone" loading="lazy">
             <div class="book-slide-copy">
-              <p class="publication-meta">The Correspondent</p>
-              <p>A woman’s letters become a way to reckon with memory, relationships, and a painful chapter of her past.</p>
-              
+              <p class="publication-meta">Position Sizing — Fortune’s Formula by William Poundstone</p>
+              <p>Being right about the odds won’t save you if the bet is too big.</p>
+              <p>The Kelly criterion tells you the bet size that grows wealth fastest. Go past twice that and you lose money even with an edge. Professionals bet a fraction of Kelly, because their estimates of the edge are guesses.</p>
             </div>
           </article>
           <article class="book-slide">
-            <img src="https://books.google.com/books/content?id=dSJP0AEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api" alt="Book cover of The Names by Florence Knapp" loading="lazy">
+            <img src="https://images.thenile.io/r1000/9781292763255.jpg" alt="Book cover of The Pyramid Principle by Barbara Minto" loading="lazy">
             <div class="book-slide-copy">
-              <p class="publication-meta">The Names</p>
-              <p>One mother’s decision about her son’s name opens three possible lives and three very different futures.</p>
-              
+              <p class="publication-meta">BLUF — The Pyramid Principle by Barbara Minto</p>
+              <p>Write in the order the reader needs things, not the order you worked them out.</p>
+              <p>Start with the conclusion first. If you can’t state your conclusion, you aren’t ready to write.</p>
+              <p>Then put the answer first, then the three or four reasons for it, then the evidence behind each reason.</p>
             </div>
           </article>
         </div>
