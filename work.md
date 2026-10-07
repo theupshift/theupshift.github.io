@@ -1,4 +1,3 @@
-```markdown
 ---
 layout: default
 title: Index
@@ -259,4 +258,3 @@ document.querySelectorAll("[data-book-carousel]").forEach(function (carousel) {
   );
 });
 </script>
-```
