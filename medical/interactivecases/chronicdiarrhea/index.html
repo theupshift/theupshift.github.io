@@ -20,73 +20,189 @@
 .progress{height:63px;background:#fff;border-top:1px solid #d9d3c8;display:flex;align-items:center;gap:10px;padding:0 20px;z-index:4}.bar{display:flex;gap:3px;flex:1}.seg{height:5px;flex:1;border:0;background:#d6cfc3;padding:0;cursor:pointer}.seg.done{background:var(--p)}.seg.now{background:var(--gold)}.count{font-size:12px;color:#716b62}.nav{display:flex;gap:6px}.nav button{height:34px;min-width:66px;border:1px solid var(--line);background:#fff;font:700 10px Georgia;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}.nav button:disabled{opacity:.4}
 .source{font-size:13px;color:#6d665d;border-top:1px solid var(--line);padding-top:12px;margin-top:16px}.source a{color:var(--p2)}
 @media(max-width:700px){.grid,.grid3{grid-template-columns:1fr}.slide{padding:28px 18px 84px}p,li{font-size:17px}.lead{font-size:21px}.tag{display:none}.top{padding:0 14px}.score{grid-template-columns:1fr 1fr}}
-/* Upshift shell: match the cirrhosis case navigation and compact case frame. */
-html{height:100%;background:#b9b2a6}
-body{height:100%;min-height:100%;margin:0;padding:0 20px;overflow:hidden;background:#b9b2a6}
-.app{width:min(760px,100%);height:100dvh;margin:0 auto;padding-top:76px;background:transparent;display:flex;flex-direction:column;gap:0}
-.site-nav{position:fixed;top:6px;left:50%;transform:translateX(-50%);z-index:1000;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;width:min(760px,calc(100vw - 40px));padding:18px 12px;margin:0;border:1px solid rgba(255,255,255,.34);border-radius:18px;background:rgba(255,255,255,.62);-webkit-backdrop-filter:blur(18px) saturate(120%);backdrop-filter:blur(18px) saturate(120%);box-shadow:0 6px 24px rgba(25,18,19,.05);font-family:Georgia,serif;font-size:15px;line-height:1.2;isolation:isolate}
-.site-nav:before{content:"";position:absolute;z-index:-1;inset:0;border-radius:inherit;background:rgba(255,255,255,.25);pointer-events:none}
-.site-nav .nav-left,.site-nav .nav-right{display:flex;align-items:center;gap:10px;min-width:0}
-.site-nav .nav-left{justify-content:flex-start}
-.site-nav .nav-center{text-align:center;white-space:nowrap;font-family:Georgia,serif;font-variant:small-caps;font-size:16px;letter-spacing:.03em}
-.site-nav .nav-center a{font-size:1.1em;font-weight:600}
-.site-nav .nav-right{justify-content:flex-end}
-.site-nav a{color:var(--p2);text-decoration:none;text-shadow:none;background:none}
-.site-nav .nav-left a{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:1px solid rgba(48,48,90,.18);border-radius:50%;color:var(--p);font:18px Arial,sans-serif}
-.site-nav .home-nav-icon{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:1px solid var(--p);border-radius:3px;background:var(--p);color:#fff;font:17px Arial,sans-serif}
-.site-nav #fullscreen{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:7px 12px;border:1px solid var(--p);border-radius:3px;background:var(--p);color:#fff;font:13px Georgia,serif;white-space:nowrap;cursor:pointer}
-.stage{border-radius:10px 10px 0 0}
-.progress{height:66px;flex:0 0 66px;display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;gap:10px;padding:8px 12px;border-radius:0 0 10px 10px;min-width:0}
-.case-utilities{display:flex;align-items:center;gap:6px}
-.case-utilities button,.progress .nav button{height:34px;min-width:44px;padding:0 9px;border:1px solid var(--line);border-radius:3px;background:#fff;color:var(--p2);font:700 10px Georgia,serif;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;cursor:pointer}
-.progress-track{min-width:0;display:flex;align-items:center;overflow:hidden}
-.bar{width:100%;min-width:0;gap:3px;overflow:hidden}
-.seg{min-width:0}
-.progress .count{white-space:nowrap}
-.progress .nav{display:flex;gap:6px;min-width:0}
-.progress .nav button{min-width:52px}
-.cirrhosis-fullscreen{overflow:hidden!important}
-html.cirrhosis-fullscreen,body.cirrhosis-fullscreen{position:fixed!important;inset:0!important;width:100%!important;height:100%!important;overflow:hidden!important;overscroll-behavior:none;touch-action:manipulation}
-body.cirrhosis-fullscreen{padding:0!important}
-.cirrhosis-fullscreen .site-nav{display:none!important}
-.cirrhosis-fullscreen .app{width:calc(100vw - 24px);height:calc(100dvh - 16px);max-width:none;margin:8px 12px;padding:0;border-radius:10px;overflow:hidden}
-.cirrhosis-fullscreen .stage{border-radius:10px 10px 0 0}
-.cirrhosis-fullscreen .progress{border-radius:0 0 10px 10px}
+/* Cirrhosis-matched Upshift shell, navigation, and case controls. */
+html,body{height:100%;margin:0}
+body.cirrhosis-case{
+  min-height:100%;
+  padding:0 24px;
+  overflow:hidden;
+  background:#bbb5aa;
+  color:var(--ink);
+  font-family:Georgia,"Times New Roman",Times,serif;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.cirrhosis-case .site-nav{
+  position:fixed!important;
+  top:6px!important;
+  left:50%!important;
+  transform:translateX(-50%)!important;
+  z-index:1000;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:16px;
+  width:min(760px,calc(100vw - 40px))!important;
+  max-width:760px!important;
+  margin:0!important;
+  padding:18px 12px!important;
+  border:1px solid rgba(255,255,255,.34)!important;
+  border-radius:18px!important;
+  background:rgba(255,255,255,.62)!important;
+  -webkit-backdrop-filter:blur(18px) saturate(120%)!important;
+  backdrop-filter:blur(18px) saturate(120%)!important;
+  box-shadow:0 6px 24px rgba(25,18,19,.05)!important;
+  isolation:isolate;
+  font-family:Georgia,"Times New Roman",Times,serif;
+  font-size:15px;
+  line-height:1.2;
+}
+.cirrhosis-case .site-nav::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  border-radius:inherit;
+  background:rgba(255,255,255,.25);
+  pointer-events:none;
+}
+.cirrhosis-case .site-nav::after{display:none!important}
+.cirrhosis-case .site-nav .nav-left,
+.cirrhosis-case .site-nav .nav-right{display:flex;align-items:center;gap:10px;min-width:0}
+.cirrhosis-case .site-nav .nav-left{justify-content:flex-start}
+.cirrhosis-case .site-nav .nav-center{
+  text-align:center;white-space:nowrap;font-family:Georgia,serif;
+  font-variant:small-caps;font-size:16px;letter-spacing:.03em
+}
+.cirrhosis-case .site-nav .nav-center a{font-size:1.1em;font-weight:600}
+.cirrhosis-case .site-nav .nav-right{justify-content:flex-end}
+.cirrhosis-case .site-nav a{color:var(--p2);text-decoration:none;text-shadow:none;background:none}
+.cirrhosis-case .site-nav .nav-left a{
+  display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
+  border:1px solid rgba(48,48,90,.18);border-radius:50%;color:var(--p);font:18px Arial,sans-serif
+}
+.cirrhosis-case .site-nav .home-nav-icon{
+  display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
+  min-width:34px;min-height:34px;padding:0;border:1px solid var(--p);border-radius:3px;
+  color:#fff;background:var(--p);font:17px Arial,sans-serif;line-height:1;text-decoration:none
+}
+.cirrhosis-case .site-nav .home-nav-icon:hover,
+.cirrhosis-case .site-nav .home-nav-icon:focus-visible{color:#fff;background:#963f3e;border-color:#963f3e}
+.cirrhosis-case .site-nav #fullscreen{
+  display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:7px 12px;
+  border:1px solid var(--p);border-radius:3px;color:#fff;background:var(--p);
+  font:13px Georgia,serif;white-space:nowrap;cursor:pointer
+}
+.cirrhosis-case .cirrhosis-main{
+  width:100%;max-width:none;height:100dvh;max-height:100dvh;margin:0;
+  padding-top:85px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-start
+}
+.cirrhosis-case .cirrhosis-main .app{
+  width:100%;max-width:none;flex:1 1 auto;min-height:0;
+  height:calc(100dvh - 85px);max-height:calc(100dvh - 85px);
+  margin:0;padding:0;background:var(--cream);overflow:hidden;
+  display:flex;flex-direction:column;gap:0
+}
+.cirrhosis-case .stage{
+  flex:1 1 auto;min-height:0;position:relative;overflow:hidden;
+  border-radius:9px 9px 0 0;background:linear-gradient(120deg,#e8e1d3,#d5d1c8)
+}
+.cirrhosis-case .stage:after{background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.12),transparent 65%)}
+.cirrhosis-case .slide{padding:26px clamp(24px,5vw,72px) 24px}
+.cirrhosis-case .slide h1{font-size:clamp(3.15rem,6.4vw,4.8rem);line-height:.96}
+.cirrhosis-case .slide h2{font-size:clamp(1.75rem,3.45vw,2.8rem);line-height:1.08;margin-bottom:12px}
+.cirrhosis-case .slide p,.cirrhosis-case .slide li{font-size:15.4px;line-height:1.42}
+.cirrhosis-case .slide .lead{font-size:16.8px;line-height:1.4}
+.cirrhosis-case .slide .k{font-size:10px;letter-spacing:.16em}
+.cirrhosis-case .slide .opt{font-size:14.3px;padding:9px 11px}
+.cirrhosis-case .case-footer.nav{
+  height:62px;flex:0 0 62px;background:#fff;border-top:1px solid #dad6ce;
+  display:grid;grid-template-columns:auto minmax(0,1fr) 1px auto auto;
+  align-items:center;gap:16px;padding:10px 22px;position:relative;z-index:20;
+  border-radius:0 0 9px 9px;min-width:0
+}
+.cirrhosis-case .nav-utility{display:flex;align-items:center;gap:8px}
+.cirrhosis-case .navbtn{
+  height:36px;display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:1px solid #d4cec2;border-radius:0;background:#fff;color:#34322f;
+  font:700 12px/1 Georgia,"Times New Roman",Times,serif;letter-spacing:.12em;text-transform:uppercase;
+  cursor:pointer;transition:background .14s ease,border-color .14s ease;white-space:nowrap
+}
+.cirrhosis-case .navbtn:hover:not(:disabled){background:#f4f1eb;border-color:#aaa397}
+.cirrhosis-case .navbtn:disabled{opacity:.4;cursor:default}
+.cirrhosis-case .navbtn-utility{width:auto;min-width:54px;padding:0 11px;font-size:11px}
+.cirrhosis-case .navbtn-utility:first-child{min-width:54px}
+.cirrhosis-case .progress-card{position:relative;min-width:0;height:24px;overflow:hidden}
+.cirrhosis-case .progress{width:100%;height:24px;display:flex;align-items:center;gap:3px;min-width:0;overflow:hidden}
+.cirrhosis-case .seg{
+  appearance:none;-webkit-appearance:none;position:relative;height:18px;min-width:2px;flex:1 1 0;
+  border:0;padding:0;background:transparent;cursor:pointer
+}
+.cirrhosis-case .seg:before{
+  content:"";position:absolute;left:0;right:0;top:50%;height:7px;border-radius:3px;
+  background:color-mix(in srgb,var(--p) 38%,#ddd9d1);transform:translateY(-50%);
+  transition:height .14s ease,background .14s ease
+}
+.cirrhosis-case .seg.done:before{background:color-mix(in srgb,var(--p) 72%,#aaa397)}
+.cirrhosis-case .seg.now:before{height:13px;background:var(--gold)}
+.cirrhosis-case .nav-divider{width:1px;height:24px;background:#e6e1d8}
+.cirrhosis-case .counter{
+  width:78px;height:30px;display:grid;place-items:center;border:1px solid #d4cec2;
+  background:#fff;color:#403d38;font:400 13px/1 Georgia,"Times New Roman",Times,serif;
+  font-variant-numeric:tabular-nums;white-space:nowrap
+}
+.cirrhosis-case .nav-actions{display:flex;align-items:center;gap:6px;min-width:0;justify-self:end}
+.cirrhosis-case .nav-actions .navbtn{width:auto;min-width:72px;padding:0 10px}
+.cirrhosis-case.cirrhosis-fullscreen{padding:0;overflow:hidden}
+.cirrhosis-case.cirrhosis-fullscreen .site-nav{display:none!important}
+.cirrhosis-case.cirrhosis-fullscreen .cirrhosis-main{width:100vw;max-width:none;height:100dvh;padding:0;margin:0}
+.cirrhosis-case.cirrhosis-fullscreen .cirrhosis-main .app{width:calc(100vw - 24px);height:calc(100dvh - 16px);max-height:none;margin:8px 12px;border-radius:9px;overflow:hidden}
+.cirrhosis-case.cirrhosis-fullscreen .stage{border-radius:9px 9px 0 0}
+.cirrhosis-case.cirrhosis-fullscreen .case-footer{border-radius:0 0 9px 9px}
 @media(max-width:700px){
- body{padding:0 20px}
- .app{width:100%;padding-top:68px}
- .site-nav{top:2px;width:calc(100vw - 40px);padding:12px 10px;border-radius:16px;grid-template-columns:auto minmax(0,1fr) auto;gap:8px}
- .site-nav .nav-center{font-size:14px}
- .site-nav .nav-left a,.site-nav .home-nav-icon{width:32px;height:32px;min-width:32px}
- .site-nav .nav-right{gap:6px}
- .site-nav #fullscreen{padding:7px 8px;font-size:11px;min-height:32px}
- .stage{min-width:0}
- .progress{grid-template-columns:auto minmax(0,1fr) auto;gap:7px;padding:8px 10px}
- .case-utilities{gap:5px}
- .case-utilities button{min-width:40px;padding:0 7px;font-size:9px}
- .progress-track{min-width:0}
- .progress .count{display:none}
- .progress .nav{justify-self:end;gap:5px}
- .progress .nav button{min-width:0;padding:0 8px;max-width:58px}
- .bar{gap:2px}
- .seg{height:4px}
- .cirrhosis-fullscreen .app{width:calc(100vw - 24px);height:calc(100dvh - 16px);margin:8px 12px}
- .cirrhosis-fullscreen .slide{padding:22px 18px 24px}
+  body.cirrhosis-case{padding:0 20px}
+  .cirrhosis-case .site-nav{top:2px!important;width:calc(100vw - 40px)!important;max-width:none!important;padding:12px 10px!important;border-radius:16px!important;grid-template-columns:auto minmax(0,1fr) auto;gap:8px}
+  .cirrhosis-case .site-nav:before{border-radius:16px}
+  .cirrhosis-case .site-nav .nav-center{font-size:14px}
+  .cirrhosis-case .site-nav .nav-left a,.cirrhosis-case .site-nav .home-nav-icon{width:32px;height:32px;min-width:32px;min-height:32px}
+  .cirrhosis-case .site-nav .nav-right{gap:6px}
+  .cirrhosis-case .site-nav #fullscreen{padding:7px 8px;font-size:11px;min-height:32px}
+  .cirrhosis-case .cirrhosis-main{padding-top:68px}
+  .cirrhosis-case .cirrhosis-main .app{height:calc(100dvh - 68px);max-height:calc(100dvh - 68px)}
+  .cirrhosis-case .slide{padding:20px 24px 18px}
+  .cirrhosis-case .slide h1{font-size:clamp(2.8rem,12vw,3.9rem)}
+  .cirrhosis-case .slide h2{font-size:clamp(1.65rem,6.75vw,2.2rem)}
+  .cirrhosis-case .slide p,.cirrhosis-case .slide li{font-size:13.9px;line-height:1.38}
+  .cirrhosis-case .slide .lead{font-size:15px}
+  .cirrhosis-case .slide .opt{font-size:13px;padding:8px 10px}
+  .cirrhosis-case .case-footer.nav{height:68px;flex-basis:68px;grid-template-columns:auto minmax(0,1fr) auto;gap:8px;padding:8px 10px}
+  .cirrhosis-case .nav-divider,.cirrhosis-case .counter{display:none}
+  .cirrhosis-case .nav-utility{gap:6px}
+  .cirrhosis-case .navbtn-utility{min-width:44px;padding:0 7px;font-size:10px}
+  .cirrhosis-case .navbtn-utility:first-child{min-width:40px}
+  .cirrhosis-case .nav-actions{gap:6px}
+  .cirrhosis-case .nav-actions .navbtn{min-width:0;padding:0 8px;max-width:68px;font-size:10.5px}
+  .cirrhosis-case .progress-card{width:100%}
+  .cirrhosis-case .progress{gap:1px}
+  .cirrhosis-case .seg{height:18px}
+  .cirrhosis-case.cirrhosis-fullscreen .cirrhosis-main .app{width:calc(100vw - 24px);height:calc(100dvh - 16px);margin:8px 12px}
 }
 </style><!-- JS syntax validated: 2026-10-08 -->
-</head><body><div class="app">
-<nav id="top" class="site-nav" aria-label="Main navigation">
+</head><body class="cirrhosis-case">
+<nav id="top" class="constrained site-nav" aria-label="Main navigation">
   <div class="nav-left"><a href="/search/" aria-label="Search the site" title="Search">⌕</a></div>
   <div class="nav-center"><a href="/" aria-label="The Upshift home">The Upshift</a></div>
-  <div class="nav-right"><a class="home-nav-icon" href="/" aria-label="Home" title="Home">⌂</a><button id="fullscreen" type="button" aria-label="Enter fullscreen" title="Fullscreen">Fullscreen</button></div>
+  <div class="nav-right"><a class="home-nav-icon" href="/" aria-label="Home" title="Home">⌂</a><button id="fullscreen" class="site-menu-toggle" type="button" aria-label="Enter fullscreen" title="Fullscreen">Fullscreen</button></div>
 </nav>
+<main class="constrained cirrhosis-main"><div class="app">
 <main class="stage" id="stage"></main>
-<footer class="progress" aria-label="Case navigation">
-  <div class="case-utilities"><button id="escape-fullscreen" type="button" aria-label="Exit fullscreen" title="Exit fullscreen">Esc</button><button id="reset" type="button" title="Reset case">Reset</button></div>
-  <div class="progress-track"><div class="bar" id="bar"></div></div>
-  <div class="count" id="count"></div>
-  <div class="nav"><button id="back">Prev</button><button id="next">Next</button></div>
-</footer></div>
+<footer class="case-footer nav" aria-label="Case navigation">
+  <div class="nav-utility"><button id="escape-fullscreen" class="navbtn navbtn-utility" type="button" aria-label="Exit fullscreen" title="Exit fullscreen">Esc</button><button id="reset" class="navbtn navbtn-utility" type="button" title="Restart case">Reset</button></div>
+  <div class="progress-card"><div class="progress" id="bar" aria-label="Case progress"></div></div>
+  <span class="nav-divider" aria-hidden="true"></span>
+  <span class="counter" id="count" aria-live="polite"></span>
+  <div class="nav-actions"><button id="back" class="navbtn navbtn-back" aria-label="Previous slide">‹ Prev</button><button id="next" class="navbtn navbtn-next" aria-label="Next slide">Next ›</button></div>
+</footer></div></main>
 <script>
 const S=[
 {t:"title",h:'<div class="wrap left"><div class="k">Clinical Reasoning • Interactive Case</div><h1>Chronic<br>Diarrhoea</h1><p class="lead">A patient with chronic bloody diarrhoea. <b>Is it IBD?</b></p><p class="muted">Follow the evidence from phenotype to endoscopy, histology, treatment and follow-up.</p><p class="source">Clinical Rhythm • Educational simulation</p></div>'},
