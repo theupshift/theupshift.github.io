@@ -2369,6 +2369,63 @@ ul{margin:0 0 8px 24px;padding:0}li{font-size:19.2px;line-height:1.48;margin:0 0
   color:#fff;
   background:rgb(var(--color-accent));
 }
+.cirrhosis-case .site-nav .nav-right #fullscreen{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:34px;
+  padding:7px 12px;
+  border:1px solid rgb(var(--color-accent));
+  border-radius:3px;
+  color:#fff;
+  background:rgb(var(--color-accent));
+  font:inherit;
+  font-size:13px;
+  line-height:1.2;
+  cursor:pointer;
+  white-space:nowrap;
+}
+.cirrhosis-case.cirrhosis-fullscreen{
+  padding:0;
+  overflow:hidden;
+}
+.cirrhosis-case.cirrhosis-fullscreen .site-nav{
+  display:none!important;
+}
+.cirrhosis-case.cirrhosis-fullscreen .cirrhosis-main{
+  width:100vw;
+  max-width:none;
+  padding:0;
+  margin:0;
+}
+.cirrhosis-case.cirrhosis-fullscreen .cirrhosis-main .app{
+  width:100vw;
+  height:100dvh;
+  min-height:100dvh;
+  max-height:100dvh;
+  margin:0;
+  border-radius:0;
+}
+@supports not (height:100dvh){
+  .cirrhosis-case.cirrhosis-fullscreen .cirrhosis-main .app{
+    height:100vh;
+    min-height:100vh;
+    max-height:100vh;
+  }
+}
+@media (max-width:600px){
+  .cirrhosis-case .site-nav .nav-right #fullscreen{
+    min-height:34px;
+    padding:7px 10px;
+    font-size:12px;
+  }
+  .cirrhosis-case.cirrhosis-fullscreen .cirrhosis-main .app{
+    width:100vw;
+    height:100dvh;
+    min-height:100dvh;
+    max-height:100dvh;
+  }
+}
 .cirrhosis-main{
   width:100%;
   max-width:760px;
@@ -2414,7 +2471,9 @@ ul{margin:0 0 8px 24px;padding:0}li{font-size:19.2px;line-height:1.48;margin:0 0
   <div class="nav-center">
     <a href="/" aria-label="The Upshift home">The Upshift</a>
   </div>
-  <div class="nav-right"></div>
+  <div class="nav-right">
+    <button id="fullscreen" class="site-menu-toggle" type="button" aria-label="Enter fullscreen" title="Fullscreen">Fullscreen</button>
+  </div>
 </nav>
 <main class="constrained cirrhosis-main">
 <div class="app">
@@ -3730,6 +3789,81 @@ function transitionTo(target,direction=0){
 function go(d){transitionTo(idx+d,d)}
 document.getElementById('next').addEventListener('click',()=>go(1));
 document.getElementById('prev').addEventListener('click',()=>go(-1));
+const fullscreenButton=document.getElementById('fullscreen');
+const fullscreenRoot=document.documentElement;
+const fullscreenContent=document.querySelector('.cirrhosis-main .app');
+let immersiveFullscreen=false;
+
+function fullscreenSupported(){
+  return !!(fullscreenContent && (
+    fullscreenContent.requestFullscreen ||
+    fullscreenContent.webkitRequestFullscreen ||
+    fullscreenRoot.requestFullscreen ||
+    fullscreenRoot.webkitRequestFullscreen
+  ));
+}
+
+function setFullscreenState(on){
+  immersiveFullscreen=on;
+  document.body.classList.toggle('cirrhosis-fullscreen',on);
+  fullscreenRoot.classList.toggle('cirrhosis-fullscreen',on);
+  if(fullscreenButton){
+    fullscreenButton.textContent=on?'Exit Fullscreen':'Fullscreen';
+    fullscreenButton.setAttribute('aria-label',on?'Exit fullscreen':'Enter fullscreen');
+    fullscreenButton.setAttribute('title',on?'Exit fullscreen':'Fullscreen');
+  }
+}
+
+async function enterFullscreen(){
+  const target=fullscreenContent||fullscreenRoot;
+  try{
+    if(target.requestFullscreen){
+      await target.requestFullscreen({navigationUI:'hide'});
+      return true;
+    }
+    if(target.webkitRequestFullscreen){
+      target.webkitRequestFullscreen();
+      return true;
+    }
+  }catch(error){
+    console.warn('Fullscreen API request failed; using immersive page mode.',error);
+  }
+  setFullscreenState(true);
+  return false;
+}
+
+async function exitFullscreen(){
+  try{
+    if(document.fullscreenElement&&document.exitFullscreen){
+      await document.exitFullscreen();
+      return true;
+    }
+    if(document.webkitFullscreenElement&&document.webkitExitFullscreen){
+      document.webkitExitFullscreen();
+      return true;
+    }
+  }catch(error){
+    console.warn('Fullscreen API exit failed; returning to normal page mode.',error);
+  }
+  setFullscreenState(false);
+  return false;
+}
+
+if(fullscreenButton){
+  fullscreenButton.addEventListener('click',async()=>{
+    const nativeFullscreen=!!(document.fullscreenElement||document.webkitFullscreenElement);
+    if(nativeFullscreen||immersiveFullscreen) await exitFullscreen();
+    else await enterFullscreen();
+  });
+}
+
+document.addEventListener('fullscreenchange',()=>{
+  setFullscreenState(!!document.fullscreenElement);
+});
+document.addEventListener('webkitfullscreenchange',()=>{
+  setFullscreenState(!!document.webkitFullscreenElement);
+});
+
 function resetAll(){
   SLIDES.forEach(s=>{delete s._done;delete s._answered;delete s._revealed;delete s._chosen;delete s._txShown;delete s._revealedCells;delete s._matrixHighlighted;delete s._matrixRevealed;delete s._syndromeRevealed;delete s._syndromeTx;delete s._checklistRevealed});
   isTransitioning=false;
@@ -3749,6 +3883,7 @@ document.addEventListener('keydown',e=>{
       return;
     }
   }
+  if(e.key==='Escape'&&(immersiveFullscreen||document.fullscreenElement||document.webkitFullscreenElement)){exitFullscreen();e.preventDefault();return}
   if(e.key==='ArrowRight'||e.key==='PageDown'){go(1);e.preventDefault()}
   if(e.key==='ArrowLeft'||e.key==='PageUp'){go(-1);e.preventDefault()}
 });
