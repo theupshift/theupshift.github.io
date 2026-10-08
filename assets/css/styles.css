@@ -2169,3 +2169,11 @@ article > header > h1 {
 }
 
 
+
+
+/* Notched-phone scroll guard: keep the sticky nav below the top safe area. */
+@media (max-width: 600px) {
+  nav.constrained.site-nav.is-scrolled {
+    top: env(safe-area-inset-top, 0px);
+  }
+}
