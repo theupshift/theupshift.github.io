@@ -2463,6 +2463,23 @@ html.cirrhosis-fullscreen .cirrhosis-main .app{
 }
 @media (max-width:600px){
   html.cirrhosis-fullscreen,
+  html.cirrhosis-fullscreen body{
+    overscroll-behavior:none;
+    overflow:hidden!important;
+    position:fixed!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+  }
+  html.cirrhosis-fullscreen .cirrhosis-main,
+  html.cirrhosis-fullscreen .cirrhosis-main .app{
+    width:100vw!important;
+    height:100dvh!important;
+    max-height:100dvh!important;
+  }
+}
+@media (max-width:600px){
+  html.cirrhosis-fullscreen,
   body.cirrhosis-fullscreen{
     -webkit-user-select:none;
     user-select:none;
