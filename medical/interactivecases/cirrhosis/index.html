@@ -2311,39 +2311,117 @@ ul{margin:0 0 8px 24px;padding:0}li{font-size:19.2px;line-height:1.48;margin:0 0
   .east-vibes-list li.east-vibes-break{margin-top:8px;border-top-width:2px}
 }
 
-/* Upshift shell harmonisation: keep the interactive case engine intact while
-   using the site's navigation, reading width, fonts and responsive rhythm. */
-html, body { margin: 0; min-height: 100%; }
-body { background: rgb(var(--upshift-bg, 255,255,255)); color: rgb(var(--upshift-text,25,18,19)); font-family: var(--upshift-serif, Georgia,"Times New Roman",Times,serif); }
-.upshift-case-shell { width: min(680px, calc(100% - 40px)); margin: 0 auto; }
-.cirrhosis-upshift-nav { position: sticky; top: 0; z-index: 1000; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:16px; padding:18px 0; margin:0 auto; width:min(680px,100%); background:transparent; }
-.cirrhosis-upshift-nav a,.cirrhosis-upshift-nav button { color:inherit; font:inherit; text-decoration:none; }
-.cirrhosis-upshift-nav .nav-left { text-align:left; }.cirrhosis-upshift-nav .nav-center{text-align:center;font-size:1rem;font-weight:600;}.cirrhosis-upshift-nav .nav-right{display:flex;justify-content:flex-end;align-items:center;gap:12px;}
-.cirrhosis-upshift-nav .menu-toggle { border:0;background:transparent;cursor:pointer;padding:4px 0; }
-.cirrhosis-upshift-menu { display:none; position:absolute; right:0; top:calc(100% - 4px); padding:12px 16px; border:1px solid rgba(25,18,19,.12); border-radius:14px; background:rgba(255,255,255,.78); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); box-shadow:0 12px 32px rgba(25,18,19,.08); }
-.cirrhosis-upshift-menu.is-open { display:flex; gap:12px; align-items:center; white-space:nowrap; }
-.cirrhosis-upshift-nav.is-scrolled { margin-top:4px; border-radius:18px; padding:12px 0; }
-.cirrhosis-upshift-nav::after { content:""; position:absolute; left:0; right:0; bottom:4px; height:1px; background:rgba(25,18,19,.12); }
-.cirrhosis-case { width:100%; max-width:680px; margin:0 auto; }
-.cirrhosis-case .case-content,.cirrhosis-case .stack { width:100%; max-width:680px; }
-.cirrhosis-case p,.cirrhosis-case li { font-family:var(--upshift-serif,Georgia,"Times New Roman",Times,serif); }
-.cirrhosis-case h1,.cirrhosis-case h2,.cirrhosis-case h3 { color:rgb(var(--upshift-text,25,18,19)); }
-@media (max-width:600px){.upshift-case-shell,.cirrhosis-case{width:100%;max-width:680px}.cirrhosis-upshift-nav{grid-template-columns:auto 1fr auto;gap:10px;padding:18px 0}.cirrhosis-upshift-nav .nav-center{text-align:center}.cirrhosis-upshift-menu{right:0}}
+/* Upshift shell: page chrome only. The clinical slide engine remains untouched. */
+.cirrhosis-case{
+  background:#fff;
+  color:#191213;
+  font-family:Georgia,"Times New Roman",Times,serif;
+}
+.cirrhosis-upshift-nav{
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:16px;
+  width:min(680px,calc(100% - 40px));
+  padding:42px 0;
+  margin:0;
+  color:#191213;
+  font-size:15px;
+  line-height:1;
+  background:transparent;
+}
+.cirrhosis-upshift-nav a,
+.cirrhosis-upshift-nav button{
+  color:inherit;
+  font:inherit;
+  text-decoration:none;
+}
+.cirrhosis-upshift-nav .nav-left{text-align:left}
+.cirrhosis-upshift-nav .nav-center{text-align:center}
+.cirrhosis-upshift-nav .nav-center a{font-weight:600}
+.cirrhosis-upshift-nav .nav-right{
+  position:relative;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+.cirrhosis-upshift-nav .menu-toggle{
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  padding:0;
+  color:inherit;
+}
+.cirrhosis-upshift-nav .menu-toggle:hover,
+.cirrhosis-upshift-nav a:hover{opacity:.65}
+.cirrhosis-upshift-menu{
+  display:none;
+  position:absolute;
+  top:30px;
+  right:0;
+  min-width:150px;
+  padding:14px 16px;
+  border:1px solid rgba(25,18,19,.12);
+  border-radius:14px;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  box-shadow:0 12px 32px rgba(25,18,19,.08);
+}
+.cirrhosis-upshift-menu.is-open{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+}
+.cirrhosis-upshift-menu span{display:none}
+.cirrhosis-case .topbar{display:none}
+.cirrhosis-case .app{
+  position:relative;
+  width:100vw;
+  height:100dvh;
+  margin:0;
+  border-radius:0;
+  box-shadow:none;
+}
+.cirrhosis-case .stage{
+  flex:1 1 auto;
+  min-height:0;
+}
+.cirrhosis-case .stack{font-family:Georgia,"Times New Roman",Times,serif}
+.cirrhosis-case .nav{
+  position:relative;
+  z-index:20;
+}
+@media (max-width:600px){
+  .cirrhosis-upshift-nav{
+    grid-template-columns:auto 1fr auto;
+    gap:10px;
+    width:calc(100% - 32px);
+    padding:22px 0;
+  }
+  .cirrhosis-upshift-nav .nav-center{text-align:center}
+  .cirrhosis-upshift-menu{top:26px}
+}
 </style>
 </head>
 <body class="cirrhosis-case">
+<div class="app">
 <nav class="cirrhosis-upshift-nav" aria-label="The Upshift navigation">
   <div class="nav-left"><a href="/search/" aria-label="Search The Upshift" title="Search">⌕</a></div>
   <div class="nav-center"><a href="/" aria-label="The Upshift home">The Upshift</a></div>
   <div class="nav-right">
     <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
     <div class="cirrhosis-upshift-menu" aria-hidden="true">
-      <a href="/words/">About</a><span aria-hidden="true">·</span><a href="/">Writings</a><span aria-hidden="true">·</span><a href="/work/">Index</a>
+      <a href="/words/">About</a><a href="/">Writings</a><a href="/work/">Index</a>
     </div>
   </div>
 </nav>
-
-<div class="app">
   <header class="topbar">
     <div class="brand-lockup"><span class="case-title">Cirrhosis</span></div>
     <span class="act-tag" id="actTag"></span>
@@ -3727,9 +3805,19 @@ render(0);
 (function(){
  var nav=document.querySelector('.cirrhosis-upshift-nav'), btn=nav&&nav.querySelector('.menu-toggle'), menu=nav&&nav.querySelector('.cirrhosis-upshift-menu');
  if(!nav||!btn||!menu)return;
- btn.addEventListener('click',function(){var open=menu.classList.toggle('is-open');btn.setAttribute('aria-expanded',open);menu.setAttribute('aria-hidden',!open);});
- document.addEventListener('click',function(e){if(!nav.contains(e.target)){menu.classList.remove('is-open');btn.setAttribute('aria-expanded','false');menu.setAttribute('aria-hidden','true');}});
- window.addEventListener('scroll',function(){nav.classList.toggle('is-scrolled',window.scrollY>8);},{passive:true});
+ btn.addEventListener('click',function(e){
+   e.stopPropagation();
+   var open=menu.classList.toggle('is-open');
+   btn.setAttribute('aria-expanded',open);
+   menu.setAttribute('aria-hidden',!open);
+ });
+ document.addEventListener('click',function(e){
+   if(!nav.contains(e.target)){
+     menu.classList.remove('is-open');
+     btn.setAttribute('aria-expanded','false');
+     menu.setAttribute('aria-hidden','true');
+   }
+ });
 }());
 </script></body>
 </html>
