@@ -63,15 +63,34 @@ id_attribute: words
 <style>
   .blog-header-image {
     width: 100%;
-    margin: 0 0 28px;
+    margin: 0;
     overflow: hidden;
   }
 
   .blog-header-image img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 160px;
+    object-fit: cover;
+    object-position: center;
     margin: 0;
+  }
+
+  .post-entry-featured {
+    position: relative;
+    z-index: 2;
+    margin-top: -40px;
+    background: var(--background-color, #fff);
+    padding: 28px 0 0;
+  }
+
+  .post-entry-featured header,
+  .post-entry-featured .post-excerpt {
+    position: relative;
+  }
+
+  .post-entry-featured + .post-entry {
+    margin-top: 32px;
   }
 
   /* Keep footnotes out of the homepage excerpts; they remain visible on individual post pages. */
@@ -123,6 +142,19 @@ id_attribute: words
   }
 
   @media (max-width: 600px) {
+    .blog-header-image img {
+      height: 105px;
+    }
+
+    .post-entry-featured {
+      margin-top: -25px;
+      padding-top: 20px;
+    }
+
+    .post-entry-featured + .post-entry {
+      margin-top: 26px;
+    }
+
     .pagination {
       margin-top: 18px;
       margin-bottom: 0;
