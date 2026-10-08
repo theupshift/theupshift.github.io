@@ -11,6 +11,10 @@ id_attribute: words
   gtag('config', 'UA-158309270-1');
 </script>
 
+<div class="blog-header-image">
+  <img src="https://theupshift.github.io/wiki/wiki/m/josh.png" alt="" loading="eager">
+</div>
+
 {% for post in paginator.posts limit:5 %}
 <section class="post-entry{% if forloop.first %} post-entry-featured{% endif %}">
 	<header>
@@ -57,6 +61,19 @@ id_attribute: words
 {% endif %}
 
 <style>
+  .blog-header-image {
+    width: 100%;
+    margin: 0 0 28px;
+    overflow: hidden;
+  }
+
+  .blog-header-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
   /* Keep footnotes out of the homepage excerpts; they remain visible on individual post pages. */
   .footnotes,
   .footnotes-sep {
