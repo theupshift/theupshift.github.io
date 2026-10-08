@@ -2348,21 +2348,26 @@ ul{margin:0 0 8px 24px;padding:0}li{font-size:19.2px;line-height:1.48;margin:0 0
   padding:0 24px;
   align-items:center;
 }
-/* Keep the site menu inside the same nav width and let it expand toward fullscreen. */
-.cirrhosis-case .site-nav .site-menu-panel{
-  right:0;
-  left:auto;
-  width:max-content;
-  max-width:100%;
-  transform-origin:right center;
+
+.cirrhosis-case .site-nav .nav-left > a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:34px;
+  min-width:34px;
+  padding:7px 9px;
+  border:1px solid rgb(var(--color-accent));
+  border-radius:3px;
+  color:#fff;
+  background:rgb(var(--color-accent));
+  font-size:17px;
+  line-height:1;
+  text-decoration:none;
 }
-@media (max-width:600px){
-  .cirrhosis-case .site-nav .site-menu-panel{
-    right:0;
-    left:auto;
-    width:auto;
-    max-width:100%;
-  }
+.cirrhosis-case .site-nav .nav-left > a:hover,
+.cirrhosis-case .site-nav .nav-left > a:focus-visible{
+  color:#fff;
+  background:rgb(var(--color-accent));
 }
 .cirrhosis-main{
   width:100%;
@@ -2399,50 +2404,17 @@ ul{margin:0 0 8px 24px;padding:0}li{font-size:19.2px;line-height:1.48;margin:0 0
   .cirrhosis-main .app{height:calc(100dvh - 112px);min-height:560px}
 }
 
-.cirrhosis-case .site-nav .fullscreen-menu-btn{
-  display:inline-flex;
-  align-items:center;
-  min-height:34px;
-  padding:7px 12px;
-  border:0;
-  color:#fff;
-  background:none;
-  text-shadow:none;
-  font-family:var(--font-small-caps);
-  font-size:13px;
-  line-height:1.2;
-  text-decoration:none;
-  opacity:0;
-  transform:translateY(4px);
-  transition:opacity .14s ease,transform .18s ease;
-  cursor:pointer;
-}
-.cirrhosis-case .site-nav .site-menu.is-open .fullscreen-menu-btn{opacity:1;transform:translateY(0);transition-delay:.13s}
-.cirrhosis-case .site-nav .fullscreen-menu-btn:hover{color:#fff;background:rgba(0,0,0,.12)}
-.cirrhosis-case .site-nav .site-menu-panel .fullscreen-menu-btn:focus-visible{outline:2px solid rgba(255,255,255,.8);outline-offset:-2px}
 </style>
 </head>
 <body class="cirrhosis-case">
 <nav id="top" class="constrained site-nav" aria-label="Main navigation">
   <div class="nav-left">
-    <a href="/search/" aria-label="Search the site" title="Search">⌕</a>
+    <a href="/" aria-label="Home" title="Home">⌂</a>
   </div>
   <div class="nav-center">
     <a href="/" aria-label="The Upshift home">The Upshift</a>
   </div>
-  <div class="nav-right">
-    <div class="site-menu" id="site-menu">
-      <button class="site-menu-toggle" id="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu-panel" aria-label="Open menu" title="Menu">☰</button>
-      <div class="site-menu-panel" id="site-menu-panel">
-        <a href="/words/">About</a>
-        <span class="site-menu-separator" aria-hidden="true">·</span>
-        <a href="/">Writings</a>
-        <span class="site-menu-separator" aria-hidden="true">·</span>
-        <a href="/work/">Index</a>
-      </div>
-    </div>
-    <button id="fullscreen" class="site-menu-toggle" type="button" aria-label="Enter fullscreen">Fullscreen</button>
-  </div>
+  <div class="nav-right"></div>
 </nav>
 <main class="constrained cirrhosis-main">
 <div class="app">
@@ -3758,21 +3730,6 @@ function transitionTo(target,direction=0){
 function go(d){transitionTo(idx+d,d)}
 document.getElementById('next').addEventListener('click',()=>go(1));
 document.getElementById('prev').addEventListener('click',()=>go(-1));
-const fullscreenButton=document.getElementById('fullscreen');
-function updateFullscreenButton(){
-  const isFullscreen=Boolean(document.fullscreenElement);
-  fullscreenButton.textContent=isFullscreen?'Exit Fullscreen':'Fullscreen';
-  fullscreenButton.setAttribute('aria-label',isFullscreen?'Exit fullscreen':'Enter fullscreen');
-}
-fullscreenButton.addEventListener('click',async()=>{
-  try{
-    if(document.fullscreenElement) await document.exitFullscreen();
-    else await document.documentElement.requestFullscreen();
-  }catch(error){
-    console.warn('Fullscreen is unavailable in this browser.',error);
-  }
-});
-document.addEventListener('fullscreenchange',updateFullscreenButton);
 function resetAll(){
   SLIDES.forEach(s=>{delete s._done;delete s._answered;delete s._revealed;delete s._chosen;delete s._txShown;delete s._revealedCells;delete s._matrixHighlighted;delete s._matrixRevealed;delete s._syndromeRevealed;delete s._syndromeTx;delete s._checklistRevealed});
   isTransitioning=false;
@@ -3826,53 +3783,5 @@ preloadBackgroundImages();
 idx=slideIndexFromHash()??0;
 render(0);
 </script>
-<script>
-(function(){
-  var nav=document.getElementById('top');
-  var menu=document.getElementById('site-menu');
-  var menuToggle=document.getElementById('site-menu-toggle');
-  var menuPanel=document.getElementById('site-menu-panel');
-  if(!nav)return;
-
-  function closeMenu(){
-    if(!menu||!menuToggle)return;
-    menu.classList.remove('is-open');
-    menuToggle.setAttribute('aria-expanded','false');
-    menuToggle.setAttribute('aria-label','Open menu');
-    menuToggle.setAttribute('title','Menu');
-  }
-  function openMenu(){
-    if(!menu||!menuToggle)return;
-    menu.classList.add('is-open');
-    menuToggle.setAttribute('aria-expanded','true');
-    menuToggle.setAttribute('aria-label','Close menu');
-    menuToggle.setAttribute('title','Close menu');
-  }
-
-  if(menuToggle){
-    menuToggle.addEventListener('click',function(e){
-      e.stopPropagation();
-      if(menu.classList.contains('is-open')) closeMenu();
-      else openMenu();
-    });
-  }
-  document.addEventListener('click',function(e){
-    if(menu&&!menu.contains(e.target)) closeMenu();
-  });
-  document.addEventListener('keydown',function(e){
-    if(e.key==='Escape') closeMenu();
-  });
-  if(menuPanel){
-    menuPanel.querySelectorAll('a').forEach(function(link){
-      link.addEventListener('click',closeMenu);
-    });
-  }
-
-  function updateNavState(){
-    nav.classList.toggle('is-scrolled',window.scrollY>8);
-  }
-  window.addEventListener('scroll',updateNavState,{passive:true});
-  updateNavState();
-}());
-</script></body>
+</body>
 </html>
