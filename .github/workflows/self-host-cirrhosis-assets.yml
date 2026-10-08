@@ -25,7 +25,6 @@ jobs:
           dest="medical/interactivecases/cirrhosis"
           mkdir -p "$dest"
           assets=(
-            "cirrhosis-social-card-x.jpg"
             "favicon.ico"
             "favicon-v2-32x32.png"
             "apple-touch-icon-v2.png"
