@@ -110,13 +110,20 @@ id_attribute: words
     top: -29px;
     left: 16px;
     z-index: 3;
-    color: var(--color-text);
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 11px 6px;
+    border: 1px solid #b35352;
+    border-radius: 999px;
+    background: rgb(var(--color-background));
+    color: #b35352;
     font-family: var(--font-small-caps);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: .18em;
+    letter-spacing: .16em;
     line-height: 1;
     text-transform: uppercase;
+    white-space: nowrap;
   }
 
   .post-entry-featured::before {
@@ -210,7 +217,9 @@ id_attribute: words
     .writing-section-label {
       top: -25px;
       left: 10px;
-      font-size: 11px;
+      padding: 6px 9px 5px;
+      font-size: 10px;
+      letter-spacing: .14em;
     }
 
     .post-entry-featured {
