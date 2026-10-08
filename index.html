@@ -77,16 +77,16 @@ id_attribute: words
   .home-hero {
     position: relative;
     isolation: isolate;
-    width: 100vw;
-    max-width: none;
-    height: clamp(220px, 34vh, 360px);
-    margin-left: calc(50% - 50vw);
-    margin-right: 0;
+    width: min(680px, calc(100% - 40px));
+    max-width: 680px;
+    height: clamp(210px, 30vh, 300px);
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding: 48px 24px 88px;
+    padding: 32px 24px;
     overflow: hidden;
     color: #fff;
     background-color: #302a29;
@@ -94,6 +94,9 @@ id_attribute: words
     background-size: cover;
     background-position: center 38%;
     text-align: center;
+    border: 1px solid rgba(var(--color-text), .08);
+    border-radius: 15px;
+    box-shadow: 0 12px 42px rgba(20, 16, 16, .08);
   }
 
   .home-hero-shade {
@@ -130,7 +133,7 @@ id_attribute: words
     position: relative;
     z-index: 1;
     width: min(680px, calc(100% - 40px));
-    margin: -42px auto 0;
+    margin: 22px auto 0;
     padding: 30px 38px 22px;
     border: 1px solid rgba(var(--color-text), .08);
     border-radius: 18px 18px 8px 8px;
@@ -157,7 +160,7 @@ id_attribute: words
     }
 
     .home-hero {
-      height: clamp(210px, 32svh, 300px);
+      height: clamp(190px, 28svh, 260px);
       padding: 36px 20px 78px;
       background-position: center 38%;
     }
@@ -173,7 +176,7 @@ id_attribute: words
 
     .home-blog-card {
       width: calc(100% - 24px);
-      margin-top: -34px;
+      margin-top: 16px;
       padding: 24px 22px 16px;
       border-radius: 15px 15px 7px 7px;
     }
