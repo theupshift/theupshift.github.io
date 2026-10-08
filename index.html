@@ -77,8 +77,8 @@ id_attribute: words
   .home-hero {
     position: relative;
     isolation: isolate;
-    width: min(680px, calc(100% - 40px));
-    max-width: 680px;
+    width: 100%;
+    max-width: var(--reading-width);
     height: clamp(210px, 30vh, 300px);
     margin-left: auto;
     margin-right: auto;
@@ -132,7 +132,8 @@ id_attribute: words
   .home-blog-card {
     position: relative;
     z-index: 1;
-    width: min(680px, calc(100% - 40px));
+    width: 100%;
+    max-width: var(--reading-width);
     margin: 22px auto 0;
     padding: 30px 38px 22px;
     border: 1px solid rgba(var(--color-text), .08);
@@ -175,7 +176,7 @@ id_attribute: words
     }
 
     .home-blog-card {
-      width: min(680px, calc(100% - 40px));
+      width: 100%;
       margin-top: 16px;
       padding: 24px 22px 16px;
       border-radius: 15px 15px 7px 7px;
