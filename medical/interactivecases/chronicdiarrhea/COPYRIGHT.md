@@ -1,0 +1,1 @@
+© 2026 Clinical Rhythm / The Upshift.\n\nEducational simulation authored/adapted for The Upshift. Clinical content is based on the uploaded teaching materials and current guideline resources cited on the case page.\n
