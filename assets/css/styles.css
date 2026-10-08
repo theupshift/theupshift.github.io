@@ -2183,7 +2183,7 @@ article > header > h1 {
     left: 0;
     width: 100vw;
     height: env(safe-area-inset-top, 0px);
-    background: rgb(var(--color-background));
+    background: rgba(var(--color-background), .2);
     pointer-events: none;
   }
 
