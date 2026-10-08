@@ -2171,9 +2171,12 @@ article > header > h1 {
 
 
 
-/* Notched-phone scroll guard: keep the sticky nav below the top safe area. */
+/* Notched-phone scroll behavior:
+   keep only the sticky navigation controls below the safe area.
+   The article remains free to scroll upward behind the nav and into
+   the display's top edge; no horizontal/content padding is added. */
 @media (max-width: 600px) {
   nav.constrained.site-nav.is-scrolled {
-    top: env(safe-area-inset-top, 0px);
+    top: max(2px, env(safe-area-inset-top, 0px));
   }
 }
