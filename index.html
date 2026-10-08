@@ -123,6 +123,10 @@ id_attribute: words
   .post-entry-featured header,
   .post-entry-featured .post-excerpt {
     position: relative;
+    width: calc(100% - 32px);
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .post-entry-featured + .post-entry {
@@ -189,7 +193,15 @@ id_attribute: words
       padding: 18px 10px 22px;
     }
 
-    .post-entry-featured header,\n    .post-entry-featured .post-excerpt {\n      width: calc(100% - 20px);\n      max-width: none;\n    }\n\n    .post-entry-featured + .post-entry {
+    .post-entry-featured header,
+    .post-entry-featured .post-excerpt {
+      width: calc(100% - 20px);
+      max-width: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .post-entry-featured + .post-entry {
       margin-top: 26px;
     }
 
