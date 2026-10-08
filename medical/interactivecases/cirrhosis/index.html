@@ -3913,40 +3913,63 @@ render(0);
 </script>
 <script>
 (function(){
- var nav=document.querySelector('.cirrhosis-upshift-nav');
- var btn=nav&&nav.querySelector('.menu-toggle');
- var menu=nav&&nav.querySelector('.cirrhosis-upshift-menu');
- var theme=nav&&nav.querySelector('.theme-toggle');
- var fullscreen=document.getElementById('fullscreen');
- if(!nav||!btn||!menu)return;
- btn.addEventListener('click',function(e){
-   e.stopPropagation();
-   var open=menu.classList.toggle('is-open');
-   btn.setAttribute('aria-expanded',open);
- });
- document.addEventListener('click',function(e){
-   if(!menu.contains(e.target)){
-     menu.classList.remove('is-open');
-     btn.setAttribute('aria-expanded','false');
-   }
- });
- if(theme){
-   theme.addEventListener('click',function(){
-     document.documentElement.classList.toggle('theme-dark');
-   });
- }
- function setFullscreen(on){
-   document.documentElement.classList.toggle('cirrhosis-fullscreen',on);
-   if(!on) menu.classList.remove('is-open');
- }
- if(fullscreen){
-   fullscreen.addEventListener('click',function(){
-     setFullscreen(!document.documentElement.classList.contains('cirrhosis-fullscreen'));
-   });
- }
- document.addEventListener('fullscreenchange',function(){
-   setFullscreen(!!document.fullscreenElement);
- });
+  var root=document.documentElement;
+  var nav=document.querySelector('.cirrhosis-upshift-nav');
+  var menu=document.getElementById('site-menu');
+  var btn=document.getElementById('site-menu-toggle');
+  var theme=document.getElementById('theme-toggle');
+  var metaTheme=document.querySelector('meta[name="theme-color"]');
+  var fullscreen=document.getElementById('fullscreen');
+  if(!nav||!menu||!btn)return;
+
+  function currentTheme(){
+    var explicit=root.getAttribute('data-theme');
+    if(explicit)return explicit;
+    var systemDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var hour=new Date().getHours();
+    return(systemDark||hour<6||hour>=18)?'dark':'light';
+  }
+  function updateThemeButton(){
+    var dark=currentTheme()==='dark';
+    if(theme){
+      theme.setAttribute('aria-pressed',dark?'true':'false');
+      theme.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');
+      theme.setAttribute('title',dark?'Switch to light theme':'Switch to dark theme');
+      theme.textContent=dark?'☼':'◐';
+    }
+    if(metaTheme)metaTheme.setAttribute('content',dark?'#191213':'#ffffff');
+  }
+  function closeMenu(){
+    menu.classList.remove('is-open');
+    btn.setAttribute('aria-expanded','false');
+  }
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var open=menu.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  document.addEventListener('click',function(e){
+    if(!menu.contains(e.target))closeMenu();
+  });
+  if(theme){
+    theme.addEventListener('click',function(){
+      var next=currentTheme()==='dark'?'light':'dark';
+      root.setAttribute('data-theme',next);
+      try{localStorage.setItem('upshift-theme',next)}catch(error){}
+      updateThemeButton();
+    });
+  }
+  function setFullscreenChrome(on){
+    root.classList.toggle('cirrhosis-fullscreen',on);
+    if(!on)closeMenu();
+  }
+  if(fullscreen){
+    fullscreen.addEventListener('click',function(){ closeMenu(); });
+  }
+  document.addEventListener('fullscreenchange',function(){
+    setFullscreenChrome(!!document.fullscreenElement);
+  });
+  updateThemeButton();
 }());
 </script></body>
 </html>
