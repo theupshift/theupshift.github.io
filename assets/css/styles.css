@@ -2191,3 +2191,38 @@ article > header > h1 {
     z-index: 100;
   }
 }
+
+
+/* Liquid-glass navigation: translucent, softly refractive, and theme-aware. */
+nav.constrained.site-nav.is-scrolled::before {
+  border: 1px solid rgba(var(--color-text), .12);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(var(--color-background), .72) 0%,
+      rgba(var(--color-background), .48) 48%,
+      rgba(var(--color-background), .60) 100%
+    );
+  -webkit-backdrop-filter: blur(26px) saturate(165%);
+  backdrop-filter: blur(26px) saturate(165%);
+  box-shadow:
+    0 10px 32px rgba(var(--color-text), .08),
+    inset 0 1px 0 rgba(255, 255, 255, .42),
+    inset 0 -1px 0 rgba(var(--color-text), .035);
+}
+
+@media (prefers-color-scheme: dark) {
+  nav.constrained.site-nav.is-scrolled::before {
+    box-shadow:
+      0 10px 32px rgba(0, 0, 0, .24),
+      inset 0 1px 0 rgba(255, 255, 255, .12),
+      inset 0 -1px 0 rgba(255, 255, 255, .035);
+  }
+}
+
+:root[data-theme="dark"] nav.constrained.site-nav.is-scrolled::before {
+  box-shadow:
+    0 10px 32px rgba(0, 0, 0, .24),
+    inset 0 1px 0 rgba(255, 255, 255, .12),
+    inset 0 -1px 0 rgba(255, 255, 255, .035);
+}
