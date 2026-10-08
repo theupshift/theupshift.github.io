@@ -2589,12 +2589,13 @@ html,body.cirrhosis-case{height:100%;overflow:hidden}
   display:flex;
   flex-direction:column;
   justify-content:flex-start;
+  padding-top:85px;
 }
 .cirrhosis-case .cirrhosis-main .app{
   flex:1 1 auto;
   min-height:0;
-  height:100%;
-  max-height:none;
+  height:calc(100dvh - 85px);
+  max-height:calc(100dvh - 85px);
   overflow:hidden;
 }
 .cirrhosis-case .cirrhosis-main .stage{
@@ -2602,7 +2603,15 @@ html,body.cirrhosis-case{height:100%;overflow:hidden}
   height:100%;
 }
 @media (max-width:600px){
-  .cirrhosis-case .cirrhosis-main{height:100dvh;max-height:100dvh}
+  .cirrhosis-case .cirrhosis-main{
+    height:100dvh;
+    max-height:100dvh;
+    padding-top:85px;
+  }
+  .cirrhosis-case .cirrhosis-main .app{
+    height:calc(100dvh - 85px);
+    max-height:calc(100dvh - 85px);
+  }
 }
 .cirrhosis-case.cirrhosis-fullscreen .site-nav{display:none!important}
 </style>
