@@ -2348,6 +2348,22 @@ ul{margin:0 0 8px 24px;padding:0}li{font-size:19.2px;line-height:1.48;margin:0 0
   padding:0 24px;
   align-items:center;
 }
+/* Keep the site menu inside the same nav width and let it expand toward fullscreen. */
+.cirrhosis-case .site-nav .site-menu-panel{
+  right:0;
+  left:auto;
+  width:max-content;
+  max-width:100%;
+  transform-origin:right center;
+}
+@media (max-width:600px){
+  .cirrhosis-case .site-nav .site-menu-panel{
+    right:0;
+    left:auto;
+    width:auto;
+    max-width:100%;
+  }
+}
 .cirrhosis-main{
   width:100%;
   max-width:760px;
