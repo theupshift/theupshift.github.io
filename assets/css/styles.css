@@ -2182,89 +2182,31 @@ article > header > h1 {
 }
 
 
-/* iOS edge-to-edge top: paint the site background into the status-bar/safe-area region
-   while keeping navigation controls below the notch or Dynamic Island. */
-html {
-  margin: 0;
-  padding: 0;
-  background: rgb(var(--color-background));
-}
-
-body {
-  margin-top: 0;
-  padding-top: 0;
-  background: rgb(var(--color-background));
-}
-
-nav.constrained.site-nav {
-  padding-top: calc(42px + env(safe-area-inset-top, 0px));
-}
-
+/* iOS safe-area background only.
+   Keep the existing navigation geometry, sizing, glass treatment and reading
+   column unchanged. The pseudo-element paints the header surface full-bleed
+   without changing the nav box itself. */
 @media (max-width: 600px) {
   nav.constrained.site-nav {
+    isolation: isolate;
     padding-top: calc(42px + env(safe-area-inset-top, 0px));
-    padding-bottom: 42px;
+  }
+
+  nav.constrained.site-nav:not(.is-scrolled)::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: calc(-1 * env(safe-area-inset-top, 0px));
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: rgb(var(--color-background));
+    pointer-events: none;
   }
 
   nav.constrained.site-nav.is-scrolled {
+    top: max(2px, env(safe-area-inset-top, 0px));
     padding-top: calc(12px + env(safe-area-inset-top, 0px));
-    padding-bottom: 12px;
-  }
-}
-
-
-/* Full-bleed iOS header
-   The header owns the viewport edge and safe area; the navigation itself
-   remains constrained to the same reading column as before. */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: calc(100% + 48px);
-  margin-left: -24px;
-  padding-top: env(safe-area-inset-top, 0px);
-  background: rgb(var(--color-background));
-}
-
-.site-header .site-nav {
-  position: relative;
-  top: auto;
-}
-
-.site-header .site-nav.is-scrolled {
-  top: auto;
-}
-
-@media (max-width: 600px) {
-  .site-header {
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    padding-top: env(safe-area-inset-top, 0px);
-  }
-
-  .site-header .site-nav,
-  .site-header .site-nav.is-scrolled {
-    top: auto;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-
-  .site-header .site-nav:not(.is-scrolled) {
-    padding-top: 42px;
-    padding-bottom: 42px;
-  }
-
-  .site-header .site-nav.is-scrolled::before {
-    inset: 0 8px;
-    border-radius: 16px;
-  }
-}
-
-/* The header now supplies the safe-area space, so remove the old nav offset. */
-@supports (padding-top: env(safe-area-inset-top)) {
-  @media (max-width: 600px) {
-    nav.constrained.site-nav.is-scrolled {
-      top: auto;
-    }
   }
 }
