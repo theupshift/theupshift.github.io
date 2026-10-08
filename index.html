@@ -11,15 +11,6 @@ id_attribute: words
   gtag('config', 'UA-158309270-1');
 </script>
 
-<section class="home-hero" aria-label="The Upshift">
-  <div class="home-hero-shade"></div>
-  <div class="home-hero-copy">
-    <p class="home-hero-kicker">Notes, ideas &amp; observations</p>
-    <h1>The Upshift</h1>
-  </div>
-</section>
-
-<div class="home-blog-card">
 {% for post in paginator.posts limit:5 %}
 <section class="post-entry{% if forloop.first %} post-entry-featured{% endif %}">
 	<header>
@@ -64,140 +55,8 @@ id_attribute: words
   {% endif %}
 </nav>
 {% endif %}
-</div>
 
 <style>
-  /* Homepage: a photographic masthead with the reading column sliding over it. */
-  body#words main#main-content {
-    max-width: none;
-    width: 100%;
-    padding: 0 0 48px;
-  }
-
-  .home-hero {
-    position: relative;
-    isolation: isolate;
-    width: 100%;
-    max-width: var(--reading-width);
-    height: clamp(210px, 30vh, 300px);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 32px 24px;
-    overflow: hidden;
-    color: #fff;
-    background-color: #302a29;
-    background-image: url("https://theupshift.github.io/wiki/wiki/m/josh.png");
-    background-size: cover;
-    background-position: center 38%;
-    text-align: center;
-    border: 1px solid rgba(var(--color-text), .08);
-    border-radius: 15px;
-    box-shadow: 0 12px 42px rgba(20, 16, 16, .08);
-  }
-
-  .home-hero-shade {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(15, 12, 12, .08) 10%, rgba(15, 12, 12, .12) 38%, rgba(15, 12, 12, .72) 100%);
-  }
-
-  .home-hero-copy {
-    width: min(100%, 680px);
-    text-shadow: 0 2px 22px rgba(0, 0, 0, .24);
-  }
-
-  .home-hero-kicker {
-    margin: 0 0 10px;
-    font-family: var(--font-small-caps);
-    font-size: 12px;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, .86);
-  }
-
-  .home-hero h1 {
-    margin: 0;
-    color: #fff;
-    font-size: clamp(2.8rem, 8vw, 5.8rem);
-    font-weight: 400;
-    line-height: .98;
-    letter-spacing: -.045em;
-  }
-
-  .home-blog-card {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: var(--reading-width);
-    margin: 22px auto 0;
-    padding: 30px 38px 22px;
-    border: 1px solid rgba(var(--color-text), .08);
-    border-radius: 18px 18px 8px 8px;
-    background: rgb(var(--color-background));
-    box-shadow: 0 12px 42px rgba(20, 16, 16, .08);
-  }
-
-  body#words .home-blog-card #words,
-  body#words .home-blog-card section {
-    min-width: 0;
-  }
-
-  body#words .home-blog-card section:first-child {
-    padding-top: 0;
-  }
-
-  .home-blog-card .pagination {
-    margin-top: 10px;
-  }
-
-  @media (max-width: 600px) {
-    body#words main#main-content {
-      padding-bottom: 32px;
-    }
-
-    /* Let the homepage cards use more of the available phone width. */
-    .home-hero,
-    .home-blog-card {
-      width: calc(100% + 24px);
-      max-width: calc(var(--reading-width) + 24px);
-      margin-left: -12px;
-      margin-right: -12px;
-    }
-
-    .home-hero {
-      height: clamp(190px, 28svh, 260px);
-      padding: 36px 20px 78px;
-      background-position: center 38%;
-    }
-
-    .home-hero-kicker {
-      font-size: 10px;
-      letter-spacing: .13em;
-    }
-
-    .home-hero h1 {
-      font-size: clamp(2.7rem, 13vw, 4.3rem);
-    }
-
-    .home-blog-card {
-      width: 100%;
-      margin-top: 16px;
-      padding: 24px 22px 16px;
-      border-radius: 15px 15px 7px 7px;
-    }
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .home-blog-card {
-      scroll-margin-top: 18px;
-    }
-  }
-
   /* Keep footnotes out of the homepage excerpts; they remain visible on individual post pages. */
   .footnotes,
   .footnotes-sep {
