@@ -45,6 +45,22 @@ id_attribute: words
       }
     });
   });
+
+  (function () {
+    var featured = document.querySelector('.post-entry-featured');
+    var nav = document.querySelector('.site-nav');
+    if (!featured || !nav) return;
+
+    function updateFeaturedCard() {
+      var featuredTop = featured.getBoundingClientRect().top;
+      var navBottom = nav.getBoundingClientRect().bottom;
+      featured.classList.toggle('is-under-nav', featuredTop <= navBottom);
+    }
+
+    updateFeaturedCard();
+    window.addEventListener('scroll', updateFeaturedCard, { passive: true });
+    window.addEventListener('resize', updateFeaturedCard);
+  }());
 </script>
 
 <!-- Pagination links -->
@@ -80,8 +96,26 @@ id_attribute: words
     position: relative;
     z-index: 2;
     margin-top: -40px;
-    background: var(--background-color, #fff);
-    padding: 28px 0 0;
+    padding: 28px 24px 32px;
+    transition: padding .45s ease;
+  }
+
+  .post-entry-featured::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border: 1px solid var(--color-rule);
+    border-radius: 18px;
+    background: rgb(var(--color-background));
+    box-shadow: 0 10px 30px rgba(25, 18, 19, .08);
+    transition: opacity .65s ease, border-radius .65s ease, box-shadow .65s ease;
+  }
+
+  .post-entry-featured.is-under-nav::before {
+    opacity: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .post-entry-featured header,
@@ -148,7 +182,7 @@ id_attribute: words
 
     .post-entry-featured {
       margin-top: -25px;
-      padding-top: 20px;
+      padding: 20px 16px 24px;
     }
 
     .post-entry-featured + .post-entry {
