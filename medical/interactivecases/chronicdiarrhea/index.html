@@ -141,11 +141,6 @@ body.cirrhosis-case{min-height:100dvh;padding:0 24px;overflow:hidden;background:
   <div class="nav-right"><a class="home-nav-icon" href="/" aria-label="Home" title="Home">⌂</a><button id="fullscreen" class="site-menu-toggle" type="button" aria-label="Enter fullscreen" title="Fullscreen">Fullscreen</button></div>
 </nav>
 <main class="constrained cirrhosis-main"><div class="app">
-  <header class="topbar">
-    <div class="brand-lockup"><span class="case-title">Chronic Diarrhoea</span></div>
-    <span class="act-tag" id="actTag"></span>
-    <div class="topbar-actions"><span class="topbar-credit">Clinical Rhythm</span><button id="reset" class="topbar-btn" title="Restart case">Reset</button><button id="case-fullscreen-legacy" class="topbar-btn" type="button" aria-label="Enter fullscreen">Fullscreen</button></div>
-  </header>
   <main class="stage" id="stage"></main>
   <footer class="case-footer nav" aria-label="Case navigation">
     <div class="nav-utility"><button id="escape-fullscreen" class="navbtn navbtn-utility" type="button" aria-label="Exit fullscreen" title="Exit fullscreen">Esc</button><button id="reset-case" class="navbtn navbtn-utility" type="button" aria-label="Reset case to slide 1" title="Reset case">Reset</button></div>
@@ -186,7 +181,7 @@ let i=0,ans={};const stage=document.getElementById("stage"),bar=document.getElem
 function render(){stage.innerHTML="";S.forEach((s,n)=>{let d=document.createElement("section");d.className="slide "+(n===i?"active":"");if(s.q){d.innerHTML='<div class="wrap left"><div class="k">Clinical Decision</div><h2>What would you choose?</h2><p class="lead">'+s.q+'</p><div class="opts">'+s.o.map((x,j)=>'<button class="opt" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+x+'</button>').join("")+'</div><div class="fb" hidden></div></div>'}else d.innerHTML=s.h;stage.appendChild(d);if(s.q)wire(d,s,n)});update()}
 function wire(d,s,n){let os=[...d.querySelectorAll(".opt")],fb=d.querySelector(".fb");if(ans[n]!=null)show(ans[n]);os.forEach((b,j)=>b.onclick=()=>{if(ans[n]!=null)return;ans[n]=j;show(j)});function show(j){os.forEach((b,k)=>b.classList.add(k===s.c?"correct":k===j?"wrong":"dim"));fb.hidden=false;fb.innerHTML=(j===s.c?"<b>Correct.</b> ":"<b>Not quite.</b> ")+s.w}}
 function update(){bar.innerHTML="";S.forEach((_,n)=>{let b=document.createElement("button");b.className="seg "+(n<i?"done ":"")+(n===i?"now":"");b.onclick=()=>{i=n;render()};bar.appendChild(b)});count.textContent=(i+1)+" / "+S.length;document.getElementById("back").disabled=i===0;document.getElementById("next").disabled=i===S.length-1}
-document.getElementById("next").onclick=()=>{if(i<S.length-1){i++;render()}};document.getElementById("back").onclick=()=>{if(i){i--;render()}};function resetAll(){i=0;ans={};render()}document.getElementById("reset").onclick=resetAll;document.getElementById("reset-case").onclick=resetAll;render();
+document.getElementById("next").onclick=()=>{if(i<S.length-1){i++;render()}};document.getElementById("back").onclick=()=>{if(i){i--;render()}};function resetAll(){i=0;ans={};render()}document.getElementById("reset-case").onclick=resetAll;render();
 
 // Fullscreen behaviour mirrors the cirrhosis case, including native/webkit fullscreen and Esc.
 const fullscreenButton=document.getElementById("fullscreen");
@@ -215,7 +210,7 @@ async function exitFullscreen(){
  setFullscreenState(false);return false;
 }
 fullscreenButton.addEventListener("click",async()=>{const nativeFullscreen=!!(document.fullscreenElement||document.webkitFullscreenElement);if(nativeFullscreen||immersiveFullscreen)await exitFullscreen();else await enterFullscreen()});
-document.getElementById("case-fullscreen-legacy").addEventListener("click",()=>{if(immersiveFullscreen||document.fullscreenElement||document.webkitFullscreenElement)exitFullscreen();else enterFullscreen()});
+
 document.getElementById("escape-fullscreen").addEventListener("click",()=>{if(immersiveFullscreen||document.fullscreenElement||document.webkitFullscreenElement)exitFullscreen()});
 document.addEventListener("fullscreenchange",()=>setFullscreenState(!!document.fullscreenElement));
 document.addEventListener("webkitfullscreenchange",()=>setFullscreenState(!!document.webkitFullscreenElement));
