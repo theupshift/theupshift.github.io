@@ -78,15 +78,17 @@ id_attribute: words
 
 <style>
   .blog-header-image {
+    position: relative;
+    z-index: 1;
     width: 100%;
-    margin: 0;
+    margin: -64px 0 0;
     overflow: hidden;
   }
 
   .blog-header-image img {
     display: block;
     width: 100%;
-    height: 135px;
+    height: 108px;
     object-fit: cover;
     object-position: center;
     margin: 0;
@@ -182,8 +184,12 @@ id_attribute: words
   }
 
   @media (max-width: 600px) {
+    .blog-header-image {
+      margin-top: -56px;
+    }
+
     .blog-header-image img {
-      height: 90px;
+      height: 76px;
     }
 
     .post-entry-featured {
