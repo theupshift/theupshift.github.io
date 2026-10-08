@@ -2561,6 +2561,16 @@ html.cirrhosis-fullscreen .cirrhosis-main .app{
   .cirrhosis-main .slide .title-social{font-size:13.5px!important}
   .cirrhosis-main .slide .objectives-list strong{font-size:15.5px!important}
 }
+
+/* Prevent word hyphenation in the interactive case only. */
+.cirrhosis-case .slide,
+.cirrhosis-case .slide *{
+  -webkit-hyphens:none!important;
+  -moz-hyphens:none!important;
+  hyphens:none!important;
+  overflow-wrap:normal;
+  word-break:normal;
+}
 </style>
 </head>
 <body class="cirrhosis-case">
