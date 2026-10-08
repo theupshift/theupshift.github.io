@@ -2571,6 +2571,40 @@ html.cirrhosis-fullscreen .cirrhosis-main .app{
   overflow-wrap:normal;
   word-break:normal;
 }
+
+/* Fixed case chrome: keep the Upshift navbar anchored while only the case viewport scrolls. */
+html,body.cirrhosis-case{height:100%;overflow:hidden}
+.cirrhosis-case{min-height:100dvh}
+.cirrhosis-case .site-nav{
+  position:fixed!important;
+  top:0!important;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
+}
+.cirrhosis-case .cirrhosis-main{
+  height:100dvh;
+  max-height:100dvh;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+.cirrhosis-case .cirrhosis-main .app{
+  flex:1 1 auto;
+  min-height:0;
+  height:100%;
+  max-height:none;
+  overflow:hidden;
+}
+.cirrhosis-case .cirrhosis-main .stage{
+  min-height:0;
+  height:100%;
+}
+@media (max-width:600px){
+  .cirrhosis-case .cirrhosis-main{height:100dvh;max-height:100dvh}
+}
+.cirrhosis-case.cirrhosis-fullscreen .site-nav{display:none!important}
 </style>
 </head>
 <body class="cirrhosis-case">
@@ -3977,9 +4011,10 @@ document.addEventListener('webkitfullscreenchange',()=>{
 
 const siteNav=document.querySelector('.site-nav');
 function updateNavState(){
-  if(siteNav) siteNav.classList.toggle('is-scrolled',window.scrollY>8);
+  const scrolled=slideEl?slideEl.scrollTop>8:false;
+  if(siteNav) siteNav.classList.toggle('is-scrolled',scrolled);
 }
-window.addEventListener('scroll',updateNavState,{passive:true});
+if(slideEl) slideEl.addEventListener('scroll',updateNavState,{passive:true});
 updateNavState();
 
 function resetAll(){
