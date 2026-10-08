@@ -2440,6 +2440,24 @@ ul{margin:0 0 8px 24px;padding:0}li{font-size:19.2px;line-height:1.48;margin:0 0
   margin:0;
   border-radius:0;
 }
+/* Prevent accidental browser zoom while the case is in fullscreen, especially on touch devices. */
+html.cirrhosis-fullscreen,
+body.cirrhosis-fullscreen{
+  touch-action:manipulation;
+  overscroll-behavior:none;
+  -webkit-text-size-adjust:100%;
+}
+html.cirrhosis-fullscreen .cirrhosis-main,
+html.cirrhosis-fullscreen .cirrhosis-main .app{
+  touch-action:manipulation;
+}
+@media (max-width:600px){
+  html.cirrhosis-fullscreen,
+  body.cirrhosis-fullscreen{
+    -webkit-user-select:none;
+    user-select:none;
+  }
+}
 @supports not (height:100dvh){
   .cirrhosis-case.cirrhosis-fullscreen .cirrhosis-main .app{
     height:100vh;
