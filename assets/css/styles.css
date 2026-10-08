@@ -2172,8 +2172,8 @@ article > header > h1 {
 
 
 
-/* iOS Dynamic Island / notch: paint the top safe-area strip from the
-   root viewport, while leaving the navigation and article geometry untouched. */
+/* iOS notch / Dynamic Island: keep the safe-area strip the same solid
+   colour as the page so the browser's top inset does not look like overflow. */
 @media (max-width: 600px) {
   html::before {
     content: "";
@@ -2181,9 +2181,9 @@ article > header > h1 {
     z-index: 50;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: env(safe-area-inset-top, 0px);
-    background: rgba(var(--color-background), .2);
+    background: rgb(var(--color-background));
     pointer-events: none;
   }
 
