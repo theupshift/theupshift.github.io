@@ -2519,14 +2519,17 @@ html.cirrhosis-fullscreen .cirrhosis-main .app{
 }
 .cirrhosis-fullscreen .topbar{display:none!important}
 @media (max-width:600px){
-  .nav{grid-template-columns:auto minmax(0,1fr) 1px auto auto;gap:8px;padding:8px 12px}
+  .nav{grid-template-columns:auto minmax(0,1fr) auto;gap:8px;padding:8px 0}
   .nav-utility{gap:6px}
-  .navbtn-utility{min-width:48px;padding:0 8px;font-size:10px}
-  .navbtn-utility:first-child{min-width:44px}
-  .nav-actions{gap:6px}
-  .nav-actions .navbtn{min-width:0;width:auto;padding:0 9px}
-  .navbtn-back{max-width:76px}
-  .navbtn-next{max-width:76px}
+  .navbtn-utility{min-width:44px;padding:0 7px;font-size:10px}
+  .navbtn-utility:first-child{min-width:40px}
+  .nav-actions{gap:6px;justify-self:end;min-width:0}
+  .nav-actions .navbtn{min-width:0;width:auto;padding:0 8px}
+  .navbtn-back{max-width:68px}
+  .navbtn-next{max-width:68px}
+  .nav .counter{display:none}
+  .nav .nav-divider{display:none}
+  .nav .progress-card{min-width:0;width:100%}
   .cirrhosis-case{padding:0 20px}
   .cirrhosis-main{padding:2px 0 0}
   .cirrhosis-main .app{height:calc(100dvh - 106px);min-height:560px;border-radius:9px}
