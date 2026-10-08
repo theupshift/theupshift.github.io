@@ -495,10 +495,14 @@ ul{margin:0 0 8px 24px;padding:0}li{font-size:19.2px;line-height:1.48;margin:0 0
   height:62px;flex:0 0 62px;
   background:#fff;
   border-top:1px solid #dad6ce;
-  display:grid;grid-template-columns:minmax(0,1fr) 1px auto auto;align-items:center;gap:16px;
+  display:grid;grid-template-columns:auto minmax(0,1fr) 1px auto auto;align-items:center;gap:16px;
   padding:10px 22px;
   position:relative;z-index:4;
 }
+.nav-utility{display:flex;align-items:center;gap:8px}
+.navbtn-utility{width:auto;min-width:58px;padding:0 11px;font-size:11px}
+.navbtn-utility:first-child{min-width:54px}
+.navbtn-utility:active{background:#eeeae3}
 .navbtn{
   height:36px;border-radius:0;
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
@@ -2509,6 +2513,10 @@ html.cirrhosis-fullscreen .cirrhosis-main .app{
 }
 .cirrhosis-fullscreen .topbar{display:none!important}
 @media (max-width:600px){
+  .nav{grid-template-columns:auto minmax(0,1fr) 1px auto auto;gap:8px;padding:8px 12px}
+  .nav-utility{gap:6px}
+  .navbtn-utility{min-width:48px;padding:0 8px;font-size:10px}
+  .navbtn-utility:first-child{min-width:44px}
   .cirrhosis-case{padding:0 20px}
   .cirrhosis-main{padding:2px 0 0}
   .cirrhosis-main .app{height:calc(100dvh - 106px);min-height:560px;border-radius:9px}
@@ -2671,6 +2679,10 @@ html,body.cirrhosis-case{height:100%;overflow:hidden}
   </header>
   <main class="stage" id="stage"><div class="bg-layer is-active" id="bgLayerA" aria-hidden="true"></div><div class="bg-layer" id="bgLayerB" aria-hidden="true"></div><section class="slide" id="slide"></section></main>
   <footer class="nav" aria-label="Case navigation">
+    <div class="nav-utility" aria-label="Case controls">
+      <button class="navbtn navbtn-utility" id="escape-fullscreen" type="button" aria-label="Exit fullscreen" title="Exit fullscreen">Esc</button>
+      <button class="navbtn navbtn-utility" id="reset-case" type="button" aria-label="Reset case to slide 1" title="Reset case">Reset</button>
+    </div>
     <div class="progress-card">
       <div class="progress-copy" aria-live="polite"><div class="progress-labels"><span class="progress-chapter" id="progressChapter"></span><span class="progress-title" id="progressTitle"></span></div></div>
       <div class="progress" id="progress" aria-label="Case progress"></div>
@@ -4064,6 +4076,12 @@ function resetAll(){
   render(0);
 }
 document.getElementById('reset').addEventListener('click',resetAll);
+const resetCaseButton=document.getElementById('reset-case');
+if(resetCaseButton) resetCaseButton.addEventListener('click',resetAll);
+const escapeFullscreenButton=document.getElementById('escape-fullscreen');
+if(escapeFullscreenButton) escapeFullscreenButton.addEventListener('click',async()=>{
+  if(immersiveFullscreen||document.fullscreenElement||document.webkitFullscreenElement) await exitFullscreen();
+});
 document.addEventListener('keydown',e=>{
   const interactiveTarget=e.target instanceof Element&&e.target.closest('button,a,input,select,textarea,[contenteditable="true"]');
   if((e.code==='Space'||e.key===' ')&&!e.repeat&&!interactiveTarget){
