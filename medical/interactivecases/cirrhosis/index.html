@@ -2415,18 +2415,7 @@ ul{margin:0 0 8px 24px;padding:0}li{font-size:19.2px;line-height:1.48;margin:0 0
   </div>
   <div class="nav-right">
     <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme" title="Switch theme">◐</button>
-    <div class="site-menu" id="site-menu">
-      <button class="site-menu-toggle" id="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu-panel">Menu</button>
-      <div class="site-menu-panel" id="site-menu-panel">
-        <a href="/words/">About</a>
-        <span class="site-menu-separator" aria-hidden="true">·</span>
-        <a href="/">Writings</a>
-        <span class="site-menu-separator" aria-hidden="true">·</span>
-        <a href="/work/">Index</a>
-        <span class="site-menu-separator" aria-hidden="true">·</span>
-        <button id="fullscreen" class="fullscreen-menu-btn" type="button">Fullscreen</button>
-      </div>
-    </div>
+    <button id="fullscreen" class="site-menu-toggle" type="button" aria-label="Enter fullscreen">Fullscreen</button>
   </div>
 </nav>
 <main class="constrained cirrhosis-main">
@@ -3815,12 +3804,10 @@ render(0);
 (function(){
   var root=document.documentElement;
   var nav=document.getElementById('top');
-  var menu=document.getElementById('site-menu');
-  var btn=document.getElementById('site-menu-toggle');
   var theme=document.getElementById('theme-toggle');
   var metaTheme=document.querySelector('meta[name="theme-color"]');
   var fullscreen=document.getElementById('fullscreen');
-  if(!nav||!menu||!btn)return;
+  if(!nav)return;
 
   function currentTheme(){
     var explicit=root.getAttribute('data-theme');
@@ -3839,28 +3826,10 @@ render(0);
     }
     if(metaTheme)metaTheme.setAttribute('content',dark?'#191213':'#ffffff');
   }
-  var lastScrollY=window.scrollY;
   function updateNavState(){
     if(nav)nav.classList.toggle('is-scrolled',window.scrollY>8);
   }
-  function closeMenu(){
-    menu.classList.remove('is-open');
-    btn.setAttribute('aria-expanded','false');
-  }
-  btn.addEventListener('click',function(e){
-    e.stopPropagation();
-    var open=menu.classList.toggle('is-open');
-    btn.setAttribute('aria-expanded',open?'true':'false');
-  });
-  document.addEventListener('click',function(e){
-    if(!menu.contains(e.target))closeMenu();
-  });
-  window.addEventListener('scroll',function(){
-    var currentY=window.scrollY;
-    if(currentY>lastScrollY+4)closeMenu();
-    lastScrollY=currentY;
-    updateNavState();
-  },{passive:true});
+  window.addEventListener('scroll',updateNavState,{passive:true});
   if(theme){
     theme.addEventListener('click',function(){
       var next=currentTheme()==='dark'?'light':'dark';
@@ -3871,10 +3840,20 @@ render(0);
   }
   function setFullscreenChrome(on){
     root.classList.toggle('cirrhosis-fullscreen',on);
-    if(!on)closeMenu();
+    if(fullscreen){
+      fullscreen.textContent=on?'Exit Fullscreen':'Fullscreen';
+      fullscreen.setAttribute('aria-label',on?'Exit fullscreen':'Enter fullscreen');
+    }
   }
   if(fullscreen){
-    fullscreen.addEventListener('click',function(){ closeMenu(); });
+    fullscreen.addEventListener('click',async function(){
+      try{
+        if(document.fullscreenElement) await document.exitFullscreen();
+        else await document.documentElement.requestFullscreen();
+      }catch(error){
+        console.warn('Fullscreen is unavailable in this browser.',error);
+      }
+    });
   }
   document.addEventListener('fullscreenchange',function(){
     setFullscreenChrome(!!document.fullscreenElement);
