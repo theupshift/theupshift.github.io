@@ -1,0 +1,77 @@
+name: Self-host cirrhosis case assets
+
+on:
+  push:
+    paths:
+      - "medical/interactivecases/cirrhosis/index.html"
+      - ".github/workflows/self-host-cirrhosis-assets.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Download case assets into this repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://qaddodi.github.io/cirrhosis-interactive-case"
+          dest="medical/interactivecases/cirrhosis"
+          mkdir -p "$dest"
+          assets=(
+            "cirrhosis-social-card-x.jpg"
+            "favicon.ico"
+            "favicon-v2-32x32.png"
+            "apple-touch-icon-v2.png"
+            "east-vibes-cirrhosis-assessment.jpg"
+            "portal-system-capillary-beds.jpg"
+            "cirrhosis-complications-algorithm.png"
+            "cirrhosis-spiral.png"
+            "liver-anatomy-hospital-corridor.jpg"
+            "nodular-cirrhotic-liver.jpg"
+            "adam-primary-care-visit.jpg"
+            "ascites-clinical-assessment.jpg"
+            "ascites-bedside-ultrasound.jpg"
+            "diagnostic-paracentesis.jpg"
+            "ascitic-fluid-specimens.jpg"
+            "microbiology-culture-alert.jpg"
+            "sbp-bedside-paracentesis.jpg"
+            "febrile-hospital-deterioration.jpg"
+            "acute-variceal-bleeding.jpg"
+            "variceal-bleed-resuscitation.jpg"
+            "portal-system-varices-anatomy.jpg"
+            "post-bleed-bedside-discussion.jpg"
+            "hepatic-encephalopathy-family-support.jpg"
+            "cirrhosis-two-processes-clinical-manifestations.jpg"
+            "terlipressin-albumin-treatment-algorithm.jpg"
+            "tips-procedure-interventional-radiology.jpg"
+            "large-volume-paracentesis.jpg"
+            "albumin-infusion-after-paracentesis.jpg"
+            "hrs-aki-kidney-injury-assessment.jpg"
+            "hrs-aki-splanchnic-pooling-cake-analogy.jpg"
+            "icu-vasopressor-support.jpg"
+            "transplant-and-dialysis-discussion.jpg"
+          )
+          for asset in "${assets[@]}"; do
+            curl --fail --location --retry 3 --silent --show-error "$base/$asset" -o "$dest/$asset"
+          done
+
+      - name: Commit self-hosted assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add medical/interactivecases/cirrhosis
+          if git diff --cached --quiet; then
+            echo "No asset changes to commit."
+            exit 0
+          fi
+          git commit -m "Add self-hosted cirrhosis case assets"
+          git push
