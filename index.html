@@ -17,6 +17,7 @@ id_attribute: words
 
 {% for post in paginator.posts limit:5 %}
 <section class="post-entry{% if forloop.first %} post-entry-featured{% endif %}">
+  {% if forloop.first %}<span class="writing-section-label">Writings</span>{% endif %}
 	<header>
 {% seo %}
 	
@@ -102,6 +103,20 @@ id_attribute: words
     margin-right: -16px;
     padding: 24px 16px 28px;
     transition: padding .45s ease;
+  }
+
+  .writing-section-label {
+    position: absolute;
+    top: -29px;
+    left: 16px;
+    z-index: 3;
+    color: var(--color-text);
+    font-family: var(--font-small-caps);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    line-height: 1;
+    text-transform: uppercase;
   }
 
   .post-entry-featured::before {
@@ -190,6 +205,12 @@ id_attribute: words
 
     .blog-header-image img {
       height: 184px;
+    }
+
+    .writing-section-label {
+      top: -25px;
+      left: 10px;
+      font-size: 11px;
     }
 
     .post-entry-featured {
