@@ -160,6 +160,15 @@ id_attribute: words
       padding-bottom: 32px;
     }
 
+    /* Let the homepage cards use more of the available phone width. */
+    .home-hero,
+    .home-blog-card {
+      width: calc(100% + 24px);
+      max-width: calc(var(--reading-width) + 24px);
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
     .home-hero {
       height: clamp(190px, 28svh, 260px);
       padding: 36px 20px 78px;
