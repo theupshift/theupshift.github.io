@@ -2443,12 +2443,13 @@ ul{margin:0 0 8px 24px;padding:0}li{font-size:19.2px;line-height:1.48;margin:0 0
   margin:0;
 }
 .cirrhosis-case.cirrhosis-fullscreen .cirrhosis-main .app{
-  width:100vw;
-  height:100dvh;
-  min-height:100dvh;
-  max-height:100dvh;
-  margin:0;
-  border-radius:0;
+  width:calc(100vw - 24px);
+  height:calc(100dvh - 16px);
+  min-height:0;
+  max-height:none;
+  margin:8px 12px;
+  border-radius:10px;
+  overflow:hidden;
 }
 /* Prevent accidental browser zoom while the case is in fullscreen, especially on touch devices. */
 html.cirrhosis-fullscreen,
@@ -2536,7 +2537,7 @@ html.cirrhosis-fullscreen .cirrhosis-main .app{
 }
 .cirrhosis-fullscreen .topbar{display:none!important}
 @media (max-width:600px){
-  .nav{grid-template-columns:auto minmax(0,1fr) auto;gap:8px;padding:8px 0}
+  .nav{grid-template-columns:auto minmax(0,1fr) auto;gap:8px;padding:8px 10px}
   .nav-utility{gap:6px}
   .navbtn-utility{min-width:44px;padding:0 7px;font-size:10px}
   .navbtn-utility:first-child{min-width:40px}
