@@ -2171,42 +2171,23 @@ article > header > h1 {
 
 
 
-/* Notched-phone scroll behavior:
-   keep only the sticky navigation controls below the safe area.
-   The article remains free to scroll upward behind the nav and into
-   the display's top edge; no horizontal/content padding is added. */
+/* iOS Dynamic Island / notch: paint the top safe-area strip independently.
+   This layer is visual only. It does not change the nav box, reading width,
+   spacing, glass treatment, or article layout. */
 @media (max-width: 600px) {
-  nav.constrained.site-nav.is-scrolled {
-    top: max(2px, env(safe-area-inset-top, 0px));
-  }
-}
-
-
-/* iOS safe-area background only.
-   Keep the existing navigation geometry, sizing, glass treatment and reading
-   column unchanged. The pseudo-element paints the header surface full-bleed
-   without changing the nav box itself. */
-@media (max-width: 600px) {
-  nav.constrained.site-nav {
-    isolation: isolate;
-    padding-top: calc(42px + env(safe-area-inset-top, 0px));
-  }
-
-  nav.constrained.site-nav:not(.is-scrolled)::before {
+  body::before {
     content: "";
-    position: absolute;
-    z-index: -1;
-    top: calc(-1 * env(safe-area-inset-top, 0px));
-    bottom: 0;
-    left: 50%;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
     width: 100vw;
-    transform: translateX(-50%);
+    height: env(safe-area-inset-top, 0px);
     background: rgb(var(--color-background));
     pointer-events: none;
   }
 
-  nav.constrained.site-nav.is-scrolled {
-    top: max(2px, env(safe-area-inset-top, 0px));
-    padding-top: calc(12px + env(safe-area-inset-top, 0px));
+  nav.constrained.site-nav {
+    z-index: 100;
   }
 }
