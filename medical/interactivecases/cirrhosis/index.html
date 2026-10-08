@@ -2381,6 +2381,28 @@ ul{margin:0 0 8px 24px;padding:0}li{font-size:19.2px;line-height:1.48;margin:0 0
   .cirrhosis-main{padding:28px 0 0}
   .cirrhosis-main .app{height:calc(100dvh - 112px);min-height:560px}
 }
+
+.cirrhosis-case .site-nav .fullscreen-menu-btn{
+  display:inline-flex;
+  align-items:center;
+  min-height:34px;
+  padding:7px 12px;
+  border:0;
+  color:#fff;
+  background:none;
+  text-shadow:none;
+  font-family:var(--font-small-caps);
+  font-size:13px;
+  line-height:1.2;
+  text-decoration:none;
+  opacity:0;
+  transform:translateY(4px);
+  transition:opacity .14s ease,transform .18s ease;
+  cursor:pointer;
+}
+.cirrhosis-case .site-nav .site-menu.is-open .fullscreen-menu-btn{opacity:1;transform:translateY(0);transition-delay:.13s}
+.cirrhosis-case .site-nav .fullscreen-menu-btn:hover{color:#fff;background:rgba(0,0,0,.12)}
+.cirrhosis-case .site-nav .site-menu-panel .fullscreen-menu-btn:focus-visible{outline:2px solid rgba(255,255,255,.8);outline-offset:-2px}
 </style>
 </head>
 <body class="cirrhosis-case">
@@ -3814,7 +3836,7 @@ render(0);
 <script>
 (function(){
   var root=document.documentElement;
-  var nav=document.querySelector('.cirrhosis-upshift-nav');
+  var nav=document.getElementById('top');
   var menu=document.getElementById('site-menu');
   var btn=document.getElementById('site-menu-toggle');
   var theme=document.getElementById('theme-toggle');
@@ -3839,6 +3861,10 @@ render(0);
     }
     if(metaTheme)metaTheme.setAttribute('content',dark?'#191213':'#ffffff');
   }
+  var lastScrollY=window.scrollY;
+  function updateNavState(){
+    if(nav)nav.classList.toggle('is-scrolled',window.scrollY>8);
+  }
   function closeMenu(){
     menu.classList.remove('is-open');
     btn.setAttribute('aria-expanded','false');
@@ -3851,6 +3877,12 @@ render(0);
   document.addEventListener('click',function(e){
     if(!menu.contains(e.target))closeMenu();
   });
+  window.addEventListener('scroll',function(){
+    var currentY=window.scrollY;
+    if(currentY>lastScrollY+4)closeMenu();
+    lastScrollY=currentY;
+    updateNavState();
+  },{passive:true});
   if(theme){
     theme.addEventListener('click',function(){
       var next=currentTheme()==='dark'?'light':'dark';
@@ -3870,6 +3902,7 @@ render(0);
     setFullscreenChrome(!!document.fullscreenElement);
   });
   updateThemeButton();
+  updateNavState();
 }());
 </script></body>
 </html>
