@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -24,6 +24,62 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
+      - name: Set up Playwright
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Chromium for social-card screenshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/social-card
+          npm install --prefix /tmp/social-card playwright
+          /tmp/social-card/node_modules/.bin/playwright install --with-deps chromium
+
+      - name: Capture the current cirrhosis page as its social card
+        shell: bash
+        run: |
+          set -euo pipefail
+          NODE_PATH=/tmp/social-card/node_modules node <<'NODE'
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch({ headless: true });
+            const page = await browser.newPage({
+              viewport: { width: 1200, height: 630 },
+              deviceScaleFactor: 1
+            });
+            await page.goto('https://theupshift.github.io/medical/interactivecases/cirrhosis/?social-card-capture=' + Date.now(), {
+              waitUntil: 'networkidle',
+              timeout: 90000
+            });
+            await page.waitForSelector('#stage .slide', { timeout: 30000 });
+            await page.evaluate(() => document.fonts.ready);
+            await page.waitForTimeout(1400);
+            await page.screenshot({
+              path: 'medical/interactivecases/cirrhosis/cirrhosis-social-card-x.jpg',
+              type: 'jpeg',
+              quality: 92,
+              animations: 'disabled'
+            });
+            await browser.close();
+          })().catch(error => { console.error(error); process.exit(1); });
+          NODE
+
+      - name: Commit refreshed social card
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add medical/interactivecases/cirrhosis/cirrhosis-social-card-x.jpg
+          if git diff --cached --quiet; then
+            echo "Social card screenshot is unchanged."
+          else
+            git commit -m "Refresh cirrhosis social card from live page screenshot"
+            git push
+          fi
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
