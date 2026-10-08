@@ -2472,11 +2472,30 @@ html.cirrhosis-fullscreen .cirrhosis-main .app{
     width:100%!important;
     height:100%!important;
   }
-  html.cirrhosis-fullscreen .cirrhosis-main,
-  html.cirrhosis-fullscreen .cirrhosis-main .app{
+  html.cirrhosis-fullscreen .cirrhosis-main{
     width:100vw!important;
+    max-width:none!important;
     height:100dvh!important;
     max-height:100dvh!important;
+    padding:0!important;
+    margin:0!important;
+    overflow:hidden!important;
+  }
+  html.cirrhosis-fullscreen .cirrhosis-main .app{
+    box-sizing:border-box!important;
+    width:calc(100vw - 24px)!important;
+    max-width:calc(100vw - 24px)!important;
+    height:calc(100dvh - 16px)!important;
+    max-height:calc(100dvh - 16px)!important;
+    margin:8px 12px!important;
+    border-radius:10px!important;
+    overflow:hidden!important;
+  }
+  html.cirrhosis-fullscreen .cirrhosis-main .stage{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    overflow:hidden!important;
   }
 }
 @media (max-width:600px){
