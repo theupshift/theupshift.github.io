@@ -2169,20 +2169,26 @@ article > header > h1 {
 }
 
 
-/* Safe-area handling for edge-to-edge mobile viewports (notches/Dynamic Island). */
-html {
-  min-height: 100%;
-  background: rgb(var(--color-background));
-}
-
-body {
-  min-height: 100%;
-  width: 100%;
-  background: rgb(var(--color-background));
-}
-
+/* Safe-area / edge-to-edge mobile viewport support. */
 nav.constrained.site-nav {
-  padding-top: calc(42px + env(safe-area-inset-top, 0px));
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  isolation: isolate;
+  padding-top: 42px;
+}
+
+nav.constrained.site-nav::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: calc(-1 * env(safe-area-inset-top, 0px));
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: rgb(var(--color-background));
+  pointer-events: none;
 }
 
 @media (max-width: 600px) {
@@ -2191,8 +2197,13 @@ nav.constrained.site-nav {
   }
 
   nav.constrained.site-nav.is-scrolled {
-    top: calc(2px + env(safe-area-inset-top, 0px));
+    top: env(safe-area-inset-top, 0px);
     padding-top: 12px;
+  }
+
+  nav.constrained.site-nav.is-scrolled::before {
+    top: calc(-1 * env(safe-area-inset-top, 0px));
+    width: 100vw;
   }
 }
 
