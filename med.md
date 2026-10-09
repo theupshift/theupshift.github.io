@@ -78,6 +78,9 @@ id_attribute: med
 #med .cr-resource{grid-template-columns:1fr;gap:.2rem;padding:.6rem 0}
 #med .cr-resource-type{white-space:normal}
 }
+
+/* Prevent mobile Safari from zooming the page when the search field receives focus. */
+#med .cr-search input{font-size:16px}
 </style>
 
 <div class="meded-resources-page" id="med"><div class="cr-wrap">
@@ -87,7 +90,7 @@ id_attribute: med
 <p class="cr-meta" id="cr-meta" aria-live="polite">Loading resource index…</p>
 </header>
 
-<div class="cr-search-wrap"><div class="cr-search"><input id="cr-search" type="search" placeholder="Search topics, filenames or resource types…" aria-label="Search all available resources"></div></div>
+<div class="cr-search-wrap"><div class="cr-search"><input id="cr-search" type="search" placeholder="Search topics or resource types…" aria-label="Search all available resources"></div></div>
 <div class="cr-filters" role="group" aria-label="Filter resources">
 <button class="cr-filter is-active" data-type="all" type="button">All</button>
 <button class="cr-filter" data-type="slides" type="button">Lectures</button>
