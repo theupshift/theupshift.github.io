@@ -3670,29 +3670,11 @@ body.lofi-player-open {
   }
 }
 
-
-
-/* Keep Nile AGI front-card copy legible in dark mode. */
-[data-theme="dark"] .work-tile--video .work-tile-summary,
-.theme-dark .work-tile--video .work-tile-summary,
-.dark .work-tile--video .work-tile-summary,
-html[data-color-scheme="dark"] .work-tile--video .work-tile-summary {
-  color: #fff;
-}
-
-/* Subtle linked-text feedback for Nile AGI's title and Explore label. */
-.work-tile--video .work-tile-heading,
-.work-tile--video .work-tile-link {
-  transition: color .22s ease, text-decoration-color .22s ease;
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-underline-offset: .16em;
-}
-.work-tile--video:hover .work-tile-heading,
-.work-tile--video:focus-within .work-tile-heading,
-.work-tile--video:hover .work-tile-link,
-.work-tile--video:focus-within .work-tile-link {
-  color: rgb(var(--color-accent));
-  text-decoration-color: currentColor;
+/* Match Nile AGI copy to Afya Kongwe's plain text styling in both themes. */
+.work-showcase > .work-tile--video .work-tile-heading,
+.work-showcase > .work-tile--video .work-tile-summary,
+.work-showcase > .work-tile--video .work-tile-link {
+  color: rgb(var(--color-text));
+  text-decoration: none;
 }
 
