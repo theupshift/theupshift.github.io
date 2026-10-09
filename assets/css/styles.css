@@ -3373,11 +3373,44 @@ nav.constrained.site-nav.is-scrolled::before {
   bottom: 17px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 10px 14px;
   color: #fff;
   font-size: 15px;
   line-height: 1.5;
+}
+.work-tile--lofi .lofi-card-caption {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+.work-tile--lofi .lofi-play-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, .34);
+  border-radius: 7px;
+  color: #111;
+  background: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1;
+  transition: background-color .18s ease, transform .18s ease;
+}
+.work-tile--lofi .lofi-play-button svg {
+  display: block;
+  width: 13px;
+  height: 13px;
+}
+.work-tile--lofi .lofi-play-button:hover,
+.work-tile--lofi .lofi-play-button:focus-visible {
+  color: #111;
+  background: #e9e9e9;
+  transform: translateY(-1px);
 }
 .work-tile--lofi .lofi-tag {
   display: inline-flex;
@@ -3420,8 +3453,15 @@ nav.constrained.site-nav.is-scrolled::before {
     left: 14px;
     right: 14px;
     bottom: 13px;
-    gap: 5px;
+    gap: 8px;
     font-size: 13px;
+  }
+  .work-tile--lofi .lofi-card-caption {
+    flex-basis: 190px;
+  }
+  .work-tile--lofi .lofi-play-button {
+    padding: 7px 11px;
+    font-size: 12px;
   }
   .work-tile--lofi .lofi-tag {
     padding: 3px 8px;
