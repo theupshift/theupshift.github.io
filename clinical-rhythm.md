@@ -70,10 +70,6 @@ id_attribute: clinical-rhythm
 <p class="cr-meta" id="cr-meta" aria-live="polite">Loading resource index…</p>
 </header>
 
-<h2 class="cr-section-heading">Browse by specialty</h2>
-<p class="cr-section-note">Choose an available specialty. More sections will appear as their resources are added.</p>
-<nav class="cr-specialty-nav" id="cr-specialty-nav" aria-label="Clinical specialties"></nav>
-
 <h2 class="cr-section-heading">Find a resource</h2>
 <div class="cr-search-wrap"><div class="cr-search"><input id="cr-search" type="search" placeholder="Search topics, filenames or resource types…" aria-label="Search all available resources"></div></div>
 <div class="cr-filters" role="group" aria-label="Filter resources">
@@ -84,6 +80,10 @@ id_attribute: clinical-rhythm
 <button class="cr-filter" data-type="readings" type="button">Readings</button>
 <button class="cr-filter" data-type="other" type="button">Other</button>
 </div>
+
+<h2 class="cr-section-heading">Browse by specialty</h2>
+<p class="cr-section-note">Choose an available specialty. More sections will appear as their resources are added.</p>
+<nav class="cr-specialty-nav" id="cr-specialty-nav" aria-label="Clinical specialties"></nav>
 
 <p class="cr-results-label" id="cr-results-label" aria-live="polite"></p>
 <main id="cr-topics"><p class="cr-empty">Loading resources…</p></main>
