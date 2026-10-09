@@ -135,16 +135,21 @@ permalink: /work/
   <article class="work-tile work-tile-wide work-tile--lofi" data-work-card>
     <img class="lofi-card-bg" src="https://www.fabrizio.so/_next/image?url=%2Fimg%2Flofi.gif&w=1920&q=75" alt="" aria-hidden="true" loading="lazy">
     <div class="lofi-card-top">
-      <span class="lofi-listener-badge"><span class="lofi-pulse-dot"></span><span class="lofi-listener-count">154</span> listeners</span>
+      <span class="lofi-listener-badge"><span class="lofi-pulse-dot"></span><span class="lofi-listener-count" data-lofi-visitors aria-live="polite">—</span> in the cafe</span>
     </div>
     <div class="lofi-card-bottom">
       <span class="lofi-card-caption">I’m likely listening to <a href="https://lofi.cafe/" class="lofi-tag" target="_blank" rel="noopener noreferrer">lofi.cafe</a> by <a href="https://twitter.com/maridivi89" class="lofi-tag" target="_blank" rel="noopener noreferrer">Marianna</a>.</span>
-      <a href="https://lofi.cafe/" class="lofi-play-button" target="_blank" rel="noopener noreferrer" aria-label="Play lofi.cafe">
+      <button type="button" class="lofi-play-button" data-lofi-open aria-label="Play lofi.cafe on this page">
         <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.8c0-.7.76-1.13 1.36-.77l9.1 5.45a1.77 1.77 0 0 1 0 3.04l-9.1 5.45A.9.9 0 0 1 8 18.2V5.8Z"/></svg>
         <span>Play</span>
-      </a>
+      </button>
     </div>
   </article>
+
+  <div class="lofi-player-modal" data-lofi-modal hidden role="dialog" aria-modal="true" aria-label="Lofi.cafe music player">
+    <button type="button" class="lofi-player-close" data-lofi-close aria-label="Close music player">×</button>
+    <iframe data-lofi-frame title="Lofi.cafe music player" src="about:blank" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
 
   <article class="work-tile work-tile-wide" data-work-card>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
@@ -255,6 +260,73 @@ permalink: /work/
       card.classList.add('is-visible');
     });
   }
+}());
+
+(function () {
+  var count = document.querySelector("[data-lofi-visitors]");
+  var openButton = document.querySelector("[data-lofi-open]");
+  var modal = document.querySelector("[data-lofi-modal]");
+  var closeButton = document.querySelector("[data-lofi-close]");
+  var frame = document.querySelector("[data-lofi-frame]");
+  if (!count || !openButton || !modal || !closeButton || !frame) return;
+
+  // This legacy public endpoint reports current visitors to lofi.cafe, not
+  // verified audio listeners. Keep the label honest and refresh periodically.
+  var countEndpoint = "https://mailbrew-functions.vercel.app/lofi-cafe-visitors";
+
+  function updateVisitorCount() {
+    fetch(countEndpoint, { cache: "no-store" })
+      .then(function (response) {
+        if (!response.ok) throw new Error("Visitor count unavailable");
+        return response.text();
+      })
+      .then(function (body) {
+        var data;
+        try { data = JSON.parse(body); } catch (error) { data = body; }
+        var value = typeof data === "number" || typeof data === "string"
+          ? data
+          : data && (data.visitors ?? data.count ?? data.visitorCount ?? data.currentVisitors);
+        if (value !== undefined && value !== null && String(value).trim() !== "" && Number.isFinite(Number(value))) {
+          count.textContent = Number(value).toLocaleString();
+          count.title = "Current visitors to lofi.cafe; not a confirmed count of active listeners";
+        } else {
+          count.textContent = "—";
+          count.title = "Live visitor count is currently unavailable";
+        }
+      })
+      .catch(function () {
+        count.textContent = "—";
+        count.title = "Live visitor count is currently unavailable";
+      });
+  }
+
+  function openPlayer() {
+    modal.hidden = false;
+    document.body.classList.add("lofi-player-open");
+    if (!frame.src || frame.getAttribute("src") === "about:blank") {
+      frame.src = "https://www.lofi.cafe/";
+    }
+    closeButton.focus();
+  }
+
+  function closePlayer() {
+    modal.hidden = true;
+    document.body.classList.remove("lofi-player-open");
+    frame.src = "about:blank";
+    openButton.focus();
+  }
+
+  openButton.addEventListener("click", openPlayer);
+  closeButton.addEventListener("click", closePlayer);
+  modal.addEventListener("click", function (event) {
+    if (event.target === modal) closePlayer();
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !modal.hidden) closePlayer();
+  });
+
+  updateVisitorCount();
+  window.setInterval(updateVisitorCount, 60000);
 }());
 
 document.querySelectorAll("[data-book-carousel]").forEach(function (carousel) {
