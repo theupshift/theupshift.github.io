@@ -81,6 +81,10 @@ id_attribute: med
 
 /* Prevent mobile Safari from zooming the page when the search field receives focus. */
 #med .cr-search input{font-size:16px}
+#med .cr-app-actions{display:flex;align-items:center;justify-content:center;gap:.65rem;flex-wrap:wrap;margin:.8rem 0 1.15rem}
+#med .cr-install-button{min-height:38px;padding:.55rem .95rem;border:1px solid rgb(var(--color-accent));border-radius:9px;color:rgb(var(--color-background));background:rgb(var(--color-accent));font:inherit;font-size:.82rem;font-weight:600;cursor:pointer}
+#med .cr-install-button:hover{filter:brightness(.94)}
+#med .cr-app-status{max-width:100%;color:rgb(var(--color-muted));font-size:.74rem;line-height:1.45;text-align:center}
 </style>
 
 <div class="meded-resources-page" id="med"><div class="cr-wrap">
@@ -88,6 +92,10 @@ id_attribute: med
 <h1 class="cr-title">MedED Resources</h1>
 <p class="cr-lead">A growing collection of medical lectures, readings, guidelines, practice questions and clinical cases, organised by topic.</p>
 <p class="cr-meta" id="cr-meta" aria-live="polite">Loading resource index…</p>
+<div class="cr-app-actions">
+  <button class="cr-install-button" id="cr-install" type="button">Install MedED</button>
+  <span class="cr-app-status" id="cr-app-status" role="status" aria-live="polite">The app shell and resource index can be cached for offline use.</span>
+</div>
 </header>
 
 <div class="cr-search-wrap"><div class="cr-search"><input id="cr-search" type="search" placeholder="Search topics or resource types…" aria-label="Search all available resources"></div></div>
@@ -209,5 +217,42 @@ allFiles=data.tree.filter(function(x){return x.type==='blob'&&x.path.indexOf('/'
 }).catch(function(){document.getElementById('cr-meta').textContent='Coming soon';document.getElementById('cr-topics').innerHTML='<section class="cr-coming-soon"><div class="cr-coming-icon" aria-hidden="true">✳</div><h2>Coming soon</h2><p>We’re preparing this collection of medical learning resources. Please check back soon.</p></section>'});
 document.getElementById('cr-search').addEventListener('input',function(e){query=e.target.value.toLowerCase().trim();openTopic=null;render()});
 document.querySelectorAll('.cr-filter').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('.cr-filter').forEach(function(b){b.classList.remove('is-active')});btn.classList.add('is-active');activeType=btn.dataset.type;openTopic=null;render()})});
-})();
+
+var installButton=document.getElementById('cr-install');
+var appStatus=document.getElementById('cr-app-status');
+var installPrompt=null;
+window.addEventListener('beforeinstallprompt',function(event){
+  event.preventDefault();
+  installPrompt=event;
+});
+installButton.addEventListener('click',async function(){
+  if(installPrompt){
+    installPrompt.prompt();
+    var choice=await installPrompt.userChoice;
+    appStatus.textContent=choice.outcome==='accepted'?'MedED installation started.':'You can install MedED later from your browser menu.';
+    installPrompt=null;
+    return;
+  }
+  var ua=navigator.userAgent||'';
+  var isIOS=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  var isSafari=/Safari/.test(ua)&&!/Chrome|Chromium|Edg|CriOS|FxiOS/.test(ua);
+  if(isIOS){
+    appStatus.textContent='To install: open the Share menu in Safari, then choose “Add to Home Screen”.';
+  }else if(isSafari&&/Macintosh|Mac OS X/.test(ua)){
+    appStatus.textContent='To install on Mac: in Safari, choose File → Add to Dock.';
+  }else{
+    appStatus.textContent='If installation is available in your browser, open its menu and choose “Install app” or “Add to Home Screen”.';
+  }
+});
+function updateConnectionStatus(){
+  if(!navigator.onLine){
+    appStatus.textContent='You are offline. The app shell is cached; the resource index is available if it was previously loaded and cached.';
+  }else{
+    appStatus.textContent='The app shell and resource index can be cached for offline use.';
+  }
+}
+window.addEventListener('online',updateConnectionStatus);
+window.addEventListener('offline',updateConnectionStatus);
+updateConnectionStatus();
+})(); 
 </script>
