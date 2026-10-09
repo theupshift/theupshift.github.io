@@ -9,6 +9,9 @@ permalink: /work/
   <p class="work-lede">Things I’ve enjoyed, used, or built while learning.</p>
 </header>
 
+<!-- CARD VISIBILITY SWITCH: change "hidden" to "shown" to display Health Commons. -->
+{% assign health_commons_visibility = "hidden" %}
+
 <section class="work-showcase" aria-label="Index">
   <article class="work-tile work-tile--video" data-work-card>
     <video class="work-tile-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
@@ -141,6 +144,7 @@ permalink: /work/
     <iframe data-lofi-frame title="Lofi.cafe music player" src="about:blank" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
   </div>
 
+  {% if health_commons_visibility == "shown" %}
   <article class="work-tile work-tile-wide" data-work-card>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">◇</span>
@@ -154,6 +158,7 @@ permalink: /work/
       <p>This game puts you in the middle of those choices, where limited resources meet real needs in a rural community. What would you choose? <a href="/words/education/health/simulation/2025/09/17/healthsystems/">Play now →</a></p>
     </div>
   </article>
+  {% endif %}
 
 </section>
 
