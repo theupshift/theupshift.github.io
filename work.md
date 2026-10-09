@@ -114,17 +114,12 @@ permalink: /work/
   </article>
 
   <article class="work-tile work-tile--afyakongwe" data-work-card>
-    <button class="work-tile-trigger" type="button" aria-expanded="false">
+    <a class="work-tile-trigger" href="https://www.instagram.com/afya.kongwe/" target="_blank" rel="noopener noreferrer" aria-label="Visit Afya Kongwe on Instagram (opens in a new tab)">
       <span class="work-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v5a4 4 0 0 0 8 0V3M4 3h4M12 3h4"/><path d="M10 12v2a5 5 0 0 0 10 0v-1"/><circle cx="20" cy="11" r="2"/></svg></span>
       <span class="work-tile-heading">Afya Kongwe</span>
       <span class="work-tile-summary">Compassionate, quality home-based care for people with chronic illness.</span>
       <span class="work-tile-link">Visit <span aria-hidden="true">↗</span></span>
-      <span class="work-expand-mark" aria-hidden="true">+</span>
-    </button>
-    <div class="work-tile-details" hidden>
-      <p>A health-focused space for making useful knowledge easier to discover, understand, and engage with.</p>
-      <div class="work-links"><a href="https://www.instagram.com/afya.kongwe/" target="_blank" rel="noopener noreferrer">Visit AfyaKongwe on Instagram ↗</a></div>
-    </div>
+    </a>
   </article>
 
   <article class="work-tile work-tile-wide work-tile--lofi" data-work-card>
