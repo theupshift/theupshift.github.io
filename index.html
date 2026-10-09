@@ -11,13 +11,15 @@ id_attribute: words
   gtag('config', 'UA-158309270-1');
 </script>
 
+{% if paginator.page == 1 %}
 <div class="blog-header-image">
   <img src="https://theupshift.github.io/wiki/wiki/m/josh.png" alt="" loading="eager">
 </div>
+{% endif %}
 
 {% for post in paginator.posts limit:5 %}
-<section class="post-entry{% if forloop.first %} post-entry-featured{% endif %}">
-  {% if forloop.first %}<span class="writing-section-label">Writings</span>{% endif %}
+<section class="post-entry{% if forloop.first and paginator.page == 1 %} post-entry-featured{% endif %}">
+  {% if forloop.first and paginator.page == 1 %}<span class="writing-section-label">Writings</span>{% endif %}
 	<header>
 {% seo %}
 	
