@@ -13,12 +13,12 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-specialty-tab:disabled{opacity:.48;cursor:not-allowed}
 #clinical-rhythm .cr-specialty-tab:disabled:hover{border-color:var(--color-rule);color:rgb(var(--color-muted))}
 #clinical-rhythm .cr-search-wrap{position:relative;margin:0 0 .8rem}
-#clinical-rhythm .cr-search-wrap:before{content:'⌕';position:absolute;left:50%;top:50%;transform:translate(-50%,-52%);font-size:1.25rem;color:rgb(var(--color-muted));pointer-events:none}
+#clinical-rhythm .cr-search-wrap:before{content:'⌕';position:absolute;left:calc(50% - 9.8rem);top:50%;transform:translateY(-52%);font-size:1.25rem;color:rgb(var(--color-muted));pointer-events:none}
 #clinical-rhythm .cr-search{margin:0}
 #clinical-rhythm .cr-search input{text-align:center;padding-left:2.35rem;padding-right:2.35rem}
 #clinical-rhythm .cr-search input:focus{text-align:left;padding-left:2.35rem}
 #clinical-rhythm .cr-search-wrap:has(input:not(:placeholder-shown)):before{left:.8rem;transform:translateY(-52%)}
-#clinical-rhythm .cr-search input::placeholder{text-align:center;padding-left:1.25rem}
+#clinical-rhythm .cr-search input::placeholder{text-align:center;padding-left:1.7rem}
 #clinical-rhythm .cr-results-label{margin:-.55rem 0 1rem;color:rgb(var(--color-muted));font-size:.78rem}
 #clinical-rhythm .cr-resource-type{padding:.15rem .35rem;border:1px solid var(--color-rule);border-radius:3px}
 #clinical-rhythm .cr-kicker{margin:0 0 .45rem;color:rgb(var(--color-accent));font-size:1rem;letter-spacing:.06em;text-align:center;text-transform:none}
