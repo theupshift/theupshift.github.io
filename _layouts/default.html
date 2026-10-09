@@ -6,6 +6,15 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#ffffff">
   <meta name="description" content="{{ site.description }}">
+  {% if page.id_attribute == 'med' %}
+  <meta name="theme-color" content="#b35352">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="MedED">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="/med/manifest.webmanifest">
+  <link rel="icon" href="/med/icons/meded.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  {% endif %}
   <meta name="author" content="Silas Gamba">
   <title>{% if page.url != '/' %}{% if page.title != '' %}{{ page.title }} · {% else %}{{ page.date | date_to_string }} · {% endif %}{% endif %}{{ site.title }}</title>
   {% feed_meta %}
@@ -158,5 +167,15 @@
       updateNavState();
     }());
   </script>
+  {% if page.id_attribute == 'med' %}
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/med/sw.js', { scope: '/med/' })
+          .catch(function (error) { console.warn('MedED offline support could not be enabled.', error); });
+      });
+    }
+  </script>
+  {% endif %}
 </body>
 </html>
