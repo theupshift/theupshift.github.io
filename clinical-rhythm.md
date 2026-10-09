@@ -24,10 +24,10 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-kicker{margin:0 0 .45rem;color:rgb(var(--color-accent));font-size:1rem;letter-spacing:.06em;text-align:center;text-transform:none}
 #clinical-rhythm .cr-lead{max-width:620px;margin:.65rem auto 0;color:rgb(var(--color-muted));font-size:.94rem;line-height:1.6;text-align:center;hyphens:none;overflow-wrap:normal;word-break:normal}
 #clinical-rhythm .cr-meta{margin:.7rem 0 0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.76rem;line-height:1.5;text-align:center}
-#clinical-rhythm .cr-specialty-nav{display:flex;align-items:center;justify-content:space-between;gap:.8rem;width:100%;margin:0 0 1.1rem;padding:.65rem .8rem;border:1px solid var(--color-rule);border-radius:6px;box-sizing:border-box;background:rgb(var(--color-background))}
-#clinical-rhythm .cr-specialty-current{flex:1;min-width:0;text-align:center;font-size:1rem;font-weight:600;line-height:1.3}
-#clinical-rhythm .cr-specialty-arrow{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;padding:0;border:1px solid var(--color-rule);border-radius:50%;color:rgb(var(--color-text));background:transparent;font:inherit;font-size:1.35rem;line-height:1;cursor:pointer;transition:border-color .18s ease,color .18s ease,background .18s ease}
-#clinical-rhythm .cr-specialty-arrow:hover{border-color:rgb(var(--color-accent));color:rgb(var(--color-accent))}
+#clinical-rhythm .cr-specialty-nav{display:flex;align-items:center;justify-content:space-between;gap:.8rem;width:100%;margin:0 0 1.1rem;padding:.55rem .65rem;border:1px solid var(--color-rule);border-radius:10px;box-sizing:border-box;background:rgba(179,83,82,.035);box-shadow:0 2px 8px rgba(0,0,0,.035)}
+#clinical-rhythm .cr-specialty-current{flex:1;min-width:0;text-align:center;font-size:1rem;font-weight:600;line-height:1.3;letter-spacing:.01em;padding:.2rem .35rem}
+#clinical-rhythm .cr-specialty-arrow{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;padding:0;border:1px solid var(--color-rule);border-radius:50%;color:rgb(var(--color-accent));background:rgb(var(--color-background));font:inherit;font-size:1.4rem;line-height:1;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.04);transition:border-color .18s ease,color .18s ease,background .18s ease,transform .18s ease}
+#clinical-rhythm .cr-specialty-arrow:hover{border-color:rgb(var(--color-accent));color:rgb(var(--color-background));background:rgb(var(--color-accent));transform:scale(1.04)}
 #clinical-rhythm .cr-search{margin:0 0 .8rem}
 #clinical-rhythm .cr-search input{display:block;width:100%;height:46px;padding:.65rem 2.35rem;border:1px solid var(--color-rule);border-radius:3px;color:rgb(var(--color-text));background:rgb(var(--color-background));font:inherit;font-size:.9rem;box-sizing:border-box}
 #clinical-rhythm .cr-search input::placeholder{color:rgb(var(--color-muted))}
