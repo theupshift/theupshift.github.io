@@ -3366,6 +3366,7 @@ nav.constrained.site-nav.is-scrolled::before {
   font: inherit;
   font-family: var(--font-small-caps);
   font-size: 12px;
+  font-weight: 500;
   cursor: pointer;
 }
 :root[data-theme="light"] .work-tile--lofi .lofi-listener-badge,
@@ -3418,31 +3419,24 @@ nav.constrained.site-nav.is-scrolled::before {
 .work-tile--lofi .lofi-play-button:hover,
 .work-tile--lofi .lofi-play-button:focus,
 .work-tile--lofi .lofi-play-button:active {
-  color: inherit;
-  background: inherit;
-  border-color: inherit;
+  color: #fff;
+  background: rgba(0, 0, 0, .55);
+  border-color: rgba(255, 255, 255, .2);
   transform: none;
 }
-.work-tile--lofi .lofi-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 10px;
-  border: 1px solid rgba(255, 255, 255, .12);
-  border-radius: 6px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  background: rgba(0, 0, 0, .58);
-  -webkit-backdrop-filter: blur(7px);
-  backdrop-filter: blur(7px);
-  transition: none;
+:root[data-theme="light"] .work-tile--lofi .lofi-tag:hover,
+:root[data-theme="light"] .work-tile--lofi .lofi-tag:focus,
+:root[data-theme="light"] .work-tile--lofi .lofi-tag:active,
+:root[data-theme="light"] .work-tile--lofi .lofi-play-button:hover,
+:root[data-theme="light"] .work-tile--lofi .lofi-play-button:focus,
+:root[data-theme="light"] .work-tile--lofi .lofi-play-button:active {
+  color: #171717;
+  background: rgba(255, 255, 255, .74);
+  border-color: rgba(255, 255, 255, .62);
 }
-.work-tile--lofi .lofi-tag:hover,
-.work-tile--lofi .lofi-tag:focus,
-.work-tile--lofi .lofi-tag:active {
-  color: #fff;
-  background: rgba(0, 0, 0, .58);
-  border-color: rgba(255, 255, 255, .12);
+.work-tile--lofi .lofi-tag {
+  font-weight: 500;
+  transition: none;
 }
 .work-tile--lofi:hover .lofi-card-bg {
   transform: scale(1.025);
