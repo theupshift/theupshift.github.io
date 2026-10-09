@@ -2876,3 +2876,107 @@ nav.constrained.site-nav.is-scrolled::before {
     min-height: 320px;
   }
 }
+
+
+/* Compact index cards by 20%, including icon and expand control sizing. */
+.work-showcase > .work-tile,
+.work-showcase > .work-tile-wide,
+.work-showcase > .work-tile--book {
+  min-height: 296px;
+}
+.work-showcase > .work-tile > .work-tile-trigger,
+.work-showcase > .work-tile-wide > .work-tile-trigger,
+.work-showcase > .work-tile--book > .work-tile-trigger {
+  min-height: 296px;
+  padding: clamp(18px, 2.1vw, 27px);
+}
+.work-tile-trigger .work-icon {
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  margin-bottom: auto;
+}
+.work-expand-mark {
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+}
+.work-tile-heading {
+  font-size: clamp(1.35rem, 2.1vw, 1.8rem);
+}
+.work-tile-summary {
+  font-size: .88rem;
+  line-height: 1.48;
+}
+.work-tile-trigger .work-tile-link {
+  padding-top: 13px;
+}
+.work-showcase > .work-tile.is-expanded {
+  min-height: 296px;
+}
+.work-showcase > .work-tile.is-expanded > .work-tile-details {
+  padding: clamp(20px, 2.4vw, 30px);
+}
+.work-showcase > .work-tile-wide,
+.work-showcase > .work-tile-wide > .work-tile-trigger {
+  min-height: 296px;
+}
+.work-tile--book .book-cover-collage {
+  height: 160px;
+  margin: 8px 0 14px;
+}
+.work-tile--book .book-cover {
+  width: 76px;
+  height: 115px;
+}
+.work-tile--book .book-cover--two {
+  left: calc(50% - 38px);
+}
+@media (max-width: 900px) {
+  .work-showcase > .work-tile,
+  .work-showcase > .work-tile-wide,
+  .work-showcase > .work-tile--book,
+  .work-showcase > .work-tile > .work-tile-trigger,
+  .work-showcase > .work-tile-wide > .work-tile-trigger,
+  .work-showcase > .work-tile--book > .work-tile-trigger {
+    min-height: 296px;
+  }
+}
+@media (max-width: 600px) {
+  .work-showcase > .work-tile,
+  .work-showcase > .work-tile-wide,
+  .work-showcase > .work-tile--book,
+  .work-showcase > .work-tile > .work-tile-trigger,
+  .work-showcase > .work-tile-wide > .work-tile-trigger,
+  .work-showcase > .work-tile--book > .work-tile-trigger {
+    min-height: 296px;
+  }
+  .work-showcase > .work-tile > .work-tile-trigger,
+  .work-showcase > .work-tile-wide > .work-tile-trigger {
+    padding: 20px;
+  }
+  .work-tile-trigger .work-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+  .work-expand-mark {
+    top: 18px;
+    right: 18px;
+    width: 25px;
+    height: 25px;
+  }
+  .work-tile--book .book-cover-collage {
+    height: 160px;
+    margin: 8px 0 14px;
+  }
+  .work-tile--book .book-cover {
+    width: 76px;
+    height: 115px;
+  }
+  .work-tile--book .book-cover--two {
+    left: calc(50% - 38px);
+  }
+}
