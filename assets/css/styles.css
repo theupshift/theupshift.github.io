@@ -3636,8 +3636,7 @@ body.lofi-player-open {
   }
 }
 
-/* Align Nile AGI's title and supporting copy low like Afya Kongwe,
-   while keeping the icon and expand control at the top. */
+/* Keep Nile AGI aligned with Publications while retaining its subtle glass blur. */
 .work-tile--video .work-tile-trigger {
   display: flex;
   flex-direction: column;
@@ -3650,10 +3649,10 @@ body.lofi-player-open {
 }
 .work-tile--video .work-tile-trigger .work-icon {
   flex: 0 0 auto;
-  margin-bottom: auto;
+  margin-bottom: 28px;
 }
 .work-tile--video .work-tile-heading {
-  margin-top: auto;
+  margin-top: 0;
 }
 .work-tile--video .work-tile-summary {
   margin-top: 0;
@@ -3667,10 +3666,7 @@ body.lofi-player-open {
     min-height: 225px;
   }
   .work-tile--video .work-tile-trigger .work-icon {
-    margin-bottom: auto;
-  }
-  .work-tile--video .work-tile-heading {
-    margin-top: 14px;
+    margin-bottom: 28px;
   }
 }
 
