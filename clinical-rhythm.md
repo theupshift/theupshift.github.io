@@ -19,8 +19,7 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-results-label{margin:-.55rem 0 1rem;color:rgb(var(--color-muted));font-size:.78rem}
 #clinical-rhythm .cr-resource-type{padding:.15rem .35rem;border:1px solid var(--color-rule);border-radius:3px}
 #clinical-rhythm .cr-kicker{margin:0 0 .45rem;color:rgb(var(--color-accent));font-family:var(--font-small-caps);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
-#clinical-rhythm .cr-title{margin:0;font-size:1.75rem;line-height:1.15;letter-spacing:-.02em}
-#clinical-rhythm .cr-lead{max-width:560px;margin:.8rem auto 0;color:rgb(var(--color-muted));font-size:.94rem;line-height:1.6}
+#clinical-rhythm .cr-lead{max-width:620px;margin:.65rem 0 0;color:rgb(var(--color-muted));font-size:.94rem;line-height:1.6}
 #clinical-rhythm .cr-meta{margin:.7rem 0 0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.76rem;line-height:1.5}
 #clinical-rhythm .cr-specialty-nav{display:flex;justify-content:center;gap:.4rem;overflow-x:auto;margin:0 0 1rem;padding:0 0 .2rem;scrollbar-width:none}
 #clinical-rhythm .cr-specialty-nav::-webkit-scrollbar{display:none}
@@ -117,7 +116,7 @@ function pathUrl(path){return base+path.split('/').map(encodeURIComponent).join(
 function renderNav(){
 document.getElementById('cr-specialty-nav').innerHTML=specialties.map(function(s){
 var available=s[0]==='Infectious Diseases';
-return '<button class="cr-specialty-tab'+(s[0]===selectedSpecialty?' is-active':'')+'" type="button" data-specialty="'+esc(s[0])+'"'+(available?'':' disabled aria-disabled="true" title="Resources coming soon"')+'>'+esc(s[1])+(available?'':' · soon')+'</button>'
+return '<button class="cr-specialty-tab'+(s[0]===selectedSpecialty?' is-active':'')+'" type="button" data-specialty="'+esc(s[0])+'"'+(available?'':' disabled aria-disabled="true" title="Resources coming soon"')+'>'+esc(s[0])+(available?'':' · soon')+'</button>'
 }).join('');
 document.querySelectorAll('.cr-specialty-tab:not(:disabled)').forEach(function(b){b.addEventListener('click',function(){selectedSpecialty=b.dataset.specialty;openTopic=null;query='';document.getElementById('cr-search').value='';activeType='all';document.querySelectorAll('.cr-filter').forEach(function(x){x.classList.toggle('is-active',x.dataset.type==='all')});renderNav();render()})});
 }
