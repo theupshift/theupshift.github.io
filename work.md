@@ -132,6 +132,23 @@ permalink: /work/
     </div>
   </article>
 
+  <article class="work-tile work-tile-wide work-tile--lofi" data-work-card>
+    <img class="lofi-card-bg" src="https://www.fabrizio.so/_next/image?url=%2Fimg%2Flofi.gif&w=1920&q=75" alt="" aria-hidden="true" loading="lazy">
+    <button class="work-tile-trigger" type="button" aria-expanded="false">
+      <span class="lofi-card-top" aria-hidden="true">
+        <span class="lofi-listener-badge"><span class="lofi-pulse-dot"></span>Lofi radio</span>
+      </span>
+      <span class="work-expand-mark" aria-hidden="true">+</span>
+      <span class="work-tile-heading">Lofi</span>
+      <span class="work-tile-summary">A little background music for focus, slow mornings, and late-night work.</span>
+      <span class="work-tile-link">Listen at lofi.cafe <span aria-hidden="true">↗</span></span>
+    </button>
+    <div class="work-tile-details" hidden>
+      <p>A quiet soundtrack for getting into a rhythm, taking a breath, or letting the day wind down.</p>
+      <div class="work-links"><a href="https://lofi.cafe/" target="_blank" rel="noopener noreferrer">Open lofi.cafe ↗</a></div>
+    </div>
+  </article>
+
   <article class="work-tile work-tile-wide" data-work-card>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">◇</span>
