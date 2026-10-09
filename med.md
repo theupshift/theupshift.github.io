@@ -241,7 +241,10 @@ if(installToast && !isRunningAsInstalledApp()){
   window.setTimeout(function(){
     if(!isRunningAsInstalledApp()) installToast.classList.add('is-visible');
   },500);
-  // Keep the install message visible until the visitor dismisses it.
+  // Automatically hide the install message after 7 seconds.
+  window.setTimeout(function(){
+    if(installToast) installToast.classList.remove('is-visible');
+  },7500);
 }
 if(toastClose && installToast){
   toastClose.addEventListener('click',function(){installToast.classList.remove('is-visible')});
