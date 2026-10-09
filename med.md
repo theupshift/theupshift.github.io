@@ -242,7 +242,7 @@ if(installToast && !isRunningAsInstalledApp()){
     if(!isRunningAsInstalledApp()) installToast.classList.add('is-visible');
   },500);
   window.setTimeout(function(){
-    if(installToast) installToast.classList.remove('is-visible');
+    if(installToast && !installPrompt) installToast.classList.remove('is-visible');
   },8500);
 }
 if(toastClose && installToast){
@@ -251,6 +251,14 @@ if(toastClose && installToast){
 window.addEventListener('beforeinstallprompt',function(event){
   event.preventDefault();
   installPrompt=event;
+  if(appStatus) appStatus.textContent='MedED is ready to install in Chrome.';
+  if(installButton) installButton.textContent='Install MedED';
+  if(installToast) installToast.classList.add('is-visible');
+});
+window.addEventListener('appinstalled',function(){
+  installPrompt=null;
+  if(appStatus) appStatus.textContent='MedED has been installed successfully.';
+  if(installToast) installToast.classList.remove('is-visible');
 });
 installButton.addEventListener('click',async function(){
   if(installPrompt){
@@ -274,6 +282,8 @@ installButton.addEventListener('click',async function(){
 function updateConnectionStatus(){
   if(!navigator.onLine){
     appStatus.textContent='You’re offline. Saved parts of MedED may still be available; online resources need internet.';
+  }else if(installPrompt){
+    appStatus.textContent='MedED is ready to install in Chrome.';
   }else{
     appStatus.textContent='Save MedED as an app for quick access.';
   }
