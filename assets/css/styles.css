@@ -3157,3 +3157,23 @@ nav.constrained.site-nav.is-scrolled::before {
     margin: 0 !important;
   }
 }
+
+
+/* Keep Publications and Afya Kongwe visually consistent with the other cards.
+   Their surfaces stay inside the shared rounded border; no image bleed or accent border. */
+.work-tile--publications,
+.work-tile--afyakongwe {
+  background-color: rgb(var(--color-background));
+  background-image: none !important;
+  background-clip: padding-box;
+  overflow: hidden;
+}
+.work-tile--publications:hover,
+.work-tile--afyakongwe:hover {
+  border-color: rgba(var(--color-text), .28);
+}
+.work-tile--publications.is-expanded,
+.work-tile--afyakongwe.is-expanded {
+  border-color: var(--color-rule);
+  box-shadow: 0 8px 20px rgba(25,18,19,.07);
+}
