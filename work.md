@@ -68,7 +68,7 @@ permalink: /work/
 
   <article class="work-tile work-tile--book" data-work-card style="background-image: url('https://miro.medium.com/v2/resize:fit:640/format:webp/1*B80VNidZ0rKW77cPUjkpsw.jpeg'); background-size: cover; background-position: center;">
     <button class="work-tile-trigger" type="button" aria-expanded="false">
-      <span class="work-icon" aria-hidden="true">▱</span>
+      <span class="work-icon" aria-hidden="true">📚</span>
       <span class="book-cover-collage" aria-hidden="true">
         <img class="book-cover book-cover--one" src="https://m.media-amazon.com/images/I/71XzCQHVvIL.jpg" alt="" loading="lazy">
         <img class="book-cover book-cover--two" src="https://cdn.kobo.com/book-images/7ab504fb-57d9-4673-8bca-079dbba8b58e/1200/1200/False/the-field-guide-to-understanding-human-error-3.jpg" alt="" loading="lazy">
@@ -120,7 +120,7 @@ permalink: /work/
 
   <article class="work-tile work-tile--afyakongwe" data-work-card style="background-image: url('https://images.pexels.com/photos/30678595/pexels-photo-30678595.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; background-position: center;">
     <button class="work-tile-trigger" type="button" aria-expanded="false">
-      <span class="work-icon" aria-hidden="true">+</span>
+      <span class="work-icon" aria-hidden="true">🩺</span>
       <span class="work-tile-heading">Afya Kongwe</span>
       <span class="work-tile-summary">Compassionate home-based care for people living with chronic illness — bringing comfort, dignity, and quality health services closer to home in Tanzania.</span>
       <span class="work-tile-link">Visit <span aria-hidden="true">↗</span></span>
