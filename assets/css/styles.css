@@ -3608,3 +3608,31 @@ body.lofi-player-open {
     font-size: 11px;
   }
 }
+
+/* Match the listener and play pills to the compact lofi.cafe/marianna tags. */
+.work-tile--lofi .lofi-listener-badge,
+.work-tile--lofi .lofi-play-button {
+  padding: 3px 7px;
+  gap: 4px;
+  font-size: 10px;
+  line-height: 1.2;
+  font-variant-caps: normal;
+  text-transform: lowercase;
+}
+.work-tile--lofi .lofi-play-button svg {
+  width: 10px;
+  height: 10px;
+}
+@media (max-width: 600px) {
+  .work-tile--lofi .lofi-listener-badge,
+  .work-tile--lofi .lofi-play-button {
+    padding: 2px 5px;
+    gap: 3px;
+    font-size: 9px;
+  }
+  .work-tile--lofi .lofi-play-button svg {
+    width: 9px;
+    height: 9px;
+  }
+}
+
