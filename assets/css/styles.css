@@ -2743,3 +2743,136 @@ nav.constrained.site-nav.is-scrolled::before {
     justify-self: stretch;
   }
 }
+
+
+/* Work index final layout and theme-aware card contrast refinements. */
+.work-showcase {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+.work-showcase > .work-tile {
+  grid-column: auto;
+  width: 100%;
+  min-width: 0;
+  min-height: 370px;
+  justify-self: stretch;
+}
+.work-showcase > .work-tile > .work-tile-trigger {
+  min-height: 370px;
+}
+.work-showcase > .work-tile--book {
+  grid-column: auto;
+  width: 100%;
+  justify-self: stretch;
+}
+.work-showcase > .work-tile-wide {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 370px;
+}
+.work-showcase > .work-tile-wide > .work-tile-trigger {
+  min-height: 370px;
+}
+.work-showcase > .work-tile--afyakongwe,
+.work-showcase > .work-tile:nth-child(2),
+.work-showcase > .work-tile:nth-child(5) {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-text));
+}
+.work-showcase > .work-tile--afyakongwe .work-tile-label,
+.work-showcase > .work-tile--afyakongwe .work-tile-summary,
+.work-showcase > .work-tile--afyakongwe .work-tile-link,
+.work-showcase > .work-tile:nth-child(2) .work-tile-label,
+.work-showcase > .work-tile:nth-child(2) .work-tile-summary,
+.work-showcase > .work-tile:nth-child(2) .work-tile-link,
+.work-showcase > .work-tile:nth-child(5) .work-tile-label,
+.work-showcase > .work-tile:nth-child(5) .work-tile-summary,
+.work-showcase > .work-tile:nth-child(5) .work-tile-link {
+  color: rgb(var(--color-text));
+}
+.work-showcase > .work-tile--afyakongwe .work-tile-trigger,
+.work-showcase > .work-tile:nth-child(2) .work-tile-trigger,
+.work-showcase > .work-tile:nth-child(5) .work-tile-trigger {
+  background: linear-gradient(
+    145deg,
+    rgba(var(--color-background), .96),
+    rgba(var(--color-background), .88)
+  );
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.work-showcase > .work-tile--afyakongwe .work-icon,
+.work-showcase > .work-tile--afyakongwe .work-expand-mark,
+.work-showcase > .work-tile:nth-child(2) .work-icon,
+.work-showcase > .work-tile:nth-child(2) .work-expand-mark,
+.work-showcase > .work-tile:nth-child(5) .work-icon,
+.work-showcase > .work-tile:nth-child(5) .work-expand-mark {
+  color: rgb(var(--color-text));
+  border-color: rgba(var(--color-text), .25);
+  background: rgba(var(--color-text), .045);
+}
+.work-showcase > .work-tile--afyakongwe .work-tile-heading,
+.work-showcase > .work-tile:nth-child(2) .work-tile-heading,
+.work-showcase > .work-tile:nth-child(5) .work-tile-heading {
+  color: rgb(var(--color-text));
+}
+.work-showcase > .work-tile-wide {
+  background:
+    radial-gradient(ellipse at 88% 18%, rgba(124, 153, 119, .22), transparent 38%),
+    linear-gradient(135deg, rgb(var(--color-background)), rgba(115, 146, 111, .10));
+  color: rgb(var(--color-text));
+}
+.work-showcase > .work-tile-wide .work-tile-trigger {
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.work-showcase > .work-tile-wide .work-tile-heading,
+.work-showcase > .work-tile-wide .work-tile-summary,
+.work-showcase > .work-tile-wide .work-tile-link,
+.work-showcase > .work-tile-wide .work-icon,
+.work-showcase > .work-tile-wide .work-expand-mark {
+  color: rgb(var(--color-text));
+}
+.work-showcase > .work-tile-wide .work-icon,
+.work-showcase > .work-tile-wide .work-expand-mark {
+  border-color: rgba(var(--color-text), .24);
+  background: rgba(var(--color-text), .045);
+}
+.work-showcase > .work-tile.is-expanded {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 370px;
+}
+.work-showcase > .work-tile.is-expanded > .work-tile-details {
+  color: rgb(var(--color-text));
+}
+.work-showcase > .work-tile--book.is-expanded > .work-tile-details {
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-text));
+}
+.work-showcase > .work-tile--book.is-expanded .work-links a,
+.work-showcase > .work-tile--book.is-expanded a {
+  color: rgb(var(--color-text));
+  text-decoration-color: rgba(var(--color-text), .5);
+}
+@media (max-width: 600px) {
+  .work-showcase {
+    grid-template-columns: 1fr;
+  }
+  .work-showcase > .work-tile,
+  .work-showcase > .work-tile--book,
+  .work-showcase > .work-tile-wide {
+    grid-column: 1;
+    width: 100%;
+    min-height: 370px;
+  }
+  .work-showcase > .work-tile > .work-tile-trigger,
+  .work-showcase > .work-tile-wide > .work-tile-trigger {
+    min-height: 370px;
+  }
+  .work-showcase > .work-tile.is-expanded {
+    grid-column: 1;
+    min-height: 320px;
+  }
+}
