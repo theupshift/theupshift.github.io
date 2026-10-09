@@ -153,7 +153,7 @@ var main=document.getElementById('cr-topics'),meta=document.getElementById('cr-m
 if(activeType==='cases'){
 var matchingCases=caseFiles.filter(function(f){return !query||f.title.toLowerCase().indexOf(query)!==-1||f.path.toLowerCase().indexOf(query)!==-1||f.typeLabel.toLowerCase().indexOf(query)!==-1});
 document.getElementById('cr-results-label').textContent=matchingCases.length+' interactive case'+(matchingCases.length===1?'':'s')+' found'+(query?' for “'+query+'”':'')+'.';
-main.innerHTML=matchingCases.length?'<section class="cr-topic is-open"><div class="cr-topic-body" style="display:block;border-top:1px solid rgb(var(--color-accent));border-radius:6px"><div class="cr-resource-list">'+matchingCases.map(function(f){return '<a class="cr-resource" href="'+f.url+'" target="_blank" rel="noopener"><span class="cr-resource-title">'+esc(f.title)+'</span><span class="cr-resource-type">Interactive case ↗</span></a>'}).join('')+'</div><p class="cr-topic-blurb" style="margin:.9rem 0 0"><a href="'+casesUrl+'">Browse all interactive cases →</a></p></div></section>':'<p class="cr-empty">No interactive cases match this search.</p>';
+main.innerHTML=matchingCases.length?'<div class="cr-resource-list">'+matchingCases.map(function(f){return '<a class="cr-resource" href="'+f.url+'" target="_blank" rel="noopener"><span class="cr-resource-title">'+esc(f.title)+'</span></a>'}).join('')+'</div>':'<p class="cr-empty">No interactive cases match this search.</p>';
 meta.textContent=caseFiles.length+' interactive cases · sourced from Medical / Interactive Cases';
 return;
 }
