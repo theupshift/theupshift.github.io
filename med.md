@@ -117,7 +117,7 @@ id_attribute: med
 
 <div class="cr-app-actions">
   <button class="cr-install-button" id="cr-install" type="button">Install MedED</button>
-  <span class="cr-app-status" id="cr-app-status" role="status" aria-live="polite">MedED saves key files so some parts work offline.</span>
+  <span class="cr-app-status" id="cr-app-status" role="status" aria-live="polite">Save MedED to your device as an app for quick access. Some saved parts may work offline.</span>
 </div>
 
 </div></div>
@@ -247,7 +247,7 @@ installButton.addEventListener('click',async function(){
 });
 function updateConnectionStatus(){
   if(!navigator.onLine){
-    appStatus.textContent='You’re offline. Some parts of MedED may still work.';
+    appStatus.textContent='You’re offline. Saved parts of MedED may still be available; online resources need internet.';
   }else{
     appStatus.textContent='The app shell and resource index can be cached for offline use.';
   }
