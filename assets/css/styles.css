@@ -3241,11 +3241,19 @@ nav.constrained.site-nav.is-scrolled::before {
 .work-tile--afyakongwe > .work-tile-trigger > .work-expand-mark {
   right: 20px;
 }
+.work-tile--afyakongwe > .work-tile-trigger {
+  display: flex;
+  flex-direction: column;
+}
 .work-tile--afyakongwe .work-tile-heading {
-  margin-top: 0;
+  margin-top: auto;
 }
 .work-tile--afyakongwe .work-tile-summary {
   max-width: 360px;
+}
+.work-tile--afyakongwe .work-tile-link {
+  margin-top: 0;
+  padding-top: 13px;
 }
 @media (max-width: 600px) {
   .work-tile--afyakongwe > .work-tile-trigger > .work-icon,
