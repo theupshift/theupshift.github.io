@@ -21,10 +21,9 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-kicker{margin:0 0 .45rem;color:rgb(var(--color-accent));font-family:var(--font-small-caps);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
 #clinical-rhythm .cr-lead{max-width:620px;margin:.65rem 0 0;color:rgb(var(--color-muted));font-size:.94rem;line-height:1.6}
 #clinical-rhythm .cr-meta{margin:.7rem 0 0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.76rem;line-height:1.5}
-#clinical-rhythm .cr-specialty-nav{display:flex;justify-content:center;gap:.4rem;overflow-x:auto;margin:0 0 1rem;padding:0 0 .2rem;scrollbar-width:none}
-#clinical-rhythm .cr-specialty-nav::-webkit-scrollbar{display:none}
-#clinical-rhythm .cr-specialty-tab{flex:0 0 auto;padding:.42rem .68rem;border:1px solid var(--color-rule);border-radius:999px;color:rgb(var(--color-text));background:transparent;font:inherit;font-family:var(--font-small-caps);font-size:.7rem;line-height:1;cursor:pointer;white-space:nowrap}
-#clinical-rhythm .cr-specialty-tab:hover,#clinical-rhythm .cr-specialty-tab.is-active{border-color:rgb(var(--color-accent));color:rgb(var(--color-accent))}
+#clinical-rhythm .cr-specialty-nav{position:relative;margin:0 0 1.25rem;max-width:520px}
+#clinical-rhythm .cr-specialty-select{display:block;width:100%;min-height:46px;padding:.65rem 2.5rem .65rem .8rem;border:1px solid var(--color-rule);border-radius:4px;color:rgb(var(--color-text));background:rgb(var(--color-background));font:inherit;font-size:.9rem;cursor:pointer;box-sizing:border-box}
+#clinical-rhythm .cr-specialty-select:focus{outline:2px solid rgb(var(--color-accent));outline-offset:2px}
 #clinical-rhythm .cr-search{margin:0 0 .8rem}
 #clinical-rhythm .cr-search input{display:block;width:100%;height:46px;padding:.65rem .8rem;border:1px solid var(--color-rule);border-radius:3px;color:rgb(var(--color-text));background:rgb(var(--color-background));font:inherit;font-size:.9rem;box-sizing:border-box}
 #clinical-rhythm .cr-search input::placeholder{color:rgb(var(--color-muted))}
@@ -83,7 +82,7 @@ id_attribute: clinical-rhythm
 
 <h2 class="cr-section-heading">Browse by specialty</h2>
 <p class="cr-section-note">Choose an available specialty. More sections will appear as their resources are added.</p>
-<nav class="cr-specialty-nav" id="cr-specialty-nav" aria-label="Clinical specialties"></nav>
+<div class="cr-specialty-nav"><select class="cr-specialty-select" id="cr-specialty-select" aria-label="Choose a specialty"><option value="Infectious Diseases">Infectious Diseases</option><option value="Cardiology" disabled>Cardiology · coming soon</option><option value="Nephrology" disabled>Nephrology · coming soon</option><option value="Gastroenterology" disabled>Gastroenterology · coming soon</option><option value="Respiratory Medicine" disabled>Respiratory Medicine · coming soon</option><option value="Neurology" disabled>Neurology · coming soon</option><option value="Endocrinology" disabled>Endocrinology · coming soon</option><option value="Haematology" disabled>Haematology · coming soon</option></select></div>
 
 <p class="cr-results-label" id="cr-results-label" aria-live="polite"></p>
 <main id="cr-topics"><p class="cr-empty">Loading resources…</p></main>
@@ -114,11 +113,16 @@ function typeFor(path){var p=path.toLowerCase();if(/\.pptx?$/.test(p))return'sli
 function pathUrl(path){return base+path.split('/').map(encodeURIComponent).join('/')}
 
 function renderNav(){
-document.getElementById('cr-specialty-nav').innerHTML=specialties.map(function(s){
-var available=s[0]==='Infectious Diseases';
-return '<button class="cr-specialty-tab'+(s[0]===selectedSpecialty?' is-active':'')+'" type="button" data-specialty="'+esc(s[0])+'"'+(available?'':' disabled aria-disabled="true" title="Resources coming soon"')+'>'+esc(s[0])+(available?'':' · soon')+'</button>'
-}).join('');
-document.querySelectorAll('.cr-specialty-tab:not(:disabled)').forEach(function(b){b.addEventListener('click',function(){selectedSpecialty=b.dataset.specialty;openTopic=null;query='';document.getElementById('cr-search').value='';activeType='all';document.querySelectorAll('.cr-filter').forEach(function(x){x.classList.toggle('is-active',x.dataset.type==='all')});renderNav();render()})});
+var select=document.getElementById('cr-specialty-select');
+if(select)select.value=selectedSpecialty;
+select.addEventListener('change',function(){
+selectedSpecialty=select.value;
+openTopic=null;query='';
+document.getElementById('cr-search').value='';
+activeType='all';
+document.querySelectorAll('.cr-filter').forEach(function(x){x.classList.toggle('is-active',x.dataset.type==='all')});
+render();
+});
 }
 
 function render(){
