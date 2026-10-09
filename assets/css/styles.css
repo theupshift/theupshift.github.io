@@ -3648,9 +3648,9 @@ body.lofi-player-open {
   align-items: flex-start;
   height: 100%;
   min-height: 255px;
-  background: rgba(var(--color-background), .88);
-  -webkit-backdrop-filter: blur(12px) saturate(105%);
-  backdrop-filter: blur(12px) saturate(105%);
+  background: rgba(var(--color-background), .70);
+  -webkit-backdrop-filter: blur(8px) saturate(115%);
+  backdrop-filter: blur(8px) saturate(115%);
 }
 .work-tile--video .work-tile-trigger .work-icon {
   flex: 0 0 auto;
@@ -3664,7 +3664,7 @@ body.lofi-player-open {
 }
 .work-tile--video:hover .work-tile-trigger,
 .work-tile--video.is-expanded .work-tile-trigger {
-  background: rgba(var(--color-background), .88);
+  background: rgba(var(--color-background), .70);
 }
 @media (max-width: 600px) {
   .work-tile--video .work-tile-trigger {
