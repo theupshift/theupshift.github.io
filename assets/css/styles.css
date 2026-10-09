@@ -3670,3 +3670,11 @@ body.lofi-player-open {
   }
 }
 
+
+/* Keep Nile AGI front-card copy legible in dark mode. */
+[data-theme="dark"] .work-tile--video .work-tile-summary,
+.theme-dark .work-tile--video .work-tile-summary,
+.dark .work-tile--video .work-tile-summary,
+html[data-color-scheme="dark"] .work-tile--video .work-tile-summary {
+  color: #fff;
+}
