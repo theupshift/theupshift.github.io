@@ -115,7 +115,7 @@ id_attribute: med
 
 <div class="cr-install-toast" id="cr-install-toast">
   <button class="cr-install-toast-close" id="cr-install-toast-close" type="button" aria-label="Dismiss message">×</button>
-  <span class="cr-install-toast-text cr-app-status" id="cr-app-status" role="status" aria-live="polite">Save MedED to your device as an app for quick access.</span>
+  <span class="cr-install-toast-text cr-app-status" id="cr-app-status" role="status" aria-live="polite">Save MedED as an app for quick access.</span>
   <button class="cr-install-button" id="cr-install" type="button">Install MedED</button>
 </div>
 
@@ -275,7 +275,7 @@ function updateConnectionStatus(){
   if(!navigator.onLine){
     appStatus.textContent='You’re offline. Saved parts of MedED may still be available; online resources need internet.';
   }else{
-    appStatus.textContent='Save MedED to your device as an app for quick access.';
+    appStatus.textContent='Save MedED as an app for quick access.';
   }
 }
 window.addEventListener('online',updateConnectionStatus);
