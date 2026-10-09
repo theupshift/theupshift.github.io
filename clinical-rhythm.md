@@ -96,6 +96,7 @@ id_attribute: clinical-rhythm
 var api='https://theupshift.github.io/clinical-rhythm-index.json';
 var base='https://clinicalrythm.github.io/';
 var casesUrl='https://theupshift.github.io/medical/interactivecases/';
+var caseFiles=[{title:'Chronic Diarrhoea — Is It IBD',path:'medical/interactivecases/chronicdiarrhea/',url:'https://theupshift.github.io/medical/interactivecases/chronicdiarrhea/',typeLabel:'Cases'},{title:'Cirrhosis — Longitudinal Clinical Case',path:'medical/interactivecases/cirrhosis/',url:'https://theupshift.github.io/medical/interactivecases/cirrhosis/',typeLabel:'Cases'}];
 var activeType='all',query='',openTopic=null,selectedSpecialty='Infectious Diseases',allFiles=[];
 var specialties=[['Cardiology','Cardio'],['Infectious Diseases','ID'],['Nephrology','Nephro'],['Gastroenterology','Gastro'],['Respiratory Medicine','Resp'],['Neurology','Neuro'],['Endocrinology','Endo'],['Haematology','Haem']];
 
@@ -130,6 +131,13 @@ render();
 
 function render(){
 var main=document.getElementById('cr-topics'),meta=document.getElementById('cr-meta');
+if(activeType==='cases'){
+var matchingCases=caseFiles.filter(function(f){return !query||f.title.toLowerCase().indexOf(query)!==-1||f.path.toLowerCase().indexOf(query)!==-1||f.typeLabel.toLowerCase().indexOf(query)!==-1});
+document.getElementById('cr-results-label').textContent=matchingCases.length+' interactive case'+(matchingCases.length===1?'':'s')+' found'+(query?' for “'+query+'”':'')+'.';
+main.innerHTML=matchingCases.length?'<section class="cr-topic is-open"><div class="cr-topic-body" style="display:block;border-top:1px solid rgb(var(--color-accent));border-radius:6px"><div class="cr-resource-list">'+matchingCases.map(function(f){return '<a class="cr-resource" href="'+f.url+'" target="_blank" rel="noopener"><span class="cr-resource-title">'+esc(f.title)+'</span><span class="cr-resource-type">Interactive case ↗</span></a>'}).join('')+'</div><p class="cr-topic-blurb" style="margin:.9rem 0 0"><a href="'+casesUrl+'">Browse all interactive cases →</a></p></div></section>':'<p class="cr-empty">No interactive cases match this search.</p>';
+meta.textContent=caseFiles.length+' interactive cases · sourced from Medical / Interactive Cases';
+return;
+}
 if(selectedSpecialty!=='Infectious Diseases'){
 main.innerHTML='<p class="cr-empty">Demo content for <strong>'+esc(selectedSpecialty)+'</strong> — the specialty is ready to be populated when its Clinical Rhythm resources are available.</p>';
 meta.textContent='8 specialties · '+selectedSpecialty+' · resources remain hosted on Clinical Rhythm';
