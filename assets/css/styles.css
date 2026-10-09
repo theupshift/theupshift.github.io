@@ -3557,3 +3557,46 @@ body.lofi-player-open {
   border-color: rgba(255, 255, 255, .2);
   background: rgba(0, 0, 0, .55);
 }
+
+
+/* Compact Lofi attribution links so the caption stays on one line on phones. */
+.work-tile--lofi .lofi-card-caption {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 3px;
+  font-size: clamp(10px, 1.7vw, 13px);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.work-tile--lofi .lofi-card-caption a.lofi-tag {
+  flex: 0 0 auto;
+  padding: 3px 7px;
+  gap: 0;
+  font-size: .82em;
+  line-height: 1.2;
+  white-space: nowrap;
+  border-radius: 999px;
+}
+@media (max-width: 600px) {
+  .work-tile--lofi .lofi-card-bottom {
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+  .work-tile--lofi .lofi-card-caption {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: clamp(9px, 2.65vw, 12px);
+    gap: 2px;
+  }
+  .work-tile--lofi .lofi-card-caption a.lofi-tag {
+    padding: 2px 5px;
+    font-size: .8em;
+  }
+  .work-tile--lofi .lofi-play-button {
+    gap: 5px;
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+}
