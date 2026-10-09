@@ -3035,3 +3035,82 @@ nav.constrained.site-nav.is-scrolled::before {
     left: 18px;
   }
 }
+
+
+/* Unified card spacing and interaction behavior across the work index. */
+.work-showcase {
+  gap: 20px !important;
+  row-gap: 20px !important;
+  column-gap: 20px !important;
+  align-items: stretch;
+}
+.work-showcase > .work-tile,
+.work-showcase > .work-tile-wide,
+.work-showcase > .work-tile--book {
+  margin: 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-sizing: border-box;
+  transform: translateY(0);
+  transition:
+    transform 220ms cubic-bezier(.2, .7, .2, 1),
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+.work-showcase > .work-tile > .work-tile-trigger,
+.work-showcase > .work-tile-wide > .work-tile-trigger,
+.work-showcase > .work-tile--book > .work-tile-trigger {
+  box-sizing: border-box;
+  border-radius: inherit;
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    opacity 180ms ease;
+}
+.work-showcase > .work-tile:hover,
+.work-showcase > .work-tile-wide:hover,
+.work-showcase > .work-tile--book:hover {
+  transform: translateY(-3px);
+}
+.work-showcase > .work-tile.is-expanded,
+.work-showcase > .work-tile-wide.is-expanded,
+.work-showcase > .work-tile--book.is-expanded {
+  transform: none;
+}
+.work-showcase > .work-tile:focus-within,
+.work-showcase > .work-tile-wide:focus-within,
+.work-showcase > .work-tile--book:focus-within {
+  outline: 2px solid rgba(var(--color-text), .35);
+  outline-offset: 3px;
+}
+.work-showcase .work-tile-trigger:focus-visible {
+  outline: none;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .work-showcase > .work-tile:hover,
+  .work-showcase > .work-tile-wide:hover,
+  .work-showcase > .work-tile--book:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .10);
+  }
+}
+@media (hover: none) {
+  .work-showcase > .work-tile:hover,
+  .work-showcase > .work-tile-wide:hover,
+  .work-showcase > .work-tile--book:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-showcase > .work-tile,
+  .work-showcase > .work-tile-wide,
+  .work-showcase > .work-tile--book,
+  .work-showcase > .work-tile > .work-tile-trigger,
+  .work-showcase > .work-tile-wide > .work-tile-trigger,
+  .work-showcase > .work-tile--book > .work-tile-trigger {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
