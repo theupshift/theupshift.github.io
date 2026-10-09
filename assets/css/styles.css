@@ -3559,6 +3559,14 @@ body.lofi-player-open {
 }
 
 
+/* Keep Lofi attribution and listener wording in lowercase in every theme. */
+.work-tile--lofi .lofi-listener-badge,
+.work-tile--lofi .lofi-card-caption,
+.work-tile--lofi .lofi-card-caption a.lofi-tag {
+  text-transform: lowercase !important;
+  font-variant-caps: normal;
+}
+
 /* Compact Lofi attribution links so the caption stays on one line on phones. */
 .work-tile--lofi .lofi-card-caption {
   display: flex;
