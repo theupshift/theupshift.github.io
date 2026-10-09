@@ -3114,3 +3114,46 @@ nav.constrained.site-nav.is-scrolled::before {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* Final grid alignment: every card uses the same outer spacing and sizing. */
+.work-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px !important;
+  padding-inline: 0 !important;
+  margin-inline: 0 !important;
+  align-items: stretch;
+}
+.work-showcase > .work-tile,
+.work-showcase > .work-tile-wide,
+.work-showcase > .work-tile--book {
+  grid-column: auto;
+  width: 100% !important;
+  min-width: 0;
+  max-width: none;
+  margin: 0 !important;
+  justify-self: stretch;
+}
+.work-showcase > .work-tile-wide {
+  grid-column: 1 / -1;
+}
+.work-showcase > .work-tile.is-expanded {
+  grid-column: 1 / -1;
+  width: 100% !important;
+  margin: 0 !important;
+}
+@media (max-width: 600px) {
+  .work-showcase {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px !important;
+  }
+  .work-showcase > .work-tile,
+  .work-showcase > .work-tile-wide,
+  .work-showcase > .work-tile--book,
+  .work-showcase > .work-tile.is-expanded {
+    grid-column: 1;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
