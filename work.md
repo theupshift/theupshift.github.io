@@ -191,13 +191,18 @@ permalink: /work/
   cards.forEach(function (card) {
     var trigger = card.querySelector('.work-tile-trigger');
 
-    trigger.addEventListener('click', function () {
-      if (card.classList.contains('is-expanded')) {
-        closeCard(card);
-      } else {
-        openCard(card);
-      }
-    });
+    // Some cards (such as the Lofi banner) are informational, not expandable.
+    // Skip click handling for those cards so one missing trigger cannot stop
+    // the rest of the page's interactions and reveal animations.
+    if (trigger) {
+      trigger.addEventListener('click', function () {
+        if (card.classList.contains('is-expanded')) {
+          closeCard(card);
+        } else {
+          openCard(card);
+        }
+      });
+    }
 
     card.addEventListener('pointermove', function (event) {
       if (reduced) return;
