@@ -2721,3 +2721,25 @@ nav.constrained.site-nav.is-scrolled::before {
     animation: none;
   }
 }
+
+
+/* Keep the reading/books card as the final, centered wide feature. */
+.work-showcase > .work-tile--book {
+  grid-column: 1 / -1;
+  width: min(100%, 680px);
+  justify-self: center;
+}
+.work-showcase > .work-tile--book .work-tile-trigger {
+  min-height: 370px;
+}
+.work-showcase > .work-tile--book .book-cover-collage {
+  max-width: 560px;
+  align-self: center;
+}
+@media (max-width: 600px) {
+  .work-showcase > .work-tile--book {
+    grid-column: 1;
+    width: 100%;
+    justify-self: stretch;
+  }
+}
