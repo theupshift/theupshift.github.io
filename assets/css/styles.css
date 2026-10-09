@@ -3528,3 +3528,32 @@ body.lofi-player-open {
     transition: none;
   }
 }
+
+
+/* Keep the Lofi caption links crisp over the dark image in both themes.
+   The site's global anchor text-shadow/underline treatment creates a blurry halo here. */
+.work-tile--lofi .lofi-card-caption a.lofi-tag,
+.work-tile--lofi .lofi-card-caption a.lofi-tag:visited,
+.work-tile--lofi .lofi-card-caption a.lofi-tag:hover,
+.work-tile--lofi .lofi-card-caption a.lofi-tag:focus,
+.work-tile--lofi .lofi-card-caption a.lofi-tag:active {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+  text-shadow: none !important;
+  background-image: none !important;
+  text-decoration: none !important;
+  opacity: 1;
+  filter: none;
+  -webkit-filter: none;
+  transform: none;
+}
+.work-tile--lofi .lofi-card-caption a.lofi-tag {
+  border-color: rgba(255, 255, 255, .2);
+  background: rgba(0, 0, 0, .55);
+}
+.work-tile--lofi .lofi-card-caption a.lofi-tag:hover,
+.work-tile--lofi .lofi-card-caption a.lofi-tag:focus,
+.work-tile--lofi .lofi-card-caption a.lofi-tag:active {
+  border-color: rgba(255, 255, 255, .2);
+  background: rgba(0, 0, 0, .55);
+}
