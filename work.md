@@ -17,13 +17,13 @@ permalink: /work/
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">⌁</span>
       <span class="work-tile-heading">Nile AGI</span>
-      <span class="work-tile-summary">Local-first AI tools and experiments built for useful intelligence on ordinary devices.</span>
+      <span class="work-tile-summary">A community-driven data ecosystem preserving local languages and building culturally aware AI grounded in African communities.</span>
       <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
-      <p>AI should be useful before it is impressive.</p>
-      <p>Nile AGI explores local-first tools and experiments that keep useful intelligence close, practical, and accessible — on ordinary devices, without making the cloud the centre of everything.</p>
+      <p>Nile AGI is building a community-driven data collection ecosystem to preserve local languages and help shape AI that understands the cultures, contexts, and ways people communicate.</p>
+      <p>By bringing communities closer to the data behind these systems, the project aims to make AI more locally grounded, inclusive, and useful — creating tools that reflect the people and knowledge they are meant to serve.</p>
     </div>
   </article>
 
