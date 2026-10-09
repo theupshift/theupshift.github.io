@@ -68,7 +68,6 @@ id_attribute: clinical-rhythm
 <p class="cr-meta" id="cr-meta" aria-live="polite">Loading resource index…</p>
 </header>
 
-<h2 class="cr-section-heading">Find a resource</h2>
 <div class="cr-search-wrap"><div class="cr-search"><input id="cr-search" type="search" placeholder="Search topics, filenames or resource types…" aria-label="Search all available resources"></div></div>
 <div class="cr-filters" role="group" aria-label="Filter resources">
 <button class="cr-filter is-active" data-type="all" type="button">Everything</button>
