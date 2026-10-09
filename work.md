@@ -138,7 +138,11 @@ permalink: /work/
       <span class="lofi-listener-badge"><span class="lofi-pulse-dot"></span><span class="lofi-listener-count">154</span> listeners</span>
     </div>
     <div class="lofi-card-bottom">
-      I’m likely listening to <a href="https://lofi.cafe/" class="lofi-tag" target="_blank" rel="noopener noreferrer">lofi.cafe</a> by <a href="https://twitter.com/maridivi89" class="lofi-tag" target="_blank" rel="noopener noreferrer">Marianna</a>.
+      <span class="lofi-card-caption">I’m likely listening to <a href="https://lofi.cafe/" class="lofi-tag" target="_blank" rel="noopener noreferrer">lofi.cafe</a> by <a href="https://twitter.com/maridivi89" class="lofi-tag" target="_blank" rel="noopener noreferrer">Marianna</a>.</span>
+      <a href="https://lofi.cafe/" class="lofi-play-button" target="_blank" rel="noopener noreferrer" aria-label="Play lofi.cafe">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M8 5.8c0-.7.76-1.13 1.36-.77l9.1 5.45a1.77 1.77 0 0 1 0 3.04l-9.1 5.45A.9.9 0 0 1 8 18.2V5.8Z"/></svg>
+        <span>Play</span>
+      </a>
     </div>
   </article>
 
