@@ -539,6 +539,10 @@ article .footnotes p { margin-bottom: .8em; }
 .pagination-btn:hover { color: rgb(var(--color-accent)); }
 
 footer.constrained.site-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
   width: 100%;
   max-width: var(--reading-width);
   padding: 24px 0 32px;
@@ -549,13 +553,18 @@ footer.constrained.site-footer {
   white-space: normal;
 }
 .site-footer a {
-  margin: 0 5px;
+  margin: 0;
   color: inherit;
 }
 .site-footer a:hover { color: rgb(var(--color-accent)); }
-.site-footer .footer-share { white-space: nowrap; }
+.site-footer .footer-share {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  white-space: nowrap;
+}
 .site-footer .linkedin-icon,
-.site-footer .twitter-icon {
+.site-footer .x-icon {
   width: 13px;
   height: 13px;
   display: inline-block;
@@ -592,7 +601,7 @@ footer.constrained.site-footer {
   main.constrained { padding: 28px 0 0; }
   #words section { padding: 24px 0; }
   article > header { margin-bottom: 24px; }
-  .site-footer .footer-share { display: inline-block; margin-top: 8px; }
+  .site-footer .footer-share { display: inline-flex; margin-top: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
