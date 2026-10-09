@@ -573,6 +573,11 @@ footer.constrained.site-footer {
   background: none;
   text-shadow: none;
 }
+/* The X mark fills more of its viewBox than LinkedIn; reduce its visible height to match. */
+.site-footer .x-icon {
+  height: 10.5px;
+  vertical-align: -1px;
+}
 
 @media (max-width: 600px) {
   html { font-size: 16px; }
