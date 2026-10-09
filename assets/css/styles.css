@@ -3241,6 +3241,18 @@ nav.constrained.site-nav.is-scrolled::before {
 .work-tile--afyakongwe > .work-tile-trigger > .work-expand-mark {
   right: 20px;
 }
+.work-tile--afyakongwe:hover .work-icon,
+.work-tile--afyakongwe.is-expanded .work-icon {
+  border-color: rgba(var(--color-accent), .55);
+  color: rgb(var(--color-accent));
+  background: rgba(var(--color-accent), .04);
+}
+.work-tile--afyakongwe:hover .work-expand-mark,
+.work-tile--afyakongwe.is-expanded .work-expand-mark {
+  color: #fff;
+  background: rgb(var(--color-accent));
+  border-color: rgb(var(--color-accent));
+}
 .work-tile--afyakongwe > .work-tile-trigger {
   display: flex;
   flex-direction: column;
