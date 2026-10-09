@@ -89,8 +89,7 @@ id_attribute: clinical-rhythm
 
 <script>
 (function(){
-var repo='clinicalrythm/clinicalrythm.github.io';
-var api='https://api.github.com/repos/'+repo+'/git/trees/main?recursive=1';
+var api='https://theupshift.github.io/clinical-rhythm-index.json';
 var base='https://clinicalrythm.github.io/';
 var activeType='all',query='',openTopic=null,selectedSpecialty='Infectious Diseases',allFiles=[];
 var specialties=[['Cardiology','Cardio'],['Infectious Diseases','ID'],['Nephrology','Nephro'],['Gastroenterology','Gastro'],['Respiratory Medicine','Resp'],['Neurology','Neuro'],['Endocrinology','Endo'],['Haematology','Haem']];
