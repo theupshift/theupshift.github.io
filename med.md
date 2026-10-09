@@ -117,7 +117,7 @@ id_attribute: med
 
 <div class="cr-app-actions">
   <button class="cr-install-button" id="cr-install" type="button">Install MedED</button>
-  <span class="cr-app-status" id="cr-app-status" role="status" aria-live="polite">Save MedED to your device as an app for quick access. Some saved parts may work offline.</span>
+  <span class="cr-app-status" id="cr-app-status" role="status" aria-live="polite">Save MedED to your device as an app for quick access.</span>
 </div>
 
 </div></div>
