@@ -2248,18 +2248,20 @@ nav.constrained.site-nav.is-scrolled::before {
 /* Work index refresh — editorial, image-led project cards. */
 .work-intro {
   max-width: 760px;
-  margin-bottom: 8px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
 }
 .work-intro .work-lede {
   max-width: 620px;
-  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-  line-height: 1.55;
-  letter-spacing: -.015em;
+  margin-top: 12px;
+  font-size: clamp(.92rem, 1.4vw, 1.05rem);
+  line-height: 1.5;
+  letter-spacing: -.01em;
 }
 .work-showcase {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(16px, 2.1vw, 26px);
-  padding-top: 28px;
+  padding-top: 14px;
   padding-bottom: 64px;
   align-items: stretch;
 }
