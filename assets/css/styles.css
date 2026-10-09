@@ -3190,7 +3190,7 @@ nav.constrained.site-nav.is-scrolled::before {
   content: "";
   position: absolute;
   z-index: 0;
-  inset: 1px;
+  inset: 0;
   border-radius: inherit;
   background-image: url("https://images.pexels.com/photos/30678595/pexels-photo-30678595.jpeg?auto=compress&cs=tinysrgb&w=1200");
   background-size: cover;
