@@ -35,7 +35,7 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-filter{display:flex;align-items:center;justify-content:center;min-width:0;width:100%;min-height:34px;box-sizing:border-box;padding:.42rem clamp(.08rem,.35vw,.25rem);border:1px solid var(--color-rule);border-radius:999px;color:rgb(var(--color-text));background:transparent;font:inherit;font-family:var(--font-small-caps);font-size:clamp(.48rem,1.05vw,.72rem);line-height:1.1;text-align:center;white-space:nowrap;cursor:pointer}
 #clinical-rhythm .cr-filter:hover,#clinical-rhythm .cr-filter.is-active{border-color:rgb(var(--color-accent));color:rgb(var(--color-accent))}
 #clinical-rhythm .cr-browse-panel{width:100%;box-sizing:border-box;margin:0 0 1.25rem;padding:1rem;border:1px solid var(--color-rule);border-radius:12px;background:rgb(var(--color-background));box-shadow:0 3px 12px rgba(0,0,0,.035)}
-#clinical-rhythm .cr-topics{display:grid;gap:.85rem}
+#clinical-rhythm .cr-topics{display:grid;gap:1.05rem}
 #clinical-rhythm .cr-topic{margin:0;scroll-margin-top:1.5rem;border:1px solid var(--color-rule);border-radius:10px;overflow:hidden;background:rgb(var(--color-background));box-shadow:0 2px 8px rgba(0,0,0,.035);transition:border-color .18s ease,box-shadow .18s ease}
 #clinical-rhythm .cr-topic-card{width:100%;min-height:68px;padding:.85rem 1rem;border:0;border-radius:0;color:rgb(var(--color-text));background:transparent;text-align:left;font:inherit;cursor:pointer;display:flex;align-items:center;gap:.85rem;box-sizing:border-box;box-shadow:none;transition:background .18s ease}
 #clinical-rhythm .cr-topic-card:hover{background:rgba(179,83,82,.045)}
