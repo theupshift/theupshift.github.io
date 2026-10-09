@@ -3391,12 +3391,14 @@ nav.constrained.site-nav.is-scrolled::before {
   background: rgba(0, 0, 0, .58);
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
-  transition: background-color .2s ease, border-color .2s ease;
+  transition: none;
 }
-.work-tile--lofi .lofi-tag:hover {
+.work-tile--lofi .lofi-tag:hover,
+.work-tile--lofi .lofi-tag:focus,
+.work-tile--lofi .lofi-tag:active {
   color: #fff;
-  background: rgba(0, 0, 0, .82);
-  border-color: rgba(255, 255, 255, .28);
+  background: rgba(0, 0, 0, .58);
+  border-color: rgba(255, 255, 255, .12);
 }
 .work-tile--lofi:hover .lofi-card-bg {
   transform: scale(1.025);
