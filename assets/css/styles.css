@@ -3179,7 +3179,7 @@ nav.constrained.site-nav.is-scrolled::before {
 }
 
 
-/* Afya Kongwe photo and lower-aligned copy, without affecting the shared border. */
+/* Afya Kongwe photo with a stronger, localized blur behind the lower copy. */
 .work-tile--afyakongwe {
   position: relative;
   isolation: isolate;
@@ -3202,14 +3202,32 @@ nav.constrained.site-nav.is-scrolled::before {
 .work-tile--afyakongwe > .work-tile-trigger {
   position: relative;
   z-index: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(var(--color-background), 0) 0%,
-    rgba(var(--color-background), .02) 48%,
-    rgba(var(--color-background), .34) 100%
-  ) !important;
+  background: transparent !important;
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
+}
+.work-tile--afyakongwe > .work-tile-trigger::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 48% 0 0;
+  border-radius: 0 0 11px 11px;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--color-background), .04) 0%,
+    rgba(var(--color-background), .48) 100%
+  );
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  pointer-events: none;
+}
+.work-tile--afyakongwe > .work-tile-trigger > * {
+  position: relative;
+  z-index: 1;
+}
+.work-tile--afyakongwe > .work-tile-trigger > .work-icon,
+.work-tile--afyakongwe > .work-tile-trigger > .work-expand-mark {
+  z-index: 2;
 }
 .work-tile--afyakongwe .work-tile-heading {
   margin-top: 182px;
