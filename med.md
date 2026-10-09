@@ -7,7 +7,7 @@ id_attribute: med
 <style>
 #med .cr-wrap{width:100%}
 #med .cr-intro{margin:0 0 1.25rem;text-align:left}
-#med .cr-title{margin:0;font-size:clamp(1.8rem,4vw,2.25rem);line-height:1.12;letter-spacing:-.03em}
+#med .cr-title{margin:0;font-family:var(--font-serif);font-size:1.55em;font-weight:400;line-height:1.2;letter-spacing:-.025em;color:rgb(var(--color-text))}
 #med .cr-section-heading{margin:1.4rem 0 .25rem;font-size:1.05rem;line-height:1.3}
 #med .cr-section-note{margin:0 0 .8rem;color:rgb(var(--color-muted));font-size:.84rem;line-height:1.5}
 #med .cr-specialty-tab:disabled{opacity:.48;cursor:not-allowed}
@@ -22,8 +22,8 @@ id_attribute: med
 #med .cr-results-label{display:none}
 #med .cr-resource-type{padding:.15rem .35rem;border:1px solid var(--color-rule);border-radius:3px}
 #med .cr-kicker{margin:0 0 .45rem;color:rgb(var(--color-accent));font-size:1rem;letter-spacing:.06em;text-align:center;text-transform:none}
-#med .cr-lead{max-width:620px;margin:.65rem auto 0;color:rgb(var(--color-muted));font-size:.94rem;line-height:1.6;text-align:center;hyphens:none;overflow-wrap:normal;word-break:normal}
-#med .cr-meta{margin:.7rem 0 0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.76rem;line-height:1.5;text-align:center}
+#med .cr-lead{max-width:540px;margin:.65rem auto 0;color:rgba(var(--color-text),.72);font-family:var(--font-serif);font-size:1rem;line-height:1.55;text-align:center;hyphens:none;overflow-wrap:normal;word-break:normal}
+#med .cr-meta{margin:.7rem 0 0;color:rgba(var(--color-text),.52);font-family:var(--font-small-caps);font-size:.7rem;line-height:1.5;text-align:center;letter-spacing:.015em}
 #med .cr-specialty-nav{display:flex;align-items:center;justify-content:space-between;gap:.8rem;width:100%;margin:0 0 1.1rem;padding:.55rem .65rem;border:1px solid var(--color-rule);border-radius:10px;box-sizing:border-box;background:rgba(179,83,82,.035);box-shadow:0 2px 8px rgba(0,0,0,.035)}
 #med .cr-specialty-current{flex:1;min-width:0;text-align:center;font-size:1rem;font-weight:600;line-height:1.3;letter-spacing:.01em;padding:.2rem .35rem}
 #med .cr-specialty-arrow{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;padding:0;border:1px solid var(--color-rule);border-radius:50%;color:rgb(var(--color-accent));background:rgb(var(--color-background));font:inherit;font-size:1.4rem;line-height:1;cursor:pointer;box-shadow:0 1px 3px rgba(0,0,0,.04);transition:border-color .18s ease,color .18s ease,background .18s ease,transform .18s ease}
@@ -82,7 +82,7 @@ id_attribute: med
 
 <div class="meded-resources-page" id="med"><div class="cr-wrap">
 <header class="cr-intro">
-<h1 class="cr-title" style="text-align:center;font-size:1.35rem;font-weight:300;letter-spacing:0;color:rgb(var(--color-accent))"># MEDED RESOURCES</h1>
+<h1 class="cr-title">MedED Resources</h1>
 <p class="cr-lead">A growing collection of medical lectures, readings, guidelines, practice questions and clinical cases, organised by topic.</p>
 <p class="cr-meta" id="cr-meta" aria-live="polite">Loading resource index…</p>
 </header>
