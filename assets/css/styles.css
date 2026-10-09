@@ -3653,7 +3653,7 @@ body.lofi-player-open {
   margin-bottom: auto;
 }
 .work-tile--video .work-tile-heading {
-  margin-top: 18px;
+  margin-top: auto;
 }
 .work-tile--video .work-tile-summary {
   margin-top: 0;
