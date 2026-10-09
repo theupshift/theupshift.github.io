@@ -249,7 +249,7 @@ if(toastClose && installToast){
 window.addEventListener('beforeinstallprompt',function(event){
   event.preventDefault();
   installPrompt=event;
-  if(appStatus) appStatus.textContent='MedED is ready to install in Chrome.';
+  if(appStatus) appStatus.textContent='MedED is ready to install in your browser.';
   if(installButton) installButton.textContent='Install MedED';
   if(installToast) installToast.classList.add('is-visible');
 });
@@ -268,13 +268,18 @@ installButton.addEventListener('click',async function(){
   }
   var ua=navigator.userAgent||'';
   var isIOS=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  var isEdge=/Edg\//.test(ua);
   var isSafari=/Safari/.test(ua)&&!/Chrome|Chromium|Edg|CriOS|FxiOS/.test(ua);
-  if(isIOS){
-    appStatus.textContent='To install: open the Share menu in Safari, then choose “Add to Home Screen”.';
+  if(isIOS&&isSafari){
+    appStatus.textContent='To install: tap Share in Safari, then choose “Add to Home Screen”.';
   }else if(isSafari&&/Macintosh|Mac OS X/.test(ua)){
     appStatus.textContent='To install on Mac: in Safari, choose File → Add to Dock.';
+  }else if(isEdge){
+    appStatus.textContent='To install in Edge: open ⋯, then choose Apps → Install this site as an app.';
+  }else if(/Chrome|CriOS/.test(ua)){
+    appStatus.textContent='To install in Chrome: open ⋮ and choose Install app or Add to Home screen.';
   }else{
-    appStatus.textContent='If installation is available in your browser, open its menu and choose “Install app” or “Add to Home Screen”.';
+    appStatus.textContent='Open your browser menu and look for “Install app” or “Add to Home Screen”.';
   }
 });
 function updateConnectionStatus(){
