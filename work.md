@@ -146,7 +146,8 @@ permalink: /work/
     </div>
   </article>
 
-  <div class="lofi-inline-player" data-lofi-player hidden aria-label="Lofi.cafe player">
+  <div class="lofi-player-modal" data-lofi-modal hidden role="dialog" aria-modal="true" aria-label="Lofi.cafe music player">
+    <button type="button" class="lofi-player-close" data-lofi-close aria-label="Close music player">×</button>
     <iframe data-lofi-frame title="Lofi.cafe music player" src="about:blank" loading="lazy" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
   </div>
 
@@ -264,9 +265,10 @@ permalink: /work/
 (function () {
   var count = document.querySelector("[data-lofi-visitors]");
   var openButton = document.querySelector("[data-lofi-open]");
-  var player = document.querySelector("[data-lofi-player]");
+  var modal = document.querySelector("[data-lofi-modal]");
+  var closeButton = document.querySelector("[data-lofi-close]");
   var frame = document.querySelector("[data-lofi-frame]");
-  if (!count || !openButton || !player || !frame) return;
+  if (!count || !openButton || !modal || !closeButton || !frame) return;
 
   // This endpoint reports visitors to lofi.cafe, not verified active listeners.
   var countEndpoint = "https://mailbrew-functions.vercel.app/lofi-cafe-visitors";
@@ -297,15 +299,30 @@ permalink: /work/
       });
   }
 
-  // Keep playback on this page: reveal an inline embed instead of a popup or tab.
-  // The third-party player may still require interaction inside its own frame.
-  openButton.addEventListener("click", function () {
-    player.hidden = false;
+  // Open the embedded player in a modal overlay, without navigating away.
+  function openPlayer() {
+    modal.hidden = false;
     if (!frame.src || frame.getAttribute("src") === "about:blank") {
       frame.src = "https://www.lofi.cafe/";
     }
-    openButton.querySelector("span").textContent = "Player loaded";
-    player.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    document.body.classList.add("lofi-player-open");
+    closeButton.focus();
+  }
+
+  function closePlayer() {
+    modal.hidden = true;
+    frame.src = "about:blank";
+    document.body.classList.remove("lofi-player-open");
+    openButton.focus();
+  }
+
+  openButton.addEventListener("click", openPlayer);
+  closeButton.addEventListener("click", closePlayer);
+  modal.addEventListener("click", function (event) {
+    if (event.target === modal) closePlayer();
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !modal.hidden) closePlayer();
   });
 
   updateVisitorCount();
