@@ -34,6 +34,7 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-filters{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));justify-content:stretch;align-items:center;gap:clamp(.15rem,.7vw,.45rem);margin:0 0 1.5rem;width:100%;box-sizing:border-box}
 #clinical-rhythm .cr-filter{display:flex;align-items:center;justify-content:center;min-width:0;width:100%;min-height:34px;box-sizing:border-box;padding:.42rem clamp(.08rem,.35vw,.25rem);border:1px solid var(--color-rule);border-radius:999px;color:rgb(var(--color-text));background:transparent;font:inherit;font-family:var(--font-small-caps);font-size:clamp(.48rem,1.05vw,.72rem);line-height:1.1;text-align:center;white-space:nowrap;cursor:pointer}
 #clinical-rhythm .cr-filter:hover,#clinical-rhythm .cr-filter.is-active{border-color:rgb(var(--color-accent));color:rgb(var(--color-accent))}
+#clinical-rhythm .cr-browse-panel{width:100%;box-sizing:border-box;margin:0 0 1.25rem;padding:1rem;border:1px solid var(--color-rule);border-radius:12px;background:rgb(var(--color-background));box-shadow:0 3px 12px rgba(0,0,0,.035)}
 #clinical-rhythm .cr-topics{display:grid;gap:.65rem}
 #clinical-rhythm .cr-topic{margin:0;scroll-margin-top:1.5rem;border:1px solid var(--color-rule);border-radius:10px;overflow:hidden;background:rgb(var(--color-background));box-shadow:0 2px 8px rgba(0,0,0,.035);transition:border-color .18s ease,box-shadow .18s ease}
 #clinical-rhythm .cr-topic-card{width:100%;min-height:68px;padding:.85rem 1rem;border:0;border-radius:0;color:rgb(var(--color-text));background:transparent;text-align:left;font:inherit;cursor:pointer;display:flex;align-items:center;gap:.85rem;box-sizing:border-box;box-shadow:none;transition:background .18s ease}
@@ -62,6 +63,7 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-topic-card{min-height:62px;padding:.75rem}
 #clinical-rhythm .cr-topic-number{flex-basis:30px;width:30px;height:30px}
 #clinical-rhythm .cr-topic-body{padding:.8rem .75rem}
+#clinical-rhythm .cr-browse-panel{padding:.65rem;border-radius:10px}
 #clinical-rhythm .cr-resource{grid-template-columns:1fr;gap:.2rem;padding:.65rem 0}
 #clinical-rhythm .cr-resource-type{white-space:normal}
 }
@@ -84,6 +86,7 @@ id_attribute: clinical-rhythm
 <button class="cr-filter" data-type="cases" type="button">Cases</button>
 </div>
 
+<div class="cr-browse-panel">
 <div class="cr-specialty-nav" role="group" aria-label="Browse specialties">
 <button class="cr-specialty-arrow" id="cr-specialty-prev" type="button" aria-label="Previous specialty">‹</button>
 <div class="cr-specialty-current" id="cr-specialty-current" aria-live="polite">Infectious Diseases</div>
@@ -92,6 +95,7 @@ id_attribute: clinical-rhythm
 
 <p class="cr-results-label" id="cr-results-label" aria-live="polite"></p>
 <main id="cr-topics"><p class="cr-empty">Loading resources…</p></main>
+</div>
 </div></div>
 
 <script>
