@@ -2598,3 +2598,57 @@ nav.constrained.site-nav.is-scrolled::before {
 @media (prefers-reduced-motion: reduce) {
   .book-cover { transition: none; }
 }
+
+
+/* Responsive consistency: preserve the same card composition on touch screens.
+   Layout may stack for readability, but card styling, cover scale, and hierarchy stay consistent. */
+@media (max-width: 600px) {
+  .work-tile,
+  .work-tile-wide {
+    border-radius: 10px;
+  }
+  .work-tile--book .work-tile-trigger,
+  .work-tile--book:hover .work-tile-trigger,
+  .work-tile--book.is-expanded .work-tile-trigger,
+  .work-tile:not(.work-tile--book) .work-tile-trigger:has(.publication-feed-preview) {
+    min-height: 370px;
+  }
+  .book-cover-collage {
+    height: 205px;
+    margin: 12px 0 22px;
+  }
+  .book-cover {
+    width: 94px;
+    height: 142px;
+  }
+  .book-cover--two {
+    left: calc(50% - 47px);
+  }
+  .book-cover--one { left: 8%; }
+  .book-cover--three { right: 8%; }
+  .work-tile--book:hover .book-cover--one { transform: rotate(-8deg); }
+  .work-tile--book:hover .book-cover--two { transform: rotate(2deg); }
+  .work-tile--book:hover .book-cover--three { transform: rotate(8deg); }
+  .publication-feed-preview {
+    margin-top: 8px;
+  }
+  .publication-feed-item {
+    padding: 12px 0 11px;
+  }
+  .publication-feed-title {
+    font-size: 13px;
+  }
+  .publication-feed-meta {
+    font-size: 10px;
+  }
+}
+@media (hover: none) {
+  .work-tile:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .work-tile--book:hover .book-cover--one { transform: rotate(-8deg); }
+  .work-tile--book:hover .book-cover--two { transform: rotate(2deg); }
+  .work-tile--book:hover .book-cover--three { transform: rotate(8deg); }
+  .work-tile--video:hover .work-tile-video { transform: none; }
+}
