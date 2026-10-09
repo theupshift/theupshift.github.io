@@ -19,7 +19,7 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-search input:focus{text-align:left;padding-left:2.35rem}
 #clinical-rhythm .cr-search-wrap:has(input:not(:placeholder-shown)):before{left:.8rem;transform:translateY(-52%)}
 #clinical-rhythm .cr-search input::placeholder{text-align:center;padding-left:1.7rem}
-#clinical-rhythm .cr-results-label{margin:-.55rem 0 1rem;color:rgb(var(--color-muted));font-size:.78rem}
+#clinical-rhythm .cr-results-label{display:none}
 #clinical-rhythm .cr-resource-type{padding:.15rem .35rem;border:1px solid var(--color-rule);border-radius:3px}
 #clinical-rhythm .cr-kicker{margin:0 0 .45rem;color:rgb(var(--color-accent));font-size:1rem;letter-spacing:.06em;text-align:center;text-transform:none}
 #clinical-rhythm .cr-lead{max-width:620px;margin:.65rem auto 0;color:rgb(var(--color-muted));font-size:.94rem;line-height:1.6;text-align:center;hyphens:none;overflow-wrap:normal;word-break:normal}
@@ -35,16 +35,18 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-filter{display:flex;align-items:center;justify-content:center;min-width:0;width:100%;min-height:34px;box-sizing:border-box;padding:.42rem clamp(.08rem,.35vw,.25rem);border:1px solid var(--color-rule);border-radius:999px;color:rgb(var(--color-text));background:transparent;font:inherit;font-family:var(--font-small-caps);font-size:clamp(.48rem,1.05vw,.72rem);line-height:1.1;text-align:center;white-space:nowrap;cursor:pointer}
 #clinical-rhythm .cr-filter:hover,#clinical-rhythm .cr-filter.is-active{border-color:rgb(var(--color-accent));color:rgb(var(--color-accent))}
 #clinical-rhythm .cr-topics{display:grid;gap:.65rem}
-#clinical-rhythm .cr-topic{margin:0;scroll-margin-top:1.5rem}
-#clinical-rhythm .cr-topic-card{width:100%;min-height:68px;padding:.85rem 1rem;border:1px solid var(--color-rule);border-radius:6px;color:rgb(var(--color-text));background:rgb(var(--color-background));text-align:left;font:inherit;cursor:pointer;display:flex;align-items:center;gap:.85rem;box-sizing:border-box;box-shadow:0 1px 0 rgba(0,0,0,.025);transition:border-color .18s ease,box-shadow .18s ease,transform .18s ease}
-#clinical-rhythm .cr-topic-card:hover{border-color:rgb(var(--color-accent));box-shadow:0 4px 14px rgba(0,0,0,.06);transform:translateY(-1px)}
-#clinical-rhythm .cr-topic.is-open .cr-topic-card{border-color:rgb(var(--color-accent));border-radius:6px 6px 0 0;box-shadow:none}
+#clinical-rhythm .cr-topic{margin:0;scroll-margin-top:1.5rem;border:1px solid var(--color-rule);border-radius:10px;overflow:hidden;background:rgb(var(--color-background));box-shadow:0 2px 8px rgba(0,0,0,.035);transition:border-color .18s ease,box-shadow .18s ease}
+#clinical-rhythm .cr-topic-card{width:100%;min-height:68px;padding:.85rem 1rem;border:0;border-radius:0;color:rgb(var(--color-text));background:transparent;text-align:left;font:inherit;cursor:pointer;display:flex;align-items:center;gap:.85rem;box-sizing:border-box;box-shadow:none;transition:background .18s ease}
+#clinical-rhythm .cr-topic-card:hover{background:rgba(179,83,82,.045)}
+#clinical-rhythm .cr-topic:hover{border-color:rgb(var(--color-accent));box-shadow:0 4px 14px rgba(0,0,0,.055)}
+#clinical-rhythm .cr-topic.is-open{border-color:rgb(var(--color-accent));box-shadow:0 4px 14px rgba(0,0,0,.055)}
+#clinical-rhythm .cr-topic.is-open .cr-topic-card{background:rgba(179,83,82,.045)}
 #clinical-rhythm .cr-topic-number{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border-radius:50%;color:rgb(var(--color-accent));background:rgba(179,83,82,.08);font-family:var(--font-small-caps);font-size:.7rem}
 #clinical-rhythm .cr-topic-name{flex:1 1 auto;min-width:0;font-size:1rem;line-height:1.25;font-weight:600}
 #clinical-rhythm .cr-topic-count{flex:0 0 auto;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.7rem;white-space:nowrap}
 #clinical-rhythm .cr-topic-chevron{display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;border:1px solid var(--color-rule);border-radius:50%;color:rgb(var(--color-muted));font-size:.85rem;transition:transform .18s ease,border-color .18s ease,color .18s ease}
 #clinical-rhythm .cr-topic.is-open .cr-topic-chevron{transform:rotate(180deg);border-color:rgb(var(--color-accent));color:rgb(var(--color-accent))}
-#clinical-rhythm .cr-topic-body{display:none;padding:1rem 1.05rem 1.05rem;border:1px solid rgb(var(--color-accent));border-top:0;border-radius:0 0 6px 6px;background:rgba(179,83,82,.025)}
+#clinical-rhythm .cr-topic-body{display:none;padding:1rem 1.05rem 1.05rem;border-top:1px solid var(--color-rule);background:rgba(179,83,82,.025)}
 #clinical-rhythm .cr-topic.is-open .cr-topic-body{display:block}
 #clinical-rhythm .cr-topic-blurb{margin:0 0 .9rem;color:rgb(var(--color-muted));font-size:.82rem;line-height:1.5}
 #clinical-rhythm .cr-resource-list{border-top:1px solid var(--color-rule)}
