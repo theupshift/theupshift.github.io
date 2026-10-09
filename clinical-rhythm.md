@@ -63,7 +63,7 @@ id_attribute: clinical-rhythm
 
 <div class="clinical-rhythm-page" id="clinical-rhythm"><div class="cr-wrap">
 <header class="cr-intro">
-<h1 class="cr-title" style="text-align:center">#MedEd Resources</h1>
+<h1 class="cr-title" style="text-align:center;font-size:1.35rem;font-weight:400;letter-spacing:0"># MEDED RESOURCES</h1>
 <p class="cr-lead">A collection of medical lectures, readings, guidelines, practice questions and clinical cases, organised by topic.</p>
 <p class="cr-meta" id="cr-meta" aria-live="polite">Loading resource index…</p>
 </header>
