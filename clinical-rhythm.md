@@ -78,7 +78,6 @@ id_attribute: clinical-rhythm
 <button class="cr-filter" data-type="textbook" type="button">Textbook</button>
 <button class="cr-filter" data-type="guidelines" type="button">Guidelines</button>
 <button class="cr-filter" data-type="readings" type="button">Articles</button>
-<button class="cr-filter" data-type="other" type="button">Other</button>
 <button class="cr-filter" data-type="cases" type="button">Cases</button>
 </div>
 
