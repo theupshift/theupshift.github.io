@@ -16,7 +16,6 @@ permalink: /work/
     </video>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">⌁</span>
-      <span class="work-tile-label">Tools</span>
       <span class="work-tile-heading">Nile AGI</span>
       <span class="work-tile-summary">Local-first AI tools and experiments built for useful intelligence on ordinary devices.</span>
       <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
@@ -31,10 +30,13 @@ permalink: /work/
   <article class="work-tile" data-work-card>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">✦</span>
-      <span class="work-tile-label">Research</span>
       <span class="work-tile-heading">Publications</span>
-      <span class="work-tile-summary">Research on health systems, chronic diseases, digital health, and technology.</span>
-      <span class="work-tile-link">View <span aria-hidden="true">↗</span></span>
+      <span class="publication-feed-preview" aria-hidden="true">
+        <span class="publication-feed-item"><span class="publication-feed-title">AI-assisted imaging for climate-exacerbated respiratory diseases</span><span class="publication-feed-meta">European Congress of Radiology · 2026</span></span>
+        <span class="publication-feed-item"><span class="publication-feed-title">Cardiopulmonary bypass complications and their predictors</span><span class="publication-feed-meta">Global Cardiology Science and Practice · 2026</span></span>
+        <span class="publication-feed-item"><span class="publication-feed-title">Integrating rare diseases into Africa’s digital health strategies</span><span class="publication-feed-meta">PLOS Digital Health</span></span>
+      </span>
+      <span class="work-tile-link">All publications <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
     <div class="work-tile-details" hidden>
@@ -65,7 +67,11 @@ permalink: /work/
   <article class="work-tile work-tile--book" data-work-card style="background-image: url('https://miro.medium.com/v2/resize:fit:640/format:webp/1*B80VNidZ0rKW77cPUjkpsw.jpeg'); background-size: cover; background-position: center;">
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">▱</span>
-      <span class="work-tile-label">Book</span>
+      <span class="book-cover-collage" aria-hidden="true">
+        <img class="book-cover book-cover--one" src="https://m.media-amazon.com/images/I/71XzCQHVvIL.jpg" alt="" loading="lazy">
+        <img class="book-cover book-cover--two" src="https://cdn.kobo.com/book-images/7ab504fb-57d9-4673-8bca-079dbba8b58e/1200/1200/False/the-field-guide-to-understanding-human-error-3.jpg" alt="" loading="lazy">
+        <img class="book-cover book-cover--three" src="https://images.thenile.io/r1000/9781292763255.jpg" alt="" loading="lazy">
+      </span>
       <span class="work-tile-heading">Readings</span>
       <span class="work-tile-summary">A record of what’s currently open, underlined, or simply on my mind.</span>
       <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
@@ -113,7 +119,6 @@ permalink: /work/
   <article class="work-tile work-tile--afyakongwe" data-work-card style="background-image: url('https://images.pexels.com/photos/30678595/pexels-photo-30678595.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; background-position: center;">
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">+</span>
-      <span class="work-tile-label">Health</span>
       <span class="work-tile-heading">Afya Kongwe</span>
       <span class="work-tile-summary">Compassionate home-based care for people living with chronic illness — bringing comfort, dignity, and quality health services closer to home in Tanzania.</span>
       <span class="work-tile-link">Visit <span aria-hidden="true">↗</span></span>
@@ -128,7 +133,6 @@ permalink: /work/
   <article class="work-tile work-tile-wide" data-work-card>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">◇</span>
-      <span class="work-tile-label">Learning</span>
       <span class="work-tile-heading">Health Commons</span>
       <span class="work-tile-summary">A simulation game about difficult choices when allocating limited health resources in rural communities.</span>
       <span class="work-tile-link">Play <span aria-hidden="true">↗</span></span>
