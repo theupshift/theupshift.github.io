@@ -1341,13 +1341,18 @@ article > header > h1 {
     transition: none;
   }
 }
-/* Nile AGI — ambient video card background. */
+/* Nile AGI — keep the video clipped to the exact card boundary. */
 .work-tile--video {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: inherit;
   background: transparent;
 }
 .work-tile--video .work-tile-video {
   position: absolute;
   inset: 0;
+  border-radius: inherit;
   z-index: -2;
   width: 100%;
   height: 100%;
