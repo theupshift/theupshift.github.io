@@ -92,10 +92,6 @@ id_attribute: med
 <h1 class="cr-title">MedED Resources</h1>
 <p class="cr-lead">A growing collection of medical lectures, readings, guidelines, practice questions and clinical cases, organised by topic.</p>
 <p class="cr-meta" id="cr-meta" aria-live="polite">Loading resource index…</p>
-<div class="cr-app-actions">
-  <button class="cr-install-button" id="cr-install" type="button">Install MedED</button>
-  <span class="cr-app-status" id="cr-app-status" role="status" aria-live="polite">The app shell and resource index can be cached for offline use.</span>
-</div>
 </header>
 
 <div class="cr-search-wrap"><div class="cr-search"><input id="cr-search" type="search" placeholder="Search topics or resource types…" aria-label="Search all available resources"></div></div>
@@ -117,6 +113,11 @@ id_attribute: med
 
 <p class="cr-results-label" id="cr-results-label" aria-live="polite"></p>
 <main id="cr-topics"><p class="cr-empty">Loading resources…</p></main>
+</div>
+
+<div class="cr-app-actions">
+  <button class="cr-install-button" id="cr-install" type="button">Install MedED</button>
+  <span class="cr-app-status" id="cr-app-status" role="status" aria-live="polite">The app shell and resource index can be cached for offline use.</span>
 </div>
 
 </div></div>
