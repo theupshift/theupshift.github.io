@@ -126,7 +126,7 @@ permalink: /work/
   </article>
 
   <article class="work-tile work-tile-wide work-tile--lofi" data-work-card>
-    <img class="lofi-card-bg" src="https://www.fabrizio.so/_next/image?url=%2Fimg%2Flofi.gif&w=1920&q=75" alt="" aria-hidden="true" loading="lazy">
+    <img class="lofi-card-bg" src="https://www.fabrizio.so/img/lofi.gif" alt="" aria-hidden="true" loading="lazy">
     <div class="lofi-card-top">
       <span class="lofi-listener-badge"><span class="lofi-pulse-dot"></span><span class="lofi-listener-count" data-lofi-visitors aria-live="polite">—</span> listeners</span>
     </div>
