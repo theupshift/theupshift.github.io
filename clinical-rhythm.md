@@ -121,7 +121,7 @@ var topics={
 };
 
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-function titleFromPath(path){var n=path.split('/').pop().replace(/\.[^.]+$/,'');return n.replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim().replace(/\b\w/g,function(c){return c.toUpperCase()})}
+function titleFromPath(path){var n=path.split('/').pop().replace(/\.[^.]+$/,'').replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim();var m=n.match(/^([a-z][a-z0-9']*?)(20\d{2})\s+(.+)$/i);if(!m)return n.replace(/\b\w/g,function(c){return c.toUpperCase()});var small={a:1,an:1,and:1,as:1,at:1,by:1,for:1,from:1,in:1,of:1,on:1,or:1,the:1,to:1,with:1};var title=m[3].split(' ').map(function(w,i){var l=w.toLowerCase();return i>0&&small[l]?l:l.charAt(0).toUpperCase()+l.slice(1)}).join(' ');return m[1].charAt(0).toUpperCase()+m[1].slice(1)+' et al. ('+m[2]+'): '+title}
 function typeFor(path){var p=path.toLowerCase();if(/interactivecases|interactive-cases|interactive_cases/.test(p))return'cases';if(/\.pptx?$/.test(p))return'slides';if(/harrison|textbook/.test(p))return'textbook';if(/guideline|guidelines|who\d|cdc\d/.test(p))return'guidelines';if(/\.pdf$|\.docx?$/.test(p))return'readings';return'other'}
 function pathUrl(path){return base+path.split('/').map(encodeURIComponent).join('/')}
 
