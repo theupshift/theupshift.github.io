@@ -17,7 +17,7 @@ permalink: /work/
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">⌁</span>
       <span class="work-tile-heading">Nile AGI</span>
-      <span class="work-tile-summary">A community-driven data ecosystem preserving local languages and building culturally aware AI grounded in African communities.</span>
+      <span class="work-tile-summary">A community-driven, offline-capable AI infrastructure for resource-constrained environments. Excited by Nile AGI’s work to preserve local languages and build culturally aware AI. I am exploring how these innovations can advance equitable healthcare in our communities.</span>
       <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
