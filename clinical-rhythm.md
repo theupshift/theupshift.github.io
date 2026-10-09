@@ -80,6 +80,7 @@ id_attribute: clinical-rhythm
 <button class="cr-filter" data-type="guidelines" type="button">Guidelines</button>
 <button class="cr-filter" data-type="readings" type="button">Readings</button>
 <button class="cr-filter" data-type="other" type="button">Other</button>
+<button class="cr-filter" data-type="cases" type="button">Cases</button>
 </div>
 
 <h2 class="cr-section-heading">Browse by specialty</h2>
@@ -94,6 +95,7 @@ id_attribute: clinical-rhythm
 (function(){
 var api='https://theupshift.github.io/clinical-rhythm-index.json';
 var base='https://clinicalrythm.github.io/';
+var casesUrl='https://theupshift.github.io/medical/interactivecases/';
 var activeType='all',query='',openTopic=null,selectedSpecialty='Infectious Diseases',allFiles=[];
 var specialties=[['Cardiology','Cardio'],['Infectious Diseases','ID'],['Nephrology','Nephro'],['Gastroenterology','Gastro'],['Respiratory Medicine','Resp'],['Neurology','Neuro'],['Endocrinology','Endo'],['Haematology','Haem']];
 
@@ -110,7 +112,7 @@ var topics={
 
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function titleFromPath(path){var n=path.split('/').pop().replace(/\.[^.]+$/,'');return n.replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim().replace(/\b\w/g,function(c){return c.toUpperCase()})}
-function typeFor(path){var p=path.toLowerCase();if(/\.pptx?$/.test(p))return'slides';if(/harrison|textbook/.test(p))return'textbook';if(/guideline|guidelines|who\d|cdc\d/.test(p))return'guidelines';if(/\.pdf$|\.docx?$/.test(p))return'readings';return'other'}
+function typeFor(path){var p=path.toLowerCase();if(/interactivecases|interactive-cases|interactive_cases/.test(p))return'cases';if(/\.pptx?$/.test(p))return'slides';if(/harrison|textbook/.test(p))return'textbook';if(/guideline|guidelines|who\d|cdc\d/.test(p))return'guidelines';if(/\.pdf$|\.docx?$/.test(p))return'readings';return'other'}
 function pathUrl(path){return base+path.split('/').map(encodeURIComponent).join('/')}
 
 function renderNav(){
@@ -160,7 +162,7 @@ main.querySelectorAll('.cr-topic-card').forEach(function(btn){btn.addEventListen
 
 fetch(api).then(function(r){return r.json()}).then(function(data){
 if(!data.tree)throw new Error('Unable to read resource tree');
-allFiles=data.tree.filter(function(x){return x.type==='blob'&&x.path.indexOf('/')!==-1&&!/(^|\/)\.DS_Store$/.test(x.path)&&!/(^|\/)(~\$)/.test(x.path)&&!/^(_data|_includes|_layouts|\.devcontainer|assets)(\/|$)/i.test(x.path)}).map(function(x){var type=typeFor(x.path);return{path:x.path,title:titleFromPath(x.path),type:type,typeLabel:type==='slides'?'Slides':type==='textbook'?'Textbook':type==='guidelines'?'Guidelines':type==='readings'?'Reading':'Other'}});renderNav();render();
+allFiles=data.tree.filter(function(x){return x.type==='blob'&&x.path.indexOf('/')!==-1&&!/(^|\/)\.DS_Store$/.test(x.path)&&!/(^|\/)(~\$)/.test(x.path)&&!/^(_data|_includes|_layouts|\.devcontainer|assets)(\/|$)/i.test(x.path)}).map(function(x){var type=typeFor(x.path);return{path:x.path,title:titleFromPath(x.path),type:type,typeLabel:type==='slides'?'Slides':type==='textbook'?'Textbook':type==='guidelines'?'Guidelines':type==='readings'?'Reading':type==='cases'?'Cases':'Other'}});renderNav();render();
 }).catch(function(){document.getElementById('cr-meta').textContent='Resource index temporarily unavailable.';document.getElementById('cr-topics').innerHTML='<p class="cr-empty">Clinical Rhythm could not be reached right now. <a href="https://clinicalrythm.github.io/" target="_blank" rel="noopener">Open Clinical Rhythm directly →</a></p>'});
 document.getElementById('cr-search').addEventListener('input',function(e){query=e.target.value.toLowerCase().trim();openTopic=null;render()});
 document.querySelectorAll('.cr-filter').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('.cr-filter').forEach(function(b){b.classList.remove('is-active')});btn.classList.add('is-active');activeType=btn.dataset.type;openTopic=null;render()})});
