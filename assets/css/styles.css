@@ -3636,3 +3636,41 @@ body.lofi-player-open {
   }
 }
 
+/* Align Nile AGI's title and supporting copy low like Afya Kongwe,
+   while keeping the icon and expand control at the top. */
+.work-tile--video .work-tile-trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  min-height: 255px;
+  background: rgba(var(--color-background), .18);
+  -webkit-backdrop-filter: blur(4px) saturate(102%);
+  backdrop-filter: blur(4px) saturate(102%);
+}
+.work-tile--video .work-tile-trigger .work-icon {
+  flex: 0 0 auto;
+  margin-bottom: auto;
+}
+.work-tile--video .work-tile-heading {
+  margin-top: 18px;
+}
+.work-tile--video .work-tile-summary {
+  margin-top: 0;
+}
+.work-tile--video:hover .work-tile-trigger,
+.work-tile--video.is-expanded .work-tile-trigger {
+  background: rgba(var(--color-background), .18);
+}
+@media (max-width: 600px) {
+  .work-tile--video .work-tile-trigger {
+    min-height: 225px;
+  }
+  .work-tile--video .work-tile-trigger .work-icon {
+    margin-bottom: auto;
+  }
+  .work-tile--video .work-tile-heading {
+    margin-top: 14px;
+  }
+}
+
