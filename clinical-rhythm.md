@@ -6,11 +6,22 @@ id_attribute: clinical-rhythm
 
 <style>
 #clinical-rhythm .cr-wrap{width:100%}
-#clinical-rhythm .cr-intro{margin:0 0 1.5rem;text-align:center}
+#clinical-rhythm .cr-intro{margin:0 0 1.25rem;text-align:left}
+#clinical-rhythm .cr-title{margin:0;font-size:clamp(1.8rem,4vw,2.25rem);line-height:1.12;letter-spacing:-.03em}
+#clinical-rhythm .cr-section-heading{margin:1.4rem 0 .25rem;font-size:1.05rem;line-height:1.3}
+#clinical-rhythm .cr-section-note{margin:0 0 .8rem;color:rgb(var(--color-muted));font-size:.84rem;line-height:1.5}
+#clinical-rhythm .cr-specialty-tab:disabled{opacity:.48;cursor:not-allowed}
+#clinical-rhythm .cr-specialty-tab:disabled:hover{border-color:var(--color-rule);color:rgb(var(--color-muted))}
+#clinical-rhythm .cr-search-wrap{position:relative;margin:0 0 .8rem}
+#clinical-rhythm .cr-search-wrap:before{content:'⌕';position:absolute;left:.8rem;top:50%;transform:translateY(-52%);font-size:1.25rem;color:rgb(var(--color-muted));pointer-events:none}
+#clinical-rhythm .cr-search{margin:0}
+#clinical-rhythm .cr-search input{padding-left:2.35rem}
+#clinical-rhythm .cr-results-label{margin:-.55rem 0 1rem;color:rgb(var(--color-muted));font-size:.78rem}
+#clinical-rhythm .cr-resource-type{padding:.15rem .35rem;border:1px solid var(--color-rule);border-radius:3px}
 #clinical-rhythm .cr-kicker{margin:0 0 .45rem;color:rgb(var(--color-accent));font-family:var(--font-small-caps);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
 #clinical-rhythm .cr-title{margin:0;font-size:1.75rem;line-height:1.15;letter-spacing:-.02em}
 #clinical-rhythm .cr-lead{max-width:560px;margin:.8rem auto 0;color:rgb(var(--color-muted));font-size:.94rem;line-height:1.6}
-#clinical-rhythm .cr-meta{margin:.7rem 0 0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.76rem}
+#clinical-rhythm .cr-meta{margin:.7rem 0 0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.76rem;line-height:1.5}
 #clinical-rhythm .cr-specialty-nav{display:flex;justify-content:center;gap:.4rem;overflow-x:auto;margin:0 0 1rem;padding:0 0 .2rem;scrollbar-width:none}
 #clinical-rhythm .cr-specialty-nav::-webkit-scrollbar{display:none}
 #clinical-rhythm .cr-specialty-tab{flex:0 0 auto;padding:.42rem .68rem;border:1px solid var(--color-rule);border-radius:999px;color:rgb(var(--color-text));background:transparent;font:inherit;font-family:var(--font-small-caps);font-size:.7rem;line-height:1;cursor:pointer;white-space:nowrap}
@@ -41,7 +52,8 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-resource-type{color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.68rem;white-space:nowrap}
 #clinical-rhythm .cr-empty{color:rgb(var(--color-muted));font-size:.9rem}
 @media(max-width:600px){
-#clinical-rhythm .cr-title{font-size:1.55rem}
+#clinical-rhythm .cr-intro{margin-bottom:1rem}
+#clinical-rhythm .cr-title{font-size:1.7rem}
 #clinical-rhythm .cr-lead{font-size:.9rem}
 #clinical-rhythm .cr-topic-card{min-height:62px;padding:.75rem}
 #clinical-rhythm .cr-topic-number{flex-basis:30px;width:30px;height:30px}
@@ -53,15 +65,18 @@ id_attribute: clinical-rhythm
 
 <div class="clinical-rhythm-page" id="clinical-rhythm"><div class="cr-wrap">
 <header class="cr-intro">
-<p class="cr-kicker">Clinical Rhythm</p>
-
-<p class="cr-lead">Lecture slides, textbook chapters, guidelines, journal articles and practice questions, organised by specialty and topic. The files remain hosted on Clinical Rhythm.</p>
-<p class="cr-meta" id="cr-meta">Loading resource index…</p>
+<p class="cr-kicker">Clinical Rhythm · Medical semester</p>
+<h1 class="cr-title">Med Sem Resources</h1>
+<p class="cr-lead" style="margin:.65rem 0 0;max-width:620px">Find lecture slides, readings, guidelines and practice questions by topic. Search the collection or browse a specialty; resources open from their original host.</p>
+<p class="cr-meta" id="cr-meta" aria-live="polite">Loading resource index…</p>
 </header>
 
+<h2 class="cr-section-heading">Browse by specialty</h2>
+<p class="cr-section-note">Choose an available specialty. More sections will appear as their resources are added.</p>
 <nav class="cr-specialty-nav" id="cr-specialty-nav" aria-label="Clinical specialties"></nav>
 
-<div class="cr-search"><input id="cr-search" type="search" placeholder="Search resources…" aria-label="Search Clinical Rhythm resources"></div>
+<h2 class="cr-section-heading">Find a resource</h2>
+<div class="cr-search-wrap"><div class="cr-search"><input id="cr-search" type="search" placeholder="Search topics, filenames or resource types…" aria-label="Search all available resources"></div></div>
 <div class="cr-filters" role="group" aria-label="Filter resources">
 <button class="cr-filter is-active" data-type="all" type="button">Everything</button>
 <button class="cr-filter" data-type="slides" type="button">Slides</button>
@@ -71,6 +86,7 @@ id_attribute: clinical-rhythm
 <button class="cr-filter" data-type="other" type="button">Other</button>
 </div>
 
+<p class="cr-results-label" id="cr-results-label" aria-live="polite"></p>
 <main id="cr-topics"><p class="cr-empty">Loading resources…</p></main>
 </div></div>
 
@@ -100,9 +116,10 @@ function pathUrl(path){return base+path.split('/').map(encodeURIComponent).join(
 
 function renderNav(){
 document.getElementById('cr-specialty-nav').innerHTML=specialties.map(function(s){
-return '<button class="cr-specialty-tab'+(s[0]===selectedSpecialty?' is-active':'')+'" type="button" data-specialty="'+esc(s[0])+'">'+esc(s[1])+'</button>'
+var available=s[0]==='Infectious Diseases';
+return '<button class="cr-specialty-tab'+(s[0]===selectedSpecialty?' is-active':'')+'" type="button" data-specialty="'+esc(s[0])+'"'+(available?'':' disabled aria-disabled="true" title="Resources coming soon"')+'>'+esc(s[1])+(available?'':' · soon')+'</button>'
 }).join('');
-document.querySelectorAll('.cr-specialty-tab').forEach(function(b){b.addEventListener('click',function(){selectedSpecialty=b.dataset.specialty;openTopic=null;query='';document.getElementById('cr-search').value='';activeType='all';document.querySelectorAll('.cr-filter').forEach(function(x){x.classList.toggle('is-active',x.dataset.type==='all')});renderNav();render()})});
+document.querySelectorAll('.cr-specialty-tab:not(:disabled)').forEach(function(b){b.addEventListener('click',function(){selectedSpecialty=b.dataset.specialty;openTopic=null;query='';document.getElementById('cr-search').value='';activeType='all';document.querySelectorAll('.cr-filter').forEach(function(x){x.classList.toggle('is-active',x.dataset.type==='all')});renderNav();render()})});
 }
 
 function render(){
@@ -113,12 +130,13 @@ meta.textContent='8 specialties · '+selectedSpecialty+' · resources remain hos
 return;
 }
 var visible=allFiles.filter(function(f){
-return(!query||f.title.toLowerCase().indexOf(query)!==-1||f.path.toLowerCase().indexOf(query)!==-1)&&(activeType==='all'||f.type===activeType)
+return(!query||f.title.toLowerCase().indexOf(query)!==-1||f.path.toLowerCase().indexOf(query)!==-1||f.typeLabel.toLowerCase().indexOf(query)!==-1)&&(activeType==='all'||f.type===activeType)
 });
 var groups={};
 visible.forEach(function(f){var folder=f.path.split('/')[0];if(!groups[folder])groups[folder]=[];groups[folder].push(f)});
 var order=Object.keys(groups).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})});
 var html='';
+document.getElementById('cr-results-label').textContent=visible.length+' resource'+(visible.length===1?'':'s')+' found'+(query?' for “'+query+'”':'')+'.';
 order.forEach(function(folder,i){
 var files=groups[folder],m=topics[folder]||{title:folder.replace(/^\d+\.\s*/,'')},isOpen=openTopic===folder;
 html+='<section class="cr-topic'+(isOpen?' is-open':'')+'" data-topic="'+esc(folder)+'"><button class="cr-topic-card" type="button" aria-expanded="'+isOpen+'"><span class="cr-topic-number">'+String(i+1).padStart(2,'0')+'</span><span class="cr-topic-name">'+esc(m.title)+'</span><span class="cr-topic-count">'+files.length+' resource'+(files.length===1?'':'s')+'</span><span class="cr-topic-chevron" aria-hidden="true">⌄</span></button>';
@@ -131,8 +149,8 @@ html+='</div></div>';
 }
 html+='</section>';
 });
-main.innerHTML=html||'<p class="cr-empty">No resources match your search.</p>';
-meta.textContent=order.length+' topics · '+allFiles.length+' resources · '+selectedSpecialty+' · files remain hosted on Clinical Rhythm';
+main.innerHTML=html||'<p class="cr-empty">No resources match these filters. Try a different search term or choose “Everything”.</p>';
+meta.textContent=allFiles.length+' resources currently available · '+order.length+' topics · '+selectedSpecialty;
 main.querySelectorAll('.cr-topic-card').forEach(function(btn){btn.addEventListener('click',function(){var section=btn.closest('.cr-topic'),folder=section.getAttribute('data-topic');openTopic=openTopic===folder?null:folder;render();if(openTopic)setTimeout(function(){var target=document.querySelector('[data-topic="'+CSS.escape(folder)+'"]');if(target)target.scrollIntoView({behavior:'smooth',block:'start'})},0)})});
 }
 
