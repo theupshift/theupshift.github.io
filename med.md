@@ -85,6 +85,13 @@ id_attribute: med
 #med .cr-install-button{min-height:34px;padding:.4rem .75rem;border:1px solid rgb(var(--color-accent));border-radius:8px;color:rgb(var(--color-background));background:rgb(var(--color-accent));font:inherit;font-size:.78rem;font-weight:600;cursor:pointer}
 #med .cr-install-button:hover{filter:brightness(.94)}
 #med .cr-app-status{max-width:100%;color:rgb(var(--color-muted));font-size:.74rem;line-height:1.45;text-align:center}
+
+#med .cr-install-toast{position:fixed;z-index:9999;left:50%;bottom:1.2rem;transform:translate(-50%,1rem);display:flex;align-items:center;gap:.75rem;width:min( calc(100% - 2rem), 420px);box-sizing:border-box;padding:.8rem 1rem;border:1px solid var(--color-rule);border-radius:16px;color:rgb(var(--color-text));background:rgb(var(--color-background));box-shadow:0 8px 28px rgba(0,0,0,.18);font-size:.84rem;line-height:1.45;opacity:0;visibility:hidden;transition:opacity .25s ease,transform .25s ease,visibility .25s ease}
+#med .cr-install-toast.is-visible{opacity:1;visibility:visible;transform:translate(-50%,0)}
+#med .cr-install-toast-text{flex:1;min-width:0}
+#med .cr-install-toast-close{flex:0 0 28px;width:28px;height:28px;padding:0;border:0;border-radius:50%;color:rgb(var(--color-muted));background:transparent;font:inherit;font-size:1.2rem;line-height:1;cursor:pointer}
+#med .cr-install-toast-close:hover{background:rgba(127,127,127,.12)}
+@media (display-mode:standalone){#med .cr-install-toast{display:none!important}}
 </style>
 
 <div class="meded-resources-page" id="med"><div class="cr-wrap">
@@ -100,7 +107,13 @@ id_attribute: med
 <button class="cr-filter" data-type="slides" type="button">Lectures</button>
 <button class="cr-filter" data-type="textbook" type="button">Textbook</button>
 <button class="cr-filter" data-type="guidelines" type="button">Guidelines</button>
-<button class="cr-filter" data-type="readings" type="button">Articles</button>
+<button class=
+<div class="cr-install-toast" id="cr-install-toast" role="status" aria-live="polite">
+  <span class="cr-install-toast-text">Save MedED to your device as an app for quick access.</span>
+  <button class="cr-install-toast-close" id="cr-install-toast-close" type="button" aria-label="Dismiss message">×</button>
+</div>
+
+"cr-filter" data-type="readings" type="button">Articles</button>
 <button class="cr-filter" data-type="cases" type="button">Cases</button>
 </div>
 
@@ -222,6 +235,22 @@ document.querySelectorAll('.cr-filter').forEach(function(btn){btn.addEventListen
 var installButton=document.getElementById('cr-install');
 var appStatus=document.getElementById('cr-app-status');
 var installPrompt=null;
+var installToast=document.getElementById('cr-install-toast');
+var toastClose=document.getElementById('cr-install-toast-close');
+function isRunningAsInstalledApp(){
+  return (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || window.navigator.standalone===true;
+}
+if(installToast && !isRunningAsInstalledApp()){
+  window.setTimeout(function(){
+    if(!isRunningAsInstalledApp()) installToast.classList.add('is-visible');
+  },500);
+  window.setTimeout(function(){
+    if(installToast) installToast.classList.remove('is-visible');
+  },8500);
+}
+if(toastClose && installToast){
+  toastClose.addEventListener('click',function(){installToast.classList.remove('is-visible')});
+}
 window.addEventListener('beforeinstallprompt',function(event){
   event.preventDefault();
   installPrompt=event;
