@@ -1,0 +1,23 @@
+{
+  "id": "/med/",
+  "name": "MedED Resources",
+  "short_name": "MedED",
+  "description": "Medical lectures, readings, guidelines, practice questions and interactive clinical cases.",
+  "lang": "en",
+  "start_url": "/med/?source=pwa",
+  "scope": "/med/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#b35352",
+  "categories": ["education", "medical"],
+  "icons": [
+    {
+      "src": "/med/icons/meded.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
