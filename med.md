@@ -82,7 +82,7 @@ id_attribute: med
 /* Prevent mobile Safari from zooming the page when the search field receives focus. */
 #med .cr-search input{font-size:16px}
 #med .cr-app-actions{display:flex;align-items:center;justify-content:center;gap:.65rem;flex-wrap:wrap;margin:.8rem 0 1.15rem}
-#med .cr-install-button{min-height:38px;padding:.55rem .95rem;border:1px solid rgb(var(--color-accent));border-radius:9px;color:rgb(var(--color-background));background:rgb(var(--color-accent));font:inherit;font-size:.82rem;font-weight:600;cursor:pointer}
+#med .cr-install-button{min-height:34px;padding:.4rem .75rem;border:1px solid rgb(var(--color-accent));border-radius:8px;color:rgb(var(--color-background));background:rgb(var(--color-accent));font:inherit;font-size:.78rem;font-weight:600;cursor:pointer}
 #med .cr-install-button:hover{filter:brightness(.94)}
 #med .cr-app-status{max-width:100%;color:rgb(var(--color-muted));font-size:.74rem;line-height:1.45;text-align:center}
 </style>
@@ -117,7 +117,7 @@ id_attribute: med
 
 <div class="cr-app-actions">
   <button class="cr-install-button" id="cr-install" type="button">Install MedED</button>
-  <span class="cr-app-status" id="cr-app-status" role="status" aria-live="polite">The app shell and resource index can be cached for offline use.</span>
+  <span class="cr-app-status" id="cr-app-status" role="status" aria-live="polite">MedED saves key files so some parts work offline.</span>
 </div>
 
 </div></div>
@@ -247,7 +247,7 @@ installButton.addEventListener('click',async function(){
 });
 function updateConnectionStatus(){
   if(!navigator.onLine){
-    appStatus.textContent='You are offline. The app shell is cached; the resource index is available if it was previously loaded and cached.';
+    appStatus.textContent='You’re offline. Some parts of MedED may still work.';
   }else{
     appStatus.textContent='The app shell and resource index can be cached for offline use.';
   }
