@@ -54,7 +54,7 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-topic-blurb{margin:0 0 .9rem;color:rgb(var(--color-muted));font-size:.82rem;line-height:1.5}
 #clinical-rhythm .cr-resource-list{border-top:1px solid var(--color-rule)}
 #clinical-rhythm .cr-resource{display:grid;grid-template-columns:minmax(0,1fr);gap:.25rem;align-items:start;padding:.65rem 0;border-bottom:1px solid var(--color-rule);border-radius:0;background:transparent;text-shadow:none;text-decoration:none}
-#clinical-rhythm .cr-resource-title{display:block;min-width:0;font-size:.88rem;font-weight:400;line-height:1.45;overflow-wrap:anywhere;color:rgb(var(--color-text))}
+#clinical-rhythm .cr-resource-title{display:block;min-width:0;font-size:.88rem;font-weight:400;line-height:1.45;overflow-wrap:anywhere;color:rgb(var(--color-text));filter:brightness(.82)}
 #clinical-rhythm .cr-resource-meta{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap}
 #clinical-rhythm .cr-resource-type{justify-self:start;display:inline-flex;align-items:center;padding:0;border:0;border-radius:0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.64rem;font-weight:400;line-height:1.25;white-space:normal;letter-spacing:.025em}
 #clinical-rhythm .cr-resource-format{color:rgb(var(--color-muted));font-size:.68rem;line-height:1.3}
@@ -122,7 +122,7 @@ var topics={
 };
 
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-function titleFromPath(path){var n=path.split('/').pop().replace(/\.[^.]+$/,'').replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim();var m=n.match(/^([a-z][a-z0-9']*?)(20\d{2})\s+(.+)$/i);if(!m)return n.replace(/\b\w/g,function(c){return c.toUpperCase()});var small={a:1,an:1,and:1,as:1,at:1,by:1,for:1,from:1,in:1,of:1,on:1,or:1,the:1,to:1,with:1};var title=m[3].split(' ').map(function(w,i){var l=w.toLowerCase();return i>0&&small[l]?l:l.charAt(0).toUpperCase()+l.slice(1)}).join(' ');return m[1].charAt(0).toUpperCase()+m[1].slice(1)+' et al. ('+m[2]+'): '+title}
+function titleFromPath(path){return path.split('/').pop().replace(/\.[^.]+$/,'').replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim()}
 function typeFor(path){var p=path.toLowerCase();if(/interactivecases|interactive-cases|interactive_cases/.test(p))return'cases';if(/\.pptx?$/.test(p))return'slides';if(/harrison|textbook/.test(p))return'textbook';if(/guideline|guidelines|who\d|cdc\d/.test(p))return'guidelines';if(/\.pdf$|\.docx?$/.test(p))return'readings';return'other'}
 function pathUrl(path){return base+path.split('/').map(encodeURIComponent).join('/')}
 
