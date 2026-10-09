@@ -18,7 +18,7 @@ permalink: /work/
       <source src="https://delta.nileagi.com/delta-demo.mp4" type="video/mp4">
     </video>
     <a class="work-tile-trigger" href="https://nileagi.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Nile AGI website (opens in a new tab)">
-      <span class="work-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7c3-4 6 4 9 0s6 4 9 0"/><path d="M3 12c3-4 6 4 9 0s6 4 9 0"/><path d="M3 17c3-4 6 4 9 0s6 4 9 0"/></svg></span>
+      <span class="work-icon" aria-hidden="true">⌁</span>
       <span class="work-tile-heading">Nile AGI</span>
       <span class="work-tile-summary">A community-driven, offline-capable AI infrastructure for resource-constrained environments. Excited by Nile AGI’s work to preserve local languages and build culturally aware AI.<br><br>I am exploring how these innovations can advance equitable healthcare in our communities.</span>
       <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
@@ -27,7 +27,7 @@ permalink: /work/
 
   <article class="work-tile work-tile--publications" data-work-card>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
-      <span class="work-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3.5h8l4 4V20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1z"/><path d="M14 3.5V8h4M8 12h8M8 16h8"/></svg></span>
+      <span class="work-icon" aria-hidden="true">✦</span>
       <span class="work-tile-heading">Publications</span>
       <span class="publication-feed-preview" aria-hidden="true">
         <span class="publication-feed-item"><span class="publication-feed-title">AI-assisted imaging for climate-exacerbated respiratory diseases</span><span class="publication-feed-meta">European Congress of Radiology · 2026</span></span>
@@ -147,7 +147,7 @@ permalink: /work/
   {% if health_commons_visibility == "shown" %}
   <article class="work-tile work-tile-wide" data-work-card>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
-      <span class="work-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 21 12 12 21 3 12 12 3Z"/><path d="M12 8v8M8 12h8"/></svg></span>
+      <span class="work-icon" aria-hidden="true">◇</span>
       <span class="work-tile-heading">Health Commons</span>
       <span class="work-tile-summary">A simulation game about difficult choices when allocating limited health resources in rural communities.</span>
       <span class="work-tile-link">Play <span aria-hidden="true">↗</span></span>
