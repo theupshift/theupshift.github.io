@@ -24,9 +24,10 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-kicker{margin:0 0 .45rem;color:rgb(var(--color-accent));font-size:1rem;letter-spacing:.06em;text-align:center;text-transform:none}
 #clinical-rhythm .cr-lead{max-width:620px;margin:.65rem auto 0;color:rgb(var(--color-muted));font-size:.94rem;line-height:1.6;text-align:center;hyphens:none;overflow-wrap:normal;word-break:normal}
 #clinical-rhythm .cr-meta{margin:.7rem 0 0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.76rem;line-height:1.5;text-align:center}
-#clinical-rhythm .cr-specialty-nav{position:relative;margin:0 0 1.25rem;max-width:520px}
-#clinical-rhythm .cr-specialty-select{display:block;width:100%;min-height:46px;padding:.65rem 2.5rem .65rem .8rem;border:1px solid var(--color-rule);border-radius:4px;color:rgb(var(--color-text));background:rgb(var(--color-background));font:inherit;font-size:.9rem;cursor:pointer;box-sizing:border-box}
-#clinical-rhythm .cr-specialty-select:focus{outline:2px solid rgb(var(--color-accent));outline-offset:2px}
+#clinical-rhythm .cr-specialty-nav{display:flex;align-items:center;justify-content:space-between;gap:.8rem;width:100%;margin:0 0 1.1rem;padding:.65rem .8rem;border:1px solid var(--color-rule);border-radius:6px;box-sizing:border-box;background:rgb(var(--color-background))}
+#clinical-rhythm .cr-specialty-current{flex:1;min-width:0;text-align:center;font-size:1rem;font-weight:600;line-height:1.3}
+#clinical-rhythm .cr-specialty-arrow{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;padding:0;border:1px solid var(--color-rule);border-radius:50%;color:rgb(var(--color-text));background:transparent;font:inherit;font-size:1.35rem;line-height:1;cursor:pointer;transition:border-color .18s ease,color .18s ease,background .18s ease}
+#clinical-rhythm .cr-specialty-arrow:hover{border-color:rgb(var(--color-accent));color:rgb(var(--color-accent))}
 #clinical-rhythm .cr-search{margin:0 0 .8rem}
 #clinical-rhythm .cr-search input{display:block;width:100%;height:46px;padding:.65rem 2.35rem;border:1px solid var(--color-rule);border-radius:3px;color:rgb(var(--color-text));background:rgb(var(--color-background));font:inherit;font-size:.9rem;box-sizing:border-box}
 #clinical-rhythm .cr-search input::placeholder{color:rgb(var(--color-muted))}
@@ -81,9 +82,11 @@ id_attribute: clinical-rhythm
 <button class="cr-filter" data-type="cases" type="button">Cases</button>
 </div>
 
-<h2 class="cr-section-heading">Browse by specialty</h2>
-<p class="cr-section-note">Choose an available specialty. More sections will appear as their resources are added.</p>
-<div class="cr-specialty-nav"><select class="cr-specialty-select" id="cr-specialty-select" aria-label="Choose a specialty"><option value="Infectious Diseases">Infectious Diseases</option><option value="Cardiology" disabled>Cardiology · coming soon</option><option value="Nephrology" disabled>Nephrology · coming soon</option><option value="Gastroenterology" disabled>Gastroenterology · coming soon</option><option value="Respiratory Medicine" disabled>Respiratory Medicine · coming soon</option><option value="Neurology" disabled>Neurology · coming soon</option><option value="Endocrinology" disabled>Endocrinology · coming soon</option><option value="Haematology" disabled>Haematology · coming soon</option></select></div>
+<div class="cr-specialty-nav" role="group" aria-label="Browse specialties">
+<button class="cr-specialty-arrow" id="cr-specialty-prev" type="button" aria-label="Previous specialty">‹</button>
+<div class="cr-specialty-current" id="cr-specialty-current" aria-live="polite">Infectious Diseases</div>
+<button class="cr-specialty-arrow" id="cr-specialty-next" type="button" aria-label="Next specialty">›</button>
+</div>
 
 <p class="cr-results-label" id="cr-results-label" aria-live="polite"></p>
 <main id="cr-topics"><p class="cr-empty">Loading resources…</p></main>
@@ -96,7 +99,7 @@ var base='https://clinicalrythm.github.io/';
 var casesUrl='https://theupshift.github.io/medical/interactivecases/';
 var caseFiles=[{title:'Chronic Diarrhoea — Is It IBD',path:'medical/interactivecases/chronicdiarrhea/',url:'https://theupshift.github.io/medical/interactivecases/chronicdiarrhea/',typeLabel:'Cases'},{title:'Cirrhosis — Longitudinal Clinical Case',path:'medical/interactivecases/cirrhosis/',url:'https://theupshift.github.io/medical/interactivecases/cirrhosis/',typeLabel:'Cases'}];
 var activeType='all',query='',openTopic=null,selectedSpecialty='Infectious Diseases',allFiles=[];
-var specialties=[['Cardiology','Cardio'],['Infectious Diseases','ID'],['Nephrology','Nephro'],['Gastroenterology','Gastro'],['Respiratory Medicine','Resp'],['Neurology','Neuro'],['Endocrinology','Endo'],['Haematology','Haem']];
+var specialties=['Infectious Diseases','Cardiology','Nephrology','Gastroenterology','Respiratory Medicine','Neurology','Endocrinology','Haematology'];
 
 var topics={
 '00. testbank':{title:'Test bank',blurb:'Practice questions and self-assessment material covering the whole semester.'},
@@ -115,16 +118,22 @@ function typeFor(path){var p=path.toLowerCase();if(/interactivecases|interactive
 function pathUrl(path){return base+path.split('/').map(encodeURIComponent).join('/')}
 
 function renderNav(){
-var select=document.getElementById('cr-specialty-select');
-if(select)select.value=selectedSpecialty;
-select.addEventListener('change',function(){
-selectedSpecialty=select.value;
+var current=document.getElementById('cr-specialty-current');
+var prev=document.getElementById('cr-specialty-prev');
+var next=document.getElementById('cr-specialty-next');
+function updateSpecialty(step){
+var index=specialties.indexOf(selectedSpecialty);
+selectedSpecialty=specialties[(index+step+specialties.length)%specialties.length];
+current.textContent=selectedSpecialty;
 openTopic=null;query='';
 document.getElementById('cr-search').value='';
 activeType='all';
 document.querySelectorAll('.cr-filter').forEach(function(x){x.classList.toggle('is-active',x.dataset.type==='all')});
 render();
-});
+}
+current.textContent=selectedSpecialty;
+prev.addEventListener('click',function(){updateSpecialty(-1)});
+next.addEventListener('click',function(){updateSpecialty(1)});
 }
 
 function render(){
@@ -161,7 +170,7 @@ html+='</div></div>';
 }
 html+='</section>';
 });
-main.innerHTML=html||'<p class="cr-empty">No resources match these filters. Try a different search term or choose “Everything”.</p>';
+main.innerHTML=html||'<p class="cr-empty">No resources match these filters. Try a different search term or choose “All”.</p>';
 meta.textContent=allFiles.length+' resources currently available · '+order.length+' topics · '+selectedSpecialty;
 main.querySelectorAll('.cr-topic-card').forEach(function(btn){btn.addEventListener('click',function(){var section=btn.closest('.cr-topic'),folder=section.getAttribute('data-topic');openTopic=openTopic===folder?null:folder;render();if(openTopic)setTimeout(function(){var target=document.querySelector('[data-topic="'+CSS.escape(folder)+'"]');if(target)target.scrollIntoView({behavior:'smooth',block:'start'})},0)})});
 }
