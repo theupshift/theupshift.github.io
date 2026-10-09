@@ -39,7 +39,7 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-browse-panel{width:100%;box-sizing:border-box;margin:0 0 1.25rem;padding:1rem;border:1px solid var(--color-rule);border-radius:12px;background:rgb(var(--color-background));box-shadow:0 3px 12px rgba(0,0,0,.035)}
 #clinical-rhythm .cr-topics{display:grid;gap:1.05rem}
 #clinical-rhythm .cr-topic{margin:0;scroll-margin-top:1.5rem;border:1px solid var(--color-rule);border-radius:10px;overflow:hidden;background:rgb(var(--color-background));box-shadow:0 2px 8px rgba(0,0,0,.035);transition:border-color .18s ease,box-shadow .18s ease}
-#clinical-rhythm .cr-topic-card{width:100%;min-height:68px;padding:.85rem 1rem;border:0;border-radius:0;color:rgb(var(--color-text));background:transparent;text-align:left;font:inherit;cursor:pointer;display:flex;align-items:center;gap:.85rem;box-sizing:border-box;box-shadow:none;transition:background .18s ease}
+#clinical-rhythm .cr-topic-card{width:100%;min-height:68px;padding:1rem 1.25rem;border:0;border-radius:0;color:rgb(var(--color-text));background:transparent;text-align:left;font:inherit;cursor:pointer;display:flex;align-items:center;gap:.85rem;box-sizing:border-box;box-shadow:none;transition:background .18s ease}
 #clinical-rhythm .cr-topic-card:hover{background:rgba(179,83,82,.045)}
 #clinical-rhythm .cr-topic:hover{border-color:rgb(var(--color-accent));box-shadow:0 4px 14px rgba(0,0,0,.055)}
 #clinical-rhythm .cr-topic.is-open{border-color:rgb(var(--color-accent));box-shadow:0 4px 14px rgba(0,0,0,.055)}
@@ -62,7 +62,7 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-intro{margin-bottom:1rem}
 #clinical-rhythm .cr-title{font-size:1.7rem}
 #clinical-rhythm .cr-lead{font-size:.9rem}
-#clinical-rhythm .cr-topic-card{min-height:62px;padding:.75rem}
+#clinical-rhythm .cr-topic-card{min-height:62px;padding:.9rem 1rem}
 #clinical-rhythm .cr-topic-number{flex-basis:30px;width:30px;height:30px}
 #clinical-rhythm .cr-topic-body{padding:.8rem .75rem}
 #clinical-rhythm .cr-browse-panel{padding:.65rem;border-radius:10px}
