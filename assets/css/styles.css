@@ -2980,3 +2980,31 @@ nav.constrained.site-nav.is-scrolled::before {
     left: calc(50% - 38px);
   }
 }
+
+
+/* Align each card's leading icon with the top-right expand control. */
+.work-tile-trigger {
+  position: relative;
+}
+.work-tile-trigger .work-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.work-expand-mark {
+  top: 20px;
+}
+@media (max-width: 600px) {
+  .work-tile-trigger .work-icon {
+    top: 18px;
+    left: 18px;
+  }
+  .work-expand-mark {
+    top: 18px;
+  }
+}
