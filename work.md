@@ -138,7 +138,7 @@ permalink: /work/
       <span class="lofi-listener-badge"><span class="lofi-pulse-dot"></span><span class="lofi-listener-count">154</span> listeners</span>
     </div>
     <div class="lofi-card-bottom">
-      I run <a href="https://lofi.cafe/" class="lofi-tag" target="_blank" rel="noopener noreferrer">lofi.cafe</a> with <a href="https://twitter.com/maridivi89" class="lofi-tag" target="_blank" rel="noopener noreferrer">Marianna</a>.
+      I am likely listening to <a href="https://lofi.cafe/" class="lofi-tag" target="_blank" rel="noopener noreferrer">lofi.cafe</a> by <a href="https://twitter.com/maridivi89" class="lofi-tag" target="_blank" rel="noopener noreferrer">Marianna</a>.
     </div>
   </article>
 
