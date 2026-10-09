@@ -194,11 +194,11 @@ permalink: /work/
 
   cards.forEach(function (card) {
     var trigger = card.querySelector('.work-tile-trigger');
+    var details = card.querySelector('.work-tile-details');
 
-    // Some cards (such as the Lofi banner) are informational, not expandable.
-    // Skip click handling for those cards so one missing trigger cannot stop
-    // the rest of the page's interactions and reveal animations.
-    if (trigger) {
+    // Only cards with a details panel should toggle open. The Nile AGI card
+    // is a normal outbound link, so clicking it must only follow its URL.
+    if (trigger && details) {
       trigger.addEventListener('click', function () {
         if (card.classList.contains('is-expanded')) {
           closeCard(card);
