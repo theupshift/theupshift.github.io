@@ -122,7 +122,7 @@ permalink: /work/
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v5a4 4 0 0 0 8 0V3M4 3h4M12 3h4"/><path d="M10 12v2a5 5 0 0 0 10 0v-1"/><circle cx="20" cy="11" r="2"/></svg></span>
       <span class="work-tile-heading">Afya Kongwe</span>
-      <span class="work-tile-summary">Compassionate home-based care for people living with chronic illness — bringing comfort, dignity, and quality health services closer to home in Tanzania.</span>
+      <span class="work-tile-summary">Compassionate home-based care for chronic illness, bringing dignified, quality services closer to home in Tanzania.</span>
       <span class="work-tile-link">Visit <span aria-hidden="true">↗</span></span>
       <span class="work-expand-mark" aria-hidden="true">+</span>
     </button>
