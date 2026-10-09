@@ -19,7 +19,7 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-results-label{margin:-.55rem 0 1rem;color:rgb(var(--color-muted));font-size:.78rem}
 #clinical-rhythm .cr-resource-type{padding:.15rem .35rem;border:1px solid var(--color-rule);border-radius:3px}
 #clinical-rhythm .cr-kicker{margin:0 0 .45rem;color:rgb(var(--color-accent));font-size:1rem;letter-spacing:.06em;text-align:center;text-transform:none}
-#clinical-rhythm .cr-lead{max-width:620px;margin:.65rem auto 0;color:rgb(var(--color-muted));font-size:.94rem;line-height:1.6;text-align:center}
+#clinical-rhythm .cr-lead{max-width:620px;margin:.65rem auto 0;color:rgb(var(--color-muted));font-size:.94rem;line-height:1.6;text-align:center;hyphens:none;overflow-wrap:normal;word-break:normal}
 #clinical-rhythm .cr-meta{margin:.7rem 0 0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.76rem;line-height:1.5;text-align:center}
 #clinical-rhythm .cr-specialty-nav{position:relative;margin:0 0 1.25rem;max-width:520px}
 #clinical-rhythm .cr-specialty-select{display:block;width:100%;min-height:46px;padding:.65rem 2.5rem .65rem .8rem;border:1px solid var(--color-rule);border-radius:4px;color:rgb(var(--color-text));background:rgb(var(--color-background));font:inherit;font-size:.9rem;cursor:pointer;box-sizing:border-box}
