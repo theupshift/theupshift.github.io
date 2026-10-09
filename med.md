@@ -62,6 +62,11 @@ id_attribute: med
 #med .cr-resource-type{justify-self:start;display:inline-flex;align-items:center;padding:0;border:0;border-radius:0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.64rem;font-weight:400;line-height:1.25;white-space:normal;letter-spacing:.025em}
 #med .cr-resource-format{color:rgb(var(--color-muted));font-size:.68rem;line-height:1.3}
 #med .cr-empty{color:rgb(var(--color-muted));font-size:.9rem}
+#med .cr-coming-soon{max-width:520px;margin:1.5rem auto 1rem;padding:2rem 1.25rem;text-align:center;border:1px solid var(--color-rule);border-radius:12px;background:linear-gradient(145deg,rgba(179,83,82,.055),transparent 75%)}
+#med .cr-coming-icon{display:grid;place-items:center;width:42px;height:42px;margin:0 auto .9rem;border:1px solid rgba(179,83,82,.22);border-radius:50%;color:rgb(var(--color-accent));font-size:1.25rem}
+#med .cr-coming-soon h2{margin:0 0 .65rem;font-size:1.1rem;font-weight:500;line-height:1.35}
+#med .cr-coming-soon p{max-width:400px;margin:0 auto;color:rgb(var(--color-muted));font-size:.88rem;line-height:1.65}
+#med .cr-coming-note{display:inline-block;margin-top:1rem;color:rgb(var(--color-accent));font-family:var(--font-small-caps);font-size:.72rem;letter-spacing:.035em}
 @media(max-width:600px){
 #med .cr-intro{margin-bottom:1rem}
 #med .cr-title{font-size:1.7rem}
@@ -166,8 +171,8 @@ meta.textContent=caseFiles.length+' interactive cases · sourced from Medical / 
 return;
 }
 if(selectedSpecialty!=='Infectious Diseases'){
-main.innerHTML='<p class="cr-empty">Demo content for <strong>'+esc(selectedSpecialty)+'</strong> — the specialty is ready to be populated when its Clinical Rhythm resources are available.</p>';
-meta.textContent='8 specialties · '+selectedSpecialty+' · resources remain hosted on Clinical Rhythm';
+main.innerHTML='<section class="cr-coming-soon" aria-labelledby="cr-coming-title"><div class="cr-coming-icon" aria-hidden="true">✳</div><h2 id="cr-coming-title">Coming soon to '+esc(selectedSpecialty)+'</h2><p>We’re building this collection of trusted lectures, essential readings, clinical guidelines and learning resources. Check back soon as this specialty takes shape.</p><span class="cr-coming-note">More resources are on the way.</span></section>';
+meta.textContent=selectedSpecialty+' · curated resources coming soon';
 return;
 }
 var visible=allFiles.filter(function(f){
