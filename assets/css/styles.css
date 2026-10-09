@@ -3231,16 +3231,31 @@ nav.constrained.site-nav.is-scrolled::before {
 }
 .work-tile--afyakongwe > .work-tile-trigger > .work-icon,
 .work-tile--afyakongwe > .work-tile-trigger > .work-expand-mark {
+  position: absolute;
   z-index: 2;
+  top: 20px;
+}
+.work-tile--afyakongwe > .work-tile-trigger > .work-icon {
+  left: 20px;
+}
+.work-tile--afyakongwe > .work-tile-trigger > .work-expand-mark {
+  right: 20px;
 }
 .work-tile--afyakongwe .work-tile-heading {
-  margin-top: 182px;
+  margin-top: 0;
 }
 .work-tile--afyakongwe .work-tile-summary {
   max-width: 360px;
 }
 @media (max-width: 600px) {
-  .work-tile--afyakongwe .work-tile-heading {
-    margin-top: 182px;
+  .work-tile--afyakongwe > .work-tile-trigger > .work-icon,
+  .work-tile--afyakongwe > .work-tile-trigger > .work-expand-mark {
+    top: 18px;
+  }
+  .work-tile--afyakongwe > .work-tile-trigger > .work-icon {
+    left: 18px;
+  }
+  .work-tile--afyakongwe > .work-tile-trigger > .work-expand-mark {
+    right: 18px;
   }
 }
