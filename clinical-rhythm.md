@@ -150,6 +150,13 @@ next.addEventListener('click',function(){updateSpecialty(1)});
 
 function render(){
 var main=document.getElementById('cr-topics'),meta=document.getElementById('cr-meta');
+var specialtyCurrent=document.getElementById('cr-specialty-current');
+var specialtyPrev=document.getElementById('cr-specialty-prev');
+var specialtyNext=document.getElementById('cr-specialty-next');
+var showingCases=activeType==='cases';
+specialtyCurrent.textContent=showingCases?'Common Cases':selectedSpecialty;
+specialtyPrev.style.visibility=showingCases?'hidden':'visible';
+specialtyNext.style.visibility=showingCases?'hidden':'visible';
 if(activeType==='cases'){
 var matchingCases=caseFiles.filter(function(f){return !query||f.title.toLowerCase().indexOf(query)!==-1||f.path.toLowerCase().indexOf(query)!==-1||f.typeLabel.toLowerCase().indexOf(query)!==-1});
 document.getElementById('cr-results-label').textContent=matchingCases.length+' interactive case'+(matchingCases.length===1?'':'s')+' found'+(query?' for “'+query+'”':'')+'.';
