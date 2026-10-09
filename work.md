@@ -270,34 +270,21 @@ permalink: /work/
   var frame = document.querySelector("[data-lofi-frame]");
   if (!count || !openButton || !modal || !closeButton || !frame) return;
 
-  // This endpoint reports visitors to lofi.cafe, not verified active listeners.
-  var countEndpoint = "https://mailbrew-functions.vercel.app/lofi-cafe-visitors";
-
+  // Decorative simulated count: random values, not live visitor/listener data.
   function updateVisitorCount() {
-    fetch(countEndpoint, { cache: "no-store" })
-      .then(function (response) {
-        if (!response.ok) throw new Error("Visitor count unavailable");
-        return response.text();
-      })
-      .then(function (body) {
-        var data;
-        try { data = JSON.parse(body); } catch (error) { data = body; }
-        var value = typeof data === "number" || typeof data === "string"
-          ? data
-          : data && (data.visitors ?? data.count ?? data.visitorCount ?? data.currentVisitors);
-        if (value !== undefined && value !== null && String(value).trim() !== "" && Number.isFinite(Number(value))) {
-          count.textContent = Number(value).toLocaleString();
-          count.title = "Current visitors to lofi.cafe; not a confirmed count of active listeners";
-        } else {
-          count.textContent = "—";
-          count.title = "Live visitor count is currently unavailable";
-        }
-      })
-      .catch(function () {
-        count.textContent = "—";
-        count.title = "Live visitor count is currently unavailable";
-      });
+    var value = Math.floor(Math.random() * (189 - 77 + 1)) + 77;
+    count.textContent = value.toLocaleString();
+    count.title = "Decorative simulated count; not live visitor or listener data";
   }
+
+  updateVisitorCount();
+  (function scheduleNextCount() {
+    var nextDelay = 15000 + Math.floor(Math.random() * 20000);
+    window.setTimeout(function () {
+      updateVisitorCount();
+      scheduleNextCount();
+    }, nextDelay);
+  })();
 
   // Open the embedded player in a modal overlay, without navigating away.
   function openPlayer() {
