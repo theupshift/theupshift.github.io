@@ -27,7 +27,7 @@ permalink: /work/
     </div>
   </article>
 
-  <article class="work-tile" data-work-card>
+  <article class="work-tile work-tile--publications" data-work-card>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">✦</span>
       <span class="work-tile-heading">Publications</span>
@@ -118,7 +118,7 @@ permalink: /work/
     </div>
   </article>
 
-  <article class="work-tile work-tile--afyakongwe" data-work-card style="background-image: url('https://images.pexels.com/photos/30678595/pexels-photo-30678595.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; background-position: center;">
+  <article class="work-tile work-tile--afyakongwe" data-work-card>
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v5a4 4 0 0 0 8 0V3M4 3h4M12 3h4"/><path d="M10 12v2a5 5 0 0 0 10 0v-1"/><circle cx="20" cy="11" r="2"/></svg></span>
       <span class="work-tile-heading">Afya Kongwe</span>
