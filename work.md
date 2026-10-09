@@ -14,17 +14,12 @@ permalink: /work/
     <video class="work-tile-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
       <source src="https://delta.nileagi.com/delta-demo.mp4" type="video/mp4">
     </video>
-    <button class="work-tile-trigger" type="button" aria-expanded="false">
+    <a class="work-tile-trigger" href="https://nileagi.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Nile AGI website (opens in a new tab)">
       <span class="work-icon" aria-hidden="true">⌁</span>
       <span class="work-tile-heading">Nile AGI</span>
       <span class="work-tile-summary">A community-driven, offline-capable AI infrastructure for resource-constrained environments. Excited by Nile AGI’s work to preserve local languages and build culturally aware AI.<br><br>I am exploring how these innovations can advance equitable healthcare in our communities.</span>
       <span class="work-tile-link">Explore <span aria-hidden="true">↗</span></span>
-      <span class="work-expand-mark" aria-hidden="true">+</span>
-    </button>
-    <div class="work-tile-details" hidden>
-      <p>Nile AGI is building a community-driven data collection ecosystem to preserve local languages and help shape AI that understands the cultures, contexts, and ways people communicate.</p>
-      <p>By bringing communities closer to the data behind these systems, the project aims to make AI more locally grounded, inclusive, and useful — creating tools that reflect the people and knowledge they are meant to serve.</p>
-    </div>
+    </a>
   </article>
 
   <article class="work-tile work-tile--publications" data-work-card>
