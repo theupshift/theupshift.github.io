@@ -135,7 +135,7 @@ permalink: /work/
   <article class="work-tile work-tile-wide work-tile--lofi" data-work-card>
     <img class="lofi-card-bg" src="https://www.fabrizio.so/_next/image?url=%2Fimg%2Flofi.gif&w=1920&q=75" alt="" aria-hidden="true" loading="lazy">
     <div class="lofi-card-top">
-      <span class="lofi-listener-badge"><span class="lofi-pulse-dot"></span><span class="lofi-listener-count" data-lofi-visitors aria-live="polite">—</span> in the cafe</span>
+      <span class="lofi-listener-badge"><span class="lofi-pulse-dot"></span><span class="lofi-listener-count" data-lofi-visitors aria-live="polite">—</span> listeners</span>
     </div>
     <div class="lofi-card-bottom">
       <span class="lofi-card-caption">I’m likely listening to <a href="https://lofi.cafe/" class="lofi-tag" target="_blank" rel="noopener noreferrer">lofi.cafe</a> by <a href="https://twitter.com/maridivi89" class="lofi-tag" target="_blank" rel="noopener noreferrer">Marianna</a>.</span>
