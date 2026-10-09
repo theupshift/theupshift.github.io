@@ -62,9 +62,6 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-resource-type{justify-self:start;display:inline-flex;align-items:center;padding:0;border:0;border-radius:0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.64rem;font-weight:400;line-height:1.25;white-space:normal;letter-spacing:.025em}
 #clinical-rhythm .cr-resource-format{color:rgb(var(--color-muted));font-size:.68rem;line-height:1.3}
 #clinical-rhythm .cr-empty{color:rgb(var(--color-muted));font-size:.9rem}
-#clinical-rhythm .cr-footer{display:flex;align-items:center;justify-content:center;gap:.45rem;margin:1.5rem 0 .25rem;padding:1rem 0 .35rem;border-top:1px solid var(--color-rule);color:rgb(var(--color-muted));font-size:.78rem;letter-spacing:.035em}
-#clinical-rhythm .cr-footer svg{width:15px;height:15px;flex:0 0 15px;stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
-#clinical-rhythm .cr-footer-label{font-weight:500;color:rgb(var(--color-text))}
 @media(max-width:600px){
 #clinical-rhythm .cr-intro{margin-bottom:1rem}
 #clinical-rhythm .cr-title{font-size:1.7rem}
@@ -105,7 +102,7 @@ id_attribute: clinical-rhythm
 <p class="cr-results-label" id="cr-results-label" aria-live="polite"></p>
 <main id="cr-topics"><p class="cr-empty">Loading resources…</p></main>
 </div>
-<footer class="cr-footer" aria-label="MedED resources"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.75h8l4 4v12.5H6z"/><path d="M14 3.75v4h4M9 12h6M9 15.5h6"/></svg><span class="cr-footer-label">#MedED</span></footer>
+
 </div></div>
 
 <script>
