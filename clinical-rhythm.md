@@ -56,7 +56,9 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-resource{display:grid;grid-template-columns:minmax(0,1fr);gap:.4rem;align-items:start;padding:.85rem .65rem;border-bottom:1px solid var(--color-rule);border-radius:6px;background:transparent;text-shadow:none;text-decoration:none;transition:background .18s ease,color .18s ease}
 #clinical-rhythm .cr-resource:hover{color:rgb(var(--color-accent));background:rgba(179,83,82,.045)}
 #clinical-rhythm .cr-resource-title{display:block;min-width:0;font-size:.94rem;font-weight:600;line-height:1.45;overflow-wrap:anywhere;color:inherit}
+#clinical-rhythm .cr-resource-meta{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
 #clinical-rhythm .cr-resource-type{justify-self:start;display:inline-flex;align-items:center;padding:.16rem .45rem;border:1px solid var(--color-rule);border-radius:4px;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.66rem;line-height:1.25;white-space:normal;letter-spacing:.025em}
+#clinical-rhythm .cr-resource-format{color:rgb(var(--color-muted));font-size:.72rem;line-height:1.3}
 #clinical-rhythm .cr-empty{color:rgb(var(--color-muted));font-size:.9rem}
 @media(max-width:600px){
 #clinical-rhythm .cr-intro{margin-bottom:1rem}
@@ -173,7 +175,7 @@ if(isOpen){
 html+='<div class="cr-topic-body">';
 if(m.blurb)html+='<p class="cr-topic-blurb">'+esc(m.blurb)+'</p>';
 html+='<div class="cr-resource-list">';
-files.sort(function(a,b){return a.title.localeCompare(b.title)}).forEach(function(f){html+='<a class="cr-resource" href="'+pathUrl(f.path)+'" target="_blank" rel="noopener"><span class="cr-resource-title">'+esc(f.title)+'</span><span class="cr-resource-type">'+esc(f.typeLabel)+'</span></a>'});
+files.sort(function(a,b){return a.title.localeCompare(b.title)}).forEach(function(f){var ext=f.path.split('.').pop().toLowerCase(),format=ext==='pdf'?'PDF document':(ext==='ppt'||ext==='pptx'?'PowerPoint presentation':(ext==='doc'||ext==='docx'?'Word document':ext.toUpperCase()+' document'));html+='<a class="cr-resource" href="'+pathUrl(f.path)+'" target="_blank" rel="noopener"><span class="cr-resource-title">'+esc(f.title)+'</span><span class="cr-resource-meta"><span class="cr-resource-type">'+esc(f.typeLabel)+'</span><span class="cr-resource-format">'+esc(format)+'</span></span></a>'});
 html+='</div></div>';
 }
 html+='</section>';
