@@ -82,16 +82,16 @@ id_attribute: med
 /* Prevent mobile Safari from zooming the page when the search field receives focus. */
 #med .cr-search input{font-size:16px}
 #med .cr-app-actions{display:flex;align-items:center;justify-content:center;gap:.65rem;flex-wrap:wrap;margin:.8rem 0 1.15rem}
-#med .cr-install-button{min-height:34px;padding:.4rem .75rem;border:1px solid rgb(var(--color-accent));border-radius:8px;color:rgb(var(--color-background));background:rgb(var(--color-accent));font:inherit;font-size:.78rem;font-weight:600;cursor:pointer}
+#med .cr-install-button{min-height:28px;padding:.25rem .55rem;border:1px solid rgb(var(--color-accent));border-radius:6px;color:rgb(var(--color-background));background:rgb(var(--color-accent));font:inherit;font-size:.7rem;font-weight:600;line-height:1.1;cursor:pointer}
 #med .cr-install-button:hover{filter:brightness(.94)}
 #med .cr-install-button:focus-visible{outline:2px solid rgb(var(--color-accent));outline-offset:3px}
 #med .cr-app-status{max-width:100%;color:rgb(var(--color-muted));font-size:.74rem;line-height:1.45;text-align:center}
 
-#med .cr-install-toast{position:fixed;z-index:9999;left:50%;bottom:1.2rem;transform:translate(-50%,1rem);display:flex;flex-direction:column;align-items:stretch;gap:.65rem;width:min(calc(100% - 2rem),360px);box-sizing:border-box;padding:1rem;border:1px solid var(--color-rule);border-radius:16px;color:rgb(var(--color-text));background:rgb(var(--color-background));box-shadow:0 8px 28px rgba(0,0,0,.18);font-size:.84rem;line-height:1.45;opacity:0;visibility:hidden;transition:opacity .25s ease,transform .25s ease,visibility .25s ease}
+#med .cr-install-toast{position:fixed;z-index:9999;left:50%;bottom:1rem;transform:translate(-50%,.6rem);display:flex;flex-direction:column;align-items:stretch;gap:.35rem;width:min(calc(100% - 2rem),320px);box-sizing:border-box;padding:.65rem .8rem;border:1px solid var(--color-rule);border-radius:12px;color:rgb(var(--color-text));background:rgb(var(--color-background));box-shadow:0 5px 18px rgba(0,0,0,.15);font-size:.76rem;line-height:1.3;opacity:0;visibility:hidden;transition:opacity .25s ease,transform .25s ease,visibility .25s ease}
 #med .cr-install-toast.is-visible{opacity:1;visibility:visible;transform:translate(-50%,0)}
-#med .cr-install-toast-text{display:block;min-width:0;padding-right:1.5rem}
-#med .cr-install-toast .cr-install-button{align-self:center;min-width:132px}
-#med .cr-install-toast-close{position:absolute;top:.45rem;right:.45rem;display:grid;place-items:center;width:28px;height:28px;padding:0;border:0;border-radius:50%;color:rgb(var(--color-muted));background:transparent;font:inherit;font-size:1.2rem;line-height:1;cursor:pointer}
+#med .cr-install-toast-text{display:block;min-width:0;padding-right:1.35rem}
+#med .cr-install-toast .cr-install-button{align-self:center;min-width:112px}
+#med .cr-install-toast-close{position:absolute;top:.25rem;right:.25rem;display:grid;place-items:center;width:24px;height:24px;padding:0;border:0;border-radius:50%;color:rgb(var(--color-muted));background:transparent;font:inherit;font-size:1.05rem;line-height:1;cursor:pointer}
 #med .cr-install-toast-close:hover{background:rgba(127,127,127,.12)}
 @media (display-mode:standalone){#med .cr-install-toast{display:none!important}}
 </style>
