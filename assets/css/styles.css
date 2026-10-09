@@ -3671,6 +3671,27 @@ body.lofi-player-open {
 }
 
 
+/* Give the Nile AGI title the same clear hover feedback as a link. */
+.work-tile--video .work-tile-heading {
+  transition: color .22s ease, text-decoration-color .22s ease;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: .16em;
+}
+.work-tile--video:hover .work-tile-heading,
+.work-tile--video:focus-within .work-tile-heading {
+  color: rgb(var(--color-accent));
+  text-decoration-color: currentColor;
+}
+.work-tile--video .work-tile-link > span {
+  display: inline-block;
+  transition: transform .22s ease;
+}
+.work-tile--video:hover .work-tile-link > span,
+.work-tile--video:focus-within .work-tile-link > span {
+  transform: translate(2px, -2px);
+}
+
 /* Keep Nile AGI front-card copy legible in dark mode. */
 [data-theme="dark"] .work-tile--video .work-tile-summary,
 .theme-dark .work-tile--video .work-tile-summary,
