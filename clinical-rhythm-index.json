@@ -1,0 +1,432 @@
+{
+  "tree": [
+    {
+      "path": "00. testbank/crQB - EoM OSCE Revision.docx",
+      "type": "blob"
+    },
+    {
+      "path": "00. testbank/crQB - infectious & derma discussions.docx",
+      "type": "blob"
+    },
+    {
+      "path": "00. testbank/crQB - infectious & derma practice exam.docx",
+      "type": "blob"
+    },
+    {
+      "path": "00. testbank/crQB - online osces compilations.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "00. testbank/crQB - past years sem I osces.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "00. testbank/crQB - sem I unsorted compiled.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "01. principles/buonacera2022 - neutrophil to lymphocyte ratio.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "01. principles/gohil2024 - antibiotic stewardship in pneumonia.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "01. principles/goossens2005 - outpatient antibiotic use and resistance.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "01. principles/haidar2012 - fever of unknown origin.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "01. principles/harrisons2022 - fever.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "01. principles/oliver2021 - drug resistant pneumonia risk score.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "01. principles/pollard2021 - vaccinology and immunization.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "01. principles/principles.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "01. principles/rochon2026 - potentially inappropriate prescribing cascades in older adults.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "01. principles/schafer2004 - thrombocytosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "01. principles/stock2000 - nonmalignant white blood cell disorders.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "02. malaria/assey2025 - antimalarial drug resistance markers in tanzania.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "02. malaria/daily2025 - malaria.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "02. malaria/george2022 - blood transfusion in severe childhood anaemia.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "02. malaria/harrisons2022 - malaria.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "02. malaria/malaria.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "02. malaria/manjurano2021 - malaria rapid diagnostic tests in tanzania.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "02. malaria/mohtz2020 - tanzania malaria diagnosis treatment and preventive therapies guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "02. malaria/obonyo2012 - clindamycin plus quinine for malaria.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "02. malaria/poespoprodjo2023 - malaria.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "02. malaria/who2025 - malaria guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/beyene2024 - tuberculosis in end stage renal disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/chatla2020 - urine lam for tuberculosis in hiv.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/denning2017 - fungal diagnostics and antimicrobial resistance.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/dorman2021 - four month rifapentine tuberculosis treatment.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/harrisons2022 - tuberculosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/minja2026 - tuberculosis treatment and prevention.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/munseri2012 - urine lam for hiv associated tuberculosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/pai2016 - tuberculosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/riquelme2006 - ascitic ada for tuberculous peritonitis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/sculier2010 - xpert mtb rif in hiv associated tuberculosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/trajman2025 - tuberculosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/tuberculosis.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/vera2026 - dili approach.doc",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/wambi2026 - tuberculosis diagnosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/who2025 - tuberculosis and comorbidities guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/who2025 - tuberculosis diagnosis guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/who2025 - tuberculosis preventive treatment guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/who2025 - tuberculosis treatment and care guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "03. tuberculosis/yang2024 - sputum culture conversion in drug resistant tuberculosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/brenner2018 - hiv phylogenetics and drug resistance.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/chang2024 - cryptococcosis diagnosis and management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/eisinger2019 - undetectable equals untransmittable hiv.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/evelyna2026 - cryptoccocal meningitis deathaudit.docx",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/gamba2026 - hiv treatment landscape.docx",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/gamba2026 - hiv treatment landscape.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/ghosn2025 - hiv treatment and prevention.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/gulick2026 - antiretroviral therapy.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/harrisons2022 - human retroviruses and hiv.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/hiv.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/horberg2024 - hiv primary care guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/mbai2024 - hodgkin lymphoma and hiv in tanzania.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/mfinanga2015 - cryptococcal screening and adherence support in advanced hiv.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/nashcop2024 - tanzania hiv sti and viral hepatitis guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/ndashimye2022 - hiv antiretroviral drug resistance.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/obeagu2025 - hiv induced anemia.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/okoye2013 - cd4 t cell depletion in hiv.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/rabbieth2026 - hiv trials.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/rambaut2004 - hiv evolution.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/tuppoty2026 - hiv treatment trial, resistance.png",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/who2021 - hiv drug resistance report.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/who2021 - hiv prevention, treatment, service and monitoring guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/who2022 - cryptococcal disease in hiv guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/who2025 - advanced hiv disease guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/who2025 - hiv clinical management recommendations.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/williams2015 - fingerstick cryptococcal antigen testing.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "04. hiv/williamson2016 - cryptococcal meningitis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "05. pneumonia/bai2025 - community acquired pneumonia in adults.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "05. pneumonia/harrisons2022 - pneumonia.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "05. pneumonia/jones2025 - ats community acquired pneumonia guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "05. pneumonia/kalil2016 - idsa hospital acquired and ventilator associated pneumonia guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "05. pneumonia/lucinde2025 - glucocorticoids for community acquired pneumonia.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "05. pneumonia/mandell2007 - idsa community acquired pneumonia guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "05. pneumonia/metlay2019 - idsa community acquired pneumonia guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "05. pneumonia/o'malley2023 - community acquired pneumonia.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "05. pneumonia/oyarvide2022 - hemoptysis clinical case.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "05. pneumonia/pneumonia.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "06. cns infections/cns infections.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "06. cns infections/harrisons2022 - encephalitis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "06. cns infections/hasbun2022 - bacterial meningitis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "06. cns infections/mehra2025 - hiv neurological imaging patterns.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "06. cns infections/sacks2018 - cryptococcus neoformans meningoencephalitis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "06. cns infections/sakai2021 - hiv related cns mri pattern recognition.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "06. cns infections/threlkeld2026 - meningococcal septic shock.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "06. cns infections/who2021 - taenia solium neurocysticercosis management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "06. cns infections/who2025 - meningitis diagnosis treatment and care guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "06. cns infections/who2025 - meningitis diagnosis treatment and care practical manual.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/butler2017 - jarisch-herxheimer reaction.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/cannon2023 - doxycycline postexposure prophylaxis for stis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/cdc2021 - sexually transmitted infections treatment guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/cdc2021 - syphilis treatment guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/harrisons2022 - gonococcal infections.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/harrisons2022 - sexually transmitted infections overview and clinical approach.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/harrisons2022 - syphilis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/mohtz2018 - sexually transmitted infections guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/pond2015 - non-gonococcal urethritis diagnosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/stis.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/vodstrcil2025 - male partner treatment for bacterial vaginosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/whitley2001 - herpes simplex virus.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/whitley2018 - herpes simplex virus clinical management.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "07. sti/who2021 - sexually transmitted infections guidelines.pdf",
+      "type": "blob"
+    }
+  ]
+}
