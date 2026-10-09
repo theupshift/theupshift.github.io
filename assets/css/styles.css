@@ -3636,16 +3636,16 @@ body.lofi-player-open {
   }
 }
 
-/* Keep Nile AGI aligned with Publications while retaining its subtle glass blur. */
+/* Keep Nile AGI copy on a uniform, readable overlay over the video. */
 .work-tile--video .work-tile-trigger {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   height: 100%;
   min-height: 255px;
-  background: rgba(var(--color-background), .18);
-  -webkit-backdrop-filter: blur(4px) saturate(102%);
-  backdrop-filter: blur(4px) saturate(102%);
+  background: rgba(var(--color-background), .88);
+  -webkit-backdrop-filter: blur(12px) saturate(105%);
+  backdrop-filter: blur(12px) saturate(105%);
 }
 .work-tile--video .work-tile-trigger .work-icon {
   flex: 0 0 auto;
@@ -3659,7 +3659,7 @@ body.lofi-player-open {
 }
 .work-tile--video:hover .work-tile-trigger,
 .work-tile--video.is-expanded .work-tile-trigger {
-  background: rgba(var(--color-background), .18);
+  background: rgba(var(--color-background), .88);
 }
 @media (max-width: 600px) {
   .work-tile--video .work-tile-trigger {
