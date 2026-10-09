@@ -249,7 +249,7 @@ function updateConnectionStatus(){
   if(!navigator.onLine){
     appStatus.textContent='You’re offline. Saved parts of MedED may still be available; online resources need internet.';
   }else{
-    appStatus.textContent='The app shell and resource index can be cached for offline use.';
+    appStatus.textContent='Save MedED to your device as an app for quick access.';
   }
 }
 window.addEventListener('online',updateConnectionStatus);
