@@ -241,9 +241,7 @@ if(installToast && !isRunningAsInstalledApp()){
   window.setTimeout(function(){
     if(!isRunningAsInstalledApp()) installToast.classList.add('is-visible');
   },500);
-  window.setTimeout(function(){
-    if(installToast && !installPrompt) installToast.classList.remove('is-visible');
-  },8500);
+  // Keep the install message visible until the visitor dismisses it.
 }
 if(toastClose && installToast){
   toastClose.addEventListener('click',function(){installToast.classList.remove('is-visible')});
@@ -282,10 +280,26 @@ installButton.addEventListener('click',async function(){
 function updateConnectionStatus(){
   if(!navigator.onLine){
     appStatus.textContent='You’re offline. Saved parts of MedED may still be available; online resources need internet.';
-  }else if(installPrompt){
-    appStatus.textContent='MedED is ready to install in Chrome.';
+    return;
+  }
+  if(installPrompt){
+    appStatus.textContent='MedED is ready to install in your browser.';
+    return;
+  }
+  var ua=navigator.userAgent||'';
+  var isIOS=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  var isEdge=/Edg\//.test(ua);
+  var isSafari=/Safari/.test(ua)&&!/Chrome|Chromium|Edg|CriOS|FxiOS/.test(ua);
+  if(isIOS && isSafari){
+    appStatus.textContent='To install: tap Share in Safari, then choose “Add to Home Screen”.';
+  }else if(isSafari && /Macintosh|Mac OS X/.test(ua)){
+    appStatus.textContent='To install: in Safari, choose File → Add to Dock.';
+  }else if(isEdge){
+    appStatus.textContent='To install in Edge: open ⋯, then choose Apps → Install this site as an app.';
+  }else if(/Chrome|CriOS/.test(ua)){
+    appStatus.textContent='To install in Chrome: open ⋮ and choose Install app or Add to Home screen.';
   }else{
-    appStatus.textContent='Save MedED as an app for quick access.';
+    appStatus.textContent='Open your browser menu and look for “Install app” or “Add to Home Screen”.';
   }
 }
 window.addEventListener('online',updateConnectionStatus);
