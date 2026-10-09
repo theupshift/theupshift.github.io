@@ -554,7 +554,8 @@ footer.constrained.site-footer {
 }
 .site-footer a:hover { color: rgb(var(--color-accent)); }
 .site-footer .footer-share { white-space: nowrap; }
-.site-footer .linkedin-icon {
+.site-footer .linkedin-icon,
+.site-footer .twitter-icon {
   width: 13px;
   height: 13px;
   display: inline-block;
