@@ -2652,3 +2652,72 @@ nav.constrained.site-nav.is-scrolled::before {
   .work-tile--book:hover .book-cover--three { transform: rotate(8deg); }
   .work-tile--video:hover .work-tile-video { transform: none; }
 }
+
+
+/* Expanded cards become a single full-card detail view; hide the front face. */
+.work-tile.is-expanded {
+  display: flex;
+  flex-direction: column;
+  min-height: 370px;
+  height: auto;
+}
+.work-tile.is-expanded > .work-tile-trigger {
+  display: none !important;
+}
+.work-tile.is-expanded > .work-tile-details {
+  display: block;
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  padding: clamp(24px, 3vw, 38px);
+  background: transparent;
+  max-height: none;
+  overflow: visible;
+  animation: work-detail-enter .22s ease-out both;
+}
+.work-tile.is-expanded .work-tile-details[hidden] {
+  display: none;
+}
+.work-tile.is-expanded .work-tile-details > :first-child {
+  margin-top: 0;
+}
+.work-tile.is-expanded .work-tile-details > :last-child {
+  margin-bottom: 0;
+}
+.work-tile--book.is-expanded .work-tile-details {
+  background: #1b1c1b;
+  color: #f4f1eb;
+}
+.work-tile--book.is-expanded .book-carousel {
+  width: 100%;
+}
+.work-tile--book.is-expanded .book-carousel-viewport {
+  min-height: 220px;
+}
+.work-tile.is-expanded .work-publication-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-rule);
+}
+.work-tile.is-expanded .work-publication-item:first-child {
+  padding-top: 0;
+}
+.work-tile.is-expanded .work-publication-item h3 {
+  line-height: 1.35;
+}
+@keyframes work-detail-enter {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 600px) {
+  .work-tile.is-expanded {
+    min-height: 320px;
+  }
+  .work-tile.is-expanded > .work-tile-details {
+    padding: 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-tile.is-expanded > .work-tile-details {
+    animation: none;
+  }
+}
