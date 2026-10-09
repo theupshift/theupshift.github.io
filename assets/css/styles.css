@@ -541,10 +541,13 @@ article .footnotes p { margin-bottom: .8em; }
 footer.constrained.site-footer {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
   width: 100%;
   max-width: var(--reading-width);
+  margin: 0 auto;
+  text-align: center;
   padding: 24px 0 32px;
   border-top: 1px solid var(--color-rule);
   color: rgb(var(--color-muted));
