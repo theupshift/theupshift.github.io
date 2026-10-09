@@ -55,6 +55,9 @@ id_attribute: clinical-rhythm
 #clinical-rhythm .cr-resource-list{border-top:1px solid var(--color-rule)}
 #clinical-rhythm .cr-resource{display:grid;grid-template-columns:minmax(0,1fr);gap:.25rem;align-items:start;padding:.65rem 0;border-bottom:1px solid var(--color-rule);border-radius:0;background:transparent;text-shadow:none;text-decoration:none}
 #clinical-rhythm .cr-resource-title{display:block;min-width:0;font-size:.88rem;font-weight:400;line-height:1.45;overflow-wrap:anywhere;color:rgb(var(--color-text));filter:brightness(.82)}
+#clinical-rhythm .cr-resource{transition:background-color .16s ease,color .16s ease}
+#clinical-rhythm .cr-resource:hover{background:rgba(179,83,82,.035);color:rgb(var(--color-accent))}
+#clinical-rhythm .cr-resource:focus-visible{outline:2px solid rgba(179,83,82,.35);outline-offset:2px;background:rgba(179,83,82,.035)}
 #clinical-rhythm .cr-resource-meta{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap}
 #clinical-rhythm .cr-resource-type{justify-self:start;display:inline-flex;align-items:center;padding:0;border:0;border-radius:0;color:rgb(var(--color-muted));font-family:var(--font-small-caps);font-size:.64rem;font-weight:400;line-height:1.25;white-space:normal;letter-spacing:.025em}
 #clinical-rhythm .cr-resource-format{color:rgb(var(--color-muted));font-size:.68rem;line-height:1.3}
