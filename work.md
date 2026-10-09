@@ -64,6 +64,35 @@ permalink: /work/
     </div>
   </article>
 
+
+
+  <article class="work-tile work-tile--afyakongwe" data-work-card style="background-image: url('https://images.pexels.com/photos/30678595/pexels-photo-30678595.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; background-position: center;">
+    <button class="work-tile-trigger" type="button" aria-expanded="false">
+      <span class="work-icon" aria-hidden="true">+</span>
+      <span class="work-tile-heading">Afya Kongwe</span>
+      <span class="work-tile-summary">Compassionate home-based care for people living with chronic illness — bringing comfort, dignity, and quality health services closer to home in Tanzania.</span>
+      <span class="work-tile-link">Visit <span aria-hidden="true">↗</span></span>
+      <span class="work-expand-mark" aria-hidden="true">+</span>
+    </button>
+    <div class="work-tile-details" hidden>
+      <p>A health-focused space for making useful knowledge easier to discover, understand, and engage with.</p>
+      <div class="work-links"><a href="https://www.instagram.com/afya.kongwe/" target="_blank" rel="noopener noreferrer">Visit AfyaKongwe on Instagram ↗</a></div>
+    </div>
+  </article>
+
+  <article class="work-tile work-tile-wide" data-work-card>
+    <button class="work-tile-trigger" type="button" aria-expanded="false">
+      <span class="work-icon" aria-hidden="true">◇</span>
+      <span class="work-tile-heading">Health Commons</span>
+      <span class="work-tile-summary">A simulation game about difficult choices when allocating limited health resources in rural communities.</span>
+      <span class="work-tile-link">Play <span aria-hidden="true">↗</span></span>
+      <span class="work-expand-mark" aria-hidden="true">+</span>
+    </button>
+    <div class="work-tile-details" hidden>
+      <p>There is never enough to go around. Someone gets more. Someone gets less. Every choice has a consequence.</p>
+      <p>This game puts you in the middle of those choices, where limited resources meet real needs in a rural community. What would you choose? <a href="/words/education/health/simulation/2025/09/17/healthsystems/">Play now →</a></p>
+    </div>
+  </article>
   <article class="work-tile work-tile--book" data-work-card style="background-image: url('https://miro.medium.com/v2/resize:fit:640/format:webp/1*B80VNidZ0rKW77cPUjkpsw.jpeg'); background-size: cover; background-position: center;">
     <button class="work-tile-trigger" type="button" aria-expanded="false">
       <span class="work-icon" aria-hidden="true">▱</span>
@@ -113,34 +142,6 @@ permalink: /work/
           <button type="button" class="book-carousel-button" data-book-next aria-label="Next book">→</button>
         </div>
       </div>
-    </div>
-  </article>
-
-  <article class="work-tile work-tile--afyakongwe" data-work-card style="background-image: url('https://images.pexels.com/photos/30678595/pexels-photo-30678595.jpeg?auto=compress&cs=tinysrgb&w=1200'); background-size: cover; background-position: center;">
-    <button class="work-tile-trigger" type="button" aria-expanded="false">
-      <span class="work-icon" aria-hidden="true">+</span>
-      <span class="work-tile-heading">Afya Kongwe</span>
-      <span class="work-tile-summary">Compassionate home-based care for people living with chronic illness — bringing comfort, dignity, and quality health services closer to home in Tanzania.</span>
-      <span class="work-tile-link">Visit <span aria-hidden="true">↗</span></span>
-      <span class="work-expand-mark" aria-hidden="true">+</span>
-    </button>
-    <div class="work-tile-details" hidden>
-      <p>A health-focused space for making useful knowledge easier to discover, understand, and engage with.</p>
-      <div class="work-links"><a href="https://www.instagram.com/afya.kongwe/" target="_blank" rel="noopener noreferrer">Visit AfyaKongwe on Instagram ↗</a></div>
-    </div>
-  </article>
-
-  <article class="work-tile work-tile-wide" data-work-card>
-    <button class="work-tile-trigger" type="button" aria-expanded="false">
-      <span class="work-icon" aria-hidden="true">◇</span>
-      <span class="work-tile-heading">Health Commons</span>
-      <span class="work-tile-summary">A simulation game about difficult choices when allocating limited health resources in rural communities.</span>
-      <span class="work-tile-link">Play <span aria-hidden="true">↗</span></span>
-      <span class="work-expand-mark" aria-hidden="true">+</span>
-    </button>
-    <div class="work-tile-details" hidden>
-      <p>There is never enough to go around. Someone gets more. Someone gets less. Every choice has a consequence.</p>
-      <p>This game puts you in the middle of those choices, where limited resources meet real needs in a rural community. What would you choose? <a href="/words/education/health/simulation/2025/09/17/healthsystems/">Play now →</a></p>
     </div>
   </article>
 </section>
