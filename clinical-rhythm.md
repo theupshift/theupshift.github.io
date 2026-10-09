@@ -65,7 +65,7 @@ id_attribute: clinical-rhythm
 <header class="cr-intro">
 <p class="cr-kicker">#MedEd Resources</p>
 <h1 class="cr-title">Med Sem Resources</h1>
-<p class="cr-lead" style="margin:.65rem 0 0;max-width:620px">Explore medical lectures, readings, guidelines, practice questions and clinical cases, organised by topic.</p>
+<p class="cr-lead" style="margin:.65rem 0 0;max-width:620px">A collection of medical lectures, readings, guidelines, practice questions and clinical cases, organised by topic.</p>
 <p class="cr-meta" id="cr-meta" aria-live="polite">Loading resource index…</p>
 </header>
 
