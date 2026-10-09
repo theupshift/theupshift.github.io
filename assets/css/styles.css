@@ -2226,3 +2226,251 @@ nav.constrained.site-nav.is-scrolled::before {
     inset 0 1px 0 rgba(255, 255, 255, .09),
     inset 0 -1px 0 rgba(255, 255, 255, .025);
 }
+
+
+/* Work index refresh — editorial, image-led project cards. */
+.work-intro {
+  max-width: 760px;
+  margin-bottom: 8px;
+}
+.work-intro .work-lede {
+  max-width: 620px;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.55;
+  letter-spacing: -.015em;
+}
+.work-showcase {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2.1vw, 26px);
+  padding-top: 28px;
+  padding-bottom: 64px;
+  align-items: stretch;
+}
+.work-tile {
+  min-width: 0;
+  min-height: 370px;
+  border-radius: 10px;
+  border-color: rgba(var(--color-text), .12);
+  box-shadow: none;
+  transition:
+    transform .35s cubic-bezier(.2,.75,.25,1),
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+.work-tile:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--color-text), .24);
+  box-shadow: 0 16px 36px rgba(25,18,19,.10);
+}
+.work-tile-trigger {
+  min-height: 370px;
+  padding: clamp(22px, 2.6vw, 34px);
+}
+.work-tile-trigger .work-icon {
+  width: 34px;
+  height: 34px;
+  margin-bottom: auto;
+  border-radius: 50%;
+  font-size: 19px;
+  background: rgba(var(--color-background), .5);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.work-tile-label {
+  margin-bottom: 10px;
+  font-size: 10px;
+  letter-spacing: .13em;
+}
+.work-tile-heading {
+  max-width: 90%;
+  margin-bottom: 9px;
+  font-family: var(--font-small-caps);
+  font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+  font-weight: 600;
+  letter-spacing: -.035em;
+  line-height: 1.08;
+}
+.work-tile-summary {
+  max-width: 390px;
+  font-size: .94rem;
+  line-height: 1.55;
+}
+.work-tile-trigger .work-tile-link {
+  padding-top: 18px;
+  font-size: 12px;
+  letter-spacing: .02em;
+}
+.work-expand-mark {
+  top: 26px;
+  right: 26px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.work-tile--video .work-tile-video {
+  min-height: 100%;
+  transform: scale(1.001);
+  transition: transform .65s cubic-bezier(.2,.75,.25,1);
+}
+.work-tile--video:hover .work-tile-video {
+  transform: scale(1.045);
+}
+.work-tile--video .work-tile-trigger,
+.work-tile--book .work-tile-trigger,
+.work-tile--afyakongwe .work-tile-trigger,
+.work-tile--video:hover .work-tile-trigger,
+.work-tile--book:hover .work-tile-trigger,
+.work-tile--afyakongwe:hover .work-tile-trigger,
+.work-tile--video.is-expanded .work-tile-trigger,
+.work-tile--book.is-expanded .work-tile-trigger,
+.work-tile--afyakongwe.is-expanded .work-tile-trigger {
+  min-height: 370px;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--color-background), .14) 0%,
+    rgba(var(--color-background), .08) 34%,
+    rgba(var(--color-background), .84) 100%
+  );
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+/* Give text-led cards a designed visual field instead of an empty panel. */
+.work-tile:nth-child(2) {
+  background:
+    radial-gradient(ellipse at 82% 18%, rgba(176, 191, 164, .48), transparent 38%),
+    linear-gradient(140deg, #e8e9df 0%, #d5dbd0 54%, #c4d0c2 100%);
+  color: #20251f;
+}
+.work-tile:nth-child(2) .work-tile-label,
+.work-tile:nth-child(2) .work-tile-summary,
+.work-tile:nth-child(2) .work-tile-link {
+  color: #51594e;
+}
+.work-tile:nth-child(2) .work-icon,
+.work-tile:nth-child(2) .work-expand-mark {
+  color: #28352b;
+  border-color: rgba(40,53,43,.25);
+  background: rgba(255,255,255,.25);
+}
+.work-tile:nth-child(6) {
+  background:
+    radial-gradient(ellipse at 78% 22%, rgba(228, 194, 133, .42), transparent 34%),
+    radial-gradient(ellipse at 15% 95%, rgba(110, 136, 117, .22), transparent 42%),
+    linear-gradient(145deg, #f0eee6 0%, #e5e2d7 55%, #d8ded3 100%);
+  color: #252923;
+}
+.work-tile:nth-child(6) .work-tile-label,
+.work-tile:nth-child(6) .work-tile-summary,
+.work-tile:nth-child(6) .work-tile-link {
+  color: #596057;
+}
+.work-tile:nth-child(6) .work-icon,
+.work-tile:nth-child(6) .work-expand-mark {
+  color: #30392f;
+  border-color: rgba(48,57,47,.25);
+  background: rgba(255,255,255,.3);
+}
+.work-tile:nth-child(2)::after,
+.work-tile:nth-child(6)::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 220px;
+  height: 220px;
+  right: -52px;
+  top: 40px;
+  border: 1px solid rgba(45,62,48,.16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(45,62,48,.035), 0 0 0 58px rgba(45,62,48,.025);
+  pointer-events: none;
+}
+.work-tile:nth-child(6)::after {
+  width: 170px;
+  height: 170px;
+  right: -30px;
+  top: 58px;
+  border-color: rgba(115,91,54,.18);
+  box-shadow: 0 0 0 24px rgba(115,91,54,.035), 0 0 0 52px rgba(115,91,54,.025);
+}
+.work-tile:nth-child(2) .work-tile-trigger,
+.work-tile:nth-child(6) .work-tile-trigger {
+  background: transparent;
+}
+.work-tile-wide {
+  grid-column: auto;
+  min-height: 370px;
+}
+.work-tile-wide .work-tile-trigger {
+  min-height: 370px;
+}
+.work-showcase:has(.work-tile.is-expanded) .work-tile.is-expanded {
+  min-height: 0;
+}
+.work-tile.is-expanded .work-tile-trigger,
+.work-tile.is-expanded .work-tile--video .work-tile-trigger {
+  min-height: 290px;
+}
+.work-tile-details {
+  padding: 0 clamp(22px, 2.6vw, 34px) 30px;
+}
+.work-tile-details[hidden] {
+  display: none;
+}
+@media (max-width: 900px) {
+  .work-tile,
+  .work-tile-trigger,
+  .work-tile-wide,
+  .work-tile-wide .work-tile-trigger,
+  .work-tile--video .work-tile-trigger,
+  .work-tile--book .work-tile-trigger,
+  .work-tile--afyakongwe .work-tile-trigger {
+    min-height: 330px;
+  }
+}
+@media (max-width: 600px) {
+  .work-showcase {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-top: 22px;
+    padding-bottom: 44px;
+  }
+  .work-tile,
+  .work-tile-wide {
+    min-height: 320px;
+    border-radius: 9px;
+  }
+  .work-tile-trigger,
+  .work-tile-wide .work-tile-trigger,
+  .work-tile--video .work-tile-trigger,
+  .work-tile--book .work-tile-trigger,
+  .work-tile--afyakongwe .work-tile-trigger {
+    min-height: 320px;
+    padding: 23px;
+  }
+  .work-tile-trigger .work-icon {
+    margin-bottom: auto;
+  }
+  .work-tile-heading {
+    font-size: clamp(1.65rem, 7vw, 2rem);
+  }
+  .work-tile-summary {
+    max-width: 100%;
+    font-size: .9rem;
+  }
+  .work-expand-mark {
+    top: 22px;
+    right: 22px;
+  }
+  .work-tile-details {
+    padding: 0 23px 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .work-tile,
+  .work-tile--video .work-tile-video {
+    transition: none;
+  }
+  .work-tile--video .work-tile-video {
+    transform: none;
+  }
+}
