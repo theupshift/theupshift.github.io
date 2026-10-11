@@ -216,7 +216,7 @@ var groups={};
 visible.forEach(function(f){var folder=f.topicFolder;if(!groups[folder])groups[folder]=[];groups[folder].push(f)});
 var order=Object.keys(groups).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})});
 var html='';
-var interactiveCases=(activeType==='cases'||activeType==='all')?caseFiles.filter(function(f){return !query||[f.title,f.path,f.typeLabel].join(' ').toLowerCase().indexOf(query)!==-1}):[];
+var interactiveCases=activeType==='cases'?caseFiles.filter(function(f){return !query||[f.title,f.path,f.typeLabel,'interactive clinical cases hosted on meded'].join(' ').toLowerCase().indexOf(query)!==-1}):[];
 document.getElementById('cr-specialty-current').textContent=selectedSpecialty;
 document.getElementById('cr-specialty-prev').style.visibility='visible';
 document.getElementById('cr-specialty-next').style.visibility='visible';
@@ -241,7 +241,7 @@ html+='</div></div>';
 html+='</section>';
 });
 if(interactiveCases.length){
-html+='<section class="cr-topic is-open"><div class="cr-topic-body" style="display:block"><p class="cr-topic-blurb">Interactive clinical cases hosted on MedED.</p><div class="cr-resource-list">';
+html+='<section class="cr-topic cr-interactive-cases"><div class="cr-topic-body" style="display:block"><h2 class="cr-topic-name" style="margin:0 0 .9rem">Interactive clinical cases hosted on MedED</h2><div class="cr-resource-list">';
 interactiveCases.forEach(function(f){html+='<a class="cr-resource" href="'+f.url+'" target="_blank" rel="noopener"><span class="cr-resource-title">'+esc(f.title)+'</span><span class="cr-resource-meta"><span class="cr-resource-type">Interactive case</span></span></a>'});
 html+='</div></div></section>';
 }
