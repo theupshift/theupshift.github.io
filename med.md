@@ -136,40 +136,68 @@ id_attribute: med
 (function(){
 var api='https://theupshift.github.io/clinical-rhythm-index.json';
 var base='https://clinicalrythm.github.io/';
-var casesUrl='https://theupshift.github.io/medical/interactivecases/';
-var caseFiles=[{title:'Chronic Diarrhoea — Is It IBD',path:'medical/interactivecases/chronicdiarrhea/',url:'https://theupshift.github.io/medical/interactivecases/chronicdiarrhea/',typeLabel:'Cases'},{title:'Cirrhosis — Longitudinal Clinical Case',path:'medical/interactivecases/cirrhosis/',url:'https://theupshift.github.io/medical/interactivecases/cirrhosis/',typeLabel:'Cases'}];
+var caseFiles=[
+{title:'Chronic Diarrhoea — Is It IBD',path:'medical/interactivecases/chronicdiarrhea/',url:'https://theupshift.github.io/medical/interactivecases/chronicdiarrhea/',typeLabel:'Cases'},
+{title:'Cirrhosis — Longitudinal Clinical Case',path:'medical/interactivecases/cirrhosis/',url:'https://theupshift.github.io/medical/interactivecases/cirrhosis/',typeLabel:'Cases'}
+];
 var activeType='all',query='',openTopic=null,selectedSpecialty='Infectious Diseases',allFiles=[];
-var specialties=['Infectious Diseases','Cardiology','Nephrology','Gastroenterology','Respiratory Medicine','Neurology','Endocrinology','Haematology'];
-
-var topics={
-'00. testbank':{title:'Test bank',blurb:'Practice questions and self-assessment material covering the whole semester.'},
-'01. principles':{title:'Principles',blurb:'Fever and its evaluation, antimicrobial stewardship and resistance, vaccination, prescribing in older adults, and haematological changes that accompany infection.'},
-'02. malaria':{title:'Malaria',blurb:'Diagnosis, treatment, antimalarial drug resistance in Tanzania, severe malaria and anaemia, and national and WHO guidelines.'},
-'03. tuberculosis':{title:'Tuberculosis',blurb:'Diagnosis, treatment, preventive treatment, TB with HIV and renal disease, extrapulmonary disease, and WHO guidance.'},
-'04. hiv':{title:'HIV',blurb:'Natural history, antiretroviral therapy and resistance, U=U, advanced HIV disease, cryptococcal meningitis, primary care, and guidelines.'},
-'05. pneumonia':{title:'Pneumonia',blurb:'Community-acquired pneumonia, hospital-acquired and ventilator-associated pneumonia, glucocorticoids, haemoptysis, and ATS/IDSA guidance.'},
-'06. cns infections':{title:'CNS infections',blurb:'Bacterial meningitis, encephalitis, cryptococcal meningoencephalitis, neurocysticercosis, meningococcal disease, imaging, and WHO guidance.'},
-'07. sti':{title:'STIs',blurb:'Syphilis, gonococcal infections, non-gonococcal urethritis, herpes simplex, bacterial vaginosis, doxycycline PEP, and national/CDC/WHO guidance.'}
+var specialties=[
+{title:'Infectious Diseases',folder:'01. infectious'},
+{title:'Dermatology',folder:'02. dermatology'},
+{title:'Rheumatology',folder:'03. rheumatology'},
+{title:'Cardiology',folder:'04. cardiology'},
+{title:'Pulmonology',folder:'05. pulmonology'},
+{title:'Gastroenterology',folder:'06. gastroenterology'},
+{title:'Haematology & Oncology',folder:'07. hema-oncology'},
+{title:'Nephrology',folder:'08. nephrology'},
+{title:'Neurology',folder:'09. neurology'},
+{title:'Endocrinology',folder:'10. endocrinology'}
+];
+var topicBlurbs={
+'00. testbank':'Practice questions, OSCE revision and self-assessment resources.',
+'01. principles':'Core concepts, clinical approach and foundational reading.',
+'02. malaria':'',
+'03. tuberculosis':'',
+'04. hiv':'',
+'05. pneumonia':'',
+'06. cns infections':'',
+'07. sti':''
 };
 
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function titleFromPath(path){return path.split('/').pop().replace(/\.[^.]+$/,'').replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim()}
-function typeFor(path){var p=path.toLowerCase();if(/interactivecases|interactive-cases|interactive_cases/.test(p))return'cases';if(/\.pptx?$/.test(p))return'slides';if(/harrison|textbook/.test(p))return'textbook';if(/guideline|guidelines|who\d|cdc\d/.test(p))return'guidelines';if(/\.pdf$|\.docx?$/.test(p))return'readings';return'other'}
+function typeFor(path){
+var p=path.toLowerCase();
+if(/case|osce|clerkship/.test(p))return'cases';
+if(/\\.pptx?$|\\.key$|\\.odp$/.test(p))return'slides';
+if(/harrison|textbook/.test(p))return'textbook';
+if(/guideline|guidelines|recommendation|who\\d|cdc\\d|mohtz|nashcop|nmcp/.test(p))return'guidelines';
+if(/\\.pdf$|\\.docx?$|\\.odt$|\\.txt$|\\.md$/.test(p))return'readings';
+return'other'
+}
 function pathUrl(path){return base+path.split('/').map(encodeURIComponent).join('/')}
-
+function topicTitle(folder){
+var name=folder.replace(/^\\d+\\.\\s*/,'').trim().replace(/\\s+/g,' ');
+var acronyms={'hiv':'HIV','sti':'STIs','cns infections':'CNS infections','aki':'AKI','ckd':'CKD','vte':'VTE','dic':'DIC','copd':'COPD','abg':'ABG','ards':'ARDS','ecg interpretation':'ECG interpretation','gi bleeding':'GI bleeding','cad':'CAD'};
+if(acronyms[name.toLowerCase()])return acronyms[name.toLowerCase()];
+return name.replace(/\\b[a-z]/g,function(ch){return ch.toUpperCase()})
+}
 function renderNav(){
 var current=document.getElementById('cr-specialty-current');
 var prev=document.getElementById('cr-specialty-prev');
 var next=document.getElementById('cr-specialty-next');
-function updateSpecialty(step){
-var index=specialties.indexOf(selectedSpecialty);
-selectedSpecialty=specialties[(index+step+specialties.length)%specialties.length];
-current.textContent=selectedSpecialty;
+function resetBrowse(){
 openTopic=null;query='';
 document.getElementById('cr-search').value='';
 activeType='all';
 document.querySelectorAll('.cr-filter').forEach(function(x){x.classList.toggle('is-active',x.dataset.type==='all')});
 render();
+}
+function updateSpecialty(step){
+var index=specialties.findIndex(function(x){return x.title===selectedSpecialty});
+selectedSpecialty=specialties[(index+step+specialties.length)%specialties.length].title;
+current.textContent=selectedSpecialty;
+resetBrowse();
 }
 current.textContent=selectedSpecialty;
 prev.addEventListener('click',function(){updateSpecialty(-1)});
@@ -178,54 +206,67 @@ next.addEventListener('click',function(){updateSpecialty(1)});
 
 function render(){
 var main=document.getElementById('cr-topics'),meta=document.getElementById('cr-meta');
-var specialtyCurrent=document.getElementById('cr-specialty-current');
-var specialtyPrev=document.getElementById('cr-specialty-prev');
-var specialtyNext=document.getElementById('cr-specialty-next');
-var showingCases=activeType==='cases';
-specialtyCurrent.textContent=showingCases?'Common Cases':selectedSpecialty;
-specialtyPrev.style.visibility=showingCases?'hidden':'visible';
-specialtyNext.style.visibility=showingCases?'hidden':'visible';
-if(activeType==='cases'){
-var matchingCases=caseFiles.filter(function(f){return !query||f.title.toLowerCase().indexOf(query)!==-1||f.path.toLowerCase().indexOf(query)!==-1||f.typeLabel.toLowerCase().indexOf(query)!==-1});
-document.getElementById('cr-results-label').textContent=matchingCases.length+' interactive case'+(matchingCases.length===1?'':'s')+' found'+(query?' for “'+query+'”':'')+'.';
-main.innerHTML=matchingCases.length?'<div class="cr-resource-list">'+matchingCases.map(function(f){return '<a class="cr-resource" href="'+f.url+'" target="_blank" rel="noopener"><span class="cr-resource-title">'+esc(f.title)+'</span></a>'}).join('')+'</div>':'<p class="cr-empty">No interactive cases match this search.</p>';
-meta.textContent=caseFiles.length+' interactive cases · sourced from Medical / Interactive Cases';
-return;
-}
-if(selectedSpecialty!=='Infectious Diseases'){
-main.innerHTML='<section class="cr-coming-soon" aria-labelledby="cr-coming-title"><div class="cr-coming-icon" aria-hidden="true">✳</div><h2 id="cr-coming-title">Coming soon to '+esc(selectedSpecialty)+'</h2><p>We’re building this collection of trusted lectures, essential readings, clinical guidelines and learning resources. Check back soon as this specialty takes shape.</p><span class="cr-coming-note">More resources are on the way.</span></section>';
-meta.textContent=selectedSpecialty+' · curated resources coming soon';
-return;
-}
-var visible=allFiles.filter(function(f){
-return(!query||f.title.toLowerCase().indexOf(query)!==-1||f.path.toLowerCase().indexOf(query)!==-1||f.typeLabel.toLowerCase().indexOf(query)!==-1)&&(activeType==='all'||f.type===activeType)
+var selected=specialties.find(function(x){return x.title===selectedSpecialty})||specialties[0];
+var categoryFiles=allFiles.filter(function(f){return f.categoryFolder===selected.folder});
+var visible=categoryFiles.filter(function(f){
+var matchesQuery=!query||[f.title,f.path,f.typeLabel,f.topicTitle,selectedSpecialty].join(' ').toLowerCase().indexOf(query)!==-1;
+return matchesQuery&&(activeType==='all'||f.type===activeType)
 });
 var groups={};
-visible.forEach(function(f){var folder=f.path.split('/')[0];if(!groups[folder])groups[folder]=[];groups[folder].push(f)});
+visible.forEach(function(f){var folder=f.topicFolder;if(!groups[folder])groups[folder]=[];groups[folder].push(f)});
 var order=Object.keys(groups).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})});
 var html='';
-document.getElementById('cr-results-label').textContent=visible.length+' resource'+(visible.length===1?'':'s')+' found'+(query?' for “'+query+'”':'')+'.';
+var interactiveCases=(activeType==='cases'||activeType==='all')?caseFiles.filter(function(f){return !query||[f.title,f.path,f.typeLabel].join(' ').toLowerCase().indexOf(query)!==-1}):[];
+document.getElementById('cr-specialty-current').textContent=selectedSpecialty;
+document.getElementById('cr-specialty-prev').style.visibility='visible';
+document.getElementById('cr-specialty-next').style.visibility='visible';
+document.getElementById('cr-results-label').textContent=(visible.length+interactiveCases.length)+' resource'+(visible.length+interactiveCases.length===1?'':'s')+' found'+(query?' for “'+query+'”':'')+'.';
 order.forEach(function(folder,i){
-var files=groups[folder],m=topics[folder]||{title:folder.replace(/^\d+\.\s*/,'')},isOpen=openTopic===folder;
-html+='<section class="cr-topic'+(isOpen?' is-open':'')+'" data-topic="'+esc(folder)+'"><button class="cr-topic-card" type="button" aria-expanded="'+isOpen+'"><span class="cr-topic-number">'+String(i+1).padStart(2,'0')+'</span><span class="cr-topic-name">'+esc(m.title)+'</span><span class="cr-topic-count">'+files.length+' resource'+(files.length===1?'':'s')+'</span><span class="cr-topic-chevron" aria-hidden="true">⌄</span></button>';
+var files=groups[folder].slice().sort(function(a,b){return a.title.localeCompare(b.title)});
+var title=folder==='00. general'?'General resources':topicTitle(folder);
+var isOpen=openTopic===folder;
+var blurb=topicBlurbs[folder]||'';
+html+='<section class="cr-topic'+(isOpen?' is-open':'')+'" data-topic="'+esc(folder)+'"><button class="cr-topic-card" type="button" aria-expanded="'+isOpen+'"><span class="cr-topic-number">'+String(i+1).padStart(2,'0')+'</span><span class="cr-topic-name">'+esc(title)+'</span><span class="cr-topic-count">'+files.length+' resource'+(files.length===1?'':'s')+'</span><span class="cr-topic-chevron" aria-hidden="true">⌄</span></button>';
 if(isOpen){
 html+='<div class="cr-topic-body">';
-if(m.blurb)html+='<p class="cr-topic-blurb">'+esc(m.blurb)+'</p>';
+if(blurb)html+='<p class="cr-topic-blurb">'+esc(blurb)+'</p>';
 html+='<div class="cr-resource-list">';
-files.sort(function(a,b){return a.title.localeCompare(b.title)}).forEach(function(f){var ext=f.path.split('.').pop().toLowerCase(),format=ext==='pdf'?'PDF document':(ext==='ppt'||ext==='pptx'?'PowerPoint presentation':(ext==='doc'||ext==='docx'?'Word document':ext.toUpperCase()+' document'));html+='<a class="cr-resource" href="'+pathUrl(f.path)+'" target="_blank" rel="noopener"><span class="cr-resource-title">'+esc(f.title)+'</span><span class="cr-resource-meta"><span class="cr-resource-type">'+esc(f.typeLabel)+'</span><span class="cr-resource-format">'+esc(format)+'</span></span></a>'});
+files.forEach(function(f){
+var ext=f.path.split('.').pop().toLowerCase();
+var format=ext==='pdf'?'PDF document':(ext==='ppt'||ext==='pptx'?'PowerPoint presentation':(ext==='doc'||ext==='docx'?'Word document':(ext==='jpg'||ext==='jpeg'||ext==='png'?'Image':ext.toUpperCase()+' file')));
+html+='<a class="cr-resource" href="'+pathUrl(f.path)+'" target="_blank" rel="noopener"><span class="cr-resource-title">'+esc(f.title)+'</span><span class="cr-resource-meta"><span class="cr-resource-type">'+esc(f.typeLabel)+'</span><span class="cr-resource-format">'+esc(format)+'</span></span></a>'
+});
 html+='</div></div>';
 }
 html+='</section>';
 });
-main.innerHTML=html||'<p class="cr-empty">No resources match these filters. Try a different search term or choose “All”.</p>';
-meta.textContent=allFiles.length+' resources currently available · '+order.length+' topics · '+selectedSpecialty;
+if(interactiveCases.length){
+html+='<section class="cr-topic is-open"><div class="cr-topic-body" style="display:block"><p class="cr-topic-blurb">Interactive clinical cases hosted on MedED.</p><div class="cr-resource-list">';
+interactiveCases.forEach(function(f){html+='<a class="cr-resource" href="'+f.url+'" target="_blank" rel="noopener"><span class="cr-resource-title">'+esc(f.title)+'</span><span class="cr-resource-meta"><span class="cr-resource-type">Interactive case</span></span></a>'});
+html+='</div></div></section>';
+}
+main.innerHTML=html||'<p class="cr-empty">No resources match these filters. Try another search term or choose “All”.</p>';
+meta.textContent=categoryFiles.length+' resources across '+order.length+' topics · '+selectedSpecialty;
 main.querySelectorAll('.cr-topic-card').forEach(function(btn){btn.addEventListener('click',function(){var section=btn.closest('.cr-topic'),folder=section.getAttribute('data-topic');openTopic=openTopic===folder?null:folder;render();if(openTopic)setTimeout(function(){var target=document.querySelector('[data-topic="'+CSS.escape(folder)+'"]');if(target)target.scrollIntoView({behavior:'smooth',block:'start'})},0)})});
 }
 
 fetch(api).then(function(r){return r.json()}).then(function(data){
-if(!data.tree)throw new Error('Unable to read resource tree');
-allFiles=data.tree.filter(function(x){return x.type==='blob'&&x.path.indexOf('/')!==-1&&!/(^|\/)\.DS_Store$/.test(x.path)&&!/(^|\/)(~\$)/.test(x.path)&&!/^(_data|_includes|_layouts|\.devcontainer|assets)(\/|$)/i.test(x.path)}).map(function(x){var type=typeFor(x.path);return{path:x.path,title:titleFromPath(x.path),type:type,typeLabel:type==='slides'?'Slides':type==='textbook'?'Textbook':type==='guidelines'?'Guidelines':type==='readings'?'Reading':type==='cases'?'Cases':'Other'}});renderNav();render();
-}).catch(function(){document.getElementById('cr-meta').textContent='Coming soon';document.getElementById('cr-topics').innerHTML='<section class="cr-coming-soon"><div class="cr-coming-icon" aria-hidden="true">✳</div><h2>Coming soon</h2><p>We’re preparing this collection of medical learning resources. Please check back soon.</p></section>'});
+if(!data.tree)throw new Error('Unable to read resource index');
+allFiles=data.tree.filter(function(x){
+return x.type==='blob'&&x.path.indexOf('clinical seminars/')===0&&!/(^|\\/)\\.DS_Store$/.test(x.path)&&!/(^|\\/)(~\\$)/.test(x.path)
+}).map(function(x){
+var parts=x.path.split('/');
+var categoryFolder=(parts[1]||'').trim();
+var topicFolder=(parts.length>3?(parts[2]||'00. general'):'00. general').trim();
+var type=typeFor(x.path);
+var typeLabel=type==='slides'?'Lectures':type==='textbook'?'Textbook':type==='guidelines'?'Guidelines':type==='readings'?'Articles':type==='cases'?'Cases':'Other';
+return{path:x.path,title:titleFromPath(x.path),type:type,typeLabel:typeLabel,categoryFolder:categoryFolder,topicFolder:topicFolder,topicTitle:topicTitle(topicFolder)}
+});
+renderNav();render();
+}).catch(function(){
+document.getElementById('cr-meta').textContent='Unable to load resources';
+document.getElementById('cr-topics').innerHTML='<section class="cr-coming-soon"><div class="cr-coming-icon" aria-hidden="true">✳</div><h2>Resources could not be loaded</h2><p>Please refresh the page in a moment. The resource index may be temporarily unavailable.</p></section>'
+});
 document.getElementById('cr-search').addEventListener('input',function(e){query=e.target.value.toLowerCase().trim();openTopic=null;render()});
 document.querySelectorAll('.cr-filter').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('.cr-filter').forEach(function(b){b.classList.remove('is-active')});btn.classList.add('is-active');activeType=btn.dataset.type;openTopic=null;render()})});
 
