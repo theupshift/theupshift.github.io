@@ -169,18 +169,18 @@ function titleFromPath(path){return path.split('/').pop().replace(/\.[^.]+$/,'')
 function typeFor(path){
 var p=path.toLowerCase();
 if(/case|osce|clerkship/.test(p))return'cases';
-if(/\\.pptx?$|\\.key$|\\.odp$/.test(p))return'slides';
+if(/\.pptx?$|\.key$|\.odp$/.test(p))return'slides';
 if(/harrison|textbook/.test(p))return'textbook';
-if(/guideline|guidelines|recommendation|who\\d|cdc\\d|mohtz|nashcop|nmcp/.test(p))return'guidelines';
-if(/\\.pdf$|\\.docx?$|\\.odt$|\\.txt$|\\.md$/.test(p))return'readings';
+if(/guideline|guidelines|recommendation|who\d|cdc\d|mohtz|nashcop|nmcp/.test(p))return'guidelines';
+if(/\.pdf$|\.docx?$|\.odt$|\.txt$|\.md$/.test(p))return'readings';
 return'other'
 }
 function pathUrl(path){return base+path.split('/').map(encodeURIComponent).join('/')}
 function topicTitle(folder){
-var name=folder.replace(/^\\d+\\.\\s*/,'').trim().replace(/\\s+/g,' ');
+var name=folder.replace(/^\d+\.\s*/,'').trim().replace(/\s+/g,' ');
 var acronyms={'hiv':'HIV','sti':'STIs','cns infections':'CNS infections','aki':'AKI','ckd':'CKD','vte':'VTE','dic':'DIC','copd':'COPD','abg':'ABG','ards':'ARDS','ecg interpretation':'ECG interpretation','gi bleeding':'GI bleeding','cad':'CAD'};
 if(acronyms[name.toLowerCase()])return acronyms[name.toLowerCase()];
-return name.replace(/\\b[a-z]/g,function(ch){return ch.toUpperCase()})
+return name.replace(/\b[a-z]/g,function(ch){return ch.toUpperCase()})
 }
 function renderNav(){
 var current=document.getElementById('cr-specialty-current');
@@ -253,7 +253,7 @@ main.querySelectorAll('.cr-topic-card').forEach(function(btn){btn.addEventListen
 fetch(api).then(function(r){return r.json()}).then(function(data){
 if(!data.tree)throw new Error('Unable to read resource index');
 allFiles=data.tree.filter(function(x){
-return x.type==='blob'&&x.path.indexOf('clinical seminars/')===0&&!/(^|\\/)\\.DS_Store$/.test(x.path)&&!/(^|\\/)(~\\$)/.test(x.path)
+return x.type==='blob'&&x.path.indexOf('clinical seminars/')===0&&!/(^|\/)\.DS_Store$/.test(x.path)&&!/(^|\/)(~\$)/.test(x.path)
 }).map(function(x){
 var parts=x.path.split('/');
 var categoryFolder=(parts[1]||'').trim();
