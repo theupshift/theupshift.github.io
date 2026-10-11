@@ -138,8 +138,9 @@ var api='https://theupshift.github.io/clinical-rhythm-index.json';
 var base='https://clinicalrythm.github.io/';
 var casesUrl='https://theupshift.github.io/medical/interactivecases/';
 var caseFiles=[{title:'Chronic Diarrhoea — Is It IBD',path:'medical/interactivecases/chronicdiarrhea/',url:'https://theupshift.github.io/medical/interactivecases/chronicdiarrhea/',typeLabel:'Cases'},{title:'Cirrhosis — Longitudinal Clinical Case',path:'medical/interactivecases/cirrhosis/',url:'https://theupshift.github.io/medical/interactivecases/cirrhosis/',typeLabel:'Cases'}];
-var activeType='all',query='',openTopic=null,selectedSpecialty='Infectious Diseases',allFiles=[];
-var specialties=['Infectious Diseases','Cardiology','Nephrology','Gastroenterology','Respiratory Medicine','Neurology','Endocrinology','Haematology'];
+var activeType='all',query='',openTopic=null,selectedSpecialty='Test bank',allFiles=[];
+var specialties=['Test bank','Principles','Malaria','Tuberculosis','HIV','Pneumonia','CNS infections','STIs'];
+var specialtyFolders={'Test bank':'00 testbank','Principles':'01 principles','Malaria':'02 malaria','Tuberculosis':'03 tuberculosis','HIV':'04 hiv','Pneumonia':'05 pneumonia','CNS infections':'06 cns infections','STIs':'07 sti'};
 
 var topics={
 '00. testbank':{title:'Test bank',blurb:'Practice questions and self-assessment material covering the whole semester.'},
@@ -192,13 +193,10 @@ main.innerHTML=matchingCases.length?'<div class="cr-resource-list">'+matchingCas
 meta.textContent=caseFiles.length+' interactive cases · sourced from Medical / Interactive Cases';
 return;
 }
-if(selectedSpecialty!=='Infectious Diseases'){
-main.innerHTML='<section class="cr-coming-soon" aria-labelledby="cr-coming-title"><div class="cr-coming-icon" aria-hidden="true">✳</div><h2 id="cr-coming-title">Coming soon to '+esc(selectedSpecialty)+'</h2><p>We’re building this collection of trusted lectures, essential readings, clinical guidelines and learning resources. Check back soon as this specialty takes shape.</p><span class="cr-coming-note">More resources are on the way.</span></section>';
-meta.textContent=selectedSpecialty+' · curated resources coming soon';
-return;
-}
+
+var selectedFolder=specialtyFolders[selectedSpecialty];
 var visible=allFiles.filter(function(f){
-return(!query||f.title.toLowerCase().indexOf(query)!==-1||f.path.toLowerCase().indexOf(query)!==-1||f.typeLabel.toLowerCase().indexOf(query)!==-1)&&(activeType==='all'||f.type===activeType)
+return f.path.split('/')[0]===selectedFolder&&(!query||f.title.toLowerCase().indexOf(query)!==-1||f.path.toLowerCase().indexOf(query)!==-1||f.typeLabel.toLowerCase().indexOf(query)!==-1)&&(activeType==='all'||f.type===activeType)
 });
 var groups={};
 visible.forEach(function(f){var folder=f.path.split('/')[0];if(!groups[folder])groups[folder]=[];groups[folder].push(f)});
@@ -218,7 +216,7 @@ html+='</div></div>';
 html+='</section>';
 });
 main.innerHTML=html||'<p class="cr-empty">No resources match these filters. Try a different search term or choose “All”.</p>';
-meta.textContent=allFiles.length+' resources currently available · '+order.length+' topics · '+selectedSpecialty;
+meta.textContent=allFiles.length+' resources across '+specialties.length+' topics · showing '+visible.length+' in '+selectedSpecialty;
 main.querySelectorAll('.cr-topic-card').forEach(function(btn){btn.addEventListener('click',function(){var section=btn.closest('.cr-topic'),folder=section.getAttribute('data-topic');openTopic=openTopic===folder?null:folder;render();if(openTopic)setTimeout(function(){var target=document.querySelector('[data-topic="'+CSS.escape(folder)+'"]');if(target)target.scrollIntoView({behavior:'smooth',block:'start'})},0)})});
 }
 
