@@ -1,431 +1,2119 @@
 {
   "tree": [
     {
-      "path": "00. testbank/crQB - EoM OSCE Revision.docx",
+      "path": "clinical seminars/01. infectious/00. testbank/crQB - EoM OSCE Revision.docx",
       "type": "blob"
     },
     {
-      "path": "00. testbank/crQB - infectious & derma discussions.docx",
+      "path": "clinical seminars/01. infectious/00. testbank/crQB - infectious & derma discussions.docx",
       "type": "blob"
     },
     {
-      "path": "00. testbank/crQB - infectious & derma practice exam.docx",
+      "path": "clinical seminars/01. infectious/00. testbank/crQB - infectious & derma practice exam.docx",
       "type": "blob"
     },
     {
-      "path": "00. testbank/crQB - online osces compilations.pdf",
+      "path": "clinical seminars/01. infectious/00. testbank/crQB - online osces compilations.pdf",
       "type": "blob"
     },
     {
-      "path": "00. testbank/crQB - past years sem I osces.pdf",
+      "path": "clinical seminars/01. infectious/00. testbank/crQB - past years sem I osces.pdf",
       "type": "blob"
     },
     {
-      "path": "00. testbank/crQB - sem I unsorted compiled.pdf",
+      "path": "clinical seminars/01. infectious/00. testbank/crQB - sem I unsorted compiled.pdf",
       "type": "blob"
     },
     {
-      "path": "01. principles/buonacera2022 - neutrophil to lymphocyte ratio.pdf",
+      "path": "clinical seminars/01. infectious/01. principles/buonacera2022 - neutrophil to lymphocyte ratio.pdf",
       "type": "blob"
     },
     {
-      "path": "01. principles/gohil2024 - antibiotic stewardship in pneumonia.pdf",
+      "path": "clinical seminars/01. infectious/01. principles/gohil2024 - antibiotic stewardship in pneumonia.pdf",
       "type": "blob"
     },
     {
-      "path": "01. principles/goossens2005 - outpatient antibiotic use and resistance.pdf",
+      "path": "clinical seminars/01. infectious/01. principles/goossens2005 - outpatient antibiotic use and resistance.pdf",
       "type": "blob"
     },
     {
-      "path": "01. principles/haidar2012 - fever of unknown origin.pdf",
+      "path": "clinical seminars/01. infectious/01. principles/haidar2012 - fever of unknown origin.pdf",
       "type": "blob"
     },
     {
-      "path": "01. principles/harrisons2022 - fever.pdf",
+      "path": "clinical seminars/01. infectious/01. principles/harrisons2022 - fever.pdf",
       "type": "blob"
     },
     {
-      "path": "01. principles/oliver2021 - drug resistant pneumonia risk score.pdf",
+      "path": "clinical seminars/01. infectious/01. principles/oliver2021 - drug resistant pneumonia risk score.pdf",
       "type": "blob"
     },
     {
-      "path": "01. principles/pollard2021 - vaccinology and immunization.pdf",
+      "path": "clinical seminars/01. infectious/01. principles/pollard2021 - vaccinology and immunization.pdf",
       "type": "blob"
     },
     {
-      "path": "01. principles/principles.pptx",
+      "path": "clinical seminars/01. infectious/01. principles/principles.pptx",
       "type": "blob"
     },
     {
-      "path": "01. principles/rochon2026 - potentially inappropriate prescribing cascades in older adults.pdf",
+      "path": "clinical seminars/01. infectious/01. principles/rochon2026 - potentially inappropriate prescribing cascades in older adults.pdf",
       "type": "blob"
     },
     {
-      "path": "01. principles/schafer2004 - thrombocytosis.pdf",
+      "path": "clinical seminars/01. infectious/01. principles/schafer2004 - thrombocytosis.pdf",
       "type": "blob"
     },
     {
-      "path": "01. principles/stock2000 - nonmalignant white blood cell disorders.pdf",
+      "path": "clinical seminars/01. infectious/01. principles/stock2000 - nonmalignant white blood cell disorders.pdf",
       "type": "blob"
     },
     {
-      "path": "02. malaria/assey2025 - antimalarial drug resistance markers in tanzania.pdf",
+      "path": "clinical seminars/01. infectious/02. malaria/assey2025 - antimalarial drug resistance markers in tanzania.pdf",
       "type": "blob"
     },
     {
-      "path": "02. malaria/daily2025 - malaria.pdf",
+      "path": "clinical seminars/01. infectious/02. malaria/daily2025 - malaria.pdf",
       "type": "blob"
     },
     {
-      "path": "02. malaria/george2022 - blood transfusion in severe childhood anaemia.pdf",
+      "path": "clinical seminars/01. infectious/02. malaria/george2022 - blood transfusion in severe childhood anaemia.pdf",
       "type": "blob"
     },
     {
-      "path": "02. malaria/harrisons2022 - malaria.pdf",
+      "path": "clinical seminars/01. infectious/02. malaria/harrisons2022 - malaria.pdf",
       "type": "blob"
     },
     {
-      "path": "02. malaria/malaria.pptx",
+      "path": "clinical seminars/01. infectious/02. malaria/malaria.pptx",
       "type": "blob"
     },
     {
-      "path": "02. malaria/manjurano2021 - malaria rapid diagnostic tests in tanzania.pdf",
+      "path": "clinical seminars/01. infectious/02. malaria/manjurano2021 - malaria rapid diagnostic tests in tanzania.pdf",
       "type": "blob"
     },
     {
-      "path": "02. malaria/mohtz2020 - tanzania malaria diagnosis treatment and preventive therapies guidelines.pdf",
+      "path": "clinical seminars/01. infectious/02. malaria/mohtz2020 - tanzania malaria diagnosis treatment and preventive therapies guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "02. malaria/obonyo2012 - clindamycin plus quinine for malaria.pdf",
+      "path": "clinical seminars/01. infectious/02. malaria/obonyo2012 - clindamycin plus quinine for malaria.pdf",
       "type": "blob"
     },
     {
-      "path": "02. malaria/poespoprodjo2023 - malaria.pdf",
+      "path": "clinical seminars/01. infectious/02. malaria/poespoprodjo2023 - malaria.pdf",
       "type": "blob"
     },
     {
-      "path": "02. malaria/who2025 - malaria guidelines.pdf",
+      "path": "clinical seminars/01. infectious/02. malaria/who2025 - malaria guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/beyene2024 - tuberculosis in end stage renal disease.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/beyene2024 - tuberculosis in end stage renal disease.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/chatla2020 - urine lam for tuberculosis in hiv.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/chatla2020 - urine lam for tuberculosis in hiv.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/denning2017 - fungal diagnostics and antimicrobial resistance.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/denning2017 - fungal diagnostics and antimicrobial resistance.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/dorman2021 - four month rifapentine tuberculosis treatment.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/dorman2021 - four month rifapentine tuberculosis treatment.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/harrisons2022 - tuberculosis.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/harrisons2022 - tuberculosis.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/minja2026 - tuberculosis treatment and prevention.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/minja2026 - tuberculosis treatment and prevention.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/munseri2012 - urine lam for hiv associated tuberculosis.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/munseri2012 - urine lam for hiv associated tuberculosis.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/pai2016 - tuberculosis.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/pai2016 - tuberculosis.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/riquelme2006 - ascitic ada for tuberculous peritonitis.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/riquelme2006 - ascitic ada for tuberculous peritonitis.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/sculier2010 - xpert mtb rif in hiv associated tuberculosis.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/sculier2010 - xpert mtb rif in hiv associated tuberculosis.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/trajman2025 - tuberculosis.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/trajman2025 - tuberculosis.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/tuberculosis.pptx",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/tuberculosis.pptx",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/vera2026 - dili approach.doc",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/vera2026 - dili approach.doc",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/wambi2026 - tuberculosis diagnosis.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/wambi2026 - tuberculosis diagnosis.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/who2025 - tuberculosis and comorbidities guidelines.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/who2025 - tuberculosis and comorbidities guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/who2025 - tuberculosis diagnosis guidelines.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/who2025 - tuberculosis diagnosis guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/who2025 - tuberculosis preventive treatment guidelines.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/who2025 - tuberculosis preventive treatment guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/who2025 - tuberculosis treatment and care guidelines.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/who2025 - tuberculosis treatment and care guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "03. tuberculosis/yang2024 - sputum culture conversion in drug resistant tuberculosis.pdf",
+      "path": "clinical seminars/01. infectious/03. tuberculosis/yang2024 - sputum culture conversion in drug resistant tuberculosis.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/brenner2018 - hiv phylogenetics and drug resistance.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/brenner2018 - hiv phylogenetics and drug resistance.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/chang2024 - cryptococcosis diagnosis and management guidelines.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/chang2024 - cryptococcosis diagnosis and management guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/eisinger2019 - undetectable equals untransmittable hiv.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/eisinger2019 - undetectable equals untransmittable hiv.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/evelyna2026 - cryptoccocal meningitis deathaudit.docx",
+      "path": "clinical seminars/01. infectious/04. hiv/evelyna2026 - cryptoccocal meningitis deathaudit.docx",
       "type": "blob"
     },
     {
-      "path": "04. hiv/gamba2026 - hiv treatment landscape.docx",
+      "path": "clinical seminars/01. infectious/04. hiv/gamba2026 - hiv treatment landscape.docx",
       "type": "blob"
     },
     {
-      "path": "04. hiv/gamba2026 - hiv treatment landscape.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/gamba2026 - hiv treatment landscape.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/ghosn2025 - hiv treatment and prevention.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/ghosn2025 - hiv treatment and prevention.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/gulick2026 - antiretroviral therapy.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/gulick2026 - antiretroviral therapy.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/harrisons2022 - human retroviruses and hiv.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/harrisons2022 - human retroviruses and hiv.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/hiv.pptx",
+      "path": "clinical seminars/01. infectious/04. hiv/hiv.pptx",
       "type": "blob"
     },
     {
-      "path": "04. hiv/horberg2024 - hiv primary care guidelines.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/horberg2024 - hiv primary care guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/mbai2024 - hodgkin lymphoma and hiv in tanzania.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/mbai2024 - hodgkin lymphoma and hiv in tanzania.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/mfinanga2015 - cryptococcal screening and adherence support in advanced hiv.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/mfinanga2015 - cryptococcal screening and adherence support in advanced hiv.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/nashcop2024 - tanzania hiv sti and viral hepatitis guidelines.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/nashcop2024 - tanzania hiv sti and viral hepatitis guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/ndashimye2022 - hiv antiretroviral drug resistance.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/ndashimye2022 - hiv antiretroviral drug resistance.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/obeagu2025 - hiv induced anemia.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/obeagu2025 - hiv induced anemia.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/okoye2013 - cd4 t cell depletion in hiv.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/okoye2013 - cd4 t cell depletion in hiv.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/rabbieth2026 - hiv trials.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/rabbieth2026 - hiv trials.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/rambaut2004 - hiv evolution.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/rambaut2004 - hiv evolution.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/tuppoty2026 - hiv treatment trial, resistance.png",
+      "path": "clinical seminars/01. infectious/04. hiv/tuppoty2026 - hiv treatment trial, resistance.png",
       "type": "blob"
     },
     {
-      "path": "04. hiv/who2021 - hiv drug resistance report.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/who2021 - hiv drug resistance report.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/who2021 - hiv prevention, treatment, service and monitoring guidelines.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/who2021 - hiv prevention, treatment, service and monitoring guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/who2022 - cryptococcal disease in hiv guidelines.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/who2022 - cryptococcal disease in hiv guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/who2025 - advanced hiv disease guidelines.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/who2025 - advanced hiv disease guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/who2025 - hiv clinical management recommendations.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/who2025 - hiv clinical management recommendations.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/williams2015 - fingerstick cryptococcal antigen testing.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/williams2015 - fingerstick cryptococcal antigen testing.pdf",
       "type": "blob"
     },
     {
-      "path": "04. hiv/williamson2016 - cryptococcal meningitis.pdf",
+      "path": "clinical seminars/01. infectious/04. hiv/williamson2016 - cryptococcal meningitis.pdf",
       "type": "blob"
     },
     {
-      "path": "05. pneumonia/bai2025 - community acquired pneumonia in adults.pdf",
+      "path": "clinical seminars/01. infectious/05. pneumonia/bai2025 - community acquired pneumonia in adults.pdf",
       "type": "blob"
     },
     {
-      "path": "05. pneumonia/harrisons2022 - pneumonia.pdf",
+      "path": "clinical seminars/01. infectious/05. pneumonia/harrisons2022 - pneumonia.pdf",
       "type": "blob"
     },
     {
-      "path": "05. pneumonia/jones2025 - ats community acquired pneumonia guidelines.pdf",
+      "path": "clinical seminars/01. infectious/05. pneumonia/jones2025 - ats community acquired pneumonia guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "05. pneumonia/kalil2016 - idsa hospital acquired and ventilator associated pneumonia guidelines.pdf",
+      "path": "clinical seminars/01. infectious/05. pneumonia/kalil2016 - idsa hospital acquired and ventilator associated pneumonia guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "05. pneumonia/lucinde2025 - glucocorticoids for community acquired pneumonia.pdf",
+      "path": "clinical seminars/01. infectious/05. pneumonia/lucinde2025 - glucocorticoids for community acquired pneumonia.pdf",
       "type": "blob"
     },
     {
-      "path": "05. pneumonia/mandell2007 - idsa community acquired pneumonia guidelines.pdf",
+      "path": "clinical seminars/01. infectious/05. pneumonia/mandell2007 - idsa community acquired pneumonia guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "05. pneumonia/metlay2019 - idsa community acquired pneumonia guidelines.pdf",
+      "path": "clinical seminars/01. infectious/05. pneumonia/metlay2019 - idsa community acquired pneumonia guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "05. pneumonia/o'malley2023 - community acquired pneumonia.pdf",
+      "path": "clinical seminars/01. infectious/05. pneumonia/o'malley2023 - community acquired pneumonia.pdf",
       "type": "blob"
     },
     {
-      "path": "05. pneumonia/oyarvide2022 - hemoptysis clinical case.pdf",
+      "path": "clinical seminars/01. infectious/05. pneumonia/oyarvide2022 - hemoptysis clinical case.pdf",
       "type": "blob"
     },
     {
-      "path": "05. pneumonia/pneumonia.pptx",
+      "path": "clinical seminars/01. infectious/05. pneumonia/pneumonia.pptx",
       "type": "blob"
     },
     {
-      "path": "06. cns infections/cns infections.pptx",
+      "path": "clinical seminars/01. infectious/06. cns infections/cns infections.pptx",
       "type": "blob"
     },
     {
-      "path": "06. cns infections/harrisons2022 - encephalitis.pdf",
+      "path": "clinical seminars/01. infectious/06. cns infections/harrisons2022 - encephalitis.pdf",
       "type": "blob"
     },
     {
-      "path": "06. cns infections/hasbun2022 - bacterial meningitis.pdf",
+      "path": "clinical seminars/01. infectious/06. cns infections/hasbun2022 - bacterial meningitis.pdf",
       "type": "blob"
     },
     {
-      "path": "06. cns infections/mehra2025 - hiv neurological imaging patterns.pdf",
+      "path": "clinical seminars/01. infectious/06. cns infections/mehra2025 - hiv neurological imaging patterns.pdf",
       "type": "blob"
     },
     {
-      "path": "06. cns infections/sacks2018 - cryptococcus neoformans meningoencephalitis.pdf",
+      "path": "clinical seminars/01. infectious/06. cns infections/sacks2018 - cryptococcus neoformans meningoencephalitis.pdf",
       "type": "blob"
     },
     {
-      "path": "06. cns infections/sakai2021 - hiv related cns mri pattern recognition.pdf",
+      "path": "clinical seminars/01. infectious/06. cns infections/sakai2021 - hiv related cns mri pattern recognition.pdf",
       "type": "blob"
     },
     {
-      "path": "06. cns infections/threlkeld2026 - meningococcal septic shock.pdf",
+      "path": "clinical seminars/01. infectious/06. cns infections/threlkeld2026 - meningococcal septic shock.pdf",
       "type": "blob"
     },
     {
-      "path": "06. cns infections/who2021 - taenia solium neurocysticercosis management guidelines.pdf",
+      "path": "clinical seminars/01. infectious/06. cns infections/who2021 - taenia solium neurocysticercosis management guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "06. cns infections/who2025 - meningitis diagnosis treatment and care guidelines.pdf",
+      "path": "clinical seminars/01. infectious/06. cns infections/who2025 - meningitis diagnosis treatment and care guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "06. cns infections/who2025 - meningitis diagnosis treatment and care practical manual.pdf",
+      "path": "clinical seminars/01. infectious/06. cns infections/who2025 - meningitis diagnosis treatment and care practical manual.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/butler2017 - jarisch-herxheimer reaction.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/butler2017 - jarisch-herxheimer reaction.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/cannon2023 - doxycycline postexposure prophylaxis for stis.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/cannon2023 - doxycycline postexposure prophylaxis for stis.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/cdc2021 - sexually transmitted infections treatment guidelines.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/cdc2021 - sexually transmitted infections treatment guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/cdc2021 - syphilis treatment guidelines.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/cdc2021 - syphilis treatment guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/harrisons2022 - gonococcal infections.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/harrisons2022 - gonococcal infections.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/harrisons2022 - sexually transmitted infections overview and clinical approach.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/harrisons2022 - sexually transmitted infections overview and clinical approach.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/harrisons2022 - syphilis.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/harrisons2022 - syphilis.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/mohtz2018 - sexually transmitted infections guidelines.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/mohtz2018 - sexually transmitted infections guidelines.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/pond2015 - non-gonococcal urethritis diagnosis.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/pond2015 - non-gonococcal urethritis diagnosis.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/stis.pptx",
+      "path": "clinical seminars/01. infectious/07. sti/stis.pptx",
       "type": "blob"
     },
     {
-      "path": "07. sti/vodstrcil2025 - male partner treatment for bacterial vaginosis.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/vodstrcil2025 - male partner treatment for bacterial vaginosis.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/whitley2001 - herpes simplex virus.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/whitley2001 - herpes simplex virus.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/whitley2018 - herpes simplex virus clinical management.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/whitley2018 - herpes simplex virus clinical management.pdf",
       "type": "blob"
     },
     {
-      "path": "07. sti/who2021 - sexually transmitted infections guidelines.pdf",
+      "path": "clinical seminars/01. infectious/07. sti/who2021 - sexually transmitted infections guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /00. testbank/crQB - dermatology.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /00. testbank/huang2017 - illustrated clinical cases 1st ed.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /00. testbank/online2019 - compiled clinical cases.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /00. testbank/rcp2018 -dermatology qbank.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /01. principles/hutchisons2023 - intergumentary system.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /01. principles/rook2022 - dermatology handbook 1st ed.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /01. principles/wilmer2014 - common dermatologic conditions by specialty.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /02. nails & hairs/alessandrini2020 - common causes of hair loss.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /03. eczematous eruptions/eczematous disorders.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /03. eczematous eruptions/foti2021 - eczematous dermatoses.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /03. eczematous eruptions/lehloenya2018 - eczema clinical presentations.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /04. blistering lesions/borradori2022 - bullous pemphigoid management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /04. blistering lesions/chen2010 - bullous pemphigoid and neurological disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /04. blistering lesions/joly2020 - pemphigus management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /04. blistering lesions/welsh2009 - blistering skin conditions.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /04. blistering lesions/yang2019 - pathogenesis of bullous skin diseases.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /05. hiv lesions/afshar2023 - hiv associated dermatologic manifestations.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /05. hiv lesions/homsi2014 - antiviral drug allergy.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /05. hiv lesions/reid2019 - aids related kaposi sarcoma guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /05. hiv lesions/terai2005 - atrophic tongue and candidiasis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /05. hiv lesions/who2014 - hiv associated skin and oral conditions guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /06. papulosquamous  eruptions/armstrong2020 - psoriasis pathophysiology and treatment.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /06. papulosquamous  eruptions/boch2021 - lichen planus.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /06. papulosquamous  eruptions/papulosquamous eruptions.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /06. papulosquamous  eruptions/reich2022 - papulosquamous disorders.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /06. papulosquamous  eruptions/tekin2024 - lichen planus diagnosis and treatment.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /06. papulosquamous  eruptions/weidinger2026 - atopic dermatitis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /07. urticaria & drug eruptions/urticaria and drug eruptions.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /08. systemic to systemic /cutaneous manifestations of disease.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /08. systemic to systemic /leal2021a - skin manifestations of systemic diseases part i.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /08. systemic to systemic /leal2021b - skin manifestations of systemic diseases part ii.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /08. systemic to systemic /schwartz2007 - erythema nodosum and systemic disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /09. cutaneous to cutaneous/systemic manifestations of skin diseases.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /cameron2019 - basal cell carcinoma epidemiology and subtypes.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /ferrándiz2016 - precancerous skin lesions.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /gasper - metachronous squamous cell carcinoma in oculocutaneous albinism/Editorial_review_and_revision_report.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /gasper - metachronous squamous cell carcinoma in oculocutaneous albinism/Figure1_exenteration_histology.png",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /gasper - metachronous squamous cell carcinoma in oculocutaneous albinism/Figure2_clinical_dermoscopy.png",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /gasper - metachronous squamous cell carcinoma in oculocutaneous albinism/Figure3_neck_lesion_histology.png",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /gasper - metachronous squamous cell carcinoma in oculocutaneous albinism/Final Draft.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /gasper - metachronous squamous cell carcinoma in oculocutaneous albinism/Msangi_et_al_Metachronous_SCC_OCA_case_report_REVISED.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /gasper - metachronous squamous cell carcinoma in oculocutaneous albinism/Msangi_et_al_case_report_EndNote_working_copy.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /gasper - metachronous squamous cell carcinoma in oculocutaneous albinism/Msangi_et_al_references_EndNote.ris",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /gasper - metachronous squamous cell carcinoma in oculocutaneous albinism/README.txt",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /gasper - metachronous squamous cell carcinoma in oculocutaneous albinism/gasper - metachronous squamous cell carcinoma in oculocutaneous albinism.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /gasper - metachronous squamous cell carcinoma in oculocutaneous albinism/gasper2026b - metachronous squamous cell carcinoma in oculocutaneous albinism.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /halima2026 - basal cell cancer casereport.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /halima2026 - basal cell cancer grandround.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /heath2023 - basal cell carcinoma diagnosis and management.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /inena2020 - skin cancer in albinism.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /joshi2025 - cutaneous melanoma.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /lazaridou2012 - basal cell carcinoma dermoscopy.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /luba2003 - common benign skin tumors.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /makuru2025 - skin cancer in oculocutaneous albinism.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /nadhiru2026 - cutaneous t lymphoma grandround.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /peris2023 - basal cell carcinoma diagnosis and treatment guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /ramos2020 - skin cancer in oculocutaneous albinism.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /shen-wagner2024 - common benign skin tumors.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /sober1994 - precursors to skin cancer.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /tumors of the skin.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /ulcer description.JPG",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /10. other skin tumours /wysong2023 - cutaneous squamous cell carcinoma.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /11. warts/lacey2020 - low risk hpv and genital warts.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /11. warts/mona2025 - recalcitrant warts acyclovir vs hpv vaccine.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /12. acne/jacob2001 - acne scarring classification and treatment.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /12. acne/santer2024 - acne vulgaris management update.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /12. acne/williams2012 - acne vulgaris.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /13. connective tissue disorders/diaz2023 - cutaneous manifestations of rheumatoid arthritis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /13. connective tissue disorders/goldman2022 - autoimmune connective tissue diseases.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/02. dermatology /timetable.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/01. principles/chou2011 - diagnostic imaging for low back pain high-value care advice from acp.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/01. principles/hutchisons2023 - locomotor system.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/01. principles/radenković2023 - corticosteroids in emergency pathologies review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/02. systemic lupus erythromatosis/fanouriakis2024 - eular update recommendations for management of sle guideline.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/02. systemic lupus erythromatosis/harrisons - systemic lupus erythematosus harrisons chapter.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/02. systemic lupus erythromatosis/nejm2026 - urticarial vasculitis in systemic lupus erythematosus.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/02. systemic lupus erythromatosis/sammaritano2024 - acr screening treatment and management of lupus nephritis guideline.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/02. systemic lupus erythromatosis/siegel2024 - systemic lupus erythematosus review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/02. systemic lupus erythromatosis/ziperstein2026 - woman with vaginal bleeding and anemia sle overlap.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/03. rheumatoid arthritis/harrisons2022 - rheumatoid arthritis chapter.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/03. rheumatoid arthritis/longo2023 - rheumatoid arthritis common origins divergent mechanisms nejm review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/03. rheumatoid arthritis/matteo2023 - rheumatoid arthritis seminar lancet.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/04. systemic sclerosis /delgaldo2024 - eular 2023 update recommendations for treatment of systemic sclerosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/04. systemic sclerosis /harrisons2022 - systemic sclerosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/04. systemic sclerosis /nancy2026 - mysterious somatoform casereport.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/04. systemic sclerosis /salehe2026 - pulmonary embolism in overlap syndrome.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/07. dermatomyositis /sack2021 - dermatomyositis rash and gottron papules case images nejm.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/08. spondyloarthritides/fitzgerald2021 - psoriatic arthritis review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/09. vasculitides/jennette2012 - chapel hill consensus nomenclature of vasculitides.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/09. vasculitides/jennette2013 - chapel hill consensus nomenclature of vasculitides overview.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/09. vasculitides/kitching2020 - anca associated vasculitis review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/03. rheumatology/rheumstudies.JPG",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/01. principles/dull2023 - hypovolemia with peripheral edema pathophysiology.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/01. principles/garcia-lopez2020 - extracting jugular venous pulse from neck photoplethysmography.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/01. principles/hutchinson2023 - cardiovascular system.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/arrigo2020 - acute heart failure pathophysiology diagnosis and management.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/ellison2017 - diuretic treatment in heart failure pharmacology and resistance.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/felker2011 - diuretic strategies in acute decompensated heart failure dose trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/gorter2018 - right heart dysfunction and failure in hfpef mechanisms and management.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/heidenreich2022 - aha acc hfsa heart failure management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/iddy2026 - heart failure landmark trials compendium.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/kober2026 - esc guidelines for the management of heart failure.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/kober2026 - esc heart failure guidelines supplementary data.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/koga2009 - kerley lines in cardiogenic pulmonary edema clinical case.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/mahmood2013 - epidemiology of congestive heart failure framingham heart study.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/makubi2014 - heart failure aetiology and prognosis in tanzania tafef study.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/marwick2018 - ejection fraction pros and cons state of the art review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/mcdonagh2021 - esc acute and chronic heart failure diagnosis and treatment guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/mcdonagh2021 - esc acute and chronic heart failure supplemental trial summary.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/mcdonagh2023 - esc heart failure guidelines focused update.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/mcharo2023 - family caregivers experiences heart failure tanzania.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/mebazaa2022 - strong-hf rapid up-titration of heart failure therapies trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/mullens2018 - diuretics in heart failure with congestion position statement.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/mulugeta2024 - experiences of people living with heart failure ethiopia.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/namukwaya2017 - improving care for people with heart failure uganda.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/toribio2019 - heart failure among people with hiv.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/02. heart failure/yadava2022 - ejection fraction relevance in heart failure management commentary.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/Valvular_Heart_Disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/chillo2023 - rheumatic heart disease prevalence in tanzanian schoolchildren.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/evelyna2026 - rhd journalclub.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/gewitz2015 - revised jones criteria for acute rheumatic fever diagnosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/harrisons2022 - valvular heart disease chapters.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/kimambo2016 - mapping rheumatic heart disease in tanzania.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/kumar2020 - contemporary diagnosis and management of rheumatic heart disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/mahajan2017 - giant left atrium imaging findings case report.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/mutagaywa2023 - interventional versus medical for rheumatic mitral stenosis in tanzania.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/mutarelli2025 - global prevalence and sex differences in rheumatic heart disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/praz2024 - valvular heart disease from mechanisms to management lancet series.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/praz2025 - esc eacts guidelines for management of valvular heart disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/rabieth2026 - rheumatic heart disease clinical reference guide.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/remenyi2012 - whf echocardiographic criteria for rheumatic heart disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/stahli2026 - timing of pci in transcatheter aortic valve implantation.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/vera2026 - arf clerkship.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/vera2026 - vhd clerkship.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/who2024 - prevention and diagnosis of rheumatic fever and rhd guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/03. valvular diseases/zuhlke2026 - acute rheumatic fever and rheumatic heart disease primer.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/04. endocarditis/delgado2023 - esc guidelines for management of infective endocarditis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/04. endocarditis/desimone2026 - infective endocarditis diagnosis and management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/05. ischemic & cad/brady2025 - high risk ecg patterns acute coronary syndrome.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/05. ischemic & cad/gulati2021 - aha acc guideline for evaluation and diagnosis of chest pain.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/05. ischemic & cad/iddy2026 - stemi casepresentation.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/05. ischemic & cad/nikus2010 - ecg classification of acute coronary syndromes.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/05. ischemic & cad/prabhakaran2026 - acute ischemic stroke early management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/05. ischemic & cad/rao2025 - acc aha guideline for management of acute coronary syndromes.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/05. ischemic & cad/sianga2024 - bayesian analysis of cardiovascular diseases in tanzania.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/05. ischemic & cad/turnbull2026 - concurrent acute coronary syndrome and pulmonary embolism case.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/06. arrythmias/albassam2019 - cardiac syncope rational clinical examination review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/06. arrythmias/campbell2025 - atrial fibrillation guideline update summary.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/06. arrythmias/darae2024 - atrial fibrillation review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/06. arrythmias/joglar2023 - aha acc atrial fibrillation diagnosis and management guideline.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/06. arrythmias/link2012 - supraventricular tachycardia differential diagnosis and management.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/06. arrythmias/peng2024 - paroxysmal supraventricular tachycardia diagnosis and management.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/06. arrythmias/wynn2014 - ehra symptom classification for atrial fibrillation validation and modification.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/07. ecg interpretation/gamba2026 - ecg interpretation for starters.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/07. ecg interpretation/liftl2026 - ecg cheatsheet.png",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/07. ecg interpretation/liftl2026 - ecg localization.jpg",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/07. ecg interpretation/liftl2026 - qrs approach.jpg",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/07. ecg interpretation/marriott2022 - practical electrocardiography sae.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/07. ecg interpretation/mutagaywa2024 - lecture 05 ecg course chamber enlargement and test ecgs.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/07. ecg interpretation/patrick2020 - ecg interpretation review with clinical cases.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/07. ecg interpretation/vischer2026 - ecg criteria for lvh in hypertensive black africans.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/08. hypertension/barbosa2025 - hypertensive heart disease structural and functional continuum.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/08. hypertension/bellicini2025 - hypertensive heart disease is it really a pathology.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/08. hypertension/bress2024 - management of elevated blood pressure in the acute care setting.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/08. hypertension/herbst2021 - patient experiences and perspectives on hypertension uganda.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/08. hypertension/jones2025 - aha  hypertension prevention evaluation and management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/08. hypertension/lynch2019 - patient experiences with and attitudes towards hypertension uganda.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/08. hypertension/manavalan2021 - hypertension care for people with hiv in tanzania.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/08. hypertension/mcevoy2024 - esc elevated blood pressure and hypertension management guideline.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/08. hypertension/mcevoy2024 - esc guidelines for the management of elevated blood pressure and hypertension supplementary data.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/08. hypertension/pfeffer2016 - lessons in uncertainty and humility clinical trials involving hypertension.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/08. hypertension/sprint2015 - intensive versus standard blood pressure control.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/08. hypertension/unger2020 - ish global hypertension practice guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/bauersachs2019 - esc peripartum cardiomyopathy pathophysiology and management statement.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/coats2015 - cardiopulmonary exercise testing prognosis in hypertrophic cardiomyopathy.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/davis2020 - peripartum cardiomyopathy state of the art review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/domínguez2024 - esc alcohol induced cardiomyopathy update.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/lewis2026 - aficamten vs metoprolol exercise performance in obstructive hypertrophic cardiomyopathy.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/maro2006 - clinical and echocardiographic study of hypertrophic cardiomyopathy in tanzania.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/maron2022 - diagnosis and evaluation of hypertrophic cardiomyopathy state of the art review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/masanja2026 - aficamten vs metoprolol journalclub.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/masri2024 - standard of care medication withdrawal with aficamten in obstructive hcm forest-hcm.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/ommen2024 - aha acc hypertrophic cardiomyopathy management guideline.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/sigauke2024 - peripartum cardiomyopathy comprehensive contemporary review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/sliwa2025 - peripartum cardiomyopathy seminar lancet.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/09. cardiomyopathies/spertus2020 - interpreting the kansas city cardiomyopathy questionnaire review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/10. imaging/belde2025 - cardiothoracic ratio measurement methods on chest x-rays systematic review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/10. imaging/bradfield2026 - 12 lead ecg anatomy.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/10. imaging/damberg2017 - chest x ray in aortic disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/10. imaging/pan2021 - prognostic value of chest x-ray in patients hospitalized for heart failure.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/10. imaging/sonohealth2020 - double probe ultrasound d2cp d2cl specifications.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/10. imaging/studler2008 - accuracy of chest radiographs in emergency diagnosis of heart failure.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/10. imaging/theechojournal2026 - adult transthoracic echocardiography imaging windows.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/04. cardiology/cardiostudies.JPG",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/00. testbank/crQB respiratory OSCE stations.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/01. principles/baraka2026 - indication and delivery of oxygen therapy.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/01. principles/barnett2022 - tsan statement on acute oxygen use.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/01. principles/hutchison2023 - respiratory system.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/01. principles/kamara2025 - particulate matter and respiratory health among schoolchildren in dar es salaam.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/01. principles/moledina2026 - chest radiology bedside.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/01. principles/o’driscoll2017 - bts guideline for oxygen use in adults.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/01. principles/sanja2024 - ers ats on interpreting routine lung function tests.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/02. asthma/gina2025 - asthma management and prevention full guideline.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/02. asthma/gina2025 - asthma management and prevention summary guide.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/02. asthma/porsbjerg2023 - asthma review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/02. asthma/postma2015 - asthma copd overlap syndrome.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /albert2011 - azithromycin for prevention of copd exacerbations.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /celli2021 - rome proposal copd exacerbation definition and severity.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /ekstrom2024 - long term oxygen therapy 24 vs 15 hours severe hypoxemia.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /ferguson2018 - triple therapy vs dual therapy in symptomatic copd kronos trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /finney2026 - copd diagnosis management and respiratory infections lecture.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /gold2026 - copd diagnosis management and prevention full guideline.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /gold2026 - copd diagnosis management and prevention pocket guide.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /harrisons2022 - chronic obstructive pulmonary disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /laube2011 - inhalation therapy devices consensus statement.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /leuppi2013 - short vs conventional glucocorticoid therapy copd exacerbations reduce trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /mMRC Score.JPG",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /martinez2015 - roflumilast for copd exacerbations react trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /miller2005 - spirometry standardisation.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /quintero2022 - biomass smoke induced copd mechanisms review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /spruit2023 - pulmonary rehabilitation ats ers statement.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /stenton2008 - mrc breathlessness scale.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /stolz2022 - lancet commission towards elimination of copd.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/03. copd /wedzicha2016 - indacaterol glycopyrronium vs salmeterol fluticasone for copd flame trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/04. bronchiectasis/Janeth Mendrad Grand Prep.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/04. bronchiectasis/chalmers2025 - ers bronchiectasis management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/04. bronchiectasis/contarini2018 - bronchiectasis case based investigation and management.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/04. bronchiectasis/harrisons2022 - bronchiectasis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/04. bronchiectasis/hill2017 - bronchiectasis exacerbation consensus definition.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/04. bronchiectasis/polverino2017 - ers bronchiectasis management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/06. embolism/bikdeli2026 - aha acc pulmonary embolism guideline overview.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/06. embolism/creager2026 - aha acc pulmonary embolism guideline full.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/06. embolism/esc2019 - esc pulmonary embolism diagnosis and management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/06. embolism/muntaziri2026 - pulmonary embolism case ecg s1q3t3.JPG",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/06. embolism/sherman2025 - pulmonary embolism westermark sign case.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/06. embolism/tripodi2026 - d dimer clinical use guidance.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/06. embolism/wells2001 - clinical model and d dimer for pulmonary embolism.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/07. lung abscess/harrisons2022 - lung abscess.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/08. post tb sequela/alhindawi2026 - post tuberculosis lung disease review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/08. post tb sequela/auld2024 - pathogenesis of post tuberculosis lung disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/08. post tb sequela/bisson2026 - post tuberculosis lung disease case definition.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/08. post tb sequela/meghji2025 - post tuberculosis lung disease prevention diagnosis care.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/08. post tb sequela/sarkar2016 - tuberculosis associated copd.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/09. interstitial disease/antoniou2024 - ers eular ctd ild guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/09. interstitial disease/dekel2018 - interstitial lung disease practical approach.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/09. interstitial disease/harrisons2022 - interstitial lung disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/09. interstitial disease/raghu2022 - ats ipf and progressive pulmonary fibrosis guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/09. interstitial disease/shayo2013 -  interstitial lung disease.ppt",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/09. interstitial disease/vera2026 -  ild clerkship.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/09. interstitial disease/wells2013 - bts interstial lung diseases guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/10. lung cancer/esmo2021 - lung and thymic carcinoids esmo guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/10. lung cancer/esmo2021 - malignant pleural mesothelioma esmo guidelines supplement.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/10. lung cancer/esmo2021 - malignant pleural mesothelioma esmo guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/10. lung cancer/esmo2021 - small cell lung cancer esmo guidelines supplement.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/10. lung cancer/esmo2021 - small cell lung cancer esmo guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/10. lung cancer/esmo2023 - non oncogene addicted metastatic nsclc esmo guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/10. lung cancer/esmo2023 - oncogene addicted metastatic nsclc esmo guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/10. lung cancer/esmo2025 - early and locally advanced nsclc esmo guidelines supplement.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/10. lung cancer/esmo2025 - early and locally advanced nsclc esmo guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/10. lung cancer/harrisons - neoplasms of the lung.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/10. lung cancer/mins2005 - hornersyndrome.jpg",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/11. abg/ahmed2026 - abg normal values.JPG",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/12. effusion/bedawi2023 - ers ests statement on pleural infection management.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/12. effusion/feller-kopman2018 - pleural disease review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/12. effusion/roberts2023 - bts pleural disease guideline summary.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/12. effusion/sundaralingam2024 - ers statement on benign pleural effusions.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/12. effusion/wilcox2014 - exudative pleural effusion diagnosis review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/13. ards/guérin2013 - prone positioning in severe ards.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/05. pulmonology/pulmostudies.JPG",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/01. principles/hutchinson2023 - gastrointestinal system.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/01. principles/lukic2021 - chronic abdominal pain approach.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/02. chronic diarrhoea/lewis1997 - stool form scale as a useful guide to Intestinal transit time.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/02. chronic diarrhoea/rubiotapia2023 - celiac disease diagnosis and management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/angeli2009 - combined vs sequential diuretics for cirrhotic ascites trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/bajaj2018 - ppi gut microbiota and readmissions in cirrhosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/bajaj2026 - hepatic encephalopathy diagnosis management and prevention guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/biggins2021 - aasld ascites sbp and hrs guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/carvalho2023 - pathophysiology of hepatosplenic schistosomiasis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/defranchis2022 - baveno vii portal hypertension consensus.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/francis2017 - ethanol concentration of traditional alcoholic beverages in tanzania.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/harrisons2022 - approach to liver disease and liver tests.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/kaplan2024 - aasld portal hypertension and varices guidance.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/kwo2016 - acg evaluation of abnormal liver chemistries guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/miwa2026 - covert hepatic encephalopathy review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/niederau2008 - cutaneous signs of liver fibrosis and cirrhosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/philips2016 - oesophageal and gastric varices classification and grading.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/santos2003 - spironolactone vs combo diuretics for cirrhotic ascites trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/singal2023 - aasld hepatocellular carcinoma guidance.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/udell2012 - clinical exam for detecting cirrhosis meta-analysis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/vera2026 - cirrhosis clerkship.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/vera2026 - paracentesis.doc",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/villani2022 - pseudocirrhosis in metastatic cancers review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/vilstrup2014 - aasld easl hepatic encephalopathy guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/wijdicks2016 - hepatic encephalopathy review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/03. cirrhosis/zulkifly2023 - non-cirrhotic portal hypertension review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/04. viral hepatitis/ali2025 - aga hbv reactivation prevention and management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/04. viral hepatitis/bhattacharya2023 - aasld idsa hepatitis c guidance update.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/04. viral hepatitis/ghany2025 - aasld chronic hepatitis b treatment guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/04. viral hepatitis/vera2026 - viral hepatitis clerkship.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/04. viral hepatitis/wai2003 - ast to platelet ratio index for hepatitis c fibrosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/04. viral hepatitis/who2026 - consolidated hepatitis b and c prevention testing treatment guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/05. peptic ulcers/chey2024 - helicobacter pylori treatment guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/05. peptic ulcers/correa2011 - the gastric precancerous cascade.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/05. peptic ulcers/jaka2019 - helicobacter pylori mutations  resistance in tanzania.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/06. gi bleeding/alzoubaidi2018 - non-variceal upper gi bleeding management review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/06. gi bleeding/bernard1999 - antibiotic prophylaxis in cirrhotic gi bleeding meta-analysis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/06. gi bleeding/dina2025 - rare causes of upper gi bleeding review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/06. gi bleeding/laine2021 - acg upper gi and ulcer bleeding guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/06. gi bleeding/vera2026 - gi bleed clerkship.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/08. pancreatitis/trikudanathan2024 - diagnosis and management of acute pancreatitis review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/09. liver abscess/kumar2024 - amebic liver abscess; an update.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/10. nutrition/yousaf2019 - hypotension vitamin b12 deficiency cyanocobalamin.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/06. gastroenterology/gastrostudies.JPG",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /01. principles/goodman2022 - pharmacotherapy of neoplastic disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /01. principles/harrisons2022 - interpreting peripheral smear.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /01. principles/hoffbrand2016 - essential haematology.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /01. principles/web2026 - peripheral blood smear interpretation guide.png",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /02. vte/galli2026 - bleeding management in oral anticoagulant therapy review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /02. vte/rocca2026 - anticoagulation reversal antidotes review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /03. acute leukemia/arber2017 - cap ash acute leukemia diagnostic workup guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /04. dic/armstrong2007 - pharmacology of hemostasis and thrombosis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /04. dic/levi2019 - disseminated intravascular coagulation review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /05. thrombocytopenia/metcalf2025 - aabb platelet transfusion guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /06. myelodysplasia/anand2026 - polycthemia evaluation.jpg",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /hemastudies.JPG",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/07. hema-oncology /oncostudies.JPG",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/01. principles/harrisons2022 - approach to renal and urinary tract disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/01. principles/ortiz2025 - preventing chronic kidney disease conference report.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/02. aki/harrisons2022 - acute kidney injury.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/02. aki/kdigo2012 - acute kidney injury guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/02. aki/kdigo2026 - acute kidney injury and acute kidney disease guidelines draft.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/02. aki/med438 - aki.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/02. aki/ostermann2025 - acute kidney injury review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/02. aki/vera2026 - aki clerkship.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/ashby2019 - haemodialysis clinical practice guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/babitt2021 - kdigo optimal anemia management conference.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/chadban2020 - kdigo kidney transplantation candidate evaluation guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/chen2019 - chronic kidney disease diagnosis and management review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/clase2019 - kdigo potassium homeostasis and dyskalemia management.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/greenberg2021 - hemodialysis emergencies core curriculum.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/harrisons2022 - chronic kidney disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/heerspink2020 - dapagliflozin in chronic kidney disease trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/herrington2026 - chronic kidney disease lancet seminar.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/kdigo2017 - ckd mineral and bone disorder guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/kdigo2024 - ckd evaluation and management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/kdigo2024 - ckd mbd treatment framework.png",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/kdigo2026 - anemia in ckd management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/muhudi2026 -tetrasodium edta central venous catheter journalclub.pptx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/nyagawa2026 - kidney donation willingness tanzania study.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/03. ckd/ornowska2026 - tetrasodium edta central venous catheter trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/04. glomerulopathies/barocas2025 - aua microhematuria evaluation and follow-up guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/04. glomerulopathies/cui2024 - anti-nephrin autoantibodies in podocytopathies.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/04. glomerulopathies/harrisons2022 - glomerular diseases, transplantation and polycystic kidney disease.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/04. glomerulopathies/kdigo2021 - blood pressure management in chronic kidney disease guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/04. glomerulopathies/kdigo2021 - glomerular diseases management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/04. glomerulopathies/kdigo2022 - diabetes management in chronic kidney disease guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/04. glomerulopathies/kdigo2024 - clinical practice guideline for the management of lupus nephritis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/05. acid-bases/jung2019 - metabolic acidosis diagnosis and management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/06. electrolytes/kamel2026 - hyponatremia management review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/07. onconephrology/yarandi2023 - onconephrology core curriculum.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/08. renal replacement/bramania2020 - malnutrition inflammation complex syndrome in haemodialysis tanzania.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/08. renal replacement/golper2014 - hemodialysis core curriculum.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/08. renal replacement/liu2026 - microinflammatory state and cardiac valvular calcification in hemodialysis.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/08. renal replacement/rosner2022 - uremic encephalopathy.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/08. renal replacement/starrtaki2020 - renal replacement therapy timing in acute kidney injury appendix.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/08. renal replacement/starrtaki2020 - timing of renal replacement therapy in acute kidney injury.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/08. nephrology/nephrostudies.JPG",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/01. principles/lees2019 - noticing in neurology clinical observation.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/02. movement /fernandez2026 - tavapadon adjunctive parkinson disease tempo3 trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/03. stroke/ahmed2025 - intracranial hemorrhage segmentation and classification ct deep learning.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/03. stroke/campsrenom2026 - reperfusion guided blood pressure after endovascular stroke trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/03. stroke/danna2026 - doac continuation vs switching after breakthrough stroke.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/03. stroke/dusenbury2020 - clinical localization of stroke.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/03. stroke/furie2026 - secondary prevention after ischemic stroke nejm review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/03. stroke/greenberg2022 - spontaneous intracerebral hemorrhage management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/03. stroke/hilkens2024 - stroke lancet seminar review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/03. stroke/liu2026 - tenecteplase and tirofiban acute ischemic stroke trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/03. stroke/yao2026 - minocycline acute ischemic stroke emphasis trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/04. demylinating/bhattacharyya2026 - tumefactive multiple sclerosis case report nejm.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/05. epilepsy/beghi2010 - ilae acute symptomatic seizure definition guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/05. epilepsy/fisher2017 - ilae seizure classification user manual.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/05. epilepsy/fisher2017b - ilae operational seizure type classification.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/05. epilepsy/krumholz2015 - ilae unprovoked first seizure management guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/05. epilepsy/scheffer2017 - ilae epilepsy classification framework.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/05. epilepsy/scheffer2026 - transdermal cannabidiol gel pediatric epileptic encephalopathy trial.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/05. epilepsy/tatum2018 - clinical utility eeg epilepsy diagnosis monitoring guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/05. epilepsy/vera2026 - epilepsy clerkship.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/06. balance/drachman1972 - dizzy patient diagnostic approach classic.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/07. spine/vera2026 - ces clerckship.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/09. neurology/08. peripheral neuropathy/hass2026 - peripheral neuropathy hospital approach.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/ada2026 - standards of care in diabetes guidelines.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/ada2026 - standards of care in diabetes slides.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/clarke2017 - pioglitazone improves left ventricular diastolic function in type 2 diabetes.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/defronzo1988 - the triumvirate beta cell muscle liver in niddm.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/defronzo2009 - from the triumvirate to the ominous octet in type 2 diabetes.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/defronzo2013 - pathophysiologic approach to therapy in newly diagnosed type 2 diabetes.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/dimeglio2018 - type 1 diabetes review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/frias2021 - tirzepatide versus semaglutide in type 2 diabetes.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/grade2022 - glycemia reduction in type 2 diabetes glycemic outcomes.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/guo2026 - hrs-7535 oral glp-1 receptor agonist for type 2 diabetes.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/harrisons - diabetes mellitus diagnosis classification and pathophysiology.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/holman2008 - 10 year follow up of intensive glucose control in type 2 diabetes.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/ukpds1998 - metformin for intensive glucose control in overweight type 2 diabetes.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/02. diabetes/umpierrez2024 - hyperglycemic crises dka hhs adults consensus report.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/behnke2022 - rare case of pseudohypoparathyroidism.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/ebrahim2025 - late onset pseudohypoparathyroidism case report.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/liverpool2026 - bmj case reports institutional fellowship code.png",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/masanja2026 - pseudohypoparathyroidism hypocalcaemia tetany tanzania case report/Adaptation_report_Journal_of_Rare_Diseases.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/masanja2026 - pseudohypoparathyroidism hypocalcaemia tetany tanzania case report/Cover_letter_JRareDis.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/masanja2026 - pseudohypoparathyroidism hypocalcaemia tetany tanzania case report/George_et_al_PHP_case_report_JRareDis_EndNote_working_copy.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/masanja2026 - pseudohypoparathyroidism hypocalcaemia tetany tanzania case report/George_et_al_PHP_case_report_JRareDis_REVISED.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/masanja2026 - pseudohypoparathyroidism hypocalcaemia tetany tanzania case report/George_et_al_references_EndNote_JRareDis.ris",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/masanja2026 - pseudohypoparathyroidism hypocalcaemia tetany tanzania case report/Online_Resource_1_CARE_checklist.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/masanja2026 - pseudohypoparathyroidism hypocalcaemia tetany tanzania case report/casereport bmj draft1.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/masanja2026 - pseudohypoparathyroidism hypocalcaemia tetany tanzania case report/casereport bmj draft1.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/masanja2026 - pseudohypoparathyroidism hypocalcaemia tetany tanzania case report/george et al PHP casereport - JRareDis Draft.docx",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/masanja2026 - pseudohypoparathyroidism hypocalcaemia tetany tanzania case report/george et al PHP casereport - JRareDis Draft.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/masanja2026 - pseudohypoparathyroidism hypocalcaemia tetany tanzania case report/masanja2026 - pseudohypoparathyroidism hypocalcaemia tetany tanzania case report.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/thomas - pseudohypoparathyroidism familial case report.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/04. calcium/wamalwa2025 - pseudohypoparathyroidism case report.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/05. hyperthyroidism/sharma2019 - thyrotoxicosis hyperthyroidism diagnosis management review.pdf",
+      "type": "blob"
+    },
+    {
+      "path": "clinical seminars/10. endocrinology/endostudies.JPG",
       "type": "blob"
     }
   ]
