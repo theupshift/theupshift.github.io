@@ -127,6 +127,25 @@
 <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
+
+<!-- The Upshift site navigation: overlays the simulator without changing its layout. -->
+<nav class="upshift-floating-nav" id="upshift-floating-nav" aria-label="Main site navigation">
+  <div class="upshift-nav-left">
+    <a href="/search/" aria-label="Search the site" title="Search">⌕</a>
+  </div>
+  <div class="upshift-nav-center"><a href="/" aria-label="The Upshift home">The Upshift</a></div>
+  <div class="upshift-nav-right">
+    <div class="upshift-site-menu" id="upshift-site-menu">
+      <button class="upshift-site-menu-toggle" id="upshift-site-menu-toggle" type="button" aria-expanded="false" aria-controls="upshift-site-menu-panel">Menu</button>
+      <div class="upshift-site-menu-panel" id="upshift-site-menu-panel">
+        <a href="/words/">About</a><span aria-hidden="true">·</span>
+        <a href="/">Writings</a><span aria-hidden="true">·</span>
+        <a href="/work/">Index</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
 <div class="app" id="app">
 
   <header class="masthead">
@@ -2539,6 +2558,53 @@
 </dialog>
 
 <noscript><p style="padding:16px">The figures require JavaScript. The text can be read without it.</p></noscript>
+
+<script>
+(() => {
+  const nav = document.getElementById('upshift-floating-nav');
+  const menu = document.getElementById('upshift-site-menu');
+  const toggle = document.getElementById('upshift-site-menu-toggle');
+  const panel = document.querySelector('.panel');
+  if (!nav || !menu || !toggle) return;
+  let hideTimer;
+  let lastWindowY = window.scrollY;
+  let lastPanelY = panel ? panel.scrollTop : 0;
+  const closeMenu = () => {
+    menu.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+  const hideNav = () => {
+    nav.classList.remove('is-visible');
+    closeMenu();
+  };
+  const showNavForEightSeconds = () => {
+    nav.classList.add('is-visible');
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(hideNav, 8000);
+  };
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', (event) => {
+    if (!menu.contains(event.target)) closeMenu();
+  });
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (lastWindowY > 8 && y <= 8) showNavForEightSeconds();
+    if (y > lastWindowY + 4) closeMenu();
+    lastWindowY = y;
+  }, { passive: true });
+  if (panel) panel.addEventListener('scroll', () => {
+    const y = panel.scrollTop;
+    if (lastPanelY > 8 && y <= 8) showNavForEightSeconds();
+    if (y > lastPanelY + 4) closeMenu();
+    lastPanelY = y;
+  }, { passive: true });
+  showNavForEightSeconds();
+})();
+</script>
+
 <script type="module" src="src/main.js"></script>
 </body>
 </html>
