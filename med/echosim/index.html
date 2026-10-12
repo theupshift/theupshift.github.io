@@ -5,73 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101c2c">
   <title>EchoSim — Interactive Echocardiography | MedED</title>
-  <meta name="description" content="Explore an interactive, illustrated guide to echocardiography, ultrasound physics, standard views, Doppler, cardiac physiology and disease.">
+  <meta name="description" content="Launch the interactive echocardiography learning resource, including videos, simulations, and chapter navigation.">
+  <meta http-equiv="refresh" content="1;url=https://clinicalrythm.github.io/echoclass/">
   <style>
     :root{color-scheme:dark;--bg:#0b1421;--panel:#111f30;--line:#26394d;--text:#edf4fb;--muted:#a8b9cb;--accent:#65d4c4}
-    *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    body{display:flex;flex-direction:column}
-    .topbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:14px clamp(16px,3vw,36px);border-bottom:1px solid var(--line);background:#0e1a29}
-    .brand{display:flex;align-items:center;gap:12px;min-width:0}
-    .mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:rgba(101,212,196,.12);border:1px solid rgba(101,212,196,.35);color:var(--accent);font-size:21px}
-    .brand strong{display:block;font-size:14px;letter-spacing:.04em}
-    .brand span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
-    .actions{display:flex;gap:8px;align-items:center}
-    a,.button{color:var(--text);text-decoration:none;font:inherit;font-size:13px;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:var(--panel);cursor:pointer;white-space:nowrap}
-    a:hover,.button:hover{border-color:var(--accent)}
-    .intro{display:flex;align-items:end;justify-content:space-between;gap:24px;padding:22px clamp(16px,3vw,36px) 18px;max-width:1500px;width:100%;margin:0 auto}
-    .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--accent);font-weight:700;margin:0 0 8px}
-    h1{font-size:clamp(25px,3vw,38px);letter-spacing:-.04em;line-height:1.05;margin:0}
-    .summary{color:var(--muted);font-size:14px;line-height:1.6;max-width:680px;margin:10px 0 0}
-    .status{font-size:11px;color:var(--muted);border:1px solid var(--line);padding:7px 10px;border-radius:999px;white-space:nowrap}
-    main{padding:0 clamp(10px,2vw,24px) 18px;flex:1}
-    .frame-shell{max-width:1600px;margin:0 auto;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#0a111c;box-shadow:0 20px 60px rgba(0,0,0,.22)}
-    .frame-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px;background:var(--panel);border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}
-    .frame-head strong{color:var(--text);font-weight:600}
-    iframe{display:block;width:100%;height:calc(100vh - 220px);min-height:580px;border:0;background:#f4f1e9}
-    .foot{max-width:1600px;width:100%;margin:0 auto;padding:0 clamp(16px,3vw,36px) 22px;color:var(--muted);font-size:12px;line-height:1.6}
-    .foot a{padding:0;border:0;background:none;color:var(--accent);font-size:12px;text-decoration:underline;white-space:normal}
-    @media(max-width:680px){.topbar{align-items:flex-start}.brand span{max-width:155px}.actions a{display:none}.intro{align-items:flex-start;flex-direction:column;gap:12px}.status{white-space:normal}.frame-shell{border-radius:10px}iframe{height:calc(100vh - 240px);min-height:520px}.frame-head{font-size:11px}}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at top,#172b3c,var(--bg) 65%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    main{width:min(680px,100%);padding:clamp(24px,5vw,44px);border:1px solid var(--line);border-radius:22px;background:rgba(17,31,48,.94);box-shadow:0 24px 80px #0005}
+    .mark{display:grid;place-items:center;width:52px;height:52px;border:1px solid #65d4c455;border-radius:16px;background:#65d4c41a;color:var(--accent);font-size:27px}
+    .eyebrow{margin:24px 0 8px;color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+    h1{margin:0;font-size:clamp(30px,6vw,46px);line-height:1.05;letter-spacing:-.04em}
+    p{color:var(--muted);font-size:15px;line-height:1.7}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    a{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border:1px solid var(--line);border-radius:11px;background:#17283a;color:var(--text);font-size:14px;font-weight:650;text-decoration:none}
+    a.primary{background:var(--accent);border-color:var(--accent);color:#09201f}
+    a:hover{filter:brightness(1.08)}.note{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:12px}
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="/med/" aria-label="MedED home" style="padding:0;border:0;background:none">
-      <span class="mark" aria-hidden="true">♥</span>
-      <span><strong>MEDED / ECHOSIM</strong><span>Clinical learning · Cardiac ultrasound</span></span>
-    </a>
-    <div class="actions">
-      <a href="/med/">← Back to MedED</a>
-      <button class="button" id="fullscreen" type="button">Expand simulator ↗</button>
-    </div>
-  </header>
-  <section class="intro">
-    <div>
-      <p class="eyebrow">Interactive learning environment</p>
-      <h1>EchoSim: The Heart by Ultrasound</h1>
-      <p class="summary">Explore ultrasound physics, standard echocardiographic views, Doppler, cardiac physiology and haemodynamics through interactive visual models. Use the chapter navigator inside the simulator to move through the material.</p>
-    </div>
-    <div class="status">Educational use · Simulated models, not patient images</div>
-  </section>
   <main>
-    <section class="frame-shell" aria-label="Interactive echocardiography simulator">
-      <div class="frame-head"><strong>Interactive echocardiography resource</strong><span>Use the embedded controls to navigate chapters</span></div>
-      <iframe id="simulator" src="https://clinicalrythm.github.io/echoclass/" title="The Heart by Ultrasound interactive echocardiography guide" loading="eager" allow="fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
-    </section>
+    <div class="mark" aria-hidden="true">♥</div>
+    <p class="eyebrow">MedED · Interactive learning</p>
+    <h1>EchoSim</h1>
+    <p>Opening <strong>The Heart by Ultrasound</strong> — the complete interactive echocardiography resource, with its chapter navigation, videos, and simulations.</p>
+    <p>If you are not redirected automatically, use the button below.</p>
+    <div class="actions">
+      <a class="primary" href="https://clinicalrythm.github.io/echoclass/">Open EchoSim resource ↗</a>
+      <a href="/med/">← Back to MedED</a>
+    </div>
+    <p class="note">The source host prevents its page from being displayed inside another site's embedded frame. EchoSim therefore opens directly on its original host so its media and interactive features can load normally. Educational use only.</p>
   </main>
-  <footer class="foot">
-    <p>Learning resource by <a href="https://github.com/clinicalrythm/clinicalrythm.github.io/tree/main/echoclass" target="_blank" rel="noopener noreferrer">Clinical Rhythm · echoclass source</a>. This MedED page provides access to the original interactive resource; the simulator and its educational content are hosted by the source project. For the best experience, enable JavaScript.</p>
-  </footer>
-  <script>
-    document.getElementById('fullscreen').addEventListener('click', async function () {
-      const frame = document.getElementById('simulator');
-      try {
-        if (document.fullscreenElement) await document.exitFullscreen();
-        else await frame.requestFullscreen();
-      } catch (e) {
-        window.open(frame.src, '_blank', 'noopener');
-      }
-    });
-  </script>
+  <script>window.location.replace("https://clinicalrythm.github.io/echoclass/");</script>
 </body>
 </html>
