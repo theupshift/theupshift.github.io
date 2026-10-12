@@ -155,13 +155,21 @@ var specialties=[
 ];
 var topicBlurbs={
 '00. testbank':'Practice questions, OSCE revision and self-assessment. Use these to test clinical reasoning, then revisit the source material for explanations.',
-'01. principles':'Approach to fever and suspected infection: assess severity first, identify the likely source, obtain appropriate specimens, and start timely empiric treatment when indicated.',
-'02. malaria':'Malaria: recognise severe disease, interpret rapid diagnostic tests and microscopy in context, assess for complications, and choose treatment according to severity and current national guidance.',
-'03. tuberculosis':'Tuberculosis: pulmonary and extrapulmonary presentations, diagnostic testing, drug-susceptible and drug-resistant disease, treatment monitoring, adverse effects, and TB/HIV co-management.',
+'01. principles':'Approach to fever and suspected infection: assess severity first, identify the likely source, obtain appropriate specimens, apply infection prevention measures, and start timely empiric treatment when indicated.',
+'02. malaria':'Malaria: recognise uncomplicated and severe disease, interpret rapid diagnostic tests and microscopy, assess complications, and select treatment according to severity and current national guidance.',
+'03. tuberculosis':'Tuberculosis: pulmonary and extrapulmonary presentations, diagnostic testing, drug-susceptible and drug-resistant disease, treatment monitoring, adverse effects, infection prevention, and TB/HIV co-management.',
 '04. hiv':'HIV: testing and staging, antiretroviral therapy, opportunistic infections, prevention, treatment monitoring, and important drug interactions.',
 '05. pneumonia':'Pneumonia: assess severity and need for admission, distinguish likely causes, select investigations and empiric antibiotics appropriately, and review response and complications.',
-'06. cns infections':'CNS infections: recognise meningitis and encephalitis as emergencies, perform investigations safely, and avoid delaying empiric antimicrobials when clinically indicated.',
-'07. sti':'Sexually transmitted infections: syndrome-based assessment, testing, partner management, pregnancy considerations, prevention, and treatment guided by current local recommendations.'
+'06. cns infections':'CNS infections: recognise meningitis and encephalitis as emergencies, perform investigations safely, and do not delay empiric treatment when clinically indicated.',
+'07. sti':'Sexually transmitted infections: syndrome-based assessment, appropriate testing, partner management, pregnancy considerations, prevention, and treatment guided by current local recommendations.',
+'08. infectious diarrhea':'Infectious diarrhoea: assess dehydration and danger signs, consider infectious and non-infectious causes, select investigations when indicated, and prioritise rehydration, infection control, and appropriate targeted treatment.',
+'09. uti':'Urinary tract infections: distinguish lower UTI, pyelonephritis, and complicated infection; recognise sepsis and pregnancy-related risks; interpret urine testing and cultures; and use antibiotics guided by local resistance patterns.',
+'10. sepsis':'Sepsis: recognise clinical deterioration early, assess for organ dysfunction and shock, obtain cultures when this will not delay care, give timely antimicrobials and resuscitation when indicated, and reassess response.',
+'11. immunocompromised':'Infections in immunocompromised patients: assess host-specific risks, consider atypical presentations and opportunistic pathogens, choose targeted investigations, and coordinate timely empiric treatment and prevention.',
+'12. deep mycoses':'Deep and systemic mycoses: recognise presentations in immunocompetent and immunocompromised patients, choose appropriate antigen, microscopy, culture, or histology tests, and review antifungal treatment and toxicity.',
+'13. hemorrhagic fevers':'Viral haemorrhagic fevers: recognise compatible illness and exposure history, initiate immediate isolation and infection-prevention procedures, notify public-health teams, and arrange safe testing and supportive care.',
+'14. relapsing fevers':'Relapsing fevers: assess recurrent episodes of fever and exposure risks, consider relevant bacterial and vector-borne causes, choose appropriate diagnostic tests, and tailor treatment to the suspected pathogen and local epidemiology.',
+'15. covid':'COVID-19: assess severity and risk factors, use testing appropriately, provide supportive care, consider recommended treatment for eligible high-risk patients, and apply current infection-prevention and vaccination guidance.'
 };
 
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
