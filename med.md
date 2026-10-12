@@ -154,14 +154,14 @@ var specialties=[
 {title:'Endocrinology',folder:'10. endocrinology'}
 ];
 var topicBlurbs={
-'00. testbank':'Practice questions, OSCE revision and self-assessment resources.',
-'01. principles':'Core concepts, clinical approach and foundational reading.',
-'02. malaria':'',
-'03. tuberculosis':'',
-'04. hiv':'',
-'05. pneumonia':'',
-'06. cns infections':'',
-'07. sti':''
+'00. testbank':'Practice questions, OSCE revision and self-assessment. Use these to test clinical reasoning, then revisit the source material for explanations.',
+'01. principles':'Approach to fever and suspected infection: assess severity first, identify the likely source, obtain appropriate specimens, and start timely empiric treatment when indicated.',
+'02. malaria':'Malaria: recognise severe disease, interpret rapid diagnostic tests and microscopy in context, assess for complications, and choose treatment according to severity and current national guidance.',
+'03. tuberculosis':'Tuberculosis: pulmonary and extrapulmonary presentations, diagnostic testing, drug-susceptible and drug-resistant disease, treatment monitoring, adverse effects, and TB/HIV co-management.',
+'04. hiv':'HIV: testing and staging, antiretroviral therapy, opportunistic infections, prevention, treatment monitoring, and important drug interactions.',
+'05. pneumonia':'Pneumonia: assess severity and need for admission, distinguish likely causes, select investigations and empiric antibiotics appropriately, and review response and complications.',
+'06. cns infections':'CNS infections: recognise meningitis and encephalitis as emergencies, perform investigations safely, and avoid delaying empiric antimicrobials when clinically indicated.',
+'07. sti':'Sexually transmitted infections: syndrome-based assessment, testing, partner management, pregnancy considerations, prevention, and treatment guided by current local recommendations.'
 };
 
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
