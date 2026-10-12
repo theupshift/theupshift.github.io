@@ -153,6 +153,12 @@ var specialties=[
 {title:'Neurology',folder:'09. neurology'},
 {title:'Endocrinology',folder:'10. endocrinology'}
 ];
+var infectiousTopicFolders=[
+'01. principles','02. malaria','03. tuberculosis','04. hiv','05. pneumonia',
+'06. cns infections','07. sti','08. infectious diarrhea','09. uti','10. sepsis',
+'11. immunocompromised','12. deep mycoses','13. hemorrhagic fevers',
+'14. relapsing fevers','15. covid'
+];
 var topicBlurbs={
 '00. testbank':'Practice questions, OSCE revision and self-assessment. Use these to test clinical reasoning, then revisit the source material for explanations.',
 '01. principles':'Approach to fever and suspected infection: assess severity first, identify the likely source, obtain appropriate specimens, apply infection prevention measures, and start timely empiric treatment when indicated.',
@@ -222,6 +228,15 @@ return matchesQuery&&(activeType==='all'||f.type===activeType)
 });
 var groups={};
 visible.forEach(function(f){var folder=f.topicFolder;if(!groups[folder])groups[folder]=[];groups[folder].push(f)});
+// Always show the complete 15-topic Infectious Diseases curriculum, even when the
+// upstream file index has not yet received resources for topics 08–15.
+if(selected.folder==='01. infectious'){
+infectiousTopicFolders.forEach(function(folder){
+if(!query || (folder+' '+topicTitle(folder)+' '+(topicBlurbs[folder]||'')).toLowerCase().indexOf(query)!==-1){
+if(!groups[folder])groups[folder]=[];
+}
+});
+}
 var order=Object.keys(groups).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})});
 var html='';
 var interactiveCases=activeType==='cases'?caseFiles.filter(function(f){return !query||[f.title,f.path,f.typeLabel,'interactive clinical cases hosted on meded'].join(' ').toLowerCase().indexOf(query)!==-1}):[];
@@ -238,6 +253,7 @@ html+='<section class="cr-topic'+(isOpen?' is-open':'')+'" data-topic="'+esc(fol
 if(isOpen){
 html+='<div class="cr-topic-body">';
 if(blurb)html+='<p class="cr-topic-blurb">'+esc(blurb)+'</p>';
+if(!files.length)html+='<p class="cr-empty">No resources are indexed for this topic yet. The topic is included in the curriculum and resources can be added as they become available.</p>';
 html+='<div class="cr-resource-list">';
 files.forEach(function(f){
 var ext=f.path.split('.').pop().toLowerCase();
