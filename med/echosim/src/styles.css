@@ -129,9 +129,6 @@ a:hover { text-decoration-color: var(--accent); }
 
 /* ------------------------------------------------------------------ layout */
 .app {
-  width: 100%;
-  max-width: 680px;
-  margin-inline: auto;
   position: relative;
   z-index: 1;
   height: 100%;
@@ -154,31 +151,6 @@ a:hover { text-decoration-color: var(--accent); }
   scrollbar-color: var(--rule) transparent;
 }
 .transport { grid-area: bar; }
-
-/* A 680 px host column is too narrow for the desktop two-pane layout. Keep the figure
-   and text readable by stacking them when the app is viewed in a wider browser. */
-@media (min-width: 821px) {
-  .app {
-    height: auto;
-    min-height: 100vh;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "mast" "stage" "panel" "bar";
-  }
-  .stage {
-    height: min(48vh, 440px);
-    min-height: 340px;
-  }
-  .panel {
-    overflow: visible;
-    padding-bottom: 32px;
-  }
-  .transport {
-    position: sticky;
-    bottom: 0;
-    z-index: 10;
-  }
-}
 
 /* ---------------------------------------------------------------- masthead */
 .eyebrow {
