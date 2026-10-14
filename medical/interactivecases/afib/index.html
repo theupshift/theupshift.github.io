@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10233f">
+<meta name="description" content="An interactive clinical case on atrial fibrillation, atrial flutter and supraventricular tachycardia.">
+<title>Interactive Case | AF, Flutter & SVT</title>
+<style>
+:root{color-scheme:light;--navy:#10233f;--blue:#2463a6;--cyan:#55c3d6;--ink:#1d2939;--muted:#58677b;--line:#dce4ee;--paper:#fff;--wash:#f3f7fb;--green:#18794e;--greenbg:#eaf7ef;--red:#b42318;--redbg:#fff0ef;--gold:#8a5b00}
+*{box-sizing:border-box}body{margin:0;background:var(--wash);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button{font:inherit}.shell{max-width:960px;margin:32px auto;padding:0 18px 36px}.hero{background:linear-gradient(125deg,#10233f,#174a77);color:white;padding:clamp(24px,5vw,44px);border-radius:20px 20px 0 0;position:relative;overflow:hidden}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:.75rem;font-weight:800;color:#9fe4ed}.hero h1{font-size:clamp(1.7rem,4vw,2.55rem);line-height:1.15;max-width:720px;margin:10px 0 12px}.hero p{max-width:680px;color:#e0eaf5;margin:0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.tag{border:1px solid #ffffff50;border-radius:99px;padding:4px 10px;font-size:.8rem;color:#f1f7ff}.ecg-panel{background:#09111d;padding:16px 20px 12px;position:relative}.ecg-top{display:flex;justify-content:space-between;gap:12px;align-items:center;color:#c4d4e7;font-size:.82rem;margin-bottom:8px}.ecg-label{font-weight:750;letter-spacing:.04em}.ecg{display:block;width:100%;height:105px}.ecg-grid{background-image:linear-gradient(#a73c4b30 1px,transparent 1px),linear-gradient(90deg,#a73c4b30 1px,transparent 1px),linear-gradient(#a73c4b20 1px,transparent 1px),linear-gradient(90deg,#a73c4b20 1px,transparent 1px);background-size:25px 25px,25px 25px,5px 5px,5px 5px}.trace{fill:none;stroke:#77f4b0;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 3px #42e98b60)}.main{background:white;border:1px solid var(--line);border-top:0;border-radius:0 0 20px 20px;overflow:hidden;box-shadow:0 16px 45px #10233f0d}.case{padding:clamp(22px,4vw,36px);border-bottom:1px solid var(--line);background:#f7fbff}.case h2{margin:0 0 12px;font-size:1.15rem;color:var(--navy)}.case p{margin:9px 0}.vitals{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:10px;margin:18px 0}.vital{padding:12px;background:white;border:1px solid var(--line);border-radius:12px}.vital small{display:block;color:var(--muted);font-size:.75rem}.vital strong{font-size:1.1rem;color:var(--navy)}.note{border-left:4px solid var(--cyan);background:#edfaff;padding:12px 14px;border-radius:0 9px 9px 0;font-size:.92rem}.question{padding:clamp(22px,4vw,36px)}.progress-line{display:flex;justify-content:space-between;align-items:center;gap:14px;color:var(--muted);font-size:.86rem;font-weight:700;margin-bottom:18px}.progress-track{height:6px;background:#e8edf4;border-radius:20px;overflow:hidden;margin-bottom:24px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:width .25s}.qtext{font-size:clamp(1.12rem,2.6vw,1.35rem);line-height:1.4;color:var(--navy);margin:0 0 20px}.options{display:grid;gap:11px}.option{display:flex;align-items:flex-start;gap:12px;width:100%;text-align:left;padding:15px 16px;border:1.5px solid var(--line);background:#fff;border-radius:12px;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}.option:hover:not(:disabled),.option:focus-visible{border-color:var(--blue);outline:3px solid #2463a620;outline-offset:1px}.letter{display:grid;place-items:center;flex:0 0 29px;height:29px;border-radius:8px;background:#edf2f8;color:var(--navy);font-weight:800;font-size:.85rem}.option:disabled{cursor:default}.option.correct{border-color:var(--green);background:var(--greenbg)}.option.correct .letter{background:var(--green);color:white}.option.wrong{border-color:var(--red);background:var(--redbg)}.option.wrong .letter{background:var(--red);color:white}.feedback{margin-top:22px;padding:19px;border-radius:12px;border:1px solid var(--line);background:#f8fafc}.feedback[hidden]{display:none}.feedback h3{margin:0 0 8px;font-size:1rem}.feedback p{margin:8px 0}.feedback ul{padding-left:22px;margin:8px 0}.feedback li{margin:5px 0}.status-good{color:var(--green)}.status-bad{color:var(--red)}.actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px}.btn{border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer}.btn-primary{background:var(--blue);color:white}.btn-primary:hover{background:#174b82}.btn-secondary{background:#eaf0f7;color:var(--navy)}.btn:focus-visible{outline:3px solid #55c3d6;outline-offset:3px}.btn:disabled{opacity:.45;cursor:not-allowed}.completion{padding:36px;text-align:center}.completion[hidden]{display:none}.score{font-size:2.3rem;color:var(--blue);font-weight:850;margin:12px}.references{padding:22px 28px;background:#f7f9fc;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}.references summary{cursor:pointer;font-weight:800;color:var(--navy)}.references li{margin:7px 0}.references a{color:#205b98;overflow-wrap:anywhere}.disclaimer{font-size:.8rem;margin-top:14px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:520px){.shell{margin:12px auto;padding:0 10px 22px}.ecg{height:84px}.actions{align-items:stretch;flex-direction:column-reverse}.actions .btn{width:100%}.progress-line{font-size:.8rem}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="hero">
+  <div class="eyebrow">Interactive clinical reasoning</div>
+  <h1>Atrial Fibrillation, Atrial Flutter & SVT</h1>
+  <p>Work through a progressive case: interpret the rhythm, prioritise immediate management, assess stroke risk and choose a longer-term strategy.</p>
+  <div class="tags"><span class="tag">5 clinical decisions</span><span class="tag">ECG interpretation</span><span class="tag">Feedback after each answer</span></div>
+</header>
+<section class="ecg-panel" aria-label="Illustrative electrocardiogram">
+  <div class="ecg-top"><span class="ecg-label" id="rhythm-label">MONITOR · ATRIAL FIBRILLATION</span><span id="rhythm-rate">Ventricular rate ≈ 128/min</span></div>
+  <svg class="ecg ecg-grid" viewBox="0 0 1000 120" preserveAspectRatio="none" role="img" aria-label="Schematic ECG trace; not a diagnostic recording">
+    <polyline id="ecg-trace" class="trace" points="0,61 20,61 29,55 36,67 43,60 58,60 66,30 74,91 83,48 92,61 113,61 130,60 138,52 146,66 154,61 170,61 178,24 186,91 195,50 204,61 227,61 238,58 246,64 255,61 278,61 285,31 293,91 302,49 311,61 334,61 355,59 363,66 371,60 393,60 401,27 409,91 418,50 427,61 450,61 468,57 476,66 484,61 502,61 510,31 518,91 527,49 536,61 558,61 579,59 587,66 595,61 615,61 623,26 631,91 640,50 649,61 672,61 687,58 695,65 703,61 727,61 735,30 743,91 752,49 761,61 786,61 800,57 808,66 816,61 836,61 844,27 852,91 861,49 870,61 894,61 913,58 921,66 929,61 950,61 958,30 966,91 975,50 984,61 1000,61"/>
+  </svg>
+</section>
+<main class="main">
+<section class="case" id="case-summary">
+  <h2>Case presentation</h2>
+  <p>A 71-year-old man presents with 48 hours of palpitations and worsening dyspnoea, worse when lying flat. His history includes type 2 diabetes, hypertension and stage 4 chronic kidney disease (baseline eGFR 25 mL/min/1.73 m²). He reports no alcohol or tobacco use.</p>
+  <div class="vitals">
+    <div class="vital"><small>Blood pressure</small><strong>145/88 mmHg</strong></div>
+    <div class="vital"><small>Heart rate</small><strong>128/min</strong></div>
+    <div class="vital"><small>Oxygen saturation</small><strong>94% room air</strong></div>
+    <div class="vital"><small>Pulse</small><strong>Irregularly irregular</strong></div>
+  </div>
+  <p><strong>Initial ECG:</strong> irregularly irregular narrow-complex rhythm with no consistent discrete P waves, consistent with atrial fibrillation (AF).</p>
+  <div class="note"><strong>Learning goal:</strong> distinguish rhythm recognition from the separate decisions about haemodynamic stability, rate/rhythm control and thromboembolism prevention.</div>
+</section>
+<section class="question" id="quiz" aria-live="polite">
+  <div class="progress-line"><span id="step-label">DECISION 1 OF 5</span><span id="progress-percent">20% complete</span></div>
+  <div class="progress-track" role="progressbar" aria-label="Case progress" aria-valuemin="0" aria-valuemax="5" aria-valuenow="1" id="progressbar"><div class="progress-fill" id="progress-fill"></div></div>
+  <h2 class="qtext" id="question-text">Loading question…</h2>
+  <div class="options" id="options-list"></div>
+  <section class="feedback" id="feedback" aria-live="polite" hidden>
+    <h3 id="feedback-title"></h3><div id="feedback-body"></div>
+  </section>
+  <div class="actions"><span id="score-live" aria-live="polite">Score: 0 / 5</span><button class="btn btn-primary" id="next-button" disabled>Check an answer first</button></div>
+</section>
+<section class="completion" id="completion" hidden>
+  <div class="eyebrow" style="color:var(--blue)">Case complete</div>
+  <h2>Clinical reasoning review</h2>
+  <div class="score" id="final-score">0 / 5</div>
+  <p id="final-message"></p>
+  <button class="btn btn-primary" id="restart-button">Restart case</button>
+</section>
+<details class="references">
+  <summary>Guidelines and further reading</summary>
+  <ol>
+    <li>Joglar JA, et al. 2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation. <em>Circulation</em>. 2024. <a href="https://doi.org/10.1161/CIR.0000000000001193" target="_blank" rel="noopener noreferrer">doi:10.1161/CIR.0000000000001193</a>.</li>
+    <li>Brugada J, et al. 2019 ESC Guidelines for the management of patients with supraventricular tachycardia. <em>European Heart Journal</em>. <a href="https://doi.org/10.1093/eurheartj/ehz467" target="_blank" rel="noopener noreferrer">doi:10.1093/eurheartj/ehz467</a>.</li>
+    <li>Van Gelder IC, et al. 2024 ESC Guidelines for the management of atrial fibrillation. <em>European Heart Journal</em>. <a href="https://doi.org/10.1093/eurheartj/ehae176" target="_blank" rel="noopener noreferrer">doi:10.1093/eurheartj/ehae176</a>.</li>
+  </ol>
+  <p class="disclaimer">For medical education only. This case is fictional and simplified; real decisions depend on the full clinical picture, local protocols and current specialist guidance. The ECG is schematic, not a real diagnostic tracing.</p>
+</details>
+</main>
+</div>
+<script>
+(() => {
+  "use strict";
+  const questions = [
+    {
+      prompt: "First priority: which finding would make this tachyarrhythmia an emergency requiring immediate synchronised electrical cardioversion?",
+      options: [
+        "A stable blood pressure with palpitations but no evidence of poor perfusion",
+        "Hypotension or shock, ongoing ischaemic chest discomfort, or acute pulmonary oedema attributable to the arrhythmia",
+        "An irregularly irregular pulse by itself",
+        "A history of stage 4 chronic kidney disease"
+      ],
+      correct: 1,
+      explanation: "Haemodynamic instability attributable to AF or another tachyarrhythmia calls for urgent synchronised cardioversion, with resuscitation support as needed. Do not delay emergency treatment to complete routine investigations or anticoagulation decisions. This patient’s provided observations do not, by themselves, establish instability; assess perfusion, mental state, chest pain and heart-failure severity at the bedside."
+    },
+    {
+      prompt: "Assuming he remains haemodynamically stable, which initial assessment is most appropriate for newly recognised AF?",
+      options: [
+        "Proceed directly to an invasive electrophysiology study before basic testing",
+        "Assess triggers and comorbidities; obtain electrolytes, renal function, blood count and thyroid function as indicated, and arrange transthoracic echocardiography",
+        "Order routine exercise stress testing for every patient with AF",
+        "Start an antiarrhythmic drug before confirming the rhythm or reviewing the ECG"
+      ],
+      correct: 1,
+      explanation: "Evaluate symptoms, duration and precipitating illness; review medications and alcohol/stimulant exposure; assess electrolytes, renal function, blood count and thyroid function, and use echocardiography to assess cardiac structure and ventricular function. Further tests such as ischaemia evaluation should be guided by symptoms and clinical suspicion rather than ordered automatically for everyone."
+    },
+    {
+      prompt: "After initial treatment, the monitor shows a regular narrow-complex tachycardia. The 12-lead ECG shows continuous saw-tooth atrial activity, negative in leads II, III and aVF and positive in V1. What rhythm and mechanism are most likely?",
+      options: [
+        "Orthodromic atrioventricular re-entrant tachycardia using an accessory pathway",
+        "Typical counterclockwise, cavotricuspid-isthmus-dependent atrial flutter",
+        "Recurrent atrial fibrillation",
+        "Polymorphic ventricular tachycardia"
+      ],
+      correct: 1,
+      rhythm: "ATRIAL FLUTTER · SCHEMATIC",
+      rate: "Regular ventricular response",
+      explanation: "Typical counterclockwise atrial flutter is a macro-re-entrant circuit in the right atrium that depends on the cavotricuspid isthmus. The classic ECG pattern has negative flutter waves in the inferior leads and positive activity in V1. Atrial flutter and AF can occur in the same patient, but are distinct rhythms. A regular narrow-complex rhythm still requires ECG-based differential diagnosis."
+    },
+    {
+      prompt: "His CHA₂DS₂-VASc score is 3 (age 65–74, hypertension and diabetes). If oral anticoagulation is indicated, what is the best principle for selecting stroke prevention?",
+      options: [
+        "Use aspirin plus clopidogrel instead of oral anticoagulation",
+        "Choose anticoagulation through an individual risk/benefit assessment, considering stage 4 CKD, renal dosing, drug interactions and whether a mechanical valve or moderate-to-severe mitral stenosis is present",
+        "Use the same dose of any direct oral anticoagulant regardless of kidney function",
+        "Withhold anticoagulation because the AF has been present for only 48 hours"
+      ],
+      correct: 1,
+      explanation: "His age, hypertension and diabetes indicate elevated thromboembolic risk, so stroke prevention needs active assessment. Direct oral anticoagulants are generally preferred over warfarin for eligible patients, but stage 4 CKD makes drug choice and dosing particularly important; use current product guidance and local/specialist protocols. Warfarin may be appropriate in selected circumstances, including mechanical valves or moderate-to-severe rheumatic mitral stenosis. Antiplatelet therapy is not an equivalent substitute for anticoagulation in AF. Rhythm duration alone does not remove long-term stroke risk."
+    },
+    {
+      prompt: "Six months later, recurrent AF coincides with worsening heart failure despite appropriate medical therapy. Which option should be considered in an appropriate patient after shared decision-making and specialist review?",
+      options: [
+        "Ignore rhythm control because rate control has been attempted",
+        "Consider catheter ablation for AF, including pulmonary-vein isolation, as part of an individualised rhythm-control strategy",
+        "Prescribe sotalol to every patient with heart failure, without reviewing ventricular function or renal function",
+        "Perform AV-node ablation without discussing pacing or the patient’s goals"
+      ],
+      correct: 1,
+      explanation: "For selected patients with AF and heart failure, catheter ablation can improve symptoms and quality of life and may reduce heart-failure events and mortality in appropriate populations. The decision depends on heart-failure phenotype, AF pattern, comorbidities, procedural candidacy and patient preferences. Stage 4 CKD also affects antiarrhythmic drug selection and dosing. AV-node ablation is a selected strategy and requires a pacing plan; it does not eliminate AF-related thromboembolic risk."
+    }
+  ];
+  let index = 0, score = 0, answered = false, results = [];
+  const $ = id => document.getElementById(id);
+  const labels = ["A","B","C","D"];
+  function render() {
+    const q = questions[index];
+    answered = false;
+    $("step-label").textContent = `DECISION ${index + 1} OF ${questions.length}`;
+    $("progress-percent").textContent = `${Math.round((index + 1) / questions.length * 100)}% through case`;
+    $("progress-fill").style.width = `${(index + 1) / questions.length * 100}%`;
+    $("progressbar").setAttribute("aria-valuenow", String(index + 1));
+    $("question-text").textContent = q.prompt;
+    $("options-list").replaceChildren();
+    $("feedback").hidden = true;
+    $("next-button").disabled = true;
+    $("next-button").textContent = "Select an answer";
+    $("score-live").textContent = `Score: ${score} / ${questions.length}`;
+    if (q.rhythm) {
+      $("rhythm-label").textContent = q.rhythm;
+      $("rhythm-rate").textContent = q.rate;
+      $("ecg-trace").setAttribute("points", "0,61 10,61 18,56 26,66 34,61 42,51 50,61 58,70 66,61 74,51 82,61 90,70 98,61 106,51 114,61 122,70 130,61 138,51 146,61 154,70 162,61 170,51 178,61 186,70 194,61 202,51 210,61 218,70 226,61 234,51 242,61 250,70 258,61 266,51 274,61 282,70 290,61 298,51 306,61 314,70 322,61 330,51 338,61 346,70 354,61 362,51 370,61 378,70 386,61 394,51 402,61 410,70 418,61 426,51 434,61 442,70 450,61 458,51 466,61 474,70 482,61 490,51 498,61 506,70 514,61 522,51 530,61 538,70 546,61 554,51 562,61 570,70 578,61 586,51 594,61 602,70 610,61 618,51 626,61 634,70 642,61 650,51 658,61 666,70 674,61 682,51 690,61 698,70 706,61 714,51 722,61 730,70 738,61 746,51 754,61 762,70 770,61 778,51 786,61 794,70 802,61 810,51 818,61 826,70 834,61 842,51 850,61 858,70 866,61 874,51 882,61 890,70 898,61 906,51 914,61 922,70 930,61 938,51 946,61 954,70 962,61 970,51 978,61 986,70 1000,61");
+    }
+    q.options.forEach((option, i) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "option";
+      button.innerHTML = `<span class="letter">${labels[i]}</span><span></span>`;
+      button.lastElementChild.textContent = option;
+      button.addEventListener("click", () => choose(i));
+      $("options-list").append(button);
+    });
+  }
+  function choose(choice) {
+    if (answered) return;
+    answered = true;
+    const q = questions[index], buttons = [...$("options-list").querySelectorAll("button")];
+    const correct = choice === q.correct;
+    if (correct) score++;
+    results.push(correct);
+    buttons.forEach((button, i) => {
+      button.disabled = true;
+      if (i === q.correct) button.classList.add("correct");
+      if (i === choice && !correct) button.classList.add("wrong");
+      button.setAttribute("aria-pressed", String(i === choice));
+    });
+    $("feedback-title").textContent = correct ? "Correct — well reasoned" : "Not quite — review the key point";
+    $("feedback-title").className = correct ? "status-good" : "status-bad";
+    $("feedback-body").textContent = q.explanation;
+    $("feedback").hidden = false;
+    $("score-live").textContent = `Score: ${score} / ${questions.length}`;
+    $("next-button").disabled = false;
+    $("next-button").textContent = index === questions.length - 1 ? "Finish case" : "Next decision";
+    $("next-button").focus();
+  }
+  function finish() {
+    $("quiz").hidden = true;
+    $("case-summary").hidden = true;
+    $("completion").hidden = false;
+    $("final-score").textContent = `${score} / ${questions.length}`;
+    const pct = score / questions.length;
+    $("final-message").textContent = pct === 1
+      ? "Excellent work. You distinguished rhythm recognition, emergency assessment, stroke prevention and longer-term rhythm control."
+      : pct >= .6
+        ? "Good progress. Review the explanations for any missed questions, especially haemodynamic stability and anticoagulation in advanced kidney disease."
+        : "Use the feedback to revisit the fundamentals: assess stability first, confirm the rhythm on ECG, and individualise stroke prevention and rhythm control.";
+    $("progress-fill").style.width = "100%";
+    window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+  }
+  $("next-button").addEventListener("click", () => {
+    if (!answered) return;
+    if (index < questions.length - 1) { index++; render(); $("question-text").focus?.(); }
+    else finish();
+  });
+  $("restart-button").addEventListener("click", () => {
+    index = 0; score = 0; results = [];
+    $("quiz").hidden = false; $("case-summary").hidden = false; $("completion").hidden = true;
+    $("rhythm-label").textContent = "MONITOR · ATRIAL FIBRILLATION";
+    $("rhythm-rate").textContent = "Ventricular rate ≈ 128/min";
+    render();
+    window.scrollTo({top:0,behavior:"auto"});
+  });
+  render();
+})();
+</script>
+</body>
+</html>
