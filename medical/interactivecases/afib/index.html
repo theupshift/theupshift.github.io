@@ -348,9 +348,9 @@ body.afib-case{background:#e9e3d7;color:#1d1b19;font-family:Georgia,"Times New R
 .afib-case .stage{flex:1 1 auto;min-height:0;overflow:hidden;background:linear-gradient(120deg,#e9e3d7 0%,#ded9cf 52%,#d2cec5 100%)}
 .afib-case .slide{padding:36px clamp(24px,4vw,46px) 30px}
 .afib-case .stack,.afib-case .stack.wide{max-width:680px;width:min(680px,100%)}
-.afib-case .slide.has-image-bg{background-size:cover;background-position:center;background-repeat:no-repeat}
-.afib-case .slide.has-image-bg:before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(249,247,241,.82),rgba(249,247,241,.58));pointer-events:none}
-.afib-case .slide.has-image-bg .stack{position:relative;z-index:1;padding:18px 20px;background:rgba(249,247,241,.48);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+.afib-case .slide.has-image-bg{position:relative;isolation:isolate;background-size:cover;background-position:center;background-repeat:no-repeat}
+.afib-case .slide.has-image-bg:before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(249,247,241,.90),rgba(249,247,241,.72));pointer-events:none}
+.afib-case .slide.has-image-bg .stack{position:relative;z-index:1;padding:18px 20px;background:rgba(249,247,241,.94);backdrop-filter:none;-webkit-backdrop-filter:none}
 .afib-case .nav{height:62px;flex:0 0 62px;background:#fff;border-top:1px solid #dad6ce;display:grid;grid-template-columns:auto minmax(0,1fr) 1px auto auto;align-items:center;gap:12px;padding:10px 16px;position:relative;z-index:4}
 .afib-case .nav-utility{display:flex;align-items:center;gap:7px}
 .afib-case .navbtn{height:36px;display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid #d4cec2;border-radius:0;background:#fff;color:#34322f;font:700 11px/1 Georgia,"Times New Roman",Times,serif;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;transition:background .14s ease,border-color .14s ease;padding:0 10px}
@@ -565,7 +565,7 @@ body.afib-case{background:#e9e3d7;color:#1d1b19;font-family:Georgia,"Times New R
 "use strict";
 const slides=[
 {ch:"start",k:"Clinical reasoning · Cardiology",title:"Atrial Fibrillation & Supraventricular Tachycardia",sub:"One patient. A changing rhythm. Decisions from first contact to long-term care.",body:`<section class="afib-objectives" aria-labelledby="afib-objectives-heading"><h3 id="afib-objectives-heading">Learning objectives</h3><p class="afib-objectives-intro">By the end of this case, you should be able to:</p><ol class="afib-objectives-list"><li><div><strong>Recognise</strong><span>Distinguish AF, atrial flutter and common regular SVTs using the clinical context and ECG.</span></div></li><li><div><strong>Stabilise</strong><span>Identify haemodynamic instability and prioritise time-critical treatment.</span></div></li><li><div><strong>Choose treatment safely</strong><span>Individualise rate or rhythm control, considering ventricular function, renal function and contraindications.</span></div></li><li><div><strong>Prevent complications</strong><span>Assess stroke risk, anticoagulation, modifiable risk factors and follow-up needs.</span></div></li></ol><p class="afib-objectives-note">Interactive clinical case · Decision questions include explanations and safety caveats.</p></section>`,layout:"wide"},
-{ch:"foundations",k:"01 · The framework",title:"Tachycardia is a finding, not a diagnosis",body:`<div class="tachycardia-concept"><div class="heart-simulation">
+{ch:"foundations",k:"01 · The framework",title:"Tachycardia is a finding, not a diagnosis",image:"https://theupshift.github.io/medical/interactivecases/afib/Gemini_Generated_Image_8th1st8th1st8th1.jpeg",imageSide:"right",body:`<div class="tachycardia-concept"><div class="heart-simulation">
 
 <div class="heart-sim-intro"><strong>SVT = supraventricular tachycardia.</strong><p>The term includes rhythms arising above the ventricles.</p><p class="svt-definition-detail">Occurring at a heart rate greater than 100/min, these tachyarrhythmias typically conduct through the His–Purkinje system and appear on ECG as narrow-QRS (&lt;120 ms) rhythms. Paroxysmal SVT (PSVT) is a subgroup that begins episodically and terminates abruptly.</p></div>
 <button type="button" class="reveal-rhythm-model" data-reveal-rhythm-model aria-expanded="false">Click to reveal type</button>
