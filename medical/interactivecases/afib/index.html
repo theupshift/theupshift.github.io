@@ -744,3 +744,37 @@ body.afib-case{
   .afib-case .slide:has(.tachycardia-concept) .stack.wide{width:100%!important;max-width:100%!important}
   .afib-case .slide:has(.tachycardia-concept) .heart-simulation{padding:14px 12px;background:rgba(249,247,241,.52)}
 }
+
+
+/* Match the Cirrhosis page's 680px reading shell, including on mobile. */
+html,body.afib-case{
+  background:#fff!important;
+}
+body.afib-case{
+  padding:0 20px!important;
+}
+.afib-case .afib-main{
+  width:100%!important;
+  max-width:680px!important;
+  margin:0 auto!important;
+}
+.afib-case .afib-main .app{
+  width:100%!important;
+  max-width:none!important;
+  margin:0!important;
+}
+@media(max-width:600px){
+  body.afib-case{
+    padding:0 20px!important;
+    background:#fff!important;
+  }
+  .afib-case .afib-main{
+    width:100%!important;
+    max-width:680px!important;
+    margin:0 auto!important;
+  }
+  .afib-case .afib-main .app{
+    width:100%!important;
+    max-width:none!important;
+  }
+}
