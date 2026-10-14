@@ -390,7 +390,6 @@ body.afib-case{background:#e9e3d7;color:#1d1b19;font-family:Georgia,"Times New R
 </nav>
 <main class="afib-main">
 <div class="app">
-<header class="topbar"><div class="brand-lockup"><div class="case-title">Atrial Fibrillation &amp; SVT</div></div><div class="act-tag" id="actTag">Longitudinal case · Cardiology</div><div class="topbar-actions"><button class="topbar-btn" id="contentsBtn">Contents</button><button class="topbar-btn" id="resetBtn" title="Restart case">Reset</button></div></header>
 <main class="stage" id="stage" aria-live="polite"></main>
 <footer class="nav" aria-label="Case navigation">
 <div class="nav-utility"><button class="navbtn navbtn-utility" id="escape-fullscreen" type="button" aria-label="Exit fullscreen" title="Exit fullscreen">Esc</button><button class="navbtn navbtn-utility" id="reset-case" type="button" aria-label="Reset case to slide 1" title="Reset case">Reset</button></div>
@@ -647,7 +646,6 @@ function go(n){index=Math.max(0,Math.min(slides.length-1,n));render();}
 prev.addEventListener("click",()=>go(index-1));
 document.getElementById("reset-case").addEventListener("click",()=>{index=0;answers={};render();});
 next.addEventListener("click",()=>{if(index<slides.length-1)go(index+1);else go(0);});
-document.getElementById("resetBtn").addEventListener("click",()=>{index=0;answers={};render();});
 const fullscreenButton=document.getElementById("fullscreen"), fullscreenRoot=document.documentElement, fullscreenContent=document.querySelector(".afib-main .app");
 let immersiveFullscreen=false;
 function setFullscreenState(on){immersiveFullscreen=on;document.body.classList.toggle("cirrhosis-fullscreen",on);fullscreenRoot.classList.toggle("cirrhosis-fullscreen",on);if(fullscreenButton){fullscreenButton.textContent=on?"Exit Fullscreen":"Fullscreen";fullscreenButton.setAttribute("aria-label",on?"Exit fullscreen":"Enter fullscreen");fullscreenButton.setAttribute("title",on?"Exit fullscreen":"Fullscreen");}}
@@ -656,15 +654,6 @@ async function exitFullscreen(){try{if(document.fullscreenElement&&document.exit
 fullscreenButton.addEventListener("click",async()=>{if(document.fullscreenElement||document.webkitFullscreenElement||immersiveFullscreen)await exitFullscreen();else await enterFullscreen();});
 document.addEventListener("fullscreenchange",()=>setFullscreenState(!!document.fullscreenElement));document.addEventListener("webkitfullscreenchange",()=>setFullscreenState(!!document.webkitFullscreenElement));
 document.getElementById("escape-fullscreen").addEventListener("click",async()=>{if(immersiveFullscreen||document.fullscreenElement||document.webkitFullscreenElement)await exitFullscreen();});
-document.getElementById("contentsBtn").addEventListener("click",()=>{
- const unique=slides.map((s,i)=>({key:s.k||s.ch,title:s.title,index:i}));
- const existing=document.getElementById("contentsOverlay");if(existing){existing.remove();return;}
- const overlay=document.createElement("div");overlay.id="contentsOverlay";overlay.style.cssText="position:absolute;inset:0;z-index:10;background:#f9f7f1f5;overflow:auto;padding:24px clamp(18px,6vw,70px)";
- overlay.innerHTML='<div style="max-width:800px;margin:auto"><button class="topbtn" id="closeContents">Close ×</button><h2 style="font-weight:500;font-size:34px">Case contents</h2><p class="muted">Jump to a teaching section.</p><div id="contentsList"></div></div>';
- stage.appendChild(overlay);const list=overlay.querySelector("#contentsList");
- let activeChapter="";unique.forEach(item=>{if(item.key!==activeChapter){activeChapter=item.key;const h=document.createElement("h3");h.className="contents-section";h.textContent=activeChapter;list.appendChild(h);}const b=document.createElement("button");b.className="answer contents-item";b.style.width="100%";b.style.margin="5px 0";b.innerHTML='<span class="contents-number">'+String(item.index+1).padStart(2,"0")+'</span><span class="contents-copy"><b>'+esc(item.title)+'</b><small>Slide '+(item.index+1)+' of '+slides.length+'</small></span>';b.setAttribute("aria-label","Go to slide "+(item.index+1)+": "+item.title);b.addEventListener("click",()=>{overlay.remove();go(item.index);});list.appendChild(b);});
- overlay.querySelector("#closeContents").addEventListener("click",()=>overlay.remove());
-});
 document.addEventListener("keydown",e=>{if(e.altKey||e.ctrlKey||e.metaKey)return;if(e.key==="ArrowRight"&&index<slides.length-1)go(index+1);if(e.key==="ArrowLeft"&&index>0)go(index-1);});
 render();
 })();
