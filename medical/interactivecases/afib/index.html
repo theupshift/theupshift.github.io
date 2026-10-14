@@ -872,6 +872,55 @@ body.afib-case{background:#fff;padding:0 24px}
   .afib-case .rhythm-key-hint{font-size:10px}
 }
 
+/* Compact the case slides on smaller screens to reduce unnecessary vertical scrolling. */
+@media(max-width:760px){
+  .afib-case .slide{padding:12px 14px 10px}
+  .afib-case .slide .stack,
+  .afib-case .slide .stack.wide{gap:10px}
+  .afib-case .slide h1{font-size:clamp(21px,5.2vw,28px);line-height:1.12;margin:0 0 8px}
+  .afib-case .slide h2{font-size:clamp(17px,4.3vw,22px);line-height:1.18;margin:0 0 6px}
+  .afib-case .slide h3{font-size:15px;line-height:1.2;margin:0 0 5px}
+  .afib-case .slide p,
+  .afib-case .slide li{font-size:13px;line-height:1.42}
+  .afib-case .slide p{margin-top:5px;margin-bottom:7px}
+  .afib-case .slide ul,
+  .afib-case .slide ol{margin-top:5px;margin-bottom:7px;padding-left:20px}
+  .afib-case .slide .panel,
+  .afib-case .slide .card{padding:10px}
+  .afib-case .slide img{max-height:32vh;object-fit:contain}
+  .afib-case .slide svg:not(.interactive-heart){max-height:34vh}
+  .afib-case .slide:has(.tachycardia-concept){padding:10px 10px!important}
+  .afib-case .slide:has(.tachycardia-concept) .heart-simulation{padding:10px}
+  .afib-case .slide:has(.tachycardia-concept) .reveal-rhythm-model,
+  .afib-case .slide:has(.tachycardia-concept) .rhythm-model-reveal{margin-top:8px}
+}
+@media(max-width:600px){
+  .afib-case .slide{padding:10px 12px 8px}
+  .afib-case .slide .stack,
+  .afib-case .slide .stack.wide{gap:8px}
+  .afib-case .slide p,
+  .afib-case .slide li{font-size:12px;line-height:1.38}
+  .afib-case .slide h1{font-size:21px}
+  .afib-case .slide h2{font-size:17px}
+  .afib-case .slide .panel,
+  .afib-case .slide .card{padding:8px}
+  .afib-case .slide img{max-height:28vh}
+  .afib-case .slide svg:not(.interactive-heart){max-height:30vh}
+  .afib-case .slide:has(.tachycardia-concept) .heart-simulation{padding:8px}
+  .afib-case .slide:has(.tachycardia-concept) .interactive-heart{max-height:34vh}
+}
+.afib-case .site-nav .nav-center a{text-transform:uppercase}
+
+/* Dedicated AFib cover slide, styled to echo the Cirrhosis case introduction. */
+.afib-case .slide.afib-title-slide{align-items:center!important;justify-content:flex-start!important;padding:clamp(24px,5vh,54px) clamp(24px,7vw,104px)!important}
+.afib-case .slide.afib-title-slide.has-image-bg{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+.afib-case .slide.afib-title-slide.has-image-bg:before{background:linear-gradient(90deg,rgba(249,247,241,.72) 0%,rgba(249,247,241,.42) 48%,rgba(249,247,241,.06) 100%)!important}
+.afib-case .slide.afib-title-slide .stack{width:min(780px,100%)!important;max-width:780px!important;margin:auto 0!important;padding:0!important;background:transparent!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.afib-case .afib-title-kicker{color:#4b4a78;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}
+.afib-case .afib-titlebox h1{max-width:850px;margin:0 0 24px!important;color:#292750!important;font-family:Georgia,"Times New Roman",Times,serif!important;font-size:clamp(3.2rem,7.7vw,7rem)!important;font-weight:normal!important;line-height:.98!important;letter-spacing:-.045em!important;text-shadow:0 1px 2px rgba(255,255,255,.72)!important}
+.afib-case .afib-title-sub{max-width:680px;margin:0!important;color:#302d40!important;font-size:clamp(22px,3vw,34px)!important;font-weight:700!important;line-height:1.25!important;text-shadow:0 1px 2px rgba(255,255,255,.72)!important}
+.afib-case .afib-title-credit{margin:24px 0 0!important;color:#48443e!important;font-size:13px!important;font-style:italic!important;line-height:1.4!important;text-shadow:0 1px 2px rgba(255,255,255,.65)!important}
+@media(max-width:600px){.afib-case .slide.afib-title-slide{padding:24px 18px!important}.afib-case .slide.afib-title-slide.has-image-bg:before{background:linear-gradient(180deg,rgba(249,247,241,.42) 0%,rgba(249,247,241,.62) 48%,rgba(249,247,241,.82) 100%)!important}.afib-case .afib-title-kicker{font-size:10px;letter-spacing:.16em;margin-bottom:14px}.afib-case .afib-titlebox h1{font-size:clamp(2.65rem,13vw,4.4rem)!important;margin-bottom:18px!important}.afib-case .afib-title-sub{font-size:22px!important;line-height:1.28!important}.afib-case .afib-title-credit{font-size:12px!important;margin-top:20px!important}}
 </style>
 </head>
 <body class="afib-case">
@@ -1219,53 +1268,3 @@ render();
 </script>
 </body>
 </html>
-
-/* Compact the case slides on smaller screens to reduce unnecessary vertical scrolling. */
-@media(max-width:760px){
-  .afib-case .slide{padding:12px 14px 10px}
-  .afib-case .slide .stack,
-  .afib-case .slide .stack.wide{gap:10px}
-  .afib-case .slide h1{font-size:clamp(21px,5.2vw,28px);line-height:1.12;margin:0 0 8px}
-  .afib-case .slide h2{font-size:clamp(17px,4.3vw,22px);line-height:1.18;margin:0 0 6px}
-  .afib-case .slide h3{font-size:15px;line-height:1.2;margin:0 0 5px}
-  .afib-case .slide p,
-  .afib-case .slide li{font-size:13px;line-height:1.42}
-  .afib-case .slide p{margin-top:5px;margin-bottom:7px}
-  .afib-case .slide ul,
-  .afib-case .slide ol{margin-top:5px;margin-bottom:7px;padding-left:20px}
-  .afib-case .slide .panel,
-  .afib-case .slide .card{padding:10px}
-  .afib-case .slide img{max-height:32vh;object-fit:contain}
-  .afib-case .slide svg:not(.interactive-heart){max-height:34vh}
-  .afib-case .slide:has(.tachycardia-concept){padding:10px 10px!important}
-  .afib-case .slide:has(.tachycardia-concept) .heart-simulation{padding:10px}
-  .afib-case .slide:has(.tachycardia-concept) .reveal-rhythm-model,
-  .afib-case .slide:has(.tachycardia-concept) .rhythm-model-reveal{margin-top:8px}
-}
-@media(max-width:600px){
-  .afib-case .slide{padding:10px 12px 8px}
-  .afib-case .slide .stack,
-  .afib-case .slide .stack.wide{gap:8px}
-  .afib-case .slide p,
-  .afib-case .slide li{font-size:12px;line-height:1.38}
-  .afib-case .slide h1{font-size:21px}
-  .afib-case .slide h2{font-size:17px}
-  .afib-case .slide .panel,
-  .afib-case .slide .card{padding:8px}
-  .afib-case .slide img{max-height:28vh}
-  .afib-case .slide svg:not(.interactive-heart){max-height:30vh}
-  .afib-case .slide:has(.tachycardia-concept) .heart-simulation{padding:8px}
-  .afib-case .slide:has(.tachycardia-concept) .interactive-heart{max-height:34vh}
-}
-.afib-case .site-nav .nav-center a{text-transform:uppercase}
-
-/* Dedicated AFib cover slide, styled to echo the Cirrhosis case introduction. */
-.afib-case .slide.afib-title-slide{align-items:center!important;justify-content:flex-start!important;padding:clamp(24px,5vh,54px) clamp(24px,7vw,104px)!important}
-.afib-case .slide.afib-title-slide.has-image-bg{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
-.afib-case .slide.afib-title-slide.has-image-bg:before{background:linear-gradient(90deg,rgba(249,247,241,.93) 0%,rgba(249,247,241,.78) 48%,rgba(249,247,241,.18) 100%)!important}
-.afib-case .slide.afib-title-slide .stack{width:min(780px,100%)!important;max-width:780px!important;margin:auto 0!important;padding:0!important;background:transparent!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
-.afib-case .afib-title-kicker{color:#4b4a78;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}
-.afib-case .afib-titlebox h1{max-width:850px;margin:0 0 24px!important;color:#292750!important;font-family:Georgia,"Times New Roman",Times,serif!important;font-size:clamp(3.2rem,7.7vw,7rem)!important;font-weight:normal!important;line-height:.98!important;letter-spacing:-.045em!important;text-shadow:0 1px 0 rgba(255,255,255,.98),0 0 10px rgba(250,248,241,.95),0 0 28px rgba(250,248,241,.9)!important}
-.afib-case .afib-title-sub{max-width:680px;margin:0!important;color:#302d40!important;font-size:clamp(22px,3vw,34px)!important;font-weight:700!important;line-height:1.25!important;text-shadow:0 1px 0 rgba(255,255,255,.98),0 0 10px rgba(250,248,241,.98),0 0 24px rgba(250,248,241,.95)!important}
-.afib-case .afib-title-credit{margin:24px 0 0!important;color:#48443e!important;font-size:13px!important;font-style:italic!important;line-height:1.4!important;text-shadow:0 1px 0 rgba(255,255,255,.98),0 0 10px rgba(250,248,241,.98)!important}
-@media(max-width:600px){.afib-case .slide.afib-title-slide{padding:24px 18px!important}.afib-case .slide.afib-title-slide.has-image-bg:before{background:linear-gradient(180deg,rgba(249,247,241,.65) 0%,rgba(249,247,241,.83) 48%,rgba(249,247,241,.94) 100%)!important}.afib-case .afib-title-kicker{font-size:10px;letter-spacing:.16em;margin-bottom:14px}.afib-case .afib-titlebox h1{font-size:clamp(2.65rem,13vw,4.4rem)!important;margin-bottom:18px!important}.afib-case .afib-title-sub{font-size:22px!important;line-height:1.28!important}.afib-case .afib-title-credit{font-size:12px!important;margin-top:20px!important}}
