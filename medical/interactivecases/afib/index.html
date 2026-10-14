@@ -746,10 +746,6 @@ body.afib-case{
 }
 
 
-/* Match the main Upshift site: clean white canvas, with image backgrounds on roughly half the slides. */
-html,body,.app,.stage{background:#fff!important}
-.topbar,.nav{background:#fff!important}
-.stage:before{background:linear-gradient(115deg,rgba(255,255,255,.12),rgba(255,255,255,.02))!important}
 </style>
 </head>
 <body class="afib-case">
@@ -1025,9 +1021,7 @@ function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;","
 function render(){
  const s=slides[index];stage.innerHTML="";
  const el=document.createElement("section");el.className="slide visible";
- const fallbackBackgrounds=["Gemini_Generated_Image_8th1st8th1st8th1.jpeg","Gemini_Generated_Image_a45t21a45t21a45t.jpeg"];
- const slideBackground=s.image||(index%2===1?fallbackBackgrounds[index%fallbackBackgrounds.length]:null);
- if(slideBackground){el.classList.add("has-image-bg");el.classList.add("image-focus-"+(s.imageSide||"center"));el.style.backgroundImage='url("'+slideBackground+'")';}
+ if(s.image){el.classList.add("has-image-bg");el.classList.add("image-focus-"+(s.imageSide||"center"));el.style.backgroundImage='url("'+s.image+'")';}
  const stack=document.createElement("div");stack.className="stack"+(s.layout==="wide"?" wide":"");
  let html="";
  if(s.ch==="start"){html='<h1>'+s.title+'</h1><p class="lead">'+s.sub+'</p>'+s.body;}
