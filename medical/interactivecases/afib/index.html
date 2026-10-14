@@ -747,19 +747,22 @@ body.afib-case{
 
 
 
-/* Match the Cirrhosis case frame: 680px maximum, fluid on mobile, white outside. */
-body.afib-case{background:#fff;padding:0}
-.afib-case .site-nav{width:min(680px,calc(100vw - 40px));max-width:680px}
-.afib-case .afib-main{width:min(680px,100vw);max-width:680px;margin:0 auto}
-.afib-case .app{width:100%;max-width:680px;margin:0 auto}
+/* Match the Cirrhosis case frame: 760px maximum, with the same mobile gutters. */
+body.afib-case{background:#fff;padding:0 24px}
+.afib-case .site-nav{width:min(760px,calc(100vw - 40px));max-width:760px}
+.afib-case .afib-main{width:100%;max-width:760px;margin:0 auto}
+.afib-case .app{width:100%;max-width:760px;margin:0 auto}
 .afib-case .slide .stack,
-.afib-case .slide .stack.wide{zoom:1;width:min(680px,100%);max-width:680px;margin:0 auto}
-@media(max-width:680px){
-  .afib-case .site-nav{width:calc(100vw - 24px);max-width:none}
-  .afib-case .afib-main{width:100%;max-width:680px}
-  .afib-case .app{width:100%;max-width:680px}
+.afib-case .slide .stack.wide{zoom:1;width:100%;max-width:760px;margin:0 auto}
+.afib-case .slide .stack.wide{max-width:760px}
+@media(max-width:600px){
+  body.afib-case{padding:0 20px}
+  .afib-case .site-nav{width:calc(100vw - 40px)!important;max-width:none!important;top:2px!important;padding:12px 10px!important;border-radius:16px!important}
+  .afib-case .site-nav::before{border-radius:16px}
+  .afib-case .afib-main{width:100%;max-width:760px;padding-top:68px}
+  .afib-case .app{width:100%;max-width:760px;height:calc(100dvh - 68px);max-height:calc(100dvh - 68px);border-radius:9px}
   .afib-case .slide .stack,
-  .afib-case .slide .stack.wide{width:100%;max-width:100%;margin:0 auto}
+  .afib-case .slide .stack.wide{width:100%;max-width:100%;margin:0}
 }
 
 </style>
