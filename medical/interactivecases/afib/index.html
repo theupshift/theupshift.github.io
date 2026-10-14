@@ -408,6 +408,23 @@ body.afib-case{background:#e9e3d7;color:#1d1b19;font-family:Georgia,"Times New R
  .afib-case .clinical-reveal-content{padding:0 12px 10px}
 }
 
+
+/* Compact the complete slide content to 75% and keep long-slide headings in view. */
+.afib-case .slide{align-items:flex-start}
+.afib-case .slide .stack{
+  zoom:.75;
+  width:133.333%;
+  max-width:933px;
+  margin:0 auto;
+}
+.afib-case .slide .stack.wide{max-width:1200px}
+@media(max-width:760px){
+  .afib-case .slide{align-items:flex-start}
+  .afib-case .slide .stack,
+  .afib-case .slide .stack.wide{max-width:133.333%;width:133.333%;margin:0 auto}
+  .afib-case .slide.has-image-bg.image-focus-left .stack,
+  .afib-case .slide.has-image-bg.image-focus-right .stack{width:133.333%;max-width:133.333%;margin:0 auto}
+}
 </style>
 </head>
 <body class="afib-case">
