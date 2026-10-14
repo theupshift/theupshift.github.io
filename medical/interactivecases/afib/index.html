@@ -766,6 +766,65 @@ body.afib-case{background:#fff;padding:0 24px}
 }
 
 
+/* Match the Cirrhosis page's shared-site typography and spacing for the search and brand links. */
+.afib-case .site-nav{
+  gap:16px;
+  font-family:Georgia,"Times New Roman",Times,serif;
+  font-size:15px;
+  line-height:1.2;
+}
+.afib-case .site-nav .nav-left,
+.afib-case .site-nav .nav-right{
+  gap:16px;
+  min-width:0;
+}
+.afib-case .site-nav .nav-center{
+  justify-content:center;
+  text-align:center;
+  white-space:nowrap;
+  font-family:var(--font-small-caps);
+  font-size:16px;
+  letter-spacing:normal;
+}
+.afib-case .site-nav .nav-center a:first-child{
+  font-size:1.1em;
+  font-weight:600;
+}
+.afib-case .site-nav .nav-left a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  border:1px solid var(--color-rule);
+  border-radius:50%;
+  color:rgb(var(--color-accent));
+  font:18px Arial,sans-serif;
+}
+.afib-case .site-nav a{
+  color:rgb(var(--color-text));
+  text-decoration:none;
+  text-shadow:none;
+  background:none;
+}
+@media(max-width:600px){
+  .afib-case .site-nav{
+    grid-template-columns:auto minmax(0,1fr) auto;
+    gap:8px;
+  }
+  .afib-case .site-nav .nav-center{font-size:14px}
+  .afib-case .site-nav .nav-left a,
+  .afib-case .site-nav .home-nav-icon{
+    width:32px;height:32px;min-width:32px;min-height:32px;
+  }
+  .afib-case .site-nav .nav-right{gap:6px}
+  .afib-case .site-nav .nav-right #fullscreen{
+    padding:7px 10px;
+    font-size:12px;
+    min-height:34px;
+  }
+}
+
 /* Slide 2: keep the coloured conduction model visually dominant, especially on phones. */
 .afib-case .heart-sim-main{
   grid-template-columns:minmax(0,1.9fr) minmax(190px,.75fr);
