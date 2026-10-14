@@ -500,10 +500,14 @@ body.afib-case{background:#e9e3d7;color:#1d1b19;font-family:Georgia,"Times New R
 
 
 /* Interactive rhythm pathways within the enlarged heart model */
-.afib-case .tachycardia-concept{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(18px,2.4vw,30px);width:96vw;max-width:1600px;align-items:start;margin-left:calc(50% - 48vw);margin-right:calc(50% - 48vw)}
-.afib-case .heart-simulation{padding:18px 18px 16px;min-width:0;width:100%;max-width:none}
-.afib-case .heart-sim-main{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;align-items:center}
-.afib-case .heart-simulation .interactive-heart{display:block;width:100%;max-width:none;max-height:none;height:auto;margin:8px auto 12px;overflow:visible}
+.afib-case .slide .stack:has(.tachycardia-concept){zoom:1;width:100%;max-width:none;margin:0 auto}
+.afib-case .tachycardia-concept{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;width:100%;max-width:1200px;align-items:start;margin:0 auto}
+.afib-case .heart-simulation{padding:clamp(10px,1.6vw,18px);min-width:0;width:100%;max-width:none;margin:0 auto}
+.afib-case .heart-sim-main{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;align-items:center}
+.afib-case .heart-simulation .interactive-heart{display:block;width:100%;max-width:100%;max-height:52vh;height:auto;margin:4px auto 8px;overflow:visible}
+.afib-case .rhythm-interactive-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.afib-case .rhythm-tooltip{overflow-wrap:anywhere}
+@media(max-width:760px){.afib-case .slide .stack:has(.tachycardia-concept){width:100%;max-width:100%;zoom:1}.afib-case .heart-simulation .interactive-heart{max-height:42vh}.afib-case .heart-simulation{padding:10px}.afib-case .tachycardia-concept{gap:10px}}
 .afib-case .rhythm-flow-group{cursor:help;outline:none;opacity:.86;transition:opacity .15s ease,filter .15s ease}
 .afib-case .rhythm-flow-group:hover,.afib-case .rhythm-flow-group:focus,.afib-case .rhythm-flow-group:focus-visible{opacity:1;filter:drop-shadow(0 0 3px #fff);outline:none}
 .afib-case .rhythm-flow-group:focus-visible path{stroke-width:8}
