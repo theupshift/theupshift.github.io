@@ -793,6 +793,20 @@ function drawEvidenceChart(box,modeKey){
 }
 function setupEvidenceCharts(root){root.querySelectorAll('.evidence-chart').forEach(box=>drawEvidenceChart(box));}
 
+/* Randomly distribute the supplied image across at least one third of slides per visit. */
+const randomImageBackgroundUrl="https://theupshift.github.io/medical/interactivecases/afib/Gemini_Generated_Image_8th1st8th1st8th1.jpeg";
+const slidesAlreadyUsingImage=slides.filter(s=>s.image).length;
+const randomImageBackgroundCount=Math.max(0,Math.ceil(slides.length/3)-slidesAlreadyUsingImage);
+const randomImageCandidates=slides.filter((s,i)=>i>0&&!s.image);
+for(let i=randomImageCandidates.length-1;i>0;i--){
+ const j=Math.floor(Math.random()*(i+1));
+ [randomImageCandidates[i],randomImageCandidates[j]]=[randomImageCandidates[j],randomImageCandidates[i]];
+}
+randomImageCandidates.slice(0,randomImageBackgroundCount).forEach(s=>{
+ s.image=randomImageBackgroundUrl;
+ s.imageSide=Math.random()<.5?"left":"right";
+});
+
 let index=0,answers={};
 const stage=document.getElementById("stage"),prev=document.getElementById("prevBtn"),next=document.getElementById("nextBtn");
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
