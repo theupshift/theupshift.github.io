@@ -746,6 +746,43 @@ body.afib-case{
 }
 
 
+
+/* Match the Cirrhosis case shell width exactly: full-viewport main container and white outer canvas. */
+body.afib-case{
+  background:rgb(var(--color-background))!important;
+  padding:0 20px!important;
+}
+.afib-case .afib-main{
+  width:100vw!important;
+  max-width:none!important;
+  height:100dvh!important;
+  max-height:100dvh!important;
+  margin:0!important;
+  padding:85px 0 0!important;
+}
+.afib-case .afib-main .app{
+  flex:1 1 auto!important;
+  width:100vw!important;
+  max-width:none!important;
+  min-width:0!important;
+  min-height:0!important;
+  height:calc(100dvh - 85px)!important;
+  max-height:calc(100dvh - 85px)!important;
+  margin:0!important;
+  border-radius:0!important;
+}
+.afib-case .afib-main .stage{width:100%!important;max-width:100%!important;min-width:0!important}
+@media(max-width:600px){
+  body.afib-case{padding:0 20px!important;background:rgb(var(--color-background))!important}
+  .afib-case .afib-main{
+    width:100vw!important;max-width:none!important;height:100dvh!important;max-height:100dvh!important;
+    padding:68px 0 0!important;margin:0!important;
+  }
+  .afib-case .afib-main .app{
+    width:100vw!important;max-width:none!important;height:calc(100dvh - 68px)!important;
+    max-height:calc(100dvh - 68px)!important;border-radius:0!important;
+  }
+}
 </style>
 </head>
 <body class="afib-case">
