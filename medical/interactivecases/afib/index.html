@@ -455,6 +455,8 @@ body.afib-case{background:#e9e3d7;color:#1d1b19;font-family:Georgia,"Times New R
 .afib-case .heart-sim-intro{text-align:center;max-width:760px;margin:0 auto 2px;font:15px/1.35 system-ui,sans-serif;color:var(--ink)}
 .afib-case .heart-sim-intro strong{display:block;font:700 clamp(19px,2.3vw,25px)/1.25 Georgia,"Times New Roman",serif}
 .afib-case .heart-sim-intro p{margin:2px 0 0;color:var(--muted)}
+.afib-case .heart-sim-intro .svt-definition-detail{max-width:920px;margin:8px auto 0;font:14px/1.55 system-ui,sans-serif;color:var(--muted)}
+.afib-case .rhythm-feature-cards{margin:12px auto 16px}
 .afib-case .heart-sim-main{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(220px,.75fr);gap:14px;align-items:center}
 .afib-case .heart-simulation .interactive-heart{display:block;width:100%;max-width:760px;margin:0 auto;max-height:none}
 .afib-case .rhythm-feature-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;width:100%;max-width:1000px;margin:0 auto}
@@ -562,7 +564,9 @@ body.afib-case{background:#e9e3d7;color:#1d1b19;font-family:Georgia,"Times New R
 "use strict";
 const slides=[
 {ch:"start",k:"Clinical reasoning · Cardiology",title:"Atrial Fibrillation & Supraventricular Tachycardia",sub:"One patient. A changing rhythm. Decisions from first contact to long-term care.",body:`<section class="afib-objectives" aria-labelledby="afib-objectives-heading"><h3 id="afib-objectives-heading">Learning objectives</h3><p class="afib-objectives-intro">By the end of this case, you should be able to:</p><ol class="afib-objectives-list"><li><div><strong>Recognise</strong><span>Distinguish AF, atrial flutter and common regular SVTs using the clinical context and ECG.</span></div></li><li><div><strong>Stabilise</strong><span>Identify haemodynamic instability and prioritise time-critical treatment.</span></div></li><li><div><strong>Choose treatment safely</strong><span>Individualise rate or rhythm control, considering ventricular function, renal function and contraindications.</span></div></li><li><div><strong>Prevent complications</strong><span>Assess stroke risk, anticoagulation, modifiable risk factors and follow-up needs.</span></div></li></ol><p class="afib-objectives-note">Interactive clinical case · Decision questions include explanations and safety caveats.</p></section>`,layout:"wide"},
-{ch:"foundations",k:"01 · The framework",title:"Tachycardia is a finding, not a diagnosis",body:`<div class="tachycardia-concept"><div class="heart-simulation"><div class="heart-sim-intro"><strong>SVT = supraventricular tachycardia.</strong><p>The term includes rhythms arising above the ventricles.</p></div><div class="heart-sim-main">
+{ch:"foundations",k:"01 · The framework",title:"Tachycardia is a finding, not a diagnosis",body:`<div class="tachycardia-concept"><div class="heart-simulation"><div class="heart-sim-intro"><strong>SVT = supraventricular tachycardia.</strong><p>The term includes rhythms arising above the ventricles.</p><p class="svt-definition-detail">Occurring at a heart rate greater than 100/min, these tachyarrhythmias typically conduct through the His–Purkinje system and appear on ECG as narrow-QRS (&lt;120 ms) rhythms. Paroxysmal SVT (PSVT) is a subgroup that begins episodically and terminates abruptly.</p></div>
+
+<div class="heart-sim-main">
 <svg class="interactive-heart" viewBox="0 0 520 420" role="img" aria-labelledby="rhythm-heart-title rhythm-heart-desc">
 <title id="rhythm-heart-title">Interactive heart rhythm mechanism model</title>
 <desc id="rhythm-heart-desc">A simplified heart diagram showing coloured electrical pathways for atrial fibrillation, atrial tachycardia, atrial flutter, AVNRT and AVRT. Hover over or keyboard-focus a coloured pathway to view an explanation of the rhythm.</desc>
