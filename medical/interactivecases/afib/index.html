@@ -517,14 +517,11 @@ body.afib-case{background:#e9e3d7;color:#1d1b19;font-family:Georgia,"Times New R
 .afib-case .legend-dot.rhythm-af{background:#6555a4;border-color:#6555a4}
 .afib-case .legend-dot.rhythm-atach{background:#277e91;border-color:#277e91}
 .afib-case .legend-dot.rhythm-flutter{background:#ae8845;border-color:#ae8845}
-.afib-case .rhythm-tooltip{border:1px solid #d6cfc1;border-left:4px solid var(--purple);background:#fffdf8;padding:13px 15px;min-height:100px;margin:10px 0 0;color:var(--ink)}
+.afib-case .rhythm-tooltip{position:relative;border:1px solid #d6cfc1;border-radius:10px;background:#fffdf8;padding:13px 15px;min-height:0;margin:18px 0 0;color:var(--ink)}
+.afib-case .rhythm-tooltip:before{content:"";position:absolute;left:50%;top:-9px;transform:translateX(-50%);width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:9px solid #d6cfc1}
+.afib-case .rhythm-tooltip:after{content:"";position:absolute;left:50%;top:-7px;transform:translateX(-50%);width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:7px solid #fffdf8}
 .afib-case .rhythm-tooltip strong{font:700 15px/1.35 system-ui,sans-serif;display:block;margin-bottom:5px}
 .afib-case .rhythm-tooltip p{font:14px/1.5 system-ui,sans-serif;margin:0;color:var(--muted)}
-.afib-case .rhythm-tooltip[data-rhythm="af"]{border-left-color:#6555a4}
-.afib-case .rhythm-tooltip[data-rhythm="atach"]{border-left-color:#277e91}
-.afib-case .rhythm-tooltip[data-rhythm="flutter"]{border-left-color:#ae8845}
-.afib-case .rhythm-tooltip[data-rhythm="avnrt"]{border-left-color:#c14d48}
-.afib-case .rhythm-tooltip[data-rhythm="avrt"]{border-left-color:#176f87}
 @media(max-width:900px){.afib-case .tachycardia-concept{grid-template-columns:1fr;gap:18px}.afib-case .heart-simulation .interactive-heart{max-height:none;width:100%;max-width:700px}.afib-case .rhythm-interactive-legend{font-size:11px}}
 
 /* Animate electrical flow on hover or keyboard focus, for every rhythm pathway */
