@@ -709,6 +709,42 @@ body.afib-case{
   .afib-case.cirrhosis-fullscreen .app{width:100vw;height:100dvh;max-height:100dvh;margin:0;border-radius:0}
 }
 
+
+/* Slide 2: centre the SVT teaching panel, widen it, and let the background show through. */
+.afib-case .slide:has(.tachycardia-concept){
+  align-items:center!important;
+  justify-content:flex-start!important;
+  padding:clamp(18px,3vh,34px) clamp(20px,4vw,48px)!important;
+  overflow-y:auto;
+}
+.afib-case .slide:has(.tachycardia-concept) .stack,
+.afib-case .slide:has(.tachycardia-concept) .stack.wide{
+  width:100%!important;max-width:1120px!important;
+  margin:0 auto!important;zoom:1!important;
+}
+.afib-case .slide:has(.tachycardia-concept) .tachycardia-concept{
+  width:100%;max-width:1120px;margin:0 auto;gap:10px;
+}
+.afib-case .slide:has(.tachycardia-concept) .heart-simulation{
+  width:100%;max-width:none;margin:0 auto;
+  padding:clamp(16px,2.2vw,28px);
+  background:rgba(249,247,241,.58);
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:0 8px 26px rgba(43,37,28,.07);
+  -webkit-backdrop-filter:blur(2px);
+  backdrop-filter:blur(2px);
+}
+.afib-case .slide:has(.tachycardia-concept) .heart-sim-intro{max-width:100%;margin:0 auto;text-align:center}
+.afib-case .slide:has(.tachycardia-concept) .heart-sim-intro .svt-definition-detail{max-width:980px}
+.afib-case .slide:has(.tachycardia-concept) .reveal-rhythm-model{margin:14px auto 0}
+.afib-case .slide:has(.tachycardia-concept) .rhythm-model-reveal{margin-top:14px}
+@media(max-width:760px){
+  .afib-case .slide:has(.tachycardia-concept){padding:14px 12px!important}
+  .afib-case .slide:has(.tachycardia-concept) .stack,
+  .afib-case .slide:has(.tachycardia-concept) .stack.wide{width:100%!important;max-width:100%!important}
+  .afib-case .slide:has(.tachycardia-concept) .heart-simulation{padding:14px 12px;background:rgba(249,247,241,.52)}
+}
+
 </style>
 </head>
 <body class="afib-case">
