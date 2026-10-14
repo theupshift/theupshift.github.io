@@ -500,9 +500,10 @@ body.afib-case{background:#e9e3d7;color:#1d1b19;font-family:Georgia,"Times New R
 
 
 /* Interactive rhythm pathways within the enlarged heart model */
-.afib-case .tachycardia-concept{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(18px,2.4vw,30px);max-width:1160px;align-items:start}
-.afib-case .heart-simulation{padding:18px 18px 16px;min-width:0}
-.afib-case .heart-simulation .interactive-heart{width:100%;max-width:760px;max-height:none;height:auto;margin:8px auto 12px;overflow:visible}
+.afib-case .tachycardia-concept{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(18px,2.4vw,30px);width:96vw;max-width:1600px;align-items:start;margin-left:calc(50% - 48vw);margin-right:calc(50% - 48vw)}
+.afib-case .heart-simulation{padding:18px 18px 16px;min-width:0;width:100%;max-width:none}
+.afib-case .heart-sim-main{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;align-items:center}
+.afib-case .heart-simulation .interactive-heart{display:block;width:100%;max-width:none;max-height:none;height:auto;margin:8px auto 12px;overflow:visible}
 .afib-case .rhythm-flow-group{cursor:help;outline:none;opacity:.86;transition:opacity .15s ease,filter .15s ease}
 .afib-case .rhythm-flow-group:hover,.afib-case .rhythm-flow-group:focus,.afib-case .rhythm-flow-group:focus-visible{opacity:1;filter:drop-shadow(0 0 3px #fff);outline:none}
 .afib-case .rhythm-flow-group:focus-visible path{stroke-width:8}
@@ -512,17 +513,17 @@ body.afib-case{background:#e9e3d7;color:#1d1b19;font-family:Georgia,"Times New R
 .afib-case .rhythm-key:hover,.afib-case .rhythm-key:focus-visible,.afib-case .rhythm-key[aria-pressed="true"]{border-color:#6555a4;background:#f1edf8;outline-offset:2px}
 .afib-case .rhythm-key .legend-dot{flex:0 0 9px}
 .afib-case .rhythm-key-hint{color:var(--muted);font-size:11px}
-.afib-case .rhythm-flow-group path{stroke-width:2.5!important;stroke-dasharray:3 7;stroke-linecap:round}
-.afib-case .rhythm-flow-group.is-active path{stroke-width:2.5!important;stroke-dasharray:3 7;animation:rhythm-electric-flow .8s linear infinite}
+.afib-case .rhythm-flow-group path{stroke-width:4.5!important;stroke-dasharray:4 6;stroke-linecap:round}
+.afib-case .rhythm-flow-group.is-active path{stroke-width:4.5!important;stroke-dasharray:4 6;animation:rhythm-electric-flow .8s linear infinite}
 
 .afib-case .legend-dot.rhythm-af{background:#6555a4;border-color:#6555a4}
 .afib-case .legend-dot.rhythm-atach{background:#277e91;border-color:#277e91}
 .afib-case .legend-dot.rhythm-flutter{background:#ae8845;border-color:#ae8845}
-.afib-case .rhythm-tooltip{position:relative;border:0;border-top:1px solid #d6cfc1;border-radius:0;background:transparent;padding:10px 8px 4px 24px;min-height:0;margin:14px 0 0;color:var(--ink)}
-.afib-case .rhythm-tooltip:before{content:"";position:absolute;left:8px;top:-20px;height:29px;width:1px;background:#9a9287}
-.afib-case .rhythm-tooltip:after{content:"";position:absolute;left:4px;top:-21px;width:7px;height:7px;border-left:1px solid #9a9287;border-top:1px solid #9a9287;transform:rotate(45deg)}
-.afib-case .rhythm-tooltip strong{font:700 14px/1.35 system-ui,sans-serif;display:block;margin-bottom:3px}
-.afib-case .rhythm-tooltip p{font:13px/1.45 system-ui,sans-serif;margin:0;color:var(--muted)}
+.afib-case .rhythm-tooltip{position:relative;border:1px solid #d6cfc1;border-radius:10px;background:#fffdf8;padding:13px 15px;min-height:0;margin:18px 0 0;color:var(--ink)}
+.afib-case .rhythm-tooltip:before{content:"";position:absolute;left:50%;top:-9px;transform:translateX(-50%);width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-bottom:9px solid #d6cfc1}
+.afib-case .rhythm-tooltip:after{content:"";position:absolute;left:50%;top:-7px;transform:translateX(-50%);width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:7px solid #fffdf8}
+.afib-case .rhythm-tooltip strong{font:700 15px/1.35 system-ui,sans-serif;display:block;margin-bottom:5px}
+.afib-case .rhythm-tooltip p{font:14px/1.5 system-ui,sans-serif;margin:0;color:var(--muted)}
 @media(max-width:900px){.afib-case .tachycardia-concept{grid-template-columns:1fr;gap:18px}.afib-case .heart-simulation .interactive-heart{max-height:none;width:100%;max-width:700px}.afib-case .rhythm-interactive-legend{font-size:11px}}
 
 /* Animate electrical flow on hover or keyboard focus, for every rhythm pathway */
@@ -854,7 +855,7 @@ function render(){
  });
 
  if(s.ch==="results"){const out=el.querySelector("#quizResults");const qs=slides.map((x,i)=>({x,i})).filter(v=>v.x.q);const done=qs.filter(v=>answers[v.i]!==undefined);const score=done.filter(v=>answers[v.i]===v.x.correct).length;out.innerHTML='<div class="results-score"><div><div class="score-number">'+score+'/'+qs.length+'</div><b>Decision questions correct</b><p class="small">'+done.length+' of '+qs.length+' answered</p></div><div><b>'+(done.length<qs.length?'Finish any unanswered questions to complete your score.':score===qs.length?'Excellent — all decision points correct.':score>=Math.ceil(qs.length*.6)?'Good foundation — review the missed decisions.':'Use the explanations below to consolidate the safety-critical steps.')+'</b><p>Each rationale is tied to the question you saw in the case. A wrong answer is a prompt to revisit the reasoning, not a clinical grade.</p></div></div>'+qs.map((v,n)=>{const chosen=answers[v.i];const ok=chosen===v.x.correct;return '<div class="result-row"><strong>'+(n+1)+'. '+v.x.title+' — '+(chosen===undefined?'<span class="miss">Not answered</span>':ok?'<span class="right">Correct</span>':'<span class="miss">Review</span>')+'</strong><p><b>Question:</b> '+v.x.q+'</p><p><b>Best answer:</b> '+v.x.opts[v.x.correct]+'</p><p><b>Reasoning:</b> '+v.x.why+'</p></div>';}).join('');}
- el.querySelectorAll("[data-reveal-rhythm-model]").forEach(btn=>btn.addEventListener("click",()=>{const model=el.querySelector("[data-rhythm-model]");if(!model)return;model.hidden=false;btn.setAttribute("aria-expanded","true");btn.hidden=true;model.scrollIntoView({behavior:"smooth",block:"start"});}));
+ el.querySelectorAll("[data-reveal-rhythm-model]").forEach(btn=>btn.addEventListener("click",()=>{const model=el.querySelector("[data-rhythm-model]");const intro=el.querySelector(".heart-sim-intro");if(!model)return;model.hidden=false;if(intro)intro.hidden=true;btn.setAttribute("aria-expanded","true");btn.hidden=true;model.scrollIntoView({behavior:"smooth",block:"start"});}));
  el.querySelectorAll("[data-reveal]").forEach(btn=>btn.addEventListener("click",()=>{const panel=el.querySelector('[data-reveal-panel="'+btn.dataset.reveal+'"]');if(!panel)return;panel.hidden=!panel.hidden;btn.textContent=panel.hidden?"Reveal the key teaching point":"Hide teaching point";}));
  el.querySelectorAll("[data-risk]").forEach(input=>input.addEventListener("change",()=>{if(input.dataset.risk==="age75"&&input.checked){const x=el.querySelector('[data-risk="age65"]');if(x)x.checked=false;}if(input.dataset.risk==="age65"&&input.checked){const x=el.querySelector('[data-risk="age75"]');if(x)x.checked=false;}}));
  el.querySelectorAll("[data-calc-score]").forEach(btn=>btn.addEventListener("click",()=>{const checked=k=>!!el.querySelector('[data-risk="'+k+'"]').checked;let total=(checked("chf")?1:0)+(checked("htn")?1:0)+(checked("age75")?2:0)+(checked("diabetes")?1:0)+(checked("stroke")?2:0)+(checked("vascular")?1:0)+(checked("age65")?1:0)+(checked("female")?1:0);const out=el.querySelector("[data-score-result]");const male=!checked("female");let interp=male?(total>=2?"Anticoagulation is recommended under the 2023 US guideline threshold (estimated annual thromboembolic risk ≥2%; approximately CHA₂DS₂-VASc ≥2 in men).":total===1?"Anticoagulation is reasonable to consider (approximately 1–2% annual risk; score 1 in men), after shared decision-making.":"At this score, routine anticoagulation may not be indicated solely on the score; confirm risk factors and applicable local guidance."):(total>=3?"Anticoagulation is recommended under the 2023 US guideline threshold (estimated annual thromboembolic risk ≥2%; approximately CHA₂DS₂-VASc ≥3 in women).":total===2?"Anticoagulation is reasonable to consider (approximately 1–2% annual risk; score 2 in women), after shared decision-making.": "At this score, routine anticoagulation may not be indicated solely on the score; confirm risk factors and applicable local guidance.");if(checked("age75")&&checked("age65"))interp="Invalid age selection: choose either age 65–74 or age ≥75, not both. Correct the selection and recalculate.";out.innerHTML='<div class="score-number">'+total+'</div><b>CHA₂DS₂-VASc total</b><p>'+interp+'</p><p><b>Case comparison:</b> Mr M is 71, male, hypertensive and diabetic, with no additional stroke-risk features supplied in the case: score 3. If he were ≥75, age contributes 2 rather than 1 (score 4 with the same known features). If he had a prior stroke/TIA/systemic embolism, add 2 points (score 5 in the original case profile). A score never replaces assessment of bleeding hazards, valve disease, renal function, patient preferences or local guidance.</p>';out.hidden=false;}));
