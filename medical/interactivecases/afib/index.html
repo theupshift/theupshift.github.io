@@ -759,8 +759,8 @@ body.afib-case{background:#fff;padding:0 24px}
   body.afib-case{padding:0 20px}
   .afib-case .site-nav{width:calc(100vw - 40px)!important;max-width:none!important;top:2px!important;padding:12px 10px!important;border-radius:16px!important}
   .afib-case .site-nav::before{border-radius:16px}
-  .afib-case .afib-main{width:100%;max-width:760px;padding-top:68px}
-  .afib-case .app{width:100%;max-width:760px;height:calc(100dvh - 68px);max-height:calc(100dvh - 68px);border-radius:9px}
+  .afib-case .afib-main{width:min(760px,calc(100vw - 40px));max-width:760px;margin-left:auto;margin-right:auto;padding-top:68px}
+  .afib-case .app{width:100%;max-width:100%;height:calc(100dvh - 68px);max-height:calc(100dvh - 68px);border-radius:9px}
   .afib-case .slide .stack,
   .afib-case .slide .stack.wide{width:100%;max-width:100%;margin:0}
 }
