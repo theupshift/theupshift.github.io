@@ -35,6 +35,78 @@
 @media(max-width:650px){.chart-row{grid-template-columns:1fr 54px;gap:6px}.chart-label{grid-column:1/-1}.chart-track{grid-column:1}.chart-value{grid-column:2;grid-row:2}.evidence-chart{padding:12px}}
 
 .contents-section{font:800 11px/1.4 system-ui,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:var(--purple);border-bottom:1px solid var(--line);padding:18px 2px 8px;margin:10px 0 8px}.contents-item{display:flex;align-items:center;gap:13px;text-align:left;padding:12px 14px;border-radius:10px;box-shadow:0 2px 8px rgba(24,47,77,.035)}.contents-item:hover{background:#edf5fb}.contents-number{font:800 13px system-ui,sans-serif;color:var(--blue);background:#e3f3f5;border-radius:8px;padding:8px;min-width:40px;text-align:center}.contents-copy{display:flex;flex-direction:column;gap:4px}.contents-copy b{font-weight:650}.contents-copy small{font:11px system-ui,sans-serif;color:var(--muted)}.topbtn,.navbtn{border-radius:8px}.panel,.question,.score-tool,.results-summary,.evidence-chart{border-radius:12px;box-shadow:0 5px 18px rgba(24,47,77,.045)}.callout,.story-thread,.feedback,.score-result,.reveal-panel{border-radius:0 10px 10px 0}.tag{border-radius:999px}.chapter-pill{border-radius:999px}.answer{border-radius:9px}.navbtn.primary{background:linear-gradient(135deg,var(--purple),var(--blue));border-color:transparent}.progressfill{background:linear-gradient(90deg,var(--purple),var(--blue),var(--gold))}.metric,.score-number{color:var(--purple)}
+
+/* Upshift visual alignment: harmonised with the Cirrhosis interactive case */
+:root{
+  --ink:#1d1b19;--muted:#4f4a42;--faint:#7e786e;
+  --cream:#e9e3d7;--paper:#f9f7f1;--line:#d6cfc1;
+  --nav:#ffffff;--purple:#4b4a78;--purple2:#34345e;
+  --blue:#547f92;--rose:#a45d65;--gold:#ae8845;--plum:#87699a;
+  --green:#3e7954;--red:#a84545;--shadow:0 22px 55px rgba(43,37,28,.18);
+}
+body{background:#bbb5aa;color:var(--ink);font-family:Georgia,"Times New Roman",Times,serif;text-rendering:optimizeLegibility}
+.app{background:var(--cream)}
+.topbar{background:#fff;border-bottom-color:#dad6ce;padding:0 28px;color:var(--ink)}
+.case-title{font-family:Georgia,"Times New Roman",Times,serif;font-size:19px;line-height:1;letter-spacing:.14em}
+.act-tag{border-left-color:#e6e1d8;color:#6f685f;font-family:Georgia,"Times New Roman",Times,serif}
+.topbtn,.navbtn{border:1px solid #d4cec2;background:#fff;color:#34322f;font-family:Georgia,"Times New Roman",Times,serif;transition:background .14s ease,border-color .14s ease,color .14s ease}
+.topbtn:hover,.navbtn:hover:not(:disabled){background:#f5f2ec;border-color:#aaa397}
+.stage{background:linear-gradient(120deg,#e9e3d7 0%,#ded9cf 52%,#d2cec5 100%)}
+.stage:before{background:linear-gradient(120deg,rgba(249,247,241,.22),transparent 55%,rgba(75,74,120,.035));}
+.slide{padding:44px clamp(34px,5vw,88px) 32px}
+.stack{max-width:680px}
+.stack.wide{max-width:780px}
+.kicker{color:var(--purple);font-family:Georgia,"Times New Roman",Times,serif;letter-spacing:.20em}
+.slide h1,.slide h2,.slide h3{font-family:Georgia,"Times New Roman",Times,serif;color:var(--ink)}
+.slide h1{font-size:clamp(42px,5.8vw,76px);font-weight:normal;line-height:.99;letter-spacing:-.035em}
+.slide h2{font-size:clamp(32px,4.7vw,58px);font-weight:normal;line-height:1.02;letter-spacing:-.03em}
+.slide h3{font-weight:bold}
+.lead{font-family:Georgia,"Times New Roman",Times,serif;line-height:1.48}
+.slide p,.slide li{line-height:1.58}
+.rule{background:#bdb5a8}
+.panel,.question,.score-tool,.results-summary{border-color:#d6cfc1;background:rgba(249,247,241,.90);border-radius:2px;box-shadow:none}
+.panel{padding:16px 18px}
+.panel h3{font-family:Georgia,"Times New Roman",Times,serif}
+.tag{color:var(--purple);border-color:#4b4a7855}
+.callout{border-left-color:var(--purple);background:rgba(249,247,241,.92)}
+.callout.warn{border-color:var(--rose)}.callout.good{border-color:var(--green)}
+table{background:rgba(249,247,241,.94);font-family:Georgia,"Times New Roman",Times,serif}
+th,td{border-color:#d6cfc1}
+th{background:#e5dfd3}
+.question{padding:20px 22px}
+.answer{border-color:#d6cfc1;background:#fff;color:var(--ink);font-family:Georgia,"Times New Roman",Times,serif;border-radius:2px;transition:background .14s ease,border-color .14s ease}
+.answer:hover:not(:disabled),.answer:focus-visible{border-color:var(--purple);outline:2px solid #4b4a7826}
+.answer .letter{background:#e9e3d7;font-family:Georgia,"Times New Roman",Times,serif}
+.answer.correct{border-color:var(--green);background:#edf3ec}.answer.correct .letter{background:var(--green)}
+.answer.wrong{border-color:var(--red);background:#f7ecea}.answer.wrong .letter{background:var(--red)}
+.feedback,.score-result{background:#f0ece3;border-left-color:var(--purple)}
+.score-grid label{border-color:#d6cfc1;background:#fff;font-family:Georgia,"Times New Roman",Times,serif}
+.score-grid input{accent-color:var(--purple)}
+.score-number,.metric{color:var(--purple);font-family:Georgia,"Times New Roman",Times,serif}
+.result-row,.results-scenarios details{border-color:#d6cfc1}
+.reveal-panel{border-left-color:var(--gold);background:#f1ece1}
+.chapter-pill{background:var(--purple);font-family:Georgia,"Times New Roman",Times,serif}
+.timeline{border-left-color:#c4bbad}
+.timeline .event:before{background:var(--purple)}
+.nav{background:#fff;border-top-color:#dad6ce;padding:0 28px}
+.navbtn{padding:11px 15px;letter-spacing:.10em}
+.navbtn.primary{background:var(--purple);border-color:var(--purple);color:#fff}
+.navbtn.primary:hover:not(:disabled){background:var(--purple2);border-color:var(--purple2)}
+.navchapter{color:var(--purple)}
+.navtitle{font-family:Georgia,"Times New Roman",Times,serif;color:#49443d}
+.progress{background:#e5dfd3}.progressfill{background:var(--purple)}
+.counter{color:#6f685f}
+.ecg{border-color:#d6cfc1;background:#fff}
+@media(max-width:680px){
+  .topbar{padding:0 14px;gap:8px}.case-title{font-size:14px;letter-spacing:.10em}
+  .act-tag{font-size:10px;padding-left:9px}
+  .slide{padding:28px 20px 24px}
+  .nav{height:64px;flex-basis:64px;padding:0 12px;gap:8px}
+  .navbtn{padding:10px 9px;font-size:10px}
+  .navtitle{font-size:12px}
+  .panel{padding:13px 14px}
+}
+
 </style>
 </head>
 <body>
