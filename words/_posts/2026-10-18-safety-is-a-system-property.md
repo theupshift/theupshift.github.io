@@ -1,5 +1,4 @@
 ---
-title: Safety is a system property
 description: Dr. Nancy Leveson on why safety depends on the whole system, not its individual parts.
 image: https://img.youtube.com/vi/8bzWvII9OD4/hqdefault.jpg
 date: 2026-10-18 10:50:00 +0300
@@ -31,5 +30,3 @@ A systems view asks a broader question: **what controls, relationships, and assu
     allowfullscreen>
   </iframe>
 </div>
-
-<small>🎥 Watch Dr. Nancy Leveson discuss system safety.</small>
