@@ -13,15 +13,13 @@ layout: no-title-post
     <em>Safety is a system property, not a component property, and must be controlled at the system level, not the component level.</em>
   </span>
   <p style="color:gray; font-family:Georgia; font-size:0.8em;">
-    Dr. Nancy Leveson, Professor of Aeronautics and Astronautics and Engineering Systems at MIT
+    <a href="https://news.mit.edu/2012/qa-with-nancy-leveson" target="_blank" rel="noopener noreferrer">Dr. Nancy Leveson</a>, Professor of Aeronautics and Astronautics and Engineering Systems at MIT
   </p>
 </center>
 
-Safety is not simply a matter of making sure every component works as intended. It depends on how people, technology, procedures, and decisions interact. A system can fail even when its individual parts appear to be working properly.
+Safety cannot be reduced to whether each individual part works as intended. It emerges from how people, technology, procedures, and organisational decisions interact. When something goes wrong, looking only for a failed component or blaming the person closest to the event can miss the conditions that made the outcome possible.
 
-When an accident happens, it is tempting to look for one faulty component or blame the person closest to the event. That can leave the deeper causes untouched. A systems view asks what conditions allowed the hazard to emerge and what controls could have prevented it.
-
-The practical lesson is simple: to improve safety, we have to understand the whole system, including the relationships and decisions that shape how it behaves.
+A systems view asks a broader question: **what controls, relationships, and assumptions allowed the hazard to develop?**
 
 <a href="https://www.youtube.com/watch?v=8bzWvII9OD4&list=PLmo9Xl8PKe5vz1CBNcJIzk1lvQK7Fjf7s" target="_blank" rel="noopener noreferrer">
   <img src="https://img.youtube.com/vi/8bzWvII9OD4/hqdefault.jpg" alt="Watch Dr. Nancy Leveson discuss system safety" style="width:100%; max-width:800px; height:auto;">
