@@ -21,8 +21,15 @@ Safety cannot be reduced to whether each individual part works as intended. It e
 
 A systems view asks a broader question: **what controls, relationships, and assumptions allowed the hazard to develop?**
 
-<a href="https://www.youtube.com/watch?v=8bzWvII9OD4&list=PLmo9Xl8PKe5vz1CBNcJIzk1lvQK7Fjf7s" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.youtube.com/vi/8bzWvII9OD4/hqdefault.jpg" alt="Watch Dr. Nancy Leveson discuss system safety" style="width:100%; max-width:800px; height:auto;">
-</a>
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:800px; margin:1.5em auto;">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/8bzWvII9OD4?list=PLmo9Xl8PKe5vz1CBNcJIzk1lvQK7Fjf7s"
+    title="Dr. Nancy Leveson discussing system safety"
+    style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
 
 <small>🎥 Watch Dr. Nancy Leveson discuss system safety.</small>
