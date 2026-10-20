@@ -94,4 +94,4 @@ When something goes wrong, looking only for a failed component or blaming the pe
   </div>
 </div>
 
-Safety cannot be reduced to whether each individual part works as intended. It emerges from how people, technology, procedures, and organisational decisions interact.
+For the full context, listen to Dr. Leveson’s lecture.
