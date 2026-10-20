@@ -59,35 +59,59 @@ title:
   .play-button {
     position: absolute;
     bottom: 20px;
-    right: 20px; /* Now on the right side */
-    background-color: #fff;
+    right: 20px;
+    width: 54px;
+    height: 54px;
+    box-sizing: border-box;
+    border: 2px solid #e60000;
+    background-color: #ffffff;
     border-radius: 50%;
-    padding: 15px;
+    padding: 0;
     cursor: pointer;
-    font-size: 20px;
-    color: #ff0000;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #e60000;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+  }
+
+  .play-button .play-icon {
+    display: block;
+    color: #e60000;
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 1;
+    margin-left: 3px;
   }
 
   .play-button.playing {
-    background-color: #ff0000; /* Red when playing */
-    color: #fff; /* White icon when playing */
+    background-color: #e60000;
+    color: #ffffff;
+  }
+
+  .play-button.playing .play-icon {
+    color: #ffffff;
+    margin-left: 0;
+    font-size: 21px;
   }
 
   .play-button:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    transform: scale(1.1);
+    background-color: #ffe5e5;
+    transform: scale(1.08);
   }
 
-  .play-button i {
-    font-size: 18px;
+  .play-button.playing:hover {
+    background-color: #c90000;
   }
 
-  /* Tablet */
+  .play-button:focus-visible {
+    outline: 3px solid #222222;
+    outline-offset: 3px;
+  }
+
   @media (max-width: 768px) {
     .quote-text {
       width: 40%;
@@ -106,10 +130,11 @@ title:
     .play-button {
       bottom: 15px;
       right: 15px;
+      width: 48px;
+      height: 48px;
     }
   }
 
-  /* Phone */
   @media (max-width: 480px) {
     .quote-text {
       width: 45%;
@@ -128,15 +153,17 @@ title:
     .play-button {
       bottom: 10px;
       right: 10px;
+      width: 44px;
+      height: 44px;
     }
   }
 </style>
 
 <div class="quote-container">
-  <img 
-    src="https://www.densediscovery.com/archive/354/head.jpg" 
-    alt="Artwork by Janusz Jurek" 
-    class="background-image" 
+  <img
+    src="https://www.densediscovery.com/archive/354/head.jpg"
+    alt="Artwork by Janusz Jurek"
+    class="background-image"
   />
 
   <p class="quote-text">
@@ -145,40 +172,48 @@ title:
   </p>
 
   <div class="artist-overlay">
-    Featured artist: 
+    Featured artist:
     <a href="https://www.instagram.com/januszjurek.info/" target="_blank" rel="noopener noreferrer">
       Janusz Jurek
     </a>
   </div>
 
-  <!-- 🔊 Play Button -->
-  <div class="play-button" id="playButton">
-    <i class="fas fa-play"></i>
-  </div>
+  <button class="play-button" id="playButton" type="button" aria-label="Play audio" aria-pressed="false">
+    <span class="play-icon" aria-hidden="true">▶</span>
+  </button>
 
-  <!-- 🎵 Audio Source -->
   <audio id="backgroundAudio" preload="auto">
-    <source src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/assets/audio/www.villadalgarve.co.za%20-%20Bon%20Iver%20-%208%20(circle)%20-%20Official%20Video%20(320%20KBps).mp3" type="audio/mp3">
+    <source src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/assets/audio/www.villadalgarve.co.za%20-%20Bon%20Iver%20-%208%20(circle)%20-%20Official%20Video%20(320%20KBps).mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 </div>
-
-<!-- Font Awesome for icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <script>
   const playButton = document.getElementById("playButton");
   const audio = document.getElementById("backgroundAudio");
 
-  playButton.addEventListener("click", () => {
+  function updatePlayButton() {
+    const isPlaying = !audio.paused;
+    playButton.classList.toggle("playing", isPlaying);
+    playButton.setAttribute("aria-pressed", String(isPlaying));
+    playButton.setAttribute("aria-label", isPlaying ? "Pause audio" : "Play audio");
+    playButton.querySelector(".play-icon").textContent = isPlaying ? "Ⅱ" : "▶";
+  }
+
+  playButton.addEventListener("click", async () => {
     if (audio.paused) {
-      audio.play();
-      playButton.innerHTML = '<i class="fas fa-pause"></i>';
-      playButton.classList.add("playing");
+      try {
+        await audio.play();
+      } catch (error) {
+        updatePlayButton();
+      }
     } else {
       audio.pause();
-      playButton.innerHTML = '<i class="fas fa-play"></i>';
-      playButton.classList.remove("playing");
     }
+    updatePlayButton();
   });
+
+  audio.addEventListener("play", updatePlayButton);
+  audio.addEventListener("pause", updatePlayButton);
+  audio.addEventListener("ended", updatePlayButton);
 </script>
