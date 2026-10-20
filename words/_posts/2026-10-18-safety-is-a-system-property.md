@@ -17,11 +17,13 @@ When something goes wrong, looking only for a failed component or blaming the pe
     gap: 15px;
   }
 
-  .quote-container img {
-    width: 150px;
-    max-width: 35%;
-    height: auto;
+  .quote-container .quote-video {
+    width: 38%;
+    max-width: 320px;
+    min-width: 180px;
     flex-shrink: 0;
+    aspect-ratio: 16 / 9;
+    border: 0;
   }
 
   .quote-container blockquote {
@@ -46,22 +48,30 @@ When something goes wrong, looking only for a failed component or blaming the pe
   }
 
   @media (max-width: 600px) {
-    .quote-container img {
-      width: 90px;
+    .quote-container {
+      gap: 10px;
+    }
+
+    .quote-container .quote-video {
+      width: 38%;
+      min-width: 120px;
     }
 
     .quote-container blockquote {
       font-size: 0.9rem;
     }
-
-    .quote-container {
-      gap: 10px;
-    }
   }
 </style>
 
 <div class="quote-container">
-  <img src="https://img.youtube.com/vi/8bzWvII9OD4/hqdefault.jpg" alt="Video still from Dr. Nancy Leveson discussing system safety">
+  <iframe
+    class="quote-video"
+    src="https://www.youtube-nocookie.com/embed/8bzWvII9OD4?list=PLmo9Xl8PKe5vz1CBNcJIzk1lvQK7Fjf7s"
+    title="Dr. Nancy Leveson discussing system safety"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
   <div>
     <blockquote>
       “Safety is a system property, not a component property, and must be controlled at the system level, not the component level.”
@@ -71,14 +81,3 @@ When something goes wrong, looking only for a failed component or blaming the pe
 </div>
 
 Safety cannot be reduced to whether each individual part works as intended. It emerges from how people, technology, procedures, and organisational decisions interact.
-
-<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:800px; margin:1.5em auto;">
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/8bzWvII9OD4?list=PLmo9Xl8PKe5vz1CBNcJIzk1lvQK7Fjf7s"
-    title="Dr. Nancy Leveson discussing system safety"
-    style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen>
-  </iframe>
-</div>
