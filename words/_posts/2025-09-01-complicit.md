@@ -28,8 +28,6 @@ Sometimes by pretending we don’t have agency when we actually do.
 
 This isn’t about blame. It’s about leverage.
 
-When you see your role clearly, you get to rewrite it. You get to stop feeding the problem and start feeding the change.
+When you see your role clearly, you get to rewrite it. You get to stop feeding the problem and start feeding the change. 
 
-Sit with the question for a few minutes. It won’t feel cozy, but it will feel clarifying.
-
-And clarity is the beginning of freedom.
+Will try to ponder on this question for a few minutes today.
