@@ -90,7 +90,7 @@ When something goes wrong, looking only for a failed component or blaming the pe
     <blockquote>
       “Safety is a system property, not a component property, and must be controlled at the system level, not the component level.”
     </blockquote>
-    <p><a href="https://news.mit.edu/2012/qa-with-nancy-leveson" target="_blank" rel="noopener noreferrer">Dr. Nancy Leveson</a>, Professor of Aeronautics and Astronautics and Engineering Systems at MIT</p>
+    <p>— <a href="https://news.mit.edu/2012/qa-with-nancy-leveson" target="_blank" rel="noopener noreferrer">Dr. Nancy Leveson</a>, MIT Professor of Aeronautics and Astronautics</p>
   </div>
 </div>
 
