@@ -14,7 +14,7 @@ twitter_image: "https://raw.githubusercontent.com/theupshift/theupshift.github.i
 A new UNICEF report, **Feeding Profit: How food environments are failing children (Sep, 2025)**, lays out critical truths:  
 
 > "One persistent myth is that nutrient-poor, unhealthy diets are primarily due to dietary decisions – a view that places blame unfairly on children, adolescents and their parents and families, and frames these diets as a moral failure of the individual rather than a failure of society to protect the environments that children grow up in.<sup style="color:red;">[^1]</sup> It is unreasonable to assert that a sudden decline in children’s willpower or parental responsibility explains the rapid recent changes in diets or the global surge in childhood overweight. Another false narrative is that physical activity can offset the harmful effects of nutrient-poor, unhealthy diets.<sup style="color:red;">[^2] [^3] [^4]</sup> In reality, it is impossible to ‘outrun’ the health consequences of a diet high in free sugars, refined starches, salt, trans-fats, harmful additives and excessive energy through physical activity alone.”<sup style="color:red;">[^5]</sup>
-<!-- more -->
+
 <div style="text-align:center; margin: 1em 0;">
   <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obj1.jpg" 
        style="max-width:100%; height:auto; border-radius: 12px; border: 1px solid #003366;" 
@@ -28,7 +28,7 @@ The report is timely. In Eastern and Southern Africa, obesity among children age
        style="max-width:100%; height:auto; border-radius: 12px; border: 1px solid #003366;" 
        alt="Trends in child obesity and underweight">
 </div>  
-<br> These patterns are not failures of children's willpower but predictable outcomes of environments that shape what children eat. Much work remains to make this right as parents, public health practitioners, and leaders.  
+<br> These patterns are not failures of children's willpower but predictable outcomes of environments that shape what children eat. Much work remains to make this right as parents, health practitioners, and leaders.  
 
 [^1]: United Nations Children’s Fund (UNICEF). <em>Feeding Profit: How food environments are failing children. Child Nutrition Report 2025.</em> UNICEF, September 2025. <a href="https://www.unicef.org/reports/feeding-profit" target="_blank" rel="noopener noreferrer">Read the report</a>.
 
