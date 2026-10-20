@@ -16,9 +16,9 @@ layout: default
 
 <nav class="article-navigation" aria-label="Article navigation">
   <div class="article-previous">
-    {% if page.previous %}<a href="{{ page.previous.url }}"><span class="article-nav-label">← Previous</span>{{ page.previous.title | default: "Post" }}</a>{% endif %}
+    {% if page.previous %}<a href="{{ page.previous.url }}"{% unless page.previous.title %} class="article-nav-untitled"{% endunless %}><span class="article-nav-label">← Previous</span>{% if page.previous.title %}{{ page.previous.title }}{% else %}Post{% endif %}</a>{% endif %}
   </div>
   <div class="article-next">
-    {% if page.next %}<a href="{{ page.next.url }}"><span class="article-nav-label">Next →</span>{{ page.next.title | default: "Post" }}</a>{% endif %}
+    {% if page.next %}<a href="{{ page.next.url }}"{% unless page.next.title %} class="article-nav-untitled"{% endunless %}><span class="article-nav-label">Next →</span>{% if page.next.title %}{{ page.next.title }}{% else %}Post{% endif %}</a>{% endif %}
   </div>
 </nav>
