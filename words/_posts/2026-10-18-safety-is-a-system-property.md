@@ -1,5 +1,5 @@
 ---
-description: A system can have working parts and still fail. Safety emerges from how those parts interact, not just how each functions individually.
+description: "A system can have all individual parts working well and still fail when judged by its [emergent properties](https://sebokwiki.org/wiki/Emergence_and_Complexity). These arise from how the parts interact, not how each functions individually."
 image: https://miro.medium.com/v2/resize:fit:640/format:webp/1*nPU9GiZZBFnp2L2OwY65RA.jpeg
 date: 2026-10-18 10:50:00 +0300
 categories: Quotes
