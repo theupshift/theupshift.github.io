@@ -232,7 +232,7 @@ var groups={};
 visible.forEach(function(f){var folder=f.topicFolder;if(!groups[folder])groups[folder]=[];groups[folder].push(f)});
 // Always show the complete 15-topic Infectious Diseases curriculum, even when the
 // upstream file index has not yet received resources for topics 08–15.
-if(selected.folder==='01. infectious'){
+if(selected.folder==='01. infectious' && activeType!=='cases'){
 infectiousTopicFolders.forEach(function(folder){
 if(!query || (folder+' '+topicTitle(folder)+' '+(topicBlurbs[folder]||'')).toLowerCase().indexOf(query)!==-1){
 if(!groups[folder])groups[folder]=[];
