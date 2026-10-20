@@ -31,8 +31,8 @@ When something goes wrong, looking only for a failed component or blaming the pe
     margin: 0;
     padding: 0;
     font-family: Georgia, serif;
-    font-size: 1.1rem;
-    line-height: 1.4;
+    font-size: 0.92rem;
+    line-height: 1.45;
     flex: 1 1 auto;
     word-break: break-word;
     border: 0;
@@ -43,22 +43,36 @@ When something goes wrong, looking only for a failed component or blaming the pe
     margin-top: 8px;
     font-family: Georgia, serif;
     font-style: italic;
-    font-size: 0.9rem;
+    font-size: 0.78rem;
+    line-height: 1.45;
     color: gray;
   }
 
   @media (max-width: 600px) {
     .quote-container {
-      gap: 10px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
     }
 
     .quote-container .quote-video {
-      width: 38%;
-      min-width: 120px;
+      order: 0;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      aspect-ratio: 16 / 9;
+    }
+
+    .quote-container > div {
+      order: 1;
     }
 
     .quote-container blockquote {
       font-size: 0.9rem;
+    }
+
+    .quote-container p {
+      font-size: 0.78rem;
     }
   }
 </style>
