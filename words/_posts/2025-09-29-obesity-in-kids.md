@@ -20,7 +20,7 @@ A new UNICEF report, **Feeding Profit: How food environments are failing childre
        style="max-width:100%; height:auto; border-radius: 12px; border: 1px solid #003366;" 
        alt="Food environment graphic">
 </div>
-<br>
+
 The report is timely. In Eastern and Southern Africa, obesity among children aged 5 to 9 is already surpassing underweight. Even local studies in Tanzania highlight this shift. In Dar es Salaam, nearly a quarter of preschoolers have elevated blood pressure, especially those overweight.<sup style="color:red;">[^6]</sup> In Kilimanjaro, 15 percent of primary school children are overweight or obese, especially in urban and private schools.<sup style="color:red;">[^7]</sup> 
 <!-- more -->
 <div style="text-align:center; margin: 1em 0;">
