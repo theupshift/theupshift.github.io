@@ -94,4 +94,4 @@ When something goes wrong, looking only for a failed component or blaming the pe
   </div>
 </div>
 
-A system can be full of working parts and still fail. That is why safety must be built into how they work together. The <a href="https://www.youtube.com/watch?v=8bzWvII9OD4&list=PLmo9Xl8PKe5vz1CBNcJIzk1lvQK7Fjf7s" target="_blank" rel="noopener noreferrer">full lecture<sup>↗</sup></a> is worth your time if you’re interested in reducing errors in whatever you do.
+A system can be full of working parts and still fail. That is why safety must be built into how they work together. The <a href="https://www.youtube.com/watch?v=8bzWvII9OD4&list=PLmo9Xl8PKe5vz1CBNcJIzk1lvQK7Fjf7s" target="_blank" rel="noopener noreferrer">full lecture</a> is worth your time if you’re interested in reducing errors in whatever you do.
