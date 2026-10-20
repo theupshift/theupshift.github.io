@@ -7,6 +7,8 @@ layout: no-title-post
 
 ---
 
+When something goes wrong, looking only for a failed component or blaming the person closest to the event can miss the conditions that made the outcome possible.
+
 <center>
   <span style="color:gray; font-family:Georgia; font-size:1.05em;">
     <em>Safety is a system property, not a component property, and must be controlled at the system level, not the component level.</em>
@@ -16,7 +18,7 @@ layout: no-title-post
   </p>
 </center>
 
-Safety cannot be reduced to whether each individual part works as intended. It emerges from how people, technology, procedures, and organisational decisions interact. When something goes wrong, looking only for a failed component or blaming the person closest to the event can miss the conditions that made the outcome possible.
+Safety cannot be reduced to whether each individual part works as intended. It emerges from how people, technology, procedures, and organisational decisions interact.
 
 <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:800px; margin:1.5em auto;">
   <iframe
