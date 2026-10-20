@@ -90,9 +90,9 @@ A system can have working parts and still fail when judged by its <a href="https
   </iframe>
   <div>
     <blockquote>
-      “Safety is a system property, [that is] not a component property, <del style="text-decoration-color: red; text-decoration-thickness: 2px;">and</del> must be controlled at the system level, not the component level.”
+      <em>“....a system property, [that is] not a component property, <del style="text-decoration-color: red; text-decoration-thickness: 2px;">and</del> must be controlled at the system level, not the component level.”</em>
     </blockquote>
-    <p>— <a href="https://news.mit.edu/2012/qa-with-nancy-leveson" target="_blank" rel="noopener noreferrer">Dr. Nancy Leveson</a>, MIT Professor of Aeronautics and Astronautics</p>
+    <p><em>— <a href="https://news.mit.edu/2012/qa-with-nancy-leveson" target="_blank" rel="noopener noreferrer">Dr. Nancy Leveson</a>, MIT Professor of Aeronautics and Astronautics</em></p>
   </div>
 </div>
 
