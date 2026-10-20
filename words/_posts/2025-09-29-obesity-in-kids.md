@@ -15,15 +15,11 @@ A new UNICEF report, **Feeding Profit: How food environments are failing childre
 
 > "One persistent myth is that nutrient-poor, unhealthy diets are primarily due to dietary decisions – a view that places blame unfairly on children, adolescents and their parents and families, and frames these diets as a moral failure of the individual rather than a failure of society to protect the environments that children grow up in.<sup style="color:red;"><a href="#ref1">1</a></sup> It is unreasonable to assert that a sudden decline in children’s willpower or parental responsibility explains the rapid recent changes in diets or the global surge in childhood overweight. Another false narrative is that physical activity can offset the harmful effects of nutrient-poor, unhealthy diets.<sup style="color:red;"><a href="#ref2">2</a>–<a href="#ref4">4</a></sup> In reality, it is impossible to ‘outrun’ the health consequences of a diet high in free sugars, refined starches, salt, trans-fats, harmful additives and excessive energy through physical activity alone.<sup style="color:red;"><a href="#ref5">5</a></sup>
 <!-- more -->
-> These misleading narratives misdirect attention and resources towards individual lifestyle factors – such as individual nutrition choices or physical activity – while obscuring the far more powerful force: food environments. The worldwide deterioration in children’s and adolescents’ diets, along with the rise in overweight and obesity, is driven primarily by profound changes in the food environments in which children, adolescents and families eat, live, learn and play."  
-
-
 <div style="text-align:center; margin: 1em 0;">
   <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obj1.jpg" 
        style="max-width:100%; height:auto; border-radius: 12px; border: 1px solid #003366;" 
        alt="Food environment graphic">
-</div>  
-
+</div>
 <br>
 The report is timely. In Eastern and Southern Africa, obesity among children aged 5 to 9 is already surpassing underweight. Even local studies in Tanzania highlight this shift. In Dar es Salaam, nearly a quarter of preschoolers have elevated blood pressure, especially those overweight.<sup style="color:red;"><a href="#ref6">6</a></sup> In Kilimanjaro, 15 percent of primary school children are overweight or obese, especially in urban and private schools.<sup style="color:red;"><a href="#ref7">7</a></sup> 
 
