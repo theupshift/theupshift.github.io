@@ -223,7 +223,7 @@ next.addEventListener('click',function(){updateSpecialty(1)});
 function render(){
 var main=document.getElementById('cr-topics'),meta=document.getElementById('cr-meta');
 var selected=specialties.find(function(x){return x.title===selectedSpecialty})||specialties[0];
-var categoryFiles=allFiles.filter(function(f){return f.categoryFolder===selected.folder && !(hideTestBank && /testbank/i.test(f.path)) && !(hidePowerPoints && f.type==='slides')});
+var categoryFiles=allFiles.filter(function(f){return f.categoryFolder===selected.folder && activeType!=='cases' && !(hideTestBank && /testbank/i.test(f.path)) && !(hidePowerPoints && f.type==='slides')});
 var visible=categoryFiles.filter(function(f){
 var matchesQuery=!query||[f.title,f.path,f.typeLabel,f.topicTitle,selectedSpecialty].join(' ').toLowerCase().indexOf(query)!==-1;
 return matchesQuery&&(activeType==='all'||f.type===activeType)
