@@ -23,16 +23,13 @@ A new UNICEF report, **Feeding Profit: How food environments are failing childre
 <br>
 The report is timely. In Eastern and Southern Africa, obesity among children aged 5 to 9 is already surpassing underweight. Even local studies in Tanzania highlight this shift. In Dar es Salaam, nearly a quarter of preschoolers have elevated blood pressure, especially those overweight.<sup style="color:red;"><a href="#ref6">6</a></sup> In Kilimanjaro, 15 percent of primary school children are overweight or obese, especially in urban and private schools.<sup style="color:red;"><a href="#ref7">7</a></sup> 
 
-<br> These patterns are not failures of children's willpower but predictable outcomes of environments that shape what children eat. Much work remains to make this right as parents, public health practitioners, and leaders.  
-
-
 <div style="text-align:center; margin: 1em 0;">
   <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/trends%201.jpg" 
        style="max-width:100%; height:auto; border-radius: 12px; border: 1px solid #003366;" 
        alt="Trends in child obesity and underweight">
 </div>  
+<br> These patterns are not failures of children's willpower but predictable outcomes of environments that shape what children eat. Much work remains to make this right as parents, public health practitioners, and leaders.  
 
----
 
 1. Van Tulleken, Chris. *Ultra-Processed People*. Cornerstone Press, London, 2023, pp. 122–150.  
 2. Reilly, John J., et al. “Physical Activity to Prevent Obesity in Young Children: Cluster randomised controlled trial.” *British Medical Journal*, vol. 333, no. 7577, 6 October 2006, art. 1041.  
