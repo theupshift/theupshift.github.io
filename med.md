@@ -268,9 +268,9 @@ html+='</div></div>';
 html+='</section>';
 });
 if(interactiveCases.length){
-html+='<section class="cr-topic cr-interactive-cases"><div class="cr-topic-body" style="display:block"><h2 class="cr-topic-name" style="margin:0 0 .9rem">Interactive clinical cases hosted on MedED</h2><div class="cr-resource-list">';
+html+='<div class="cr-resource-list cr-interactive-cases">';
 interactiveCases.forEach(function(f){html+='<a class="cr-resource" href="'+f.url+'" target="_blank" rel="noopener"><span class="cr-resource-title">'+esc(f.title)+'</span><span class="cr-resource-meta"><span class="cr-resource-type">Interactive case</span></span></a>'});
-html+='</div></div></section>';
+html+='</div>';
 }
 main.innerHTML=html||'<p class="cr-empty">No resources match these filters. Try another search term or choose “All”.</p>';
 meta.textContent=categoryFiles.length+' resources across '+order.length+' topics · '+selectedSpecialty;
