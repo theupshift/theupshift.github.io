@@ -1,5 +1,5 @@
 ---
-description: Dr. Nancy Leveson on why safety depends on the whole system, not its individual parts.
+description: A system can have working parts and still fail. Safety emerges from how those parts interact, not just how each functions individually.
 image: https://miro.medium.com/v2/resize:fit:640/format:webp/1*nPU9GiZZBFnp2L2OwY65RA.jpeg
 date: 2026-10-18 10:50:00 +0300
 categories: Quotes
