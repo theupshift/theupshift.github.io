@@ -94,4 +94,4 @@ When something goes wrong, looking only for a failed component or blaming the pe
   </div>
 </div>
 
-For the full context, listen to Dr. Leveson’s lecture.
+Safety cannot be reduced to parts that work as intended. It lives in the interactions between people, technology, procedures, and organisational decisions. The full lecture is worth your time.
