@@ -15,12 +15,13 @@ twitter_image: https://www.wildernessdestinations.com/media/wufn5jdc/tip0501.jpg
   And we often do. Einhorn says it all.
 </p>
 
-
-<a href="https://www.youtube.com/watch?v=W97UobO0UWs"
-   target="_blank"
-   rel="noopener noreferrer">
-  <img
-    src="https://img.youtube.com/vi/W97UobO0UWs/hqdefault.jpg"
-    alt="Watch Hillel Einhorn on happiness on YouTube"
-    style="width:100%; max-width:800px; height:auto;">
-</a>
+<div style="position:relative; width:100%; max-width:800px; margin:0 auto; aspect-ratio:16/9;">
+  <iframe
+    src="https://www.youtube.com/embed/W97UobO0UWs"
+    title="Hillel Einhorn on happiness"
+    style="position:absolute; inset:0; width:100%; height:100%; border:0;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+  </iframe>
+</div>
