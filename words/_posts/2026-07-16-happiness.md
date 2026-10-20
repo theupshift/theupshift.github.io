@@ -10,7 +10,11 @@ og_image: https://www.wildernessdestinations.com/media/wufn5jdc/tip0501.jpg
 twitter_image: https://www.wildernessdestinations.com/media/wufn5jdc/tip0501.jpg
 ---
 
-<p align="center">Don't overlook the value of not having what you don't want. And we often do. Einhorn says it all.</p> 
+<p align="center">
+  Don't overlook the value of not having what you don't want.<br>
+  And we often do. Einhorn says it all.
+</p>
+
 
 <a href="https://www.youtube.com/watch?v=W97UobO0UWs"
    target="_blank"
