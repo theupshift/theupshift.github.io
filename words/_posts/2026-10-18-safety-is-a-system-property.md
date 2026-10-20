@@ -9,6 +9,8 @@ layout: no-title-post
 
 When something goes wrong, looking only for a failed component or blaming the person closest to the event can miss the conditions that made the outcome possible.
 
+A system can have working parts and still fail when judged by its <a href="https://sebokwiki.org/wiki/Emergence_and_Complexity" target="_blank" rel="noopener noreferrer">emergent properties</a>. These arise from how the parts interact, not how each functions individually. Safety is one such property.
+
 <style>
   .quote-container {
     display: flex;
@@ -94,4 +96,4 @@ When something goes wrong, looking only for a failed component or blaming the pe
   </div>
 </div>
 
-A system can have working parts and still fail when judged by its <a href="https://sebokwiki.org/wiki/Emergence_and_Complexity" target="_blank" rel="noopener noreferrer">emergent properties</a>. These arise from how the parts interact, not how each functions individually. Safety is one such property. The <a href="https://www.youtube.com/watch?v=8bzWvII9OD4&list=PLmo9Xl8PKe5vz1CBNcJIzk1lvQK7Fjf7s" target="_blank" rel="noopener noreferrer">full lecture</a> is worth your time if you’re interested in reducing errors in whatever you do.
+The <a href="https://www.youtube.com/watch?v=8bzWvII9OD4&list=PLmo9Xl8PKe5vz1CBNcJIzk1lvQK7Fjf7s" target="_blank" rel="noopener noreferrer">full lecture</a> is worth your time if you’re interested in reducing errors in whatever you do.
