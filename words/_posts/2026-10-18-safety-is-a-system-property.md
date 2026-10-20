@@ -18,8 +18,6 @@ layout: no-title-post
 
 Safety cannot be reduced to whether each individual part works as intended. It emerges from how people, technology, procedures, and organisational decisions interact. When something goes wrong, looking only for a failed component or blaming the person closest to the event can miss the conditions that made the outcome possible.
 
-A systems view asks a broader question: **what controls, relationships, and assumptions allowed the hazard to develop?**
-
 <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:800px; margin:1.5em auto;">
   <iframe
     src="https://www.youtube-nocookie.com/embed/8bzWvII9OD4?list=PLmo9Xl8PKe5vz1CBNcJIzk1lvQK7Fjf7s"
