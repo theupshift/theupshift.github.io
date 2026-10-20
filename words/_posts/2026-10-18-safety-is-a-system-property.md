@@ -1,6 +1,6 @@
 ---
 description: Dr. Nancy Leveson on why safety depends on the whole system, not its individual parts.
-image: https://img.youtube.com/vi/8bzWvII9OD4/hqdefault.jpg
+image: https://sebokwiki.org/w/thumb.php?f=Complexity_and_Emergence_in_Systems.png
 date: 2026-10-18 10:50:00 +0300
 categories: Quotes
 layout: no-title-post
