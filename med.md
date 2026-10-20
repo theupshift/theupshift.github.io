@@ -153,7 +153,8 @@ var specialties=[
 {title:'Haematology & Oncology',folder:'07. hema-oncology'},
 {title:'Nephrology',folder:'08. nephrology'},
 {title:'Neurology',folder:'09. neurology'},
-{title:'Endocrinology',folder:'10. endocrinology'}
+{title:'Endocrinology',folder:'10. endocrinology'},
+{title:'Clinical Cases',folder:'__cases'}
 ];
 var infectiousTopicFolders=[
 '01. principles','02. malaria','03. tuberculosis','04. hiv','05. pneumonia',
@@ -223,7 +224,7 @@ next.addEventListener('click',function(){updateSpecialty(1)});
 function render(){
 var main=document.getElementById('cr-topics'),meta=document.getElementById('cr-meta');
 var selected=specialties.find(function(x){return x.title===selectedSpecialty})||specialties[0];
-var categoryFiles=allFiles.filter(function(f){return f.categoryFolder===selected.folder && activeType!=='cases' && !(hideTestBank && /testbank/i.test(f.path)) && !(hidePowerPoints && f.type==='slides')});
+var categoryFiles=allFiles.filter(function(f){return selected.folder!=='__cases' && f.categoryFolder===selected.folder && activeType!=='cases' && !(hideTestBank && /testbank/i.test(f.path)) && !(hidePowerPoints && f.type==='slides')});
 var visible=categoryFiles.filter(function(f){
 var matchesQuery=!query||[f.title,f.path,f.typeLabel,f.topicTitle,selectedSpecialty].join(' ').toLowerCase().indexOf(query)!==-1;
 return matchesQuery&&(activeType==='all'||f.type===activeType)
@@ -241,7 +242,7 @@ if(!groups[folder])groups[folder]=[];
 }
 var order=Object.keys(groups).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})});
 var html='';
-var interactiveCases=activeType==='cases'?caseFiles.filter(function(f){return !query||[f.title,f.path,f.typeLabel,'interactive clinical cases hosted on meded'].join(' ').toLowerCase().indexOf(query)!==-1}):[];
+var interactiveCases=(activeType==='cases'||selected.folder==='__cases')?caseFiles.filter(function(f){return !query||[f.title,f.path,f.typeLabel,'interactive clinical cases hosted on meded'].join(' ').toLowerCase().indexOf(query)!==-1}):[];
 document.getElementById('cr-specialty-current').textContent=selectedSpecialty;
 document.getElementById('cr-specialty-prev').style.visibility='visible';
 document.getElementById('cr-specialty-next').style.visibility='visible';
@@ -294,7 +295,7 @@ document.getElementById('cr-meta').textContent='Unable to load resources';
 document.getElementById('cr-topics').innerHTML='<section class="cr-coming-soon"><div class="cr-coming-icon" aria-hidden="true">✳</div><h2>Resources could not be loaded</h2><p>Please refresh the page in a moment. The resource index may be temporarily unavailable.</p></section>'
 });
 document.getElementById('cr-search').addEventListener('input',function(e){query=e.target.value.toLowerCase().trim();openTopic=null;render()});
-document.querySelectorAll('.cr-filter').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('.cr-filter').forEach(function(b){b.classList.remove('is-active')});btn.classList.add('is-active');activeType=btn.dataset.type;openTopic=null;render()})});
+document.querySelectorAll('.cr-filter').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('.cr-filter').forEach(function(b){b.classList.remove('is-active')});btn.classList.add('is-active');activeType=btn.dataset.type;if(activeType==='cases'){selectedSpecialty='Clinical Cases'}else if(selectedSpecialty==='Clinical Cases'){selectedSpecialty='Infectious Diseases'}openTopic=null;render()})});
 
 var installButton=document.getElementById('cr-install');
 var appStatus=document.getElementById('cr-app-status');
