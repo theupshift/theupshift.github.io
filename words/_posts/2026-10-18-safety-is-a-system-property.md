@@ -94,4 +94,4 @@ When something goes wrong, looking only for a failed component or blaming the pe
   </div>
 </div>
 
-A system can be full of working parts and still fail. That is why safety must be built into how they work together.
+A system can be full of working parts and still fail. That is why safety must be built into how they work together. The full lecture is worth your time.
