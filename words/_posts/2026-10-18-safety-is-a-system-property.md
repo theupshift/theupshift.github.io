@@ -3,7 +3,7 @@ description: "A system can have working parts and still fail. Safety emerges fro
 image: https://miro.medium.com/v2/resize:fit:640/format:webp/1*nPU9GiZZBFnp2L2OwY65RA.jpeg
 date: 2026-10-18 10:50:00 +0300
 categories: Quotes
-layout: no-title-post
+layout: post
 
 ---
 
