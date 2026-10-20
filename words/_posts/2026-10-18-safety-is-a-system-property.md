@@ -96,4 +96,4 @@ A system can have working parts and still fail when judged by its <a href="https
   </div>
 </div>
 
-The <a href="https://www.youtube.com/watch?v=8bzWvII9OD4&list=PLmo9Xl8PKe5vz1CBNcJIzk1lvQK7Fjf7s" target="_blank" rel="noopener noreferrer">full lecture</a> is worth your time if you’re interested in reducing errors in whatever you do.
+The <a href="https://www.youtube.com/watch?v=8bzWvII9OD4&list=PLmo9Xl8PKe5vz1CBNcJIzk1lvQK7Fjf7s" target="_blank" rel="noopener noreferrer">full lecture</a> might be worth your time if you’re interested in reducing errors.
