@@ -31,10 +31,17 @@ The report is timely. In Eastern and Southern Africa, obesity among children age
 <br> These patterns are not failures of children's willpower but predictable outcomes of environments that shape what children eat. Much work remains to make this right as parents, public health practitioners, and leaders.  
 
 ---
-1. Van Tulleken, Chris. *Ultra-Processed People*. Cornerstone Press, London, 2023, pp. 122–150.  
-2. Reilly, John J., et al. “Physical Activity to Prevent Obesity in Young Children: Cluster randomised controlled trial.” *British Medical Journal*, vol. 333, no. 7577, 6 October 2006, art. 1041.  
-3. Luke, Amy, and Richard S. Cooper. “Physical Activity Does Not Influence Obesity Risk: Time to clarify the public health message.” *International Journal of Epidemiology*, vol. 42, no. 6, December 2013, pp. 1831–1836.  
-4. McManus, Alison M., and Robin R. Mellecker. “Physical Activity and Obese Children.” *Journal of Sport and Health Science*, vol. 1, no. 3, December 2012, pp. 141–148.  
-5. Malhotra, A., et al. “It is Time to Bust the Myth of Physical Inactivity and Obesity: You Cannot Outrun a Bad diet.” *British Journal of Sports Medicine*, vol. 49, no. 15, August 2015, pp. 967–968.  
-6. Said J, Salim N, Kunambi PP, Furia F. “Prevalence and factors associated with hypertension among children attending pre-schools in Dar es Salaam, Tanzania.” *PLoS Glob Public Health*. 2024; PMC11921718.  
-7. Mosha MV, Msuya SE, Kasagama E, Ayieko P, Todd J, Filteau S. “Prevalence and correlates of overweight and obesity among primary school children in Kilimanjaro, Tanzania.” *PLoS One*. 2021;16(4):e0249595.  
+
+<div id="ref1">1. Van Tulleken, Chris. <em>Ultra-Processed People</em>. Cornerstone Press, London, 2023, pp. 122–150. <a href="#top" aria-label="Back to article">↩</a></div>
+
+<div id="ref2">2. Reilly, John J., et al. “Physical Activity to Prevent Obesity in Young Children: Cluster randomised controlled trial.” <em>British Medical Journal</em>, vol. 333, no. 7577, 6 October 2006, art. 1041. <a href="https://doi.org/10.1136/bmj.38979.623773.55" target="_blank" rel="noopener noreferrer">https://doi.org/10.1136/bmj.38979.623773.55</a> <a href="#top" aria-label="Back to article">↩</a></div>
+
+<div id="ref3">3. Luke, Amy, and Richard S. Cooper. “Physical Activity Does Not Influence Obesity Risk: Time to clarify the public health message.” <em>International Journal of Epidemiology</em>, vol. 42, no. 6, December 2013, pp. 1831–1836. <a href="https://doi.org/10.1093/ije/dyt159" target="_blank" rel="noopener noreferrer">https://doi.org/10.1093/ije/dyt159</a> <a href="#top" aria-label="Back to article">↩</a></div>
+
+<div id="ref4">4. McManus, Alison M., and Robin R. Mellecker. “Physical Activity and Obese Children.” <em>Journal of Sport and Health Science</em>, vol. 1, no. 3, December 2012, pp. 141–148. <a href="https://doi.org/10.1016/j.jshs.2012.09.004" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.jshs.2012.09.004</a> <a href="#top" aria-label="Back to article">↩</a></div>
+
+<div id="ref5">5. Malhotra, A., et al. “It is Time to Bust the Myth of Physical Inactivity and Obesity: You Cannot Outrun a Bad diet.” <em>British Journal of Sports Medicine</em>, vol. 49, no. 15, August 2015, pp. 967–968. <a href="https://doi.org/10.1136/bjsports-2015-094911" target="_blank" rel="noopener noreferrer">https://doi.org/10.1136/bjsports-2015-094911</a> <a href="#top" aria-label="Back to article">↩</a></div>
+
+<div id="ref6">6. Said J, Salim N, Kunambi PP, Furia F. “Prevalence and factors associated with hypertension among children attending pre-schools in Dar es Salaam, Tanzania.” <em>PLoS Global Public Health</em>. 2024. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11921718/" target="_blank" rel="noopener noreferrer">Read article at PubMed Central</a> <a href="#top" aria-label="Back to article">↩</a></div>
+
+<div id="ref7">7. Mosha MV, Msuya SE, Kasagama E, Ayieko P, Todd J, Filteau S. “Prevalence and correlates of overweight and obesity among primary school children in Kilimanjaro, Tanzania.” <em>PLoS One</em>. 2021;16(4):e0249595. <a href="https://doi.org/10.1371/journal.pone.0249595" target="_blank" rel="noopener noreferrer">https://doi.org/10.1371/journal.pone.0249595</a> <a href="#top" aria-label="Back to article">↩</a></div>
