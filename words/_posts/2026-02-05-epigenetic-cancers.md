@@ -12,7 +12,6 @@ twitter_image: https://theupshift.github.io/images/epigenetics.jpg
 ---
 <p align="center"><strong>#TIL: Not all cancers come from DNA mutations.</strong></p>
 
-Some arise when the epigenome goes rogue—methylation, histones & enhancers misfire, silencing differentiation genes or activating oncogenes. 
-Sometimes it’s not the DNA that’s broken — *it’s the instructions for reading it.*
+Some occurs when the epigenome goes rogue. Methylation, histones & enhancers dysregulation that silences differentiation genes or activates oncogenes. In such cases it’s not the main DNA script that’s broken but *the instructions for reading it.*
 
 -> Watch: [Epigenetics in Cancer Genesis — Dr. Manel Esteller (ECC 2015)](https://ecancer.org/en/video/4111-epigenetics-in-cancer-genesis)
