@@ -94,4 +94,4 @@ When something goes wrong, looking only for a failed component or blaming the pe
   </div>
 </div>
 
-Safety cannot be reduced to parts that work as intended. It lives in the interactions between people, technology, procedures, and organisational decisions. The full lecture is worth your time.
+A system can be full of working parts and still fail. That is why safety must be built into how they work together.
