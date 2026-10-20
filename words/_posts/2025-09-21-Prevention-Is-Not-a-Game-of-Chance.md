@@ -16,7 +16,8 @@ More than a decade ago, a small study in Tanzania, the RESPECT study<span style=
 A follow-up trial, RESPECT II<span style="color: red;">[^2]</span>, sought to scale up the approach: 2,206 participants, followed over 36 months. But the design made a crucial pivot. Instead of a guaranteed cash reward, women were entered into a lottery with a chance to win 100,000 shillings (~$50 USD), conditional on negative test results for syphilis and trichomonas. The primary outcome was combined HIV/HSV-2 incidence after 36 months. 
 
 The hope was that the thrill of risk and reward would be cheaper and more motivating. 
-*Well, it didn't.* <br>**The adjusted risk difference was –0.001 (95% CI –0.05 to 0.05).** The lottery had virtually no effect.
+*Well, it didn't.* 
+>**The adjusted risk difference was –0.001 (95% CI –0.05 to 0.05).** The lottery had virtually no effect.
 
 After three years, infection rates were no different between the lottery and standard care groups. Although nearly half of the participants were lost to follow-up, due in part to COVID-19, the conclusion was inescapable. 
 
