@@ -12,12 +12,11 @@ twitter_image: "https://raw.githubusercontent.com/theupshift/theupshift.github.i
 ---
 
 More than a decade ago, a small study in Tanzania, the RESPECT study<span style="color: red;">[^1]</span> tested an intriguing idea: give women small cash payments if they tested negative for curable sexually transmitted infections. With just 100 participants, the intervention showed that money, direct, guaranteed, and immediate, could help women make safer choices in the short term.
-<br>
+
 A follow-up trial, RESPECT II<span style="color: red;">[^2]</span>, sought to scale up the approach: 2,206 participants, followed over 36 months. But the design made a crucial pivot. Instead of a guaranteed cash reward, women were entered into a lottery with a chance to win 100,000 shillings (~$50 USD), conditional on negative test results for syphilis and trichomonas. The primary outcome was combined HIV/HSV-2 incidence after 36 months. 
 
-The hope was that the thrill of risk and reward would be cheaper and more motivating.
-<br>
-<p><em>Well, it didn't.</em></p>
+The hope was that the thrill of risk and reward would be cheaper and more motivating. 
+*Well, it didn't.*
 > The adjusted risk difference was –0.001 (95% CI –0.05 to 0.05). The lottery had virtually no effect.
 
 After three years, the results were clear: infection rates were no different between the lottery and standard care groups. Although nearly half of the participants were lost to follow-up, due in part to COVID-19, the conclusion was inescapable. 
