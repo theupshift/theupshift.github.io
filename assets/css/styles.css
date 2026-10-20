@@ -3703,3 +3703,10 @@ body.lofi-player-open {
   text-decoration: none;
 }
 
+
+/* Keep untitled article navigation labels on one line. */
+.article-navigation a.article-nav-untitled .article-nav-label {
+  display: inline;
+  margin-bottom: 0;
+  margin-right: .25em;
+}
