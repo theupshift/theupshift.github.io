@@ -13,7 +13,7 @@ twitter_image: "https://raw.githubusercontent.com/theupshift/theupshift.github.i
 
 A new UNICEF report, **Feeding Profit: How food environments are failing children (Sep, 2025)**, lays out critical truths:  
 
-> "One persistent myth is that nutrient-poor, unhealthy diets are primarily due to dietary decisions – a view that places blame unfairly on children, adolescents and their parents and families, and frames these diets as a moral failure of the individual rather than a failure of society to protect the environments that children grow up in.<sup style="color:red;"><a href="#ref1">1</a></sup> It is unreasonable to assert that a sudden decline in children’s willpower or parental responsibility explains the rapid recent changes in diets or the global surge in childhood overweight. Another false narrative is that physical activity can offset the harmful effects of nutrient-poor, unhealthy diets.<sup style="color:red;"><a href="#ref2">2</a>–<a href="#ref4">4</a></sup> In reality, it is impossible to ‘outrun’ the health consequences of a diet high in free sugars, refined starches, salt, trans-fats, harmful additives and excessive energy through physical activity alone.<sup style="color:red;"><a href="#ref5">5</a></sup>
+> "One persistent myth is that nutrient-poor, unhealthy diets are primarily due to dietary decisions – a view that places blame unfairly on children, adolescents and their parents and families, and frames these diets as a moral failure of the individual rather than a failure of society to protect the environments that children grow up in.<sup style="color:red;"><a id="cite1" href="#ref1">1</a></sup> It is unreasonable to assert that a sudden decline in children’s willpower or parental responsibility explains the rapid recent changes in diets or the global surge in childhood overweight. Another false narrative is that physical activity can offset the harmful effects of nutrient-poor, unhealthy diets.<sup style="color:red;"><a id="cite2" href="#ref2">2</a>–<a id="cite4" href="#ref4">4</a></sup> In reality, it is impossible to ‘outrun’ the health consequences of a diet high in free sugars, refined starches, salt, trans-fats, harmful additives and excessive energy through physical activity alone.<sup style="color:red;"><a id="cite5" href="#ref5">5</a></sup>
 <!-- more -->
 <div style="text-align:center; margin: 1em 0;">
   <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/obj1.jpg" 
@@ -21,7 +21,7 @@ A new UNICEF report, **Feeding Profit: How food environments are failing childre
        alt="Food environment graphic">
 </div>
 <br>
-The report is timely. In Eastern and Southern Africa, obesity among children aged 5 to 9 is already surpassing underweight. Even local studies in Tanzania highlight this shift. In Dar es Salaam, nearly a quarter of preschoolers have elevated blood pressure, especially those overweight.<sup style="color:red;"><a href="#ref6">6</a></sup> In Kilimanjaro, 15 percent of primary school children are overweight or obese, especially in urban and private schools.<sup style="color:red;"><a href="#ref7">7</a></sup> 
+The report is timely. In Eastern and Southern Africa, obesity among children aged 5 to 9 is already surpassing underweight. Even local studies in Tanzania highlight this shift. In Dar es Salaam, nearly a quarter of preschoolers have elevated blood pressure, especially those overweight.<sup style="color:red;"><a id="cite6" href="#ref6">6</a></sup> In Kilimanjaro, 15 percent of primary school children are overweight or obese, especially in urban and private schools.<sup style="color:red;"><a id="cite7" href="#ref7">7</a></sup> 
 <!-- more -->
 <div style="text-align:center; margin: 1em 0;">
   <img src="https://raw.githubusercontent.com/theupshift/theupshift.github.io/master/images/trends%201.jpg" 
@@ -32,9 +32,9 @@ The report is timely. In Eastern and Southern Africa, obesity among children age
 
 ---
 
-<div id="ref1">1. Van Tulleken, Chris. <em>Ultra-Processed People</em>. Cornerstone Press, London, 2023, pp. 122–150. <a href="#top" aria-label="Back to article">↩</a></div>
+<div id="ref1">1. United Nations Children’s Fund (UNICEF). <em>Feeding Profit: How food environments are failing children. Child Nutrition Report 2025.</em> UNICEF, September 2025. <a href="https://www.unicef.org/reports/feeding-profit" target="_blank" rel="noopener noreferrer">Read the report</a>. <a href="#cite1" aria-label="Back to citation 1">↩</a></div>
 
-<div id="ref2">2. Reilly, John J., et al. “Physical Activity to Prevent Obesity in Young Children: Cluster randomised controlled trial.” <em>British Medical Journal</em>, vol. 333, no. 7577, 6 October 2006, art. 1041. <a href="https://doi.org/10.1136/bmj.38979.623773.55" target="_blank" rel="noopener noreferrer">https://doi.org/10.1136/bmj.38979.623773.55</a> <a href="#top" aria-label="Back to article">↩</a></div>
+<div id="ref2">2. Reilly, John J., et al. “Physical Activity to Prevent Obesity in Young Children: Cluster randomised controlled trial.” <em>British Medical Journal</em>, vol. 333, no. 7577, 6 October 2006, art. 1041. <a href="https://doi.org/10.1136/bmj.38979.623773.55" target="_blank" rel="noopener noreferrer">https://doi.org/10.1136/bmj.38979.623773.55</a> <a href="#cite2" aria-label="Back to citation 2">↩</a></div>
 
 <div id="ref3">3. Luke, Amy, and Richard S. Cooper. “Physical Activity Does Not Influence Obesity Risk: Time to clarify the public health message.” <em>International Journal of Epidemiology</em>, vol. 42, no. 6, December 2013, pp. 1831–1836. <a href="https://doi.org/10.1093/ije/dyt159" target="_blank" rel="noopener noreferrer">https://doi.org/10.1093/ije/dyt159</a> <a href="#top" aria-label="Back to article">↩</a></div>
 
