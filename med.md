@@ -280,7 +280,7 @@ main.querySelectorAll('.cr-topic-card').forEach(function(btn){btn.addEventListen
 fetch(api).then(function(r){return r.json()}).then(function(data){
 if(!data.tree)throw new Error('Unable to read resource index');
 allFiles=data.tree.filter(function(x){
-return x.type==='blob'&&x.path.indexOf('clinical seminars/')===0&&!/(^|\/)\.DS_Store$/.test(x.path)&&!/(^|\/)(~\$)/.test(x.path)
+return x.type==='blob'&&x.path.indexOf('clinical seminars/')===0&&!/(^|\/)\.DS_Store$/.test(x.path)&&!/(^|\/)(~\$)/.test(x.path)&&!/(evelyna2026\s*-\s*cryptoccocal meningitis deathaudit|gamba2026\s*-\s*hiv treatment landscape)/i.test(x.path)
 }).map(function(x){
 var parts=x.path.split('/');
 var categoryFolder=(parts[1]||'').trim();
