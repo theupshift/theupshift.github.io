@@ -8,13 +8,17 @@ tags: [antibiotics, antimicrobial-resistance, communication, primary-care, Tanza
 description: "A reflection on antibiotic requests, fear, and the time needed to reassure patients in clinical practice."
 ---
 
-Often, in Tanzania, a consultation lasts four to fifteen minutes. One study of maternal and child health services across 150 facilities found an average consultation time of 12.9 minutes, with a median of 10 minutes.[^1] History, examination, decisions, documentation. A prescription can take less than fifteen seconds. The thing is, you cannot talk someone out of three days of fear that quickly.
+Often, a consultation lasts four to fifteen minutes. One study across 150 facilities in Tanzania found that the average consultation for maternal and child health services lasted 12.9 minutes.[^1] Those minutes must accommodate history-taking, examination, clinical decisions, and documentation. A prescription can take a fraction of that time, with far less effort.
+
+It is easy to think antibiotic requests are simply a knowledge problem. Explain that colds are viral. Send them home.
+
+This, however, is a narrow and often misguided view. Patients aren’t always asking for antibiotics. They’re asking for reassurance. The thing is, you cannot talk someone out of three days of fear that quickly.
 
 I used to think antibiotic requests were a knowledge problem. Explain that colds are viral. Send them home.
 
 I was wrong. Often, patients aren’t asking for antibiotics. They’re asking for reassurance.
 
-One participant in a study of pastoralist communities in Tanzania described how personal experience shaped antibiotic use:
+One Maasai woman’s experience illustrates this clearly:
 
 > “My mother-in-law believes my symptoms are similar to what she experienced two weeks ago, and she got better after taking the drugs, so she has insisted that I take the drugs too, and she has given me two tablets.”[^2]
 
