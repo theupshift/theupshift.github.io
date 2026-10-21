@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Patients ask for antibiotics because they are afraid"
-date: 2026-10-23 08:00:00 +0300
+date: 2026-10-21 20:00:00 +0300
 ---
 
 Often, in Tanzania, a consultation lasts four to fifteen minutes. One study of maternal and child health services across 150 facilities found an average consultation time of 12.9 minutes, with a median of 10 minutes (1). History, examination, decisions, documentation. A prescription can take less than fifteen seconds. The thing is, you cannot talk someone out of three days of fear that quickly.
