@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Patients ask for antibiotics because they are afraid"
 date: 2026-10-21 20:00:00 +0300
 ---
