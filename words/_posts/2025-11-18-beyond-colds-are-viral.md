@@ -5,7 +5,7 @@ date: 2025-11-18 20:00:00 +0300
 permalink: /words/2025/11/18/beyond-colds-are-viral/
 categories: [health-systems, reflections]
 tags: [antibiotics, antimicrobial-resistance, communication, primary-care, Tanzania]
-description: "A reflection on antibiotic requests, fear, and the time needed to reassure patients in clinical practice."
+description: "Patients …..they’re asking for reassurance. The thing is, you cannot talk someone out of three days of fear that quickly."
 ---
 
 Often, a consultation lasts four to fifteen minutes. One study across 150 facilities in Tanzania found that the average consultation for maternal and child health services lasted 12.9 minutes.[^1] Those minutes must accommodate history-taking, examination, clinical decisions, and documentation. A prescription can take a fraction of that time, with far less effort.
