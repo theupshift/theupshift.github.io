@@ -2,6 +2,7 @@
 layout: post
 title: "Beyond “Colds Are Viral”"
 date: 2025-11-18 20:00:00 +0300
+permalink: /words/2025/11/18/beyond-colds-are-viral/
 categories: [health-systems, reflections]
 tags: [antibiotics, antimicrobial-resistance, communication, primary-care, Tanzania]
 description: "A reflection on antibiotic requests, fear, and the time needed to reassure patients in clinical practice."
