@@ -14,10 +14,6 @@ It is easy to think antibiotic requests are simply a knowledge problem. Explain 
 
 This, however, is a narrow and often misguided view. Patients aren’t always asking for antibiotics. They’re asking for reassurance. The thing is, you cannot talk someone out of three days of fear that quickly.
 
-I used to think antibiotic requests were a knowledge problem. Explain that colds are viral. Send them home.
-
-I was wrong. Often, patients aren’t asking for antibiotics. They’re asking for reassurance.
-
 One Maasai woman’s experience illustrates this clearly:
 
 > “My mother-in-law believes my symptoms are similar to what she experienced two weeks ago, and she got better after taking the drugs, so she has insisted that I take the drugs too, and she has given me two tablets.”[^2]
