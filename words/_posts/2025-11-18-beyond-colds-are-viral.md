@@ -14,6 +14,8 @@ It is easy to think antibiotic requests are simply a knowledge problem. Explain 
 
 This, however, is a narrow and often misguided view. Patients aren’t always asking for antibiotics. They’re asking for reassurance. The thing is, you cannot talk someone out of three days of fear that quickly.
 
+<!-- more -->
+
 One Maasai woman’s experience illustrates this clearly:
 
 > “My mother-in-law believes my symptoms are similar to what she experienced two weeks ago, and she got better after taking the drugs, so she has insisted that I take the drugs too, and she has given me two tablets.”[^2]
@@ -23,8 +25,6 @@ A prescription becomes proof that someone has taken their suffering seriously.
 Refuse badly, and you may win the argument but lose the patient. They might never return for their blood pressure, the child’s asthma, or the changing mole.
 
 Funny how we keep printing posters about antibiotic resistance while consultation times shrink and waiting rooms grow louder.
-
-<!-- more -->
 
 [^1]: Binyaruka P, Borghi J. An equity analysis on the household costs of accessing and utilising maternal and child health care services in Tanzania. *Health Economics Review*. 2022;12:36. [doi:10.1186/s13561-022-00387-7](https://doi.org/10.1186/s13561-022-00387-7).
 
