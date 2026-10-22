@@ -9,7 +9,7 @@ Well, one survives that, no matter how… You survive this and in some terrible 
 <!-- more -->
 And what is crucial here is that if it hurt you, that is not what’s important. Everybody’s hurt.
 
-What is important, what corrals you, what bullwhips you, what drives you, torments you, is that you must find some way of using this to connect you with everyone else alive. This is all you have to do it with.
+What is important, is that you must find some way of using this to connect you with everyone else alive. This is all you have to do it with.
 
 **“You must understand that your pain is trivial except insofar as you can use it to connect with other people’s pain; and insofar as you can do that with your pain, you can be released from it, and then hopefully it works the other way around too.”**
 
