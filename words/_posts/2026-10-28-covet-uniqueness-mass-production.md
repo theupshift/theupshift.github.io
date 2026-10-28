@@ -5,7 +5,13 @@ description: "To covet what somebody else has is to forfeit your uniqueness; on 
 image: "https://images.joseartgallery.com/154633/conversions/still-life-painting-still-life-with-african-masks-thumb1920.jpg"
 ---
 
-To covet what somebody else has is to forfeit your uniqueness; on the other hand, of course, it stimulates mass production.
+<blockquote>
+
+*“To covet what somebody else has is to forfeit your uniqueness; on the other hand, of course, it stimulates mass production.”*
+
+— [J. Brodsky](https://www.linkedin.com/pulse/6-steps-happiness-j-brodsky-sergey-chaplygin)
+
+</blockquote>
 
 There is an irony in the human desire to possess what belongs to another. We admire a thing, then desire it; we desire it, then pursue it; and in pursuing it, we sometimes abandon the very qualities that make us distinct. What begins as admiration can quietly become imitation, and what begins as inspiration can end in self-erasure.
 
