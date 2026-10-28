@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "To Covet What Somebody Else Has"
+title: "On Covetousness and Uniqueness"
 ---
 
 To covet what somebody else has is to forfeit your uniqueness; on the other hand, of course, it stimulates mass production.
