@@ -2,6 +2,7 @@
 layout: post
 title: "On Covetousness and Uniqueness"
 description: "To covet what somebody else has is to forfeit your uniqueness; on the other hand, of course, it stimulates mass production."
+image: "https://images.joseartgallery.com/154633/conversions/still-life-painting-still-life-with-african-masks-thumb1920.jpg"
 ---
 
 To covet what somebody else has is to forfeit your uniqueness; on the other hand, of course, it stimulates mass production.
