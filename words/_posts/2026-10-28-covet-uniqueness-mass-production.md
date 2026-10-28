@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "On Covetousness and Uniqueness"
-description: "To covet what somebody else has is to forfeit your uniqueness; on the other hand, of course, it stimulates mass production."
+description: "Coveting what others have can come at the cost of our uniqueness, even as it fuels mass production."
 image: "https://images.joseartgallery.com/154633/conversions/still-life-painting-still-life-with-african-masks-thumb1920.jpg"
 ---
 
-<p align="center"><em>“To covet what somebody else has is to forfeit your uniqueness; on the other hand, of course, it stimulates mass production.”</em><br><br>— <a href="https://www.linkedin.com/pulse/6-steps-happiness-j-brodsky-sergey-chaplygin">J. Brodsky</a></p>
+As [J. Brodsky](https://www.linkedin.com/pulse/6-steps-happiness-j-brodsky-sergey-chaplygin) suggests, coveting what others have can come at the cost of our own uniqueness, even as it fuels mass production.
 
 There is an irony in the human desire to possess what belongs to another. We admire a thing, then desire it; we desire it, then pursue it; and in pursuing it, we sometimes abandon the very qualities that make us distinct. What begins as admiration can quietly become imitation, and what begins as inspiration can end in self-erasure.
 
