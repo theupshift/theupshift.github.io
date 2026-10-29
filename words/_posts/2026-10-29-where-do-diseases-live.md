@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: no-title-post
 title: "Where Do Diseases Live?"
 date: 2026-10-29 09:00:00 +0100
 ---
