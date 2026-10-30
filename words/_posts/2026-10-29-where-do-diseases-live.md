@@ -1,10 +1,7 @@
 ---
-layout: no-title-post
+layout: post
 title: "Where Do Diseases Live?"
-date: 2026-10-29 09:00:00 +0100
 ---
-
-# Where Do Diseases Live?
 
 Where do diseases live? It seems an odd question, but perhaps an important one, because we need to find a disease in order to treat it.
 
