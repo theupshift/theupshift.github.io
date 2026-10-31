@@ -15,9 +15,9 @@ I wanted Dr Anna Pou to be a hero. I wanted her not to have done what she was ac
 
 It left me thinking about the stories we tell about healthcare workers. We call them heroes because we want to believe someone can always save a life. But commitment cannot replace staff, supplies or timely decisions.
 
-We need competent practitioners and systems that make good clinical practice possible.
+We need competent, accountable practitioners, but we also need systems that make good clinical practice possible.
 
-This is not an argument against accountability. Understanding the pressure surrounding a decision does not mean excusing it. We can question individual choices while examining the conditions in which they were made.
+Understanding the circumstances surrounding a clinical decision does not mean agreeing with it. We can question individual choices while taking seriously the conditions in which they were made.
 
 I remembered one patient. I promised he would get better. There was a transfusion, a laparotomy and intensive care. Still, the outcome I hoped for did not come. I wonder whether delays or decisions might have changed things. I cannot know.
 
