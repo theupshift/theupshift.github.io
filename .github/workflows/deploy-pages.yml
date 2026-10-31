@@ -4,6 +4,9 @@ on:
   push:
     branches: ["master"]
   workflow_dispatch:
+  schedule:
+    - cron: "0 5 3 11 *" # 08:00 East Africa Time on November 3
+
 
 permissions:
   contents: write
@@ -15,7 +18,25 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  publication_gate:
+    runs-on: ubuntu-latest
+    outputs:
+      publish: ${{ steps.check.outputs.publish }}
+    steps:
+      - name: Check scheduled publication date
+        id: check
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [[ "$EVENT_NAME" != "schedule" || "$(date -u +%F)" == "2026-11-03" ]]; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          fi
+
   build:
+    needs: publication_gate
+    if: needs.publication_gate.outputs.publish == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
