@@ -86,7 +86,7 @@ jobs:
         with:
           source: ./
           destination: ./_site
-          future: true
+          future: false
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
