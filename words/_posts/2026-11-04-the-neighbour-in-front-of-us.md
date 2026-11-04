@@ -14,7 +14,7 @@ In this thought-provoking [essay by Sigal Samuel](https://www.vox.com/future-per
 
 > “Why not get the biggest bang for your buck?” It’s a fair question. But in pursuing the most effective ways to give, we risk losing the simple humanity that makes us give in the first place.
 
-Not every act of kindness needs to be optimised. Sometimes, helping someone right in front of you is reason enough. This also brings to mind Coco Krumme’s book, [*Optimal Illusions: The False Promise of Optimization*](https://www.penguinrandomhouse.com/books/670624/optimal-illusions-by-coco-krumme/).
+Not every act of kindness needs to be optimised. Sometimes, helping someone right in front of you is reason enough.
 
 A great read. I particularly enjoyed the reference to philosopher [Bernard Williams](https://plato.stanford.edu/entries/williams-bernard/)’s critique of utilitarianism and his conception of integrity. We risk becoming alienated from a core part of ourselves when we continually override our instinct to respond to another person’s suffering in pursuit of some supposedly greater good elsewhere. In trying to maximise the good, we might end up losing something essential in ourselves: our humanity.
 
