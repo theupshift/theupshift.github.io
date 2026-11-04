@@ -15,4 +15,8 @@ Sometimes, the pathology isn’t in the individual, but in their environment. Vi
 
 If we fail to address where the pathology originates, are we really treating the disease?
 
-<p id="joshua-bio"><strong>A note on Joshua:</strong> Joshua is an occupational therapist whose current research explores factors influencing return to work after a fracture, including the effects of recovery on workplace participation and productivity. <a href="#top">Back to the post</a>.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="joshua-bio"><p><strong>Joshua</strong> is an orthopaedic resident and a dear friend. His current research explores factors influencing return to work after a fracture, including how recovery affects workplace participation and productivity.</p></li>
+  </ol>
+</div>
