@@ -18,6 +18,8 @@ In this thought-provoking [essay by Sigal Samuel](https://www.vox.com/future-per
 
 Not every act of kindness needs to be optimised. Sometimes, helping someone right in front of you is reason enough.
 
+<!-- more -->
+
 A great read. I particularly enjoyed the reference to philosopher [Bernard Williams](https://plato.stanford.edu/entries/williams-bernard/)’s critique of utilitarianism and his conception of integrity. We risk becoming alienated from a core part of ourselves when we continually override our instinct to respond to another person’s suffering in pursuit of some supposedly greater good elsewhere. In trying to maximise the good, we might end up losing something essential in ourselves: our humanity.
 
 It also brought to mind [Jesus’s parable of the Good Samaritan (Luke 10:25–37)](https://www.bible.com/bible/111/LUK.10.25-37.NIV). Perhaps the question is not always how much good we can do elsewhere, but whether we are willing to stop and help the person suffering right in front of us.
