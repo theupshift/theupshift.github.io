@@ -10,22 +10,24 @@ tags: [charity, effective altruism, utilitarianism, Bernard Williams, integrity,
 
 These are everyday excuses I, too, sometimes find myself making. We give at church and to charities, convincing ourselves that perhaps that is enough, or even the better way to give.
 
-In this thought-provoking essay, Sigal Samuel[^1] asks whether, in our quest to give effectively, we’ve forgotten how to simply care.
+In this thought-provoking [essay by Sigal Samuel](https://www.vox.com/future-perfect/372519/charity-giving-effective-altruism-mutual-aid-homeless), she asks whether, in our quest to give effectively, we’ve forgotten how to simply care.
 
-> “Why not get the biggest bang for your buck?” It’s a fair question. But in pursuing the most effective ways to give, we risk losing the simple humanity that makes us give in the first place.[^1]
+> “Why not get the biggest bang for your buck?” It’s a fair question. But in pursuing the most effective ways to give, we risk losing the simple humanity that makes us give in the first place.
 
-Not every act of kindness needs to be optimised.[^4] Sometimes, helping someone right in front of you is reason enough.
+Not every act of kindness needs to be optimised. Sometimes, helping someone right in front of you is reason enough. This also brings to mind Coco Krumme’s book, [*Optimal Illusions: The False Promise of Optimization*](https://www.penguinrandomhouse.com/books/670624/optimal-illusions-by-coco-krumme/).
 
-A great read. I particularly enjoyed the reference to philosopher Bernard Williams[^2]’s critique of utilitarianism and his conception of integrity. We risk becoming alienated from a core part of ourselves when we continually override our instinct to respond to another person’s suffering in pursuit of some supposedly greater good elsewhere. In trying to maximise the good, we might end up losing something essential in ourselves: our humanity.
+A great read. I particularly enjoyed the reference to philosopher [Bernard Williams](https://plato.stanford.edu/entries/williams-bernard/)’s critique of utilitarianism and his conception of integrity. We risk becoming alienated from a core part of ourselves when we continually override our instinct to respond to another person’s suffering in pursuit of some supposedly greater good elsewhere. In trying to maximise the good, we might end up losing something essential in ourselves: our humanity.
 
-It also brought to mind Jesus’s parable of the Good Samaritan (Luke 10:25–37)[^3]. Perhaps the question is not always how much good we can do elsewhere, but whether we are willing to stop and help the person suffering right in front of us. After all, who is my neighbour?
+It also brought to mind [Jesus’s parable of the Good Samaritan (Luke 10:25–37)](https://www.bible.com/bible/111/LUK.10.25-37.NIV). Perhaps the question is not always how much good we can do elsewhere, but whether we are willing to stop and help the person suffering right in front of us. After all, who is my neighbour?
 
 👇
 
-[^1]: Samuel S. I give to charity — but never to people on the street. Is that wrong? *Vox*. 2024 Sep 13 [updated 2026 Oct 18]. [https://www.vox.com/future-perfect/372519/charity-giving-effective-altruism-mutual-aid-homeless](https://www.vox.com/future-perfect/372519/charity-giving-effective-altruism-mutual-aid-homeless).
+**References**
 
-[^2]: “Bernard Williams.” *Stanford Encyclopedia of Philosophy*. [https://plato.stanford.edu/entries/williams-bernard/](https://plato.stanford.edu/entries/williams-bernard/).
+Samuel S. I give to charity — but never to people on the street. Is that wrong? *Vox*. 2024 Sep 13 [updated 2026 Oct 18].
 
-[^3]: *The Holy Bible*. New International Version. Luke 10:25–37. [https://www.bible.com/bible/111/LUK.10.25-37.NIV](https://www.bible.com/bible/111/LUK.10.25-37.NIV).
+“Bernard Williams.” *Stanford Encyclopedia of Philosophy*.
 
-[^4]: Krumme C. *Optimal Illusions: The False Promise of Optimization*. Riverhead Books; 2023. [https://www.penguinrandomhouse.com/books/670624/optimal-illusions-by-coco-krumme/](https://www.penguinrandomhouse.com/books/670624/optimal-illusions-by-coco-krumme/).
+*The Holy Bible*. New International Version. Luke 10:25–37.
+
+Krumme C. *Optimal Illusions: The False Promise of Optimization*. Riverhead Books; 2023.
