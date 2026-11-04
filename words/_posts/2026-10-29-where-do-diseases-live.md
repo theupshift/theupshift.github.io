@@ -5,7 +5,7 @@ title: "Where Do Diseases Live?"
 
 Where do diseases live? It seems an odd question, but perhaps an important one, because we need to find a disease in order to treat it.
 
-If someone fractures their ankle, that’s where the pathology is. We locate it and target our treatment. Yet even this can be more complex: a fracture in an older person may reflect osteoporosis, not simply an isolated injury.
+If someone fractures their hip, that’s where the pathology is. We locate it and target our treatment (<a href="#joshua-bio">Joshua</a> would probably ask: “Nail or traction?” 😅). Yet even this can be more complex: a fracture in an older person may reflect osteoporosis, not simply an isolated injury.
 
 This is our comfort zone as doctors. But it could lead us astray.
 
@@ -14,3 +14,5 @@ Sometimes, the pathology isn’t in the individual, but in their environment. Vi
 <!-- more -->
 
 If we fail to address where the pathology originates, are we really treating the disease?
+
+<p id="joshua-bio"><strong>A note on Joshua:</strong> Joshua is an occupational therapist whose current research explores factors influencing return to work after a fracture, including the effects of recovery on workplace participation and productivity. <a href="#top">Back to the post</a>.</p>
