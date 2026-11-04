@@ -5,7 +5,7 @@ on:
     branches: ["master"]
   workflow_dispatch:
   schedule:
-    - cron: "0 5 3 11 *" # 08:00 East Africa Time on November 3
+    - cron: "0 5 7 11 *" # 08:00 East Africa Time on November 7
 
 
 permissions:
@@ -28,7 +28,7 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: |
-          if [[ "$EVENT_NAME" != "schedule" || "$(date -u +%F)" == "2026-11-03" ]]; then
+          if [[ "$EVENT_NAME" != "schedule" || "$(date -u +%F)" == "2026-11-07" ]]; then
             echo "publish=true" >> "$GITHUB_OUTPUT"
           else
             echo "publish=false" >> "$GITHUB_OUTPUT"
