@@ -8,7 +8,7 @@ tags: [charity, effective altruism, utilitarianism, Bernard Williams, integrity,
 
 “Naogopa kurogwa,” “ni wezi,” “wanajizoesha,” “it’s better to give to charities”—and other petty excuses we give for not helping the stranger begging right in front of us.
 
-<img src="https://i.postimg.cc/cJMYXQw6/IMG-4971.jpg" alt="Photograph" style="max-height: 240px; width: auto; max-width: 100%;">
+<img src="https://i.swncdn.com/media/400w/via/13042-gettyimagestrumzz.webp" alt="Photograph" style="max-height: 240px; width: auto; max-width: 100%;">
 
 These are everyday excuses I, too, sometimes find myself making. We give at church and to charities, convincing ourselves that perhaps that is enough, or even the better way to give.
 
