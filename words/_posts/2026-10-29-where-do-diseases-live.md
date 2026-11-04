@@ -13,4 +13,4 @@ Sometimes, the pathology isn’t in the individual, but in their environment. Vi
 
 <!-- more -->
 
-In such cases, we are definitely managing the symptoms. But if we fail to address where the pathology originates, are we really treating the disease?
+In such cases, we may be managing the symptoms. But if we fail to address where the pathology originates, are we really treating the disease?
