@@ -20,8 +20,6 @@ A great read. I particularly enjoyed the reference to philosopher [Bernard Willi
 
 It also brought to mind [Jesus’s parable of the Good Samaritan (Luke 10:25–37)](https://www.bible.com/bible/111/LUK.10.25-37.NIV). Perhaps the question is not always how much good we can do elsewhere, but whether we are willing to stop and help the person suffering right in front of us. After all, who is my neighbour?
 
-👇
-
 1. Samuel S. I give to charity — but never to people on the street. Is that wrong? *Vox*. 2024 Sep 13 [updated 2026 Oct 18]. [vox.com](https://www.vox.com/future-perfect/372519/charity-giving-effective-altruism-mutual-aid-homeless).
 2. “Bernard Williams.” *Stanford Encyclopedia of Philosophy*. [plato.stanford.org](https://plato.stanford.edu/entries/williams-bernard/).
 3. *The Holy Bible*. New International Version. Luke 10:25–37. [bible.com](https://www.bible.com/bible/111/LUK.10.25-37.NIV).
