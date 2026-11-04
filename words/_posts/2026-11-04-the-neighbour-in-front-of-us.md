@@ -22,12 +22,7 @@ It also brought to mind [Jesus’s parable of the Good Samaritan (Luke 10:25–3
 
 👇
 
-**References**
-
-Samuel S. I give to charity — but never to people on the street. Is that wrong? *Vox*. 2024 Sep 13 [updated 2026 Oct 18].
-
-“Bernard Williams.” *Stanford Encyclopedia of Philosophy*.
-
-*The Holy Bible*. New International Version. Luke 10:25–37.
-
-Krumme C. *Optimal Illusions: The False Promise of Optimization*. Riverhead Books; 2023.
+1. Samuel S. I give to charity — but never to people on the street. Is that wrong? *Vox*. 2024 Sep 13 [updated 2026 Oct 18]. [vox.com](https://www.vox.com/future-perfect/372519/charity-giving-effective-altruism-mutual-aid-homeless).
+2. “Bernard Williams.” *Stanford Encyclopedia of Philosophy*. [plato.stanford.org](https://plato.stanford.edu/entries/williams-bernard/).
+3. *The Holy Bible*. New International Version. Luke 10:25–37. [bible.com](https://www.bible.com/bible/111/LUK.10.25-37.NIV).
+4. Krumme C. *Optimal Illusions: The False Promise of Optimization*. Riverhead Books; 2023. [penguinrandomhouse.com](https://www.penguinrandomhouse.com/books/670624/optimal-illusions-by-coco-krumme/).
