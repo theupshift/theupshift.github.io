@@ -26,15 +26,51 @@ It also brought to mind [Jesus’s parable of the Good Samaritan (Luke 10:25–3
 
 After all, who is my neighbour?
 
-<section style="box-sizing: border-box; width: 100%; max-width: 100%; margin: 2.5rem 0; padding: 1.35rem; border: 1px solid var(--color-rule); border-radius: 14px; background: var(--color-card, transparent);">
+<style>
+  .neighbour-poll-card {
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+  }
+  .neighbour-poll-card:hover {
+    border-color: var(--color-muted);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    transform: translateY(-2px);
+  }
+  .neighbour-poll-option {
+    transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+  }
+  .neighbour-poll-option:hover,
+  .neighbour-poll-option:focus-visible {
+    background: var(--color-background, rgba(127, 127, 127, 0.08));
+    border-color: var(--color-muted) !important;
+    outline: none;
+  }
+  .neighbour-poll-option:active {
+    transform: scale(0.99);
+  }
+  .neighbour-poll-card summary {
+    transition: color 160ms ease;
+  }
+  .neighbour-poll-card summary:hover {
+    color: var(--color-text);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .neighbour-poll-card, .neighbour-poll-option, .neighbour-poll-card summary {
+      transition: none;
+    }
+    .neighbour-poll-card:hover, .neighbour-poll-option:active {
+      transform: none;
+    }
+  }
+</style>
+<section class="neighbour-poll-card" style="box-sizing: border-box; width: 100%; max-width: 100%; margin: 2.5rem 0; padding: 1.35rem; border: 1px solid var(--color-rule); border-radius: 14px; background: var(--color-card, transparent);">
   <p style="margin: 0 0 0.4rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-muted);">Your perspective</p>
   <p style="max-width: 38rem; margin: 0 0 1.1rem; font-size: 1.05rem; line-height: 1.5; font-weight: 600;">When someone asks you for help on the street, what would most influence your decision to give?</p>
   <div style="display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.5rem;">
-    <a style="box-sizing: border-box; display: block; width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--color-rule); border-radius: 9px; color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=immediate_need&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Their immediate need</a>
-    <a style="box-sizing: border-box; display: block; width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--color-rule); border-radius: 9px; color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=doubts&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Doubts about whether the person is genuine</a>
-    <a style="box-sizing: border-box; display: block; width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--color-rule); border-radius: 9px; color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=safety&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Concerns about personal safety</a>
-    <a style="box-sizing: border-box; display: block; width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--color-rule); border-radius: 9px; color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=charities&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Belief that charities are more effective</a>
-    <a style="box-sizing: border-box; display: block; width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--color-rule); border-radius: 9px; color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=regardless&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">I would help regardless</a>
+    <a class="neighbour-poll-option" style="box-sizing: border-box; display: block; width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--color-rule); border-radius: 9px; color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=immediate_need&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Their immediate need</a>
+    <a class="neighbour-poll-option" style="box-sizing: border-box; display: block; width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--color-rule); border-radius: 9px; color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=doubts&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Doubts about whether the person is genuine</a>
+    <a class="neighbour-poll-option" style="box-sizing: border-box; display: block; width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--color-rule); border-radius: 9px; color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=safety&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Concerns about personal safety</a>
+    <a class="neighbour-poll-option" style="box-sizing: border-box; display: block; width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--color-rule); border-radius: 9px; color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=charities&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Belief that charities are more effective</a>
+    <a class="neighbour-poll-option" style="box-sizing: border-box; display: block; width: 100%; padding: 0.8rem 0.9rem; border: 1px solid var(--color-rule); border-radius: 9px; color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=regardless&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">I would help regardless</a>
   </div>
   <details style="margin-top: 1rem;">
     <summary style="display: inline-block; cursor: pointer; font-size: 0.88rem; color: var(--color-muted);">View poll results</summary>
