@@ -13,4 +13,4 @@ Sometimes, the pathology isn’t in the individual, but in their environment. Vi
 
 <!-- more -->
 
-Because if we fail to address where the pathology originates, are we really treating the disease?
+If we fail to address where the pathology originates, are we really treating the disease?
