@@ -20,7 +20,11 @@ A great read. I particularly enjoyed the reference to philosopher [Bernard Willi
 
 It also brought to mind [Jesus’s parable of the Good Samaritan (Luke 10:25–37)](https://www.bible.com/bible/111/LUK.10.25-37.NIV). Perhaps the question is not always how much good we can do elsewhere, but whether we are willing to stop and help the person suffering right in front of us. After all, who is my neighbour?
 
-1. Samuel S. I give to charity — but never to people on the street. Is that wrong? *Vox*. 2024 Sep 13 [updated 2026 Oct 18]. [vox.com](https://www.vox.com/future-perfect/372519/charity-giving-effective-altruism-mutual-aid-homeless).
-2. “Bernard Williams.” *Stanford Encyclopedia of Philosophy*. [plato.stanford.org](https://plato.stanford.edu/entries/williams-bernard/).
-3. *The Holy Bible*. New International Version. Luke 10:25–37. [bible.com](https://www.bible.com/bible/111/LUK.10.25-37.NIV).
-4. Krumme C. *Optimal Illusions: The False Promise of Optimization*. Riverhead Books; 2023. [penguinrandomhouse.com](https://www.penguinrandomhouse.com/books/670624/optimal-illusions-by-coco-krumme/).
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li><p>Samuel S. I give to charity — but never to people on the street. Is that wrong? <em>Vox</em>. 2024 Sep 13 [updated 2026 Oct 18]. <a href="https://www.vox.com/future-perfect/372519/charity-giving-effective-altruism-mutual-aid-homeless">vox.com</a>.</p></li>
+    <li><p>“Bernard Williams.” <em>Stanford Encyclopedia of Philosophy</em>. <a href="https://plato.stanford.edu/entries/williams-bernard/">plato.stanford.org</a>.</p></li>
+    <li><p><em>The Holy Bible</em>. New International Version. Luke 10:25–37. <a href="https://www.bible.com/bible/111/LUK.10.25-37.NIV">bible.com</a>.</p></li>
+    <li><p>Krumme C. <em>Optimal Illusions: The False Promise of Optimization</em>. Riverhead Books; 2023. <a href="https://www.penguinrandomhouse.com/books/670624/optimal-illusions-by-coco-krumme/">penguinrandomhouse.com</a>.</p></li>
+  </ol>
+</div>
