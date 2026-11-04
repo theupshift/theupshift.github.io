@@ -26,28 +26,28 @@ It also brought to mind [Jesus’s parable of the Good Samaritan (Luke 10:25–3
 
 After all, who is my neighbour?
 
-<div style="margin: 2em 0; padding: 1.4em; border: 1px solid var(--color-rule); border-radius: 12px;">
-  <p style="margin: 0 0 0.5em; font-size: 1.15em; font-weight: 600;">A question for you</p>
-  <p style="margin: 0 0 1em;">When someone asks you for help on the street, what would most influence your decision to give?</p>
-  <div style="display: grid; gap: 0.6em;">
-    <a style="display: block; padding: 0.75em 1em; border: 1px solid var(--color-rule); border-radius: 8px; text-decoration: none;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=immediate_need&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Their immediate need</a>
-    <a style="display: block; padding: 0.75em 1em; border: 1px solid var(--color-rule); border-radius: 8px; text-decoration: none;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=doubts&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Doubts about whether the person is genuine</a>
-    <a style="display: block; padding: 0.75em 1em; border: 1px solid var(--color-rule); border-radius: 8px; text-decoration: none;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=safety&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Concerns about personal safety</a>
-    <a style="display: block; padding: 0.75em 1em; border: 1px solid var(--color-rule); border-radius: 8px; text-decoration: none;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=charities&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Belief that charities are more effective</a>
-    <a style="display: block; padding: 0.75em 1em; border: 1px solid var(--color-rule); border-radius: 8px; text-decoration: none;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=regardless&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">I would help regardless</a>
+<section style="box-sizing: border-box; width: 100%; max-width: 100%; margin: 2.5rem 0; padding: 1.5rem 0; border-top: 1px solid var(--color-rule); border-bottom: 1px solid var(--color-rule);">
+  <p style="margin: 0 0 0.45rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-muted);">Your perspective</p>
+  <p style="max-width: 38rem; margin: 0 0 1.1rem; font-size: 1.08rem; line-height: 1.5; font-weight: 500;">When someone asks you for help on the street, what would most influence your decision to give?</p>
+  <div style="display: grid; grid-template-columns: minmax(0, 1fr); gap: 0;">
+    <a style="box-sizing: border-box; display: block; width: 100%; padding: 0.85rem 0; border-bottom: 1px solid var(--color-rule); color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=immediate_need&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Their immediate need <span style="float: right; color: var(--color-muted);" aria-hidden="true">↗</span></a>
+    <a style="box-sizing: border-box; display: block; width: 100%; padding: 0.85rem 0; border-bottom: 1px solid var(--color-rule); color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=doubts&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Doubts about whether the person is genuine <span style="float: right; color: var(--color-muted);" aria-hidden="true">↗</span></a>
+    <a style="box-sizing: border-box; display: block; width: 100%; padding: 0.85rem 0; border-bottom: 1px solid var(--color-rule); color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=safety&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Concerns about personal safety <span style="float: right; color: var(--color-muted);" aria-hidden="true">↗</span></a>
+    <a style="box-sizing: border-box; display: block; width: 100%; padding: 0.85rem 0; border-bottom: 1px solid var(--color-rule); color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=charities&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">Belief that charities are more effective <span style="float: right; color: var(--color-muted);" aria-hidden="true">↗</span></a>
+    <a style="box-sizing: border-box; display: block; width: 100%; padding: 0.85rem 0; color: inherit; text-decoration: none; line-height: 1.4;" href="https://poll.fizzy.wtf/vote?theupshift.neighbour_help_decision=regardless&amp;redirect=https%3A%2F%2Ftheupshift.github.io%2Fwords%2Freflection%2Fphilosophy%2F2026%2F11%2F04%2Fthe-neighbour-in-front-of-us%2F">I would help regardless <span style="float: right; color: var(--color-muted);" aria-hidden="true">↗</span></a>
   </div>
-  <details style="margin-top: 1em;">
-    <summary style="cursor: pointer;">View poll results</summary>
-    <div style="display: grid; gap: 0.8em; margin-top: 1em;">
-      <div>Their immediate need<br><img src="https://poll.fizzy.wtf/show?theupshift.neighbour_help_decision=immediate_need" alt="Results: their immediate need" style="width: 100%; height: 18px;"></div>
-      <div>Doubts about whether the person is genuine<br><img src="https://poll.fizzy.wtf/show?theupshift.neighbour_help_decision=doubts" alt="Results: doubts about whether the person is genuine" style="width: 100%; height: 18px;"></div>
-      <div>Concerns about personal safety<br><img src="https://poll.fizzy.wtf/show?theupshift.neighbour_help_decision=safety" alt="Results: concerns about personal safety" style="width: 100%; height: 18px;"></div>
-      <div>Belief that charities are more effective<br><img src="https://poll.fizzy.wtf/show?theupshift.neighbour_help_decision=charities" alt="Results: belief that charities are more effective" style="width: 100%; height: 18px;"></div>
-      <div>I would help regardless<br><img src="https://poll.fizzy.wtf/show?theupshift.neighbour_help_decision=regardless" alt="Results: I would help regardless" style="width: 100%; height: 18px;"></div>
+  <details style="margin-top: 1rem;">
+    <summary style="display: inline-block; cursor: pointer; font-size: 0.9rem; color: var(--color-muted);">View poll results</summary>
+    <div style="display: grid; gap: 0.9rem; margin-top: 1rem; font-size: 0.88rem;">
+      <div>Their immediate need<img src="https://poll.fizzy.wtf/show?theupshift.neighbour_help_decision=immediate_need" alt="Results: their immediate need" style="display: block; width: 100%; max-width: 100%; height: 18px; margin-top: 0.35rem;"></div>
+      <div>Doubts about whether the person is genuine<img src="https://poll.fizzy.wtf/show?theupshift.neighbour_help_decision=doubts" alt="Results: doubts about whether the person is genuine" style="display: block; width: 100%; max-width: 100%; height: 18px; margin-top: 0.35rem;"></div>
+      <div>Concerns about personal safety<img src="https://poll.fizzy.wtf/show?theupshift.neighbour_help_decision=safety" alt="Results: concerns about personal safety" style="display: block; width: 100%; max-width: 100%; height: 18px; margin-top: 0.35rem;"></div>
+      <div>Belief that charities are more effective<img src="https://poll.fizzy.wtf/show?theupshift.neighbour_help_decision=charities" alt="Results: belief that charities are more effective" style="display: block; width: 100%; max-width: 100%; height: 18px; margin-top: 0.35rem;"></div>
+      <div>I would help regardless<img src="https://poll.fizzy.wtf/show?theupshift.neighbour_help_decision=regardless" alt="Results: I would help regardless" style="display: block; width: 100%; max-width: 100%; height: 18px; margin-top: 0.35rem;"></div>
     </div>
-    <p style="margin: 0.8em 0 0; font-size: 0.85em; color: var(--color-muted);">Results update when the page is refreshed.</p>
+    <p style="margin: 0.8rem 0 0; font-size: 0.8rem; color: var(--color-muted);">Results update when the page is refreshed.</p>
   </details>
-</div>
+</section>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
