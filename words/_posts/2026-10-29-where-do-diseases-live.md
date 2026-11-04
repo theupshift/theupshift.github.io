@@ -7,7 +7,7 @@ Where do diseases live? It seems an odd question, but perhaps an important one, 
 
 If someone fractures their ankle, that’s where the pathology is. We locate it and target our treatment. Yet even this can be more complex: a fracture in an older person may reflect osteoporosis, not simply an isolated injury.
 
-This is our comfort zone as doctors. But could it lead us astray?
+This is our comfort zone as doctors. But it could lead us astray.
 
 Violence, bullying, and poverty can produce physical and psychological symptoms. Sometimes, the pathology isn’t in the individual, but in their environment. Yet we often treat the individual rather than the circumstances.
 
