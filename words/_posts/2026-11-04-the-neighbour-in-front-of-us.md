@@ -22,7 +22,10 @@ It also brought to mind Jesus’s parable of the Good Samaritan (Luke 10:25–37
 
 👇
 
-[^1]: Samuel, Sigal. [Essay on effective giving, mutual aid, and homelessness](https://wallhop.io/https://www.vox.com/future-perfect/372519/charity-giving-effective-altruism-mutual-aid-homeless). *Vox*.
-[^2]: [“Bernard Williams.” *Stanford Encyclopedia of Philosophy*.](https://plato.stanford.edu/ENTRIES/williams-bernard/)
-[^3]: [The Holy Bible, Luke 10:25–37 (New International Version).](https://www.bible.com/bible/111/LUK.10.25-37.NIV)
-[^4]: Krumme, Coco. (2023). *[Optimal Illusions: The False Promise of Optimization](https://www.penguinrandomhouse.com/books/670624/optimal-illusions-by-coco-krumme/).* Riverhead Books.
+[^1]: Samuel S. I give to charity — but never to people on the street. Is that wrong? *Vox*. 2024 Sep 13 [updated 2026 Oct 18]. [https://www.vox.com/future-perfect/372519/charity-giving-effective-altruism-mutual-aid-homeless](https://www.vox.com/future-perfect/372519/charity-giving-effective-altruism-mutual-aid-homeless).
+
+[^2]: “Bernard Williams.” *Stanford Encyclopedia of Philosophy*. [https://plato.stanford.edu/entries/williams-bernard/](https://plato.stanford.edu/entries/williams-bernard/).
+
+[^3]: *The Holy Bible*. New International Version. Luke 10:25–37. [https://www.bible.com/bible/111/LUK.10.25-37.NIV](https://www.bible.com/bible/111/LUK.10.25-37.NIV).
+
+[^4]: Krumme C. *Optimal Illusions: The False Promise of Optimization*. Riverhead Books; 2023. [https://www.penguinrandomhouse.com/books/670624/optimal-illusions-by-coco-krumme/](https://www.penguinrandomhouse.com/books/670624/optimal-illusions-by-coco-krumme/).
