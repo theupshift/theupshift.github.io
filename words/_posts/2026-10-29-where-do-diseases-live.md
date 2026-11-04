@@ -11,4 +11,6 @@ This is our comfort zone as doctors. But could it lead us astray?
 
 Violence, bullying, and poverty can produce physical and psychological symptoms. Sometimes, the pathology isn’t in the individual, but in their environment. Yet we often treat the individual rather than the circumstances.
 
+<!-- more -->
+
 In such cases, we are definitely managing the symptoms. But if we fail to address where the pathology originates, are we really treating the disease?
