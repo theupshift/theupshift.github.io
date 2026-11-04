@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2026-11-03
+date: 2026-11-07
 title: "The Limits of Judgement"
 categories: [reflection, medicine, healthcare]
 tags: [Five Days at Memorial, medical ethics, healthcare systems, clinical judgement, uncertainty]
