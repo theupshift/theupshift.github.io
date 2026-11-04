@@ -12,7 +12,7 @@ These are everyday excuses I, too, sometimes find myself making. We give at chur
 
 In this thought-provoking essay, [Sigal Samuel](https://wallhop.io/https://www.vox.com/future-perfect/372519/charity-giving-effective-altruism-mutual-aid-homeless) asks whether, in our quest to give effectively, we’ve forgotten how to simply care.
 
-“Why not get the biggest bang for your buck?” It’s a fair question. But in pursuing the most effective ways to give, we risk losing the simple humanity that makes us give in the first place.
+> “Why not get the biggest bang for your buck?” It’s a fair question. But in pursuing the most effective ways to give, we risk losing the simple humanity that makes us give in the first place.
 
 Not every act of kindness needs to be optimised. Sometimes, helping someone right in front of you is reason enough.
 
