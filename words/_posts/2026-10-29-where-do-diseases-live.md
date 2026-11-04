@@ -9,7 +9,7 @@ If someone fractures their ankle, that’s where the pathology is. We locate it 
 
 This is our comfort zone as doctors. But it could lead us astray.
 
-Sometimes, the pathology isn’t in the individual, but in their environment. Violence, bullying, and poverty can produce physical and psychological symptoms. Yet we often treat the individual rather than the circumstances, and so they remain sick.
+Sometimes, the pathology isn’t in the individual, but in their environment. Violence, bullying, and poverty can produce physical and psychological symptoms. Yet we often treat the individual rather than the circumstances, and so their symptoms persist.
 
 <!-- more -->
 
